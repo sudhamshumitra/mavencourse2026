@@ -1886,7 +1886,11 @@ $('#theme-toggle').addEventListener('click', () => {
 addEventListener('hashchange', () => { render(); scrollTo(0, 0); });
 
 let LIVE = false;
-fetch('/api/status').then((r) => (r.ok ? r.json() : null)).then((d) => { LIVE = !!d?.live; if (LIVE && state.mode === 'mine') render(); }).catch(() => {});
+fetch('/api/status').then((r) => (r.ok ? r.json() : null)).then((d) => {
+  LIVE = !!d?.live;
+  // Only screens whose content depends on live mode need a redraw; redrawing the homepage replays its animation.
+  if (LIVE && state.mode === 'mine' && /^#\/(feed|brief\/|tracker)/.test(location.hash)) render();
+}).catch(() => {});
 
 applyTheme();
 render();
