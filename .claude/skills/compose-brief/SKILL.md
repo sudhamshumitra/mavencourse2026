@@ -89,5 +89,5 @@ Renormalise so the weights sum to 1. **Priority = Σ weight × sub-score**, roun
 - **`predatory_flag`:** keep it in the feed with the flag (so people learn to recognise these). Priority is capped at 30.
 - **`watch` status:** score the venue as normal, but Feasibility's reason mentions "CFP expected <window>".
 
-## Runtime notes (Phase 2)
-Capable model (Sonnet/Opus) with structured output. Sub-scores come from the model, and the weighting arithmetic is done in code. Cached per (opportunity, profile, weights-hash).
+## Runtime notes (live: `/api/brief`)
+Claude Sonnet 5 at medium effort, run together with find-funding and estimate-cost in one call (~50 s). Sub-scores come from the model; the weighting by goals is done in the app, so changing goals re-ranks without a new call. Results are cached in the browser per call.

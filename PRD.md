@@ -26,17 +26,17 @@ PhD students and early-career researchers in the humanities and social sciences.
 Conferences and fellowships build careers through contacts, publications, funding and visibility. The cost of finding and judging them falls hardest on first-generation academics, people at less-resourced universities, and Global South researchers, who also face foreign-currency costs and visa hurdles.
 
 **Why use AI?**
-Because this is judgement over messy writing, not a database lookup. Every call page is written differently. A conference called "Regeneration(s)" can be the perfect venue for research on caste and social media without sharing a single keyword with it. Eligibility rules are buried in paragraphs. Grants depend on other deadlines ("apply once your paper is accepted"). A language model can read all of that. A keyword filter can't.
+Because this is judgement over messy writing, not a database lookup. Every call page is written differently. A conference called "Regeneration(s)" can be the perfect conference for research on caste and social media without sharing a single keyword with it. Eligibility rules are buried in paragraphs. Grants depend on other deadlines ("apply once your paper is accepted"). A language model can read all of that. A keyword filter can't.
 
 **Why more than a search box?**
-The value is in the chain: work out where someone's research belongs, find venues there, read each page, check the dates, cost it, find money for it, judge whether it's worth it, then double-check the facts. No single question to a chatbot does all of that reliably.
+The value is in the chain: work out where someone's research belongs, find conferences, journals and fellowships there, read each page, check the dates, cost it, find money for it, judge whether it's worth it, then double-check the facts. No single question to a chatbot does all of that reliably.
 
 ---
 
 ## 3. What the user sees
 
-1. **Tell us your research.** Describe it in a few sentences, or pick topics from a list, or both. Then pick up to three things you want out of it: meet people, get published, a well-known venue, keep it affordable, feedback on your work. Then add passport, currency, budget and visa appetite. ORCID import is optional.
-2. **Your shortlist.** Three numbers at the top: how many opportunities, how many deadlines this month, and how many have funding. The **top picks you can apply to now** get large cards that show *why* they score well. Everything else sits in smaller cards. Calls that look out of date are listed separately.
+1. **Tell us your research.** Describe it in a few sentences, or pick topics from a list, or both. Then pick up to three things you want out of it: meet people, get published, a well-known conference, keep it affordable, feedback on your work. Then add passport, currency, budget and visa appetite. ORCID import is optional.
+2. **Your shortlist.** Grapevine **searches the web live for your topics** (about a minute, showing each search as it runs) and returns 6–8 real calls, each with a **quick score**. Three numbers sit at the top. Calls are ranked like an index: rank, score with five small bars, a clear link to the call page, and the same four facts in the same order every time (next deadline · cost · funding · visa). Opening one runs the **full check** (about a minute), which reads the call page and works out cost and funding. Calls that look out of date, or whose edition has already happened, are not shown. **"See an example"** instead opens one of 8 example researchers, in different countries and career stages, whose shortlists were built ahead of time.
 3. **"Is it worth it?"** for each opportunity. A score out of 100 and a one-line verdict. Four key facts at a glance: next deadline, cost, funding, visa. Tabs underneath for the detail: *Worth it?* · *Deadlines* · *Cost & funding* · *Can I go?* · *About*.
 4. **Tracker.** Saved deadlines in date order, exportable to a calendar.
 5. **Paste a link.** Found something yourself? Paste it and Grapevine reads it and scores it like everything else.
@@ -48,12 +48,12 @@ Five questions, each scored 0–100 with a one-line reason:
 | | Question it answers |
 |---|---|
 | **Fit** | How close is it to my research? (by meaning, not just matching words) |
-| **Standing** | Is it an established, respected venue, or a predatory one? |
+| **Standing** | Is it established and well respected, or a predatory one? |
 | **Network** | Who would I meet? |
 | **Outcomes** | What would I come away with: a publication, feedback, a strong CV line? |
 | **Feasibility** | Can I realistically go, given cost after funding, visa and timing? |
 
-The user's goals decide how much each question counts. Choosing "keep it affordable" makes feasibility count for more. Saying "not for me — too expensive" nudges it further. A famous venue can therefore rank *below* a smaller one when it's the wrong move for this person this year, and the page says why.
+The user's goals decide how much each question counts. Choosing "keep it affordable" makes feasibility count for more. Saying "not for me — too expensive" nudges it further. A famous conference can therefore rank *below* a smaller one when it's the wrong move for this person this year, and the page says why.
 
 **Out of scope for now:** writing applications, crawling the whole web, and anything that acts on the user's behalf.
 
@@ -94,7 +94,7 @@ flowchart TD
     K -. "your reasons tune the ranking" .-> H
 ```
 
-Steps 2 and 3 are how Grapevine finds venues you wouldn't search for. For a researcher working on caste and social media, it reasons that "internet studies" is a neighbouring field, finds that field's main society, and then finds that society's 2026 conference. It never uses a hardcoded list. Step 9 is a separate check that doesn't trust step 4.
+Steps 2 and 3 are how Grapevine finds conferences you wouldn't search for. For a researcher working on caste and social media, it reasons that "internet studies" is a neighbouring field, finds that field's main society, and then finds that society's 2026 conference. It never uses a hardcoded list. Step 9 is a separate check that doesn't trust step 4.
 
 ---
 
@@ -117,16 +117,17 @@ Each numbered step above is written down once, in plain language, as a **skill**
 
 Two **reference lists** hold stable facts, so they don't have to be searched for every time: a list of **funders by country** (India's includes ICSSR's conference travel scheme), and, coming next, a list of **scholarly societies by field**.
 
-Under the hood it's a small website on Vercel that calls Claude through Anthropic's API. Detailed data formats live in [`corpus/schema/`](corpus/schema/).
+Under the hood it's a small website on Vercel that calls Claude through Anthropic's API: Claude Sonnet 5 for searching and judging, Claude Haiku 4.5 for suggesting topics and reading call pages. Detailed data formats live in [`corpus/schema/`](corpus/schema/).
 
 ---
 
 ## 7. Keeping it honest and safe
 
 - **Every date and fee shows its source.** Tap "source" to see the exact words from the page. Anything not found there is labelled *inferred — check*.
-- **Old pages are flagged.** A call posted in 2021 isn't shown as open, even if every word on it is quoted correctly.
+- **Old pages are left out.** A call posted in 2021 isn't shown as open, even if every word on it is quoted correctly, and a conference that has already happened is replaced by its next edition.
+- **Status follows the dates.** Whether something is open, attend-only or "next edition" is worked out from its dates in code, not taken on the AI's word.
 - **Costs are ranges with their assumptions stated**, never a falsely precise number.
-- **Predatory venues are flagged.** This audience is actively targeted by fake conferences and journals.
+- **Predatory conferences and journals are flagged.** This audience is actively targeted by fake conferences and journals.
 - **One pick from outside your usual field** is always included, so the feed doesn't only show what you'd already search for.
 - **Pasted links are fetched safely.** Internal and private addresses are blocked, and page text is treated as something to read, never as instructions to follow.
 - **Spending is capped**: per-request limits, a per-visitor hourly limit, and a monthly spend limit on the API account.
@@ -153,7 +154,7 @@ A running **failure log** sits alongside these numbers (see [SKILLS.md](SKILLS.m
 
 | Phase | What | Status |
 |---|---|---|
-| **1 — Real data and the core experience** | The 7 skills. A real shortlist for a test researcher. New onboarding, shortlist and "worth it" pages. Live AI for topic suggestions and paste-a-link. | ✅ Done |
+| **1 — Real data and the core experience** | The 7 skills. Ready-made shortlists for 8 example researchers in 8 countries. Live search for your own profile, with quick scores and a full check on open. Live topic suggestions and paste-a-link. Onboarding, shortlist, "worth it" and FAQ pages. | ✅ Done |
 | **2 — Accounts and memory** | Simple username and password so your profile and saved items follow you. A saved database of opportunities and funders instead of files. A society list for better discovery. More countries' funders. | Next |
 | **3 — Keeps itself fresh, and learns** | A weekly automatic refresh (search, read, check). Feedback that measurably improves the ranking. The remaining evaluations. Final polish and walkthrough. | After |
 
@@ -162,7 +163,7 @@ A running **failure log** sits alongside these numbers (see [SKILLS.md](SKILLS.m
 ## 10. Open questions
 
 - **Accounts without email:** there's no password reset. Show a one-time recovery code at sign-up?
-- **Which model where:** use the most capable model for everything (simplest, best quality), or a cheaper one for reading pages? Decide from real usage costs.
+- **Cost per user:** a live search costs about 35¢ and each full check about 12¢ (Claude Sonnet 5 for searching and judging, Claude Haiku 4.5 for reading pages). With accounts, cache results so the same call is never checked twice for the same person.
 - **Other countries:** the funder list starts with India. Which countries next?
 
 ---

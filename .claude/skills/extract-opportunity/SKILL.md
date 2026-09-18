@@ -63,5 +63,5 @@ Call pages have no shared format. Dates hide in prose, fees sit in tier tables, 
 ]
 ```
 
-## Runtime notes (Phase 1B)
-Cheap model (Haiku), run in parallel, one page per call, JSON-schema-constrained output, `max_tokens` ≈ 2,500. Page text is wrapped in `<page_content>` tags labelled as untrusted. The server fetch goes through the SSRF guard in PRD §8.
+## Runtime notes (live: `/api/extract`)
+Claude Haiku 4.5, one page per call. The page is fetched through the SSRF guard (PRD §7), wrapped in `<page_content>` and labelled untrusted. If a site blocks the server, the app retries through a reader service, then Claude Sonnet 5 with web_fetch. After extraction the app re-derives `status` from the dates, so a mislabelled status can't reach the user.

@@ -62,5 +62,5 @@ PRD §7 Profile, extended:
 - fields: South Asian studies, media & communication
 - adjacent fields: internet studies, platform studies, memory studies
 
-## Runtime notes (Phase 1B)
-Cheap model (Haiku). Structured output. Keep `max_tokens` around 800. With no API key, the app falls back to keyword-matching the text against the topic vocabulary in `prototype/data.js`.
+## Runtime notes (live: `/api/topics`)
+Claude Haiku 4.5. New suggestions replace earlier suggestions; topics the person picked or typed, and their goals, are never changed by it. With no API key, the app falls back to keyword-matching the text against the topic vocabulary in `prototype/data.js`.

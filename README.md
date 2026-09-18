@@ -19,47 +19,49 @@ Grapevine is that missing place, and the missing judgement. It gathers opportuni
 | **Live demo** | 🔗 **[mavencourse2026.vercel.app](https://mavencourse2026.vercel.app)** |
 | **PRD** | ✅ [PRD.md](PRD.md) |
 | **Week 1** | ✅ Clickable prototype on hand-written fixtures. Tagged [`module-1-prototype`](../../tree/module-1-prototype) |
-| **Week 2 (Module 2)** | ✅ 7 Claude Code skills in [`.claude/skills/`](.claude/skills/). They produced the real corpus in [`corpus/`](corpus/), which now drives the prototype. See **[SKILLS.md](SKILLS.md)** |
-| **Next** | Next.js + Postgres backend. The same SKILL.md files become the app's runtime prompts |
+| **Week 2 (Module 2)** | ✅ 7 Claude Code skills in [`.claude/skills/`](.claude/skills/). They built ready-made shortlists for 8 example researchers ([`corpus/`](corpus/)) and power the live search. See **[SKILLS.md](SKILLS.md)** |
+| **Next** | Accounts (username and password) so profiles and saved calls persist, a database instead of files, and a weekly automatic refresh |
 
 ## The prototype
 
-A single-page prototype of the whole user flow, now running on **real calls gathered by the skills** for a fictional persona: **Ananya Rao**, a 2nd-year PhD in media studies in Hyderabad, working on caste and digital media. She has an Indian passport and INR costs, and she'd rather avoid long visa queues.
+Two ways in:
+
+- **See an example.** One of 8 fictional researchers opens at random, each with a ready-made, fully checked shortlist built by the skills: India, Nigeria, Brazil, Pakistan, Kenya, Indonesia, Bangladesh and Ghana, across career stages from Master's to lecturer, with costs in their own currency and their own country's funders.
+- **Your own research.** Describe your work (or pick topics), choose your goals, and Grapevine **searches the web live** (about a minute, showing each search as it runs). Each result gets a quick score; opening one runs the full check (about a minute): it reads the call page and works out dates, cost, funding and visa.
 
 | Surface | What you can do |
 |---|---|
-| Welcome | See what the tool does in three steps |
-| Onboarding (2 steps) | Describe your research in plain words **or** browse topics by field, side by side. Pick what you want out of it (networking, publication, a well-known venue, low cost, feedback). Set passport, currency, budget and visa appetite. ORCID is optional |
-| Feed | Real opportunities ordered by a **"worth it" score** weighted by your goals, with cost ranges in INR, funding counts, visa flags, an exploration pick from a neighbouring field, and paste-a-link |
-| Brief | Five sub-scores with reasons, "why go / watch out", deadlines in the order to act (including funding and visa start dates), cost breakdown, funding from the venue and from elsewhere, and a source toggle on every verified fact |
+| Welcome | What the tool does, in three steps |
+| Onboarding (2 steps) | Describe your research **or** browse topics, side by side. Pick up to 3 goals (meet people, get published, a well-known conference, keep it affordable, feedback). Set country, passport, currency, budget (or no limit), format and visas. Nothing is pre-selected |
+| Shortlist | Ranked like an index: score with five part-score bars, a link to the call page, and the same four facts every time (next deadline · cost · funding · visa) |
+| "Is it worth it?" | A verdict card with four key facts, then tabs: Worth it? · Deadlines · Cost & funding · Can I go? · About. Every verified fact has a "source" toggle |
 | Tracker | Saved deadlines by month, with `.ics` export |
-| Profile | Goals and the ranking weights they produce, plus dismiss-with-reason feedback that visibly changes them |
+| Profile | Goals and the ranking weights they produce; "Not for me" feedback visibly changes them |
+| How it works | Plain-language FAQ, including exactly how the score is calculated |
 
 > ⚠️ The calls are real, but always check the source page before acting. Visa notes are advisory only.
 
 ### Run it locally
 
-No build step and no dependencies. It uses ES modules, so serve it over HTTP:
+- **Just the site (no live AI):** `npx serve prototype`
+- **With the live API:** put `ANTHROPIC_API_KEY=…` in `.env.local` (git-ignored), then `npx vercel dev`
 
-```bash
-npx serve prototype
-```
-
-To rebuild the feed after rerunning skills: `node scripts/build-feed.mjs --profile ananya`.
+After re-running skills: `node scripts/build-feed.mjs` (rebuilds the example shortlists) and `node scripts/build-prompts.mjs` (updates the live prompts from the SKILL.md files).
 
 ### Deploy
 
-A static site on Vercel. [`vercel.json`](vercel.json) sets `prototype/` as the output directory and adds CSP and security headers. No secrets.
+Vercel: `prototype/` is the site, `api/` holds the server functions (topics, scout, extract, brief). Set `ANTHROPIC_API_KEY` in the project's environment variables. Optional: `GV_MODEL` / `GV_MODEL_FAST` to change models (defaults: Claude Sonnet 5 / Claude Haiku 4.5).
 
 ## What's here
 
 - **[SKILLS.md](SKILLS.md)**: the Module 2 write-up covering the skills, before/after, and results.
-- **[.claude/skills/](.claude/skills/)**: 7 skills, one per agent in the PRD.
-- **[corpus/](corpus/)**: skill output: profile, candidates, extracted opportunities, briefs, funders, grounding report.
+- **[.claude/skills/](.claude/skills/)**: 7 skills, one per step in the PRD's "How it works".
+- **[corpus/](corpus/)**: skill output: 8 profiles, candidates, extracted opportunities, briefs, funder lists by country, grounding report.
+- **[api/](api/)**: server functions that send the SKILL.md files to Claude.
 - **[prototype/](prototype/)**: `index.html` · `styles.css` · `app.js` · `data.js` · `corpus.js` (generated).
-- **[scripts/build-feed.mjs](scripts/build-feed.mjs)**: merges `corpus/` into the prototype.
-- **[PRD.md](PRD.md)**: the product and technical specification.
+- **[scripts/](scripts/)**: `build-feed.mjs` (corpus → prototype) and `build-prompts.mjs` (skills → API prompts).
+- **[PRD.md](PRD.md)**: the product specification.
 
-## Planned stack
+## Stack
 
-Next.js (App Router) + TypeScript on Vercel · Postgres + Prisma · Anthropic Claude API with tool use (no agent framework) · OpenAlex, a web-search API and an FX API · Vercel Cron for a weekly refresh.
+Static site + Vercel serverless functions · Anthropic Claude API (Sonnet 5 and Haiku 4.5, with web search and web fetch; no agent framework) · planned: Postgres for accounts and a weekly refresh via Vercel Cron.

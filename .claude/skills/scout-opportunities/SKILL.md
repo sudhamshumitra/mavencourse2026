@@ -42,6 +42,7 @@ Use today's date.
 - `attend-only`: submissions have closed, but the event is still in the future and registration or attendance is possible.
 - `watch`: this edition has passed or isn't announced, but the next edition is confirmed or strongly predicted by recurrence. Give `predicted_cfp_window`.
 - Anything with no future date at all is **dropped**.
+- **Never return the page of an edition that has already happened.** For a regular event whose current edition is over, link the *next* edition (or the organiser's conference page), use `watch`, and say in plain words when the next call is expected (`next_expected`).
 - **Rolling or undated calls must prove they're current.** Keep one only if the page shows activity in the last 18 months (a posted or updated date, a current volume or issue, a year mentioned). Otherwise drop it, or keep it as `stale` if it's highly relevant. "Open call" text on a 2021 page isn't evidence the call is still open.
 
 ## Filtering and judgement
@@ -87,5 +88,5 @@ Profile adjacent field *<field X>* → search "<field X> association annual conf
 - Always include at least one option that is realistic for this person's budget and visa situation (online, in their region, or in their own country).
 - Search from *this* profile's fields and topics. Don't reuse venues from examples or earlier runs unless they genuinely fit.
 
-## Runtime notes (Phase 1B/3)
-This becomes the Curated Querier + Bounded Explorer in the weekly cron. Web-search API with a step cap. Capable model for layer (a), because the reasoning about fields is the hard part. The rest is cheap.
+## Runtime notes (live: `/api/scout`)
+Claude Sonnet 5 with web search (at most 5 searches), streaming each search to the user as it runs, about a minute in total. It also returns a quick first-pass score per candidate so the shortlist is ranked at once; the full check (extract + brief) runs when the person opens one. Later this becomes the weekly refresh.
