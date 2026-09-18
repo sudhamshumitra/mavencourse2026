@@ -1,0 +1,12 @@
+{
+  "name": "grapevine",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:prompts": "node scripts/build-prompts.mjs",
+    "build:feed": "node scripts/build-feed.mjs --profile ananya --hold basas-2027"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.127.0"
+  }
+}

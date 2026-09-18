@@ -358,7 +358,7 @@ function oppMini(opp, i = 0) {
     <div class="mini-top">
       <span class="mini-score ${opp.status === 'stale' ? 'stale' : p >= 75 ? 'hi' : p >= 60 ? 'mid' : 'lo'}" title="Worth-it score">${opp.status === 'stale' ? '?' : p}</span>
       <div class="mini-head">
-        <div class="opp-titleline">${statusBadge(opp)}${opp.explore ? '<span class="badge badge-sky">🧭 Outside your usual field</span>' : ''}</div>
+        <div class="opp-titleline">${statusBadge(opp)}${opp.explore ? '<span class="badge badge-sky">🧭 Outside your usual field</span>' : ''}${opp.pasted ? '<span class="badge badge-sky">🔗 You added this</span>' : ''}</div>
         <a class="mini-title" href="#/brief/${esc(opp.id)}">${esc(opp.title)}</a>
         <div class="opp-host">${esc(opp.host)}</div>
       </div>
@@ -589,6 +589,7 @@ function onboardingEvents(root) {
 
     switch (btn.dataset.act) {
       case 'draft': {
+        if (LIVE) { liveDraft(btn, repaint); break; }
         const n = suggestFromText(draft.input_text ?? '');
         repaint();
         toast(n ? { emoji: '✨', title: `Suggested ${n} topic${n === 1 ? '' : 's'}`, body: 'Drafts, not facts. Remove any that are wrong and slide the ones that matter most.' }
@@ -781,10 +782,98 @@ function pasteEvents(root) {
     const url = $('#paste-url').value.trim();
     if (!url) return;
     if (!/^https?:\/\//i.test(url)) {
-      toast({ emoji: '🚫', title: 'Only http and https are accepted', body: 'The URL fetcher runs server-side, so the scheme allowlist is a security control, not a formatting rule.' });
+      toast({ emoji: '🚫', title: 'Paste a full web link', body: 'It should start with http:// or https://' });
       return;
     }
-    showPasteModal(url);
+    LIVE ? showLivePasteModal(url) : showPasteModal(url);
+  });
+}
+
+/* ---------- live mode: calls the /api functions when an API key is configured ---------- */
+
+async function api(path, body) {
+  const res = await fetch(`/api/${path}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+  let data = {};
+  try { data = await res.json(); } catch { /* non-JSON error page */ }
+  if (!res.ok) throw new Error(data.error ?? `Request failed (${res.status})`);
+  return data;
+}
+
+async function liveDraft(btn, repaint) {
+  const text = (draft.input_text ?? '').trim();
+  if (text.length < 20) { toast({ emoji: '✍️', title: 'Add a bit more', body: 'A sentence or two about what you research is enough.' }); return; }
+  btn.disabled = true;
+  btn.textContent = 'Reading…';
+  try {
+    const d = await api('topics', { text });
+    let added = 0;
+    for (const t of d.topics) {
+      if (draft.topics.some((x) => x.term.toLowerCase() === t.term.toLowerCase())) continue;
+      draft.topics.push(t); added++;
+    }
+    draft.topics.sort((a, b) => b.weight - a.weight);
+    if (!(draft.goals ?? []).length && d.goals.length) draft.goals = d.goals;
+    if (d.fields.length) draft.fields = d.fields;
+    if (d.adjacent_fields.length) draft.adjacent_fields = d.adjacent_fields;
+    repaint();
+    toast({ emoji: '✨', title: `Suggested ${added} topic${added === 1 ? '' : 's'}`,
+      body: d.adjacent_fields.length ? `Also searching nearby fields: ${d.adjacent_fields.slice(0, 3).join(', ')}.` : 'Remove any that are wrong and slide the ones that matter most.' });
+  } catch (err) {
+    const n = suggestFromText(text);
+    repaint();
+    toast({ emoji: '⚠️', title: 'Live suggestions unavailable', body: `${err.message} Used simple matching instead (${n} found).` });
+  }
+}
+
+function showLivePasteModal(url) {
+  const steps = [
+    ['fetch', 'Opening the page safely', 'Private and internal addresses are blocked'],
+    ['read', 'Reading the call', 'Dates, fees, who can apply, funding'],
+    ['brief', 'Working out if it’s worth it for you', 'Cost, funding and your score'],
+  ];
+  openModal(`
+    <h3>Adding this to your shortlist</h3>
+    <p class="modal-sub">${esc(url)}</p>
+    <div class="pipe-steps" id="live-steps">
+      ${steps.map(([k, l, d]) => `<div class="pipe-step" data-k="${k}">
+        <span class="pipe-bullet" aria-hidden="true">✓</span>
+        <span><span class="pipe-label">${l}</span><br/><span class="pipe-detail">${d}</span></span>
+      </div>`).join('')}
+    </div>
+    <p class="tiny muted" style="margin-top:.8rem">Usually takes under a minute.</p>
+    <div id="live-out" style="margin-top:1rem"></div>
+  `, async () => {
+    const mark = (k, cls) => { const el = $(`#live-steps [data-k="${k}"]`); if (el) { el.classList.remove('active'); el.classList.add(cls); } };
+    const out = () => $('#live-out');
+    try {
+      mark('fetch', 'active'); mark('read', 'active');
+      const { opportunity } = await api('extract', { url });
+      mark('fetch', 'done'); mark('read', 'done'); mark('brief', 'active');
+      const { brief } = await api('brief', { opportunity, profile: state.profile });
+      mark('brief', 'done');
+      const merged = { ...opportunity, venue_funding: opportunity.funding, ...brief, pasted: true };
+      if (!out()) return;
+      out().innerHTML = `<div class="orcid-result"><span aria-hidden="true">✅</span><span>
+          <strong>${esc(merged.title)}</strong><br/>Worth-it score <strong>${priorityOf(merged)}</strong>. ${esc(merged.tagline ?? '')}</span></div>
+        <div class="onb-actions"><button class="btn btn-primary" data-act="live-ok">Add to my shortlist</button>
+        <button class="btn btn-quiet" data-act="live-cancel">Cancel</button></div>`;
+      out().addEventListener('click', (e) => {
+        const a = e.target.closest('[data-act]')?.dataset.act;
+        if (a === 'live-cancel') closeModal();
+        if (a === 'live-ok') {
+          state.pasted = state.pasted.filter((p) => p.id !== merged.id);
+          state.pasted.push(merged);
+          save(); closeModal();
+          location.hash = `#/brief/${merged.id}`;
+          toast({ emoji: '🔗', title: 'Added to your shortlist', body: 'Read by Claude from the page you pasted. Check the source before acting.' });
+        }
+      });
+    } catch (err) {
+      $$('#live-steps .pipe-step.active').forEach((el) => el.classList.remove('active'));
+      if (out()) out().innerHTML = `<div class="callout danger"><h4>Couldn't add that link</h4><p>${esc(err.message)}</p></div>
+        <div class="onb-actions"><button class="btn btn-quiet" type="button">Close</button></div>`;
+      $('#live-out .btn')?.addEventListener('click', closeModal);
+    }
   });
 }
 
@@ -1434,6 +1523,9 @@ $('#theme-toggle').addEventListener('click', () => {
 });
 
 addEventListener('hashchange', () => { render(); scrollTo(0, 0); });
+
+let LIVE = false;
+fetch('/api/status').then((r) => (r.ok ? r.json() : null)).then((d) => { LIVE = !!d?.live; }).catch(() => {});
 
 applyTheme();
 render();
