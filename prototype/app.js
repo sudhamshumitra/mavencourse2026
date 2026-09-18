@@ -547,10 +547,6 @@ function stepPractical() {
     </div>`;
 }
 
-const GOAL_HINTS = { publication: ['publish', 'journal', 'article'], feedback: ['feedback', 'chapter', 'draft', 'work in progress'],
-  networking: ['network', 'meet', 'collaborat', 'mentor'], low_cost: ['budget', 'afford', 'cheap', 'tight', 'lakh', 'funding'],
-  visibility: ['top ', 'prestig', 'good venue', 'well-known', 'flagship', 'somewhere good'] };
-
 function suggestFromText(text) {
   const t = ` ${text.toLowerCase()} `;
   let added = 0;
@@ -562,9 +558,6 @@ function suggestFromText(text) {
     added++;
   }
   draft.topics.sort((a, b) => b.weight - a.weight);
-  if (!(draft.goals ?? []).length) {
-    draft.goals = Object.entries(GOAL_HINTS).filter(([, ks]) => ks.some((k) => t.includes(k))).map(([g]) => g).slice(0, 3);
-  }
   return added;
 }
 
@@ -839,7 +832,6 @@ async function liveDraft(btn, repaint) {
       draft.topics.push(t); added++;
     }
     draft.topics.sort((a, b) => b.weight - a.weight);
-    if (!(draft.goals ?? []).length && d.goals.length) draft.goals = d.goals;
     if (d.fields.length) draft.fields = d.fields;
     if (d.adjacent_fields.length) draft.adjacent_fields = d.adjacent_fields;
     repaint();
