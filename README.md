@@ -16,6 +16,7 @@ Grapevine is that missing place, and the missing judgement. It gathers opportuni
 
 | | |
 |---|---|
+| **Live demo** | 🔗 **[mavencourse2026.vercel.app](https://mavencourse2026.vercel.app)** |
 | **PRD** | ✅ [PRD.md](PRD.md) |
 | **Week 1** | ✅ Clickable prototype on hand-written fixtures. Tagged [`module-1-prototype`](../../tree/module-1-prototype) |
 | **Week 2 (Module 2)** | ✅ 7 Claude Code skills in [`.claude/skills/`](.claude/skills/). They produced the real corpus in [`corpus/`](corpus/), which now drives the prototype. See **[SKILLS.md](SKILLS.md)** |

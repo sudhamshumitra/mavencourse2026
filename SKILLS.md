@@ -1,6 +1,6 @@
 # Module 2: Turning Grapevine's repeatable work into skills
 
-**Grapevine** finds academic opportunities (conferences, journal calls, fellowships) for humanities researchers and tells them whether each one is worth it. ([PRD](PRD.md) · [live prototype](#try-it))
+**Grapevine** finds academic opportunities (conferences, journal calls, fellowships) for humanities researchers and tells them whether each one is worth it. ([PRD](PRD.md) · [live prototype](https://mavencourse2026.vercel.app))
 
 This page is the submission for Module 2. It covers which work I turned into skills and why, what those skills produced, and what they changed.
 
@@ -179,6 +179,6 @@ Mini-evaluation against the [PRD's evaluation plan](PRD.md#9-evaluation-plan):
 
 ## Try it
 
-- **Prototype:** deployed from this repo on Vercel (link in the [README](README.md)), or run `npx serve prototype` locally. Pick "See an example feed", or describe your own research.
+- **Prototype:** **[mavencourse2026.vercel.app](https://mavencourse2026.vercel.app)**, or run `npx serve prototype` locally. Pick "See an example feed", or describe your own research.
 - **Registries, not search, for stable facts:** [funders/india.json](corpus/funders/india.json) is built once by `find-funding` and refreshed monthly. A society registry for `scout` follows the same pattern next phase.
 - **Rerun a skill** in Claude Code from this repo, e.g. `/scout-opportunities for corpus/profiles/ananya.json`, then `node scripts/build-feed.mjs` to refresh the feed.
