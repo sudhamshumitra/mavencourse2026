@@ -78,6 +78,7 @@ Renormalise so the weights sum to 1. **Priority = Σ weight × sub-score**, roun
 ```
 
 ## Constraints
+- **Plain words:** never say "venue" in anything the user reads. Say conference, journal, workshop, fellowship or event.
 - **Reasons over numbers.** Every sub-score needs a reason that names the specific evidence. A score without a reason is a bug.
 - **Visa is advisory only:** always link the official source, set `verify_flag: true`, and never phrase it as immigration advice ("you are eligible for…").
 - Don't reward prestige blindly. A flagship with 15% acceptance and a ₹2.5L cost can still rank below a strong regional meeting for a budget-limited PhD. That's the point of the weights.

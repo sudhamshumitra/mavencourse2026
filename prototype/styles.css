@@ -1016,3 +1016,6 @@ details.more[open] > summary { margin-bottom: .6rem; }
 .pipe-bar i { transition: width .6s var(--ease); }
 
 .next-exp { margin-top: .35rem; font-size: .82rem; font-weight: 600; color: var(--sky); }
+
+/* in-page redraws: no entrance animations */
+#app.no-anim *, #app.no-anim *::before, #app.no-anim *::after { animation: none !important; }

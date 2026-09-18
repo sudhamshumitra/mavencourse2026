@@ -27,7 +27,7 @@ export const pipeline = pipelineFor(meta, profile.currency);
 export const GOALS = [
   { id: 'networking', label: 'Meet people', sub: 'Who you would meet', emoji: '🤝' },
   { id: 'publication', label: 'Get published', sub: 'A route into print', emoji: '📄' },
-  { id: 'visibility', label: 'A well-known venue', sub: 'A line that counts on a CV', emoji: '🏛' },
+  { id: 'visibility', label: 'A well-known conference', sub: 'A line that counts on a CV', emoji: '🏛' },
   { id: 'low_cost', label: 'Keep it affordable', sub: 'Cost and visa matter most', emoji: '💸' },
   { id: 'feedback', label: 'Feedback on my work', sub: 'Workshops, respondents', emoji: '💬' },
 ];
@@ -83,6 +83,6 @@ export const dismissReasons = [
   { id: 'off_topic', label: 'Off topic', emoji: '🎯', effect: 'Reduces the weight of the topics this one matched on.' },
   { id: 'bad_timing', label: 'Bad timing', emoji: '📅', effect: 'Down-weights months outside your availability.' },
   { id: 'visa_infeasible', label: 'Visa is not realistic', emoji: '🛂', effect: 'Prefers destinations with lighter visa requirements.' },
-  { id: 'not_prestigious', label: 'Not worth it for my CV', emoji: '🏛', effect: 'Weights venue standing higher.' },
+  { id: 'not_prestigious', label: 'Not worth it for my CV', emoji: '🏛', effect: 'Gives well-respected conferences and journals more weight.' },
   { id: 'other', label: 'Something else', emoji: '💬', effect: 'Logged for review; no automatic reweight.' },
 ];

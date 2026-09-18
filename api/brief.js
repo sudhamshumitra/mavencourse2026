@@ -40,7 +40,15 @@ const norm = (v, dflt) => {
   return dflt;
 };
 
-function sanitize(b, opp) {
+/** Plain wording in everything the user reads: "venue" becomes conference / journal / programme. */
+function plainWords(b, type) {
+  const noun = { conference: 'conference', journal_call: 'journal', fellowship: 'programme' }[type] ?? 'event';
+  return JSON.parse(JSON.stringify(b).replace(/\b([Vv])enues\b/g, (m, v) => (v === 'V' ? 'Events' : 'events'))
+    .replace(/\b([Vv])enue\b/g, (m, v) => (v === 'V' ? noun[0].toUpperCase() + noun.slice(1) : noun)));
+}
+
+function sanitize(raw, opp) {
+  const b = plainWords(raw, opp.type);
   const subs = {};
   for (const k of ['fit', 'standing', 'network', 'outcomes', 'feasibility']) {
     const s = b.priority?.sub_scores?.[k];

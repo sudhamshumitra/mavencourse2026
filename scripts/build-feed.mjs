@@ -60,6 +60,10 @@ for (const f of readdirSync(join(root, 'corpus', 'profiles')).filter((f) => f.en
     if (!existsSync(oppPath)) { console.log(`  ${slug}: brief ${bf} has no opportunity file`); continue; }
     const opp = readJson(oppPath);
     const brief = readJson(join(briefDir, bf));
+    const noun = { conference: 'conference', journal_call: 'journal', fellowship: 'programme' }[opp.type] ?? 'event';
+    const plain = (v) => JSON.parse(JSON.stringify(v).replace(/\b([Vv])enues\b/g, (m, v0) => (v0 === 'V' ? 'Events' : 'events'))
+      .replace(/\b([Vv])enue\b/g, (m, v0) => (v0 === 'V' ? noun[0].toUpperCase() + noun.slice(1) : noun)));
+    for (const k of ['priority', 'fit', 'why_go', 'watch_out', 'tagline', 'eligibility_notes', 'explore_reason']) if (brief[k] !== undefined) brief[k] = plain(brief[k]);
     const out = { ...opp, status: deriveStatus(opp), venue_funding: opp.funding ?? [] };
     if (out.status !== opp.status) console.log(`  ${slug}: ${opp.id} status ${opp.status} → ${out.status}`);
     for (const k of BRIEF_FIELDS) if (brief[k] !== undefined) out[k] = brief[k];

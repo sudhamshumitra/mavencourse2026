@@ -584,7 +584,7 @@ export const EXAMPLES = [
       },
       "standing": {
        "score": 92,
-       "reason": "26+ unbroken annual editions since IR1 (2000) and host is the field's own learned society (Association of Internet Researchers) — a genuinely flagship venue."
+       "reason": "26+ unbroken annual editions since IR1 (2000) and host is the field's own learned society (Association of Internet Researchers) — a genuinely flagship conference."
       },
       "network": {
        "score": 80,
@@ -596,7 +596,7 @@ export const EXAMPLES = [
       },
       "feasibility": {
        "score": 45,
-       "reason": "CFP and the Access Grant have both closed, so she'd attend without presenting or venue funding; the conference is only about 4 weeks away, which is tight for arranging a Mexican visa and booking travel, and the cost's high end already exceeds her ₹1.5L budget."
+       "reason": "CFP and the Access Grant have both closed, so she'd attend without presenting or conference funding; the conference is only about 4 weeks away, which is tight for arranging a Mexican visa and booking travel, and the cost's high end already exceeds her ₹1.5L budget."
       }
      }
     },
@@ -618,7 +618,7 @@ export const EXAMPLES = [
      "You'd be in the room with scholars working on platform governance and online publics, useful for feedback before you write your chapters."
     ],
     "watch_out": [
-     "This year's CFP and the Access Grant have both closed — you'd attend, not present, and no venue funding is available.",
+     "This year's CFP and the Access Grant have both closed — you'd attend, not present, and no conference funding is available.",
      "It's only about 4 weeks out and you'd likely need a Mexican visa (unless you already hold a valid US/UK/Schengen visa); that's a tight window to arrange plus book travel, and the high end of the cost estimate is already over your ₹1.5L budget."
     ],
     "tagline": "Flagship internet-studies gathering, but this year's CFP and grant are closed, and it's only weeks away.",
@@ -982,7 +982,7 @@ export const EXAMPLES = [
     },
     "why_go": [
      "It's a long-running (18+ years), learned-society-run cultural studies conference where you could test how your caste/platform-moderation work lands with a broader cultural-studies audience.",
-     "The 'crisis' theme leaves room to frame your work on platform moderation and caste speech, even outside a South Asia-specific venue."
+     "The 'crisis' theme leaves room to frame your work on platform moderation and caste speech, even outside a South Asia-specific conference."
     ],
     "watch_out": [
      "No call-for-papers, deadline, fee, or funding information is currently posted, so it's unclear whether or how you could present.",
@@ -1155,7 +1155,7 @@ export const EXAMPLES = [
     },
     "fit": {
      "score": 0.9,
-     "rationale": "ECSAS sits directly in South Asian studies, one of Ananya's two primary fields, not merely an adjacent one. Her research on Dalit and Bahujan digital counterpublics and Partition memory online are natural fits for a conference built entirely around South Asia, and EASAS panels regularly include caste, media and diaspora themes. This is a stronger, more literal fit than her adjacent internet-studies venues.",
+     "rationale": "ECSAS sits directly in South Asian studies, one of Ananya's two primary fields, not merely an adjacent one. Her research on Dalit and Bahujan digital counterpublics and Partition memory online are natural fits for a conference built entirely around South Asia, and EASAS panels regularly include caste, media and diaspora themes. This is a stronger, more literal fit than her adjacent internet-studies events.",
      "matched_topics": [
       "Partition memory online",
       "South Asian diaspora media",
@@ -1168,7 +1168,7 @@ export const EXAMPLES = [
     },
     "why_go": [
      "This is Europe's main South Asian studies conference — your core field, not an adjacent one — with a long-running 29-edition series.",
-     "A strong venue to get feedback on your chapters from South Asianists working on caste, Partition memory and diaspora before you write them up."
+     "A strong conference to get feedback on your chapters from South Asianists working on caste, Partition memory and diaspora before you write them up."
     ],
     "watch_out": [
      "The 30 Sept 2026 deadline is for panel conveners, not individual papers — you'd need to find and join an accepted panel once the individual paper call opens (Nov 2026, closing 15 Jan 2027).",
@@ -1528,7 +1528,7 @@ export const EXAMPLES = [
       },
       "outcomes": {
        "score": 50,
-       "reason": "Limited information: no 2027 proceedings, publication route or award details are published yet since the CFP hasn't opened; treat this as a 'prepare for the next call' venue rather than scoring it high or low."
+       "reason": "Limited information: no 2027 proceedings, publication route or award details are published yet since the CFP hasn't opened; treat this as a 'prepare for the next call' conference rather than scoring it high or low."
       },
       "feasibility": {
        "score": 55,
@@ -1750,7 +1750,7 @@ export const EXAMPLES = [
     },
     "fit": {
      "score": 0.72,
-     "rationale": "The Annual Conference on South Asia is the largest general interdisciplinary meeting in South Asian studies, so a Dalit/Bahujan digital-media dissertation would fit within its media, culture and society panels even without a media-specific track. It is also a plausible venue for her broader interests in South Asian diaspora media and Partition memory. The fit is general rather than anchored to a named theme or track, since no 2026 theme or tracks were found on the site.",
+     "rationale": "The Annual Conference on South Asia is the largest general interdisciplinary meeting in South Asian studies, so a Dalit/Bahujan digital-media dissertation would fit within its media, culture and society panels even without a media-specific track. It is also a plausible conference for her broader interests in South Asian diaspora media and Partition memory. The fit is general rather than anchored to a named theme or track, since no 2026 theme or tracks were found on the site.",
      "matched_topics": [
       "South Asian diaspora media",
       "Partition memory online",
@@ -2811,7 +2811,7 @@ export const EXAMPLES = [
       },
       "outcomes": {
        "score": 65,
-       "reason": "No stated proceedings or publication route, but presenting at a flagship feminist-media venue is a solid visibility line — limited information beyond that."
+       "reason": "No stated proceedings or publication route, but presenting at a flagship feminist-media conference is a solid visibility line — limited information beyond that."
       },
       "feasibility": {
        "score": 75,
@@ -2830,7 +2830,7 @@ export const EXAMPLES = [
     },
     "why_go": [
      "It's the flagship international conference for feminist media studies, and gender/sexuality in media is right in your wheelhouse.",
-     "Founded in 1989, it's one of the most established venues in this area, so presenting here carries real visibility.",
+     "Founded in 1989, it's one of the most established events in this area, so presenting here carries real visibility.",
      "The 1 December 2026 deadline gives you time to prepare a strong proposal."
     ],
     "watch_out": [
@@ -2997,7 +2997,7 @@ export const EXAMPLES = [
     },
     "why_go": [
      "It's fully online and essentially free, a low-risk way to test how your work lands with a cultural-studies audience outside film studies.",
-     "Your festivals-as-community angle and gender/sexuality focus both fit a cultural-studies framing, even though this isn't a film-specific venue."
+     "Your festivals-as-community angle and gender/sexuality focus both fit a cultural-studies framing, even though this isn't a film-specific conference."
     ],
     "watch_out": [
      "The full call for papers wasn't posted yet when checked, so the exact theme, eligibility and any fee are still unknown."
@@ -5201,7 +5201,7 @@ export const EXAMPLES = [
     },
     "fit": {
      "score": 0.8,
-     "rationale": "4S is the international home for science and technology studies, explicitly listed as one of Daniel's two primary fields, and the 2026 theme of 'TechnoPower' engages directly with questions of power, labour and technoscientific systems that overlap with his dissertation on AI data labour and worker organising. The submission window for this edition has already closed, so the fit is about the venue's general suitability for future editions rather than this specific programme.",
+     "rationale": "4S is the international home for science and technology studies, explicitly listed as one of Daniel's two primary fields, and the 2026 theme of 'TechnoPower' engages directly with questions of power, labour and technoscientific systems that overlap with his dissertation on AI data labour and worker organising. The submission window for this edition has already closed, so the fit is about the conference's general suitability for future editions rather than this specific programme.",
      "matched_topics": [
       "AI data labour",
       "critical AI studies",
@@ -5747,11 +5747,11 @@ export const EXAMPLES = [
       },
       "standing": {
        "score": 85,
-       "reason": "This is the 17th CODESRIA General Assembly, the flagship gathering of Africa's leading pan-African social-science research council — a well-established, high-standing venue."
+       "reason": "This is the 17th CODESRIA General Assembly, the flagship gathering of Africa's leading pan-African social-science research council — a well-established, high-standing conference."
       },
       "network": {
        "score": 65,
-       "reason": "It brings together African social scientists across disciplines, useful for regional visibility, though it's less targeted to the specific AI-labour/platform-work network than a dedicated internet- or STS-studies venue."
+       "reason": "It brings together African social scientists across disciplines, useful for regional visibility, though it's less targeted to the specific AI-labour/platform-work network than a dedicated internet- or STS-studies conference."
       },
       "outcomes": {
        "score": 30,
@@ -6353,7 +6353,7 @@ export const EXAMPLES = [
     },
     "fit": {
      "score": 0.9,
-     "rationale": "ILPC 2027's theme, 'Spaces of Work and Resistance', and its explicit stream on labour organisation and collective action speak almost directly to Daniel's dissertation on how data-labelling and content-moderation workers in Ghana and Kenya organise. This is one of the closest topical matches among his options, even though the venue is smaller and less internationally prominent than a flagship communication or STS society.",
+     "rationale": "ILPC 2027's theme, 'Spaces of Work and Resistance', and its explicit stream on labour organisation and collective action speak almost directly to Daniel's dissertation on how data-labelling and content-moderation workers in Ghana and Kenya organise. This is one of the closest topical matches among his options, even though the conference is smaller and less internationally prominent than a flagship communication or STS society.",
      "matched_topics": [
       "worker organising",
       "platform labour in Africa",
@@ -6635,7 +6635,7 @@ export const EXAMPLES = [
     },
     "why_go": [
      "It's happening at LUMS, in her own city — no travel, hotel or visa cost at all.",
-     "It's the Association for Asian Studies' flagship conference, a major venue to meet Asia-focused scholars in person.",
+     "It's the Association for Asian Studies' flagship conference, a major conference to meet Asia-focused scholars in person.",
      "Hybrid/virtual options exist too, in case in-person attendance doesn't work out."
     ],
     "watch_out": [
@@ -6807,7 +6807,7 @@ export const EXAMPLES = [
       },
       "network": {
        "score": 75,
-       "reason": "A flagship regional (European) South Asian studies meeting is high network value for someone in her exact field, and a strong venue to meet scholars working on Punjab and Partition."
+       "reason": "A flagship regional (European) South Asian studies meeting is high network value for someone in her exact field, and a strong conference to meet scholars working on Punjab and Partition."
       },
       "outcomes": {
        "score": 60,
@@ -7177,7 +7177,7 @@ export const EXAMPLES = [
       },
       "outcomes": {
        "score": 65,
-       "reason": "A fast, concrete publication credit (target publication December 2026) that fits her stated goal of a publication before she finishes, though the venue isn't yet a highly established one."
+       "reason": "A fast, concrete publication credit (target publication December 2026) that fits her stated goal of a publication before she finishes, though the journal isn't yet a highly established one."
       },
       "feasibility": {
        "score": 100,
@@ -7587,7 +7587,7 @@ export const EXAMPLES = [
     },
     "fit": {
      "score": 0.55,
-     "rationale": "Gender studies is one of her named adjacent fields, and 'women and memory' is one of her own weighted topics, so there's a real thread connecting her work to this conference's broad theme. But the call is generic and not aimed at memory, oral history or South Asia, so the fit depends heavily on how she frames a submission, and the venue itself carries real quality risk (see standing).",
+     "rationale": "Gender studies is one of her named adjacent fields, and 'women and memory' is one of her own weighted topics, so there's a real thread connecting her work to this conference's broad theme. But the call is generic and not aimed at memory, oral history or South Asia, so the fit depends heavily on how she frames a submission, and the conference itself carries real quality risk (see standing).",
      "matched_topics": [
       "women and memory"
      ],
@@ -7602,9 +7602,9 @@ export const EXAMPLES = [
      "This is flagged as a likely conference-mill event: the organiser (TIIKM) runs a near-identical 'World Conference on Women's Studies' every year in a different city, with no named academic committee found.",
      "No registration fee is published despite a live deadline, and the 'scholarship program' mentioned has no real details."
     ],
-    "tagline": "A genuine exploration into gender studies — but this specific venue looks like a conference mill; go in with eyes open.",
+    "tagline": "A genuine exploration into gender studies — but this specific conference looks like a conference mill; go in with eyes open.",
     "eligible": "yes",
-    "eligibility_notes": "No career-stage, nationality or other eligibility restriction was found; the concern here is the venue's quality and legitimacy, not her eligibility to attend.",
+    "eligibility_notes": "No career-stage, nationality or other eligibility restriction was found; the concern here is the conference's quality and legitimacy, not her eligibility to attend.",
     "visa": {
      "required": "yes",
      "note": "Cambodia offers an e-visa for Pakistani passport holders. This is general information, not immigration advice — confirm current requirements on Cambodia's official e-visa portal.",
@@ -8344,7 +8344,7 @@ export const EXAMPLES = [
     },
     "fit": {
      "score": 0.45,
-     "rationale": "IASPM's global 'Pop! Goes the World' theme shares little specific ground with her narrower project on 1990s Indonesian Islamic popular music and zines, but as the field's flagship venue it could still work for her with careful framing -- the fit here comes from field adjacency rather than a direct topic match.",
+     "rationale": "IASPM's global 'Pop! Goes the World' theme shares little specific ground with her narrower project on 1990s Indonesian Islamic popular music and zines, but as the field's flagship conference it could still work for her with careful framing -- the fit here comes from field adjacency rather than a direct topic match.",
      "matched_topics": [
       "Indonesian music and zines"
      ],
@@ -8370,7 +8370,7 @@ export const EXAMPLES = [
      "lead_days": 60
     },
     "explore": true,
-    "explore_reason": "Popular music studies is one of her adjacent fields, not her primary discipline, and this conference's global theme has little direct overlap with her specific Islamic-archiving research -- exactly the kind of venue she wouldn't think to search for herself.",
+    "explore_reason": "Popular music studies is one of her adjacent fields, not her primary discipline, and this conference's global theme has little direct overlap with her specific Islamic-archiving research -- exactly the kind of conference she wouldn't think to search for herself.",
     "confidence": {
      "dates": "verified",
      "fees": "inferred",
@@ -9410,7 +9410,7 @@ export const EXAMPLES = [
      "Every panel needs at least one convener affiliated with a European institution and current EASAS membership — he'd need to find or join such a panel, not submit solo, and the panel deadline is only 11 days away (Sept 30, 2026).",
      "No registration fee or travel funding is published yet (marked TBA), so the cost estimate could shift."
     ],
-    "tagline": "A strong regional venue for his work — if he can join a European-led panel within the next two weeks.",
+    "tagline": "A strong regional conference for his work — if he can join a European-led panel within the next two weeks.",
     "eligible": "conditional",
     "eligibility_notes": "Panel proposals require a convener affiliated with a European institution and current EASAS membership; an individual paper submission (once the call opens in Nov 2026, closing 15 Jan 2027) may not require this himself, but he needs a panel to submit into.",
     "visa": {
@@ -9561,7 +9561,7 @@ export const EXAMPLES = [
     },
     "fit": {
      "score": 0.85,
-     "rationale": "IAEA is the specialist international society for educational assessment and examinations, which is close to a direct match for his work on exam reform — of all the venues found, this is the one whose subject matter maps most literally onto that specific topic, even though it isn't focused on Bangladesh or South Asia.",
+     "rationale": "IAEA is the specialist international society for educational assessment and examinations, which is close to a direct match for his work on exam reform — of all the events found, this is the one whose subject matter maps most literally onto that specific topic, even though it isn't focused on Bangladesh or South Asia.",
      "matched_topics": [
       "exam reform",
       "education policy"
@@ -9800,7 +9800,7 @@ export const EXAMPLES = [
     },
     "fit": {
      "score": 0.58,
-     "rationale": "As an exploration pick, this large interdisciplinary South Asian studies conference has no dedicated education track, but his listed topic 'South Asian education' connects genuinely to its scope, and its size and range of disciplines (history, anthropology, political science) could put him in front of Bangladesh specialists he would not meet at an education-only venue.",
+     "rationale": "As an exploration pick, this large interdisciplinary South Asian studies conference has no dedicated education track, but his listed topic 'South Asian education' connects genuinely to its scope, and its size and range of disciplines (history, anthropology, political science) could put him in front of Bangladesh specialists he would not meet at an education-only conference.",
      "matched_topics": [
       "South Asian education",
       "educational inequality"
@@ -9998,12 +9998,12 @@ export const EXAMPLES = [
      "neighborhood_evidence": []
     },
     "why_go": [
-     "It's the world congress of the umbrella body for education researchers globally, so it's a legitimate flagship venue for education-policy work.",
+     "It's the world congress of the umbrella body for education researchers globally, so it's a legitimate flagship conference for education-policy work.",
      "June 2027 fits one of the months he's actually free to travel, and the deadline (Nov 15, 2026) is still two months away.",
      "The estimated total cost stays just under his budget cap, even without any funding lined up yet."
     ],
     "watch_out": [
-     "No registration fee, venue travel grant, or keynote/programme information was found on the page, so several numbers here are estimates.",
+     "No registration fee, conference travel grant, or keynote/programme information was found on the page, so several numbers here are estimates.",
      "A Schengen visa is required for a Bangladeshi passport, and no Bangladesh-specific funder was found to help cover an unfamiliar Europe trip."
     ],
     "tagline": "A legitimate world congress for education research, and just about affordable if nothing goes wrong.",
@@ -11288,7 +11288,7 @@ export const EXAMPLES = [
       },
       "standing": {
        "score": 55,
-       "reason": "It's KEMRI's national annual conference in its 17th year — a solid, government-backed venue — but no keynote list or programme-committee details were found, so standing is based on limited information (inferred)."
+       "reason": "It's KEMRI's national annual conference in its 17th year — a solid, government-backed conference — but no keynote list or programme-committee details were found, so standing is based on limited information (inferred)."
       },
       "network": {
        "score": 70,
@@ -11306,7 +11306,7 @@ export const EXAMPLES = [
     },
     "fit": {
      "score": 0.65,
-     "rationale": "KASH 2027's theme is broad health-research and innovation rather than maternal health specifically, but Kenya's national health-research conference is a natural place to present work on community health workers and maternal health in informal settlements, especially framed around health-systems innovation. It's also the one venue in this shortlist that requires no travel at all.",
+     "rationale": "KASH 2027's theme is broad health-research and innovation rather than maternal health specifically, but Kenya's national health-research conference is a natural place to present work on community health workers and maternal health in informal settlements, especially framed around health-systems innovation. It's also the one conference in this shortlist that requires no travel at all.",
      "matched_topics": [
       "community health workers",
       "maternal health in informal settlements",
@@ -11385,7 +11385,7 @@ export const EXAMPLES = [
  }
 ];
 export const FX = {"base":"INR","as_of":"2026-09-18T00:02:31Z","source":"https://open.er-api.com/v6/latest/INR","inr_per":{"USD":95.96,"EUR":110.07,"GBP":128.17,"AUD":68.26,"BRL":18.65,"SEK":9.77,"CAD":68.53}};
-export const heldBack = {"id":"basas-2027","type":"conference","status":"watch","title":"BASAS Annual Conference 2027","host":"British Association for South Asian Studies (BASAS)","host_kind":"learned_society","theme":null,"description":"The BASAS Annual Conference 2027 will be held at Newcastle University. The public page gives no specific dates, submission deadlines, registration fees, or travel grant information; the conference is described as a members-only event, and further detail appears to require login to the BASAS members' area.","location":{"city":"Newcastle","country":"United Kingdom","format":"in_person"},"dates":{"start":null,"end":null},"deadlines":[],"eligibility":{"career_stage":[],"nationality":null,"region_restriction":null,"membership_required":true,"notes":"Please note that the BASAS Annual Conference is a members-only event. No fee, deadline, or funding information is published on the public page; these may be restricted to the BASAS members' area."},"fees":[],"funding":[{"name":"ICSSR Scheme for Participation in International Seminar/Conference Abroad","source":"external","type":"travel_scholarship","amount_note":"PhD/PDF scholars without other funding: full financial assistance (airfare, visa, insurance, local conveyance, stay, registration).","deadline":null,"cycle":"Rolling, apply online at least 3 months before the conference date once dates are known","requires":"Formal acceptance letter from organizers to present a paper (email invites insufficient) + full paper","eligible":"check","why":"BASAS 2027 has no published CFP, dates or fees yet; ICSSR needs a firm acceptance letter, and there's nothing to apply against currently","grounded":true,"source_quote":"PhD/PDF scholars and SC/ST/PwD faculty without other funding: full financial assistance.","source_url":"https://icssr.org/participation-international-seminar-abroad","sequence_note":"Wait for BASAS 2027 CFP and dates (likely announced via the members' area); if a paper is accepted, apply to ICSSR at least 3 months before travel."}],"past_editions":[{"year":2026,"theme":null,"city":"SOAS, London, UK","representative_papers":[],"source_url":"https://www.basas.org.uk/news-events/basas-conference/"},{"year":2025,"theme":null,"city":"Lancaster, UK","representative_papers":[],"source_url":"https://www.basas.org.uk/news-events/basas-conference/"},{"year":2024,"theme":null,"city":"King's College London, UK","representative_papers":[],"source_url":"https://www.basas.org.uk/news-events/basas-conference/"}],"standing_signals":[{"signal":"Programme archive shows an unbroken run of annual conferences at UK universities from at least 2011 through 2026 (Southampton, SOAS, Leeds, Royal Holloway, Portsmouth, Cambridge, Nottingham, Exeter, Durham, Edinburgh, Southampton, Leeds, King's College London, Lancaster, SOAS).","grounded":false,"previous_quote":null,"verify_note":"fail_mismatch: page lists no 2020 conference (jumps from 2019 Durham to 2021 Edinburgh) with no cancellation/postponement note, so the 'unbroken run' claim is not supported by the page as written.","source_url":"https://www.basas.org.uk/news-events/basas-conference/"}],"source_url":"https://www.basas.org.uk/news-events/basas-conference/","extracted_at":"2026-09-19","predatory_flag":false,"predatory_reasons":[],"venue_funding":[],"priority":{"score":69,"weights":{"fit":0.269,"standing":0.192,"network":0.154,"outcomes":0.154,"feasibility":0.231},"sub_scores":{"fit":{"score":85,"reason":"BASAS is the UK's dedicated South Asian studies conference, one of her two primary fields; her caste, Partition-memory and diaspora-media topics are a direct match even without confirmed 2027 panels."},"standing":{"score":75,"reason":"An unbroken run of annual conferences at UK universities from at least 2011 to 2026, hosted by a learned society, but a members-only, more regionally-scaled event than a flagship like AoIR."},"network":{"score":72,"reason":"Good regional value for an India-based South Asianist — UK-based South Asian studies specialists — though the members-only structure limits visibility into who exactly attends."},"outcomes":{"score":50,"reason":"No proceedings, publication route, or award details are published for 2027 — limited information, scored at the midpoint; treat this as a 'prepare for the next call' venue."},"feasibility":{"score":55,"reason":"No 2027 dates, fees or CFP exist yet (BASAS is members-only), so nothing is currently actionable; a UK visa (~3-week process) cuts against her 'prefer no visa' preference, and BASAS membership itself is a cost/step not yet known."}}},"fit":{"score":0.85,"rationale":"BASAS is the British Association for South Asian Studies' own annual conference, sitting directly in South Asian studies, one of Ananya's two primary fields rather than an adjacent one. Her work on Dalit and Bahujan digital counterpublics, caste speech moderation, and Partition memory would be squarely at home once a CFP is published, mirroring the fit seen at ECSAS but at UK scale.","matched_topics":["Partition memory online","South Asian diaspora media","caste & digital media","Dalit & Bahujan counterpublics"],"neighborhood_evidence":["Ramnarayan S. Rawat's caste-and-history scholarship fits BASAS's South Asian studies focus, though no 2027 speaker list exists yet to confirm overlap"]},"why_go":["BASAS is the UK's main South Asian studies conference and a strong regional match for your PhD topic.","A long unbroken run since at least 2011 at UK universities — a well-established venue for feedback from South Asianists, once the 2027 details are out."],"watch_out":["It's a members-only event with no public dates, fees or CFP yet for 2027 — you'd need to join BASAS and watch the members' area for updates.","UK visa processing (about 3 weeks) needs to be planned for once dates are known, and BASAS membership itself is an added, unconfirmed cost."],"tagline":"UK's flagship South Asian studies conference — strong fit, but 2027 details are still members-only.","eligible":"conditional","eligibility_notes":"Described as a members-only event; no nationality or career-stage restriction is stated on the public page, but further CFP, fee and eligibility detail sits behind the BASAS members' area login. Treat as a 'watch and prepare for the next call' opportunity.","visa":{"required":"yes","note":"Indian passport holders need a UK Standard Visitor visa; official Home Office fee is GBP 135 for a 6-month visa (effective 8 Apr 2026), plus a VFS Global service charge in India.","official_source":"https://www.gov.uk/standard-visitor/apply-standard-visitor-visa","verify_flag":true,"lead_days":21},"explore":false,"explore_reason":null,"confidence":{"dates":"verified","fees":"inferred","cost":"range","visa":"advisory","eligibility":"inferred"},"cost_estimate":{"currency":"INR","low":76000,"high":137000,"breakdown":{"registration":{"low":4000,"high":7500,"note":"No 2027 fee published (members-only page); estimated from typical UK regional-society student conference fees (~GBP 30-60), not grounded to a page","grounded":false},"travel":{"low":45000,"high":85000,"note":"India-UK return economy heuristic (Hyderabad/Delhi to Newcastle via a UK hub), booked 8-10 weeks ahead","grounded":false},"accommodation":{"low":8000,"high":24000,"note":"Assuming a typical 3-day conference (4 nights), hostel/university housing to mid-range hotel near Newcastle University; exact 2027 dates not published","grounded":false},"visa":{"low":19000,"high":20500,"note":"UK Standard Visitor visa (6-month), official Home Office fee GBP 135 (effective 8 Apr 2026, ~INR 17,300) plus a VFS Global service charge","grounded":true,"source":"https://www.gov.uk/standard-visitor/apply-standard-visitor-visa"}},"assumptions":["GBP to INR at 128.17 (corpus/fx.json, as of 2026-09-18, open.er-api.com)","Dates, fees and travel-grant details for BASAS 2027 are not published on the public page (members-only); estimates are inferred, not quoted","Excludes meals, local transport, and travel insurance","Assumes membership dues (amount not published) are a separate, additional cost"],"over_budget":false,"net_note":"If a paper is accepted once BASAS 2027's CFP opens and ICSSR comes through, out-of-pocket cost could drop well below the ₹76,000-1,37,000 range — but nothing about dates, fees or funding for this edition is confirmed yet."}};
+export const heldBack = {"id":"basas-2027","type":"conference","status":"watch","title":"BASAS Annual Conference 2027","host":"British Association for South Asian Studies (BASAS)","host_kind":"learned_society","theme":null,"description":"The BASAS Annual Conference 2027 will be held at Newcastle University. The public page gives no specific dates, submission deadlines, registration fees, or travel grant information; the conference is described as a members-only event, and further detail appears to require login to the BASAS members' area.","location":{"city":"Newcastle","country":"United Kingdom","format":"in_person"},"dates":{"start":null,"end":null},"deadlines":[],"eligibility":{"career_stage":[],"nationality":null,"region_restriction":null,"membership_required":true,"notes":"Please note that the BASAS Annual Conference is a members-only event. No fee, deadline, or funding information is published on the public page; these may be restricted to the BASAS members' area."},"fees":[],"funding":[{"name":"ICSSR Scheme for Participation in International Seminar/Conference Abroad","source":"external","type":"travel_scholarship","amount_note":"PhD/PDF scholars without other funding: full financial assistance (airfare, visa, insurance, local conveyance, stay, registration).","deadline":null,"cycle":"Rolling, apply online at least 3 months before the conference date once dates are known","requires":"Formal acceptance letter from organizers to present a paper (email invites insufficient) + full paper","eligible":"check","why":"BASAS 2027 has no published CFP, dates or fees yet; ICSSR needs a firm acceptance letter, and there's nothing to apply against currently","grounded":true,"source_quote":"PhD/PDF scholars and SC/ST/PwD faculty without other funding: full financial assistance.","source_url":"https://icssr.org/participation-international-seminar-abroad","sequence_note":"Wait for BASAS 2027 CFP and dates (likely announced via the members' area); if a paper is accepted, apply to ICSSR at least 3 months before travel."}],"past_editions":[{"year":2026,"theme":null,"city":"SOAS, London, UK","representative_papers":[],"source_url":"https://www.basas.org.uk/news-events/basas-conference/"},{"year":2025,"theme":null,"city":"Lancaster, UK","representative_papers":[],"source_url":"https://www.basas.org.uk/news-events/basas-conference/"},{"year":2024,"theme":null,"city":"King's College London, UK","representative_papers":[],"source_url":"https://www.basas.org.uk/news-events/basas-conference/"}],"standing_signals":[{"signal":"Programme archive shows an unbroken run of annual conferences at UK universities from at least 2011 through 2026 (Southampton, SOAS, Leeds, Royal Holloway, Portsmouth, Cambridge, Nottingham, Exeter, Durham, Edinburgh, Southampton, Leeds, King's College London, Lancaster, SOAS).","grounded":false,"previous_quote":null,"verify_note":"fail_mismatch: page lists no 2020 conference (jumps from 2019 Durham to 2021 Edinburgh) with no cancellation/postponement note, so the 'unbroken run' claim is not supported by the page as written.","source_url":"https://www.basas.org.uk/news-events/basas-conference/"}],"source_url":"https://www.basas.org.uk/news-events/basas-conference/","extracted_at":"2026-09-19","predatory_flag":false,"predatory_reasons":[],"venue_funding":[],"priority":{"score":69,"weights":{"fit":0.269,"standing":0.192,"network":0.154,"outcomes":0.154,"feasibility":0.231},"sub_scores":{"fit":{"score":85,"reason":"BASAS is the UK's dedicated South Asian studies conference, one of her two primary fields; her caste, Partition-memory and diaspora-media topics are a direct match even without confirmed 2027 panels."},"standing":{"score":75,"reason":"An unbroken run of annual conferences at UK universities from at least 2011 to 2026, hosted by a learned society, but a members-only, more regionally-scaled event than a flagship like AoIR."},"network":{"score":72,"reason":"Good regional value for an India-based South Asianist — UK-based South Asian studies specialists — though the members-only structure limits visibility into who exactly attends."},"outcomes":{"score":50,"reason":"No proceedings, publication route, or award details are published for 2027 — limited information, scored at the midpoint; treat this as a 'prepare for the next call' conference."},"feasibility":{"score":55,"reason":"No 2027 dates, fees or CFP exist yet (BASAS is members-only), so nothing is currently actionable; a UK visa (~3-week process) cuts against her 'prefer no visa' preference, and BASAS membership itself is a cost/step not yet known."}}},"fit":{"score":0.85,"rationale":"BASAS is the British Association for South Asian Studies' own annual conference, sitting directly in South Asian studies, one of Ananya's two primary fields rather than an adjacent one. Her work on Dalit and Bahujan digital counterpublics, caste speech moderation, and Partition memory would be squarely at home once a CFP is published, mirroring the fit seen at ECSAS but at UK scale.","matched_topics":["Partition memory online","South Asian diaspora media","caste & digital media","Dalit & Bahujan counterpublics"],"neighborhood_evidence":["Ramnarayan S. Rawat's caste-and-history scholarship fits BASAS's South Asian studies focus, though no 2027 speaker list exists yet to confirm overlap"]},"why_go":["BASAS is the UK's main South Asian studies conference and a strong regional match for your PhD topic.","A long unbroken run since at least 2011 at UK universities — a well-established conference for feedback from South Asianists, once the 2027 details are out."],"watch_out":["It's a members-only event with no public dates, fees or CFP yet for 2027 — you'd need to join BASAS and watch the members' area for updates.","UK visa processing (about 3 weeks) needs to be planned for once dates are known, and BASAS membership itself is an added, unconfirmed cost."],"tagline":"UK's flagship South Asian studies conference — strong fit, but 2027 details are still members-only.","eligible":"conditional","eligibility_notes":"Described as a members-only event; no nationality or career-stage restriction is stated on the public page, but further CFP, fee and eligibility detail sits behind the BASAS members' area login. Treat as a 'watch and prepare for the next call' opportunity.","visa":{"required":"yes","note":"Indian passport holders need a UK Standard Visitor visa; official Home Office fee is GBP 135 for a 6-month visa (effective 8 Apr 2026), plus a VFS Global service charge in India.","official_source":"https://www.gov.uk/standard-visitor/apply-standard-visitor-visa","verify_flag":true,"lead_days":21},"explore":false,"explore_reason":null,"confidence":{"dates":"verified","fees":"inferred","cost":"range","visa":"advisory","eligibility":"inferred"},"cost_estimate":{"currency":"INR","low":76000,"high":137000,"breakdown":{"registration":{"low":4000,"high":7500,"note":"No 2027 fee published (members-only page); estimated from typical UK regional-society student conference fees (~GBP 30-60), not grounded to a page","grounded":false},"travel":{"low":45000,"high":85000,"note":"India-UK return economy heuristic (Hyderabad/Delhi to Newcastle via a UK hub), booked 8-10 weeks ahead","grounded":false},"accommodation":{"low":8000,"high":24000,"note":"Assuming a typical 3-day conference (4 nights), hostel/university housing to mid-range hotel near Newcastle University; exact 2027 dates not published","grounded":false},"visa":{"low":19000,"high":20500,"note":"UK Standard Visitor visa (6-month), official Home Office fee GBP 135 (effective 8 Apr 2026, ~INR 17,300) plus a VFS Global service charge","grounded":true,"source":"https://www.gov.uk/standard-visitor/apply-standard-visitor-visa"}},"assumptions":["GBP to INR at 128.17 (corpus/fx.json, as of 2026-09-18, open.er-api.com)","Dates, fees and travel-grant details for BASAS 2027 are not published on the public page (members-only); estimates are inferred, not quoted","Excludes meals, local transport, and travel insurance","Assumes membership dues (amount not published) are a separate, additional cost"],"over_budget":false,"net_note":"If a paper is accepted once BASAS 2027's CFP opens and ICSSR comes through, out-of-pocket cost could drop well below the ₹76,000-1,37,000 range — but nothing about dates, fees or funding for this edition is confirmed yet."}};
 export const GATHERED_AT = "2026-09-19";
 export const profile = EXAMPLES[0].profile;
 export const opportunities = EXAMPLES[0].opportunities;

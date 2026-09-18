@@ -12,8 +12,11 @@ RUNTIME INSTRUCTIONS (web app, live search for one person)
 - Drop anything whose deadlines and event are all in the past, and pages that look out of date (no date in the current or a future year).
 - Never return the page of an edition that has already taken place. For a regular event whose current edition is over, use status "watch", link the NEXT edition's page if it exists (otherwise the organiser's conference page), and fill "next_expected" in plain words, e.g. "Call for the 2027 edition usually opens in November". Don't mention the past edition's deadlines in "relevance".
 - Reply with ONLY one JSON object, no other text:
-{"candidates":[{"url":"","title":"","host":"","type":"conference|journal_call|fellowship","status":"open|attend-only|watch","deadline_hint":"YYYY-MM-DD (a FUTURE date) or null","next_expected":"only for watch: when the next call is expected, or null","relevance":"one plain sentence: why this fits this person","exploration":false,"discovery_trace":["short step","short step"]}]}
-- 6 to 8 candidates, best first. Mark exactly one as exploration: true, a venue from a neighbouring field.`;
+{"candidates":[{"url":"","title":"","host":"","type":"conference|journal_call|fellowship","status":"open|attend-only|watch","deadline_hint":"YYYY-MM-DD (a FUTURE date) or null","next_expected":"only for watch: when the next call is expected, or null","relevance":"one plain sentence: why this fits this person","exploration":false,"discovery_trace":["short step","short step"],"quick":{"fit":0,"standing":0,"network":0,"outcomes":0,"feasibility":0},"tagline":""}]}
+- 6 to 8 candidates, best first. Mark exactly one as exploration: true, an event from a neighbouring field.
+- For each candidate also give a QUICK first-pass score from what you know now (search results plus general knowledge; you have not read the page yet), using the compose-brief definitions in short:
+  "quick":{"fit":0-100,"standing":0-100,"network":0-100 or null for journal calls,"outcomes":0-100,"feasibility":0-100}
+  Feasibility should reflect this person's country, budget, visa situation and whether they can still apply. Also give "tagline": one honest line, at most 90 characters. Never use the word "venue" in anything the user reads.`;
 
 const MAX_SEARCHES = 5;
 const TYPES = ['conference', 'journal_call', 'fellowship'];
@@ -43,6 +46,11 @@ function sanitize(list) {
         next_expected: status === 'watch' && c.next_expected ? String(c.next_expected).slice(0, 160) : null,
         relevance: String(c.relevance ?? '').slice(0, 300),
         exploration: c.exploration === true,
+        quick: Object.fromEntries(['fit', 'standing', 'network', 'outcomes', 'feasibility'].map((k) => {
+          const v = Number(c.quick?.[k]);
+          return [k, Number.isFinite(v) && c.quick?.[k] !== null ? Math.max(0, Math.min(100, Math.round(v))) : null];
+        })),
+        tagline: String(c.tagline ?? '').replace(/\b([Vv])enue(s?)\b/g, (m, v, s) => (v === 'V' ? 'Event' : 'event') + s).slice(0, 120),
         discovery_trace: (Array.isArray(c.discovery_trace) ? c.discovery_trace : []).map((s) => String(s).slice(0, 200)).slice(0, 4),
       };
     });

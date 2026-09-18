@@ -71,7 +71,7 @@ const money = (n, cur = state.profile.currency) =>
 
 const SUBS = [
   ['fit', 'Fit', 'How close it is to your research'],
-  ['standing', 'Standing', 'How established and respected the venue is'],
+  ['standing', 'Standing', 'How established and well respected it is'],
   ['network', 'Network', 'Who you would meet'],
   ['outcomes', 'Outcomes', 'What you would come away with'],
   ['feasibility', 'Feasibility', 'Whether you can realistically go'],
@@ -161,7 +161,11 @@ const exampleSet = () => EXAMPLES.find((e) => e.id === state.exampleId) ?? EXAMP
 const pickExample = () => { const others = EXAMPLES.filter((e) => e.id !== state.exampleId); const pool = others.length ? others : EXAMPLES; return pool[Math.floor(Math.random() * pool.length)]; };
 const curPipeline = () => pipelineFor(exampleSet().meta, state.profile.currency);
 const mineLive = () => state.mode === 'mine' && LIVE;
-const candidates = () => (state.search?.candidates ?? []).map((c) => state.scored[c.id] ?? { ...c, unscored: true, source_url: c.url });
+const quickPriority = (c) => (c.quick
+  ? { sub_scores: Object.fromEntries(Object.entries(c.quick).map(([k, v]) => [k, typeof v === 'number' ? { score: v, reason: '' } : null])) }
+  : undefined);
+const candidates = () => (state.search?.candidates ?? []).map((c) => state.scored[c.id]
+  ?? { ...c, unscored: true, source_url: c.url, priority: quickPriority(c), explore: c.exploration });
 const allOpportunities = () => [...(mineLive() ? candidates() : exampleSet().opportunities), ...state.pasted];
 const byId = (id) => allOpportunities().find((o) => o.id === id);
 
@@ -1231,7 +1235,7 @@ function searchPanelHtml() {
   const L = searchLog;
   const n = L.searches.length;
   const pct = L.phase === 'done' ? 100 : L.phase === 'picking' ? 92 : Math.min(85, 8 + (n / L.max) * 77);
-  return `<div class="p2-title">${L.phase === 'done' ? `Found ${L.titles.length ? 'these' : ''} for you` : L.phase === 'picking' ? 'Picking the best matches' : n ? `Search ${n} of up to ${L.max}` : 'Starting the search'}</div>
+  return `<div class="p2-title">${L.phase === 'done' ? `Found ${L.titles.length ? 'these' : ''} for you` : L.phase === 'picking' ? 'Checking dates and scoring each match' : n ? `Search ${n} of up to ${L.max}` : 'Starting the search'}</div>
     <div class="p2-detail">${L.phase === 'picking' ? 'Checking dates and choosing the 6–8 that fit you best.' : L.phase === 'done' ? 'Opening your shortlist…' : 'Each search looks in a different place: societies, next year’s editions, journals, fellowships.'}</div>
     <ol class="s-log">${L.searches.map((s, i) => `<li class="${s.count == null && i === n - 1 && L.phase === 'searching' ? 'running' : 'done'}">
       <span class="s-q">“${esc(s.query)}”</span><span class="s-n">${s.count == null ? 'searching…' : `${s.count} results`}</span></li>`).join('')}</ol>
@@ -1248,8 +1252,11 @@ function paintSearch() {
   if (bar) bar.style.width = `${pct}%`;
   const L = searchLog;
   const set = (k, cls) => { const el = $(`#s-steps [data-k="${k}"]`); if (el) el.className = cls; };
+  if (L.phase === 'picking') L.pickingAt ??= Date.now();
+  const scoringNow = L.phase === 'picking' && Date.now() - L.pickingAt > 10000;
   set('search', L.phase === 'searching' ? 'active' : 'done');
-  set('shortlist', L.phase === 'picking' ? 'active' : L.phase === 'done' ? 'done' : '');
+  set('dates', L.phase === 'picking' && !scoringNow ? 'active' : L.phase === 'done' || scoringNow ? 'done' : '');
+  set('score', scoringNow ? 'active' : L.phase === 'done' ? 'done' : '');
 }
 
 function renderSearching() {
@@ -1265,7 +1272,8 @@ function renderSearching() {
           <ol class="pipe2-steps" id="s-steps">
             <li class="done"><span class="p2-dot"></span><span>Reading your interests</span></li>
             <li class="active" data-k="search"><span class="p2-dot"></span><span>Searching the web</span></li>
-            <li data-k="shortlist"><span class="p2-dot"></span><span>Picking the best matches</span></li>
+            <li data-k="dates"><span class="p2-dot"></span><span>Checking dates and dropping closed calls</span></li>
+            <li data-k="score"><span class="p2-dot"></span><span>Scoring each match for you</span></li>
           </ol>
           <div class="s-fields">
             <div class="s-found-h">Looking in</div>
@@ -1285,11 +1293,12 @@ async function runSearch() {
     const t = $('#s-timer');
     if (!t) return clearInterval(tick);
     t.textContent = `${Math.round((Date.now() - started) / 1000)}s`;
+    if (searchLog.phase === 'picking') paintSearch();
   }, 1000);
   paintSearch();
   try {
     if (!searchRun) {
-      Object.assign(searchLog, { searches: [], titles: [], phase: 'searching' });
+      Object.assign(searchLog, { searches: [], titles: [], phase: 'searching', pickingAt: null });
       searchRun = apiStream('scout', { profile: state.profile }, (evt) => {
         if (evt.type === 'start') searchLog.max = evt.max_searches ?? searchLog.max;
         if (evt.type === 'search') searchLog.searches.push({ query: evt.query, count: null });
@@ -1323,34 +1332,39 @@ async function runSearch() {
   }
 }
 
-function candRow(c, rank) {
+function candRow(c, rank, top = false) {
   const nd = c.deadline_hint && daysUntil(c.deadline_hint) >= 0 ? c.deadline_hint : null;
-  return `<article class="lr lr-cand" data-opp="${esc(c.id)}" style="animation-delay:${Math.min(rank * 45, 400)}ms">
+  const p = c.priority ? priorityOf(c) : null;
+  return `<article class="lr lr-cand ${top ? 'lr-top' : ''}" data-opp="${esc(c.id)}" style="animation-delay:${Math.min(rank * 45, 400)}ms">
     <div class="lr-rank">${String(rank).padStart(2, '0')}</div>
-    <div class="lr-score"><div class="lr-num t-mute">–</div><div class="lr-cap">not scored yet</div></div>
+    <div class="lr-score">
+      <div class="lr-num ${p == null ? 't-mute' : tone(p)}">${p ?? '–'}</div>
+      <div class="lr-cap">${p == null ? 'not scored yet' : 'quick score'}</div>
+      ${subBars(c)}
+    </div>
     <div class="lr-main">
       <div class="kicker">${esc(TYPE_CHIP[c.type]?.[1] ?? 'Call')}${nd ? `<span class="dot">·</span>deadline ${fmtDate(nd)}` : ''}
         ${statusBadge(c)}${c.exploration ? '<span class="badge badge-sky">Outside your usual field</span>' : ''}</div>
-      ${c.status === 'watch' && c.next_expected ? `<div class="next-exp">Next call: ${esc(c.next_expected)}</div>` : ''}
       <h3 class="lr-title"><a href="#/brief/${esc(c.id)}">${esc(c.title)}</a></h3>
       <div class="lr-host">${esc(c.host)} <a class="src-link" href="${safeUrl(c.url)}" target="_blank" rel="noopener noreferrer">Call page ↗</a></div>
+      ${c.status === 'watch' && c.next_expected ? `<div class="next-exp">Next call: ${esc(c.next_expected)}</div>` : ''}
+      ${top && c.tagline ? `<p class="lr-tag">${esc(c.tagline)}</p>` : ''}
       <p class="lr-why">${esc(c.relevance)}</p>
     </div>
     <div class="lr-act">
-      <a class="btn btn-primary btn-sm" href="#/brief/${esc(c.id)}">Score it · ~1 min</a>
+      <a class="btn btn-primary btn-sm" href="#/brief/${esc(c.id)}">Full check · ~1 min</a>
       <button class="btn btn-quiet btn-sm" data-act="dismiss" data-id="${esc(c.id)}">Not for me</button>
     </div>
   </article>`;
 }
 
 function renderMineFeed() {
-  const all = allOpportunities().filter((o) => !state.dismissed.includes(o.id));
-  const scored = all.filter((o) => !o.unscored && o.status !== 'stale').sort((a, b) => priorityOf(b) - priorityOf(a));
-  const unscored = all.filter((o) => o.unscored);
+  const all = allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.status !== 'stale')
+    .sort((a, b) => (b.priority ? priorityOf(b) : -1) - (a.priority ? priorityOf(a) : -1));
+  const checked = all.filter((o) => !o.unscored).length;
   const stale = !state.search || state.search.key !== profileKey();
-  const top = scored.filter(actionable).slice(0, 3);
-  const restScored = scored.filter((o) => !top.includes(o));
-  const funded = scored.filter((o) => openFunding(o).length).length;
+  const openNow = all.filter((o) => o.status === 'open').length;
+  const row = (o, i) => (o.unscored ? candRow(o, i + 1, i < 3) : oppRow(o, i + 1, i < 3));
 
   return `<div class="wrap wrap-feed">
     <header class="feed-head">
@@ -1358,23 +1372,20 @@ function renderMineFeed() {
       <h1>Your shortlist</h1>
       <div class="ledger">
         <div><b>${all.length}</b><span>found for your topics</span></div>
-        <div><b>${scored.length}</b><span>scored so far</span></div>
-        <div class="green"><b>${funded}</b><span>with funding you could apply for</span></div>
+        <div class="${openNow ? 'warm' : ''}"><b>${openNow}</b><span>you can apply to now</span></div>
+        <div class="green"><b>${checked}</b><span>fully checked</span></div>
       </div>
     </header>
 
     <div class="feed-bar">
-      <p class="feed-note">Open any call to score it for you. Scores are saved, so each one is only worked out once.
+      <p class="feed-note">Quick scores come from the search. Open one for the full check: dates, cost, funding and visa, read from the call page.
         · <a href="#/how">how scores work</a></p>
       <a class="btn btn-ghost btn-sm" href="#/searching">${stale ? 'Search for my updated profile' : 'Search again'}</a>
     </div>
 
     ${!state.search ? `<div class="empty"><p><strong>No search yet.</strong></p><a class="btn btn-primary btn-sm" href="#/searching">Search for my topics</a></div>` : ''}
 
-    ${top.length ? `<h2 class="list-h">Apply now</h2><div class="ledger-list">${top.map((o, i) => oppRow(o, i + 1, true)).join('')}</div>` : ''}
-    ${restScored.length ? `<h2 class="list-h">Scored</h2><div class="ledger-list">${restScored.map((o, i) => oppRow(o, top.length + i + 1)).join('')}</div>` : ''}
-    ${unscored.length ? `<h2 class="list-h">Found for you <span>not scored yet</span></h2>
-      <div class="ledger-list">${unscored.map((c, i) => candRow(c, scored.length + i + 1)).join('')}</div>` : ''}
+    ${all.length ? `<h2 class="list-h">Best first</h2><div class="ledger-list">${all.map(row).join('')}</div>` : ''}
 
     <form class="paste-box" id="paste-form" style="margin-top:2.4rem">
       <span class="paste-label">Know about one that's missing? Paste its link.</span>
@@ -1390,26 +1401,52 @@ const scoring = {};
 function maybeScore(id) {
   const c = byId(id);
   if (!c?.unscored || scoring[id]?.running) return;
-  scoring[id] = { running: true, step: 'read', error: null };
+  scoring[id] = { running: true, phase: 'extract', started: Date.now(), phaseStarted: Date.now(), error: null };
   (async () => {
     try {
       const { opportunity } = await api('extract', { url: c.url });
-      scoring[id].step = 'brief';
-      if (location.hash === `#/brief/${id}`) render();
+      Object.assign(scoring[id], { phase: 'brief', phaseStarted: Date.now() });
+      paintScoring(id);
       const { brief } = await api('brief', { opportunity, profile: state.profile });
       state.scored[id] = { ...opportunity, venue_funding: opportunity.funding, ...brief, id, explore: c.exploration || brief.explore, discovery_trace: c.discovery_trace };
       save();
       delete scoring[id];
     } catch (err) {
-      scoring[id] = { running: false, step: null, error: err.message };
+      scoring[id] = { running: false, phase: null, error: err.message };
     }
     if (location.hash === `#/brief/${id}`) render();
   })();
 }
 
+/** Four visible steps over two real server calls; the second step of each call switches on a short timer. */
+function scoringSteps(s) {
+  const since = (Date.now() - (s.phaseStarted ?? Date.now())) / 1000;
+  const steps = [
+    ['Opening the call page', s.phase === 'extract' && since < 5],
+    ['Reading dates, fees and who can apply', s.phase === 'extract' && since >= 5],
+    ['Finding funding and working out cost', s.phase === 'brief' && since < 18],
+    ['Scoring it for you', s.phase === 'brief' && since >= 18],
+  ];
+  const activeAt = steps.findIndex(([, on]) => on);
+  return steps.map(([label], i) => `<li class="${s.error ? '' : i < activeAt ? 'done' : i === activeAt ? 'active' : ''}"><span class="p2-dot"></span><span>${label}</span></li>`).join('');
+}
+
+function paintScoring(id) {
+  const s = scoring[id];
+  const list = $('#score-steps');
+  if (!s || !list) return;
+  list.innerHTML = scoringSteps(s);
+  const t = $('#score-timer');
+  if (t) t.textContent = `${Math.round((Date.now() - s.started) / 1000)}s`;
+}
+
+setInterval(() => {
+  const m = location.hash.match(/^#\/brief\/(.+)$/);
+  if (m && scoring[decodeURIComponent(m[1])]?.running) paintScoring(decodeURIComponent(m[1]));
+}, 1000);
+
 function renderScoring(c) {
-  const s = scoring[c.id] ?? { step: 'read' };
-  const st = (k) => (s.error ? '' : s.step === k ? 'active' : (k === 'read' && s.step === 'brief') ? 'done' : '');
+  const s = scoring[c.id] ?? { phase: 'extract', started: Date.now(), phaseStarted: Date.now() };
   return `<div class="wrap wrap-mid">
     <a class="back-link" href="#/feed">← Back to your shortlist</a>
     <header class="brief-head">
@@ -1419,14 +1456,14 @@ function renderScoring(c) {
       <a class="btn btn-ghost btn-sm src-btn" href="${safeUrl(c.url)}" target="_blank" rel="noopener noreferrer">Open the call page ↗</a>
     </header>
     <section class="verdict">
+      ${c.priority ? `<div class="verdict-main" style="margin-bottom:1rem">${ring(priorityOf(c) / 100, 72, 'quick score')}
+        <div><div class="verdict-label">First impression</div><p class="verdict-tag">${esc(c.tagline || c.relevance)}</p></div></div>` : ''}
       <p class="small" style="margin:0 0 ${c.next_expected ? '.4rem' : '1rem'}"><strong>Why it came up:</strong> ${esc(c.relevance)}</p>
       ${c.status === 'watch' && c.next_expected ? `<p class="small" style="margin:0 0 1rem"><strong>Next call:</strong> ${esc(c.next_expected)}</p>` : ''}
-      ${s.error ? `<div class="callout danger"><h4>Couldn't score this one</h4><p>${esc(s.error)}</p></div>
+      ${s.error ? `<div class="callout danger"><h4>Couldn't finish the full check</h4><p>${esc(s.error)}</p></div>
           <div class="onb-actions"><button class="btn btn-primary btn-sm" data-act="rescore" data-id="${esc(c.id)}">Try again</button></div>`
-        : `<ol class="pipe2-steps">
-          <li class="${st('read')}"><span class="p2-dot"></span><span>Reading the call page: dates, fees, who can apply</span></li>
-          <li class="${st('brief')}"><span class="p2-dot"></span><span>Working out cost, funding and whether it's worth it for you</span></li>
-        </ol>
+        : `<div class="spread" style="margin-bottom:.4rem"><strong class="small">Full check in progress</strong><span class="tiny muted" id="score-timer">0s</span></div>
+        <ol class="pipe2-steps" id="score-steps">${scoringSteps(s)}</ol>
         <p class="tiny muted" style="margin:.8rem 0 0">Usually about a minute. You can go back to your shortlist; it keeps going.</p>`}
     </section>
   </div>`;
@@ -1473,7 +1510,7 @@ function renderHow() {
       <p class="small muted">Your goals: ${goals.length ? goals.join(', ') : 'none picked'}. Each goal you pick adds weight to one part. For example, "Keep it affordable" adds to Feasibility. Change them on your <a href="#/profile">profile</a>.</p>`)}
     ${qa('Fit: how close is it to my research?', `<p>Does the call's theme, tracks and past papers match what you work on? It judges by meaning, not shared words, so a theme like "Regeneration(s)" can still be a strong match for platform research.</p>
       <p><strong>Higher:</strong> your main topic is a named theme or track. <strong>Lower:</strong> only a loose link.</p>`)}
-    ${qa('Standing: is it a respected venue?', `<p>Who runs it, and how long has it been going?</p>
+    ${qa('Standing: is it well respected?', `<p>Who runs it, and how long has it been going?</p>
       <p><strong>Higher:</strong> run by a scholarly society or university, many past editions, published proceedings, known speakers. <strong>Lower:</strong> little information. <strong>Much lower:</strong> signs of a predatory, for-profit "all topics" event.</p>`)}
     ${qa('Network: who would I meet?', `<p>Is this where people in your area actually go?</p>
       <p><strong>Higher:</strong> it's a field's main meeting, has sessions for PhD students, or a small group you'd get to know. Journal calls don't get this score.</p>`)}
@@ -1706,7 +1743,7 @@ function doDismiss(id, reason) {
     }
     case 'not_prestigious':
       state.weightAdjust.standing = +((state.weightAdjust.standing ?? 0) + 0.05).toFixed(2);
-      effect = 'Venue standing now counts for more in your ranking.';
+      effect = 'How well respected something is now counts for more in your ranking.';
       break;
     case 'bad_timing': {
       const m = o.dates.start ? new Date(o.dates.start + 'T00:00:00Z').toLocaleDateString('en-GB', { month: 'short', timeZone: 'UTC' }) : null;
@@ -1808,6 +1845,8 @@ const routes = {
   '/how': renderHow,
 };
 
+let lastRenderedHash = null;
+
 function render() {
   const hash = location.hash.replace(/^#/, '');
   const app = $('#app');
@@ -1817,6 +1856,9 @@ function render() {
   if (brief) html = renderBrief(brief[1]);
   else html = (routes[hash] ?? renderWelcome)();
 
+  // Entrance animations only when moving to a new page; in-page updates (save, tabs) redraw silently.
+  app.classList.toggle('no-anim', hash === lastRenderedHash);
+  lastRenderedHash = hash;
   app.innerHTML = html;
 
   // nav state
