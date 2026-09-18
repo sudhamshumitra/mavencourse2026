@@ -1331,6 +1331,7 @@ function candRow(c, rank) {
     <div class="lr-main">
       <div class="kicker">${esc(TYPE_CHIP[c.type]?.[1] ?? 'Call')}${nd ? `<span class="dot">·</span>deadline ${fmtDate(nd)}` : ''}
         ${statusBadge(c)}${c.exploration ? '<span class="badge badge-sky">Outside your usual field</span>' : ''}</div>
+      ${c.status === 'watch' && c.next_expected ? `<div class="next-exp">Next call: ${esc(c.next_expected)}</div>` : ''}
       <h3 class="lr-title"><a href="#/brief/${esc(c.id)}">${esc(c.title)}</a></h3>
       <div class="lr-host">${esc(c.host)} <a class="src-link" href="${safeUrl(c.url)}" target="_blank" rel="noopener noreferrer">Call page ↗</a></div>
       <p class="lr-why">${esc(c.relevance)}</p>
@@ -1418,7 +1419,8 @@ function renderScoring(c) {
       <a class="btn btn-ghost btn-sm src-btn" href="${safeUrl(c.url)}" target="_blank" rel="noopener noreferrer">Open the call page ↗</a>
     </header>
     <section class="verdict">
-      <p class="small" style="margin:0 0 1rem"><strong>Why it came up:</strong> ${esc(c.relevance)}</p>
+      <p class="small" style="margin:0 0 ${c.next_expected ? '.4rem' : '1rem'}"><strong>Why it came up:</strong> ${esc(c.relevance)}</p>
+      ${c.status === 'watch' && c.next_expected ? `<p class="small" style="margin:0 0 1rem"><strong>Next call:</strong> ${esc(c.next_expected)}</p>` : ''}
       ${s.error ? `<div class="callout danger"><h4>Couldn't score this one</h4><p>${esc(s.error)}</p></div>
           <div class="onb-actions"><button class="btn btn-primary btn-sm" data-act="rescore" data-id="${esc(c.id)}">Try again</button></div>`
         : `<ol class="pipe2-steps">
