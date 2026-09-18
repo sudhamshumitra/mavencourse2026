@@ -38,7 +38,7 @@ flowchart LR
     V --> FEED
 ```
 
-Each box is one SKILL.md, named after the agent it specifies in [PRD §6](PRD.md#6-system-architecture). **The skills serve twice:**
+Each box is one SKILL.md, matches a step in [the PRD's "How it works"](PRD.md#5-how-it-works). **The skills serve twice:**
 1. **Now:** I run them in Claude Code to build and refresh the corpus.
 2. **Next phase:** the Next.js backend loads the same SKILL.md text as its prompts (each file ends with *Runtime notes* giving the model tier and token budget). The judgement is written once, and the code only does plumbing.
 
@@ -149,7 +149,7 @@ The week 1 version stays browsable at the tag [`module-1-prototype`](../../tree/
 
 ## Results
 
-Mini-evaluation against the [PRD's evaluation plan](PRD.md#9-evaluation-plan):
+Mini-evaluation against the [PRD's evaluation plan](PRD.md#8-how-well-know-it-works):
 
 | PRD eval | Measure | Result |
 |---|---|---|

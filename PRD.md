@@ -1,267 +1,170 @@
-# Grapevine — Product Requirements Document
+# Grapevine: Product Requirements Document
 
-*An AI agent that finds academic opportunities a humanities researcher would otherwise never hear about, and tells them whether it's worth going.*
+*Finds the conferences, journal calls and fellowships a researcher would otherwise never hear about, and tells them honestly whether each one is worth their time and money.*
 
-**Status:** v1 specification, organised around the questions a reviewer of an AI product should ask first.
-
----
-
-## 1. Origin
-
-Humanities researchers — media studies, gender studies, sociology, literature — mostly find out about conferences, journal calls and fellowships by word of mouth: a supervisor forwards an email, a senior mentions a deadline, someone posts a screenshot in a WhatsApp group. That grapevine only reaches people already attached to it. There is no centralised place to look, and nothing that tells you whether an opportunity you did find is actually worth your time and money.
-
-**Grapevine** is that missing place, and the missing judgement.
+**Live prototype:** [mavencourse2026.vercel.app](https://mavencourse2026.vercel.app) · **How it was built:** [SKILLS.md](SKILLS.md)
 
 ---
 
-## 2. The problem, in five questions
+## 1. Why this exists
 
-**What problem are we solving?**
-Discovery of academic opportunities is social, and therefore unequal — scattered across venue sites, mailing lists and private group chats, with no index spanning them. Evaluation is manual, and therefore skipped — even a found opportunity requires stitching together relevance, eligibility, deadline sequencing, cost and funding from separate sources, so people over-apply, under-apply, or miss deadlines.
+Humanities researchers mostly hear about opportunities by word of mouth: a supervisor forwards an email, a senior mentions a deadline, someone posts a screenshot in a group chat. That grapevine only reaches people already connected to it. There's no single place to look, and nothing that tells you whether something you *did* find is worth going to.
 
-**Who is the user?**
-PhD candidates and early-career researchers in the humanities and social sciences: internationally mobile, time-poor, cost- and visa-sensitive, and underserved by tooling that skews STEM (WikiCFP) and Global North.
-
-**Why is it worth solving?**
-Conferences and fellowships compound careers — networking, publication, funding, visibility. The overhead of finding and judging them falls hardest on people with the least institutional support: first-generation academics, less-resourced universities, and Global South researchers who additionally face foreign-currency costs and visa friction their peers don't. The information is already public; what's missing is aggregation and judgement.
-
-**Why is AI useful here?**
-This is judgement over messy, unstructured information, not a lookup problem. Call pages have no shared schema. Relevance in the humanities is semantic — a conference titled "Intimacy and Infrastructure" may be the best possible venue for dating-app research and share zero keywords with it. Eligibility is stated in prose, conditionally. Deadlines are interdependent (a scholarship deadline that presupposes acceptance). Cost and visa facts must be synthesised honestly, with uncertainty marked. That's reasoning and language work — an LLM agent does it; a rules engine can't.
-
-**Why an agent, not a smarter search box?**
-Because the value is in the pipeline, not a single call: query multiple sources, extract inconsistent pages into one schema, filter for eligibility, rank for semantic fit, assemble a cost/funding/visa picture, and verify every high-stakes claim is grounded — then repeat weekly and adjust to feedback. No single prompt does that; it needs sequenced, specialised steps with guardrails between them.
+**Grapevine is that place, plus the judgement.**
 
 ---
 
-## 3. What Grapevine is
+## 2. The problem in five questions
 
-Three surfaces, in the order a user meets them:
+**What's the problem?**
+Finding opportunities depends on who you know, so it's unequal. Judging them is slow, so people skip it: fit, eligibility, deadlines, cost and funding all live on different pages. People end up applying to the wrong things, missing the right ones, or discovering too late that they can't afford to go.
 
-1. **Preferences** — a research profile (topics, career stage, geography, currency, constraints), bootstrapped from an ORCID/OpenAlex ID or filled in manually. Always user-confirmable.
-2. **The feed** — the landing page: upcoming opportunities ordered by a **"worth it" priority score**, with a reserved slice for deliberate exploration so it doesn't collapse into a filter bubble. A "paste a link" box covers anything the feed missed.
-3. **The brief** — click an opportunity to get **"Is it worth going?"**: five sub-scores with plain-language reasons (fit · standing · network value · outcomes · feasibility), "why go / watch out", then past themes/papers, eligibility, sequenced deadlines, cost estimate in your currency, funding from the venue *and* from external funders (national councils, university, trusts), and a visa advisory — each field marked verified or inferred.
+**Who is it for?**
+PhD students and early-career researchers in the humanities and social sciences. They're short on time, careful with money, often need visas, and are poorly served by existing tools, which lean towards STEM and the Global North.
 
-**Priority score.** Each sub-score is 0–100 with a reason naming its evidence. They are combined with weights set by the user's **goals** (networking · publication · visibility · low cost · feedback — pick up to three), and nudged by dismiss-with-reason feedback. Journal calls drop network value. Predatory-flagged venues are capped at 30. This is what separates Grapevine from a list: a first-generation PhD student may not know which venues carry weight, who they'd meet, or that their national research council funds conference travel.
+**Why does it matter?**
+Conferences and fellowships build careers through contacts, publications, funding and visibility. The cost of finding and judging them falls hardest on first-generation academics, people at less-resourced universities, and Global South researchers, who also face foreign-currency costs and visa hurdles.
 
-**Out of scope for v1** (deliberate cuts): application/cover-letter drafting, broad open-web crawling (curated sources + one bounded explorer pass only), a second built-out vertical, real-time trend detection, and anything that acts on the user's behalf (see §4).
+**Why use AI?**
+Because this is judgement over messy writing, not a database lookup. Every call page is written differently. A conference called "Regeneration(s)" can be the perfect venue for research on caste and social media without sharing a single keyword with it. Eligibility rules are buried in paragraphs. Grants depend on other deadlines ("apply once your paper is accepted"). A language model can read all of that. A keyword filter can't.
+
+**Why more than a search box?**
+The value is in the chain: work out where someone's research belongs, find venues there, read each page, check the dates, cost it, find money for it, judge whether it's worth it, then double-check the facts. No single question to a chatbot does all of that reliably.
 
 ---
 
-## 4. The agent: receive / decide / do / produce
+## 3. What the user sees
 
-| | |
+1. **Tell us your research.** Describe it in a few sentences, or pick topics from a list, or both. Then pick up to three things you want out of it: meet people, get published, a well-known venue, keep it affordable, feedback on your work. Then add passport, currency, budget and visa appetite. ORCID import is optional.
+2. **Your shortlist.** Three numbers at the top: how many opportunities, how many deadlines this month, and how many have funding. The **top picks you can apply to now** get large cards that show *why* they score well. Everything else sits in smaller cards. Calls that look out of date are listed separately.
+3. **"Is it worth it?"** for each opportunity. A score out of 100 and a one-line verdict. Four key facts at a glance: next deadline, cost, funding, visa. Tabs underneath for the detail: *Worth it?* · *Deadlines* · *Cost & funding* · *Can I go?* · *About*.
+4. **Tracker.** Saved deadlines in date order, exportable to a calendar.
+5. **Paste a link.** Found something yourself? Paste it and Grapevine reads it and scores it like everything else.
+
+### The "worth it" score
+
+Five questions, each scored 0–100 with a one-line reason:
+
+| | Question it answers |
 |---|---|
-| **Receives** | Researcher profile · an opportunity (discovered or pasted) · feedback signals |
-| **Decides** | Which sources to query and what to explore · whether an opportunity is *relevant* (semantic) and the user *eligible* · how deadlines sequence · which facts are grounded vs. inferred · how to reweight the profile from feedback |
-| **Does** | Queries sources, runs one bounded web-search pass · extracts pages into schema · assembles cost/funding/visa picture · writes deadlines to tracker + `.ics` · updates profile from feedback |
-| **Produces** | Ranked, eligibility-filtered feed with fit rationale · a full decision brief per opportunity · a tracker with sequenced deadlines |
+| **Fit** | How close is it to my research? (by meaning, not just matching words) |
+| **Standing** | Is it an established, respected venue, or a predatory one? |
+| **Network** | Who would I meet? |
+| **Outcomes** | What would I come away with: a publication, feedback, a strong CV line? |
+| **Feasibility** | Can I realistically go, given cost after funding, visa and timing? |
 
-**Autonomy boundaries**
+The user's goals decide how much each question counts. Choosing "keep it affordable" makes feasibility count for more. Saying "not for me — too expensive" nudges it further. A famous venue can therefore rank *below* a smaller one when it's the wrong move for this person this year, and the page says why.
 
-| Action | Autonomy |
-|---|---|
-| Query, extract, rank, filter eligibility | Fully autonomous |
-| Fit rationale, cost estimate, scholarship/visa notes | Autonomous, every field labelled verified / inferred / advisory |
-| Add to tracker, generate `.ics` | Autonomous |
-| Adjust profile weights from feedback | Autonomous, profile always visible and editable |
-| Register, pay, submit, book travel | **Never** — hard-coded stop |
-| Anything visa-related | **Advisory only** — official source linked, verify-before-acting flag |
-
-Principle: autonomous over gathering and reasoning, never autonomous over committing the user to anything. Money, applications and immigration are where a confident-but-wrong agent does real damage.
+**Out of scope for now:** writing applications, crawling the whole web, and anything that acts on the user's behalf.
 
 ---
 
-## 5. Agent workflow
+## 4. What Grapevine will and won't do
+
+| Grapevine does this on its own | Grapevine never does this |
+|---|---|
+| Searches, reads call pages, estimates cost, finds funding, scores and ranks | Registers, pays, submits or books anything |
+| Adds deadlines to your tracker and calendar | Gives immigration advice. Visa notes are general information with a link to the official source |
+| Adjusts your ranking when you say why something isn't for you (always visible and reversible) | Presents a guess as a fact. Anything not found on the source page is labelled "inferred — check" |
+
+Principle: **it does the reading and the thinking; you make every decision that costs money or commits you to something.**
+
+---
+
+## 5. How it works
 
 ```mermaid
 flowchart TD
-    P["Researcher profile\ntopics · stage · geography · currency · constraints"]
-    U["Paste-a-link (user input)"]
+    A["1 · Your research<br/>a few sentences, or topics from a list,<br/>plus what you want out of it"]
+    B["2 · Where does this work belong?<br/>your field plus the fields next to it"]
+    C["3 · Search<br/>scholarly societies, next year's editions,<br/>journal special issues, fellowships"]
+    L["Or: paste a link you found"]
+    D["4 · Read each call page<br/>dates, fees and rules, each copied<br/>word-for-word from the page"]
+    E["5 · Is it still current?<br/>old pages are set aside"]
+    F["6 · What would it cost you?<br/>fees, flights, stay and visa,<br/>as a range in your currency"]
+    G["7 · Who would pay for it?<br/>the organisers' grants, plus national<br/>and university funding you qualify for"]
+    H["8 · Is it worth it for you?<br/>five scores, weighted by your goals"]
+    I["9 · Double-check<br/>re-open each page and confirm<br/>every date and fee is really there"]
+    J["Your shortlist"]
+    K["Save to tracker · Not for me (why?)"]
 
-    P --> CQ["Curated Querier\nOpenAlex / H-Net / society sites"]
-    P --> BE["Bounded Explorer\ncapped web-search pass"]
-
-    CQ --> EX["Extraction Workers (parallel)\none call page each, no profile access"]
-    BE --> EX
-    U --> EX
-
-    EX --> ELIG["Eligibility Filter\ncareer stage, nationality, membership"]
-    ELIG --> RANK["Matcher / Ranker\ntopic + citation-neighbourhood overlap"]
-    RANK --> FEED["Ranked Feed"]
-
-    FEED -->|click| BRIEF["Brief Composer\npast themes · cost · funding · visa"]
-    BRIEF --> JUDGE["Verification Judge\nconfirms source grounding"]
-    JUDGE --> OUT["Decision Brief"]
-    OUT --> TRACK["Tracker + .ics export"]
-
-    FEED -->|save / dismiss + reason| FB["Feedback Learner"]
-    FB --> P
+    A --> B --> C --> D
+    L --> D
+    D --> E --> F --> G --> H --> I --> J --> K
+    K -. "your reasons tune the ranking" .-> H
 ```
 
-Two loops worth noting: the **outer** discovery loop runs weekly (cron) and feeds the corpus that the feed ranks against; the **inner** loop runs per-click, is cached per (opportunity, profile), and never re-triggers discovery.
+Steps 2 and 3 are how Grapevine finds venues you wouldn't search for. For a researcher working on caste and social media, it reasons that "internet studies" is a neighbouring field, finds that field's main society, and then finds that society's 2026 conference. It never uses a hardcoded list. Step 9 is a separate check that doesn't trust step 4.
 
 ---
 
-## 6. System architecture
+## 6. What it's made of
 
-**Agents**
+Each numbered step above is written down once, in plain language, as a **skill**: a short instruction file covering what to do, what to watch out for, and what never to do. The same files are used in two ways:
 
-| Agent | Responsibility |
+- **While building:** they're run by hand, weekly, to gather and check real opportunities. Today's shortlist was produced this way.
+- **In the live site:** the site sends the same instructions to Claude when you describe your research or paste a link.
+
+| Skill | Step |
 |---|---|
-| Profile Bootstrapper | Drafts topics, citation neighbourhood, career stage from ORCID/OpenAlex or CV; always a draft, user confirms |
-| Curated Querier | Queries known sources by topic tag — cheap, high precision |
-| Bounded Explorer | One capped web-search loop for venues the curated pass missed — where real discovery happens |
-| Extraction Workers (×N, parallel) | Each parses one call page into the Opportunity schema; context-starved by design — no profile, no other pages, no credentials |
-| Eligibility Filter | Flags/drops opportunities the user can't apply to |
-| Matcher / Ranker | Scores fit via topic + citation-neighbourhood overlap, returns rationale |
-| Brief Composer | Assembles past themes, cost estimate, funding, visa note |
-| Verification Judge | Re-checks every high-stakes field against the source text; downgrades ungrounded claims to "inferred — verify" |
-| Feedback Learner | Updates profile weights from dismiss-with-reason and saves |
+| draft-profile | 1–2 |
+| scout-opportunities | 3 |
+| extract-opportunity | 4–5 |
+| estimate-cost | 6 |
+| find-funding | 7 |
+| compose-brief | 8 |
+| verify-grounding | 5 and 9 |
 
-**System map**
+Two **reference lists** hold stable facts, so they don't have to be searched for every time: a list of **funders by country** (India's includes ICSSR's conference travel scheme), and, coming next, a list of **scholarly societies by field**.
 
-| Layer | Components |
-|---|---|
-| Frontend | Preferences wizard, feed, brief view, tracker + calendar export, profile editor, paste-a-link |
-| Backend/API | Route handlers for feed/brief/save/feedback/URL-drop; orchestrator runs server-side; ingestion is a background job |
-| AI/model layer | Anthropic Claude API with tool use; prompts and schemas versioned as files; cheap model for extraction, capable model for Brief Composer and Verification Judge |
-| Data/context | Postgres via Prisma: profiles, opportunities, cached briefs, source registry, feedback log |
-| Infrastructure | Vercel hosting; Vercel Cron for weekly refresh; brief caching; `.ics` generated on demand |
-| External services | OpenAlex (no auth) · web-search API (Tavily/Exa/Brave) · FX-rate API · direct fetch of venue/consular pages |
-
-**Tech stack, and why:** Next.js + TypeScript on Vercel (this is a portal, not a script — rules out a Streamlit-style UI); managed Postgres + Prisma, not SQLite (Vercel's filesystem is ephemeral, and a cron-based design needs persistent storage); Claude API with tool use and no agent framework (the orchestration is the point — keep it legible); Vercel Cron weekly (CFP cycles move on a scale of months); `.ics` export instead of calendar OAuth.
+Under the hood it's a small website on Vercel that calls Claude through Anthropic's API. Detailed data formats live in [`corpus/schema/`](corpus/schema/).
 
 ---
 
-## 7. Data schemas
+## 7. Keeping it honest and safe
 
-```jsonc
-// Profile
-{
-  "id": "string", "name": "string", "orcid": "string|null",
-  "career_stage": "phd | postdoc | faculty | independent | other",
-  "topics": [{ "term": "string", "weight": 0.0 }],
-  "citation_neighborhood": ["openalex_author_id"],
-  "geography": { "country": "string", "passport": "string" },
-  "currency": "INR",
-  "constraints": { "max_cost": 0, "months_available": ["string"], "visa_tolerance": "any|prefer_none|none", "format": "any|in_person|online" },
-  "fields": ["string"], "adjacent_fields": ["string"],        // drive discovery beyond keywords
-  "goals": ["networking|publication|visibility|low_cost|feedback"],  // ≤3, set priority weights
-  "profile_type": "academic"
-}
-```
-
-```jsonc
-// Opportunity — produced by Extraction Workers
-{
-  "id": "string", "type": "conference | journal_call | fellowship",
-  "title": "string", "host": "string", "theme": "string", "description": "string",
-  "location": { "city": "string", "country": "string", "format": "in_person|hybrid|online" },
-  "dates": { "start": "ISO|null", "end": "ISO|null" },
-  "deadlines": [{ "label": "abstract|full_paper|scholarship|early_bird|registration", "date": "ISO", "depends_on": "string|null", "grounded": true, "source_quote": "string" }],
-  "eligibility": { "career_stage": ["string"], "nationality": "string|null", "region_restriction": "string|null", "membership_required": false, "notes": "string" },
-  "fees": [{ "tier": "string", "amount": 0, "currency": "USD", "grounded": true, "source_quote": "string" }],
-  "funding": [{ "name": "string", "type": "travel_scholarship|bursary|waiver|caregiver_grant", "deadline": "ISO|null", "eligibility_notes": "string", "source_url": "string" }],
-  "past_editions": [{ "year": 2024, "theme": "string", "representative_papers": ["string"], "source_url": "string" }],
-  "source_url": "string", "extracted_at": "ISO", "predatory_flag": false
-}
-```
-
-```jsonc
-// DecisionBrief
-{
-  "opportunity_id": "string", "profile_id": "string",
-  "priority": { "score": 0, "weights": { "fit": 0.0, "standing": 0.0, "network": 0.0, "outcomes": 0.0, "feasibility": 0.0 },
-    "sub_scores": { "fit|standing|network|outcomes|feasibility": { "score": 0, "reason": "string" } } },
-  "why_go": ["string"], "watch_out": ["string"], "tagline": "string",
-  "fit_score": 0.0, "fit_rationale": "string", "matched_topics": ["string"], "neighborhood_evidence": ["string"],
-  "eligible": "yes | no | conditional", "eligibility_notes": "string",
-  "deadline_sequence": [{ "date": "ISO", "label": "string", "act_by_reasoning": "string" }],
-  "funding": [{ "name": "string", "source": "venue | external", "deadline": "ISO|null", "cycle": "string|null",
-    "requires": "string|null", "eligible": "yes|likely|check|no", "sequence_note": "string", "source_url": "string" }],
-  "cost_estimate": { "currency": "INR", "low": 0, "high": 0, "breakdown": { "registration": 0, "travel": 0, "accommodation": 0, "visa": 0 }, "assumptions": ["string"] },
-  "visa": { "required": "yes|no|conditional", "note": "string", "official_source": "url", "verify_flag": true },
-  "confidence": { "dates": "verified|inferred", "fees": "verified|inferred", "cost": "range", "visa": "advisory" },
-  "generated_at": "ISO", "model_version": "string"
-}
-```
-
-```jsonc
-// Feedback
-{ "opportunity_id": "string", "profile_id": "string", "signal": "save|dismiss|applied|opened", "reason": "too_expensive|wrong_stage|off_topic|bad_timing|visa_infeasible|other|null", "note": "string|null", "timestamp": "ISO" }
-```
+- **Every date and fee shows its source.** Tap "source" to see the exact words from the page. Anything not found there is labelled *inferred — check*.
+- **Old pages are flagged.** A call posted in 2021 isn't shown as open, even if every word on it is quoted correctly.
+- **Costs are ranges with their assumptions stated**, never a falsely precise number.
+- **Predatory venues are flagged.** This audience is actively targeted by fake conferences and journals.
+- **One pick from outside your usual field** is always included, so the feed doesn't only show what you'd already search for.
+- **Pasted links are fetched safely.** Internal and private addresses are blocked, and page text is treated as something to read, never as instructions to follow.
+- **Spending is capped**: per-request limits, a per-visitor hourly limit, and a monthly spend limit on the API account.
+- **Privacy:** your passport is used only for visa and fee-tier checks. Anything Grapevine infers about you is shown as an editable guess.
 
 ---
 
-## 8. Guardrails
+## 8. How we'll know it works
 
-**Security**
-
-- **SSRF (paste-a-link fetches user-supplied URLs server-side):** scheme allowlist, private/loopback/link-local/metadata IP ranges blocked and re-checked after every redirect, redirect cap, timeout, response-size cap.
-- **Prompt injection (scraped pages are untrusted input):** page content delimited and labelled as data-to-extract-from, never as instructions; Extraction Workers are context-starved (one page, no profile, no credentials); extraction output is schema-validated before it touches the DB; Verification Judge is a second check against the source text.
-- **Secrets:** all API keys server-side env vars only, never in the client bundle; `.env.example` committed, `.env*` gitignored; no credential files in the repo.
-- **Cost control:** `max_tokens` on every call, a hard step budget on the Bounded Explorer, briefs cached per (opportunity, profile), per-user rate limits, a monthly spend ceiling that fails closed.
-- **Privacy:** identity linkage is opt-in; inferred attributes shown as editable inferences, never asserted as fact; passport data used only for visa/fee-tier logic; no cross-user data in a single context window.
-
-**Product**
-
-- No irreversible actions — the agent never registers, pays, submits or books.
-- Every deadline/fee/eligibility claim is grounded (`source_quote`/`source_url`) or explicitly flagged "inferred — verify."
-- Visa output is advisory only, always linked to an official source, never phrased as immigration advice.
-- Cost shown as ranges with stated assumptions, never false precision.
-- Venues with no traceable scholarly footprint are flagged (this audience is actively targeted by predatory conferences/journals).
-- A reserved slice of the feed is exploratory by construction, to avoid a filter bubble.
-
----
-
-## 9. Evaluation plan
-
-| # | Measures | Method | Target |
+| What we measure | How | Target | So far |
 |---|---|---|---|
-| 1 | Extraction accuracy | Hand-label ~10 real call pages, score field-level correctness | ≥90% on deadlines/fees |
-| 2 | Feed relevance | Gold set of ~20 opportunities for a representative seed profile, precision@5 | ≥4/5 relevant |
-| 3 | Discovery value | Of top-10 feed items, how many that profile wouldn't have found via existing channels | ≥2 genuinely novel |
-| 4 | Grounding rate | Check every "verified" deadline/fee actually appears in source | 100% or explicitly flagged |
-| 5 | Visa correctness | Fixture set of (passport, destination, existing-visa) cases with known answers | Correct requirement + source cited every time |
-| 6 | Feedback effect | Precision@5 before vs. after N dismiss-with-reason signals | Measurable improvement |
+| Are dates and fees read correctly? | Hand-check against the source page | ≥90% | 3 of 3 spot-checked calls correct |
+| Is every ✓ fact really on the page? | Automatic re-check (step 9) | 100%, or flagged | 44 of 47 passed; the 3 failures were caught and flagged |
+| Does it find things you wouldn't have? | Compare with a plain keyword search | ≥2 in the top 10 | 6+ in the top 10 (AoIR, ECSAS, SAMCS, MSA, Heidelberg, AAS) |
+| Is the top of the shortlist relevant? | The researcher rates the top 5 | 4 of 5 | Next phase |
+| Are visa notes right? | Known test cases | Always correct and sourced | Next phase |
+| Does feedback improve the ranking? | Top 5 before and after | Measurable improvement | Next phase |
 
-Keep a running failure log alongside the numbers — for an agentic product it's the most informative artefact there is.
-
----
-
-## 10. Skills: how the agents are specified
-
-Each agent in §6 is written first as a **Claude Code skill** (`.claude/skills/<name>/SKILL.md`): draft-profile, scout-opportunities, extract-opportunity, estimate-cost, find-funding, compose-brief, verify-grounding. During the build they run by hand to produce the real corpus. In the app, the same files become the runtime prompts, so the judgement is written once. See [SKILLS.md](SKILLS.md).
-
-## 11. Phased build plan
-
-0. **Scaffold** — repo, schemas, Postgres, Claude client wired, one seed profile created.
-1. **Corpus + ingestion** — Extraction Worker over ~30 real humanities calls; paste-a-link path.
-2. **Preferences + feed** — onboarding, Matcher/Ranker, Eligibility Filter, ranked feed with exploration slot.
-3. **The brief** — Brief Composer (themes, funding, cost, visa), confidence display, tracker, `.ics`.
-4. **Refresh + feedback** — weekly cron, Feedback Learner, Verification Judge, evals from §9.
-5. **Polish** — deploy, write up eval results and failure log, record a walkthrough.
-
-Phases 0–3 alone are a complete, demoable product. Phase 4 is what makes it read as agentic rather than a well-organised scraper.
+A running **failure log** sits alongside these numbers (see [SKILLS.md](SKILLS.md#results)). It's the most useful record of what to fix next.
 
 ---
 
-## 12. Open decisions
+## 9. Build plan (three remaining classes)
 
-**Feedback mechanism (needed by Phase 4):**
-
-| Option | How | Trade-off |
+| Phase | What | Status |
 |---|---|---|
-| (a) Explicit dismiss-with-reason *(recommended)* | Reason maps to a specific reweight | Cleanest signal, easiest to demo, needs user action |
-| (b) Implicit signals | Saves/opens/dwell as weak labels | No friction, noisy, slow to accumulate |
-| (c) Periodic review prompt | "these five felt wrong — why?" | Richest signal, highest friction |
-
-Build (a); log (b)'s signals from Phase 2 so the data exists later.
-
-**Second profile type** (`creative`) exists in the schema as a modularity demo — build a thin version, or state the claim in the architecture and cut it. Leaning cut.
-
-**Corpus sourcing** — which ~30 opportunities seed the initial corpus, and how they're chosen so the feed reads as credible rather than arbitrary.
+| **1 — Real data and the core experience** | The 7 skills. A real shortlist for a test researcher. New onboarding, shortlist and "worth it" pages. Live AI for topic suggestions and paste-a-link. | ✅ Done |
+| **2 — Accounts and memory** | Simple username and password so your profile and saved items follow you. A saved database of opportunities and funders instead of files. A society list for better discovery. More countries' funders. | Next |
+| **3 — Keeps itself fresh, and learns** | A weekly automatic refresh (search, read, check). Feedback that measurably improves the ranking. The remaining evaluations. Final polish and walkthrough. | After |
 
 ---
 
-*Grapevine — because the best way to hear about something shouldn't be knowing the right person.*
+## 10. Open questions
+
+- **Accounts without email:** there's no password reset. Show a one-time recovery code at sign-up?
+- **Which model where:** use the most capable model for everything (simplest, best quality), or a cheaper one for reading pages? Decide from real usage costs.
+- **Other countries:** the funder list starts with India. Which countries next?
+
+---
+
+*Grapevine: because the best way to hear about something shouldn't be knowing the right person.*
