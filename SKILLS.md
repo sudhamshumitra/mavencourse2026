@@ -38,9 +38,9 @@ flowchart LR
     V --> FEED
 ```
 
-Each box is one SKILL.md, matches a step in [the PRD's "How it works"](PRD.md#5-how-it-works). **The skills serve twice:**
-1. **Now:** I run them in Claude Code to build and refresh the corpus.
-2. **Next phase:** the Next.js backend loads the same SKILL.md text as its prompts (each file ends with *Runtime notes* giving the model tier and token budget). The judgement is written once, and the code only does plumbing.
+Each box is one SKILL.md and matches a step in [the PRD's "How it works"](PRD.md#5-how-it-works). **The skills serve twice:**
+1. **While building:** I run them in Claude Code to build and refresh the corpus.
+2. **In the live site:** the site's API functions ([`api/`](api/)) send the same SKILL.md text to Claude as their instructions, bundled by [build-prompts.mjs](scripts/build-prompts.mjs). "Suggest topics" uses draft-profile. Paste-a-link uses extract-opportunity, then find-funding, estimate-cost and compose-brief. The judgement is written once, and the code only does plumbing.
 
 ---
 
