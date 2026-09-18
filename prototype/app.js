@@ -809,8 +809,15 @@ function pasteEvents(root) {
 
 /* ---------- live mode: calls the /api functions when an API key is configured ---------- */
 
-async function api(path, body) {
-  const res = await fetch(`/api/${path}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+async function api(path, body, timeoutMs = 180000) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+  let res;
+  try {
+    res = await fetch(`/api/${path}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body), signal: ctrl.signal });
+  } catch {
+    throw new Error(ctrl.signal.aborted ? 'This took too long and was stopped. Please try again.' : 'Could not reach the server. Check your connection and try again.');
+  } finally { clearTimeout(timer); }
   let data = {};
   try { data = await res.json(); } catch { /* non-JSON error page */ }
   if (!res.ok) throw new Error(data.error ?? `Request failed (${res.status})`);
@@ -1209,10 +1216,23 @@ function renderSearching() {
 
 async function runSearch() {
   const started = Date.now();
+  const p = state.profile;
+  const places = [...(p.fields ?? []), ...(p.adjacent_fields ?? [])];
+  const lines = [
+    ...places.slice(0, 4).map((f) => `Checking scholarly societies in ${f}…`),
+    'Looking for next year’s editions of regular conferences…',
+    'Looking for journal special issues…',
+    'Looking for fellowships and summer schools…',
+    'Setting aside calls whose deadlines have passed…',
+  ];
   const tick = setInterval(() => {
     const t = $('#s-timer');
     if (!t) return clearInterval(tick);
-    t.textContent = `${Math.round((Date.now() - started) / 1000)}s`;
+    const secs = Math.round((Date.now() - started) / 1000);
+    t.textContent = `${secs}s`;
+    const d = $('#p2-detail');
+    if (d && secs % 6 === 0) d.textContent = lines[(secs / 6) % lines.length];
+    if (d && secs >= 60 && secs % 6 === 3) d.textContent = 'Still searching. This can take up to 2 minutes.';
   }, 1000);
   try {
     searchRun ??= api('scout', { profile: state.profile });
