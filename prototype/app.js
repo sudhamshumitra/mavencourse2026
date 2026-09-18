@@ -325,8 +325,8 @@ function factsRow(o) {
     ? `<dd class="t-${urgency(nd.date)}">${nd.fund_name ? 'Funding' : DEADLINE_LABEL[nd.label]}<span>${relative(nd.date)}</span></dd>`
     : `<dd class="t-mute">${o.status === 'watch' ? 'Next call not out' : 'None open'}</dd>`;
   const cost = !c ? '<dd class="t-mute">—</dd>'
-    : `<dd class="${c.high === 0 ? 't-ok' : c.high > state.profile.constraints.max_cost ? 't-warn' : 't-ok'}">${
-      c.high === 0 ? 'Free' : `${shortMoney(c.low, c.currency)}–${shortMoney(c.high, c.currency)}`}<span>${c.high > state.profile.constraints.max_cost ? 'above your limit' : 'within your limit'}</span></dd>`;
+    : `<dd class="${c.high === 0 ? 't-ok' : overBudget(c) ? 't-warn' : 't-ok'}">${
+      c.high === 0 ? 'Free' : `${shortMoney(c.low, c.currency)}–${shortMoney(c.high, c.currency)}`}<span>${overBudget(c) ? 'above your limit' : state.profile.constraints.max_cost == null ? 'no limit set' : 'within your limit'}</span></dd>`;
   const fund = `<dd class="${nf ? 't-ok' : 't-mute'}">${nf ? `${nf} option${nf === 1 ? '' : 's'}` : 'None found'}</dd>`;
   const visa = !abroad ? '<dd class="t-ok">Not needed</dd>'
     : `<dd class="${v === 'yes' ? 't-soon' : v === 'no' ? 't-ok' : 't-near'}">${v === 'yes' ? 'Needed' : v === 'no' ? 'Not needed' : 'Maybe'}</dd>`;
@@ -420,17 +420,28 @@ let topicQuery = '';
 
 const STEPS = ['Your research', 'Your practicalities'];
 
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+/** A new profile starts with nothing selected; unanswered choices get neutral defaults on finish. */
 function blankDraft() {
-  const d = structuredClone(seedProfile);
-  return { ...d, id: 'p_you', name: 'You', fictional: false, affiliation: '', input_text: '', topics: [], goals: [], research_summary: '' };
+  return {
+    id: 'p_you', name: 'You', fictional: false, orcid: null, affiliation: '', input_text: '', research_summary: '',
+    career_stage: null, year: null, topics: [], fields: [], adjacent_fields: [], citation_neighborhood: [], goals: [],
+    geography: { country: '', city: '', passport: '' }, currency: '',
+    constraints: { max_cost: null, months_available: [...MONTHS], visa_tolerance: null, format: null },
+    profile_type: 'academic',
+  };
 }
 
-/** Budget slider [min, max, step] per currency, roughly ₹20k–₹4L in each. */
+/** Budget slider [min, max, step] per currency: roughly ₹20k to ₹5 lakh in each. The top stop means no limit. */
 const BUDGET_RANGE = {
-  INR: [20000, 400000, 5000], USD: [200, 5000, 50], EUR: [200, 5000, 50], GBP: [200, 4000, 50],
-  BRL: [1000, 25000, 500], NGN: [200000, 6000000, 50000], PKR: [50000, 1200000, 10000],
-  KES: [20000, 600000, 5000], IDR: [2000000, 70000000, 500000], BDT: [20000, 500000, 5000], GHS: [2000, 60000, 500],
+  INR: [20000, 500000, 5000], USD: [250, 5500, 50], EUR: [200, 4500, 50], GBP: [200, 4000, 50],
+  BRL: [1000, 27000, 500], NGN: [300000, 9000000, 50000], PKR: [60000, 1600000, 10000],
+  KES: [30000, 780000, 5000], IDR: [3000000, 95000000, 500000], BDT: [25000, 700000, 5000], GHS: [2500, 65000, 500],
 };
+
+const budgetLabel = (v, top, cur) => (v == null ? `${money(top, cur)}+ · no limit` : money(v, cur));
+const overBudget = (cost) => state.profile.constraints.max_cost != null && cost.high > state.profile.constraints.max_cost;
 
 function progressHtml() {
   const dots = STEPS.map((_, i) =>
@@ -515,8 +526,8 @@ function stepResearch() {
 
 function stepPractical() {
   const c = draft.constraints;
-  const [min, max, step] = BUDGET_RANGE[draft.currency] ?? [200, 8000, 100];
-  c.max_cost = Math.min(max, Math.max(min, c.max_cost));
+  const [min, max, step] = BUDGET_RANGE[draft.currency] ?? BUDGET_RANGE.USD;
+  if (c.max_cost != null) c.max_cost = Math.min(max, Math.max(min, c.max_cost));
   const stages = [['phd', 'PhD', 'Doctoral researcher'], ['postdoc', 'Postdoc', 'Early career'],
     ['faculty', 'Faculty', 'Permanent post'], ['independent', 'Independent', 'Unaffiliated']];
   const pick = (act, cur, opts) => `<div class="opt-grid">${opts.map(([v, l, s]) =>
@@ -535,14 +546,16 @@ function stepPractical() {
         <input type="text" id="passport" value="${esc(draft.geography.passport)}" data-act="passport" /></div>
       <div class="field"><label for="currency">Show costs in</label>
         <select id="currency" data-act="currency">
+          <option value="" ${draft.currency ? '' : 'selected'} disabled>Choose…</option>
           ${['INR', 'USD', 'EUR', 'GBP', 'BRL', 'NGN', 'PKR', 'KES', 'IDR', 'BDT', 'GHS'].map((cur) => `<option value="${cur}" ${draft.currency === cur ? 'selected' : ''}>${cur}</option>`).join('')}
         </select></div>
     </div>
     <span class="hint" style="margin-top:-.6rem;display:block">Your passport is used only for visa requirements and regional fee tiers.</span>
 
     <div class="field" style="margin-top:1.2rem">
-      <label for="budget">Most you could spend on one trip: <strong id="budget-out">${money(c.max_cost, draft.currency)}</strong></label>
-      <input type="range" id="budget" min="${min}" max="${max}" step="${step}" value="${c.max_cost}" data-act="budget" />
+      <label for="budget">Most you could spend on one trip: <strong id="budget-out">${draft.currency ? budgetLabel(c.max_cost, max, draft.currency) : 'pick a currency first'}</strong></label>
+      <input type="range" id="budget" min="${min}" max="${max}" step="${step}" value="${c.max_cost ?? max}" data-act="budget" ${draft.currency ? '' : 'disabled'} />
+      <span class="hint">Slide all the way right for no limit.</span>
     </div>
 
     <div class="field"><label>Format</label>${pick('format', c.format,
@@ -583,10 +596,14 @@ function onboardingEvents(root) {
     if (act === 'weight') draft.topics[+e.target.dataset.i].weight = +e.target.value / 100;
     if (act === 'describe') draft.input_text = e.target.value;
     if (act === 'topicsearch') { topicQuery = e.target.value; $('#vocab', root).innerHTML = vocabHtml(); }
-    if (act === 'budget') { draft.constraints.max_cost = +e.target.value; $('#budget-out').textContent = money(+e.target.value, draft.currency); }
+    if (act === 'budget') {
+      const v = +e.target.value, top = +e.target.max;
+      draft.constraints.max_cost = v >= top ? null : v;
+      $('#budget-out').textContent = budgetLabel(draft.constraints.max_cost, top, draft.currency);
+    }
     if (act === 'country') draft.geography.country = e.target.value;
     if (act === 'passport') draft.geography.passport = e.target.value;
-    if (act === 'currency') { draft.currency = e.target.value; repaint(); }
+    if (act === 'currency') { draft.currency = e.target.value; draft.constraints.max_cost = null; repaint(); }
   });
 
   root.addEventListener('click', (e) => {
@@ -637,6 +654,10 @@ function onboardingEvents(root) {
       case 'visatol': draft.constraints.visa_tolerance = btn.dataset.v; repaint(); break;
       case 'finish': {
         const isExample = EXAMPLES.some((e) => e.id === draft.id);
+        draft.currency ||= 'USD';
+        draft.constraints.format ||= 'any';
+        draft.constraints.visa_tolerance ||= 'any';
+        draft.geography.passport ||= draft.geography.country;
         if (isExample) state.exampleId = draft.id;
         state.profile = draft;
         state.onboarded = true;
@@ -1049,7 +1070,7 @@ function tabMoney(o) {
   return `${cost ? `<div class="money-top">
       <div><div class="cost-total">${cost.high === 0 ? 'Free' : `${money(cost.low, cost.currency)} – ${money(cost.high, cost.currency)}`}</div>
         <p class="tiny muted" style="margin:.2rem 0 0">Estimated range, in ${esc(cost.currency)}</p></div>
-      ${cost.high > state.profile.constraints.max_cost ? `<span class="chip chip-amber">Above your ${shortMoney(state.profile.constraints.max_cost, cost.currency)} limit</span>`
+      ${overBudget(cost) ? `<span class="chip chip-amber">Above your ${shortMoney(state.profile.constraints.max_cost, cost.currency)} limit</span>`
         : '<span class="chip chip-vine">Within your limit</span>'}
     </div>
     ${cost.high > 0 ? `<div class="cost-bar">${segs.map(([k, v]) => `<span class="cost-seg" style="width:${((v?.high ?? 0) / totalHigh) * 100}%;background:${COST_COLORS[k] ?? 'var(--muted)'}"></span>`).join('')}</div>
@@ -1158,7 +1179,7 @@ function renderBrief(id) {
           <span class="fact-s">${nd ? `${fmtDate(nd.date)} · ${relative(nd.date)}` : o.status === 'watch' ? 'Watch for the next call' : 'This edition has closed'}</span></div>
         <div class="fact"><span class="fact-k">💰 Cost</span>
           <span class="fact-v">${!cost ? '—' : cost.high === 0 ? 'Free' : `${shortMoney(cost.low, cost.currency)} – ${shortMoney(cost.high, cost.currency)}`}</span>
-          <span class="fact-s">${cost && cost.high > state.profile.constraints.max_cost ? 'above your limit' : 'within your limit'}</span></div>
+          <span class="fact-s">${cost && overBudget(cost) ? 'above your limit' : state.profile.constraints.max_cost == null ? 'no limit set' : 'within your limit'}</span></div>
         <div class="fact"><span class="fact-k">🎁 Funding</span>
           <span class="fact-v">${funds.length ? `${funds.length} option${funds.length === 1 ? '' : 's'}` : 'None open'}</span>
           <span class="fact-s">${funds.length ? esc(funds[0].name).slice(0, 38) : 'see Cost & funding'}</span></div>
@@ -1648,11 +1669,11 @@ function renderProfile() {
     <section class="panel">
       <div class="panel-h"><h3><span class="ico" aria-hidden="true">🧭</span> Constraints</h3></div>
       <dl class="kv">
-        <dt>Career stage</dt><dd>${p.career_stage === 'phd' ? 'PhD candidate' : p.career_stage}${p.year ? `, year ${p.year}` : ''}</dd>
+        <dt>Career stage</dt><dd>${({ phd: 'PhD candidate', postdoc: 'Postdoc', faculty: 'Faculty', independent: 'Independent researcher', other: 'Other' })[p.career_stage] ?? 'Not set'}${p.year ? `, year ${p.year}` : ''}</dd>
         <dt>Based in</dt><dd>${esc(p.geography.city ? p.geography.city + ', ' : '')}${esc(p.geography.country)}</dd>
         <dt>Passport</dt><dd>${esc(p.geography.passport)}</dd>
         <dt>Currency</dt><dd>${esc(p.currency)}</dd>
-        <dt>Cost ceiling</dt><dd>${money(p.constraints.max_cost)}</dd>
+        <dt>Cost ceiling</dt><dd>${p.constraints.max_cost == null ? 'No limit' : money(p.constraints.max_cost)}</dd>
         <dt>Months available</dt><dd>${p.constraints.months_available.join(' · ') || 'none set'}</dd>
         <dt>Visa appetite</dt><dd>${{ any: 'Anywhere', prefer_none: 'Prefer visa-free', none: 'Visa-free only' }[p.constraints.visa_tolerance]}</dd>
         <dt>Format</dt><dd>${{ any: 'Either', in_person: 'In person', online: 'Online only' }[p.constraints.format]}</dd>
@@ -1745,7 +1766,7 @@ function doDismiss(id, reason) {
       break;
     }
     case 'too_expensive': {
-      const was = p.constraints.max_cost;
+      const was = p.constraints.max_cost ?? (BUDGET_RANGE[p.currency] ?? BUDGET_RANGE.USD)[1];
       p.constraints.max_cost = Math.round(was * 0.85);
       state.weightAdjust.feasibility = +((state.weightAdjust.feasibility ?? 0) + 0.05).toFixed(2);
       effect = `Cost ceiling ${money(was)} → ${money(p.constraints.max_cost)}, and affordability now counts for more.`;
