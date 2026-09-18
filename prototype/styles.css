@@ -1019,3 +1019,6 @@ details.more[open] > summary { margin-bottom: .6rem; }
 
 /* in-page redraws: no entrance animations */
 #app.no-anim *, #app.no-anim *::before, #app.no-anim *::after { animation: none !important; }
+
+/* onboarding in-step repaints: no slide-in */
+.onb-panel.still, .onb-panel.still * { animation: none !important; }

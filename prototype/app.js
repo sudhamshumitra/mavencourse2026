@@ -425,17 +425,24 @@ function blankDraft() {
   return { ...d, id: 'p_you', name: 'You', fictional: false, affiliation: '', input_text: '', topics: [], goals: [], research_summary: '' };
 }
 
+/** Budget slider [min, max, step] per currency, roughly ₹20k–₹4L in each. */
+const BUDGET_RANGE = {
+  INR: [20000, 400000, 5000], USD: [200, 5000, 50], EUR: [200, 5000, 50], GBP: [200, 4000, 50],
+  BRL: [1000, 25000, 500], NGN: [200000, 6000000, 50000], PKR: [50000, 1200000, 10000],
+  KES: [20000, 600000, 5000], IDR: [2000000, 70000000, 500000], BDT: [20000, 500000, 5000], GHS: [2000, 60000, 500],
+};
+
+function progressHtml() {
+  const dots = STEPS.map((_, i) =>
+    `<span class="onb-dot ${i < onbStep ? 'done' : i === onbStep ? 'active' : ''}"></span>`).join('');
+  return `<div class="onb-progress"><span class="onb-step">Step ${onbStep + 1} of ${STEPS.length} · ${STEPS[onbStep]}</span>${dots}</div>`;
+}
+
 function renderOnboarding() {
   $('#topbar').hidden = true;
   draft ??= blankDraft();
-
-  const dots = STEPS.map((_, i) =>
-    `<span class="onb-dot ${i < onbStep ? 'done' : i === onbStep ? 'active' : ''}"></span>`).join('');
-
   return `<div class="onb onb-wide">
-    <div class="onb-progress">
-      <span class="onb-step">Step ${onbStep + 1} of ${STEPS.length} · ${STEPS[onbStep]}</span>${dots}
-    </div>
+    ${progressHtml()}
     <div class="onb-panel" id="onb-panel">${[stepResearch, stepPractical][onbStep]()}</div>
   </div>`;
 }
@@ -508,8 +515,7 @@ function stepResearch() {
 
 function stepPractical() {
   const c = draft.constraints;
-  const inr = draft.currency === 'INR';
-  const [min, max, step] = inr ? [20000, 400000, 5000] : [200, 8000, 100];
+  const [min, max, step] = BUDGET_RANGE[draft.currency] ?? [200, 8000, 100];
   c.max_cost = Math.min(max, Math.max(min, c.max_cost));
   const stages = [['phd', 'PhD', 'Doctoral researcher'], ['postdoc', 'Postdoc', 'Early career'],
     ['faculty', 'Faculty', 'Permanent post'], ['independent', 'Independent', 'Unaffiliated']];
@@ -566,7 +572,11 @@ function suggestFromText(text) {
 }
 
 function onboardingEvents(root) {
-  const repaint = () => { $('#onb-panel', root).outerHTML = `<div class="onb-panel" id="onb-panel">${[stepResearch, stepPractical][onbStep]()}</div>`; };
+  // In-step updates (chips, goals, currency) repaint quietly; changing step replays the slide-in and updates the header.
+  const repaint = (stepChanged = false) => {
+    $('#onb-panel', root).outerHTML = `<div class="onb-panel ${stepChanged ? '' : 'still'}" id="onb-panel">${[stepResearch, stepPractical][onbStep]()}</div>`;
+    if (stepChanged) $('.onb-progress', root).outerHTML = progressHtml();
+  };
 
   root.addEventListener('input', (e) => {
     const act = e.target.dataset.act;
@@ -600,8 +610,8 @@ function onboardingEvents(root) {
         repaint();
         toast({ emoji: '👤', title: `Loaded ${ex.profile.name}`, body: `A fictional researcher in ${ex.profile.geography.country}, drafted from a short description.` }); }
         break;
-      case 'next': onbStep = 1; repaint(); scrollTo(0, 0); break;
-      case 'back': onbStep = 0; repaint(); scrollTo(0, 0); break;
+      case 'next': onbStep = 1; repaint(true); scrollTo(0, 0); break;
+      case 'back': onbStep = 0; repaint(true); scrollTo(0, 0); break;
       case 'deltopic': draft.topics.splice(+btn.dataset.i, 1); repaint(); break;
       case 'addtopic': {
         const i = draft.topics.findIndex((t) => t.term === btn.dataset.term);
