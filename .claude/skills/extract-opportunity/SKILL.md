@@ -28,7 +28,7 @@ Call pages have no shared format. Dates hide in prose, fees sit in tier tables, 
    - **`fees`:** every tier with amount and ISO currency, quoted verbatim like deadlines. Keep region or income-band tiers (Global South, Category A/B/C, low/middle-income countries) as separate rows, because the cost skill needs them.
    - **`funding`:** only the *venue's own* support (travel grants, bursaries, waivers, caregiver grants, student awards), with deadline, amount note, eligibility and source URL. **External funders are not this skill's job** (see `find-funding`).
    - **`past_editions`:** from an archive or "previous conferences" page, the year, theme, city, and up to 3 representative paper or panel titles if a programme is linked. Skip it if there's no archive; never guess.
-   - **`standing_signals`:** facts that show how established the venue is, each `grounded` with a URL. Examples: "Society founded 1999", "26th annual conference", "Proceedings indexed as Selected Papers of Internet Research", "Keynote: <name>".
+   - **`standing_signals`:** facts that show how established the venue is, each `grounded` with a URL. Examples: "Society founded 1999", "26th annual conference", "Proceedings published in an indexed series", "Keynote: <name>".
    - `predatory_flag` + `predatory_reasons` (see the warning signs in `scout-opportunities`).
    - `source_url` is the main page. `extracted_at` is now.
 4. **Freshness.** Record `freshness: { posted, last_signal_year, stale, note }`.

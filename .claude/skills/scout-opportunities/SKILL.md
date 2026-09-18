@@ -80,7 +80,12 @@ Use today's date.
 - **The same society, two events** (main conference and preconference): keep both. Preconferences are often the best way in for PhD students.
 
 ## Example trace (the pattern, not a hardcoded answer)
-Profile adjacent field *internet studies* → search "internet research association annual conference" → finds the society's site → its conference page links to this year's edition → edition page `…/<acronym>2026/` confirmed → status is decided from the dates on the page (for example, submissions closed but the conference is next month → `attend-only`, next edition → `watch`). The same society's early-career preconference is a separate candidate.
+Profile adjacent field *<field X>* → search "<field X> association annual conference" → finds the society's site → its conference page links to this year's edition → the edition page is confirmed → status is decided from the dates on the page (for example, submissions closed but the conference is next month → `attend-only`, next edition → `watch`). The same society's early-career preconference is a separate candidate.
+
+## Variety
+- Don't default to the largest, best-known meetings. **At most 2 candidates may be big international flagships.** The rest should come from different layers: regional or home-country meetings, smaller specialist workshops, journal special issues, fellowships and summer schools.
+- Always include at least one option that is realistic for this person's budget and visa situation (online, in their region, or in their own country).
+- Search from *this* profile's fields and topics. Don't reuse venues from examples or earlier runs unless they genuinely fit.
 
 ## Runtime notes (Phase 1B/3)
 This becomes the Curated Querier + Bounded Explorer in the weekly cron. Web-search API with a step cap. Capable model for layer (a), because the reasoning about fields is the hard part. The rest is cheap.

@@ -51,7 +51,7 @@ Each of the profile's `goals` adds:
 Renormalise so the weights sum to 1. **Priority = Σ weight × sub-score**, rounded. Record the weights used, so feedback can adjust them.
 
 ## Other fields
-- **`why_go`:** 2–3 bullets a non-researcher could read. Concrete, no jargon. For example, "It's the main yearly meeting for internet researchers, and your topic has its own panel stream."
+- **`why_go`:** 2–3 bullets a non-researcher could read. Concrete, no jargon. For example, "It's the main yearly meeting in your field, and your topic has its own panel stream."
 - **`watch_out`:** 1–2 bullets, the most decision-relevant risks. For example, "The travel grant only opens after acceptance, and the UK visa takes ~3 weeks."
 - **`tagline`:** one line, ≤ 90 characters, the honest headline.
 - **`eligible`:** `yes | no | conditional` against career stage, nationality or region, and membership, with `eligibility_notes`.

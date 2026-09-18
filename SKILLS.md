@@ -24,7 +24,7 @@ Seven skills in [`.claude/skills/`](.claude/skills/). Each one is a repeated ste
 | | Before (week 1) | After (with skills) |
 |---|---|---|
 | Data | Made-up sample data | 13 real calls, found and checked by the skills |
-| Finding venues | Only what you already search for | Finds venues in neighbouring fields too, e.g. the AoIR internet-research conference, found without being named in any skill |
+| Finding venues | Only what you already search for | Finds venues in neighbouring fields too, e.g. the AoIR internet-research conference. No venue list is hardcoded. (The scout skill's first worked example did describe AoIR's discovery path, which biased results towards it; it's now a neutral example plus a variety rule.) |
 | Dates and fees | Invented | Copied from the source page, and re-checked |
 | Ranking | Topic match only | "Worth it" score using fit, reputation, network, outcomes and feasibility |
 | Funding | Whatever the page mentioned | The organisers' grants plus national funders you qualify for |
