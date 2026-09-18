@@ -25,7 +25,8 @@ For each opportunity:
    - **(c) It's still current.** The page hasn't changed the date (e.g. "extended to…").
 3. Result per item: `pass`, `fail_missing` (quote not found), `fail_mismatch` (quote found but the value differs), `fail_changed` (the page now says something else), or `unreachable`.
 4. For every failure: set `grounded: false`, keep the old quote in `"previous_quote"`, add `"verify_note": "<what went wrong>"`, and correct the value **only** if (c) gives a new quoted value. In that case re-ground it with the new quote.
-5. Also sanity-check **ungrounded** items: flag any `grounded: false` deadline that falls before today, or any ordering impossibility (full paper before abstract).
+5. **Freshness check** for every opportunity: find the page's posted or updated date and the latest year it refers to. If both are more than 18 months old and nothing on the page points to the current or a future year, set `status: "stale"` and fill in `freshness`, even if every quote passes. A quote can be verbatim and still be out of date.
+6. Also sanity-check **ungrounded** items: flag any `grounded: false` deadline that falls before today, or any ordering impossibility (full paper before abstract).
 
 ## Output: `corpus/grounding-report.md`
 - Summary: opportunities checked · grounded items checked · pass rate (target 100% or every failure explained) · unreachable count.

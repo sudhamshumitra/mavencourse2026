@@ -262,51 +262,112 @@ const conf = (kind) =>
 
 const safeUrl = (u) => (/^https?:\/\//i.test(String(u ?? '')) ? esc(u) : '#');
 const srcQuote = (q) => (q ? `<details class="src"><summary>source</summary><div class="quote-src">“${esc(q)}”</div></details>` : '');
-const STATUS_CHIP = { 'attend-only': '<span class="chip chip-amber">Submissions closed · can attend</span>',
-  watch: '<span class="chip chip-sky">👀 Next edition — watch</span>' };
+
+/* ---------- one visual language for every card: type → deadline → place → cost → funding → visa ---------- */
+
+const TYPE_CHIP = { conference: ['🎤', 'Conference'], journal_call: ['📄', 'Journal call'], fellowship: ['🎓', 'Fellowship'] };
+const STATUS_BADGE = {
+  'attend-only': ['badge-amber', 'Can attend, not present'],
+  watch: ['badge-sky', 'Next edition'],
+  stale: ['badge-coral', 'May be out of date'],
+};
+const statusBadge = (o) => { const b = STATUS_BADGE[o.status]; return b ? `<span class="badge ${b[0]}">${b[1]}</span>` : ''; };
+
+const shortMoney = (n, cur) => {
+  if (cur === 'INR' && n >= 100000) return `₹${(n / 100000).toFixed(2).replace(/\.?0+$/, '')}L`;
+  if (cur === 'INR' && n >= 1000) return `₹${Math.round(n / 1000)}k`;
+  return money(n, cur);
+};
+const openFunding = (o) => (o.funding ?? []).filter((f) => f.eligible !== 'no');
+const futureDeadline = (o) => deadlinesFor(o).find((d) => daysUntil(d.date) >= 0 && !d.synthetic);
+const actionable = (o) => (!o.status || o.status === 'open') && !!futureDeadline(o);
+
+function chips(o) {
+  const out = [];
+  const [te, tl] = TYPE_CHIP[o.type] ?? ['📌', o.type];
+  out.push(`<span class="chip chip-grape">${te} ${tl}</span>`);
+
+  const nd = futureDeadline(o);
+  if (nd) {
+    const u = urgency(nd.date);
+    const label = nd.fund_name ? 'Funding' : DEADLINE_LABEL[nd.label];
+    out.push(`<span class="chip ${u === 'soon' ? 'chip-coral' : u === 'near' ? 'chip-amber' : 'chip-outline'}">⏳ ${label} ${relative(nd.date)}</span>`);
+  } else {
+    out.push(`<span class="chip chip-outline chip-dim">⏳ ${o.status === 'watch' ? 'Next call not out yet' : 'No open deadline'}</span>`);
+  }
+
+  if (o.location.format === 'online' || o.location.city === '—') out.push('<span class="chip">💻 Online</span>');
+  else out.push(`<span class="chip">📍 ${esc(o.location.city)}</span>`);
+
+  const c = o.cost_estimate;
+  if (c) {
+    const over = c.high > state.profile.constraints.max_cost;
+    out.push(`<span class="chip ${c.high === 0 ? 'chip-vine' : over ? 'chip-amber' : 'chip-vine'}">💰 ${
+      c.high === 0 ? 'Free' : `${shortMoney(c.low, c.currency)}–${shortMoney(c.high, c.currency)}`}</span>`);
+  }
+
+  const nf = openFunding(o).length;
+  if (nf) out.push(`<span class="chip chip-vine">🎁 ${nf} funding</span>`);
+
+  const abroad = o.location.format !== 'online' && o.location.country !== '—' && o.location.country !== homeCountry();
+  if (abroad && o.visa?.required === 'yes') out.push('<span class="chip chip-coral">🛂 Visa needed</span>');
+  else if (abroad && o.visa?.required === 'conditional') out.push('<span class="chip chip-amber">🛂 Visa maybe</span>');
+  else if (abroad && o.visa?.required === 'no') out.push('<span class="chip chip-vine">🛂 No visa</span>');
+
+  return `<div class="opp-chips">${out.join('')}</div>`;
+}
+
+/** The two biggest contributors to the score and the biggest drag on it. */
+function scoreDrivers(o) {
+  const subs = o.priority?.sub_scores;
+  if (!subs) return '';
+  const w = weightsFor();
+  const rows = SUBS.filter(([k]) => typeof subs[k]?.score === 'number')
+    .map(([k, label]) => ({ k, label, s: subs[k].score, c: subs[k].score * w[k] }));
+  const up = [...rows].sort((a, b) => b.c - a.c).slice(0, 2);
+  const down = [...rows].sort((a, b) => a.s - b.s)[0];
+  const pill = (r, dir) => `<span class="drv drv-${dir}"><span class="drv-l">${dir === 'up' ? '▲' : '▼'} ${r.label}</span>
+    <span class="drv-bar"><i style="width:${r.s}%"></i></span><span class="drv-n">${r.s}</span></span>`;
+  return `<div class="drivers">${up.map((r) => pill(r, 'up')).join('')}${down && down.s < 60 ? pill(down, 'down') : ''}</div>`;
+}
 
 function oppCard(opp, i = 0) {
-  const nd = nextDeadline(opp);
-  const u = nd ? urgency(nd.date) : 'far';
   const saved = state.saved.includes(opp.id);
-  const cls = ['opp', opp.explore ? 'is-explore' : '', opp.predatory_flag ? 'is-flagged' : ''].join(' ').trim();
-  const cost = opp.cost_estimate;
-  const abroad = opp.location.country !== '—' && opp.location.country !== homeCountry();
-
-  return `<article class="${cls}" data-opp="${esc(opp.id)}" style="animation-delay:${Math.min(i * 55, 400)}ms">
-    <div class="ring-wrap">${ring(priorityOf(opp) / 100, 66, 'worth it')}</div>
+  return `<article class="opp top rank-${i + 1} ${opp.predatory_flag ? 'is-flagged' : ''}" data-opp="${esc(opp.id)}" style="animation-delay:${i * 70}ms">
+    <div class="ring-wrap">${ring(priorityOf(opp) / 100, 72, 'worth it')}<div class="top-rank">#${i + 1}</div></div>
     <div>
-      ${opp.explore ? `<div class="banner-explore"><span aria-hidden="true">🧭</span><span><strong>Outside your usual field.</strong> ${esc(opp.explore_reason)}</span></div>` : ''}
-      ${opp.predatory_flag ? `<div class="banner-flag"><span aria-hidden="true">⚠️</span><span><strong>Flagged — no traceable scholarly footprint.</strong> Shown so you recognise it, not so you apply.</span></div>` : ''}
-      ${opp.pasted ? `<div class="banner-explore"><span aria-hidden="true">🔗</span><span><strong>You added this.</strong> From the link you pasted.</span></div>` : ''}
-
+      <div class="opp-titleline">${statusBadge(opp)}${opp.explore ? '<span class="badge badge-sky">🧭 Outside your usual field</span>' : ''}${opp.pasted ? '<span class="badge badge-sky">🔗 You added this</span>' : ''}</div>
       <h3 class="opp-title"><a href="#/brief/${esc(opp.id)}">${esc(opp.title)}</a></h3>
       <div class="opp-host">${esc(opp.host)}</div>
       <p class="opp-tag">${esc(opp.tagline ?? '')}</p>
-      ${opp.why_go?.length ? `<p class="opp-why">👍 ${esc(opp.why_go[0])}</p>` : ''}
-
-      <div class="opp-chips">
-        <span class="chip chip-grape">${TYPE_LABEL[opp.type]}</span>
-        ${STATUS_CHIP[opp.status] ?? ''}
-        ${opp.location.city !== '—' ? `<span class="chip">📍 ${esc(opp.location.city)}, ${esc(opp.location.country)}</span>` : ''}
-        ${opp.dates?.start ? `<span class="chip">🗓 ${fmtDate(opp.dates.start)}</span>` : ''}
-        ${nd && daysUntil(nd.date) >= 0 ? `<span class="chip ${u === 'soon' ? 'chip-coral' : u === 'near' ? 'chip-amber' : 'chip-outline'}">
-            ⏳ ${DEADLINE_LABEL[nd.label]} ${relative(nd.date)}</span>` : ''}
-        ${cost ? `<span class="chip ${cost.high === 0 ? 'chip-vine' : cost.high > state.profile.constraints.max_cost ? 'chip-amber' : 'chip-vine'}">
-          💰 ${cost.high === 0 ? 'No cost' : `${money(cost.low, cost.currency)}–${money(cost.high, cost.currency)}`}</span>` : ''}
-        ${(opp.funding ?? []).some((f) => f.eligible !== 'no') ? `<span class="chip chip-vine">🎁 ${opp.funding.filter((f) => f.eligible !== 'no').length} funding route${opp.funding.filter((f) => f.eligible !== 'no').length === 1 ? '' : 's'}</span>` : ''}
-        ${opp.visa?.required === 'yes' ? '<span class="chip chip-coral">🛂 Visa needed</span>'
-          : opp.visa?.required === 'no' && abroad ? '<span class="chip chip-vine">🛂 No visa</span>' : ''}
-        ${opp.eligible === 'conditional' ? '<span class="chip chip-amber">Conditional</span>' : ''}
-        ${opp.eligible === 'no' ? '<span class="chip chip-coral">Not eligible</span>' : ''}
-      </div>
-
+      ${chips(opp)}
+      ${scoreDrivers(opp)}
       <div class="opp-actions">
-        <a class="btn btn-primary btn-sm" href="#/brief/${esc(opp.id)}">Is it worth it?</a>
-        <button class="btn btn-ghost btn-sm" data-act="save" data-id="${esc(opp.id)}">${saved ? '★ Saved' : '☆ Save'}</button>
-        <button class="btn btn-quiet btn-sm" data-act="dismiss" data-id="${esc(opp.id)}">Not for me</button>
+        <a class="btn btn-primary btn-sm" href="#/brief/${esc(opp.id)}">Is it worth it? →</a>
+        <button class="btn btn-ghost btn-sm" data-act="save" data-id="${esc(opp.id)}" title="Adds its deadlines to your Tracker">${saved ? '★ In your tracker' : '☆ Save to tracker'}</button>
+        <button class="btn btn-quiet btn-sm" data-act="dismiss" data-id="${esc(opp.id)}" title="Hides it and asks why, so the ranking learns">✕ Not for me</button>
       </div>
     </div>
+  </article>`;
+}
+
+function oppMini(opp, i = 0) {
+  const saved = state.saved.includes(opp.id);
+  const p = priorityOf(opp);
+  return `<article class="mini ${opp.status === 'stale' ? 'is-stale' : ''}" data-opp="${esc(opp.id)}" style="animation-delay:${Math.min(i * 40, 320)}ms">
+    <div class="mini-top">
+      <span class="mini-score ${opp.status === 'stale' ? 'stale' : p >= 75 ? 'hi' : p >= 60 ? 'mid' : 'lo'}" title="Worth-it score">${opp.status === 'stale' ? '?' : p}</span>
+      <div class="mini-head">
+        <div class="opp-titleline">${statusBadge(opp)}${opp.explore ? '<span class="badge badge-sky">🧭 Outside your usual field</span>' : ''}</div>
+        <a class="mini-title" href="#/brief/${esc(opp.id)}">${esc(opp.title)}</a>
+        <div class="opp-host">${esc(opp.host)}</div>
+      </div>
+      <div class="mini-actions">
+        <button class="icon-act" data-act="save" data-id="${esc(opp.id)}" title="${saved ? 'In your tracker' : 'Save to tracker'}" aria-label="Save">${saved ? '★' : '☆'}</button>
+        <button class="icon-act" data-act="dismiss" data-id="${esc(opp.id)}" title="Not for me" aria-label="Not for me">✕</button>
+      </div>
+    </div>
+    ${chips(opp)}
   </article>`;
 }
 
@@ -329,25 +390,20 @@ function renderWelcome() {
           <circle cx="9" cy="22" r="2.8" fill="currentColor" opacity=".5"/>
         </svg>
       </div>
-      <h1>Conferences, journal calls and fellowships<br/><em>for your research — and whether they're worth it.</em></h1>
-      <p class="hero-sub">Tell Grapevine what you work on. It finds opportunities across societies, journals and funders,
-        then tells you which ones are worth your time and money, and why.</p>
+      <h1>Conferences, journal calls and fellowships <em>worth your time.</em></h1>
 
-      <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="#/onboarding">Tell it about your research</a>
-        <a class="btn btn-ghost btn-lg" href="#/thinking">See an example feed</a>
-      </div>
-
-      <ol class="how">
-        <li><span class="how-n">1</span><span><strong>Describe your research</strong><br/>
-          A few sentences or an abstract, or pick topics from a list. Takes a minute.</span></li>
-        <li><span class="how-n">2</span><span><strong>It searches for you</strong><br/>
-          Scholarly societies, next year's editions, journal special issues, fellowships, and funding in your country.</span></li>
-        <li><span class="how-n">3</span><span><strong>You get a ranked shortlist</strong><br/>
-          Each one scored on fit, reputation, who you'd meet, cost in your currency and visa, with every deadline in order.</span></li>
+      <ol class="steps3">
+        <li><span class="s3-ico" aria-hidden="true">✍️</span><span>Tell us what you research</span></li>
+        <li><span class="s3-ico" aria-hidden="true">🔎</span><span>We search societies, journals and funders</span></li>
+        <li><span class="s3-ico" aria-hidden="true">✅</span><span>You get a shortlist with costs and deadlines</span></li>
       </ol>
 
-      <p class="hero-note">Prototype · real calls gathered ${fmtDate(GATHERED_AT)} · always check the source before you act</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="#/onboarding">Get started</a>
+        <a class="btn btn-ghost btn-lg" href="#/thinking">See an example</a>
+      </div>
+
+      <p class="hero-note">Prototype · real calls gathered ${fmtDate(GATHERED_AT)}</p>
     </div>
   </section>`;
 }
@@ -592,8 +648,8 @@ function renderPipeline() {
   $('#topbar').hidden = true;
   return `<section class="pipe-screen">
     <div class="pipe">
-      <h2>Grapevine is working.</h2>
-      <p class="pipe-sub">Six specialised steps, not one clever prompt. This is what runs every week.</p>
+      <h2>Finding opportunities for you</h2>
+      <p class="pipe-sub">This takes a few seconds.</p>
       <div class="pipe-steps" id="pipe-steps">
         ${pipeline.map((s, i) => `<div class="pipe-step" data-i="${i}">
           <span class="pipe-bullet" aria-hidden="true">✓</span>
@@ -648,10 +704,7 @@ function visibleOpportunities() {
   if (state.profile.constraints.visa_tolerance === 'none') list = list.filter((o) => o.visa?.required !== 'yes');
   if (feedFilter === 'saved') list = list.filter((o) => state.saved.includes(o.id));
   else if (feedFilter !== 'all') list = list.filter((o) => o.type === feedFilter);
-  return list.sort((a, b) => {
-    if (!!a.predatory_flag !== !!b.predatory_flag) return a.predatory_flag ? 1 : -1;
-    return priorityOf(b) - priorityOf(a);
-  });
+  return list.sort((a, b) => priorityOf(b) - priorityOf(a));
 }
 
 const hiddenIneligible = () => allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.eligible === 'no').length;
@@ -659,55 +712,65 @@ const hiddenIneligible = () => allOpportunities().filter((o) => !state.dismissed
 function renderFeed() {
   $('#topbar').hidden = false;
   const list = visibleOpportunities();
-  const main = list.filter((o) => !o.predatory_flag);
-  const rest = list.filter((o) => o.predatory_flag);
+  const ranked = list.filter((o) => !o.predatory_flag && o.status !== 'stale');
+  const stale = list.filter((o) => o.status === 'stale');
+  const flagged = list.filter((o) => o.predatory_flag);
+  const top = ranked.filter(actionable).slice(0, 3);
+  const rest = ranked.filter((o) => !top.includes(o));
   const nIneligible = hiddenIneligible();
-  const soon = allOpportunities()
-    .filter((o) => !state.dismissed.includes(o.id))
-    .map((o) => nextDeadline(o))
-    .filter((d) => d && daysUntil(d.date) >= 0 && daysUntil(d.date) <= 30).length;
+  const live = [...ranked];
+  const soon = live.map(futureDeadline).filter((d) => d && daysUntil(d.date) <= 30).length;
+  const funded = live.filter((o) => openFunding(o).length).length;
+  const first = state.profile.name === 'You' ? null : esc(state.profile.name.split(' ')[0]);
+  const goals = (state.profile.goals ?? []).map((g) => GOALS.find((x) => x.id === g)?.label.toLowerCase()).filter(Boolean);
 
-  const filters = [['all', 'Everything'], ['conference', 'Conferences'], ['journal_call', 'Journal calls'],
-    ['fellowship', 'Fellowships'], ['saved', `Saved (${state.saved.length})`]];
+  const filters = [['all', 'Everything'], ['conference', '🎤 Conferences'], ['journal_call', '📄 Journal calls'],
+    ['fellowship', '🎓 Fellowships'], ['saved', `★ Saved (${state.saved.length})`]];
 
   return `<div class="wrap">
     <header class="feed-head">
-      <div class="eyebrow">Your feed · real calls gathered ${fmtDate(GATHERED_AT)}</div>
-      <h1>${state.profile.name === 'You' ? 'Your shortlist.' : `Hello, ${esc(state.profile.name.split(' ')[0])}.`}</h1>
-      <p class="lede">${list.length} opportunit${list.length === 1 ? 'y' : 'ies'}, most worth your time first${
-        soon ? `, and <strong>${soon}</strong> deadline${soon === 1 ? '' : 's'} in the next thirty days` : ''}.
-        The score weighs fit, reputation, who you'd meet, what you'd get out of it, and whether you can afford to go,
-        using <a href="#/profile">your goals</a>.</p>
+      <div class="eyebrow">Real calls · gathered ${fmtDate(GATHERED_AT)}</div>
+      <h1>${first ? `${first}'s shortlist` : 'Your shortlist'}</h1>
+      <div class="stats">
+        <div class="stat"><b>${live.length}</b><span>opportunities</span></div>
+        <div class="stat ${soon ? 'stat-warm' : ''}"><b>${soon}</b><span>deadlines in the next 30 days</span></div>
+        <div class="stat stat-green"><b>${funded}</b><span>with funding you could apply for</span></div>
+      </div>
     </header>
-
-    <form class="paste-box" id="paste-form">
-      <span class="paste-label">🔗 Know about something that's not here? Paste the link.</span>
-      <input type="text" id="paste-url" placeholder="https://…" aria-label="Opportunity URL" />
-      <button class="btn btn-primary" type="submit">Extract it</button>
-    </form>
 
     <div class="filters">
       ${filters.map(([v, l]) => `<button class="filter" data-act="filter" data-v="${v}" aria-pressed="${feedFilter === v}">${l}</button>`).join('')}
     </div>
+    <p class="feed-note">Best first, based on ${goals.length ? `what you care about: ${goals.join(', ')}` : 'your profile'}. <a href="#/profile">Change</a></p>
 
     ${list.length === 0 ? `<div class="empty"><span class="big" aria-hidden="true">🍇</span>
-        <p><strong>Nothing here.</strong></p>
-        <p class="small">${feedFilter === 'saved' ? 'Save something from the feed and it will show up here — and in your tracker.' : 'You have dismissed everything. The weekly refresh runs again on Saturday.'}</p>
+        <p><strong>Nothing here yet.</strong></p>
+        <p class="small">${feedFilter === 'saved' ? 'Tap ☆ on anything in your feed and it shows up here and in your Tracker.' : 'You have dismissed everything in this view.'}</p>
         ${feedFilter !== 'all' ? '<button class="btn btn-ghost btn-sm" data-act="filter" data-v="all">Show everything</button>' : ''}
       </div>` : ''}
 
-    <div class="feed-list">${main.map((o, i) => oppCard(o, i)).join('')}</div>
+    ${top.length ? `<div class="section-rule">Top picks you can apply to now</div>
+      <div class="feed-list">${top.map((o, i) => oppCard(o, i)).join('')}</div>` : ''}
 
-    ${rest.length ? `<div class="section-rule">Flagged, shown so you can recognise it</div>
-      <div class="feed-list">${rest.map((o, i) => oppCard(o, i)).join('')}</div>` : ''}
+    ${rest.length ? `<div class="section-rule">Also worth a look</div>
+      <div class="mini-grid">${rest.map((o, i) => oppMini(o, i)).join('')}</div>` : ''}
+
+    ${stale.length ? `<div class="section-rule">Possibly out of date</div>
+      <p class="small muted" style="margin:-.4rem 0 .8rem">These pages haven't been updated recently. Check they're still open before you spend time on them.</p>
+      <div class="mini-grid">${stale.map((o, i) => oppMini(o, i)).join('')}</div>` : ''}
+
+    ${flagged.length ? `<div class="section-rule">Flagged: be careful</div>
+      <div class="mini-grid">${flagged.map((o, i) => oppMini(o, i)).join('')}</div>` : ''}
 
     ${nIneligible ? `<p class="small muted" style="margin-top:1.4rem">
-      ${state.showIneligible ? 'Showing' : 'Hiding'} ${nIneligible} you can't apply to (career stage, region or membership).
+      ${state.showIneligible ? 'Showing' : 'Hiding'} ${nIneligible} you can't apply to.
       <button class="btn btn-quiet btn-sm" data-act="toggle-inelig">${state.showIneligible ? 'Hide them' : 'Show them'}</button></p>` : ''}
 
-    ${list.length ? `<p class="tiny muted" style="margin-top:1.4rem">
-      At least one item comes from a field next to yours (marked 🧭), so the feed doesn't only show what you'd already search for.
-      Every deadline and fee marked ✓ was quoted from the source page. Check before you act.</p>` : ''}
+    <form class="paste-box" id="paste-form" style="margin-top:2rem">
+      <span class="paste-label">🔗 Know about one that's missing? Paste the link.</span>
+      <input type="text" id="paste-url" placeholder="https://…" aria-label="Opportunity URL" />
+      <button class="btn btn-primary" type="submit">Add it</button>
+    </form>
   </div>`;
 }
 
@@ -777,217 +840,214 @@ function showPasteModal(url) {
    Screen — brief
    ============================================================ */
 
+let briefTab = 'worth';
+let briefFor = null;
+
+const BRIEF_TABS = [['worth', 'Worth it?'], ['dates', 'Deadlines'], ['money', 'Cost & funding'], ['go', 'Can I go?'], ['about', 'About']];
+const ELIG_FUND = { yes: ['chip-vine', 'You qualify'], likely: ['chip-vine', 'Likely eligible'], check: ['chip-amber', 'Check'],
+  no: ['chip-outline', 'Not now'], true: ['chip-vine', 'You qualify'], false: ['chip-outline', 'Not now'] };
+
+function tabWorth(o) {
+  const subs = o.priority?.sub_scores ?? {};
+  const w = weightsFor();
+  return `<div class="subs">
+      ${SUBS.map(([k, label, q]) => {
+        const s = subs[k];
+        if (!s || typeof s.score !== 'number') return `<div class="sub-row na"><span class="sub-l">${label}</span><span class="muted tiny">doesn't apply to ${TYPE_CHIP[o.type]?.[1].toLowerCase() ?? 'this'}s</span></div>`;
+        const tone = s.score >= 75 ? 'hi' : s.score >= 55 ? 'mid' : 'lo';
+        return `<details class="sub-row">
+          <summary><span class="sub-l">${label}<span class="sub-q">${q}</span></span>
+            <span class="sub-bar"><i class="${tone}" style="width:${s.score}%"></i></span>
+            <span class="sub-n">${s.score}</span><span class="sub-why">why?</span></summary>
+          <p class="sub-r">${esc(s.reason)} <span class="muted tiny">Counts for ${Math.round(w[k] * 100)}% of the score.</span></p>
+        </details>`;
+      }).join('')}
+    </div>
+    <div class="gowatch">
+      ${o.why_go?.length ? `<div class="go"><h4>👍 Why go</h4><ul>${o.why_go.slice(0, 3).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+      ${o.watch_out?.length ? `<div class="watch"><h4>⚠️ Watch out</h4><ul>${o.watch_out.slice(0, 2).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+    </div>`;
+}
+
+function timelineRow(d) {
+  const u = urgency(d.date);
+  return `<div class="tl ${daysUntil(d.date) < 0 ? 'is-past' : ''}">
+    <div class="tl-date"><div class="tl-d">${fmtDate(d.date)}</div><div class="tl-in">${relative(d.date)}</div></div>
+    <div class="tl-rail"><span class="tl-line"></span><span class="tl-dot ${d.depends_on || d.requires ? 'dep' : ''} ${u === 'soon' ? 'soon' : ''}"></span></div>
+    <div class="tl-body">
+      <div class="tl-label">${d.fund_name ? `🎁 ${esc(d.fund_name)}` : DEADLINE_LABEL[d.label]} ${d.grounded ? conf('verified') : conf('inferred')}</div>
+      ${d.synthetic ? `<div class="tl-why">Not on the call page. Start about ${d.lead} days before you travel.</div>` : ''}
+      ${d.depends_on ? `<span class="tl-dep">⛓ only after your ${DEADLINE_LABEL[d.depends_on]?.toLowerCase() ?? esc(d.depends_on)} is accepted</span>` : ''}
+      ${d.requires ? `<span class="tl-dep">⛓ needs: ${esc(d.requires)}</span>` : ''}
+      ${srcQuote(d.source_quote)}
+    </div>
+  </div>`;
+}
+
+function tabDates(o) {
+  const dl = deadlinesFor(o);
+  const past = dl.filter((d) => daysUntil(d.date) < 0);
+  const next = dl.filter((d) => daysUntil(d.date) >= 0);
+  if (!dl.length) return '<p class="small muted">No dates published yet. They get picked up on the next refresh.</p>';
+  return `${next.length ? `<div class="timeline">${next.map(timelineRow).join('')}</div>`
+      : '<p class="small muted">Nothing left to act on for this edition.</p>'}
+    ${past.length ? `<details class="more"><summary>${past.length} date${past.length === 1 ? '' : 's'} already passed</summary>
+      <div class="timeline">${past.map(timelineRow).join('')}</div></details>` : ''}`;
+}
+
+function fundRow(f) {
+  const [cls, label] = ELIG_FUND[String(f.eligible)] ?? ['chip-outline', 'Check'];
+  const when = f.deadline && /^\d{4}-/.test(f.deadline) ? `closes ${fmtDate(f.deadline)}` : f.cycle ? esc(f.cycle) : 'no fixed deadline';
+  return `<details class="fund-row">
+    <summary><span class="fund-name">${esc(f.name)}</span><span class="chip ${cls}">${label}</span>
+      <span class="fund-meta">${esc(f.amount_note ?? '')}${f.amount_note ? ' · ' : ''}${when}</span></summary>
+    <div class="fund-body">
+      ${f.requires ? `<p><strong>Needs first:</strong> ${esc(f.requires)}</p>` : ''}
+      ${f.sequence_note ? `<p><strong>When to apply:</strong> ${esc(f.sequence_note)}</p>` : ''}
+      ${f.why || f.eligibility_notes ? `<p>${esc(f.why ?? f.eligibility_notes)}</p>` : ''}
+      ${srcQuote(f.source_quote)}
+      <a class="tiny" href="${safeUrl(f.source_url)}" target="_blank" rel="noopener noreferrer">Official page ↗</a>
+    </div>
+  </details>`;
+}
+
+function tabMoney(o) {
+  const cost = o.cost_estimate;
+  const segs = cost ? Object.entries(cost.breakdown ?? {}) : [];
+  const totalHigh = segs.reduce((s, [, v]) => s + (v?.high ?? 0), 0) || 1;
+  const venue = (o.funding ?? []).filter((f) => f.source !== 'external');
+  const ext = (o.funding ?? []).filter((f) => f.source === 'external');
+  return `${cost ? `<div class="money-top">
+      <div><div class="cost-total">${cost.high === 0 ? 'Free' : `${money(cost.low, cost.currency)} – ${money(cost.high, cost.currency)}`}</div>
+        <p class="tiny muted" style="margin:.2rem 0 0">Estimated range, in ${esc(cost.currency)}</p></div>
+      ${cost.high > state.profile.constraints.max_cost ? `<span class="chip chip-amber">Above your ${shortMoney(state.profile.constraints.max_cost, cost.currency)} limit</span>`
+        : '<span class="chip chip-vine">Within your limit</span>'}
+    </div>
+    ${cost.high > 0 ? `<div class="cost-bar">${segs.map(([k, v]) => `<span class="cost-seg" style="width:${((v?.high ?? 0) / totalHigh) * 100}%;background:${COST_COLORS[k] ?? 'var(--muted)'}"></span>`).join('')}</div>
+    <div class="cost-key">${segs.filter(([, v]) => v?.high).map(([k, v]) => `<div class="cost-k">
+        <span class="cost-sw" style="background:${COST_COLORS[k] ?? 'var(--muted)'}"></span>
+        <span>${COST_LABEL[k] ?? esc(k)}</span>
+        <span>${v.low === v.high ? money(v.low, cost.currency) : `${money(v.low, cost.currency)}–${money(v.high, cost.currency)}`}</span>
+      </div>`).join('')}</div>` : ''}
+    ${cost.net_note ? `<div class="net-note">${esc(cost.net_note)}</div>` : ''}
+    <details class="more"><summary>How this was worked out</summary>
+      <ul class="small">${segs.filter(([, v]) => v?.note).map(([k, v]) => `<li><strong>${COST_LABEL[k] ?? esc(k)}:</strong> ${esc(v.note)}</li>`).join('')}
+      ${(cost.assumptions ?? []).map((a) => `<li>${esc(a)}</li>`).join('')}</ul></details>` : ''}
+
+    <h4 class="fund-h">🎁 From the ${o.type === 'journal_call' ? 'journal' : 'organisers'}</h4>
+    ${venue.length ? venue.map(fundRow).join('') : '<p class="small muted">None published.</p>'}
+    <h4 class="fund-h">🎁 Elsewhere you could apply</h4>
+    ${ext.length ? ext.map(fundRow).join('') : '<p class="small muted">Nothing specific found. Ask your university\'s research office about conference travel funds.</p>'}`;
+}
+
+function tabGo(o) {
+  const elig = o.eligibility ?? {};
+  const v = o.visa;
+  return `<div class="go-grid">
+    <div class="go-card">
+      <h4>✅ Can you apply? ${conf(o.confidence.eligibility)}</h4>
+      <p class="small">${esc(o.eligibility_notes ?? '')}</p>
+      <dl class="kv">
+        <dt>Career stage</dt><dd>${!elig.career_stage?.length ? 'Not stated' : elig.career_stage.includes(state.profile.career_stage) ? 'Accepted' : 'Not listed'}</dd>
+        <dt>Membership</dt><dd>${elig.membership_required ? 'Required' : 'Not required'}</dd>
+        <dt>Nationality</dt><dd>${esc(elig.nationality ?? 'No restriction')}</dd>
+      </dl>
+    </div>
+    ${v ? `<div class="go-card">
+      <h4>🛂 Visa ${conf('advisory')}</h4>
+      <p class="visa-verdict ${v.required === 'yes' ? 'v-yes' : v.required === 'no' ? 'v-no' : 'v-maybe'}">${
+        v.required === 'yes' ? 'Visa needed' : v.required === 'no' ? 'No visa needed' : 'Depends on your situation'}${v.lead_days ? ` · start ~${v.lead_days} days ahead` : ''}</p>
+      <p class="small">${esc(v.note)}</p>
+      ${v.official_source ? `<a class="tiny" href="${safeUrl(v.official_source)}" target="_blank" rel="noopener noreferrer">Official source ↗</a>` : ''}
+      <p class="tiny muted" style="margin:.6rem 0 0">General information only. Check the official source before you act.</p>
+    </div>` : ''}
+  </div>`;
+}
+
+function tabAbout(o) {
+  return `<p>${esc(o.description)}</p>
+    ${o.fit?.rationale ? `<h4 class="fund-h">How it connects to your work</h4><p class="small">${esc(o.fit.rationale)}</p>
+      <div class="row">${(o.fit.matched_topics ?? []).map((t) => `<span class="chip chip-grape">${esc(t)}</span>`).join('')}</div>` : ''}
+    ${o.past_editions?.length ? `<details class="more"><summary>Past editions (${o.past_editions.length})</summary>
+      <div class="past">${o.past_editions.map((p) => `<div class="past-ed"><div class="past-y">${esc(p.year ?? '')}</div>
+        <div class="past-t">${esc(p.theme ?? '')}${p.city ? ` · ${esc(p.city)}` : ''}</div></div>`).join('')}</div></details>` : ''}
+    <details class="more"><summary>How much to trust this</summary>
+      <dl class="kv">
+        <dt>Deadlines</dt><dd>${conf(o.confidence.dates)}</dd>
+        <dt>Fees</dt><dd>${conf(o.confidence.fees)}</dd>
+        <dt>Cost</dt><dd>${conf('range')}</dd>
+        <dt>Visa</dt><dd>${conf('advisory')}</dd>
+      </dl>
+      <p class="tiny muted">✓ verified means the exact words were found on the source page and re-checked.</p>
+    </details>
+    <p style="margin-top:1rem"><a class="btn btn-ghost btn-sm" href="${safeUrl(o.source_url)}" target="_blank" rel="noopener noreferrer">Open the original call ↗</a>
+      <span class="tiny muted">checked ${fmtDate(o.extracted_at.slice(0, 10))}</span></p>`;
+}
+
 function renderBrief(id) {
   $('#topbar').hidden = false;
   const o = byId(id);
   if (!o) return `<div class="wrap"><div class="empty"><span class="big">🤔</span><p>No brief for that one.</p>
     <a class="btn btn-ghost btn-sm" href="#/feed">Back to the feed</a></div></div>`;
+  if (briefFor !== id) { briefTab = 'worth'; briefFor = id; }
 
   const saved = state.saved.includes(o.id);
-  const dl = deadlinesFor(o);
+  const nd = futureDeadline(o);
   const cost = o.cost_estimate;
-  const segs = cost ? Object.entries(cost.breakdown ?? {}) : [];
-  const totalHigh = segs.reduce((s, [, v]) => s + (v?.high ?? 0), 0) || 1;
-  const subs = o.priority?.sub_scores ?? {};
-  const w = weightsFor();
-  const venueFunds = (o.funding ?? []).filter((f) => f.source !== 'external');
-  const extFunds = (o.funding ?? []).filter((f) => f.source === 'external');
-  const elig = o.eligibility ?? {};
+  const funds = openFunding(o);
+  const v = o.visa;
+  const abroad = o.location.format !== 'online' && o.location.country !== '—' && o.location.country !== homeCountry();
+  const p = priorityOf(o);
+  const TAB_FN = { worth: tabWorth, dates: tabDates, money: tabMoney, go: tabGo, about: tabAbout };
 
-  const eligibleChip = { yes: '<span class="chip chip-vine">✓ You can apply</span>',
-    conditional: '<span class="chip chip-amber">⚠ Conditional</span>',
-    no: '<span class="chip chip-coral">✕ Not eligible</span>' }[o.eligible] ?? '';
-  const ELIG_FUND = { yes: ['chip-vine', 'You qualify'], likely: ['chip-vine', 'Likely eligible'],
-    check: ['chip-amber', 'Check eligibility'], no: ['chip-outline', 'Not eligible'], true: ['chip-vine', 'You qualify'] };
+  return `<div class="wrap wrap-mid">
+    <a class="back-link" href="#/feed">← Back to your shortlist</a>
 
-  const fundItem = (f) => {
-    const [cls, label] = ELIG_FUND[String(f.eligible)] ?? ['chip-outline', 'Check eligibility'];
-    return `<div class="fund-item">
-      <div class="fund-name">${esc(f.name)} <span class="chip ${cls}">${label}</span></div>
-      <div class="fund-meta">${esc(f.amount_note ?? '')}${f.deadline && /^\d{4}-/.test(f.deadline) ? ` · closes ${fmtDate(f.deadline)} (${relative(f.deadline)})`
-        : f.cycle ? ` · ${esc(f.cycle)}` : ' · no fixed deadline'}</div>
-      ${f.requires ? `<div class="tl-dep">⛓ needs: ${esc(f.requires)}</div>` : ''}
-      ${f.sequence_note ? `<div class="fund-note"><strong>When:</strong> ${esc(f.sequence_note)}</div>` : ''}
-      ${f.why || f.eligibility_notes ? `<div class="fund-note">${esc(f.why ?? f.eligibility_notes)}</div>` : ''}
-      ${srcQuote(f.source_quote)}
-      <a class="tiny" href="${safeUrl(f.source_url)}" target="_blank" rel="noopener noreferrer">Official page ↗</a>
-    </div>`;
-  };
-
-  return `<div class="wrap">
-    <a class="back-link" href="#/feed">← Back to the feed</a>
-
-    <header class="brief-top">
-      ${o.predatory_flag ? `<div class="callout danger" style="margin-bottom:1.2rem">
-        <h4><span aria-hidden="true">⚠️</span> Grapevine does not recommend this venue</h4>
-        <ul class="small" style="margin:.2rem 0 0;padding-left:1.1rem">${(o.predatory_reasons ?? []).map((r) => `<li>${esc(r)}</li>`).join('')}</ul>
-      </div>` : ''}
-      ${o.explore ? `<div class="banner-explore" style="margin-bottom:1rem"><span aria-hidden="true">🧭</span>
-        <span><strong>From a field next to yours.</strong> ${esc(o.explore_reason)}</span></div>` : ''}
-
-      <div class="eyebrow">${TYPE_LABEL[o.type]} · is it worth it?</div>
+    <header class="brief-head">
+      <div class="opp-titleline">${statusBadge(o)}${o.explore ? '<span class="badge badge-sky">🧭 Outside your usual field</span>' : ''}</div>
       <h1>${esc(o.title)}</h1>
-      <p class="lede" style="margin-top:.4rem">${esc(o.host)}${o.location.city !== '—' ? ` · ${esc(o.location.city)}, ${esc(o.location.country)}` : ''}${
-        o.dates?.start ? ` · ${fmtDate(o.dates.start)}${o.dates.end && o.dates.end !== o.dates.start ? `–${fmtDate(o.dates.end)}` : ''}` : ''}</p>
-      <div class="row" style="margin-top:.8rem">
-        ${eligibleChip}
-        ${STATUS_CHIP[o.status] ?? ''}
-        <span class="chip chip-outline">${esc(o.location.format.replace('_', '-'))}</span>
-        <a class="chip chip-sky" href="${safeUrl(o.source_url)}" target="_blank" rel="noopener noreferrer">Source page ↗</a>
-        <span class="chip chip-outline">checked ${fmtDate(o.extracted_at.slice(0, 10))}</span>
-      </div>
+      <p class="brief-sub">${esc(o.host)}${o.dates?.start ? ` · ${fmtDate(o.dates.start)}${o.dates.end && o.dates.end !== o.dates.start ? ` – ${fmtDate(o.dates.end)}` : ''}` : ''}</p>
+      ${chips(o)}
     </header>
 
-    <div class="brief-grid">
-      <div>
-        <section class="panel worth">
-          <div class="panel-h"><h3><span class="ico" aria-hidden="true">⚖️</span> Is it worth going?</h3></div>
-          <div class="fitline">${ring(priorityOf(o) / 100, 86, 'worth it')}
-            <div><p style="margin:0" class="worth-tag">${esc(o.tagline ?? '')}</p>
-              <p class="tiny muted" style="margin:.35rem 0 0">Weighted by your goals: ${(state.profile.goals ?? []).map((g) => GOALS.find((x) => x.id === g)?.label).filter(Boolean).join(' · ') || 'none set'}.
-              <a href="#/profile">Change</a></p></div></div>
+    ${o.status === 'stale' ? `<div class="callout danger" style="margin-bottom:1rem"><h4>⚠️ This page may be out of date</h4>
+      <p>${esc(o.freshness?.note ?? 'The call page has not been updated recently.')} Check it is still open before you spend time on it.</p></div>` : ''}
 
-          <div class="subs">
-            ${SUBS.map(([k, label, q]) => {
-              const s = subs[k];
-              if (!s || typeof s.score !== 'number') return `<div class="sub na"><div class="sub-h"><span>${label}</span><span class="muted tiny">n/a for ${TYPE_LABEL[o.type].toLowerCase()}s</span></div></div>`;
-              const tone = s.score >= 75 ? 'hi' : s.score >= 55 ? 'mid' : 'lo';
-              return `<div class="sub">
-                <div class="sub-h"><span>${label} <span class="muted tiny">· ${q.toLowerCase()}</span></span><span class="sub-n">${s.score}<span class="muted tiny"> ×${w[k].toFixed(2)}</span></span></div>
-                <div class="sub-bar"><i class="${tone}" style="width:${s.score}%"></i></div>
-                <p class="sub-r">${esc(s.reason)}</p>
-              </div>`;
-            }).join('')}
-          </div>
-
-          <div class="gowatch">
-            ${o.why_go?.length ? `<div class="go"><h4>👍 Why go</h4><ul>${o.why_go.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
-            ${o.watch_out?.length ? `<div class="watch"><h4>⚠️ Watch out</h4><ul>${o.watch_out.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
-          </div>
-        </section>
-
-        <section class="panel">
-          <div class="panel-h"><h3><span class="ico" aria-hidden="true">🎯</span> How it connects to your work</h3></div>
-          <p style="margin:0 0 .8rem">${esc(o.fit?.rationale ?? '')}</p>
-          <div class="row">${(o.fit?.matched_topics ?? []).map((t) => `<span class="chip chip-grape">${esc(t)}</span>`).join('')}</div>
-          ${o.fit?.neighborhood_evidence?.length ? `<div class="evidence"><ul>${o.fit.neighborhood_evidence.map((e) => `<li>${esc(e)}</li>`).join('')}</ul></div>` : ''}
-        </section>
-
-        <section class="panel">
-          <div class="panel-h"><h3><span class="ico" aria-hidden="true">🗓</span> What to do, in order</h3></div>
-          ${dl.length ? `<div class="timeline">
-            ${dl.map((d) => {
-              const u = urgency(d.date);
-              const past = daysUntil(d.date) < 0;
-              return `<div class="tl ${past ? 'is-past' : ''}">
-                <div class="tl-date"><div class="tl-d">${fmtDate(d.date)}</div>
-                  <div class="tl-in">${relative(d.date)}</div></div>
-                <div class="tl-rail"><span class="tl-line"></span>
-                  <span class="tl-dot ${d.depends_on || d.requires ? 'dep' : ''} ${u === 'soon' ? 'soon' : ''}"></span></div>
-                <div class="tl-body">
-                  <div class="tl-label">${d.fund_name ? esc(d.fund_name) : DEADLINE_LABEL[d.label]} ${d.grounded ? conf('verified') : conf('inferred')}</div>
-                  <div class="tl-why">${d.synthetic
-                    ? `Not on the call page. Grapevine counts back ${d.lead} days from the event for this visa route. Start by this date.`
-                    : DEADLINE_WHY[d.label]}</div>
-                  ${d.depends_on ? `<span class="tl-dep">⛓ only after the ${DEADLINE_LABEL[d.depends_on]?.toLowerCase() ?? esc(d.depends_on)} is accepted</span>` : ''}
-                  ${d.requires ? `<span class="tl-dep">⛓ needs: ${esc(d.requires)}</span>` : ''}
-                  ${srcQuote(d.source_quote)}
-                </div>
-              </div>`;
-            }).join('')}
-          </div>` : '<p class="small muted" style="margin:0">No dated deadlines published yet. We will pick them up on the next refresh.</p>'}
-        </section>
-
-        ${cost ? `<section class="panel">
-          <div class="panel-h"><h3><span class="ico" aria-hidden="true">💰</span> What it costs you</h3>${conf('range')}</div>
-          <div class="cost-total">${cost.high === 0 ? 'No cost' : `${money(cost.low, cost.currency)} – ${money(cost.high, cost.currency)}`}</div>
-          <p class="tiny muted" style="margin:.2rem 0 0">In ${esc(cost.currency)}. A range, because a single number would be false precision.</p>
-          ${cost.high > 0 ? `<div class="cost-bar">
-            ${segs.map(([k, v]) => `<span class="cost-seg" style="width:${((v?.high ?? 0) / totalHigh) * 100}%;background:${COST_COLORS[k] ?? 'var(--muted)'}" title="${COST_LABEL[k] ?? esc(k)}"></span>`).join('')}
-          </div>` : ''}
-          <div class="cost-key">
-            ${segs.map(([k, v]) => `<div class="cost-k">
-              <span class="cost-sw" style="background:${COST_COLORS[k] ?? 'var(--muted)'}"></span>
-              <span>${COST_LABEL[k] ?? esc(k)} ${v?.grounded ? conf('verified') : ''}<br/><span class="cost-note">${esc(v?.note ?? '')}</span></span>
-              <span>${!v?.high ? '—' : v.low === v.high ? money(v.low, cost.currency) : `${money(v.low, cost.currency)}–${money(v.high, cost.currency)}`}</span>
-            </div>`).join('')}
-          </div>
-          ${cost.assumptions?.length ? `<details class="assumptions"><summary><strong>Assumptions behind those numbers</strong></summary>
-            <ul>${cost.assumptions.map((a) => `<li>${esc(a)}</li>`).join('')}</ul></details>` : ''}
-          ${cost.net_note ? `<div class="net-note">${esc(cost.net_note)}</div>` : ''}
-          ${cost.high > state.profile.constraints.max_cost ? `<div class="callout" style="margin-top:.9rem">
-            <h4><span aria-hidden="true">📈</span> Above your limit</h4>
-            <p>You set ${money(state.profile.constraints.max_cost)} per trip. The high end here is ${money(cost.high, cost.currency)}. The funding below may close the gap.</p></div>` : ''}
-        </section>` : ''}
-
-        <section class="panel">
-          <div class="panel-h"><h3><span class="ico" aria-hidden="true">🎁</span> Money you can apply for</h3></div>
-          <h4 class="fund-h">From the ${o.type === 'journal_call' ? 'publisher' : 'organisers'}</h4>
-          ${venueFunds.length ? `<div class="fund">${venueFunds.map(fundItem).join('')}</div>`
-            : '<p class="small muted">None published on the call or its grants page.</p>'}
-          <h4 class="fund-h">Elsewhere you could apply</h4>
-          ${extFunds.length ? `<div class="fund">${extFunds.map(fundItem).join('')}</div>`
-            : '<p class="small muted">Nothing specific found. Your university\'s research office usually has a conference-travel fund.</p>'}
-        </section>
-
-        ${o.past_editions?.length ? `<section class="panel">
-          <div class="panel-h"><h3><span class="ico" aria-hidden="true">📚</span> Past editions</h3></div>
-          <div class="past">${o.past_editions.map((p) => `<div class="past-ed">
-            <div class="past-y">${esc(p.year ?? '')}</div>
-            <div class="past-t">${esc(p.theme ?? '')}${p.city ? ` · ${esc(p.city)}` : ''}</div>
-            ${p.representative_papers?.length ? `<ul>${p.representative_papers.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
-          </div>`).join('')}</div>
-        </section>` : ''}
-
-        <section class="panel">
-          <div class="panel-h"><h3><span class="ico" aria-hidden="true">📄</span> The call, in brief</h3></div>
-          <p>${esc(o.description)}</p>
-        </section>
+    <section class="verdict">
+      <div class="verdict-main">
+        ${ring(p / 100, 92, 'worth it')}
+        <div>
+          <div class="verdict-label">${p >= 75 ? 'Strong pick' : p >= 60 ? 'Worth considering' : 'Probably not this time'}</div>
+          <p class="verdict-tag">${esc(o.tagline ?? '')}</p>
+        </div>
       </div>
+      <div class="facts">
+        <div class="fact"><span class="fact-k">⏳ Next step</span>
+          <span class="fact-v">${nd ? `${nd.fund_name ? 'Funding' : DEADLINE_LABEL[nd.label]}` : 'Nothing open'}</span>
+          <span class="fact-s">${nd ? `${fmtDate(nd.date)} · ${relative(nd.date)}` : o.status === 'watch' ? 'Watch for the next call' : 'This edition has closed'}</span></div>
+        <div class="fact"><span class="fact-k">💰 Cost</span>
+          <span class="fact-v">${!cost ? '—' : cost.high === 0 ? 'Free' : `${shortMoney(cost.low, cost.currency)} – ${shortMoney(cost.high, cost.currency)}`}</span>
+          <span class="fact-s">${cost && cost.high > state.profile.constraints.max_cost ? 'above your limit' : 'within your limit'}</span></div>
+        <div class="fact"><span class="fact-k">🎁 Funding</span>
+          <span class="fact-v">${funds.length ? `${funds.length} option${funds.length === 1 ? '' : 's'}` : 'None open'}</span>
+          <span class="fact-s">${funds.length ? esc(funds[0].name).slice(0, 38) : 'see Cost & funding'}</span></div>
+        <div class="fact"><span class="fact-k">🛂 Visa</span>
+          <span class="fact-v">${!abroad ? 'Not needed' : v?.required === 'yes' ? 'Needed' : v?.required === 'no' ? 'Not needed' : 'Maybe'}</span>
+          <span class="fact-s">${abroad && v?.lead_days ? `start ~${v.lead_days} days ahead` : abroad ? 'see Can I go?' : o.location.format === 'online' ? 'online' : 'in your country'}</span></div>
+      </div>
+      <div class="verdict-actions">
+        <button class="btn ${saved ? 'btn-ghost' : 'btn-primary'} btn-sm" data-act="save" data-id="${esc(o.id)}">${saved ? '★ In your tracker' : '☆ Save to tracker'}</button>
+        <button class="btn btn-ghost btn-sm" data-act="ics" data-id="${esc(o.id)}">📅 Add dates to calendar</button>
+        <button class="btn btn-quiet btn-sm" data-act="dismiss" data-id="${esc(o.id)}">✕ Not for me</button>
+      </div>
+    </section>
 
-      <aside class="side">
-        <div class="panel">
-          <div class="stack">
-            <button class="btn ${saved ? 'btn-ghost' : 'btn-primary'}" data-act="save" data-id="${esc(o.id)}">
-              ${saved ? '★ Saved: in your tracker' : '☆ Save & track the deadlines'}</button>
-            <button class="btn btn-ghost btn-sm" data-act="ics" data-id="${esc(o.id)}">⬇ Add to calendar (.ics)</button>
-            <button class="btn btn-quiet btn-sm" data-act="dismiss" data-id="${esc(o.id)}">Not for me</button>
-          </div>
-          <p class="tiny muted" style="margin:.9rem 0 0">Grapevine never registers, pays, submits or books for you.</p>
-        </div>
+    <nav class="tabs-inline" role="tablist">
+      ${BRIEF_TABS.map(([k, l]) => `<button role="tab" class="tab-i" data-act="tab" data-v="${k}" aria-selected="${briefTab === k}">${l}</button>`).join('')}
+    </nav>
+    <section class="panel tab-panel" role="tabpanel">${TAB_FN[briefTab](o)}</section>
 
-        <div class="panel">
-          <div class="panel-h"><h3><span class="ico" aria-hidden="true">✅</span> Can you apply?</h3>${conf(o.confidence.eligibility)}</div>
-          <p class="small" style="margin:0 0 .7rem">${esc(o.eligibility_notes ?? '')}</p>
-          <dl class="kv">
-            <dt>Career stage</dt><dd>${!elig.career_stage?.length ? 'Not stated' : elig.career_stage.includes(state.profile.career_stage) ? 'Accepted' : 'Not listed'}</dd>
-            <dt>Membership</dt><dd>${elig.membership_required ? 'Required' : 'Not required'}</dd>
-            <dt>Nationality</dt><dd>${esc(elig.nationality ?? 'No restriction')}</dd>
-          </dl>
-        </div>
-
-        ${o.visa ? `<div class="panel">
-          <div class="panel-h"><h3><span class="ico" aria-hidden="true">🛂</span> Visa</h3>${conf('advisory')}</div>
-          <div class="callout ${o.visa.required === 'yes' ? '' : 'danger'}" style="${o.visa.required === 'no' ? 'border-left-color:var(--vine);background:var(--vine-soft)' : ''}">
-            <h4>${o.visa.required === 'yes' ? '⚠️ A visa is required' : o.visa.required === 'no' ? '✓ No visa required' : '❓ Depends on your circumstances'}</h4>
-            <p>${esc(o.visa.note)}</p>
-            ${o.visa.official_source ? `<p><a href="${safeUrl(o.visa.official_source)}" target="_blank" rel="noopener noreferrer">Official source ↗</a></p>` : ''}
-          </div>
-          <p class="tiny muted" style="margin:.7rem 0 0">Advisory only, and it may be out of date. Confirm with the official source before acting.</p>
-        </div>` : ''}
-
-        <div class="panel">
-          <div class="panel-h"><h3><span class="ico" aria-hidden="true">🔍</span> How much to trust this</h3></div>
-          <dl class="kv">
-            <dt>Deadlines</dt><dd>${conf(o.confidence.dates)}</dd>
-            <dt>Fees</dt><dd>${conf(o.confidence.fees)}</dd>
-            <dt>Cost estimate</dt><dd>${conf(o.confidence.cost)}</dd>
-            <dt>Visa</dt><dd>${conf(o.confidence.visa)}</dd>
-          </dl>
-          <p class="tiny muted" style="margin:.8rem 0 0">✓ means the fact was quoted from the source page and re-checked. Click “source” next to any of them to see the exact words.</p>
-        </div>
-      </aside>
-    </div>
+    <p class="tiny muted" style="margin-top:1rem">Grapevine never registers, pays, submits or books for you.</p>
   </div>`;
 }
 
@@ -1345,6 +1405,7 @@ document.addEventListener('click', (e) => {
     case 'ics': downloadIcs([byId(btn.dataset.id)], `grapevine-${btn.dataset.id}.ics`); break;
     case 'ics-all': downloadIcs(state.saved.map(byId).filter(Boolean), 'grapevine-deadlines.ics'); break;
     case 'filter': feedFilter = btn.dataset.v; render(); break;
+    case 'tab': briefTab = btn.dataset.v; render(); break;
     case 'toggle-inelig': state.showIneligible = !state.showIneligible; save(); render(); break;
     case 'profgoal': {
       const goals = state.profile.goals ??= [];

@@ -1,17 +1,29 @@
 {
   "id": "caste-journal-open-call",
   "type": "journal_call",
-  "status": "open",
+  "status": "stale",
   "title": "General Call for Papers — CASTE: A Global Journal on Social Exclusion",
   "host": "CASTE: A Global Journal on Social Exclusion (Brandeis University Library)",
   "host_kind": "publisher",
   "theme": "Caste and caste-like systems of marginalization and inter-generational oppression of religious, racial, and cultural minorities globally",
   "description": "CASTE: A Global Journal on Social Exclusion (also referred to as J-CASTE), published via Brandeis University Library in collaboration with the Center for Global Development and Sustainability at Brandeis University's Heller School, issues a standing/general call for papers on caste and caste-like systems of exclusion worldwide. The announcement text refers to 'forthcoming issues in 2021 through 2024,' which is stale relative to the extraction date; no current specific submission deadline is stated on the page, so this is treated as a rolling call. The journal states it charges no publication fees.",
-  "location": { "city": "—", "country": "—", "format": "online" },
-  "dates": { "start": null, "end": null },
+  "location": {
+    "city": "—",
+    "country": "—",
+    "format": "online"
+  },
+  "dates": {
+    "start": null,
+    "end": null
+  },
   "deadlines": [],
   "eligibility": {
-    "career_stage": ["established scholars", "emerging scholars", "policy officials", "practitioners"],
+    "career_stage": [
+      "established scholars",
+      "emerging scholars",
+      "policy officials",
+      "practitioners"
+    ],
     "nationality": null,
     "region_restriction": null,
     "membership_required": false,
@@ -43,5 +55,11 @@
   "source_url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10",
   "extracted_at": "2026-09-19",
   "predatory_flag": false,
-  "predatory_reasons": []
+  "predatory_reasons": [],
+  "freshness": {
+    "posted": "2021-06-27",
+    "last_signal_year": 2024,
+    "stale": true,
+    "note": "The call was posted on 27 June 2021 and invites papers for issues 2021 through 2024. No newer call was found on the page."
+  }
 }

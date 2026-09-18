@@ -14,12 +14,12 @@ export const TODAY = new Date(new Date().toISOString().slice(0, 10) + 'T00:00:00
 
 /** Steps shown in the "agent at work" animation, with the real counts from the last skill run. */
 export const pipeline = [
-  { label: 'Draft profile', detail: `${meta.fields} fields + ${meta.adjacent} adjacent fields inferred from your description`, ms: 800 },
-  { label: 'Scout — society graph, literature, recurrence', detail: `${meta.searches} searches · ${meta.candidates} candidates found`, ms: 1100 },
-  { label: `Extraction ×${meta.extracted}`, detail: 'one call page each, every deadline quoted from the source', ms: 1100 },
-  { label: 'Funding + cost', detail: `${meta.funding} funding routes · costs in ${profile.currency}`, ms: 900 },
-  { label: 'Is it worth going?', detail: 'fit · standing · network · outcomes · feasibility, weighted by your goals', ms: 900 },
-  { label: 'Verification', detail: `${meta.grounded_pass} of ${meta.grounded_total} quoted facts still ✓ after re-checking the source pages`, ms: 700 },
+  { label: 'Reading your interests', detail: `Your topics, plus ${meta.adjacent} nearby fields worth searching`, ms: 800 },
+  { label: 'Searching your field and the ones next to it', detail: `${meta.candidates} possibilities found`, ms: 1100 },
+  { label: 'Reading each call page', detail: `${meta.extracted} checked for dates, fees and who can apply`, ms: 1000 },
+  { label: 'Working out cost and funding', detail: `Costs in ${profile.currency} · ${meta.funding} ways to pay for it`, ms: 900 },
+  { label: 'Ranking by what you care about', detail: 'Using the goals you picked', ms: 800 },
+  { label: 'Double-checking the dates', detail: `${meta.grounded_pass} of ${meta.grounded_total} matched the source page`, ms: 700 },
 ];
 
 /** What someone might want out of an opportunity. Each goal shifts the priority weights. */

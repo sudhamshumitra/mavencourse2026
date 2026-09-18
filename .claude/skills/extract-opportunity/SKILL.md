@@ -31,8 +31,14 @@ Call pages have no shared format. Dates hide in prose, fees sit in tier tables, 
    - **`standing_signals`:** facts that show how established the venue is, each `grounded` with a URL. Examples: "Society founded 1999", "26th annual conference", "Proceedings indexed as Selected Papers of Internet Research", "Keynote: <name>".
    - `predatory_flag` + `predatory_reasons` (see the warning signs in `scout-opportunities`).
    - `source_url` is the main page. `extracted_at` is now.
-4. **Normalise dates** to `YYYY-MM-DD`. If the year is missing, infer it from the event dates and mark `grounded: false`. Use AoE/local-time wording only in the quote.
-5. **Validate** against the schema, then write `corpus/opportunities/<id>.json`.
+4. **Freshness.** Record `freshness: { posted, last_signal_year, stale, note }`.
+   - `posted` is the page's "posted on", "updated" or announcement date.
+   - `last_signal_year` is the latest year the call itself refers to ("issues 2021 through 2024" → 2024).
+   - Set `stale: true` and `status: "stale"` if the page was posted more than 18 months ago **and** no date or year on it is in the current or a future year.
+
+   A call page that looks open but was written years ago is the most common way to send someone after a dead opportunity.
+5. **Normalise dates** to `YYYY-MM-DD`. If the year is missing, infer it from the event dates and mark `grounded: false`. Use AoE/local-time wording only in the quote.
+6. **Validate** against the schema, then write `corpus/opportunities/<id>.json`.
 
 ## Constraints
 - **Never invent.** A missing fact is `null` or an empty array, not a plausible guess. Wrong deadlines cost people real opportunities; empty ones only cost a click.

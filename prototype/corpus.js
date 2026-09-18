@@ -890,7 +890,7 @@ export const opportunities = [
   {
     "id": "caste-journal-open-call",
     "type": "journal_call",
-    "status": "open",
+    "status": "stale",
     "title": "General Call for Papers — CASTE: A Global Journal on Social Exclusion",
     "host": "CASTE: A Global Journal on Social Exclusion (Brandeis University Library)",
     "host_kind": "publisher",
@@ -945,6 +945,12 @@ export const opportunities = [
     "extracted_at": "2026-09-19",
     "predatory_flag": false,
     "predatory_reasons": [],
+    "freshness": {
+      "posted": "2021-06-27",
+      "last_signal_year": 2024,
+      "stale": true,
+      "note": "The call was posted on 27 June 2021 and invites papers for issues 2021 through 2024. No newer call was found on the page."
+    },
     "venue_funding": [],
     "priority": {
       "score": 88,

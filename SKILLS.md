@@ -167,6 +167,7 @@ Mini-evaluation against the [PRD's evaluation plan](PRD.md#9-evaluation-plan):
 | Inference presented as fact ("unbroken run" of BASAS conferences; 2020 is missing) | verify-grounding | extract: standing signals state counts, not characterisations |
 | Status wrong: Madison marked *open* after its abstract deadlines passed; the AAS workshop marked *open* after applications closed | my review of agent output | extract: "status is decided by the **last submission** date, not registration" |
 | AoIR Access Grant quote was just "10 July 2026" (verbatim, but doesn't say *what* closes) | my review | extract: "a quote must name the thing it dates" |
+| A **2021** journal call ("issues 2021 through 2024") was ranked #1 as *open*. Every quote was verbatim, so grounding passed | the user, reading the source page | extract, scout and verify now check **freshness** (posted date + latest year referred to). The call is now shown under "Possibly out of date" |
 | Two brief agents wrote free text ("GROUNDED (deadlines quoted…)") where the schema expects `verified`/`inferred` | the rendered brief (the UI showed raw text) | compose-brief now lists the allowed values explicitly, and build-feed normalises them defensively |
 
 **What the skills made easier, faster or more consistent**

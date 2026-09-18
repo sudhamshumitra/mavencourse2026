@@ -42,6 +42,7 @@ Use today's date.
 - `attend-only`: submissions have closed, but the event is still in the future and registration or attendance is possible.
 - `watch`: this edition has passed or isn't announced, but the next edition is confirmed or strongly predicted by recurrence. Give `predicted_cfp_window`.
 - Anything with no future date at all is **dropped**.
+- **Rolling or undated calls must prove they're current.** Keep one only if the page shows activity in the last 18 months (a posted or updated date, a current volume or issue, a year mentioned). Otherwise drop it, or keep it as `stale` if it's highly relevant. "Open call" text on a 2021 page isn't evidence the call is still open.
 
 ## Filtering and judgement
 - Prefer the **host's own page** over an aggregator copy. Keep the aggregator URL only as `found_via`.
