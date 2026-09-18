@@ -1,0 +1,64 @@
+{
+  "opportunity_id": "seacah-2027",
+  "profile_id": "p_putri",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "IDR",
+    "low": 9077000,
+    "high": 20470000,
+    "breakdown": {
+      "registration": { "low": 5677000, "high": 8870000, "note": "Onsite non-member presenter fee, USD 320 (early bird, until 2 Oct 2026) to USD 500 (regular, until 4 Dec 2026)", "grounded": true, "source": null },
+      "travel": { "low": 1600000, "high": 3200000, "note": "Yogyakarta-Bangkok return, regional budget carrier, booked ahead (no live fare search run)", "grounded": false },
+      "accommodation": { "low": 1800000, "high": 8400000, "note": "6 nights (5 conference days + 1), budget hostel to mid-range hotel in Bangkok", "grounded": false },
+      "visa": { "low": 0, "high": 0, "note": "Indonesian passport holders can generally enter Thailand visa-free for short stays", "grounded": true, "source": "https://www.thaievisa.go.th/" }
+    },
+    "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com)",
+      "Registration uses the non-member onsite-presenter tier (early bird to regular) from the SEACAH2027 registration page; travel and accommodation are heuristic estimates, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": true,
+    "net_note": "Presenting online instead would drop registration to the USD 200-320 online-presenter tier and remove travel and accommodation entirely, landing well under budget; attending in person, only the high end slightly exceeds her IDR 20,000,000 cap."
+  },
+  "priority": {
+    "score": 47,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1154, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 60, "reason": "Her digital-archiving work could be framed under IAFOR's broad arts-and-humanities and technology themes, but this is a generic multi-discipline conference rather than one focused on her subject, so fit is capped by keyword overlap alone." },
+      "standing": { "score": 15, "reason": "Standing is capped because this opportunity is flagged predatory-suspect: the organizer (IAFOR) runs many parallel, similarly-named 'Asian Conference on...' events across cities on a pay-to-present model." },
+      "network": { "score": 30, "reason": "Generic 'all-topics' regional conferences like this typically offer limited real networking with people working on the same specific questions, beyond a broad regional arts-and-humanities audience." },
+      "outcomes": { "score": 25, "reason": "No confirmed proceedings, indexing or awards were found; IAFOR's conferences are generally not associated with strong publication outcomes." },
+      "feasibility": { "score": 85, "reason": "February is one of her available months and Thailand is visa-free for Indonesian passport holders, but the in-person cost sits close to or just over her budget cap." }
+    }
+  },
+  "fit": {
+    "score": 0.6,
+    "rationale": "SEACAH2027's broad arts-and-humanities and technology themes could accommodate a paper on digital archiving, but as an all-topics regional conference it doesn't have a named track or focus that matches her Islamic-music-and-zine archiving specifically, so the fit relies on general keyword overlap rather than a close thematic match.",
+    "matched_topics": ["digital archives"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's a nearby, visa-free regional trip (Bangkok) within one of her available months (February).",
+    "Its broad 'arts and humanities' and technology theme could fit her digital-archiving work with the right framing.",
+    "Submissions are still open (deadline 30 October 2026)."
+  ],
+  "watch_out": [
+    "This conference is run by IAFOR, an organizer that runs many similarly-named 'Asian Conference on...' events across different cities on a pay-to-present model -- worth recognizing before paying to attend.",
+    "The in-person cost (registration + travel + hotel) comes close to or slightly over her budget cap; presenting online is much cheaper."
+  ],
+  "tagline": "A nearby, visa-free regional conference -- but flagged as a pay-to-present, multi-city operation.",
+  "eligible": "yes",
+  "eligibility_notes": "No restrictions stated; open call, deadline still open.",
+  "visa": {
+    "required": "no",
+    "note": "Indonesian passport holders can generally enter Thailand visa-free for short tourist/business stays. This is general information, not immigration advice.",
+    "official_source": "https://www.thaievisa.go.th/",
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "devstud-bandung-2027",
+  "type": "fellowship",
+  "status": "open",
+  "title": "Towards a Global South-Driven Future for Development Studies — Writing Workshop",
+  "host": "Development Studies Association (DSA) / Global Development Institute, University of Manchester, with Universitas Padjadjaran, Bandung",
+  "host_kind": "learned_society",
+  "theme": "Towards a Global South-driven future for Development Studies",
+  "description": "A funded writing workshop in Bandung, Indonesia (Universitas Padjadjaran), for development-studies researchers based at higher-education institutions in Asia or Africa, run with support from a British Academy Writing Workshop grant. Participants submit an extended abstract, CV and writing sample; if selected, the organisers cover return flights (from within Asia) and three nights' accommodation, and accepted participants then develop a short or full paper by January 2027. Conference/workshop dates are April 2027, exact date to be confirmed.",
+  "location": { "city": "Bandung", "country": "Indonesia", "format": "in_person" },
+  "dates": { "start": "2027-04-01", "end": null },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-09-30", "depends_on": null, "grounded": true, "source_quote": "30 September 2026" },
+    { "label": "full_paper", "date": "2027-01-15", "depends_on": "abstract", "grounded": true, "source_quote": "15 January 2027" }
+  ],
+  "eligibility": {
+    "career_stage": ["faculty", "postdoc", "phd_candidate"],
+    "nationality": null,
+    "region_restriction": "Based at a higher-education institution in Asia or Africa",
+    "membership_required": false,
+    "notes": "Open to those based at a higher-education institution in Asia or Africa, with a PhD awarded after 1 October 2017 (flexibility for career breaks) or currently enrolled in a PhD programme in the Global South. Requires an extended abstract (750-1,000 words), a two-page CV and a writing sample, sent to the named organiser by the deadline."
+  },
+  "fees": [],
+  "funding": [
+    {
+      "name": "British Academy Writing Workshop grant (covers this workshop's travel and accommodation)",
+      "type": "travel_scholarship",
+      "deadline": "2026-09-30",
+      "amount_note": "Return flights (from within Asia) plus accommodation for three nights, for accepted participants",
+      "eligibility_notes": "Automatic for accepted workshop participants based in Asia or Africa; no separate application.",
+      "grounded": true,
+      "source_quote": "return flights (from within Asia), as well as accommodation for three nights",
+      "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/"
+    }
+  ],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "Funded by a British Academy Writing Workshop grant and organised jointly with the Development Studies Association and a Global South host institution", "grounded": true, "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/" }
+  ],
+  "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

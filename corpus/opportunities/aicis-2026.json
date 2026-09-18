@@ -1,0 +1,33 @@
+{
+  "id": "aicis-2026",
+  "type": "conference",
+  "status": "open",
+  "title": "AICIS+ 2026: 25th Annual International Conference on Islam, Science, and Society",
+  "host": "UIN Siber Syekh Nurjati Cirebon",
+  "host_kind": "university",
+  "theme": "Revitalizing Islamic Civilization for Sustainable Life: Local Heritage, Technological Innovation, and Human Flourishing",
+  "description": "AICIS+ is Indonesia's flagship annual Islamic-studies conference, organized by Indonesia's Ministry of Religious Affairs together with a different host university each year. The 2026 (25th) edition is hosted by UIN Siber Syekh Nurjati Cirebon in Cirebon, West Java, from 17-20 November 2026, with a theme on Islamic civilization, local heritage and technological innovation. No fee amounts or travel-funding pages were found from the main page.",
+  "location": { "city": "Cirebon, West Java", "country": "Indonesia", "format": "in_person" },
+  "dates": { "start": "2026-11-17", "end": "2026-11-20" },
+  "deadlines": [
+    { "label": "full_paper", "date": "2026-10-20", "depends_on": null, "grounded": true, "source_quote": "20 October 2026" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No career-stage, nationality or membership restrictions were stated. No registration fee amount is published on the homepage; a separate registration page is referenced but not linked from the main page found."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "25th Annual International Conference on Islam, Science, and Society, run in partnership with Indonesia's Ministry of Religious Affairs", "grounded": true, "source_url": "https://aicis.uinssc.ac.id/" }
+  ],
+  "source_url": "https://aicis.uinssc.ac.id/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2026, "stale": false, "note": "Page is specifically for the 2026 (25th) edition, with dates and deadlines in Oct-Nov 2026." }
+}

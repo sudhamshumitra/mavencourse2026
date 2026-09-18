@@ -1,0 +1,39 @@
+{
+  "id": "consoling-passions-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "Console-ing Passions 2027: Provocations",
+  "host": "Console-ing Passions / Amsterdam School for Cultural Analysis (ASCA), University of Amsterdam",
+  "host_kind": "university",
+  "theme": "Provocations",
+  "description": "Console-ing Passions is the long-running international feminist media studies conference, founded in 1989. The 2027 edition, hosted by the University of Amsterdam under the theme 'Provocations', invites individual papers, pre-constituted panels and roundtables on media broadly conceived through intersectional feminist perspectives (gender, sexuality, race, class, disability, coloniality). It runs 28-30 June 2027, in person, with virtual participation only in exceptional cases.",
+  "location": { "city": "Amsterdam", "country": "Netherlands", "format": "in_person" },
+  "dates": { "start": "2027-06-28", "end": "2027-06-30" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-12-01", "depends_on": null, "grounded": true, "source_quote": "Proposals should be submitted via this form by Tuesday, 1 December 2026, 23:59 Central European Time (CET)" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No stated career-stage or nationality restriction; the call explicitly says mixed career stages and institutional locations are encouraged. No registration fee is listed on the CFP page — limited information."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "Console-ing Passions was founded in 1989 by a group of feminist media scholars and artists looking to create a space to present work and foster feminist scholarship on issues of television, culture, and identity.", "grounded": true, "source_url": "https://cstonline.net/cfp-console-ing-passions-28-30-june-2027/" },
+    { "signal": "Since its first conference at the University of Iowa in 1992, Console-ing Passions has expanded to become not only the most important conference for scholars studying gender in television but also among the top conferences for feminist scholars of media more broadly.", "grounded": true, "source_url": "https://cstonline.net/cfp-console-ing-passions-28-30-june-2027/" }
+  ],
+  "source_url": "https://cstonline.net/cfp-console-ing-passions-28-30-june-2027/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": {
+    "posted": null,
+    "last_signal_year": 2027,
+    "stale": false,
+    "note": "CFP text refers to the 2027 conference dates and a December 2026 deadline; clearly current."
+  }
+}

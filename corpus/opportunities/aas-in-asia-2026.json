@@ -1,0 +1,55 @@
+{
+  "id": "aas-in-asia-2026",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "AAS-in-Asia 2026: Centering Asia: Refiguring Connections, Recharting Futures",
+  "host": "Association for Asian Studies (AAS) and Lahore University of Management Sciences (LUMS)",
+  "host_kind": "learned_society",
+  "theme": "Centering Asia: Refiguring Connections, Recharting Futures",
+  "description": "AAS-in-Asia is the Association for Asian Studies' flagship Asia-based conference, moving to a different Asian city each year; the 2026 edition is hosted at LUMS in Lahore, Pakistan, September 25-27, 2026. It brings together scholars, students and practitioners from across Asia and beyond. The session/panel-proposal window has already closed, but registration is still open, including an onsite/late rate, and hybrid or virtual participation is offered for those facing travel, visa, political or funding constraints.",
+  "location": { "city": "Lahore", "country": "Pakistan", "format": "hybrid" },
+  "dates": { "start": "2026-09-25", "end": "2026-09-27" },
+  "deadlines": [
+    {
+      "label": "early_bird",
+      "date": "2026-04-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "March 1 - April 30, 2026"
+    },
+    {
+      "label": "registration",
+      "date": "2026-08-24",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "August 24, 2026 onwards"
+    }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Open conference; selected panelists must submit panel details on the conference platform and pay the registration fee. Hybrid/virtual participation is offered for participants facing significant travel barriers, including visa, political, or funding constraints. No specific registration fee amounts or travel-grant programme were found on the pages checked; the panel/session proposal deadline had already passed by the time this page was checked (Sept 19, 2026), so this edition is presented as attend/register-only for a new applicant."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    {
+      "signal": "Described on its own site as \"the Association for Asian Studies' flagship conference,\" bringing together scholars, students, and practitioners from across Asia, West Asia, Africa, Middle East, and beyond.",
+      "grounded": true,
+      "source_url": "https://aasinasia2026.lums.edu.pk/"
+    }
+  ],
+  "source_url": "https://aasinasia2026.lums.edu.pk/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": {
+    "posted": null,
+    "last_signal_year": 2026,
+    "stale": false,
+    "note": "Event is six days from the extraction date and the site actively references 2026 registration windows — current."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "iaea-2026",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "51st Annual IAEA Conference — Trust, Transparency and Technology in Educational Assessment",
+  "host": "International Association for Educational Assessment (IAEA)",
+  "host_kind": "learned_society",
+  "theme": "Trust, Transparency and Technology in Educational Assessment",
+  "description": "The 51st annual conference of the International Association for Educational Assessment (IAEA), the specialist society for public examinations and educational measurement, held 27 September - 2 October 2026 in Toronto, Canada. Registration for the conference is open, but the event is only about eight days from today, so the paper submission window has long closed and there is no realistic time left to arrange a Canadian visa.",
+  "location": { "city": "Toronto", "country": "Canada", "format": "in_person" },
+  "dates": { "start": "2026-09-27", "end": "2026-10-02" },
+  "deadlines": [],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No fee, funding or eligibility detail was captured beyond that registration is open; the paper-submission deadline was not found and is assumed closed given the imminent conference dates."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "51st annual conference of the specialist international association for educational assessment and examinations", "grounded": true, "source_url": "https://iaea.info/registration-for-the-2026-51th-annual-conference-open/" }
+  ],
+  "source_url": "https://iaea2026.org/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

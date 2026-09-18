@@ -1,0 +1,70 @@
+{
+  "country": "Nigeria",
+  "generated_at": "2026-09-19",
+  "for": "humanities/social-science MA/early-career researcher, international conference travel",
+  "funders": [
+    {
+      "category": "a",
+      "none_found": true,
+      "note": "No dedicated Nigerian national research council travel grant (equivalent to India's ICSSR) was found for social-science/humanities international conference travel. TETFund (below) is the closest national scheme, but it funds academic staff, not students."
+    },
+    {
+      "name": "TETFund Conference Attendance (CA) Intervention Programme",
+      "url": "https://tetfund.gov.ng/",
+      "category": "b",
+      "eligible_who": "Academic staff of TETFund beneficiary institutions (federal/state universities, polytechnics, colleges of education) with a paper accepted for presentation; NOT open to MA students in their own right",
+      "amount_note": "International conference travel is disbursed through the beneficiary institution, capped institutionally; not a direct-to-individual student grant",
+      "cycle": "Institutional call rounds, timing set by TETFund/the institution, not a fixed annual date",
+      "requires": "Paper accepted for presentation; conference organised by a recognised academic body; sponsorship applied for through the home institution, not directly by the researcher",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Real, active national scheme, but structured for academic staff sponsored through their institution -- not a fit for an MA student applying individually"
+    },
+    {
+      "category": "c",
+      "none_found": true,
+      "note": "Home institution: check the University of Lagos Department of Geography or the Postgraduate School's own conference-travel support; not tracked here since it is institution-specific."
+    },
+    {
+      "name": "Global South Colloquium Fund (GSCF) travel grant",
+      "url": "https://globalsouth.org/gscf/",
+      "category": "d",
+      "eligible_who": "Early-career researchers, preference to those from the Global South, working in Global South studies, development studies, area studies or sociocultural studies -- broad enough to cover Niger Delta migration research",
+      "amount_note": "Travel grants up to a maximum of USD $500 / GBP £400, covering travel costs only (not registration, accommodation or subsistence)",
+      "cycle": "The 2025/2026 funding rounds are complete; the fund reopens 1 January 2027. Apply 10-12 weeks before the event once open.",
+      "requires": "Event registration confirmation; one delegate per institution per event",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Real, general-purpose Global South travel fund from the Council for European Studies / World Society Foundation; currently between funding rounds"
+    },
+    {
+      "name": "ASA Mahmoud Mohamed Taha Student Travel Award",
+      "url": "https://africanstudies.org/awards-prizes/",
+      "category": "e",
+      "eligible_who": "Students of African studies, to support research, exchange of ideas, or travel to present at the ASA Annual Meeting",
+      "amount_note": "A travel grant plus a plaque presented at the ASA Annual Meeting; exact amount not confirmed on the current page",
+      "cycle": "Annual, tied to the ASA Annual Meeting cycle; exact 2026 deadline not confirmed on the page fetched",
+      "requires": "African studies research; application through the ASA awards portal",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Directly relevant to the ASA 2026 candidate opportunity; a real, recurring ASA student award"
+    },
+    {
+      "name": "ASA Travel Support Grant",
+      "url": "https://africanstudies.org/awards-prizes-3/travel-support-grant-application/",
+      "category": "e",
+      "eligible_who": "Emerging and contingent scholars attending the ASA Annual Meeting, preference to those on the meeting programme or ICAADS sessions",
+      "amount_note": "Applied to travel costs or the conference hotel; exact amount not stated",
+      "cycle": "The page fetched is dated to the ASA 66th Annual Meeting (San Francisco) with a June 2023 deadline; the 2026 cycle's dates are not yet confirmed",
+      "requires": "Annual Meeting pre-registration",
+      "last_checked": "2026-09-19",
+      "stale": true,
+      "source_note": "Page found describes a past (2023/San Francisco) cycle; the scheme likely recurs annually but current-cycle details need re-checking closer to ASA 2026"
+    },
+    {
+      "category": "f",
+      "none_found": true,
+      "note": "No current destination-specific scheme found for a Nigerian early-career humanities/social-science researcher traveling to the US, Belgium or elsewhere for these particular conferences."
+    }
+  ]
+}

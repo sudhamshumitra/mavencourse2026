@@ -2597,6 +2597,8791 @@ export const EXAMPLES = [
     }
    }
   ]
+ },
+ {
+  "id": "p_beatriz",
+  "gathered_at": "2026-09-19",
+  "profile": {
+   "id": "p_beatriz",
+   "name": "Beatriz Santos",
+   "fictional": true,
+   "input_text": "Postdoc in Recife working on queer cinema in Northeast Brazil and Latin America, especially low-budget films and film festivals as spaces of community. I want to publish in a strong journal and get known internationally before job applications.",
+   "orcid": null,
+   "affiliation": "Postdoctoral researcher in film studies, a federal university in Pernambuco",
+   "career_stage": "postdoc",
+   "year": null,
+   "research_summary": "Queer cinema and film festivals in Northeast Brazil and Latin America.",
+   "topics": [
+    {
+     "term": "queer Latin American cinema",
+     "weight": 0.95
+    },
+    {
+     "term": "film festivals and community",
+     "weight": 0.85
+    },
+    {
+     "term": "Northeast Brazilian film",
+     "weight": 0.8
+    },
+    {
+     "term": "low-budget filmmaking",
+     "weight": 0.65
+    },
+    {
+     "term": "gender and sexuality in media",
+     "weight": 0.6
+    }
+   ],
+   "fields": [
+    "film studies",
+    "Latin American studies"
+   ],
+   "adjacent_fields": [
+    "queer studies",
+    "media industries",
+    "cultural studies"
+   ],
+   "citation_neighborhood": [
+    {
+     "name": "B. Ruby Rich",
+     "inferred": true
+    },
+    {
+     "name": "Denilson Lopes",
+     "inferred": true
+    },
+    {
+     "name": "José Esteban Muñoz",
+     "inferred": true
+    }
+   ],
+   "geography": {
+    "country": "Brazil",
+    "city": "Recife",
+    "passport": "Brazil"
+   },
+   "currency": "BRL",
+   "constraints": {
+    "max_cost": 12000,
+    "months_available": [
+     "Jan",
+     "Feb",
+     "Jul",
+     "Dec"
+    ],
+    "visa_tolerance": "any",
+    "format": "any"
+   },
+   "goals": [
+    "visibility",
+    "publication",
+    "networking"
+   ],
+   "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+   ],
+   "profile_type": "academic"
+  },
+  "meta": {
+   "fields": 2,
+   "adjacent": 3,
+   "searches": 19,
+   "candidates": 9,
+   "extracted": 6,
+   "funding": 4,
+   "grounded_pass": 13,
+   "grounded_total": 13
+  },
+  "opportunities": [
+   {
+    "id": "consoling-passions-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "Console-ing Passions 2027: Provocations",
+    "host": "Console-ing Passions / Amsterdam School for Cultural Analysis (ASCA), University of Amsterdam",
+    "host_kind": "university",
+    "theme": "Provocations",
+    "description": "Console-ing Passions is the long-running international feminist media studies conference, founded in 1989. The 2027 edition, hosted by the University of Amsterdam under the theme 'Provocations', invites individual papers, pre-constituted panels and roundtables on media broadly conceived through intersectional feminist perspectives (gender, sexuality, race, class, disability, coloniality). It runs 28-30 June 2027, in person, with virtual participation only in exceptional cases.",
+    "location": {
+     "city": "Amsterdam",
+     "country": "Netherlands",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-06-28",
+     "end": "2027-06-30"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-12-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Proposals should be submitted via this form by Tuesday, 1 December 2026, 23:59 Central European Time (CET)"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No stated career-stage or nationality restriction; the call explicitly says mixed career stages and institutional locations are encouraged. No registration fee is listed on the CFP page — limited information."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "CAPES — Programa de Apoio a Eventos no Exterior (AEX/PAEX)",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "A fixed contribution toward travel and accommodation, amount set by CAPES ordinance and varying by destination region; exact current value not confirmed",
+      "deadline": null,
+      "cycle": "Recurring CAPES scheme; specific 2026-27 edital dates not confirmed on the pages fetched",
+      "requires": "Doctoral diploma, proof of paper acceptance to the conference, institutional endorsement",
+      "eligible": "likely",
+      "why": "She holds a doctorate and, if her abstract is accepted, would be presenting at an internationally recognized event abroad — the scheme's stated target group.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/encontre-aqui/paises/multinacional/paex",
+      "sequence_note": "Submit the Console-ing Passions proposal by 1 Dec 2026; notifications are expected late January 2027. Apply for CAPES PAEX as soon as she has the acceptance letter — check the current edital, since exact opening/closing dates weren't confirmed in this pass."
+     },
+     {
+      "name": "Console-ing Passions 2027 mobility/childcare support (unconfirmed)",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Not yet confirmed",
+      "deadline": null,
+      "cycle": null,
+      "requires": "Likely an accepted proposal; process not yet announced",
+      "eligible": "check",
+      "why": "The CFP says the organisers are arranging mobility and childcare support, but gives no amount, criteria or application process yet.",
+      "grounded": true,
+      "source_quote": "We are working to make childcare and mobility support available during CP 2027 and will provide further information as options are confirmed.",
+      "source_url": "https://cstonline.net/cfp-console-ing-passions-28-30-june-2027/",
+      "sequence_note": "Nothing to apply for yet — watch the conference website for an announcement closer to the event."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Console-ing Passions was founded in 1989 by a group of feminist media scholars and artists looking to create a space to present work and foster feminist scholarship on issues of television, culture, and identity.",
+      "grounded": true,
+      "source_url": "https://cstonline.net/cfp-console-ing-passions-28-30-june-2027/"
+     },
+     {
+      "signal": "Since its first conference at the University of Iowa in 1992, Console-ing Passions has expanded to become not only the most important conference for scholars studying gender in television but also among the top conferences for feminist scholars of media more broadly.",
+      "grounded": true,
+      "source_url": "https://cstonline.net/cfp-console-ing-passions-28-30-june-2027/"
+     }
+    ],
+    "source_url": "https://cstonline.net/cfp-console-ing-passions-28-30-june-2027/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "CFP text refers to the 2027 conference dates and a December 2026 deadline; clearly current."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 75,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1923,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 78,
+       "reason": "Console-ing Passions is built around gender and sexuality in media, one of her named topics; her queer-cinema and festival work is a natural, if not headline, fit."
+      },
+      "standing": {
+       "score": 82,
+       "reason": "Founded in 1989 and described as one of the top conferences for feminist media scholars, with a 2027 edition hosted by a major university (Amsterdam)."
+      },
+      "network": {
+       "score": 75,
+       "reason": "It's the leading gathering for feminist media scholarship, giving real overlap with the queer/feminist media theory she cites, though it isn't film-festival-specific."
+      },
+      "outcomes": {
+       "score": 65,
+       "reason": "No stated proceedings or publication route, but presenting at a flagship feminist-media venue is a solid visibility line — limited information beyond that."
+      },
+      "feasibility": {
+       "score": 75,
+       "reason": "June falls outside her usual travel months (Jan/Feb/Jul/Dec), and the high end of the cost range slightly exceeds her BRL 12,000 cap; no visa is needed, which helps."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.78,
+     "rationale": "Console-ing Passions is the flagship international conference for feminist media studies, and her research on gender and sexuality in media — one of her five named topics — sits naturally within its scope. Her more specific focus on queer Latin American cinema and film festivals as community spaces is a plausible, if less headline, fit for a conference built around television, video and new media through an intersectional feminist lens.",
+     "matched_topics": [
+      "gender and sexuality in media",
+      "queer Latin American cinema"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's the flagship international conference for feminist media studies, and gender/sexuality in media is right in your wheelhouse.",
+     "Founded in 1989, it's one of the most established venues in this area, so presenting here carries real visibility.",
+     "The 1 December 2026 deadline gives you time to prepare a strong proposal."
+    ],
+    "watch_out": [
+     "June 2027 falls outside the months you said you're usually free to travel (Jan/Feb/Jul/Dec).",
+     "No registration fee is published yet, and the high end of the cost estimate is a little over your BRL 12,000 budget cap."
+    ],
+    "tagline": "A top feminist-media stage for your gender/sexuality work, but June clashes with your usual travel months.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage, nationality or membership restriction is stated in the CFP; it explicitly welcomes mixed career stages and institutional locations.",
+    "visa": {
+     "required": "conditional",
+     "note": "Brazilian passport holders currently enter the Netherlands visa-free for short stays, but the EU's ETIAS travel authorisation (targeted for Q4 2026) is expected to apply by the June 2027 travel date. This is general information, not immigration advice — confirm current requirements closer to the trip.",
+     "official_source": "https://www.netherlandsworldwide.nl/visa-the-netherlands/schengen-visa/apply-brazil",
+     "verify_flag": true,
+     "lead_days": 14
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "BRL",
+     "low": 7300,
+     "high": 12800,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 1475,
+       "note": "No registration fee is published on the CFP page; estimated using a typical EUR 150-250 academic-conference fee range, inferred",
+       "grounded": false
+      },
+      "travel": {
+       "low": 5591,
+       "high": 7568,
+       "note": "Recife-Amsterdam return fare range found via a live fare search (KLM/Expedia), booked several months ahead",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 1560,
+       "high": 3600,
+       "note": "4 nights (3 conference days + 1) at Amsterdam hotel rates of roughly BRL 390-900/night, inferred",
+       "grounded": false
+      },
+      "visa": {
+       "low": 118,
+       "high": 118,
+       "note": "Brazilian passport holders don't need a Schengen visa; an ETIAS travel authorisation (~EUR 20 ≈ BRL 118) is expected to be required by the June 2027 travel date once the system is enforced",
+       "grounded": false,
+       "source": "https://www.netherlandsworldwide.nl/visa-the-netherlands/schengen-visa/apply-brazil"
+      }
+     },
+     "assumptions": [
+      "No registration fee was found on the CFP page; used a typical EUR 150-250 academic-conference fee range, inferred",
+      "USD→BRL 5.1363 and USD→EUR 0.870624 on 2026-09-18 (open.er-api.com), giving EUR→BRL ≈ 5.90",
+      "Recife-Amsterdam return fare of BRL 5,591-7,568 found via a live fare search (KLM/Expedia)",
+      "4 nights (3 conference days + 1) at Amsterdam hotel rates of roughly BRL 390-900/night, inferred",
+      "Brazilian passport holders don't need a Schengen visa; an ETIAS authorisation is expected to apply by mid-2027",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": true,
+     "net_note": "The high end is a bit over her BRL 12,000 cap. If the conference's promised mobility/childcare support extends to travel costs (not yet confirmed), or a CAPES PAEX award comes through after acceptance, the real out-of-pocket cost would likely land well under this range."
+    }
+   },
+   {
+    "id": "csa-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "Cultural Studies Association (CSA) 2027 Annual Conference",
+    "host": "Cultural Studies Association",
+    "host_kind": "learned_society",
+    "theme": null,
+    "description": "The Cultural Studies Association's 2027 annual conference will be held fully online, 3-5 June 2027. The detailed thematic call for papers was listed as 'coming soon' at the time of extraction, but the submission deadline and format are already published. No fee amount was found on the page fetched.",
+    "location": {
+     "city": "—",
+     "country": "—",
+     "format": "online"
+    },
+    "dates": {
+     "start": "2027-06-03",
+     "end": "2027-06-05"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-11-20",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Deadline for Submissions: Friday, November 20, 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No stated restrictions found; a full CFP with theme and eligibility detail was not yet posted at extraction time — limited information."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Annual conference of the Cultural Studies Association, a US-based learned society for the interdisciplinary field of cultural studies.",
+      "grounded": false,
+      "source_url": null
+     }
+    ],
+    "source_url": "https://culturalstudiesassociation.org/conference/2027-cfp/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "Page states dates and deadline for the 2027 online conference; clearly current, though the detailed CFP text itself was not yet posted."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 58,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1923,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 55,
+       "reason": "Cultural studies is an adjacent field, not her primary one; her work on film festivals as community and gender/sexuality in media is plausible here with framing, but there's no direct topic overlap since the full CFP hasn't been posted yet."
+      },
+      "standing": {
+       "score": 50,
+       "reason": "No standing signals (editions, keynotes, indexing) were found on the page fetched — limited information, so scored at the midpoint."
+      },
+      "network": {
+       "score": 55,
+       "reason": "A genuinely different scholarly community from her usual film-studies circles, useful for testing how her work lands elsewhere, though a fully online format limits the depth of networking."
+      },
+      "outcomes": {
+       "score": 50,
+       "reason": "No information on publication routes or feedback formats was found — limited information."
+      },
+      "feasibility": {
+       "score": 90,
+       "reason": "Fully online and essentially free, so cost and visa are non-issues; the one deduction is that June falls outside her usual travel months, though that matters less for an online event."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.55,
+     "rationale": "Cultural studies is one of her adjacent fields rather than a primary one. Her research on film festivals as spaces of community, and on gender and sexuality in media, could plausibly be reframed for a cultural-studies audience, but the 2027 CSA conference's specific call for papers had not been posted at the time of extraction, so the fit is a stretch rather than a confirmed match.",
+     "matched_topics": [
+      "film festivals and community",
+      "gender and sexuality in media"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's fully online and essentially free, a low-risk way to test how your work lands with a cultural-studies audience outside film studies.",
+     "Your festivals-as-community angle and gender/sexuality focus both fit a cultural-studies framing, even though this isn't a film-specific venue."
+    ],
+    "watch_out": [
+     "The full call for papers wasn't posted yet when checked, so the exact theme, eligibility and any fee are still unknown."
+    ],
+    "tagline": "A free, no-travel way to test your work with a different (cultural-studies) crowd.",
+    "eligible": "yes",
+    "eligibility_notes": "No restrictions were found on the page fetched; the detailed call for papers was listed as 'coming soon' at extraction time.",
+    "visa": {
+     "required": "no",
+     "note": "Fully online conference — no visa is needed.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": true,
+    "explore_reason": "Cultural studies is an adjacent field, not one of her primary fields, and the CSA 2027 call has no direct keyword overlap with her core queer-cinema/film-festival topics; it's included to test a genuinely different audience for her work.",
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "BRL",
+     "low": 0,
+     "high": 500,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 500,
+       "note": "No fee is published; the conference is fully online — estimated using a typical USD 0-100 online-conference fee range, inferred",
+       "grounded": false
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "Fully online event — no travel required",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Fully online event — no accommodation required",
+       "grounded": true
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Fully online event — no visa needed",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "No fee was published; used a typical USD 0-100 online academic-conference fee range, inferred",
+      "USD→BRL 5.1363 on 2026-09-18 (open.er-api.com)",
+      "The conference is fully online, so travel, accommodation and visa costs are zero"
+     ],
+     "over_budget": false,
+     "net_note": "Even at the high end, this is a small fraction of her budget; no funding is needed to attend."
+    }
+   },
+   {
+    "id": "iamcr-2027",
+    "type": "conference",
+    "status": "watch",
+    "title": "IAMCR 2027 São Paulo: Multilateralism, Democracy, Diversity: Communication for a More Just World",
+    "host": "International Association for Media and Communication Research (IAMCR)",
+    "host_kind": "learned_society",
+    "theme": "Multilateralism, Democracy, Diversity: Communication for a More Just World",
+    "description": "IAMCR 2027 will take place 18-22 July 2027 in São Paulo, Brazil, hosted by the School of Communications and Arts at the University of São Paulo (ECA/USP) in partnership with the Associação de Apoio à Arte e Comunicação (ARCO), marking IAMCR's 70th anniversary. The conference is expected to bring together around 1,500 media and communication researchers. The call for proposals is not yet open (it is stated to open in November 2026), so no concrete submission deadline, registration fee, or 2027-specific travel grant details are published yet.",
+    "location": {
+     "city": "São Paulo",
+     "country": "Brazil",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-07-18",
+     "end": "2027-07-22"
+    },
+    "deadlines": [],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No eligibility, fee, or deadline details are published yet for the 2027 São Paulo conference beyond the statement that the call for proposals will open in November 2026. IAMCR runs a recurring travel grant program (up to US$2,000 for early-stage-scholar members from low/middle-income countries with an accepted abstract), but the page found (iamcr.org/travel_grants) currently describes the Galway 2026 edition's deadline (20 March 2026), not a 2027 São Paulo-specific grant, so it is not recorded as this opportunity's funding."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "IAMCR Travel Grants",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Up to 18 grants, each max USD 2,000 (2026 Galway cycle terms; not yet confirmed for the 2027 São Paulo edition)",
+      "deadline": null,
+      "cycle": "Annual, tied to each year's IAMCR conference; a São Paulo 2027-specific version has not been announced yet",
+      "requires": "IAMCR membership (≥1 year), early-career/untenured status, residence in a low/middle-income country, first author of an accepted paper",
+      "eligible": "check",
+      "why": "She is early-career and Brazil qualifies as the target country group, but the scheme's terms for the 2027 São Paulo edition specifically haven't been published, and the CFP itself isn't open yet.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://iamcr.org/travel_grants",
+      "sequence_note": "Watch for the 2027 call for papers (expected November 2026) and any accompanying travel-grant announcement; it would need to come well before the July 2027 conference."
+     }
+    ],
+    "past_editions": [
+     {
+      "year": 2026,
+      "theme": null,
+      "city": "Galway, Ireland",
+      "representative_papers": [],
+      "source_url": "https://iamcr.org/congress/annual-conferences"
+     },
+     {
+      "year": 2025,
+      "theme": null,
+      "city": "Singapore",
+      "representative_papers": [],
+      "source_url": "https://iamcr.org/congress/annual-conferences"
+     },
+     {
+      "year": 2024,
+      "theme": null,
+      "city": "Christchurch, New Zealand",
+      "representative_papers": [],
+      "source_url": "https://iamcr.org/congress/annual-conferences"
+     }
+    ],
+    "standing_signals": [
+     {
+      "signal": "IAMCR 2027 marks the Association's 70th anniversary.",
+      "grounded": true,
+      "source_url": "https://iamcr.org/news/sao_paulo2027"
+     }
+    ],
+    "source_url": "https://iamcr.org/news/sao_paulo2027",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [],
+    "priority": {
+     "score": 69,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1923,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 60,
+       "reason": "IAMCR's 2027 theme ('Multilateralism, Democracy, Diversity') is broad and communication-focused rather than film-specific; her gender/sexuality-in-media work is plausible with framing, but the call isn't open yet to confirm relevant sections."
+      },
+      "standing": {
+       "score": 80,
+       "reason": "Marks IAMCR's 70th anniversary and typically draws roughly 1,500 media and communication researchers — a large, established international congress."
+      },
+      "network": {
+       "score": 70,
+       "reason": "A major international media-studies congress held in her own country gives strong networking value, though overlap with her specific queer-cinema circle is unconfirmed."
+      },
+      "outcomes": {
+       "score": 55,
+       "reason": "No proceedings or publication route is stated yet since the 2027 call hasn't opened — limited information."
+      },
+      "feasibility": {
+       "score": 90,
+       "reason": "Held in São Paulo, cheap and visa-free to reach from Recife, and July is one of her stated available travel months; the only drag is that the call isn't open yet, so nothing is locked in."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.6,
+     "rationale": "IAMCR 2027's theme, 'Multilateralism, Democracy, Diversity: Communication for a More Just World,' is broad enough to plausibly house work on gender, sexuality and media, and IAMCR has historically run gender/sexuality-focused working groups, but the call for papers for this edition wasn't open yet at extraction time, so the specific fit can't be confirmed beyond the general theme.",
+     "matched_topics": [
+      "gender and sexuality in media"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's IAMCR's 70th-anniversary congress, held right in São Paulo — cheap and visa-free to reach from Recife.",
+     "July is one of the months you said you're usually free to travel, so timing lines up well.",
+     "It's a huge (~1,500-scholar) media and communication congress, with room for gender- and diversity-themed work."
+    ],
+    "watch_out": [
+     "The call for papers hasn't opened yet (expected November 2026), so there's no confirmed deadline, fee or funding information — this is a 'watch' item, not yet something you can apply to."
+    ],
+    "tagline": "A big, cheap, home-turf media congress — once the 2027 call for papers actually opens.",
+    "eligible": "yes",
+    "eligibility_notes": "No eligibility details are published yet for the 2027 edition; past IAMCR congresses have been open to all media and communication researchers.",
+    "visa": {
+     "required": "no",
+     "note": "Domestic travel within Brazil — no visa is needed.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "inferred",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "BRL",
+     "low": 2000,
+     "high": 4500,
+     "breakdown": {
+      "registration": {
+       "low": 770,
+       "high": 1542,
+       "note": "No fee is published yet (the CFP hasn't opened); estimated using a typical USD 150-300 international-congress fee range, inferred",
+       "grounded": false
+      },
+      "travel": {
+       "low": 600,
+       "high": 1200,
+       "note": "Recife-São Paulo return fare range found via a live fare search (Decolar/Momondo)",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 600,
+       "high": 1750,
+       "note": "5 nights (5 conference days + 1) at São Paulo hotel rates of roughly BRL 120-350/night, inferred",
+       "grounded": false
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Domestic travel within Brazil — no visa needed",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "No 2027-specific registration fee or accommodation figures are published yet since the call for papers hasn't opened",
+      "USD→BRL 5.1363 on 2026-09-18 (open.er-api.com)",
+      "Recife-São Paulo return fare of BRL 600-1,200 found via a live fare search",
+      "Domestic travel within Brazil — no visa cost",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "Well under her BRL 12,000 cap even before any funding. IAMCR's own travel-grant scheme, if it reopens for the São Paulo edition, could reduce the registration line further."
+    }
+   },
+   {
+    "id": "plas-princeton-2027",
+    "type": "fellowship",
+    "status": "open",
+    "title": "Princeton Program in Latin American Studies (PLAS) Postdoctoral Fellowship, 2027-2028",
+    "host": "Princeton University",
+    "host_kind": "university",
+    "theme": null,
+    "description": "An open-discipline postdoctoral fellowship in Latin American studies (including the Caribbean and Brazil) at Princeton University's Program in Latin American Studies. The 12-month appointment runs during the 2027-2028 academic year, starting around 1 September 2027, with possible renewal. The page states particular interest in policy and public health, the history of disease, international relations, or economic development in the region — a stretch from queer cinema studies, but the fellowship is explicitly open to scholars from any discipline researching Latin America.",
+    "location": {
+     "city": "Princeton, New Jersey",
+     "country": "USA",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-09-01",
+     "end": null
+    },
+    "deadlines": [
+     {
+      "label": "registration",
+      "date": "2026-11-15",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "For full consideration, all the materials listed must be in English, and received by November 15, 2026, 11:59 p.m. EST."
+     }
+    ],
+    "eligibility": {
+     "career_stage": [
+      "postdoc"
+     ],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "Requires a doctoral degree and, per the page, 'academic excellence, potential to bring new ideas and approaches to Princeton University and to interact successfully with a broad range of faculty and students.' No nationality restriction stated. Stipend amount not found on the page fetched — limited information."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Hosted by Princeton University's Program in Latin American Studies, an established area-studies program at a major research university.",
+      "grounded": false,
+      "source_url": "https://plas.princeton.edu/fellowships/plas-fellowships/postdoctoral-fellowships"
+     }
+    ],
+    "source_url": "https://plas.princeton.edu/fellowships/plas-fellowships/postdoctoral-fellowships",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2028,
+     "stale": false,
+     "note": "Page refers to the 2027-2028 academic year and a November 2026 deadline; clearly current. Fetched via r.jina.ai mirror because the source blocked direct fetching (403)."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 67,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1923,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 45,
+       "reason": "The fellowship is open to any discipline researching Latin America, but the page names policy, public health, disease history, international relations and economic development as priority areas — not film, queer or cultural studies, so this is a stretch."
+      },
+      "standing": {
+       "score": 80,
+       "reason": "Hosted by Princeton University's Program in Latin American Studies, a well-known research university and area-studies program, though this specific signal wasn't independently verified beyond the fellowship page itself."
+      },
+      "network": {
+       "score": 80,
+       "reason": "A year-long, in-residence fellowship gives sustained contact with a Latin-Americanist faculty and postdoc cohort — fellowships score high on network value by nature."
+      },
+      "outcomes": {
+       "score": 70,
+       "reason": "A funded year at Princeton is a strong, internationally visible line for future job applications, even without a stated publication requirement."
+      },
+      "feasibility": {
+       "score": 70,
+       "reason": "The application itself is free and low-effort, but if selected she would need a US visa and to relocate for a year — a much bigger commitment than a conference trip, and the topical mismatch adds real uncertainty about acceptance."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.45,
+     "rationale": "The PLAS postdoctoral fellowship is explicitly open to scholars from any discipline researching Latin America, which formally covers her work. However, the page states particular interest in policy, public health, disease history, international relations and economic development — none of which are her focus (queer cinema, film festivals, gender and sexuality in media) — so a successful application would need to make an active case for why film and cultural studies belong in this program's priorities.",
+     "matched_topics": [
+      "Northeast Brazilian film"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's a fully funded year at Princeton to develop your research and international profile, formally open to any discipline working on Latin America.",
+     "A postdoctoral fellowship at a major US university is a strong visibility line for future job applications."
+    ],
+    "watch_out": [
+     "The page's stated priority areas are policy, public health and economic development — not film or queer studies — so you'd need to make a strong case that queer Latin American cinema fits their remit.",
+     "If selected, you'd need a US visa and to relocate for a year — a bigger commitment than a conference trip."
+    ],
+    "tagline": "A prestigious Latin-American-studies fellowship, but its stated priorities don't obviously include film studies.",
+    "eligible": "conditional",
+    "eligibility_notes": "Open to any discipline researching Latin America with a doctoral degree, but the page names policy/public health/international-relations/economic-development as priority areas rather than film or cultural studies — fit would need to be argued in the application.",
+    "visa": {
+     "required": "conditional",
+     "note": "A US visa (likely an exchange-visitor category) would be needed only if she is actually offered and accepts the fellowship, not to apply. This is general information, not immigration advice.",
+     "official_source": "https://travel.state.gov/content/travel/en/us-visas/study-exchange/exchange-visitor-visa.html",
+     "verify_flag": true,
+     "lead_days": 90
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "BRL",
+     "low": 0,
+     "high": 0,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 0,
+       "note": "No application fee is mentioned on the fellowship page",
+       "grounded": false
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "No travel is required to apply; if selected, relocation costs would be arranged separately and aren't evaluated here",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Not applicable at the application stage",
+       "grounded": false
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "A US visa would only be needed if she is actually offered the fellowship, not to apply",
+       "grounded": false
+      }
+     },
+     "assumptions": [
+      "Applying is free and remote; the costs shown are for the application stage only, not for taking up the fellowship if awarded",
+      "USD→BRL 5.1363 on 2026-09-18 (open.er-api.com), included for consistency though not needed at the application stage"
+     ],
+     "over_budget": false,
+     "net_note": "Applying costs nothing. If awarded, the fellowship itself would be expected to fund relocation and living costs, though the stipend amount was not confirmed on the pages fetched."
+    }
+   },
+   {
+    "id": "rebeca-rolling",
+    "type": "journal_call",
+    "status": "open",
+    "title": "REBECA — Revista Brasileira de Estudos de Cinema e Audiovisual (rolling submissions)",
+    "host": "SOCINE — Sociedade Brasileira de Estudos de Cinema e Audiovisual",
+    "host_kind": "learned_society",
+    "theme": null,
+    "description": "REBECA is SOCINE's own peer-reviewed journal for cinema and audiovisual studies. It accepts continuous, rolling submissions (no fixed deadline) to its Temáticas Livres (free-thematic) section, plus a free-form 'Fora de Quadro' section, reviews, interviews and translations. Articles are accepted in Portuguese, Spanish, English and French. The journal previously ran a dedicated thematic dossier on 'Cinemas e audiovisualidades queer/kuir/cuir no Brasil e na América Latina' (published 2020, now closed), showing an existing editorial interest in this subfield, but no themed call in this area is currently open — only the general rolling call.",
+    "location": {
+     "city": "—",
+     "country": "Brazil",
+     "format": "online"
+    },
+    "dates": {
+     "start": null,
+     "end": null
+    },
+    "deadlines": [],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "Rolling call: no career-stage or nationality restriction stated. No SOCINE membership requirement mentioned for journal submission (unlike conference registration)."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [
+     {
+      "year": 2020,
+      "theme": "Cinemas e audiovisualidades queer/kuir/cuir no Brasil e na América Latina",
+      "city": null,
+      "representative_papers": [],
+      "source_url": "https://rebeca.socine.org.br/1/announcement/view/20"
+     }
+    ],
+    "standing_signals": [
+     {
+      "signal": "REBECA is the official journal of SOCINE, Brazil's national society for cinema and audiovisual studies.",
+      "grounded": true,
+      "source_url": "https://rebeca.emnuvens.com.br/1/about/submissions"
+     }
+    ],
+    "source_url": "https://rebeca.emnuvens.com.br/1/about/submissions",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "Rolling/continuous-submission journal call: 'aceita submissões em fluxo contínuo de contribuições originais e inéditas' — no deadline, and the submissions page is the journal's live, standing policy rather than a dated announcement."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 78,
+     "weights": {
+      "fit": 0.3333,
+      "standing": 0.2381,
+      "outcomes": 0.2381,
+      "feasibility": 0.1905
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 85,
+       "reason": "REBECA already ran a themed dossier on 'Cinemas e audiovisualidades queer/kuir/cuir no Brasil e na América Latina' — almost a direct match for her core topic, queer Latin American cinema."
+      },
+      "standing": {
+       "score": 60,
+       "reason": "SOCINE's own peer-reviewed journal, but no indexing or impact information was found on the page fetched — limited information."
+      },
+      "network": null,
+      "outcomes": {
+       "score": 70,
+       "reason": "A no-fee, peer-reviewed publication in Portuguese, Spanish, English or French is a solid, realistic publication route toward her visibility and publication goals."
+      },
+      "feasibility": {
+       "score": 100,
+       "reason": "Fully online, no fee, and rolling submission with no deadline pressure — nothing stands in the way of submitting."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.85,
+     "rationale": "REBECA, SOCINE's own journal, has already run a themed dossier titled 'Cinemas e audiovisualidades queer/kuir/cuir no Brasil e na América Latina' — a near-exact restatement of her core research area, queer Latin American cinema. That dossier itself is now closed, but the journal's rolling free-thematic call is open to work in the same area.",
+     "matched_topics": [
+      "queer Latin American cinema",
+      "Northeast Brazilian film",
+      "low-budget filmmaking"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "This is SOCINE's own journal, in Portuguese, Spanish or English, and it already ran a themed dossier on exactly your topic — queer/kuir/cuir cinema in Brazil and Latin America.",
+     "It's free to publish in (no processing charge) and takes rolling submissions, so there's no deadline pressure."
+    ],
+    "watch_out": [
+     "The queer-cinema dossier itself already closed back in 2020 — right now only the general rolling call is open, so you'd submit as a free-thematic article rather than into a themed issue."
+    ],
+    "tagline": "A free, on-topic Brazilian journal that's already shown real interest in exactly your subject.",
+    "eligible": "yes",
+    "eligibility_notes": "No restrictions found; open to any scholar submitting original, unpublished work in Portuguese, Spanish, English or French.",
+    "visa": {
+     "required": "no",
+     "note": "Online journal submission — no visa is needed.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "BRL",
+     "low": 0,
+     "high": 0,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 0,
+       "note": "No article-processing charge is stated on the journal's submissions page",
+       "grounded": true
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "Online journal submission — no travel required",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Online journal submission — no accommodation required",
+       "grounded": true
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Online journal submission — no visa needed",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "No article-processing charge is stated on the journal's submissions page",
+      "Online journal submission — no travel, accommodation or visa costs",
+      "USD→BRL 5.1363 on 2026-09-18 (open.er-api.com), included for consistency though not needed here"
+     ],
+     "over_budget": false,
+     "net_note": "This costs essentially nothing beyond her own writing time."
+    }
+   },
+   {
+    "id": "socine-xxix-2026",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "XXIX Encontro SOCINE 2026",
+    "host": "SOCINE — Sociedade Brasileira de Estudos de Cinema e Audiovisual",
+    "host_kind": "learned_society",
+    "theme": null,
+    "description": "SOCINE is the Brazilian society for cinema and audiovisual studies. Its XXIX annual Encontro (meeting) is hosted by the Federal University of Bahia (UFBA) and takes place 3-6 November 2026 in Salvador, Bahia. The call for papers ran from 2 February to 26 April 2026, so the submission window has already closed relative to today, but the event itself is still ahead and open to attend or to see accepted work presented.",
+    "location": {
+     "city": "Salvador, Bahia",
+     "country": "Brazil",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2026-11-03",
+     "end": "2026-11-06"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-04-26",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "de 02 de fevereiro a 26 de abril de 2026"
+     },
+     {
+      "label": "registration",
+      "date": "2026-07-19",
+      "depends_on": "abstract",
+      "grounded": true,
+      "source_quote": "R$258,00 (profissionais) / R$129,00 (estudantes/profissionais sem vínculo)"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": true,
+     "notes": "Registration requires active SOCINE membership (anuidade) as a separate payment from the Encontro registration fee, per the society's own site."
+    },
+    "fees": [
+     {
+      "tier": "profissionais (professional/faculty)",
+      "amount": 258,
+      "currency": "BRL",
+      "grounded": true,
+      "source_quote": "R$258,00 (profissionais) / R$129,00 (estudantes/profissionais sem vínculo)"
+     },
+     {
+      "tier": "estudantes/profissionais sem vínculo (students / unaffiliated)",
+      "amount": 129,
+      "currency": "BRL",
+      "grounded": true,
+      "source_quote": "R$258,00 (profissionais) / R$129,00 (estudantes/profissionais sem vínculo)"
+     }
+    ],
+    "funding": [
+     {
+      "name": "Bolsas de isenção de inscrição (SOCINE registration-fee waivers)",
+      "source": "venue",
+      "type": "waiver",
+      "amount_note": "100 fee waivers announced for the XXIX Encontro",
+      "deadline": null,
+      "cycle": null,
+      "requires": "Likely an application process through SOCINE; specific criteria and how to apply were not detailed on the page fetched",
+      "eligible": "check",
+      "why": "Would reduce or remove the R$258/R$129 registration fee if she qualifies, but the eligibility criteria weren't published on the page fetched.",
+      "grounded": true,
+      "source_quote": "A Socine oferecerá 100 bolsas de isenção do pagamento da inscrição do XXIX Encontro",
+      "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/",
+      "sequence_note": "Apply as soon as SOCINE announces the waiver application process; no application window was found in this pass."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "XXIX Encontro Socine — the 29th annual meeting of Brazil's national film and audiovisual studies society.",
+      "grounded": true,
+      "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/"
+     }
+    ],
+    "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": "2026-02",
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "Call posted February 2026 for the November 2026 edition; clearly current."
+    },
+    "venue_funding": [
+     {
+      "name": "Bolsas de isenção de inscrição (registration-fee waiver grants)",
+      "type": "waiver",
+      "deadline": null,
+      "amount_note": "100 fee waivers for the XXIX Encontro",
+      "eligibility_notes": "Announced by SOCINE for this edition; specific eligibility criteria and application process not detailed on the page fetched — limited information.",
+      "grounded": true,
+      "source_quote": "A Socine oferecerá 100 bolsas de isenção do pagamento da inscrição do XXIX Encontro",
+      "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/"
+     }
+    ],
+    "priority": {
+     "score": 74,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1923,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 75,
+       "reason": "SOCINE is Brazil's national film and audiovisual studies society, a natural home for a Brazilian film-studies postdoc, though the specific 2026 thematic axes weren't confirmed to name queer or festival themes directly — limited information there."
+      },
+      "standing": {
+       "score": 75,
+       "reason": "The 29th annual meeting of the country's main film-studies society, hosted by a federal university (UFBA) — well-established for the Brazilian field."
+      },
+      "network": {
+       "score": 70,
+       "reason": "The main yearly gathering of Brazilian film and audiovisual scholars, good for building visibility among peers in her own subfield and language."
+      },
+      "outcomes": {
+       "score": 65,
+       "reason": "SOCINE's own journal REBECA (which has already run a queer/kuir/cuir cinema dossier) gives a plausible publication route, though this year's attendance is not a presentation slot."
+      },
+      "feasibility": {
+       "score": 90,
+       "reason": "Cheap and visa-free to reach from Recife; the only deduction is that November isn't one of her usual travel months (Jan/Feb/Jul/Dec)."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.75,
+     "rationale": "SOCINE is the main annual meeting of Brazil's national society for cinema and audiovisual studies, making it a natural professional home for a Brazilian film-studies postdoc working on queer cinema and festivals. The specific thematic axes for the 2026 edition were not confirmed to name queer cinema or festival studies directly, but the society's own journal has already run a themed dossier on exactly this subject, suggesting a receptive community.",
+     "matched_topics": [
+      "queer Latin American cinema",
+      "Northeast Brazilian film",
+      "film festivals and community"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's the main annual meeting of Brazil's own film-studies society — squarely your field, and cheap to reach from Recife.",
+     "SOCINE runs its own journal (REBECA), which has already published a queer/kuir/cuir cinema dossier, so there's a real community here for your work."
+    ],
+    "watch_out": [
+     "The 2026 call for papers already closed (the submission window was Feb-Apr 2026), so this is attend-only — you couldn't present this year.",
+     "November isn't one of the months you said you're usually free to travel."
+    ],
+    "tagline": "Brazil's own film-studies meeting — cheap to attend, but as a spectator this year, not a presenter.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage or nationality restriction is stated; registering does require an active SOCINE membership (a separate annual fee) in addition to the Encontro registration fee.",
+    "visa": {
+     "required": "no",
+     "note": "Domestic travel within Brazil — no visa is needed.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "verified"
+    },
+    "cost_estimate": {
+     "currency": "BRL",
+     "low": 1200,
+     "high": 2600,
+     "breakdown": {
+      "registration": {
+       "low": 258,
+       "high": 258,
+       "note": "'Profissionais' (professional/faculty) tier, the likely tier for a postdoc; a discounted student/unaffiliated tier (R$129) may apply if she qualifies",
+       "grounded": true
+      },
+      "travel": {
+       "low": 315,
+       "high": 793,
+       "note": "Recife-Salvador return fare range found via a live fare search (Decolar/Momondo/GOL)",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 600,
+       "high": 1500,
+       "note": "5 nights (Nov 3-6 plus one) at Salvador hotel rates of roughly BRL 120-300/night, inferred",
+       "grounded": false
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Domestic travel within Brazil — no visa needed",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "Registration uses the 'profissionais' tier (R$258); the discounted 'estudantes/profissionais sem vínculo' tier (R$129) may apply instead if she qualifies",
+      "Recife-Salvador return fare of BRL 315-793 found via a live fare search",
+      "5 nights at Salvador hotel rates of roughly BRL 120-300/night, inferred",
+      "Domestic travel — no visa cost",
+      "USD→BRL 5.1363 on 2026-09-18 (open.er-api.com), included for consistency though this estimate is entirely in BRL already",
+      "Excludes meals, local transport, SOCINE's separate annual membership fee, and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "Comfortably under her BRL 12,000 cap either way. SOCINE's own 100 registration-fee waivers could bring the registration line to zero if she's awarded one."
+    }
+   }
+  ]
+ },
+ {
+  "id": "p_chinedu",
+  "gathered_at": "2026-09-19",
+  "profile": {
+   "id": "p_chinedu",
+   "name": "Chinedu Okafor",
+   "fictional": true,
+   "input_text": "I am finishing an MA in Lagos on how flooding and climate stress push people from the Niger Delta into Lagos, and how migrants talk about home. I want to present my first paper and meet people who could supervise a PhD. I have very little money.",
+   "orcid": null,
+   "affiliation": "MA student, Department of Geography, a public university in Lagos",
+   "career_stage": "other",
+   "year": null,
+   "research_summary": "How climate stress and flooding drive migration from the Niger Delta to Lagos, and how migrants narrate home.",
+   "topics": [
+    {
+     "term": "climate-induced migration",
+     "weight": 0.95
+    },
+    {
+     "term": "Niger Delta environment",
+     "weight": 0.85
+    },
+    {
+     "term": "urban migration in Lagos",
+     "weight": 0.8
+    },
+    {
+     "term": "environmental humanities",
+     "weight": 0.65
+    },
+    {
+     "term": "oral narratives of displacement",
+     "weight": 0.6
+    }
+   ],
+   "fields": [
+    "geography",
+    "migration studies"
+   ],
+   "adjacent_fields": [
+    "environmental humanities",
+    "African studies",
+    "disaster studies"
+   ],
+   "citation_neighborhood": [
+    {
+     "name": "Ogoni environmental justice scholars",
+     "inferred": true
+    },
+    {
+     "name": "Michael Watts",
+     "inferred": true
+    },
+    {
+     "name": "Kalpana Wilson",
+     "inferred": true
+    }
+   ],
+   "geography": {
+    "country": "Nigeria",
+    "city": "Lagos",
+    "passport": "Nigeria"
+   },
+   "currency": "NGN",
+   "constraints": {
+    "max_cost": 1500000,
+    "months_available": [
+     "Jan",
+     "Feb",
+     "Jun",
+     "Jul",
+     "Aug",
+     "Dec"
+    ],
+    "visa_tolerance": "prefer_none",
+    "format": "any"
+   },
+   "goals": [
+    "low_cost",
+    "networking",
+    "feedback"
+   ],
+   "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+   ],
+   "profile_type": "academic"
+  },
+  "meta": {
+   "fields": 2,
+   "adjacent": 3,
+   "searches": 12,
+   "candidates": 9,
+   "extracted": 6,
+   "funding": 1,
+   "grounded_pass": 18,
+   "grounded_total": 18
+  },
+  "opportunities": [
+   {
+    "id": "aag-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "2027 AAG Annual Meeting: Grounded Relations and Desirable Futures",
+    "host": "American Association of Geographers (AAG)",
+    "host_kind": "learned_society",
+    "theme": "Grounded Relations and Desirable Futures",
+    "description": "The AAG Annual Meeting is the flagship annual conference of the American Association of Geographers, the largest geography society in the world. The 2027 meeting runs 8-12 February 2027 at the Hilton Midtown in New York City. The theme grapples with the history, relationships and potential of societies and the Earth, and asks what part geographers play in healing or harming them -- a direct opening for work on flooding-driven migration. Abstracts of up to 250 words are submitted for a paper, virtual-paper or poster session; unassigned abstracts convert to posters after mid-November.",
+    "location": {
+     "city": "New York, New York",
+     "country": "USA",
+     "format": "hybrid"
+    },
+    "dates": {
+     "start": "2027-02-08",
+     "end": "2027-02-12"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-10-15",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "October 15"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "A virtual-paper option exists alongside in-person and poster sessions, per the submission types listed on the conference platform. No graduate-student-specific eligibility restriction was found; the discounted rate below covers students and researchers from 'Developing Regions'."
+    },
+    "fees": [
+     {
+      "tier": "member_student_developing_regions_early_bird",
+      "amount": 227,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Member: Student, Developing Regions, Under/Un-employed, Retired, K-12, MSI ... $227"
+     }
+    ],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "AAG is described as the largest geography professional society, and this is its flagship annual meeting.",
+      "grounded": false,
+      "source_url": null
+     }
+    ],
+    "source_url": "https://www.aag.org/events/aag2027/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "Page describes the upcoming Feb 2027 meeting with a 2026 abstract deadline; current."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 72,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1154,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 88,
+       "reason": "AAG is the flagship meeting of geography, her own field, and the 2027 theme -- 'Grounded Relations and Desirable Futures' -- is framed directly around how societies and the Earth are entangled, squarely the terrain of flooding-driven migration."
+      },
+      "standing": {
+       "score": 85,
+       "reason": "AAG is described as the largest geography professional society and this is its flagship annual meeting, though this scale claim is not independently sourced on the page (inferred)."
+      },
+      "network": {
+       "score": 80,
+       "reason": "A very large flagship meeting of her own discipline is a strong place to meet geographers who could supervise a PhD, though its size can make individual visibility harder."
+      },
+      "outcomes": {
+       "score": 70,
+       "reason": "No stated publication route, but a line on the CV from the field's flagship meeting carries real weight -- limited information beyond that."
+      },
+      "feasibility": {
+       "score": 40,
+       "reason": "New York is expensive and a US visa (interview, unpredictable wait) is needed against a stated preference for no visa hassle, and February falls outside her available months; no funding was found to offset the cost."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.88,
+     "rationale": "AAG is the main professional home for geographers, and the 2027 theme -- 'Grounded Relations and Desirable Futures' -- is framed directly around how societies and the Earth are entangled, which is exactly the terrain of flooding-driven migration from the Niger Delta; this sits squarely inside her own discipline rather than an adjacent one.",
+     "matched_topics": [
+      "climate-induced migration",
+      "Niger Delta environment",
+      "urban migration in Lagos"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "AAG is the largest geography society in the world and the flagship annual meeting of your own field.",
+     "The 2027 theme is directly about the relationship between societies and a changing Earth -- close to your work on flooding and migration.",
+     "It would put your work in front of leading geographers who could become PhD contacts."
+    ],
+    "watch_out": [
+     "New York is very expensive and needs a US visa with an unpredictable interview wait -- realistically several times your budget.",
+     "No travel grant was found that could plausibly cover this gap before the conference."
+    ],
+    "tagline": "The flagship of your own field -- excellent fit, but the cost and visa make it a stretch.",
+    "eligible": "yes",
+    "eligibility_notes": "No explicit career-stage or nationality restriction was found; the abstract deadline (15 Oct 2026) is open, and a virtual-paper submission type exists as an alternative to presenting in person.",
+    "visa": {
+     "required": "conditional",
+     "note": "A US B1/B2 visitor visa would be needed for in-person attendance; whether the virtual-paper option removes this need was not confirmed. This is general information, not immigration advice -- confirm current requirements with the US Mission in Nigeria.",
+     "official_source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+     "verify_flag": true,
+     "lead_days": 60
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "NGN",
+     "low": 2370500,
+     "high": 4702500,
+     "breakdown": {
+      "registration": {
+       "low": 302000,
+       "high": 465500,
+       "note": "Low end is the 'Student, Developing Regions' early-bird rate (USD 227, deadline 10 Sept 2026 already passed); high end is an unconfirmed estimate for the current standard rate",
+       "grounded": false
+      },
+      "travel": {
+       "low": 1264000,
+       "high": 1995500,
+       "note": "Lagos-New York return, economy, booked in advance (search range USD 950-1500)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 558500,
+       "high": 1995500,
+       "note": "6 nights in New York (5 conference days + 1), budget hostel to mid-range hotel (USD 70-250/night)",
+       "grounded": false
+      },
+      "visa": {
+       "low": 246000,
+       "high": 246000,
+       "note": "US B1/B2 (MRV) visa fee, USD 185",
+       "grounded": true,
+       "source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html"
+      }
+     },
+     "assumptions": [
+      "Registration's low end (USD 227) is the quoted early-bird 'Student, Developing Regions' rate; that early-bird window (by 10 Sept 2026) has already passed, so the real current fee is uncertain",
+      "USD->NGN 1330.27 on 2026-09-18 (open.er-api.com)",
+      "Travel and accommodation are heuristic search-based ranges for the Lagos-New York route, not a live booking; New York is one of the more expensive US destinations",
+      "A further USD 250 'Visa Integrity Fee' has been signed into US law but was not yet being collected as of the source checked, so it is not included",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": true,
+     "net_note": "There is no venue funding and no external scheme found that could realistically close this gap in time -- at roughly NGN 2.4M-4.7M this is well beyond your NGN 1.5M budget. A virtual-paper submission type exists on the AAG platform and would cut most of this cost, though its price wasn't confirmed on the page checked."
+    }
+   },
+   {
+    "id": "icfld-2026",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "4th International Conference and Fair on Land and Development (ICFLD 2026)",
+    "host": "ARUA Centre of Excellence for Urbanization and Habitable Cities (CoE-UHC), University of Lagos",
+    "host_kind": "university",
+    "theme": "Leveraging Digital Technologies for Sustainable Land Governance, Smart Urban Management, and Inclusive Housing Delivery in Africa",
+    "description": "ICFLD is an annual conference run by the University of Lagos's ARUA Centre of Excellence for Urbanization and Habitable Cities, held on campus in Lagos. The 2026 edition (its 4th) runs 24-25 November 2026 on digital technologies for land governance, smart urban management and inclusive housing across Africa -- adjacent to Chinedu's work on migration into Lagos. It includes a dedicated Doctoral and Early-Career Researchers Forum for mentorship, networking and peer review aimed at postgraduate students. The abstract deadline (10 September 2026) has already passed, but registration and attendance remain open.",
+    "location": {
+     "city": "Lagos",
+     "country": "Nigeria",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2026-11-24",
+     "end": "2026-11-25"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-09-10",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "10th September 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [
+      "student"
+     ],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "Students are explicitly welcome to submit abstracts and presentations, and there is a dedicated forum for postgraduate students and early-career researchers, though the abstract window has closed for this edition; attending and joining the forum is still possible."
+    },
+    "fees": [
+     {
+      "tier": "students_early_career_nigeria",
+      "amount": 10000,
+      "currency": "NGN",
+      "grounded": true,
+      "source_quote": "Students & Early-Career Researchers: ₦10,000"
+     },
+     {
+      "tier": "nigerian_participant",
+      "amount": 20000,
+      "currency": "NGN",
+      "grounded": true,
+      "source_quote": "Nigerian Participants: ₦20,000"
+     },
+     {
+      "tier": "international_participant",
+      "amount": 250,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "International Participants: USD 250"
+     },
+     {
+      "tier": "international_virtual",
+      "amount": 150,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "International Virtual Presentations: USD 150"
+     }
+    ],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "This is the 4th edition of ICFLD, run by a university-hosted ARUA Centre of Excellence, indicating an established annual event.",
+      "grounded": false,
+      "source_url": null
+     }
+    ],
+    "source_url": "https://chsdunilag.org/call-for-papers-4th-international-conference-and-fair-on-land-and-development-icfld-2026/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "Page describes the live 4th (2026) edition; current."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 69,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1154,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 68,
+       "reason": "The theme on land governance and urban management in African cities connects to her work on migrants arriving in Lagos, but it's plausible with framing rather than a direct restatement of climate migration."
+      },
+      "standing": {
+       "score": 45,
+       "reason": "A university-hosted, 4th-edition conference -- a young, recurring event rather than an established flagship; limited information beyond that."
+      },
+      "network": {
+       "score": 80,
+       "reason": "A dedicated Doctoral and Early-Career Researchers Forum for mentorship and peer review is exactly the kind of access to potential PhD supervisors she's looking for, on her own campus."
+      },
+      "outcomes": {
+       "score": 55,
+       "reason": "Feedback through the forum is likely, but no formal publication or proceedings route was found -- limited information."
+      },
+      "feasibility": {
+       "score": 80,
+       "reason": "The cost is negligible (NGN 10,000, no travel or visa), but the abstract deadline has passed and the conference month (November) falls outside her stated available months."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.68,
+     "rationale": "ICFLD's 2026 theme on land governance and urban management in African cities connects naturally to her work on migrants arriving in Lagos, even though the conference's digital-technology framing means her paper would need some repositioning toward land/urban-policy language rather than climate-migration language directly.",
+     "matched_topics": [
+      "urban migration in Lagos",
+      "Niger Delta environment"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's held on her own campus in Lagos, so there's no travel, accommodation or visa cost at all.",
+     "There's a dedicated forum for postgraduate students to get mentorship and feedback -- exactly the kind of PhD-supervisor contact she's looking for.",
+     "At NGN 10,000 total, it's affordable no matter what."
+    ],
+    "watch_out": [
+     "The abstract deadline (10 September 2026) has already passed, so she may only be able to attend and join the forum rather than formally present a paper -- worth checking directly with the organisers.",
+     "The conference's digital-technology and land-governance framing is adjacent to her topic, not a direct match, so a paper would need reframing."
+    ],
+    "tagline": "Nearly free, on her own campus, with a forum built for meeting future supervisors.",
+    "eligible": "conditional",
+    "eligibility_notes": "Students are explicitly welcome and there's a forum for postgraduates, but the abstract submission window has closed, so participation this cycle may be attendance-only pending confirmation with organisers.",
+    "visa": {
+     "required": "no",
+     "note": "Held in Lagos, her home city; no visa is needed.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "NGN",
+     "low": 10000,
+     "high": 10000,
+     "breakdown": {
+      "registration": {
+       "low": 10000,
+       "high": 10000,
+       "note": "Students & Early-Career Researchers tier",
+       "grounded": true
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "Held on her own campus in Lagos; no travel needed",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Home city; no accommodation needed",
+       "grounded": true
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Home-country event; no visa needed",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "Home-city event, so travel, accommodation and visa are all zero",
+      "Fee is already in NGN, so no FX conversion is needed",
+      "Assumes she can still join as an attendee/forum participant even though the abstract window (10 Sept 2026) has closed -- worth confirming with organisers"
+     ],
+     "over_budget": false,
+     "net_note": "At NGN 10,000 total, this is by far the cheapest item in her shortlist and well within budget with no funding needed."
+    }
+   },
+   {
+    "id": "imiscoe-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "24th IMISCOE Annual Conference",
+    "host": "IMISCOE / Brussels Institute for Social and Population Studies (BRISPO) and Brussels Interdisciplinary Research Centre on Migration and Minorities (BIRMM), Vrije Universiteit Brussel",
+    "host_kind": "learned_society",
+    "theme": "United for Human Rights and Global Equity",
+    "description": "IMISCOE (International Migration Research Network) is the largest European network of migration researchers; its 24th annual conference runs 6-9 July 2027 in Brussels, with a parallel online track. The 2027 theme examines how migration intersects with human rights, inequality, colonial legacies and racial hierarchies. Paper, panel and workshop proposals must be linked to a specific IMISCOE Standing Committee or the Open Section, and participants choose on-site or online attendance at submission.",
+    "location": {
+     "city": "Brussels",
+     "country": "Belgium",
+     "format": "hybrid"
+    },
+    "dates": {
+     "start": "2027-07-06",
+     "end": "2027-07-09"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-09-28",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Deadline for submissions: 28 September 2026 (23:59 CEST)"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "Open to researchers across disciplines and geographical contexts; a lead presenter may submit one paper but can hold up to three additional roles (chair, discussant, workshop organizer/participant). IMISCOE membership is not required to participate. The fee table has four columns (EU/OECD Member, Non-EU/OECD Member, Non-IMISCOE EU/OECD, Non-IMISCOE Non-EU/OECD institutes); a Nigerian university that is not an IMISCOE member institute falls in the 'Non-IMISCOE Non-EU/OECD' column."
+    },
+    "fees": [
+     {
+      "tier": "online_standard_non_imiscoe_non_oecd",
+      "amount": 65,
+      "currency": "EUR",
+      "grounded": true,
+      "source_quote": "Online participation: standard ... Non-IMISCOE Non-EU/OECD ... €65"
+     },
+     {
+      "tier": "online_phd_non_imiscoe_non_oecd",
+      "amount": 65,
+      "currency": "EUR",
+      "grounded": true,
+      "source_quote": "Online participation: PhD students ... Non-IMISCOE Non-EU/OECD ... €65"
+     },
+     {
+      "tier": "onsite_phd_non_imiscoe_non_oecd",
+      "amount": 75,
+      "currency": "EUR",
+      "grounded": true,
+      "source_quote": "On-site participation: PhD students ... Non-IMISCOE Non-EU/OECD ... €75"
+     },
+     {
+      "tier": "onsite_standard_non_imiscoe_non_oecd",
+      "amount": 125,
+      "currency": "EUR",
+      "grounded": true,
+      "source_quote": "On-site participation: standard ... Non-IMISCOE Non-EU/OECD ... €125"
+     }
+    ],
+    "funding": [
+     {
+      "name": "Global South Colloquium Fund (GSCF) travel grant",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Up to USD $500 / GBP £400 toward travel costs only (not registration, accommodation or subsistence)",
+      "deadline": null,
+      "cycle": "Closed for 2025/2026; reopens 1 January 2027. Apply 10-12 weeks before the event.",
+      "requires": "Event registration confirmation; one delegate per institution per event",
+      "eligible": "likely",
+      "why": "An early-career researcher from the Global South working in a migration/area-studies-adjacent field matches GSCF's stated priority group",
+      "grounded": true,
+      "source_quote": "travel grants up to a maximum of USD$500/GBP£400",
+      "source_url": "https://globalsouth.org/gscf/",
+      "sequence_note": "Submit the IMISCOE abstract by 28 Sept 2026. If planning to attend in person, apply to GSCF once it reopens on 1 Jan 2027, about 10-12 weeks before the 6 July 2027 conference (by roughly mid-April 2027)."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "IMISCOE is the main international migration-research network in Europe; this is its 24th consecutive annual conference.",
+      "grounded": false,
+      "source_url": null
+     }
+    ],
+    "source_url": "https://www.imiscoe.org/events/imiscoe-events/2688-24th-imiscoe-annual-conference",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "Page describes the live 2027 edition with a 2026 submission deadline; clearly current."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 80,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1154,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 80,
+       "reason": "The 2027 theme on human rights, inequality and colonial legacies gives real room for a paper on flooding-driven migration and displacement narratives from the Niger Delta, even though the theme itself isn't climate-specific."
+      },
+      "standing": {
+       "score": 65,
+       "reason": "IMISCOE is the main European migration-research network and this is its 24th consecutive annual conference, a strong recurrence signal, though no keynote or indexing evidence was found -- limited information."
+      },
+      "network": {
+       "score": 85,
+       "reason": "This is the largest annual gathering of international migration researchers, a strong place to meet scholars and potential PhD supervisors working on displacement."
+      },
+      "outcomes": {
+       "score": 70,
+       "reason": "No stated publication route, but presenting at the field's flagship network conference and getting feedback from senior migration scholars is a solid outcome for a first paper."
+      },
+      "feasibility": {
+       "score": 88,
+       "reason": "Online attendance keeps this well within budget with no visa needed, but the submission deadline (28 Sept 2026) is only about a week away."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.8,
+     "rationale": "IMISCOE's 2027 theme on human rights, inequality and colonial legacies is a natural fit for a paper on how flooding and climate stress push Niger Delta residents into Lagos and how they narrate that displacement, even though the theme is not framed around climate specifically -- migration and its human-rights dimensions sit at the center of the conference.",
+     "matched_topics": [
+      "climate-induced migration",
+      "urban migration in Lagos"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "IMISCOE is the biggest international network of migration researchers, and this year's theme on human rights and inequality is a natural fit for work on climate displacement from the Niger Delta.",
+     "You can attend and present fully online for about NGN 99,000, with no flight, hotel or visa needed.",
+     "It's a strong place to meet potential PhD supervisors who work on displacement and mobility."
+    ],
+    "watch_out": [
+     "The submission deadline (28 September 2026) is only about a week away.",
+     "In-person attendance would cost well over your NGN 1.5M budget once flights, a Brussels hotel and a Schengen visa are added -- online is the realistic option."
+    ],
+    "tagline": "The world's biggest migration-studies meeting -- affordable online, tight on the deadline.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage, nationality or membership restriction was stated; the abstract deadline (28 Sept 2026) is still open, though close.",
+    "visa": {
+     "required": "conditional",
+     "note": "A Schengen short-stay visa would be needed only if attending in person in Brussels; not required for the online option. This is general information, not immigration advice -- confirm current requirements with the Belgian embassy/consulate.",
+     "official_source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/fees_en",
+     "verify_flag": true,
+     "lead_days": 30
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "NGN",
+     "low": 1527000,
+     "high": 2649000,
+     "breakdown": {
+      "registration": {
+       "low": 191000,
+       "high": 191000,
+       "note": "On-site standard rate for non-EU/OECD institutions (€125); the only tier that clearly applies without PhD/IMISCOE-member status",
+       "grounded": true
+      },
+      "travel": {
+       "low": 931000,
+       "high": 1264500,
+       "note": "Lagos-Brussels return, economy, connecting flight, booked in advance (search range USD 700-950)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 267500,
+       "high": 994500,
+       "note": "5 nights in Brussels (4 conference days + 1), hostel to mid-range hotel (EUR 35-130/night)",
+       "grounded": false
+      },
+      "visa": {
+       "low": 137500,
+       "high": 199000,
+       "note": "Schengen short-stay visa: official EUR 90 fee, plus a typical EUR 40-55 VFS/service charge",
+       "grounded": true,
+       "source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/fees_en"
+      }
+     },
+     "assumptions": [
+      "This is the in-person estimate; the fully online option (see net_note) is far cheaper",
+      "USD->NGN 1330.27 and EUR->NGN 1529.05 (via USD->EUR 0.87) on 2026-09-18 (open.er-api.com)",
+      "Travel and accommodation are heuristic search-based ranges, not a live fare/hotel booking",
+      "Visa applies only for in-person attendance -- the event is hybrid",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": true,
+     "net_note": "Attending online instead cuts this to just the online registration fee (EUR 65 ~= NGN 99,000), with no travel, accommodation or visa cost -- comfortably inside budget. If travelling in person and the Global South Colloquium Fund reopens in time (1 Jan 2027), its travel grant (up to USD 500 ~= NGN 665,000) could cover a real share of the flight."
+    }
+   },
+   {
+    "id": "metropolis-accra-2026",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "2026 Metropolis International Migration Network Conference: Rethinking African Mobility",
+    "host": "Metropolis International Migration Network / University of Ghana",
+    "host_kind": "learned_society",
+    "theme": "Rethinking African Mobility: Past Lessons, Present Realities, Future Possibilities",
+    "description": "Metropolis is an international migration research and policy network; its 2026 conference is hosted at the University of Ghana in Accra, 18-20 November 2026, and is themed specifically around African mobility -- a strong topical and regional match for Chinedu's work on climate migration to Lagos. The call for papers is already closed, so participation now would be as an attendee rather than a presenter. It is in-person only; the page states attendees cover their own flights and travel unless told otherwise.",
+    "location": {
+     "city": "Accra",
+     "country": "Ghana",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2026-11-18",
+     "end": "2026-11-20"
+    },
+    "deadlines": [],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No registration fee is listed on the page; travel, accommodation and visa costs are explicitly the attendee's own responsibility. The call for papers is closed, so this is described as attend-only rather than open for new submissions."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [],
+    "source_url": "https://metropolisintl.org/2026-conference",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "Page describes the live Nov 2026 conference with a closed CFP; current."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 70,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1154,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 85,
+       "reason": "The theme, 'Rethinking African Mobility,' is close to a direct restatement of her research on climate-driven migration within Nigeria and across the region."
+      },
+      "standing": {
+       "score": 55,
+       "reason": "Metropolis is described as an international migration research and policy network, but no specific standing signals (editions, keynotes) were found on the page -- limited information."
+      },
+      "network": {
+       "score": 65,
+       "reason": "Brings together migration researchers working across Africa, though attending only (not presenting) limits how much visibility she'd get."
+      },
+      "outcomes": {
+       "score": 35,
+       "reason": "The call for papers has closed, so there's no way to present or get feedback on her own work this cycle -- attendance only."
+      },
+      "feasibility": {
+       "score": 90,
+       "reason": "Cheap regional flight, no visa needed for a Nigerian passport in Ghana, and no registration fee found, though November falls outside her stated available months."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.85,
+     "rationale": "The 2026 Metropolis conference is themed 'Rethinking African Mobility,' which is close to a direct restatement of her research on climate-driven migration within Nigeria and across the region, even though she could only attend rather than present since the call for papers has closed.",
+     "matched_topics": [
+      "climate-induced migration",
+      "Niger Delta environment",
+      "urban migration in Lagos"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "The theme, 'Rethinking African Mobility,' is almost exactly her research area.",
+     "Accra is a short, cheap regional flight from Lagos, and Nigerians can enter Ghana visa-free.",
+     "It's a chance to meet migration researchers working across Africa, even without presenting."
+    ],
+    "watch_out": [
+     "The call for papers has already closed, so she'd be attending only, not presenting or getting feedback on her own work.",
+     "No registration fee is listed, so the total cost isn't fully confirmed yet."
+    ],
+    "tagline": "Almost exactly her topic, cheap and visa-free to reach -- but attend-only, not present.",
+    "eligible": "yes",
+    "eligibility_notes": "The conference is in-person and open to attendees; no nationality or career-stage restriction was found, but the submission window for presenting has closed.",
+    "visa": {
+     "required": "no",
+     "note": "Ghana is visa-free for Nigerian passport holders under the ECOWAS free movement protocol. This is general information, not immigration advice -- confirm current requirements before travel.",
+     "official_source": "https://gis.gov.gh/visas/",
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "NGN",
+     "low": 399000,
+     "high": 997500,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 0,
+       "note": "No registration fee was found on the conference page",
+       "grounded": false
+      },
+      "travel": {
+       "low": 266000,
+       "high": 465500,
+       "note": "Lagos-Accra return, economy, booked in advance (search range USD 200-350)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 133000,
+       "high": 532000,
+       "note": "4 nights in Accra (3 conference days + 1), budget guesthouse to mid-range hotel (USD 25-100/night)",
+       "grounded": false
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Nigeria and Ghana are both ECOWAS members; Nigerian passport holders can enter Ghana visa-free for up to 90 days under the ECOWAS free movement protocol",
+       "grounded": false,
+       "source": "https://gis.gov.gh/visas/"
+      }
+     },
+     "assumptions": [
+      "No registration fee was found on the conference page; assumed NGN 0 pending confirmation",
+      "USD->NGN 1330.27 on 2026-09-18 (open.er-api.com)",
+      "Travel and accommodation are heuristic search-based ranges for the Lagos-Accra route, not a live booking",
+      "Nigerian passport holders can enter Ghana visa-free under the ECOWAS free movement protocol, so no visa fee is included",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "Even at the high end this stays well under budget, making it one of the more affordable items on the shortlist -- the main limitation is that she could only attend, not present, since the call for papers has closed."
+    }
+   },
+   {
+    "id": "oral-history-review-si-climate",
+    "type": "journal_call",
+    "status": "watch",
+    "title": "Oral History Review -- Special Issue: Oral History, Climate Change & the Environment",
+    "host": "Oral History Review (Oral History Association)",
+    "host_kind": "learned_society",
+    "theme": "Oral history, climate change and the environment",
+    "description": "Oral History Review, the journal of the US Oral History Association, is running a themed collection on oral history's engagement with climate change and the environment, covering ecological knowledge, agriculture, critical animal studies, urban ecology and environmental crises. Submissions were due by July 2026 to be considered for the Spring 2027 issue, but the call is explicitly rolling, so later submissions are still being considered. Location and dates are not applicable since this is a journal call, not an event.",
+    "location": {
+     "city": "—",
+     "country": "—",
+     "format": "online"
+    },
+    "dates": {
+     "start": null,
+     "end": null
+    },
+    "deadlines": [
+     {
+      "label": "full_paper",
+      "date": "2026-07-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "To be considered for the Spring 2027 issue, submissions are due by July 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No career-stage or nationality restriction stated. The July 2026 date was for guaranteed consideration for the Spring 2027 issue; the call itself is rolling, so submissions after that date are still reviewed for a later issue."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [],
+    "source_url": "https://oralhistory.org/2026/04/16/oral-history-review-call-for-papers-oral-history-climate-change-the-environment-due-july-2026/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": "2026-04-16",
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "Posted April 2026, targets a Spring 2027 issue, and is explicitly described as a rolling call; current."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 80,
+     "weights": {
+      "fit": 0.35,
+      "standing": 0.15,
+      "outcomes": 0.2,
+      "feasibility": 0.3
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 82,
+       "reason": "The call's focus on oral history, climate change and the environment closely matches her method of interviewing migrants about how they narrate home and environmental loss, even though it sits outside geography and migration studies."
+      },
+      "standing": {
+       "score": 55,
+       "reason": "Oral History Review is the journal of the US Oral History Association, a recognized disciplinary journal, but no specific standing signals (indexing, impact) were found on the call page -- limited information."
+      },
+      "outcomes": {
+       "score": 65,
+       "reason": "A publication in a recognized field journal is a solid CV line and reaches an audience (oral historians, environmental humanists) she wouldn't otherwise meet."
+      },
+      "feasibility": {
+       "score": 100,
+       "reason": "No fee, no travel and a rolling deadline make this essentially cost-free and low-risk to attempt."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.82,
+     "rationale": "Oral History Review's call for work on oral history, climate change and the environment is a near-direct match for Chinedu's interviews with Niger Delta migrants about how they narrate home and loss, even though oral history itself sits outside her named fields of geography and migration studies.",
+     "matched_topics": [
+      "oral narratives of displacement",
+      "environmental humanities",
+      "climate-induced migration"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "This call is looking for exactly the kind of interview-based work you're doing on displacement and home.",
+     "It costs nothing to submit, and publication would be a first line on your CV.",
+     "It's a chance to be read by scholars outside geography, in oral history and environmental studies."
+    ],
+    "watch_out": [
+     "It's a journal outside your named fields, so you'd need to frame the piece for an oral-history audience, not a geography one.",
+     "No standing information (rankings, acceptance rate) was found for this specific special issue."
+    ],
+    "tagline": "A near-perfect topical fit in a field you wouldn't have thought to try, and free to submit.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage or nationality restriction was stated; the call is explicitly described as rolling past its July 2026 target date.",
+    "visa": {
+     "required": "no",
+     "note": "This is a written submission with no travel involved, so no visa is needed.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": true,
+    "explore_reason": "Oral history is not one of Chinedu's named fields or adjacent fields, and this call has almost no keyword overlap with 'climate migration' or 'geography' -- it surfaced only by rewording her topic 'oral narratives of displacement' into oral-history search terms.",
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "NGN",
+     "low": 0,
+     "high": 0,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 0,
+       "note": "No APC or submission fee was found on the call page",
+       "grounded": false
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "This is a journal submission, not an event -- no travel required",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Not applicable",
+       "grounded": true
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Not applicable -- a written submission, not travel",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "No fee was found on the call page; treated as NGN 0 pending confirmation",
+      "This is a written submission, not an event, so FX is not really relevant here (USD->NGN 1330.27, 2026-09-18, open.er-api.com, used elsewhere in this run)",
+      "Excludes any fee the journal might introduce later"
+     ],
+     "over_budget": false,
+     "net_note": "This costs nothing to submit to -- the only real investment is the time to write and revise the piece."
+    }
+   },
+   {
+    "id": "utaustin-africa-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "Africa Conference 2027: Rethinking Global Africa",
+    "host": "University of Texas at Austin",
+    "host_kind": "university",
+    "theme": "Rethinking Global Africa: Diaspora, Knowledge, Transformations, and Futures",
+    "description": "The University of Texas at Austin's annual Africa Conference is a long-running interdisciplinary humanities/social-science gathering on African and African-diaspora studies. The 2027 edition runs 7-11 April 2027 and centers diaspora, knowledge production and African futures, with abstracts (max 250 words) and a short bio emailed directly to the organizers. Both in-person and fully virtual attendance are offered, and the conference states plainly that neither it nor the university provides funding.",
+    "location": {
+     "city": "Austin, Texas",
+     "country": "USA",
+     "format": "hybrid"
+    },
+    "dates": {
+     "start": "2027-04-07",
+     "end": "2027-04-11"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-12-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Proposal Submission Deadline: December 1st, 2026, by midnight."
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "Open to researchers across humanities, social sciences and other disciplines; graduate students receive a waived registration fee with supporting documentation."
+    },
+    "fees": [
+     {
+      "tier": "in_person_africa",
+      "amount": 100,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "In-person participants from Africa: $100"
+     },
+     {
+      "tier": "in_person_us_europe_asia",
+      "amount": 150,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "In-person participants from US/Europe/Asia: $150"
+     },
+     {
+      "tier": "virtual",
+      "amount": 50,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Virtual attendees regardless of origin/location: $50"
+     },
+     {
+      "tier": "graduate_student",
+      "amount": 0,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Graduate students regardless of location = fee waived."
+     }
+    ],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "The page describes this as the University of Texas at Austin's long-running annual Africa Conference (prior editions numbered in the mid-20s), indicating a well-established, recurring event.",
+      "grounded": false,
+      "source_url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/"
+     }
+    ],
+    "source_url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "Page describes the upcoming April 2027 edition with a December 2026 deadline; current."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 71,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1154,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 75,
+       "reason": "The 2027 theme, 'Rethinking Global Africa: Diaspora, Knowledge, Transformations, and Futures,' centers movement and displacement across Africa, a plausible home for her work on Niger Delta migration with some framing toward diaspora/mobility."
+      },
+      "standing": {
+       "score": 60,
+       "reason": "A long-running, university-hosted annual Africa Conference (mid-20s editions) -- a reasonable continuity signal, but not a flagship society meeting; no keynote or indexing evidence was found."
+      },
+      "network": {
+       "score": 65,
+       "reason": "Draws US-based Africa-studies and diaspora scholars, a decent but not exceptional network for someone specifically working on Niger Delta displacement."
+      },
+      "outcomes": {
+       "score": 55,
+       "reason": "No stated publication route or award; feedback-oriented, limited information beyond that."
+      },
+      "feasibility": {
+       "score": 90,
+       "reason": "Registration is waived for graduate students and virtual attendance is USD 50 or free, removing almost all cost and any visa need; the conference month (April) falls outside her stated available months."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.75,
+     "rationale": "The 2027 theme, 'Rethinking Global Africa: Diaspora, Knowledge, Transformations, and Futures,' centers exactly the kind of movement and displacement Chinedu studies, even though the conference is pan-African rather than Niger-Delta-specific; her paper on climate-driven migration to Lagos fits naturally under a diaspora/mobility framing.",
+     "matched_topics": [
+      "climate-induced migration",
+      "urban migration in Lagos"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "The 2027 theme on diaspora and mobility across Africa is a real fit for a thesis about people leaving the Niger Delta.",
+     "As a graduate student your registration is free either way, and going virtual makes the whole thing free.",
+     "It's a good chance to meet US-based Africa and diaspora scholars who could supervise a PhD."
+    ],
+    "watch_out": [
+     "Attending in person would cost several times your budget once flights, a US hotel and a US visa are added -- virtual is the realistic option.",
+     "The conference is in April, outside the months you said you're free, so check that against your MA schedule."
+    ],
+    "tagline": "Free to join virtually, and the diaspora theme fits your migration work.",
+    "eligible": "yes",
+    "eligibility_notes": "Open to researchers across disciplines; graduate students get a waived registration fee with supporting documentation, and the deadline (1 Dec 2026) is well open.",
+    "visa": {
+     "required": "conditional",
+     "note": "A US B1/B2 visitor visa would be needed only if attending in person; not required for the virtual option. This is general information, not immigration advice -- confirm current requirements with the US Mission in Nigeria.",
+     "official_source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+     "verify_flag": true,
+     "lead_days": 60
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "verified"
+    },
+    "cost_estimate": {
+     "currency": "NGN",
+     "low": 2134500,
+     "high": 3971000,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 0,
+       "note": "Graduate students get a waived registration fee, in any attendance format",
+       "grounded": true
+      },
+      "travel": {
+       "low": 1330000,
+       "high": 2128500,
+       "note": "Lagos-Austin return, economy, connecting flight, booked in advance (heuristic; no live fare search for this specific route)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 558500,
+       "high": 1596500,
+       "note": "6 nights in Austin (5 conference days + 1), budget to mid-range hotel (USD 70-200/night)",
+       "grounded": false
+      },
+      "visa": {
+       "low": 246000,
+       "high": 246000,
+       "note": "US B1/B2 (MRV) visa fee, USD 185, needed only for in-person attendance",
+       "grounded": true,
+       "source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html"
+      }
+     },
+     "assumptions": [
+      "This is the in-person estimate; going virtual (see net_note) removes almost all of this cost",
+      "Registration is waived for graduate students regardless of format",
+      "USD->NGN 1330.27 on 2026-09-18 (open.er-api.com)",
+      "Travel and accommodation are heuristic search-based ranges, not a live booking",
+      "A further USD 250 'Visa Integrity Fee' has been signed into US law but was not yet being collected as of the source checked, so it is not included",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": true,
+     "net_note": "Going virtual brings the real cost to NGN 0 -- registration is already waived for graduate students and there is no travel, accommodation or US visa to arrange. In person this would run roughly NGN 2.1M-4.0M, several times your budget, with no funding found to close that gap."
+    }
+   }
+  ]
+ },
+ {
+  "id": "p_daniel",
+  "gathered_at": "2026-09-19",
+  "profile": {
+   "id": "p_daniel",
+   "name": "Daniel Mensah",
+   "fictional": true,
+   "input_text": "Late-stage PhD in Accra on how AI companies use cheap data-labelling and content-moderation work in Ghana and Kenya, and how those workers organise. I want visibility before the job market and feedback on my framing.",
+   "orcid": null,
+   "affiliation": "PhD candidate in Communication Studies, a university in Accra",
+   "career_stage": "phd",
+   "year": 4,
+   "research_summary": "Data labelling and content-moderation labour for AI in Ghana and Kenya, and how workers organise.",
+   "topics": [
+    {
+     "term": "AI data labour",
+     "weight": 0.95
+    },
+    {
+     "term": "content moderation work",
+     "weight": 0.85
+    },
+    {
+     "term": "platform labour in Africa",
+     "weight": 0.8
+    },
+    {
+     "term": "worker organising",
+     "weight": 0.7
+    },
+    {
+     "term": "critical AI studies",
+     "weight": 0.65
+    }
+   ],
+   "fields": [
+    "communication studies",
+    "science and technology studies"
+   ],
+   "adjacent_fields": [
+    "labour studies",
+    "internet studies",
+    "critical data studies"
+   ],
+   "citation_neighborhood": [
+    {
+     "name": "Mary L. Gray",
+     "inferred": true
+    },
+    {
+     "name": "Kalindi Vora",
+     "inferred": true
+    },
+    {
+     "name": "Mark Graham",
+     "inferred": true
+    }
+   ],
+   "geography": {
+    "country": "Ghana",
+    "city": "Accra",
+    "passport": "Ghana"
+   },
+   "currency": "GHS",
+   "constraints": {
+    "max_cost": 40000,
+    "months_available": [
+     "Jan",
+     "May",
+     "Jun",
+     "Jul",
+     "Sep",
+     "Nov"
+    ],
+    "visa_tolerance": "prefer_none",
+    "format": "any"
+   },
+   "goals": [
+    "visibility",
+    "networking",
+    "feedback"
+   ],
+   "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+   ],
+   "profile_type": "academic"
+  },
+  "meta": {
+   "fields": 2,
+   "adjacent": 3,
+   "searches": 12,
+   "candidates": 8,
+   "extracted": 6,
+   "funding": 11,
+   "grounded_pass": 33,
+   "grounded_total": 33
+  },
+  "opportunities": [
+   {
+    "id": "4s-2026",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "4S 2026: TechnoPower • Technoscientific Futures",
+    "host": "Society for Social Studies of Science (4S)",
+    "host_kind": "learned_society",
+    "theme": "TechnoPower • Technoscientific Futures",
+    "description": "The 2026 annual meeting of the Society for Social Studies of Science (4S), themed 'TechnoPower • Technoscientific Futures', will be held in Toronto from October 7-10, 2026, marking the society's 50th anniversary. The call for submissions (paper abstracts, closed panels, roundtables, Making & Doing sessions and meetups) ran from March 3 to April 30, 2026, with acceptance notifications on May 29, 2026, so the submission window has closed; registration for the event itself remains open. A student section (6S) exists and travel grants are referenced but no amounts or eligibility details are given on the main call page.",
+    "location": {
+     "city": "Toronto",
+     "country": "Canada",
+     "format": "hybrid"
+    },
+    "dates": {
+     "start": "2026-10-07",
+     "end": "2026-10-10"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-04-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "March 3–April 30, 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [
+      "student",
+      "professional"
+     ],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No membership requirement stated for submitting. A 'Student Section (6S)' exists for graduate students, and each person is limited to one presenter role plus two non-presenter roles."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "4S travel grants (referenced, details not published on the call page)",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": null,
+      "deadline": null,
+      "cycle": "Not confirmed — limited information",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "The call page mentions travel grants exist but gives no amount, eligibility or deadline; would need the dedicated travel-grants page (not fetched, single-page extraction rule) to say more.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://4sonline.org/call_for_submissions_toronto.php",
+      "sequence_note": "Check 4S's own travel-grants page directly; not tied to a known deadline here."
+     },
+     {
+      "name": "Ghana Tertiary Education Commission (GTEC) research support",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "Listed in corpus/funders/ghana.json as an interim research-support channel at Ghanaian institutions.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://gtec.edu.gh/",
+      "sequence_note": "Check with the home institution's research office."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "4S 2026 marks the society's 50th anniversary.",
+      "grounded": true,
+      "source_url": "https://4sonline.org/call_for_submissions_toronto.php"
+     },
+     {
+      "signal": "4S is the flagship international society for science and technology studies (STS).",
+      "grounded": false,
+      "source_url": null
+     }
+    ],
+    "source_url": "https://4sonline.org/call_for_submissions_toronto.php",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [
+     {
+      "name": "4S travel grants (referenced, details not on this page)",
+      "type": "travel_scholarship",
+      "deadline": null,
+      "amount_note": null,
+      "eligibility_notes": "The call page mentions travel grants are available but gives no amount, eligibility or deadline; the specific travel-grants page was not fetched as part of this extraction (context-starved, single-page rule) — limited information.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://4sonline.org/call_for_submissions_toronto.php"
+     }
+    ],
+    "priority": {
+     "score": 74,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 80,
+       "reason": "4S is the flagship society for science and technology studies, Daniel's second primary field, and the 2026 theme 'TechnoPower • Technoscientific Futures' speaks directly to power, labour and technoscience — close to his critical-AI-studies framing."
+      },
+      "standing": {
+       "score": 88,
+       "reason": "4S 2026 marks the society's 50th anniversary; it is the leading STS society internationally, though this page didn't state a proceedings or indexing detail."
+      },
+      "network": {
+       "score": 85,
+       "reason": "4S draws the international STS and critical-data-studies crowd, which overlaps closely with Daniel's cited scholars (e.g. Mark Graham, critical AI/data researchers)."
+      },
+      "outcomes": {
+       "score": 35,
+       "reason": "The submission window (March–April 2026) has already closed, so Daniel could only attend, not present, at this edition."
+      },
+      "feasibility": {
+       "score": 70,
+       "reason": "Cost fits under his budget cap, but October isn't in his available months and Canada requires a visa with no automatic exemption for a Ghanaian passport, adding real logistics risk for someone who prefers not to deal with visas."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.8,
+     "rationale": "4S is the international home for science and technology studies, explicitly listed as one of Daniel's two primary fields, and the 2026 theme of 'TechnoPower' engages directly with questions of power, labour and technoscientific systems that overlap with his dissertation on AI data labour and worker organising. The submission window for this edition has already closed, so the fit is about the venue's general suitability for future editions rather than this specific programme.",
+     "matched_topics": [
+      "AI data labour",
+      "critical AI studies",
+      "worker organising"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "4S is the main international society for your second field (STS), and this year's theme is about technoscience and power — close to your own framing.",
+     "It's a strong place to meet the critical-data-studies and STS scholars in your citation list.",
+     "It's the society's 50th anniversary edition, which usually draws a bigger-than-usual crowd."
+    ],
+    "watch_out": [
+     "The submission window (March–April 2026) has already closed — you'd be attending, not presenting.",
+     "October isn't one of your available travel months, and a Canadian visa takes real lead time with no exemption for a Ghanaian passport."
+    ],
+    "tagline": "Your second field's biggest yearly meeting — great to attend, but the deadline for presenting has passed.",
+    "eligible": "yes",
+    "eligibility_notes": "No restriction on attending; the submission window for 2026 has closed, so this would be attendance only.",
+    "visa": {
+     "required": "yes",
+     "note": "Ghanaian passport holders need a visa to enter Canada (no general exemption, aside from holders of a valid US green card). This is general information, not immigration advice — confirm with the Canadian High Commission in Accra.",
+     "official_source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/temporary-resident-visa.html",
+     "verify_flag": true,
+     "lead_days": 30
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "GHS",
+     "low": 12000,
+     "high": 26500,
+     "breakdown": {
+      "registration": {
+       "low": 1150,
+       "high": 4600,
+       "note": "No fee amount found on the call page; range is a general learned-society student-fee ballpark ($100–$400), not confirmed",
+       "grounded": false
+      },
+      "travel": {
+       "low": 8000,
+       "high": 14900,
+       "note": "Accra–Toronto return, no live fare search run, West Africa–North America heuristic ($700–$1,300)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 1700,
+       "high": 5150,
+       "note": "5 nights (4 conference days + 1), budget to mid-range hotel in Toronto ($30–$90/night, pricier city)",
+       "grounded": false
+      },
+      "visa": {
+       "low": 1200,
+       "high": 2000,
+       "note": "Canadian visitor visa fee (~CAD 100) plus biometrics (~CAD 85) is the typical published range; not independently re-fetched from IRCC in this run, so treated as inferred",
+       "grounded": false,
+       "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/temporary-resident-visa.html"
+      }
+     },
+     "assumptions": [
+      "USD→GHS 11.44 on 2026-09-18 (open.er-api.com)",
+      "No registration fee was published on the call page fetched",
+      "Travel and accommodation are heuristic estimates, not live fare/hotel searches",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "No confirmed funding source covers this yet; if the 4S travel grant or a home-institution fund comes through, the out-of-pocket total would drop, but neither is confirmed."
+    }
+   },
+   {
+    "id": "aoir-2026",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "AoIR 2026: Regenerations",
+    "host": "Association of Internet Researchers (AoIR)",
+    "host_kind": "learned_society",
+    "theme": "Regenerations",
+    "description": "AoIR2026 is the annual conference of the Association of Internet Researchers, held at the Hyatt Regency hotel in Mexico City from October 14-17, 2026, under the theme 'Regenerations'. The keynote speaker is Yásnaya Elena Aguilar Gil, a Mixe linguist, writer, and activist from Oaxaca, Mexico. The abstract/proposal deadline (1 March 2026) and the Access Grant application deadline (10 July 2026) have both already passed as of extraction, but standard conference registration remains open through the start of the conference.",
+    "location": {
+     "city": "Mexico City",
+     "country": "Mexico",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2026-10-14",
+     "end": "2026-10-17"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-03-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Proposals Due: 1 March 2026"
+     },
+     {
+      "label": "scholarship",
+      "date": "2026-07-10",
+      "depends_on": "abstract",
+      "grounded": true,
+      "source_quote": "10 July 2026"
+     },
+     {
+      "label": "early_bird",
+      "date": "2026-08-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Available until August 1st, 2026 @ Midnight AOE."
+     },
+     {
+      "label": "registration",
+      "date": "2026-10-14",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Available between August 1st and October 14th, 2026."
+     }
+    ],
+    "eligibility": {
+     "career_stage": [
+      "student",
+      "professional"
+     ],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "Registration fees differentiate AoIR members vs non-members and offer a reduced 'Majority World' tier; membership is not required to attend, only to receive the discounted member rate."
+    },
+    "fees": [
+     {
+      "tier": "early_bird_student_majority_world_member",
+      "amount": 40,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student, Majority World: $40/$55"
+     },
+     {
+      "tier": "early_bird_student_majority_world_nonmember",
+      "amount": 55,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student, Majority World: $40/$55"
+     },
+     {
+      "tier": "early_bird_professional_majority_world_member",
+      "amount": 60,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional, Majority World: $60/$80"
+     },
+     {
+      "tier": "early_bird_professional_majority_world_nonmember",
+      "amount": 80,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional, Majority World: $60/$80"
+     },
+     {
+      "tier": "early_bird_student_member",
+      "amount": 320,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student: $320/$425"
+     },
+     {
+      "tier": "early_bird_student_nonmember",
+      "amount": 425,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student: $320/$425"
+     },
+     {
+      "tier": "early_bird_professional_member",
+      "amount": 500,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional: $500/$670"
+     },
+     {
+      "tier": "early_bird_professional_nonmember",
+      "amount": 670,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional: $500/$670"
+     },
+     {
+      "tier": "standard_student_majority_world_member",
+      "amount": 80,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student, Majority World: $80/$100"
+     },
+     {
+      "tier": "standard_student_majority_world_nonmember",
+      "amount": 100,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student, Majority World: $80/$100"
+     },
+     {
+      "tier": "standard_professional_majority_world_member",
+      "amount": 120,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional, Majority World: $120/$150"
+     },
+     {
+      "tier": "standard_professional_majority_world_nonmember",
+      "amount": 150,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional, Majority World: $120/$150"
+     },
+     {
+      "tier": "standard_student_member",
+      "amount": 400,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student: $400/$500"
+     },
+     {
+      "tier": "standard_student_nonmember",
+      "amount": 500,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student: $400/$500"
+     },
+     {
+      "tier": "standard_professional_member",
+      "amount": 640,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional: $640/$800"
+     },
+     {
+      "tier": "standard_professional_nonmember",
+      "amount": 800,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional: $640/$800"
+     },
+     {
+      "tier": "lifetime_member",
+      "amount": 450,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Registration for Lifetime Members: $450"
+     }
+    ],
+    "funding": [
+     {
+      "name": "AoIR 2026 Access Grant",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Up to 5 grants of up to USD 2,000, and up to 5 grants of USD 500, for accepted presenters",
+      "deadline": "2026-07-10",
+      "cycle": "one-off, tied to AoIR2026",
+      "requires": "AoIR membership + an accepted paper/panel/roundtable for AoIR2026",
+      "eligible": "no",
+      "why": "Both the abstract deadline (1 Mar 2026) and the Access Grant deadline (10 Jul 2026) have already passed, so there is nothing left to apply for on this cycle.",
+      "grounded": true,
+      "source_quote": "up to 5 Access Grants of up to 2,000 USD each, and up to 5 Access Grants of 500 USD each.",
+      "source_url": "https://members.aoir.org/aoir-2026-access-grant",
+      "sequence_note": "Not applicable this cycle; worth watching for AoIR2027's own Access Grant once its abstract deadline opens."
+     },
+     {
+      "name": "Ghana Tertiary Education Commission (GTEC) research support",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "Listed in corpus/funders/ghana.json as an interim channel for research support at Ghanaian institutions, but not independently verified for conference-travel funding.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://gtec.edu.gh/",
+      "sequence_note": "Check with GTEC/the home institution's research office before committing to travel; unrelated to AoIR's own deadlines."
+     }
+    ],
+    "past_editions": [
+     {
+      "year": 2025,
+      "theme": "Ruptures",
+      "city": "Niterói, Brazil",
+      "representative_papers": [],
+      "source_url": "https://aoir.org/past-conferences/"
+     },
+     {
+      "year": 2024,
+      "theme": "Industry",
+      "city": "Sheffield, England, UK",
+      "representative_papers": [],
+      "source_url": "https://aoir.org/past-conferences/"
+     },
+     {
+      "year": 2023,
+      "theme": "Revolutions",
+      "city": "Philadelphia, Pennsylvania, US",
+      "representative_papers": [],
+      "source_url": "https://aoir.org/past-conferences/"
+     }
+    ],
+    "standing_signals": [
+     {
+      "signal": "Past-conferences page lists an unbroken run of annual conferences from IR 1 (2000, Lawrence) through AoIR2025 (2025, Niterói) — 26 prior editions before AoIR2026.",
+      "grounded": true,
+      "source_url": "https://aoir.org/past-conferences/"
+     },
+     {
+      "signal": "AoIR publishes conference papers as 'Selected Papers of Internet Research' (SPIR), an open-access proceedings archive.",
+      "grounded": false,
+      "source_url": null
+     }
+    ],
+    "source_url": "https://aoir.org/aoir2026/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [
+     {
+      "name": "AoIR 2026 Access Grant",
+      "type": "travel_scholarship",
+      "deadline": "2026-07-10",
+      "amount_note": "Up to 5 Access Grants of up to 2,000 USD each, and up to 5 Access Grants of 500 USD each; reimburses travel or accommodation costs.",
+      "eligibility_notes": "Applicants must be AoIR members (or ready to become members) and must have a paper, panel, roundtable, fishbowl, or experimental session accepted for AoIR 2026 in Mexico City. Open to scholars at any career stage, not limited to financial need; priority given to applicants demonstrating commitment to AoIR and to those from countries/regions less involved with AoIR previously.",
+      "grounded": true,
+      "source_quote": "up to 5 Access Grants of up to 2,000 USD each, and up to 5 Access Grants of 500 USD each.",
+      "source_url": "https://members.aoir.org/aoir-2026-access-grant"
+     }
+    ],
+    "priority": {
+     "score": 71,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 75,
+       "reason": "AoIR's core remit — platform governance, content moderation, internet labour — is a direct home for Daniel's thesis even though this year's theme ('Regenerations') doesn't name it, and the 2026 submission window has already closed."
+      },
+      "standing": {
+       "score": 90,
+       "reason": "26+ annual editions, an open-access proceedings series (SPIR), and a named keynote signal a well-established, respected society conference."
+      },
+      "network": {
+       "score": 75,
+       "reason": "AoIR draws the international internet-research crowd that overlaps with Daniel's own citation neighbourhood (platform-labour and internet-studies scholars), even without a dedicated content-moderation track this year."
+      },
+      "outcomes": {
+       "score": 35,
+       "reason": "Because the abstract deadline already passed, Daniel could only attend, not present — so there's no new CV line or feedback-on-a-paper outcome this cycle, just networking."
+      },
+      "feasibility": {
+       "score": 70,
+       "reason": "Cost fits under his GHS 40,000 cap, but October isn't in his available months, and a Mexican visa (though obtainable via the Accra embassy) adds a real logistics step for a 'prefer no visa' traveller."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.75,
+     "rationale": "AoIR is the flagship society for internet research, and its ongoing interest in platform governance, moderation labour and AI-mediated work overlaps closely with Daniel's dissertation on data-labelling and content-moderation workers in Ghana and Kenya. The fit is thematic rather than this-year's-programme-specific, since 'Regenerations' doesn't name his subfield directly and the submission window for 2026 has already closed.",
+     "matched_topics": [
+      "content moderation work",
+      "platform labour in Africa",
+      "critical AI studies"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "AoIR is the main yearly gathering for people who study the internet, including content moderation and platform labour — your exact subject.",
+     "It's a chance to meet scholars in your citation list before you're on the job market, even without presenting this year.",
+     "Registration stays open right up to the conference, so there's no rush to decide."
+    ],
+    "watch_out": [
+     "The abstract deadline (1 March 2026) and the Access Grant deadline (10 July 2026) have both already passed — you'd be attending, not presenting, this time.",
+     "You'll need a Mexican visa; there is an embassy in Accra, so it's manageable, but budget 2–3 weeks for the in-person application."
+    ],
+    "tagline": "Your subject's home conference, but you'd be attending, not presenting, this round.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage, nationality or membership restriction to attend; the submission window for this edition has closed, so participation would be as an attendee only.",
+    "visa": {
+     "required": "conditional",
+     "note": "Ghanaian passport holders generally need a Mexican visa, but are visa-exempt for up to 180 days if they hold a valid US, UK, Canadian or Schengen visa. There is a Mexican Embassy in Accra, so applying doesn't require travel to another country. This is general information, not immigration advice — confirm current requirements with the embassy.",
+     "official_source": "https://embamex.sre.gob.mx/ghana/index.php/en/seccion-consular-2/visas/30-eng-consular-section/eng",
+     "verify_flag": true,
+     "lead_days": 21
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "GHS",
+     "low": 12000,
+     "high": 24000,
+     "breakdown": {
+      "registration": {
+       "low": 915,
+       "high": 1145,
+       "note": "Standard 'Majority World' student tier ($80 member / $100 non-member); the earlier $40/$55 early-bird tier has already closed (deadline 1 Aug 2026)",
+       "grounded": true
+      },
+      "travel": {
+       "low": 9150,
+       "high": 16000,
+       "note": "Accra–Mexico City return, booked with a few weeks' notice; no live fare search run, general West Africa–North/Central America heuristic ($800–$1,400)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 1400,
+       "high": 4000,
+       "note": "5 nights (4 conference days + 1), budget hostel to mid-range hotel in Mexico City ($25–$70/night)",
+       "grounded": false
+      },
+      "visa": {
+       "low": 500,
+       "high": 2500,
+       "note": "Mexican visa fee not confirmed on the embassy page fetched; range assumes a standard non-immigrant visa fee plus possible extra costs; there is a Mexican Embassy in Accra so no need to travel to a third country",
+       "grounded": false,
+       "source": "https://embamex.sre.gob.mx/ghana/index.php/en/seccion-consular-2/visas/30-eng-consular-section/eng"
+      }
+     },
+     "assumptions": [
+      "USD→GHS 11.44 on 2026-09-18 (open.er-api.com)",
+      "Registration tier assumes he qualifies as 'Majority World' student — stated on the fees page for this conference",
+      "Travel and accommodation are heuristic estimates, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "No venue or external funding realistically applies this cycle (the Access Grant window has closed and Ghana-side schemes are unconfirmed), so the estimated GHS 12,000–24,000 is likely close to real out-of-pocket cost if he attends."
+    }
+   },
+   {
+    "id": "codesria-ga-2026",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "17th CODESRIA General Assembly: Africa in Times of Rapid Global Transformation",
+    "host": "Council for the Development of Social Science Research in Africa (CODESRIA)",
+    "host_kind": "learned_society",
+    "theme": "Africa in Times of Rapid Global Transformation: Reclaiming Agency, Rethinking Leadership, Advancing Justice",
+    "description": "The 17th CODESRIA General Assembly, the pan-African social-science council's flagship gathering, will be held 7-11 December 2026 in Dakar, Senegal, on the theme 'Africa in Times of Rapid Global Transformation: Reclaiming Agency, Rethinking Leadership, Advancing Justice'. The call for papers and panel proposals had an extended deadline of 6 September 2026, which has already passed, so this edition is attend-only for a new submission. No registration fee or travel-funding information was visible on the announcement page.",
+    "location": {
+     "city": "Dakar",
+     "country": "Senegal",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2026-12-07",
+     "end": "2026-12-11"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-09-06",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "September 6th 2026 (extended deadline)"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No career-stage or nationality restriction stated for General Assembly participation; the 17th edition's call is closed as of extraction. No registration fee or funding page was linked to check — limited information."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "CODESRIA Small Grants Programme for Thesis Writing",
+      "source": "external",
+      "type": "bursary",
+      "amount_note": "Supports thesis writing rather than conference travel specifically; amount not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed on the page checked",
+      "requires": "Registration at an African university, doctoral candidacy",
+      "eligible": "check",
+      "why": "Daniel is a PhD candidate at a Ghanaian (African) university in the social sciences, matching the scheme's general target group, but this fund isn't specifically for General Assembly travel.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://codesria.org/grants-fellowships/",
+      "sequence_note": "Separate from, and not sequenced against, the General Assembly's own (closed) call — worth checking independently."
+     },
+     {
+      "name": "Ghana Tertiary Education Commission (GTEC) research support",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "Listed in corpus/funders/ghana.json as an interim research-support channel at Ghanaian institutions.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://gtec.edu.gh/",
+      "sequence_note": "Check with the home institution's research office; low priority given the short in-region trip."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "This is the 17th CODESRIA General Assembly, indicating a long-running series held by Africa's leading pan-African social-science research council.",
+      "grounded": true,
+      "source_url": "https://codesria.org/17th-codesria-general-assembly-call-for-papers-and-panel-proposals/"
+     }
+    ],
+    "source_url": "https://codesria.org/17th-codesria-general-assembly-call-for-papers-and-panel-proposals/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [],
+    "priority": {
+     "score": 67,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 65,
+       "reason": "The theme, 'Africa in Times of Rapid Global Transformation: Reclaiming Agency', is broad pan-African social science rather than a direct AI-labour or platform-work theme; Daniel's research would need explicit framing around African agency and technology to fit a specific panel."
+      },
+      "standing": {
+       "score": 85,
+       "reason": "This is the 17th CODESRIA General Assembly, the flagship gathering of Africa's leading pan-African social-science research council — a well-established, high-standing venue."
+      },
+      "network": {
+       "score": 65,
+       "reason": "It brings together African social scientists across disciplines, useful for regional visibility, though it's less targeted to the specific AI-labour/platform-work network than a dedicated internet- or STS-studies venue."
+      },
+      "outcomes": {
+       "score": 30,
+       "reason": "The call for papers/panels closed on 6 September 2026, so Daniel could only attend, not present, at this edition."
+      },
+      "feasibility": {
+       "score": 90,
+       "reason": "This is by far the cheapest, easiest option in the feed — no visa needed under the ECOWAS free-movement protocol and a short regional flight — though December isn't one of his listed available months."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.65,
+     "rationale": "CODESRIA's General Assembly is Africa's leading pan-African social-science gathering, and its 2026 theme around agency, leadership and justice in a period of global transformation could accommodate a paper on AI data labour and worker organising in Ghana and Kenya with the right framing, though the call itself doesn't name digital labour or platform work directly. This year's call for papers/panels has already closed.",
+     "matched_topics": [
+      "platform labour in Africa"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's the biggest pan-African social-science gathering, useful for visibility among African researchers in your own region.",
+     "It's by far the cheapest and easiest option here — no visa needed, and a short flight from Accra to Dakar.",
+     "Regional conferences like this are often where African labour researchers cross paths outside the big Western societies."
+    ],
+    "watch_out": [
+     "The call for papers/panels closed on 6 September 2026, so you'd be attending, not presenting.",
+     "December isn't one of your listed available travel months."
+    ],
+    "tagline": "Your cheapest, lowest-hassle option — but the submission window already closed.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage or nationality restriction stated for attending; the call for papers and panels closed on 6 September 2026, so participation would be as an attendee.",
+    "visa": {
+     "required": "no",
+     "note": "Ghana and Senegal are both ECOWAS member states, and Ghanaian passport holders can enter Senegal visa-free for up to 90 days under the ECOWAS free-movement protocol. This is general information, not immigration advice — confirm current entry requirements (e.g. a Yellow Fever certificate) before travel.",
+     "official_source": "https://migrationnetwork.un.org/policy-repository/ecowas-protocol-relating-free-movement-persons-residence-and-establishment-ecowas",
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "GHS",
+     "low": 5000,
+     "high": 11500,
+     "breakdown": {
+      "registration": {
+       "low": 230,
+       "high": 1150,
+       "note": "No fee was published on the announcement page; range is a general modest-fee ballpark for a pan-African academic assembly ($20–$100), not confirmed",
+       "grounded": false
+      },
+      "travel": {
+       "low": 3450,
+       "high": 6900,
+       "note": "Accra–Dakar return, a regional West African route, heuristic ($300–$600), no live fare search run",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 1400,
+       "high": 3450,
+       "note": "6 nights (5 assembly days + 1), budget to mid-range in Dakar ($20–$50/night)",
+       "grounded": false
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Ghana and Senegal are both ECOWAS member states; Ghanaian passport holders can enter Senegal visa-free for up to 90 days under the ECOWAS free-movement protocol",
+       "grounded": true,
+       "source": "https://migrationnetwork.un.org/policy-repository/ecowas-protocol-relating-free-movement-persons-residence-and-establishment-ecowas"
+      }
+     },
+     "assumptions": [
+      "USD→GHS 11.44 on 2026-09-18 (open.er-api.com)",
+      "No registration fee was published on the announcement page",
+      "Travel and accommodation are heuristic estimates, not live fare/hotel searches",
+      "A Yellow Fever certificate is typically required for ECOWAS travel; not a monetary cost assumed here",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "Even without any external funding, this is the cheapest option in the feed — an in-region trip with no visa cost. A CODESRIA or home-institution grant would only reduce an already modest out-of-pocket figure."
+    }
+   },
+   {
+    "id": "dsa-devstudies-workshop-2027",
+    "type": "fellowship",
+    "status": "open",
+    "title": "Towards a Global South-driven Future for Development Studies: Workshop for Early-Career Researchers",
+    "host": "Development Studies Association (DSA) writing workshop, funded by a British Academy Writing Workshop grant, hosted at Padjadjaran University",
+    "host_kind": "learned_society",
+    "theme": "Global South-driven futures for development studies",
+    "description": "A fully-funded writing workshop for early-career researchers, framed around building a Global South-driven future for development studies. The first Asia-based edition will be held in Bandung, Indonesia in April 2027 (exact date TBC). It is open to researchers based at institutions in Asia or Africa who either received a PhD after 1 October 2017 or are currently enrolled in a PhD at a Global South institution. Applicants submit an extended abstract (750-1,000 words), a 2-page CV and a writing sample directly to the organiser by email. The project funds return flights and three nights' accommodation, though the flight-funding language on the page specifically says 'from within Asia' — it is not explicit whether flights from Africa are covered on the same basis, which is flagged as a limitation rather than assumed.",
+    "location": {
+     "city": "Bandung",
+     "country": "Indonesia",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-04-01",
+     "end": null
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-09-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Please send these documents to Pritish Behuria by 30 September, 2026."
+     }
+    ],
+    "eligibility": {
+     "career_stage": [
+      "phd",
+      "early_career"
+     ],
+     "nationality": null,
+     "region_restriction": "Asia or Africa",
+     "membership_required": false,
+     "notes": "Eligibility quote: \"Participants must be based at a university or other higher education institution in Asia/Africa. Participants must have been awarded a PhD after 1 October, 2017 (with flexibility for those who have had career breaks) or be currently enrolled in a PhD at a higher education institution in the Global South.\" Daniel is a PhD candidate at a Ghanaian university, so this appears to fit."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "British Academy Writing Workshop grant (IWW25/100268)",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Funds return flights and 3 nights' accommodation in Indonesia for all participants; the flight-funding wording specifically says 'from within Asia', so coverage for an Africa-based flight is not explicitly confirmed",
+      "deadline": "2026-09-30",
+      "cycle": "one-off, tied to this workshop",
+      "requires": "Accepted application (extended abstract, 2-page CV, writing sample)",
+      "eligible": "likely",
+      "why": "Daniel is a PhD candidate at a Ghanaian (Global South) institution, matching the stated eligibility, though it's unclear whether his flight from Accra is covered on the same terms as an Asia-based participant's.",
+      "grounded": true,
+      "source_quote": "This project will fund return flights (from within Asia), as well as accommodation for three nights, in Indonesia for all participants.",
+      "source_url": "https://www.devstud.org.uk/2026/06/09/call-for-papers-towards-a-global-south-driven-future-for-development-studies/",
+      "sequence_note": "Apply directly by 30 September 2026 with the extended abstract, CV and writing sample; ask the organiser to confirm flight coverage for an Africa-based applicant before assuming it's included."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Funded by a named British Academy grant (IWW25/100268) and organised through the Development Studies Association network.",
+      "grounded": true,
+      "source_url": "https://www.devstud.org.uk/2026/06/09/call-for-papers-towards-a-global-south-driven-future-for-development-studies/"
+     }
+    ],
+    "source_url": "https://www.devstud.org.uk/2026/06/09/call-for-papers-towards-a-global-south-driven-future-for-development-studies/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [
+     {
+      "name": "British Academy Writing Workshop grant (IWW25/100268) — covers workshop travel and accommodation",
+      "type": "travel_scholarship",
+      "deadline": "2026-09-30",
+      "amount_note": "Return flights and 3 nights' accommodation in Indonesia for all participants; flight-funding wording says \"from within Asia\", so African-based participants' flight coverage is not explicitly confirmed — limited information, verify before assuming full coverage.",
+      "eligibility_notes": "Open to accepted workshop participants based in Asia or Africa (PhD post-Oct-2017 or current PhD student at a Global South institution).",
+      "grounded": true,
+      "source_quote": "This project will fund return flights (from within Asia), as well as accommodation for three nights, in Indonesia for all participants.",
+      "source_url": "https://www.devstud.org.uk/2026/06/09/call-for-papers-towards-a-global-south-driven-future-for-development-studies/"
+     }
+    ],
+    "priority": {
+     "score": 66,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 55,
+       "reason": "Development studies isn't one of Daniel's listed fields, but a workshop on 'a Global South-driven future for development studies' is plausible with framing around how AI data labour and worker organising in Ghana/Kenya fit into Global South development debates."
+      },
+      "standing": {
+       "score": 45,
+       "reason": "This is the first Asia-based edition of a new workshop series, funded by a single named British Academy grant — real but modest and unproven standing, not a long-running society meeting."
+      },
+      "network": {
+       "score": 80,
+       "reason": "As a small, funded early-career writing workshop, it offers sustained contact with a cohort of Global South researchers and direct mentoring — the kind of setting that scores high by nature for network value, matching his networking and feedback goals."
+      },
+      "outcomes": {
+       "score": 75,
+       "reason": "The whole point of the workshop is structured feedback on an extended abstract and writing sample — a strong match for Daniel's stated goal of feedback on his framing, even without a guaranteed publication route."
+      },
+      "feasibility": {
+       "score": 80,
+       "reason": "The submission deadline (30 Sept 2026) is only about 11 days away, and April isn't one of his listed available months, but the workshop is otherwise low-cost or free if flight funding extends to him."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.55,
+     "rationale": "This workshop isn't framed around AI, data labour or content moderation directly, but its central question — what a 'Global South-driven future for development studies' looks like — is a natural adjacent conversation for research on how AI companies use cheap data-labelling and moderation work in Ghana and Kenya, and how those workers organise. It's included as an exploration pick precisely because the topical link runs through an adjacent field (development studies) rather than shared keywords.",
+     "matched_topics": [
+      "platform labour in Africa",
+      "worker organising"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's a structured writing workshop built for feedback on your framing — exactly one of your stated goals.",
+     "It's aimed at Global South early-career researchers, so the cohort and mentoring are tailored to people in your position.",
+     "Flights and three nights' accommodation are funded, at least in part — potentially close to free."
+    ],
+    "watch_out": [
+     "The grant's own wording only promises flights 'from within Asia'; it's not confirmed whether an Africa-based participant's flight is covered — ask before applying.",
+     "The deadline (30 September 2026) is only about 11 days away, and April 2027 isn't one of your listed available travel months."
+    ],
+    "tagline": "A feedback-focused Global South workshop, funded — if the flight coverage extends to Africa.",
+    "eligible": "yes",
+    "eligibility_notes": "Daniel is currently enrolled in a PhD at a higher-education institution in the Global South (Ghana), matching the stated eligibility: \"Participants must be based at a university or other higher education institution in Asia/Africa... or be currently enrolled in a PhD at a higher education institution in the Global South.\"",
+    "visa": {
+     "required": "conditional",
+     "note": "Sources conflict on whether Ghanaian passport holders need a visa for Indonesia: some say visa-free for up to 60 days, others say an e-visa is required. This is general information, not immigration advice — verify directly with Indonesian immigration before booking travel.",
+     "official_source": "https://www.indonesiaimmigration.com/check-requirement/ghana",
+     "verify_flag": true,
+     "lead_days": 14
+    },
+    "explore": true,
+    "explore_reason": "Development studies isn't one of Daniel's listed fields or adjacent fields (labour studies, internet studies, critical data studies), and the workshop's own framing shares little vocabulary with 'AI data labour' or 'content moderation'. It's kept as the batch's exploration pick because studying worker organising among Ghanaian and Kenyan data workers sits naturally inside wider Global South development-studies debates, and because it directly matches his 'feedback' goal with a rare, largely-funded format.",
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "verified"
+    },
+    "cost_estimate": {
+     "currency": "GHS",
+     "low": 0,
+     "high": 19000,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 0,
+       "note": "No fee mentioned; this is a funded workshop, not a paid conference",
+       "grounded": true
+      },
+      "travel": {
+       "low": 0,
+       "high": 18300,
+       "note": "Low end assumes the grant's flight funding extends to an Africa-based participant, as 'for all participants' suggests; high end assumes it doesn't (the wording says 'from within Asia' specifically) and Daniel pays a full Accra–Jakarta/Bandung return himself, heuristic ($0 or $900–$1,600)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Explicitly funded: \"accommodation for three nights... for all participants\"",
+       "grounded": true
+      },
+      "visa": {
+       "low": 0,
+       "high": 720,
+       "note": "Sources conflict on whether Ghanaian passport holders need a visa for Indonesia (some say visa-free up to 60 days, others say an e-visa, ~1,000,000 IDR, is required) — range reflects that uncertainty",
+       "grounded": false,
+       "source": "https://www.indonesiaimmigration.com/check-requirement/ghana"
+      }
+     },
+     "assumptions": [
+      "USD→GHS 11.44 on 2026-09-18 (open.er-api.com)",
+      "The grant's own wording only explicitly promises flights 'from within Asia'; whether an Africa-based accepted participant's flight is covered is the single biggest cost swing here and should be confirmed with the organiser before applying",
+      "Accommodation for three nights is confirmed covered regardless of region",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "If flight funding extends to Africa-based participants as 'for all participants' suggests, this could be close to free. If it doesn't, Daniel would cover a long-haul Accra–Indonesia flight himself — confirm this with the organiser (Pritish Behuria) before applying."
+    }
+   },
+   {
+    "id": "iamcr-2027",
+    "type": "conference",
+    "status": "watch",
+    "title": "IAMCR 2027 São Paulo: Multilateralism, Democracy, Diversity: Communication for a More Just World",
+    "host": "International Association for Media and Communication Research (IAMCR)",
+    "host_kind": "learned_society",
+    "theme": "Multilateralism, Democracy, Diversity: Communication for a More Just World",
+    "description": "IAMCR 2027 will take place 18-22 July 2027 in São Paulo, Brazil, hosted by the School of Communications and Arts at the University of São Paulo (ECA/USP) in partnership with the Associação de Apoio à Arte e Comunicação (ARCO), marking IAMCR's 70th anniversary. The conference is expected to bring together around 1,500 media and communication researchers. The call for proposals is not yet open (it is stated to open in November 2026), so no concrete submission deadline, registration fee, or 2027-specific travel grant details are published yet.",
+    "location": {
+     "city": "São Paulo",
+     "country": "Brazil",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-07-18",
+     "end": "2027-07-22"
+    },
+    "deadlines": [],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No eligibility, fee, or deadline details are published yet for the 2027 São Paulo conference beyond the statement that the call for proposals will open in November 2026. IAMCR runs a recurring travel grant program (up to US$2,000 for early-stage-scholar members from low/middle-income countries with an accepted abstract), but the page found (iamcr.org/travel_grants) currently describes the Galway 2026 edition's deadline (20 March 2026), not a 2027 São Paulo-specific grant, so it is not recorded as this opportunity's funding."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "IAMCR Travel Grants (future cycle, not yet announced for São Paulo)",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Past cycles: up to 18 grants, each max USD 2,000; 2027 São Paulo-specific figures not yet published",
+      "deadline": null,
+      "cycle": "Expected to open once the call for proposals opens (stated for November 2026) and papers are accepted",
+      "requires": "IAMCR membership ≥ 1 year, early-career (untenured), first author of an accepted paper, residing in a low/middle-income country (Ghana qualifies)",
+      "eligible": "likely",
+      "why": "Daniel is an early-career (PhD, year 4) communication-studies researcher in a low-income country — the scheme's stated target group — though nothing can be applied for until the 2027 call and grant cycle open.",
+      "grounded": true,
+      "source_quote": "Up to 18 grants, each max USD 2,000",
+      "source_url": "https://iamcr.org/travel_grants",
+      "sequence_note": "Watch for the call for proposals (expected Nov 2026); submit a paper first, then apply for the travel grant once accepted."
+     },
+     {
+      "name": "Ghana Tertiary Education Commission (GTEC) research support",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "Listed in corpus/funders/ghana.json as an interim research-support channel; not verified for conference travel specifically.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://gtec.edu.gh/",
+      "sequence_note": "Check with the home institution's research office well before travel dates."
+     }
+    ],
+    "past_editions": [
+     {
+      "year": 2026,
+      "theme": null,
+      "city": "Galway, Ireland",
+      "representative_papers": [],
+      "source_url": "https://iamcr.org/congress/annual-conferences"
+     },
+     {
+      "year": 2025,
+      "theme": null,
+      "city": "Singapore",
+      "representative_papers": [],
+      "source_url": "https://iamcr.org/congress/annual-conferences"
+     },
+     {
+      "year": 2024,
+      "theme": null,
+      "city": "Christchurch, New Zealand",
+      "representative_papers": [],
+      "source_url": "https://iamcr.org/congress/annual-conferences"
+     }
+    ],
+    "standing_signals": [
+     {
+      "signal": "IAMCR 2027 marks the Association's 70th anniversary.",
+      "grounded": true,
+      "source_url": "https://iamcr.org/news/sao_paulo2027"
+     }
+    ],
+    "source_url": "https://iamcr.org/news/sao_paulo2027",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [],
+    "priority": {
+     "score": 74,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 70,
+       "reason": "IAMCR is the global society for Daniel's exact primary field, communication studies, and has active sections on media policy and platform governance where his content-moderation/AI-labour work would fit, though the 2027 theme itself doesn't name his topic and no programme exists yet."
+      },
+      "standing": {
+       "score": 92,
+       "reason": "IAMCR's 2027 congress marks the society's 70th anniversary and is expected to draw roughly 1,500 researchers — a top-tier, well-established communication studies gathering."
+      },
+      "network": {
+       "score": 80,
+       "reason": "As the largest global communication-research congress, it offers strong access to the field's international network, useful for visibility before the job market."
+      },
+      "outcomes": {
+       "score": 45,
+       "reason": "The call for proposals hasn't opened yet (expected Nov 2026), so there's nothing to submit to or present yet — the outcome is currently only 'watch and prepare'."
+      },
+      "feasibility": {
+       "score": 80,
+       "reason": "July is one of Daniel's available months and the cost fits his budget cap, but Brazil requires a visa with no confirmed Ghana-based Brazilian consulate, adding real logistics risk; CFP is expected to open around November 2026."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.7,
+     "rationale": "IAMCR is the flagship international society for communication research, Daniel's stated primary field, and its sections on media policy, technology and platform governance are natural homes for research on AI data labour and content moderation. The specific fit is somewhat provisional, since the 2027 call for proposals and programme aren't published yet.",
+     "matched_topics": [
+      "content moderation work",
+      "platform labour in Africa"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's the biggest global gathering for communication studies, your exact field, and a strong line for visibility before the job market.",
+     "July is one of the months you're free to travel.",
+     "IAMCR runs a travel grant for early-career researchers from lower-income countries in past cycles."
+    ],
+    "watch_out": [
+     "The call for proposals hasn't opened yet (expected November 2026) — there's nothing to submit to right now.",
+     "You'd need a Brazilian visa, and it's not yet confirmed whether you can apply for it inside Ghana."
+    ],
+    "tagline": "The biggest room in your field — but the door isn't open yet.",
+    "eligible": "yes",
+    "eligibility_notes": "No restrictions stated for participation; the call for proposals hasn't opened yet (expected November 2026), so there's nothing to apply to at this moment.",
+    "visa": {
+     "required": "yes",
+     "note": "Ghana is listed as visa-required for Brazil. No Brazilian embassy or consulate in Accra was confirmed in this search, which may mean applying through a regional post — general information, not immigration advice; verify directly with Brazil's Ministry of Foreign Affairs.",
+     "official_source": "https://www.gov.br/mre/en/visas",
+     "verify_flag": true,
+     "lead_days": 30
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "GHS",
+     "low": 10500,
+     "high": 25500,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 3500,
+       "note": "2027 fees not yet published; range uses a typical learned-society student-tier ballpark ($0–$300), not a confirmed figure",
+       "grounded": false
+      },
+      "travel": {
+       "low": 8000,
+       "high": 14900,
+       "note": "Accra–São Paulo return, likely via Europe or Addis Ababa; no live fare search run, heuristic ($700–$1,300)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 1400,
+       "high": 3800,
+       "note": "6 nights (5 conference days + 1), budget to mid-range in São Paulo ($20–$55/night)",
+       "grounded": false
+      },
+      "visa": {
+       "low": 1000,
+       "high": 3000,
+       "note": "Brazilian visa fee not confirmed; Ghana is a visa-required country for Brazil and no Brazilian embassy in Accra was confirmed, which may mean applying via a regional post — verify",
+       "grounded": false,
+       "source": "https://en.wikipedia.org/wiki/Visa_requirements_for_Ghanaian_citizens"
+      }
+     },
+     "assumptions": [
+      "USD→GHS 11.44 on 2026-09-18 (open.er-api.com)",
+      "No 2027 fee schedule exists yet; the call for proposals is stated to open November 2026",
+      "Travel, accommodation and visa figures are heuristic estimates, not live searches",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "If a paper is accepted and the IAMCR travel grant (up to USD 2,000, in past cycles) comes through, most of this could be covered; nothing is confirmed until the 2027 call opens."
+    }
+   },
+   {
+    "id": "ilpc-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "International Labour Process Conference 2027: Spaces of Work and Resistance",
+    "host": "International Labour Process Conference (ILPC)",
+    "host_kind": "learned_society",
+    "theme": "Spaces of Work and Resistance",
+    "description": "The 2027 International Labour Process Conference (the 31st edition) will be held 31 March–2 April 2027 at the Universidad de Cádiz campus in Jerez de la Frontera, Spain, on the theme 'Spaces of Work and Resistance', examining how geographic and historical contexts shape workplace dynamics and worker struggles. The conference accepts general-stream papers plus special themed streams on care work, migrant workers, women in male-dominated workplaces, labour organisation and collective action. No registration fee or travel/bursary funding information was visible on the event page.",
+    "location": {
+     "city": "Jerez de la Frontera",
+     "country": "Spain",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-03-31",
+     "end": "2027-04-02"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-10-31",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Oct 31st '26 23:00 Abstracts submission closing"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No career-stage, nationality or membership restriction stated. No registration fee or funding page was linked to check."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "ILPC bursary/travel support",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": null,
+      "deadline": null,
+      "cycle": "Not confirmed — no bursary or travel-support page was linked from the event page",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "No venue-side funding information was visible on the event page; ILPC has historically offered some reduced or waived fees at past editions, but this isn't confirmed for 2027 — limited information.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://eventos.uca.es/event_detail/155800/detail/international-labour-process-conference-2027.html",
+      "sequence_note": "Check the ILPC's own site (ilpc.org.uk) closer to the conference for any bursary announcement."
+     },
+     {
+      "name": "Ghana Tertiary Education Commission (GTEC) research support",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "Listed in corpus/funders/ghana.json as an interim research-support channel at Ghanaian institutions.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://gtec.edu.gh/",
+      "sequence_note": "Apply once the abstract is submitted (by 31 Oct 2026), giving time before the March 2027 conference."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Billed as the 2027 conference in a long-running annual/near-annual series ('the next International Labour Process Conference'); exact edition count not stated on this page — limited information.",
+      "grounded": false,
+      "source_url": null
+     },
+     {
+      "signal": "Explicitly invites contributions from both the Global South and North on labour organising and collective action.",
+      "grounded": true,
+      "source_url": "https://eventos.uca.es/event_detail/155800/detail/international-labour-process-conference-2027.html"
+     }
+    ],
+    "source_url": "https://eventos.uca.es/event_detail/155800/detail/international-labour-process-conference-2027.html",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [],
+    "priority": {
+     "score": 78,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 90,
+       "reason": "The conference theme 'Spaces of Work and Resistance' and its dedicated stream on labour organisation and collective action are a near-direct match for Daniel's 'worker organising' topic among data-labelling and content-moderation workers."
+      },
+      "standing": {
+       "score": 82,
+       "reason": "The page's title identifies this as the conference's 31st edition (inferred from the title, not confirmed on a separate archive page), indicating a long-running, well-established labour-studies conference series."
+      },
+      "network": {
+       "score": 78,
+       "reason": "ILPC draws labour-process and labour-organising researchers internationally, a strong overlap with the worker-organising and critical-labour side of Daniel's citation neighbourhood, even though it's a smaller conference than the flagship communication societies."
+      },
+      "outcomes": {
+       "score": 60,
+       "reason": "The open general stream plus dedicated organising/resistance stream give a real chance to present and get feedback, though no confirmed publication route (proceedings or special issue) was found on this page."
+      },
+      "feasibility": {
+       "score": 70,
+       "reason": "The abstract deadline (31 Oct 2026) is comfortably open and cost fits his budget cap, but a Schengen visa is required and March/April isn't one of his listed available months."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.9,
+     "rationale": "ILPC 2027's theme, 'Spaces of Work and Resistance', and its explicit stream on labour organisation and collective action speak almost directly to Daniel's dissertation on how data-labelling and content-moderation workers in Ghana and Kenya organise. This is one of the closest topical matches among his options, even though the venue is smaller and less internationally prominent than a flagship communication or STS society.",
+     "matched_topics": [
+      "worker organising",
+      "platform labour in Africa",
+      "AI data labour"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "The 2027 theme and its labour-organising stream are almost a direct description of your worker-organising chapter.",
+     "The abstract deadline (31 October 2026) is still open, so you can actually submit.",
+     "It explicitly invites Global South contributions, which fits your Ghana/Kenya fieldwork."
+    ],
+    "watch_out": [
+     "March/April isn't one of your listed available travel months, so you'd need to make an exception.",
+     "You'll need a Schengen visa for Spain, and no bursary or fee waiver was found on the event page."
+    ],
+    "tagline": "The closest topical match in this batch, with a deadline you can still hit.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage, nationality or membership restriction was stated; the abstract deadline (31 Oct 2026) is open for submission now.",
+    "visa": {
+     "required": "yes",
+     "note": "Spain is in the Schengen Area, and Ghanaian passport holders need a Schengen visa. There is a Spanish embassy/visa centre in Accra. This is general information, not immigration advice — confirm current requirements with the embassy.",
+     "official_source": "https://www.exteriores.gob.es/Embajadas/accra/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx",
+     "verify_flag": true,
+     "lead_days": 30
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "GHS",
+     "low": 10500,
+     "high": 20500,
+     "breakdown": {
+      "registration": {
+       "low": 575,
+       "high": 2300,
+       "note": "No fee was published on the event page; range is a general small-conference student-fee ballpark ($50–$200), not confirmed",
+       "grounded": false
+      },
+      "travel": {
+       "low": 7450,
+       "high": 13750,
+       "note": "Accra–Jerez/Seville return via a European hub, no live fare search run, heuristic ($650–$1,200)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 1150,
+       "high": 2750,
+       "note": "4 nights (3 conference days + 1), budget to mid-range in Jerez de la Frontera ($25–$60/night)",
+       "grounded": false
+      },
+      "visa": {
+       "low": 1200,
+       "high": 1800,
+       "note": "Schengen short-stay visa fee is set EU-wide (€90 for adults) plus a visa-centre service fee; not independently re-fetched from the Spanish embassy's fee page in this run",
+       "grounded": false,
+       "source": "https://www.exteriores.gob.es/Embajadas/accra/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx"
+      }
+     },
+     "assumptions": [
+      "USD→GHS 11.44 and EUR→GHS 13.14 on 2026-09-18 (open.er-api.com)",
+      "No registration fee was published on the event page",
+      "Travel and accommodation are heuristic estimates, not live fare/hotel searches",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "No confirmed funding source exists yet; if a home-institution or CODESRIA-adjacent fund comes through after acceptance, the out-of-pocket total would drop, but nothing is confirmed."
+    }
+   }
+  ]
+ },
+ {
+  "id": "p_farah",
+  "gathered_at": "2026-09-19",
+  "profile": {
+   "id": "p_farah",
+   "name": "Farah Qureshi",
+   "fictional": true,
+   "input_text": "Final-year PhD in Lahore on oral histories of the 1947 Partition from women in Punjab, and how family memory is passed down. I need feedback on my last chapters and a publication before I finish.",
+   "orcid": null,
+   "affiliation": "PhD candidate in History, a university in Lahore",
+   "career_stage": "phd",
+   "year": 4,
+   "research_summary": "Women’s oral histories of the 1947 Partition in Punjab and intergenerational family memory.",
+   "topics": [
+    {
+     "term": "Partition oral history",
+     "weight": 0.95
+    },
+    {
+     "term": "women and memory",
+     "weight": 0.85
+    },
+    {
+     "term": "Punjab 1947",
+     "weight": 0.8
+    },
+    {
+     "term": "intergenerational memory",
+     "weight": 0.7
+    },
+    {
+     "term": "South Asian history",
+     "weight": 0.6
+    }
+   ],
+   "fields": [
+    "history",
+    "South Asian studies"
+   ],
+   "adjacent_fields": [
+    "memory studies",
+    "oral history",
+    "gender studies"
+   ],
+   "citation_neighborhood": [
+    {
+     "name": "Urvashi Butalia",
+     "inferred": true
+    },
+    {
+     "name": "Yasmin Khan",
+     "inferred": true
+    },
+    {
+     "name": "Anam Zakaria",
+     "inferred": true
+    }
+   ],
+   "geography": {
+    "country": "Pakistan",
+    "city": "Lahore",
+    "passport": "Pakistan"
+   },
+   "currency": "PKR",
+   "constraints": {
+    "max_cost": 600000,
+    "months_available": [
+     "Jan",
+     "Jun",
+     "Jul",
+     "Aug",
+     "Dec"
+    ],
+    "visa_tolerance": "prefer_none",
+    "format": "any"
+   },
+   "goals": [
+    "publication",
+    "feedback",
+    "visibility"
+   ],
+   "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+   ],
+   "profile_type": "academic"
+  },
+  "meta": {
+   "fields": 2,
+   "adjacent": 3,
+   "searches": 12,
+   "candidates": 8,
+   "extracted": 6,
+   "funding": 7,
+   "grounded_pass": 16,
+   "grounded_total": 16
+  },
+  "opportunities": [
+   {
+    "id": "aas-in-asia-2026",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "AAS-in-Asia 2026: Centering Asia: Refiguring Connections, Recharting Futures",
+    "host": "Association for Asian Studies (AAS) and Lahore University of Management Sciences (LUMS)",
+    "host_kind": "learned_society",
+    "theme": "Centering Asia: Refiguring Connections, Recharting Futures",
+    "description": "AAS-in-Asia is the Association for Asian Studies' flagship Asia-based conference, moving to a different Asian city each year; the 2026 edition is hosted at LUMS in Lahore, Pakistan, September 25-27, 2026. It brings together scholars, students and practitioners from across Asia and beyond. The session/panel-proposal window has already closed, but registration is still open, including an onsite/late rate, and hybrid or virtual participation is offered for those facing travel, visa, political or funding constraints.",
+    "location": {
+     "city": "Lahore",
+     "country": "Pakistan",
+     "format": "hybrid"
+    },
+    "dates": {
+     "start": "2026-09-25",
+     "end": "2026-09-27"
+    },
+    "deadlines": [
+     {
+      "label": "early_bird",
+      "date": "2026-04-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "March 1 - April 30, 2026"
+     },
+     {
+      "label": "registration",
+      "date": "2026-08-24",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "August 24, 2026 onwards"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "Open conference; selected panelists must submit panel details on the conference platform and pay the registration fee. Hybrid/virtual participation is offered for participants facing significant travel barriers, including visa, political, or funding constraints. No specific registration fee amounts or travel-grant programme were found on the pages checked; the panel/session proposal deadline had already passed by the time this page was checked (Sept 19, 2026), so this edition is presented as attend/register-only for a new applicant."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Described on its own site as \"the Association for Asian Studies' flagship conference,\" bringing together scholars, students, and practitioners from across Asia, West Asia, Africa, Middle East, and beyond.",
+      "grounded": true,
+      "source_url": "https://aasinasia2026.lums.edu.pk/"
+     }
+    ],
+    "source_url": "https://aasinasia2026.lums.edu.pk/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "Event is six days from the extraction date and the site actively references 2026 registration windows — current."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 67,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1538,
+      "outcomes": 0.2308,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 58,
+       "reason": "The 2026 theme, 'Centering Asia: Refiguring Connections, Recharting Futures,' is a pan-Asian frame rather than one naming South Asia, Partition or memory specifically — plausible with the right framing, but a step broader than her actual thesis."
+      },
+      "standing": {
+       "score": 88,
+       "reason": "AAS-in-Asia is described on its own site as \"the Association for Asian Studies' flagship conference,\" run by a major learned society and drawing scholars from across Asia and beyond."
+      },
+      "network": {
+       "score": 68,
+       "reason": "A flagship Asian studies gathering held in her own city is a rare, low-cost chance to meet a large cross-regional academic community, even though the conference isn't South Asia-specific."
+      },
+      "outcomes": {
+       "score": 45,
+       "reason": "The session/panel-proposal window has already closed, so she could attend and network this edition but not present a paper — limiting what she'd come away with."
+      },
+      "feasibility": {
+       "score": 90,
+       "reason": "No travel, accommodation or visa cost at all since it's in Lahore, though September isn't one of her listed available months."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.58,
+     "rationale": "AAS-in-Asia's 2026 theme is about Asia broadly — connections and futures across the continent — rather than South Asia or Partition memory specifically. Her dissertation could plausibly connect to sessions on history, memory or South Asia within the programme, but the fit depends on what's actually being presented rather than on a named theme match.",
+     "matched_topics": [
+      "South Asian history"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's happening at LUMS, in her own city — no travel, hotel or visa cost at all.",
+     "It's the Association for Asian Studies' flagship conference, a major venue to meet Asia-focused scholars in person.",
+     "Hybrid/virtual options exist too, in case in-person attendance doesn't work out."
+    ],
+    "watch_out": [
+     "The proposal window already closed, so she could attend this edition but not present a paper.",
+     "The registration fee isn't published yet, and September isn't one of the months she listed as available."
+    ],
+    "tagline": "A flagship Asia-studies conference in her own city — but she'd be attending, not presenting, this time.",
+    "eligible": "yes",
+    "eligibility_notes": "No restrictions found on attending or registering; the session/panel-proposal window has already closed for this edition, so a new paper submission isn't possible now.",
+    "visa": {
+     "required": "no",
+     "note": "Held in Lahore, Pakistan, for a Pakistani passport holder — no visa is needed.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "PKR",
+     "low": 40000,
+     "high": 100000,
+     "breakdown": {
+      "registration": {
+       "low": 40000,
+       "high": 100000,
+       "note": "No fee amount is published on the pages checked; using a typical mid-size international conference registration range (~USD 145-360) as a heuristic",
+       "grounded": false
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "Held at LUMS in her own city, Lahore — no travel needed",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Home city — no accommodation needed",
+       "grounded": true
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Held in Pakistan for a Pakistani national — no visa needed",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "USD to PKR 277.28 as of 2026-09-18 (open.er-api.com)",
+      "Registration fee is not published on the pages checked; range is a generic estimate for a flagship international conference, not this event's actual fee",
+      "Excludes meals and local transport"
+     ],
+     "over_budget": false,
+     "net_note": "Being local is what makes this one cheap — the only real cost is the registration fee, once it's published."
+    }
+   },
+   {
+    "id": "ecsas-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "29th European Conference on South Asian Studies (ECSAS 2027)",
+    "host": "European Association for South Asian Studies (EASAS)",
+    "host_kind": "learned_society",
+    "theme": null,
+    "description": "ECSAS 2027 is the 29th European Conference on South Asian Studies, held in Poznań, Poland, 28-31 July 2027, organized by EASAS. The call for panel proposals is currently open (3 July - 30 September 2026); panel conveners will be notified of outcomes in October 2026, and a call for individual paper submissions within accepted panels will follow (opening November 2026, closing 15 January 2027). No registration fees or venue funding/travel grants are listed on the page.",
+    "location": {
+     "city": "Poznań",
+     "country": "Poland",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-07-28",
+     "end": "2027-07-31"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-09-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "The call for panel proposals is open from 3 July to 30 September 2026."
+     },
+     {
+      "label": "full_paper",
+      "date": "2027-01-15",
+      "depends_on": "abstract",
+      "grounded": true,
+      "source_quote": "Call for papers will be open on November 2026 till Junuary 15, 2027."
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": "At least one convener of each panel must be affiliated with a European institution.",
+     "membership_required": true,
+     "notes": "All panel conveners must be current EASAS members in good standing, with no unpaid invoices at the time of submission. Panel results will be announced in October 2026; selected panel abstracts will be published on the conference website on 16 November 2026. No registration fees, costs, or travel/bursary funding were found on the page (fees TBA)."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "HEC Research Travel Grant (Higher Education Commission, Pakistan)",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Covers airfare, registration fee, accommodation and daily allowance at PHEC-approved rates",
+      "deadline": null,
+      "cycle": "Apply at least 6 weeks before travel",
+      "requires": "Acceptance letter from organizers and a peer-reviewed paper or accepted abstract",
+      "eligible": "likely",
+      "why": "She is a PhD scholar at a Pakistani university, the scheme's core target group, provided she has a panel acceptance in hand.",
+      "grounded": true,
+      "source_quote": "Applicants already having foreign visa must apply at least 30 days before the event. Applicants not having foreign visa must apply at least 49 days before the event.",
+      "source_url": "https://www.hec.gov.pk/english/services/faculty/HEC%20Research%20Travel%20Grant/Pages/HEC-Research-Travel-Grant.aspx",
+      "sequence_note": "Needs a joined/accepted panel by 30 Sept 2026 or a paper accepted after Nov 2026, then apply to HEC at least 6-7 weeks before the July 2027 travel."
+     },
+     {
+      "name": "Association for Asian Studies (AAS) — South Asia Council Conference Award",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Small travel subsidies, roughly USD 150-200",
+      "deadline": null,
+      "cycle": "Rolling within the funding year",
+      "requires": "AAS membership and a conference acceptance on a South Asia topic",
+      "eligible": "check",
+      "why": "ECSAS is a EASAS (European) event, not an AAS-affiliated one, so this award likely doesn't apply here — flagged only because AAS is the most relevant South Asia-focused society for her field; confirm directly with AAS before assuming it covers a non-AAS conference.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://www.asianstudies.org/grants-awards/council-grants/south-asia-council-conference-award/",
+      "sequence_note": "Low priority for this specific conference; check first whether it applies to non-AAS events at all."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Conference is titled the '29th European Conference on South Asian Studies', indicating a long-running biennial/periodic series organized by EASAS.",
+      "grounded": true,
+      "source_url": "https://www.easas.eu/ecsas/"
+     }
+    ],
+    "source_url": "https://www.easas.eu/ecsas/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [],
+    "priority": {
+     "score": 71,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1538,
+      "outcomes": 0.2308,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 80,
+       "reason": "ECSAS is the main European conference for South Asian studies as a whole; her Partition-and-memory work is a clear, natural home there, though the conference has no theme naming her specific sub-topic."
+      },
+      "standing": {
+       "score": 78,
+       "reason": "The 29th edition of a long-running biennial conference run by a dedicated learned society (EASAS) is a strong continuity signal, though no keynote or proceedings information was found."
+      },
+      "network": {
+       "score": 75,
+       "reason": "A flagship regional (European) South Asian studies meeting is high network value for someone in her exact field, and a strong venue to meet scholars working on Punjab and Partition."
+      },
+      "outcomes": {
+       "score": 60,
+       "reason": "No stated publication route (proceedings/special issue), but presenting at the field's main European gathering is a strong CV line and a feedback opportunity."
+      },
+      "feasibility": {
+       "score": 62,
+       "reason": "The cost fits under her budget cap even unfunded, but the panel-proposal deadline (30 Sept 2026) is only 11 days away and needs a Schengen visa; EASAS membership is required for panel conveners, which complicates a first-time individual submission."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.8,
+     "rationale": "ECSAS is the flagship European conference for the whole field of South Asian studies, which is one of her two named primary fields. Her dissertation on Partition oral histories in Punjab is a natural paper there, even though the conference's call is thematically open rather than naming her specific sub-topic — a clear home for the work rather than a direct match to a named track.",
+     "matched_topics": [
+      "South Asian history",
+      "Punjab 1947"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's the main European conference for South Asian studies as a field, a natural home for her Partition research.",
+     "The cost fits under her budget even without any funding coming through.",
+     "The HEC travel grant is a realistic, direct-fit funding source if she gets in."
+    ],
+    "watch_out": [
+     "The panel-proposal window closes 30 Sept 2026 — only 11 days out — and EASAS membership is required for panel conveners, so she'd need to find or join a panel fast.",
+     "A Schengen visa is needed for Poland, and the registration fee isn't published yet."
+    ],
+    "tagline": "The main European South Asian studies conference, and it fits her budget — but the panel deadline is very close.",
+    "eligible": "conditional",
+    "eligibility_notes": "Panel conveners must be current EASAS members in good standing. The page describes only the panel-proposal route; it doesn't describe an individual, memberless submission path, so she would need to join or be invited into an accepted panel to present.",
+    "visa": {
+     "required": "yes",
+     "note": "A Schengen short-stay visa would be needed to attend in Poland. This is general information, not immigration advice — confirm current requirements with the Polish embassy/consulate or visa centre serving Pakistan.",
+     "official_source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en",
+     "verify_flag": true,
+     "lead_days": 30
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "verified"
+    },
+    "cost_estimate": {
+     "currency": "PKR",
+     "low": 284000,
+     "high": 535000,
+     "breakdown": {
+      "registration": {
+       "low": 22000,
+       "high": 41500,
+       "note": "Fees not published on the conference page; using a typical academic-conference student-rate estimate (~USD 80-150)",
+       "grounded": false
+      },
+      "travel": {
+       "low": 180000,
+       "high": 305000,
+       "note": "Lahore-Poznań return via a European or Gulf hub, booked 8-10 weeks ahead; heuristic estimate, no live fare search run",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 47000,
+       "high": 143000,
+       "note": "5 nights (4 conference days + 1), hostel/university housing to a mid-range Poznań hotel",
+       "grounded": false
+      },
+      "visa": {
+       "low": 35000,
+       "high": 45000,
+       "note": "Schengen short-stay visa fee (EUR 90) plus a typical VFS service charge",
+       "grounded": true,
+       "source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en"
+      }
+     },
+     "assumptions": [
+      "USD to PKR 277.28, and USD to EUR 0.8706 (so PKR to EUR ~318.4), both as of 2026-09-18 (open.er-api.com)",
+      "No registration fee is published for this 2027 edition; range is a generic academic-conference estimate",
+      "Travel and accommodation are heuristic ranges, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "Both ends of the range fit under her PKR 600,000 cap even before any funding. If the HEC travel grant comes through, most of it would be reimbursed."
+    }
+   },
+   {
+    "id": "msa-lund-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "MSA Lund 2027 (Memory Studies Association Annual Conference)",
+    "host": "Memory Studies Association",
+    "host_kind": "learned_society",
+    "theme": "Memory, responsibility, hope",
+    "description": "The Memory Studies Association's annual conference will be held at Lund University, Sweden, from 14 to 18 June 2027 on the theme 'Memory, responsibility, hope'. Confirmed keynote speakers include Pumla Gobodo-Madikizela, Emilie Pine and Oksana Zabuzhko. A separate postgraduate preconference workshop, MSA Forward, runs 13-14 June 2027 in Copenhagen and Lund (extracted separately). Registration fees and detailed travel-grant procedures had not yet been published at the time of extraction.",
+    "location": {
+     "city": "Lund",
+     "country": "Sweden",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-06-14",
+     "end": "2027-06-18"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-10-15",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "PLEASE SUBMIT PROPOSALS NO LATER THAN 15 OCTOBER 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No membership or career-stage restrictions stated on the page."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "MSA Lund 2027 travel grants and fee waivers",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": null,
+      "deadline": null,
+      "cycle": "Details not yet published as of extraction; likely opens after abstract acceptance",
+      "requires": "Likely an accepted proposal, though the exact application process is not yet posted",
+      "eligible": "check",
+      "why": "The conference page confirms grants exist but gives no amount, eligibility or deadline yet.",
+      "grounded": true,
+      "source_quote": "A limited number of travel grants and fee waivers will be available for the conference.",
+      "source_url": "https://msalund2027.dryfta.com/grants",
+      "sequence_note": "Submit an abstract by 15 Oct 2026; watch the grants page for details, which usually open after acceptance."
+     },
+     {
+      "name": "Charles Wallace Pakistan Trust — Visiting Fellowship / doctoral bursaries",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "IASH-style award: ~GBP 1,600/month living costs plus GBP 1,250 towards airfare/visa (cited for scale; a conference-only trip would need a smaller, separate travel award if one exists)",
+      "deadline": null,
+      "cycle": "Both 2026 cycles found (IASH: closed 27 Feb 2026; general Visiting Fellowship: closed 5 Jun 2026) are already closed; a 2027 round should open on a similar annual schedule",
+      "requires": "Completed doctorate for the flagship Fellowship (not yet true for her); doctoral-bursary terms not independently confirmed",
+      "eligible": "check",
+      "why": "A real UK-Pakistan trust for her nationality, but the main award needs a finished PhD — worth checking whether a doctoral-bursary variant fits a final-year candidate.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://www.britishcouncil.pk/study-uk/scholarships-funding/charles-wallace-visiting-fellowship-programme",
+      "sequence_note": "Not tied to this conference's dates; would need its own, separate application timeline."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Keynote speakers confirmed: Pumla Gobodo-Madikizela, Emilie Pine, Oksana Zabuzhko",
+      "grounded": true,
+      "source_url": "https://msalund2027.dryfta.com/"
+     }
+    ],
+    "source_url": "https://msalund2027.dryfta.com/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [
+     {
+      "name": "MSA Lund 2027 travel grants and fee waivers",
+      "type": "travel_scholarship",
+      "deadline": null,
+      "amount_note": null,
+      "eligibility_notes": "Details not yet published as of extraction date.",
+      "grounded": true,
+      "source_quote": "A limited number of travel grants and fee waivers will be available for the conference.",
+      "source_url": "https://msalund2027.dryfta.com/grants"
+     }
+    ],
+    "priority": {
+     "score": 68,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1538,
+      "outcomes": 0.2308,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 88,
+       "reason": "The 2027 theme 'memory, responsibility, hope' speaks almost directly to her question of how Partition memory is carried and passed down through generations of women in Punjab."
+      },
+      "standing": {
+       "score": 72,
+       "reason": "The Memory Studies Association's own flagship conference, with confirmed keynotes (Pumla Gobodo-Madikizela, Emilie Pine, Oksana Zabuzhko), though this is a young society without decades of editions."
+      },
+      "network": {
+       "score": 78,
+       "reason": "This is the main yearly gathering for memory-studies scholars worldwide, plus a postgraduate preconference (MSA Forward) that's a strong fit for a PhD candidate looking for feedback."
+      },
+      "outcomes": {
+       "score": 70,
+       "reason": "No stated proceedings or special-issue route yet, but presenting to the field's flagship memory-studies audience is exactly the kind of feedback she says she needs on her last chapters."
+      },
+      "feasibility": {
+       "score": 45,
+       "reason": "The realistic cost (up to roughly PKR 714,000) is over her PKR 600,000 cap on the high end, needs a Schengen visa, and no travel-grant amount is confirmed yet — though a limited grant/fee-waiver programme does exist."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.88,
+     "rationale": "MSA Lund 2027's theme, 'memory, responsibility, hope,' is close to a direct restatement of her core question: how Partition memory is held, and passed down, across generations of Punjabi women. It sits squarely in memory studies, one of her named adjacent fields, and would put her dissertation in front of the exact community that studies intergenerational and traumatic memory as its main subject.",
+     "matched_topics": [
+      "intergenerational memory",
+      "women and memory",
+      "Punjab 1947"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "The theme is almost a direct description of her core research question about memory passed down between generations.",
+     "It's the main yearly gathering for memory-studies scholars, with a postgraduate preconference for feedback.",
+     "The abstract deadline (15 Oct 2026) is still open."
+    ],
+    "watch_out": [
+     "Sweden is expensive and needs a Schengen visa; the realistic high-end cost is over her PKR 600,000 budget cap.",
+     "The conference's own travel grants and fee waivers exist but have no published amount or process yet."
+    ],
+    "tagline": "The memory-studies flagship, and its theme almost describes her thesis — but Europe is expensive.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage, nationality or membership restrictions were stated on the page; the abstract deadline (15 Oct 2026) is open for submission.",
+    "visa": {
+     "required": "yes",
+     "note": "A Schengen short-stay visa would be needed to attend in Sweden. This is general information, not immigration advice — confirm current requirements with the Swedish embassy/consulate or visa centre serving Pakistan.",
+     "official_source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en",
+     "verify_flag": true,
+     "lead_days": 30
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "verified"
+    },
+    "cost_estimate": {
+     "currency": "PKR",
+     "low": 344000,
+     "high": 714000,
+     "breakdown": {
+      "registration": {
+       "low": 25000,
+       "high": 80000,
+       "note": "Fees not yet published on the conference site; using a typical academic-conference student-rate range (~USD 90-300)",
+       "grounded": false
+      },
+      "travel": {
+       "low": 208000,
+       "high": 360000,
+       "note": "Lahore-Lund return via a European hub, booked 8-10 weeks ahead; heuristic estimate, no live fare search run",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 76000,
+       "high": 229000,
+       "note": "6 nights (5 conference days + 1), hostel/university housing to a mid-range Lund hotel",
+       "grounded": false
+      },
+      "visa": {
+       "low": 35000,
+       "high": 45000,
+       "note": "Schengen short-stay visa fee (EUR 90) plus a typical VFS service charge",
+       "grounded": true,
+       "source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en"
+      }
+     },
+     "assumptions": [
+      "USD to PKR 277.28, and USD to EUR 0.8706 (so PKR to EUR ~318.4), both as of 2026-09-18 (open.er-api.com)",
+      "Registration fee is not yet published for this 2027 edition; range is a generic academic-conference estimate, not this event's actual fee",
+      "Travel and accommodation are heuristic ranges, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": true,
+     "net_note": "The high end runs well past her PKR 600,000 cap, mainly because of European flights and hotel nights. If MSA's travel grants or fee waivers come through, or if the Charles Wallace Trust has a fitting doctoral award, the real out-of-pocket cost would drop a lot — but neither is confirmed yet."
+    }
+   },
+   {
+    "id": "saexchanges-si-empires-echo",
+    "type": "journal_call",
+    "status": "open",
+    "title": "\"Empires' Echo: Colonial Legacies in Postcolonial South Asia\" — Special Issue, Journal of South Asian Exchanges",
+    "host": "Journal of South Asian Exchanges",
+    "host_kind": "publisher",
+    "theme": "Empires' Echo: Colonial Legacies in Postcolonial South Asia",
+    "description": "A special-issue call (Volume 3, Number 2) from the Journal of South Asian Exchanges, a peer-reviewed, open-access journal covering the arts, history, society and politics of the South Asian region. The issue seeks work on colonial impacts on South Asian societies — bureaucratic structures, education systems, economic models and cultural representation — from interdisciplinary and marginalized-perspective approaches. It is fully online; there is no venue, travel or in-person component.",
+    "location": {
+     "city": "—",
+     "country": "—",
+     "format": "online"
+    },
+    "dates": {
+     "start": null,
+     "end": null
+    },
+    "deadlines": [
+     {
+      "label": "full_paper",
+      "date": "2026-10-15",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Full Paper Submission Deadline: October 15, 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No explicit eligibility restrictions found; the call welcomes original, interdisciplinary submissions, including marginalized perspectives. No article-processing charge or author fee was found on the site."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Peer-reviewed, open-access journal publishing four issues a year, indexed in Google Scholar and Crossref (E-ISSN 3048-8877); currently on Volume 3, suggesting a young but active title.",
+      "grounded": true,
+      "source_url": "https://saexchanges.com/"
+     }
+    ],
+    "source_url": "https://saexchanges.com/call-for-papers/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "Call explicitly targets publication in December 2026 with a submission deadline in October 2026 — current."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 66,
+     "weights": {
+      "fit": 0.3182,
+      "standing": 0.2273,
+      "outcomes": 0.2727,
+      "feasibility": 0.1818
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 65,
+       "reason": "The issue's theme, colonial legacies in postcolonial South Asia, is plausible territory for a Partition chapter with the right framing, though the call's own focus (bureaucratic, education and economic legacies) is broader than her specific women's-oral-history angle."
+      },
+      "standing": {
+       "score": 40,
+       "reason": "A peer-reviewed, open-access journal indexed in Google Scholar and Crossref, but it's a young title (currently on Volume 3) from a smaller publisher, with no long track record found — limited information."
+      },
+      "network": {
+       "score": null,
+       "reason": null
+      },
+      "outcomes": {
+       "score": 65,
+       "reason": "A fast, concrete publication credit (target publication December 2026) that fits her stated goal of a publication before she finishes, though the venue isn't yet a highly established one."
+      },
+      "feasibility": {
+       "score": 100,
+       "reason": "Free, fully online, and the 15 Oct 2026 deadline is a comfortable 26 days out — nothing here limits her ability to submit."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.65,
+     "rationale": "The special issue's theme of colonial legacies in postcolonial South Asia is a plausible frame for a chapter on Partition and its long afterlife in family memory, but the call's stated interests (bureaucratic structures, education systems, economic models) sit a step away from her specific focus on women's oral testimony — a fit that would need active framing rather than a direct match.",
+     "matched_topics": [
+      "South Asian history",
+      "Punjab 1947"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's free, fully online, and the deadline (15 Oct 2026) is still open.",
+     "A publication credit before she finishes her PhD is one of her stated goals, and this is a fast, low-risk route to one.",
+     "The theme (colonial legacies in South Asia) is broad enough to fit her Partition work with the right framing."
+    ],
+    "watch_out": [
+     "It's a young, newer journal (Volume 3) without a long track record, so it carries less weight than an established one.",
+     "The theme is broader than her specific focus, so the paper would need careful framing to fit."
+    ],
+    "tagline": "A free, open, fast-turnaround publication route — if the framing fits.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage, nationality or other restrictions were found on the call or the journal's site.",
+    "visa": {
+     "required": "no",
+     "note": "Fully online; no travel or visa is needed.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "PKR",
+     "low": 0,
+     "high": 0,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 0,
+       "note": "No article-processing charge or author fee was found on the journal's site",
+       "grounded": false
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "Fully online; no travel required",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Fully online; no accommodation required",
+       "grounded": true
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Fully online; no visa required",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "USD to PKR 277.28 as of 2026-09-18 (open.er-api.com); not actually needed here since no cost was found",
+      "This is a journal special issue with no in-person component"
+     ],
+     "over_budget": false,
+     "net_note": "There is no real cost — it's a free online submission."
+    }
+   },
+   {
+    "id": "sai-heidelberg-scholarship",
+    "type": "fellowship",
+    "status": "open",
+    "title": "Joint Scholarship Programme of the South Asia Institute, Heidelberg University and the Max Weber Forum for South Asian Studies Delhi",
+    "host": "South Asia Institute, Heidelberg University",
+    "host_kind": "university",
+    "theme": "South Asian studies research (ethnology, history, political science, economics, geography, modern languages and literatures of South Asia, and cultural/religious history)",
+    "description": "The South Asia Institute at Heidelberg University, jointly with the Max Weber Forum for South Asian Studies Delhi, offers a scholarship for young researchers from India, Nepal, Pakistan, Sri Lanka or Bangladesh to spend a three-month research stay in Heidelberg. The programme covers international travel, a monthly stipend, and accommodation costs. The application deadline is 1 December 2026, with the scholarship period starting in April or June 2027. Applications must be submitted via an online portal only; emailed applications are not considered.",
+    "location": {
+     "city": "Heidelberg",
+     "country": "Germany",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": null,
+     "end": null
+    },
+    "deadlines": [
+     {
+      "label": "scholarship",
+      "date": "2026-12-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "The application deadline is 01 December 2026, 23:59 CET"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [
+      "young researcher"
+     ],
+     "nationality": "India, Nepal, Pakistan, Sri Lanka, or Bangladesh",
+     "region_restriction": "Applicants must be nationals of India, Nepal, Pakistan, Sri Lanka or Bangladesh",
+     "membership_required": false,
+     "notes": "Fields of interest include ethnology, history, political science, economics, geography, modern languages and literatures of South Asia, and cultural/religious history. Scholarship period starts in April and June 2027 (exact start dates per cohort not specified on the page). Applications must be made through the online portal; the page states 'We cannot consider applications sent by email.'"
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "Travel expense reimbursement (SAI/Max Weber Forum joint scholarship)",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Reimbursement of international travel expenses of up to EUR 1,500",
+      "deadline": "2026-12-01",
+      "cycle": "One-off, tied to the scholarship award",
+      "requires": "Selection as a scholarship recipient",
+      "eligible": "likely",
+      "why": "Built into the award itself for Pakistani applicants; she just needs to be selected.",
+      "grounded": true,
+      "source_quote": "reimbursement of international travel expenses of up to EUR 1,500",
+      "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university",
+      "sequence_note": "Apply by 1 Dec 2026; travel is booked and reimbursed only after the award and stay are confirmed."
+     },
+     {
+      "name": "Monthly scholarship stipend and accommodation",
+      "source": "venue",
+      "type": "bursary",
+      "amount_note": "Monthly instalment of EUR 1,200 plus rental/accommodation costs, for a 3-month stay",
+      "deadline": "2026-12-01",
+      "cycle": "One-off, tied to the scholarship award",
+      "requires": "Selection as a scholarship recipient",
+      "eligible": "likely",
+      "why": "Covers living costs and rent directly, so there is no separate accommodation bill to budget for if awarded.",
+      "grounded": true,
+      "source_quote": "monthly scholarship instalment of EUR 1,200",
+      "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university",
+      "sequence_note": "Same 1 Dec 2026 deadline as the travel reimbursement; both come from the same award."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [],
+    "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [
+     {
+      "name": "Travel expense reimbursement",
+      "type": "travel_scholarship",
+      "deadline": "2026-12-01",
+      "amount_note": "Reimbursement of international travel expenses of up to EUR 1,500",
+      "eligibility_notes": "Awarded to selected scholarship recipients as part of the joint scholarship programme.",
+      "grounded": true,
+      "source_quote": "reimbursement of international travel expenses of up to EUR 1,500",
+      "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university"
+     },
+     {
+      "name": "Monthly scholarship stipend and accommodation",
+      "type": "bursary",
+      "deadline": "2026-12-01",
+      "amount_note": "Monthly scholarship instalment of EUR 1,200, plus payment of rental/accommodation costs, for a three-month stay",
+      "eligibility_notes": "Awarded to selected scholarship recipients as part of the joint scholarship programme.",
+      "grounded": true,
+      "source_quote": "monthly scholarship instalment of EUR 1,200",
+      "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university"
+     }
+    ],
+    "priority": {
+     "score": 79,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1538,
+      "outcomes": 0.2308,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 82,
+       "reason": "It's a South Asian studies research fellowship explicitly open to young researchers from Pakistan, and its listed fields (history, cultural/religious history) are a clear home for her Partition dissertation, even though no track names her specific sub-topic."
+      },
+      "standing": {
+       "score": 70,
+       "reason": "A joint programme between a university South Asia Institute and a named partner (Max Weber Forum Delhi) with a specific, funded structure — a credible, established scheme, though no long track record or past-fellow list was found."
+      },
+      "network": {
+       "score": 80,
+       "reason": "A 3-month, small-cohort research stay abroad is exactly the sustained, close contact with senior South Asianist scholars that a short conference visit can't offer."
+      },
+      "outcomes": {
+       "score": 78,
+       "reason": "Three uninterrupted months to work on her dissertation with access to Heidelberg's South Asia scholars is a direct match for her stated goal of feedback on her last chapters before finishing."
+      },
+      "feasibility": {
+       "score": 88,
+       "reason": "Travel is reimbursed and accommodation is fully covered if awarded, the deadline (1 Dec 2026) isn't tight, and the only clear out-of-pocket item is the visa fee."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.82,
+     "rationale": "This scholarship is explicitly open to young researchers from Pakistan working in South Asian studies fields including history and cultural/religious history — a direct nationality and disciplinary match. A 3-month stay to work through her last chapters with feedback from Heidelberg's and Delhi's South Asianists lines up closely with her stated goal of getting feedback before she finishes, even though the call doesn't name Partition oral history as its own track.",
+     "matched_topics": [
+      "South Asian history",
+      "Punjab 1947"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It names Pakistan explicitly as an eligible nationality — this isn't a maybe.",
+     "Three months of dedicated writing time with feedback from South Asianist scholars is exactly what she says she needs before finishing.",
+     "Travel and accommodation are largely paid for if she's selected, so the real cost is much lower than a normal trip abroad."
+    ],
+    "watch_out": [
+     "It's a scholarship, not a guaranteed spot — selection is competitive and not stated as automatic.",
+     "Applications must go through the online portal only; the page says emailed applications aren't considered."
+    ],
+    "tagline": "A funded 3-month South Asian studies stay in Germany, open to Pakistani researchers, built for exactly the feedback she needs.",
+    "eligible": "yes",
+    "eligibility_notes": "The call explicitly lists Pakistan among the eligible nationalities and \"young researchers\" among eligible career stages; a final-year PhD candidate fits.",
+    "visa": {
+     "required": "yes",
+     "note": "A 3-month stay in Germany needs a German national (long-stay/Type D) visa, not a short-stay Schengen visa. This is general information, not immigration advice — confirm current requirements with the German embassy/consulate serving Pakistan.",
+     "official_source": "https://www.auswaertiges-amt.de/en/visa-service",
+     "verify_flag": true,
+     "lead_days": 60
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "verified"
+    },
+    "cost_estimate": {
+     "currency": "PKR",
+     "low": 222000,
+     "high": 368000,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 0,
+       "note": "This is a research fellowship, not a conference — there is no registration or attendance fee",
+       "grounded": true
+      },
+      "travel": {
+       "low": 194000,
+       "high": 333000,
+       "note": "Lahore-Frankfurt/Heidelberg return, booked 8-10 weeks ahead; heuristic estimate, no live fare search run — largely reimbursable up to EUR 1,500 if awarded",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Rental/accommodation costs for the 3-month stay are paid by the scholarship itself if awarded",
+       "grounded": true
+      },
+      "visa": {
+       "low": 28000,
+       "high": 35000,
+       "note": "German long-stay (national/Type D) visa fee for a 3-month research stay, plus a typical VFS service charge",
+       "grounded": false
+      }
+     },
+     "assumptions": [
+      "USD to PKR 277.28, and USD to EUR 0.8706 (so PKR to EUR ~318.4), both as of 2026-09-18 (open.er-api.com)",
+      "Travel and visa figures are pre-reimbursement, out-of-pocket estimates; travel is heuristic (no live fare search run)",
+      "Accommodation and the monthly stipend are covered directly by the scholarship, so they aren't a cost to her",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "If awarded, the scholarship's own travel reimbursement (up to EUR 1,500 ≈ PKR 478,000) covers the flight and then some, and the monthly stipend covers rent and living costs for the 3 months — so her real risk is mainly the up-front visa fee and having to float the airfare until reimbursed."
+    }
+   },
+   {
+    "id": "wcws-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "World Conference on Women's Studies 2027 (WCWS 2027)",
+    "host": "TIIKM (The International Institute of Knowledge Management)",
+    "host_kind": "for_profit",
+    "theme": null,
+    "description": "WCWS 2027 is a for-profit, TIIKM-organised conference on women's and gender studies, to be held May 26-28, 2027 at the Angkor Paradise Hotel in Siem Reap, Cambodia, with physical and virtual registration options. TIIKM runs a near-identical 'World Conference on Women's Studies' annually in a different city (a 2026 edition also exists), and sibling TIIKM events (Future of Women Conference, World Conference on Gender and Women's Studies) follow the same template — a pattern consistent with a for-profit, high-volume conference organiser rather than a single learned society's meeting.",
+    "location": {
+     "city": "Siem Reap",
+     "country": "Cambodia",
+     "format": "hybrid"
+    },
+    "dates": {
+     "start": "2027-05-26",
+     "end": "2027-05-28"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-11-19",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Abstract Submission Closes, 19th November 2026"
+     },
+     {
+      "label": "early_bird",
+      "date": "2027-01-20",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Early Bird Registration Closes, 20th January 2027"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No named academic programme committee, host institution or society was found on the pages checked. Registration categories (oral presenter, poster presenter, attendee, physical/virtual) are listed, but no fee amounts were published on the pages checked."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "TIIKM Scholarship Program",
+      "source": "venue",
+      "type": "bursary",
+      "amount_note": null,
+      "deadline": null,
+      "cycle": "Unknown",
+      "requires": "Unknown",
+      "eligible": "check",
+      "why": "Mentioned on the site with no amount, eligibility or deadline given — can't be relied on.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://womenstudies.tiikm.com/",
+      "sequence_note": "Nothing to sequence against yet; would need direct contact with the organiser to get real terms."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [],
+    "source_url": "https://womenstudies.tiikm.com/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": true,
+    "predatory_reasons": [
+     "For-profit organiser (TIIKM) running near-identical 'World Conference on Women's Studies' events annually in different cities (a WCWS 2026 edition runs alongside this WCWS 2027 one)",
+     "Sibling TIIKM conferences on nearly the same theme (Future of Women Conference 2027, 5th World Conference on Gender and Women's Studies 2027) follow the same recurring template",
+     "No registration fee amounts published despite a live abstract deadline, and no named programme committee or institutional co-host found"
+    ],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "Deadlines and dates on the page are dated 2026-2027 and consistent with a live, current call."
+    },
+    "venue_funding": [
+     {
+      "name": "TIIKM Scholarship Program",
+      "type": "bursary",
+      "deadline": null,
+      "amount_note": null,
+      "eligibility_notes": "Mentioned under the site's 'Expanded Opportunities' section with no amount, eligibility criteria, or deadline given on the pages checked.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://womenstudies.tiikm.com/"
+     }
+    ],
+    "priority": {
+     "score": 30,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1538,
+      "outcomes": 0.2308,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 55,
+       "reason": "Her 'women and memory' topic sits in gender studies, one of her adjacent fields, but the call itself is generic ('gender equality and women's issues'), not aimed at memory, oral history or South Asia specifically."
+      },
+      "standing": {
+       "score": 15,
+       "reason": "Capped: this is a for-profit organiser (TIIKM) running a near-identical 'World Conference on Women's Studies' every year in a different city, with no named programme committee or institutional co-host found."
+      },
+      "network": {
+       "score": 25,
+       "reason": "A generic, high-volume, all-topics-in-one-theme conference gives little confidence of a focused community she'd actually build lasting ties with."
+      },
+      "outcomes": {
+       "score": 20,
+       "reason": "No indexed proceedings, no confirmed publication route, and an unspecified 'scholarship program' with no real detail — little to point to afterward."
+      },
+      "feasibility": {
+       "score": 90,
+       "reason": "The realistic cost fits under her budget even unfunded and there's no unusual visa barrier, though May isn't one of her listed available months."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.55,
+     "rationale": "Gender studies is one of her named adjacent fields, and 'women and memory' is one of her own weighted topics, so there's a real thread connecting her work to this conference's broad theme. But the call is generic and not aimed at memory, oral history or South Asia, so the fit depends heavily on how she frames a submission, and the venue itself carries real quality risk (see standing).",
+     "matched_topics": [
+      "women and memory"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "Gender studies is one of her adjacent fields, and this venture is genuinely outside her usual circle — a real exploration pick.",
+     "The cost, even fully out of pocket, fits under her budget cap.",
+     "The abstract deadline (19 Nov 2026) is still open."
+    ],
+    "watch_out": [
+     "This is flagged as a likely conference-mill event: the organiser (TIIKM) runs a near-identical 'World Conference on Women's Studies' every year in a different city, with no named academic committee found.",
+     "No registration fee is published despite a live deadline, and the 'scholarship program' mentioned has no real details."
+    ],
+    "tagline": "A genuine exploration into gender studies — but this specific venue looks like a conference mill; go in with eyes open.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage, nationality or other eligibility restriction was found; the concern here is the venue's quality and legitimacy, not her eligibility to attend.",
+    "visa": {
+     "required": "yes",
+     "note": "Cambodia offers an e-visa for Pakistani passport holders. This is general information, not immigration advice — confirm current requirements on Cambodia's official e-visa portal.",
+     "official_source": "https://www.evisa.gov.kh/",
+     "verify_flag": true,
+     "lead_days": 14
+    },
+    "explore": true,
+    "explore_reason": "Gender studies is an adjacent field for her, not one of her two primary fields, and this specific call shares almost no wording with her actual topics (Partition, oral history, Punjab) — a genuine venture outside her usual circle, shown here mainly so she can see it and judge the risk herself.",
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "PKR",
+     "low": 248000,
+     "high": 479000,
+     "breakdown": {
+      "registration": {
+       "low": 83000,
+       "high": 139000,
+       "note": "No fee amount published on the pages checked; using a typical range seen at similar TIIKM-style conferences (~USD 300-500)",
+       "grounded": false
+      },
+      "travel": {
+       "low": 139000,
+       "high": 250000,
+       "note": "Lahore-Siem Reap return via Bangkok or Kuala Lumpur, booked 8-10 weeks ahead; heuristic estimate, no live fare search run",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 17000,
+       "high": 78000,
+       "note": "4 nights (3 conference days + 1), budget guesthouse to the conference hotel (Angkor Paradise) in Siem Reap",
+       "grounded": false
+      },
+      "visa": {
+       "low": 9000,
+       "high": 12000,
+       "note": "Cambodia e-visa fee for a Pakistani passport holder, typically around USD 30-36; not independently verified against the official portal in this run",
+       "grounded": false
+      }
+     },
+     "assumptions": [
+      "USD to PKR 277.28 as of 2026-09-18 (open.er-api.com)",
+      "No registration fee is published for this event; range is a heuristic based on similar-style conferences, not a confirmed figure",
+      "Travel, accommodation and visa figures are heuristic estimates, not a live fare/hotel/visa-fee search",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "Southeast Asia keeps this under her PKR 600,000 cap even with no funding confirmed — but nothing here is grounded in a published fee, so treat the whole range as rough."
+    }
+   }
+  ]
+ },
+ {
+  "id": "p_putri",
+  "gathered_at": "2026-09-19",
+  "profile": {
+   "id": "p_putri",
+   "name": "Putri Rahmawati",
+   "fictional": true,
+   "input_text": "Independent researcher in Yogyakarta building a digital archive of Islamic popular music and zines from the 1990s. I am not attached to a university and need things I can join without institutional funding, ideally online or in Asia.",
+   "orcid": null,
+   "affiliation": "Independent researcher and archivist, Yogyakarta",
+   "career_stage": "independent",
+   "year": null,
+   "research_summary": "Digital archiving of 1990s Indonesian Islamic popular music and zines.",
+   "topics": [
+    {
+     "term": "digital archives",
+     "weight": 0.95
+    },
+    {
+     "term": "Islamic popular culture",
+     "weight": 0.85
+    },
+    {
+     "term": "Indonesian music and zines",
+     "weight": 0.8
+    },
+    {
+     "term": "community archiving",
+     "weight": 0.7
+    },
+    {
+     "term": "Southeast Asian media",
+     "weight": 0.6
+    }
+   ],
+   "fields": [
+    "Southeast Asian studies",
+    "media studies"
+   ],
+   "adjacent_fields": [
+    "digital humanities",
+    "archival studies",
+    "popular music studies"
+   ],
+   "citation_neighborhood": [
+    {
+     "name": "Ariel Heryanto",
+     "inferred": true
+    },
+    {
+     "name": "Emma Baulch",
+     "inferred": true
+    },
+    {
+     "name": "Bart Barendregt",
+     "inferred": true
+    }
+   ],
+   "geography": {
+    "country": "Indonesia",
+    "city": "Yogyakarta",
+    "passport": "Indonesia"
+   },
+   "currency": "IDR",
+   "constraints": {
+    "max_cost": 20000000,
+    "months_available": [
+     "Jan",
+     "Feb",
+     "Jul",
+     "Aug",
+     "Oct",
+     "Nov"
+    ],
+    "visa_tolerance": "prefer_none",
+    "format": "any"
+   },
+   "goals": [
+    "low_cost",
+    "networking",
+    "visibility"
+   ],
+   "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+   ],
+   "profile_type": "academic"
+  },
+  "meta": {
+   "fields": 2,
+   "adjacent": 3,
+   "searches": 16,
+   "candidates": 7,
+   "extracted": 6,
+   "funding": 0,
+   "grounded_pass": 16,
+   "grounded_total": 17
+  },
+  "opportunities": [
+   {
+    "id": "aicis-2026",
+    "type": "conference",
+    "status": "open",
+    "title": "AICIS+ 2026: 25th Annual International Conference on Islam, Science, and Society",
+    "host": "UIN Siber Syekh Nurjati Cirebon",
+    "host_kind": "university",
+    "theme": "Revitalizing Islamic Civilization for Sustainable Life: Local Heritage, Technological Innovation, and Human Flourishing",
+    "description": "AICIS+ is Indonesia's flagship annual Islamic-studies conference, organized by Indonesia's Ministry of Religious Affairs together with a different host university each year. The 2026 (25th) edition is hosted by UIN Siber Syekh Nurjati Cirebon in Cirebon, West Java, from 17-20 November 2026, with a theme on Islamic civilization, local heritage and technological innovation. No fee amounts or travel-funding pages were found from the main page.",
+    "location": {
+     "city": "Cirebon, West Java",
+     "country": "Indonesia",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2026-11-17",
+     "end": "2026-11-20"
+    },
+    "deadlines": [
+     {
+      "label": "full_paper",
+      "date": "2026-10-20",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "20 October 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No career-stage, nationality or membership restrictions were stated. No registration fee amount is published on the homepage; a separate registration page is referenced but not linked from the main page found."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "25th Annual International Conference on Islam, Science, and Society, run in partnership with Indonesia's Ministry of Religious Affairs",
+      "grounded": true,
+      "source_url": "https://aicis.uinssc.ac.id/"
+     }
+    ],
+    "source_url": "https://aicis.uinssc.ac.id/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "Page is specifically for the 2026 (25th) edition, with dates and deadlines in Oct-Nov 2026."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 75,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1154,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 78,
+       "reason": "The 2026 theme, 'local heritage, technological innovation', is a natural home for her Islamic-popular-culture archiving project, even though it's broader than music or zines specifically."
+      },
+      "standing": {
+       "score": 60,
+       "reason": "25th annual edition run jointly with Indonesia's Ministry of Religious Affairs shows real institutional continuity, but no proceedings-indexing or keynote information was found (limited information)."
+      },
+      "network": {
+       "score": 75,
+       "reason": "As Indonesia's flagship Islamic-studies conference, it's a strong place to meet the country's Islamic-studies and religious-affairs research community, directly relevant to her fieldwork."
+      },
+      "outcomes": {
+       "score": 50,
+       "reason": "No confirmed proceedings or journal route was found; the outcome is mainly feedback and a CV line from presenting at a major national conference (limited information)."
+      },
+      "feasibility": {
+       "score": 95,
+       "reason": "Domestic travel within Indonesia, no visa needed, cost far under her budget cap, and November is one of her available months."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.78,
+     "rationale": "AICIS+ 2026's theme of local heritage and technological innovation gives her Islamic-popular-music-and-zine archiving project a plausible, on-topic home at Indonesia's largest annual Islamic-studies gathering, even though the call is not specifically about music, zines or digital archives.",
+     "matched_topics": [
+      "Islamic popular culture",
+      "digital archives"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's Indonesia's biggest annual Islamic-studies conference, and 'local heritage and technological innovation' fits her archiving project.",
+     "It's in Cirebon, a short domestic trip from Yogyakarta -- no visa, no long flight.",
+     "The paper deadline (20 October 2026) is still open."
+    ],
+    "watch_out": [
+     "No fee or funding page was found, so the registration cost here is a rough guess, not confirmed.",
+     "There's no confirmed proceedings or publication route -- worth checking with the organizers if that matters to her."
+    ],
+    "tagline": "Indonesia's flagship Islamic-studies conference, a short domestic trip with real thematic overlap.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage, nationality or membership restrictions were stated, and the paper deadline is still open.",
+    "visa": {
+     "required": "no",
+     "note": "Domestic conference within Indonesia; no visa is needed.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "IDR",
+     "low": 1150000,
+     "high": 2950000,
+     "breakdown": {
+      "registration": {
+       "low": 300000,
+       "high": 750000,
+       "note": "No fee page was found; range assumes a typical Indonesian domestic academic conference registration fee, unconfirmed",
+       "grounded": false
+      },
+      "travel": {
+       "low": 250000,
+       "high": 600000,
+       "note": "Yogyakarta-Cirebon return by train or budget flight, booked a few weeks ahead (no live fare search run)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 600000,
+       "high": 1600000,
+       "note": "4 nights (3 conference days + 1), budget guesthouse to mid-range hotel in Cirebon",
+       "grounded": false
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Domestic conference within Indonesia; no visa needed",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com); not directly used since this is a domestic Indonesian trip, but kept consistent with the other briefs in this run",
+      "No fee, travel-grant or accommodation page was found on the conference site; travel and accommodation are heuristic domestic-Indonesia estimates, not a live fare/hotel search",
+      "Excludes meals, local transport and incidental costs"
+     ],
+     "over_budget": false,
+     "net_note": "Even at the high end this is well under her IDR 20,000,000 cap; it's one of the cheapest options in her feed."
+    }
+   },
+   {
+    "id": "amic-2026",
+    "type": "conference",
+    "status": "open",
+    "title": "32nd AMIC Annual International Conference 2026",
+    "host": "Asian Media Information and Communication Centre (AMIC)",
+    "host_kind": "learned_society",
+    "theme": null,
+    "description": "The 32nd Annual International Conference of the Asian Media Information and Communication Centre (AMIC), the region's main learned society for media and communication research, will be held 5-7 November 2026 in Manila, Philippines. AMIC is inviting abstract submissions for parallel sessions, with accepted full papers published in an open-access conference proceedings that the organizers intend to get Scopus-indexed. No registration fee amount or travel-grant page was found from the call-for-abstracts page itself.",
+    "location": {
+     "city": "Manila",
+     "country": "Philippines",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2026-11-05",
+     "end": "2026-11-07"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-09-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "30 September 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No career-stage, nationality or membership restrictions stated. No fee or funding information found on the call-for-abstracts page."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "32nd Annual International Conference, indicating an established, continuously running annual series",
+      "grounded": true,
+      "source_url": "https://amic.asia/2026-call-for-abstracts/"
+     }
+    ],
+    "source_url": "https://amic.asia/2026-call-for-abstracts/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "Page is specifically for the 2026 edition, dated 5-7 November 2026."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 74,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1154,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 68,
+       "reason": "AMIC is the main regional media-and-communication-research conference in Asia; her digital-archiving and Southeast-Asian-media work fits its general scope, but no specific 2026 theme was published to check a tighter match (limited information)."
+      },
+      "standing": {
+       "score": 68,
+       "reason": "A 32nd continuous annual edition and an intent to get proceedings Scopus-indexed are solid continuity signals, though no keynote or programme-committee details were found."
+      },
+      "network": {
+       "score": 72,
+       "reason": "As the region's main media-and-communication-research conference, it's a strong place to meet Southeast Asian media scholars working on digital and community media, close to her own subfield."
+      },
+      "outcomes": {
+       "score": 65,
+       "reason": "Scopus-indexed proceedings, if they go through, would be a genuine CV line, though this hasn't happened yet for the 2026 edition (limited information)."
+      },
+      "feasibility": {
+       "score": 90,
+       "reason": "November is one of her available months and the Philippines needs no visa for Indonesian passport holders, but the 30 September 2026 abstract deadline is now only about 11 days away, adding timeline pressure."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.68,
+     "rationale": "AMIC's status as Asia's main media-and-communication-research conference gives her digital-archiving and Southeast-Asian-media work a plausible home, but without a specific published 2026 theme the match relies more on general disciplinary overlap than a named track.",
+     "matched_topics": [
+      "Southeast Asian media",
+      "digital archives"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's the main regional conference for media and communication research in Asia -- a natural fit for her Southeast-Asian-media work.",
+     "The Philippines is visa-free for Indonesian passport holders and a short regional flight.",
+     "Accepted papers could go into Scopus-indexed proceedings."
+    ],
+    "watch_out": [
+     "The abstract deadline (30 September 2026) is only about 11 days away.",
+     "No 2026 theme, fee amount or funding information was published on the pages found -- some numbers here are estimates."
+    ],
+    "tagline": "Asia's main media-research conference, visa-free and close by -- but the deadline is tight.",
+    "eligible": "yes",
+    "eligibility_notes": "No restrictions stated; open call, but the deadline is close.",
+    "visa": {
+     "required": "no",
+     "note": "Indonesian passport holders may enter the Philippines visa-free for short stays. This is general information, not immigration advice -- confirm current rules before booking.",
+     "official_source": "https://dfa.gov.ph/visa/foreign-visitors-visa-requirement",
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "IDR",
+     "low": 4800000,
+     "high": 12200000,
+     "breakdown": {
+      "registration": {
+       "low": 1800000,
+       "high": 2700000,
+       "note": "No fee page was found; range inferred from typical foreign non-member fees (~USD 100-150) at similar regional Asian media conferences",
+       "grounded": false
+      },
+      "travel": {
+       "low": 1800000,
+       "high": 3500000,
+       "note": "Yogyakarta-Manila return via a regional hub, budget carrier, booked 6-8 weeks ahead (no live fare search run)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 1200000,
+       "high": 6000000,
+       "note": "4 nights (3 conference days + 1), budget hostel to mid-range hotel in Manila",
+       "grounded": false
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Indonesian passport holders can enter the Philippines visa-free for short stays",
+       "grounded": true,
+       "source": "https://dfa.gov.ph/visa/foreign-visitors-visa-requirement"
+      }
+     },
+     "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com)",
+      "No fee, travel-grant or accommodation page was found on the AMIC site; registration, travel and accommodation are heuristic estimates, not a live fare/hotel/fee search",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "Comfortably under her IDR 20,000,000 cap even at the high end; the tight abstract deadline is the bigger constraint here, not cost."
+    }
+   },
+   {
+    "id": "glam-indonesia-grant",
+    "type": "fellowship",
+    "status": "watch",
+    "title": "GLAM Indonesia Grant (Wikimedia Indonesia)",
+    "host": "Wikimedia Indonesia",
+    "host_kind": "foundation",
+    "theme": null,
+    "description": "GLAM Indonesia is Wikimedia Indonesia's annual grant program for researchers, cultural-heritage practitioners, archivists and communities working on Indonesian galleries, libraries, archives and museums, funding digitization and open-access projects. Rounds ran in 2024 and 2025 (the 2025 round closed 3 October 2025 and drew over 180 proposals from 27 provinces), but no 2026 round had been announced yet as of this extraction; a new round is expected on the program's annual cycle.",
+    "location": {
+     "city": "—",
+     "country": "Indonesia",
+     "format": "online"
+    },
+    "dates": {
+     "start": null,
+     "end": null
+    },
+    "deadlines": [],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": "Indonesia",
+     "membership_required": false,
+     "notes": "The 2025 round was open to researchers, arts/culture/heritage practitioners, archivists and communities working in Indonesian GLAM institutions -- a strong match for an independent digital archivist, but no 2026-specific eligibility page has been published yet."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [
+     {
+      "year": 2025,
+      "theme": null,
+      "city": null,
+      "representative_papers": [],
+      "source_url": "https://meta.wikimedia.org/wiki/Grants:Programs/Wikimedia_Community_Fund/General_Support_Fund/Wikimedia_Indonesia_2024%E2%80%932025/Final_Report"
+     }
+    ],
+    "standing_signals": [
+     {
+      "signal": "2025 open call received more than 180 proposals from applicants in 27 Indonesian provinces",
+      "grounded": false,
+      "source_url": "https://outreach.wikimedia.org/wiki/GLAM/Indonesia",
+      "previous_quote": null,
+      "verify_note": "fail_missing: on re-fetch, outreach.wikimedia.org/wiki/GLAM/Indonesia did not show this figure (page content returned only ran through 2019); the '180 proposals / 27 provinces' claim came from a search-result summary rather than a directly fetched, verbatim page quote, so it is downgraded pending a source that actually shows it."
+     }
+    ],
+    "source_url": "https://outreach.wikimedia.org/wiki/GLAM/Indonesia",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2025,
+     "stale": false,
+     "note": "Most recently confirmed round closed 3 Oct 2025. Status is 'watch': a 2026 round is expected annually but not yet confirmed as of 19 Sept 2026."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 73,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1154,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 92,
+       "reason": "This is a grant explicitly for archivists and communities digitizing Indonesian cultural heritage -- as close a match to her actual work as anything in this list."
+      },
+      "standing": {
+       "score": 55,
+       "reason": "Wikimedia Indonesia is a recognized cultural organization and the 2025 round drew over 180 proposals nationally, but this is a small national grant program, not a prestige marker in itself (limited information)."
+      },
+      "network": {
+       "score": 60,
+       "reason": "Grants like this typically create some sustained contact with the funding body and fellow grantees, though no specific cohort activities were described here (limited information)."
+      },
+      "outcomes": {
+       "score": 80,
+       "reason": "A successful grant would fund her actually completing and publishing part of her archive, likely on Wikimedia Commons -- a concrete, visible outcome tied directly to her goals."
+      },
+      "feasibility": {
+       "score": 75,
+       "reason": "Free to apply, with no travel or visa involved, but the 2026 round hasn't been announced yet, so timing is uncertain (status: watch, next round expected around Sep-Oct 2026)."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.92,
+     "rationale": "GLAM Indonesia funds exactly the kind of work she does -- an independent archivist digitizing and opening access to Indonesian cultural heritage -- making it one of the closest matches in her feed, even though it funds a project rather than a single conference.",
+     "matched_topics": [
+      "digital archives",
+      "community archiving",
+      "Indonesian music and zines"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It funds exactly her kind of work: digitizing and opening access to Indonesian cultural heritage.",
+     "It's fully domestic -- no travel, no visa, and applying is free.",
+     "A past round drew applicants from across Indonesia, so there's a real track record."
+    ],
+    "watch_out": [
+     "The 2026 round hasn't been announced yet -- this is a predicted, not confirmed, opportunity.",
+     "It funds a project, not conference attendance, so the payoff is different from the other items in her feed."
+    ],
+    "tagline": "A domestic Indonesian grant that funds her actual archiving work, if a 2026 round opens.",
+    "eligible": "conditional",
+    "eligibility_notes": "Past rounds were open to independent archivists and communities in Indonesia -- a strong match -- but 2026 eligibility criteria haven't been published yet, so this is conditional on the round actually opening.",
+    "visa": {
+     "required": "no",
+     "note": "Domestic Indonesian grant program; no visa is involved.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "inferred",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "IDR",
+     "low": 0,
+     "high": 0,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 0,
+       "note": "Applying to the grant is free; no application fee was found on the program page",
+       "grounded": true
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "No travel needed to apply; the grant funds her project, it isn't an event to attend",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Not applicable",
+       "grounded": true
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Domestic Indonesian program; no visa involved",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com), noted for consistency across this run though not needed here",
+      "This is a grant application, not conference attendance, so the usual travel/accommodation lines don't apply"
+     ],
+     "over_budget": false,
+     "net_note": "Applying costs nothing; if awarded, the grant would fund (not cost) her archiving work, though the exact amount per grant wasn't published."
+    }
+   },
+   {
+    "id": "iaspm-intl-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "IASPM International Conference 2027: \"Pop! Goes the World!!!\"",
+    "host": "International Association for the Study of Popular Music (IASPM)",
+    "host_kind": "learned_society",
+    "theme": "Pop! Goes the World!!!",
+    "description": "The 24th biennial IASPM International Conference, the flagship gathering of the field's main global learned society, will be held 29 November-3 December 2027 at Te Herenga Waka/Victoria University of Wellington, New Zealand. The theme, 'Pop! Goes the World!!!', spans 14 thematic tracks including technology, activism, migration and Indigenous imaginaries in popular music. All presenters must be IASPM members before the conference begins.",
+    "location": {
+     "city": "Wellington",
+     "country": "New Zealand",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-11-29",
+     "end": "2027-12-03"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-12-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Submission deadline: December 1st, 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": true,
+     "notes": "All presenters must be members of IASPM prior to the start of the conference. No fee amount was found on this page."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "24th biennial IASPM International Conference, the field's main global gathering",
+      "grounded": true,
+      "source_url": "https://www.iaspm.net/iaspm-international-conference/"
+     }
+    ],
+    "source_url": "https://www.iaspm.net/iaspm-international-conference/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "Page is specifically for the 2027 Wellington edition and its Dec 2026 submission deadline."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 53,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1154,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 45,
+       "reason": "The conference's global 'pop as world phenomenon' theme is only loosely connected to her specific work archiving 1990s Indonesian Islamic music and zines -- a stretch, though it's the field's main gathering and could work with the right framing."
+      },
+      "standing": {
+       "score": 85,
+       "reason": "The 24th biennial edition of the field's main global learned society is a strong standing signal."
+      },
+      "network": {
+       "score": 65,
+       "reason": "It's the main place globally to meet popular-music-studies scholars, though none of her cited scholars are confirmed as past speakers here (limited information)."
+      },
+      "outcomes": {
+       "score": 45,
+       "reason": "No publication route or proceedings information was found for this edition (limited information)."
+      },
+      "feasibility": {
+       "score": 30,
+       "reason": "Cost is well over her budget even at the low end, a New Zealand visitor visa is likely required against her stated preference to avoid visas, and part of the event (early December) falls outside her available months."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.45,
+     "rationale": "IASPM's global 'Pop! Goes the World' theme shares little specific ground with her narrower project on 1990s Indonesian Islamic popular music and zines, but as the field's flagship venue it could still work for her with careful framing -- the fit here comes from field adjacency rather than a direct topic match.",
+     "matched_topics": [
+      "Indonesian music and zines"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's the main global conference in popular music studies -- a field she'd otherwise never think to search for.",
+     "It's a real chance to put her Indonesian Islamic-music archive in front of an international popular-music-studies audience.",
+     "Submissions are still open (deadline 1 December 2026)."
+    ],
+    "watch_out": [
+     "The total cost is well beyond her budget cap even before adding a New Zealand visa fee.",
+     "A New Zealand visitor visa is likely required, and IASPM membership must be arranged before the conference."
+    ],
+    "tagline": "The world's main popular-music-studies conference -- a genuine stretch on cost, visa and fit.",
+    "eligible": "conditional",
+    "eligibility_notes": "Presenters must become IASPM members before the conference; no other restrictions were stated.",
+    "visa": {
+     "required": "yes",
+     "note": "Indonesian passport holders generally need a New Zealand visitor visa. This is general information, not immigration advice -- confirm current requirements with Immigration New Zealand.",
+     "official_source": "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/visitor-visa",
+     "verify_flag": true,
+     "lead_days": 60
+    },
+    "explore": true,
+    "explore_reason": "Popular music studies is one of her adjacent fields, not her primary discipline, and this conference's global theme has little direct overlap with her specific Islamic-archiving research -- exactly the kind of venue she wouldn't think to search for herself.",
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "verified"
+    },
+    "cost_estimate": {
+     "currency": "IDR",
+     "low": 20811000,
+     "high": 39822000,
+     "breakdown": {
+      "registration": {
+       "low": 2661000,
+       "high": 5322000,
+       "note": "No fee page was found; range inferred from typical biennial IASPM registration fees (~USD 150-300)",
+       "grounded": false
+      },
+      "travel": {
+       "low": 12000000,
+       "high": 19000000,
+       "note": "Yogyakarta/Jakarta-Wellington return, long-haul via Australia or Singapore, booked well ahead; regional heuristic for Indonesia-Australia/NZ routes since no live fare search was run",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 2550000,
+       "high": 11500000,
+       "note": "6 nights (5 conference days + 1), budget hostel to mid-range hotel in Wellington, converted from an estimated NZD 40-180/night",
+       "grounded": false
+      },
+      "visa": {
+       "low": 3600000,
+       "high": 4000000,
+       "note": "New Zealand Visitor Visa fee for an Indonesian passport holder, plus a typical service charge",
+       "grounded": false,
+       "source": "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/visitor-visa"
+      }
+     },
+     "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com)",
+      "Travel, accommodation and visa figures are heuristic estimates, not a live fare/hotel/visa-fee search",
+      "Excludes meals, local transport, insurance and the exact NZ visitor-visa fee (not independently confirmed here)"
+     ],
+     "over_budget": true,
+     "net_note": "Even the low end is above her IDR 20,000,000 cap; this is only realistic with a travel grant, IASPM bursary or institutional support, and none was found for this edition."
+    }
+   },
+   {
+    "id": "islam-nusantara-journal",
+    "type": "journal_call",
+    "status": "open",
+    "title": "Islam Nusantara: Journal for the Study of Islamic History and Culture",
+    "host": "Universitas Nahdlatul Ulama Indonesia (UNUSIA)",
+    "host_kind": "university",
+    "theme": null,
+    "description": "Islam Nusantara is a rolling-submission journal published by UNUSIA on Open Journal Systems, focused on Islamic history, culture and society in the Nusantara (Indonesian archipelago) context. It has no fixed themed call or submission deadline; authors can submit at any time and the journal continues to publish current issues.",
+    "location": {
+     "city": "—",
+     "country": "—",
+     "format": "online"
+    },
+    "dates": {
+     "start": null,
+     "end": null
+    },
+    "deadlines": [],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "Rolling submissions; no fixed deadline stated on the site. A publication-fee page is linked from the site but its amount was not confirmed."
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Actively publishing OJS-hosted journal with an e-ISSN (2722-8975) and continuing current issues/archives",
+      "grounded": true,
+      "source_url": "https://journal.unusia.ac.id/index.php/ISLAMNUSANTARA"
+     }
+    ],
+    "source_url": "https://journal.unusia.ac.id/index.php/ISLAMNUSANTARA",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "Verification re-fetch found the current issue listed as 'Vol. 7 No. 2 (2026)', published 1 July 2026, and the journal described as peer-reviewed and biannual (January/July) -- clear evidence the journal is active in 2026."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 71,
+     "weights": {
+      "fit": 0.3333,
+      "standing": 0.2381,
+      "outcomes": 0.1429,
+      "feasibility": 0.2857
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 75,
+       "reason": "A journal specifically on Islamic history and culture in the Indonesian archipelago is a natural home for a piece drawn from her archive of Islamic popular music and zines, even without a themed call to frame it."
+      },
+      "standing": {
+       "score": 45,
+       "reason": "It's a real, actively publishing university journal, but no indexing, editorial-board prominence or other standing signals were found (limited information)."
+      },
+      "outcomes": {
+       "score": 60,
+       "reason": "Publishing here gives a citable output on Islamic culture in the Nusantara context, though turnaround time and indexing weren't confirmed."
+      },
+      "feasibility": {
+       "score": 95,
+       "reason": "A rolling online journal call with no travel, no visa and at most a small publication fee is about as feasible as opportunities get for her budget."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.75,
+     "rationale": "Islam Nusantara's scope -- Islamic history and culture in the Indonesian archipelago -- sits close to her archive of 1990s Indonesian Islamic popular music and zines, even though there is no themed call framing the fit more specifically.",
+     "matched_topics": [
+      "Islamic popular culture",
+      "Indonesian music and zines"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's a journal specifically about Islamic history and culture in Indonesia -- a close match for her archive work.",
+     "There's no deadline pressure; it takes submissions on a rolling basis.",
+     "No travel or visa is involved -- it's free to try."
+    ],
+    "watch_out": [
+     "No indexing or reputation signals were found for this journal, so it's a modest rather than prestige outlet (limited information).",
+     "The exact publication fee, if any, isn't published -- worth checking before submitting."
+    ],
+    "tagline": "A low-cost, no-deadline Indonesian journal that matches her topic closely.",
+    "eligible": "yes",
+    "eligibility_notes": "Rolling submissions with no stated restrictions.",
+    "visa": {
+     "required": "no",
+     "note": "Online submission; no visa is relevant.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "IDR",
+     "low": 0,
+     "high": 1500000,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 1500000,
+       "note": "The journal's publication-fee page exists but its amount was not confirmed; many Indonesian OJS journals charge no APC, so the range runs from free to a modest fee",
+       "grounded": false
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "Online journal call; no travel involved",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Online journal call; no accommodation involved",
+       "grounded": true
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Online journal call; no visa involved",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com), not directly needed since any fee would be quoted in IDR",
+      "This is a rolling-submission journal, not a specific conference or dated call"
+     ],
+     "over_budget": false,
+     "net_note": "If the journal turns out to have no APC (common for Indonesian OJS journals), this costs her nothing but time."
+    }
+   },
+   {
+    "id": "seacah-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "The Southeast Asian Conference on Arts & Humanities (SEACAH2027)",
+    "host": "IAFOR (The International Academic Forum)",
+    "host_kind": "for_profit",
+    "theme": null,
+    "description": "SEACAH2027 is a Bangkok conference on arts and humanities research, run by IAFOR (a for-profit conference organizer) as part of its Southeast Asian Conference Series, held alongside a parallel education conference (SEACE2027). It runs 15-19 February 2027, with an early-bird abstract deadline and a final abstract deadline in 2026. IAFOR runs many similarly-named 'Asian Conference on ...' events across different cities and disciplines on a pay-to-present model, so this is flagged as a predatory-suspect pattern even though the specific conference looks genuinely relevant.",
+    "location": {
+     "city": "Bangkok",
+     "country": "Thailand",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-02-15",
+     "end": "2027-02-19"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-08-21",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "August 21, 2026"
+     },
+     {
+      "label": "abstract",
+      "date": "2026-10-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "October 30, 2026"
+     },
+     {
+      "label": "early_bird",
+      "date": "2026-10-02",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Until October 02, 2026"
+     },
+     {
+      "label": "registration",
+      "date": "2026-12-04",
+      "depends_on": "abstract",
+      "grounded": true,
+      "source_quote": "December 04, 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No career-stage, nationality or membership restrictions found. Full conference registration fees must be paid by the December 2026 deadline for a presenter's work to appear in the printed program. Non-member online-presenter fee is used for this independent researcher (no institutional membership)."
+    },
+    "fees": [
+     {
+      "tier": "early_bird_online_nonmember",
+      "amount": 200,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "200 USD Non-members"
+     },
+     {
+      "tier": "early_bird_onsite_nonmember",
+      "amount": 320,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "320 USD Non-Members"
+     },
+     {
+      "tier": "regular_online_nonmember",
+      "amount": 320,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "320 USD Non-members"
+     },
+     {
+      "tier": "regular_onsite_nonmember",
+      "amount": 500,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "500 USD Non-Members"
+     }
+    ],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "For-profit organizer (IAFOR) running numerous similarly-titled 'Asian Conference on...' events in parallel across multiple cities and disciplines, a pattern flagged as predatory-suspect by Grapevine's own scouting rules",
+      "grounded": true,
+      "source_url": "https://seacah.iafor.org/call-for-papers/"
+     }
+    ],
+    "source_url": "https://seacah.iafor.org/call-for-papers/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": true,
+    "predatory_reasons": [
+     "For-profit organizer running many parallel, similarly-named 'Asian Conference on...' events across different cities and disciplines",
+     "Held alongside another differently-themed conference (SEACE2027) at the same time/venue, typical of the multi-conference bundling model"
+    ],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "Page is specifically for the 2027 Bangkok edition, with 2026 abstract deadlines and Feb 2027 conference dates."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 47,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1154,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 60,
+       "reason": "Her digital-archiving work could be framed under IAFOR's broad arts-and-humanities and technology themes, but this is a generic multi-discipline conference rather than one focused on her subject, so fit is capped by keyword overlap alone."
+      },
+      "standing": {
+       "score": 15,
+       "reason": "Standing is capped because this opportunity is flagged predatory-suspect: the organizer (IAFOR) runs many parallel, similarly-named 'Asian Conference on...' events across cities on a pay-to-present model."
+      },
+      "network": {
+       "score": 30,
+       "reason": "Generic 'all-topics' regional conferences like this typically offer limited real networking with people working on the same specific questions, beyond a broad regional arts-and-humanities audience."
+      },
+      "outcomes": {
+       "score": 25,
+       "reason": "No confirmed proceedings, indexing or awards were found; IAFOR's conferences are generally not associated with strong publication outcomes."
+      },
+      "feasibility": {
+       "score": 85,
+       "reason": "February is one of her available months and Thailand is visa-free for Indonesian passport holders, but the in-person cost sits close to or just over her budget cap."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.6,
+     "rationale": "SEACAH2027's broad arts-and-humanities and technology themes could accommodate a paper on digital archiving, but as an all-topics regional conference it doesn't have a named track or focus that matches her Islamic-music-and-zine archiving specifically, so the fit relies on general keyword overlap rather than a close thematic match.",
+     "matched_topics": [
+      "digital archives"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's a nearby, visa-free regional trip (Bangkok) within one of her available months (February).",
+     "Its broad 'arts and humanities' and technology theme could fit her digital-archiving work with the right framing.",
+     "Submissions are still open (deadline 30 October 2026)."
+    ],
+    "watch_out": [
+     "This conference is run by IAFOR, an organizer that runs many similarly-named 'Asian Conference on...' events across different cities on a pay-to-present model -- worth recognizing before paying to attend.",
+     "The in-person cost (registration + travel + hotel) comes close to or slightly over her budget cap; presenting online is much cheaper."
+    ],
+    "tagline": "A nearby, visa-free regional conference -- but flagged as a pay-to-present, multi-city operation.",
+    "eligible": "yes",
+    "eligibility_notes": "No restrictions stated; open call, deadline still open.",
+    "visa": {
+     "required": "no",
+     "note": "Indonesian passport holders can generally enter Thailand visa-free for short tourist/business stays. This is general information, not immigration advice.",
+     "official_source": "https://www.thaievisa.go.th/",
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "IDR",
+     "low": 9077000,
+     "high": 20470000,
+     "breakdown": {
+      "registration": {
+       "low": 5677000,
+       "high": 8870000,
+       "note": "Onsite non-member presenter fee, USD 320 (early bird, until 2 Oct 2026) to USD 500 (regular, until 4 Dec 2026)",
+       "grounded": true,
+       "source": null
+      },
+      "travel": {
+       "low": 1600000,
+       "high": 3200000,
+       "note": "Yogyakarta-Bangkok return, regional budget carrier, booked ahead (no live fare search run)",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 1800000,
+       "high": 8400000,
+       "note": "6 nights (5 conference days + 1), budget hostel to mid-range hotel in Bangkok",
+       "grounded": false
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Indonesian passport holders can generally enter Thailand visa-free for short stays",
+       "grounded": true,
+       "source": "https://www.thaievisa.go.th/"
+      }
+     },
+     "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com)",
+      "Registration uses the non-member onsite-presenter tier (early bird to regular) from the SEACAH2027 registration page; travel and accommodation are heuristic estimates, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": true,
+     "net_note": "Presenting online instead would drop registration to the USD 200-320 online-presenter tier and remove travel and accommodation entirely, landing well under budget; attending in person, only the high end slightly exceeds her IDR 20,000,000 cap."
+    }
+   }
+  ]
+ },
+ {
+  "id": "p_tanvir",
+  "gathered_at": "2026-09-19",
+  "profile": {
+   "id": "p_tanvir",
+   "name": "Tanvir Hasan",
+   "fictional": true,
+   "input_text": "Lecturer in Dhaka working on education policy, especially how exam reforms and English-medium schooling affect inequality in Bangladesh. I want to publish internationally and build collaborations.",
+   "orcid": null,
+   "affiliation": "Lecturer in Education, a public university in Dhaka",
+   "career_stage": "faculty",
+   "year": null,
+   "research_summary": "Education policy, exam reform and English-medium schooling as drivers of inequality in Bangladesh.",
+   "topics": [
+    {
+     "term": "education policy",
+     "weight": 0.95
+    },
+    {
+     "term": "educational inequality",
+     "weight": 0.85
+    },
+    {
+     "term": "exam reform",
+     "weight": 0.75
+    },
+    {
+     "term": "English-medium schooling",
+     "weight": 0.7
+    },
+    {
+     "term": "South Asian education",
+     "weight": 0.6
+    }
+   ],
+   "fields": [
+    "education",
+    "development studies"
+   ],
+   "adjacent_fields": [
+    "comparative education",
+    "sociology of education",
+    "South Asian studies"
+   ],
+   "citation_neighborhood": [
+    {
+     "name": "Manzoor Ahmed",
+     "inferred": true
+    },
+    {
+     "name": "Keith Lewin",
+     "inferred": true
+    },
+    {
+     "name": "Monazza Aslam",
+     "inferred": true
+    }
+   ],
+   "geography": {
+    "country": "Bangladesh",
+    "city": "Dhaka",
+    "passport": "Bangladesh"
+   },
+   "currency": "BDT",
+   "constraints": {
+    "max_cost": 250000,
+    "months_available": [
+     "Jan",
+     "Jun",
+     "Jul",
+     "Dec"
+    ],
+    "visa_tolerance": "any",
+    "format": "any"
+   },
+   "goals": [
+    "publication",
+    "visibility",
+    "networking"
+   ],
+   "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+   ],
+   "profile_type": "academic"
+  },
+  "meta": {
+   "fields": 2,
+   "adjacent": 3,
+   "searches": 15,
+   "candidates": 8,
+   "extracted": 6,
+   "funding": 8,
+   "grounded_pass": 23,
+   "grounded_total": 23
+  },
+  "opportunities": [
+   {
+    "id": "cies-2027",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "CIES 2027 Annual Conference",
+    "host": "Comparative and International Education Society (CIES)",
+    "host_kind": "learned_society",
+    "theme": null,
+    "description": "The annual conference of the Comparative and International Education Society (CIES), the flagship learned society for comparative and international education, held 3-7 April 2027 at the Monona Terrace Community and Convention Center in Madison, Wisconsin. The proposal submission window closed 3 September 2026 with no extensions, but the conference itself is still upcoming and open to registered attendance; presenters must be CIES members and registered by 30 November 2026 to appear in the program.",
+    "location": {
+     "city": "Madison, Wisconsin",
+     "country": "USA",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-04-03",
+     "end": "2027-04-07"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-09-03",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Sept 3 2026 · 23:59 ET"
+     },
+     {
+      "label": "early_bird",
+      "date": "2026-11-04",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Early-bird registration: Oct 15 – Nov 4, 2026"
+     },
+     {
+      "label": "registration",
+      "date": "2026-11-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Presenters must be CIES members and registered by November 30 to appear in the program."
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": true,
+     "notes": "Presenting requires a CIES membership and registration by Nov 30, 2026. Since the proposal deadline (Sept 3, 2026) has already passed, this edition is attend-only for a new presenter; general registration (member or 'submitter only' account, Dec 1 2026 - Jan 14 2027) is still possible to attend."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "CIES SAIS SIG Research Grant",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Up to USD 500",
+      "deadline": null,
+      "cycle": "Annual; check cies-sais.org for the current call",
+      "requires": "CIES membership and involvement with the South Asia special interest group (SAIS SIG)",
+      "eligible": "check",
+      "why": "He works on South Asian education, matching the SAIS SIG's regional focus, and the grant explicitly names tenure-track faculty as eligible, but it's usually tied to presenting — and his proposal window for this edition has already closed",
+      "grounded": true,
+      "source_quote": "The CIES SAIS SIG offers a scholastic research grant of up to $500 for advanced graduate students and tenure track faculty.",
+      "source_url": "https://www.cies-sais.org/",
+      "sequence_note": "Contact the SAIS SIG before registering to check whether attending (without presenting) still qualifies this cycle."
+     },
+     {
+      "name": "University Grants Commission of Bangladesh (UGC) — Research Grant Portal",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Amount not confirmed",
+      "deadline": null,
+      "cycle": "Rolling online portal",
+      "requires": "A submitted research project proposal, usually routed through the home institution",
+      "eligible": "check",
+      "why": "He is faculty at a Bangladeshi public university, the group UGC funding targets",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://ugc-research-management.bdren.net.bd/",
+      "sequence_note": "Apply well ahead of the Nov 30, 2026 CIES registration deadline, since UGC approval usually takes longer than conference sign-up."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Flagship annual conference of the Comparative and International Education Society, the main international society in the field",
+      "grounded": false,
+      "source_url": null
+     }
+    ],
+    "source_url": "https://www.cies2027.org/proposals",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [],
+    "priority": {
+     "score": 75,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1923,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 92,
+       "reason": "CIES is the flagship society of comparative and international education itself — his exact discipline — so his work on exam reform and educational inequality in Bangladesh is squarely within scope even though he can no longer submit a paper this cycle."
+      },
+      "standing": {
+       "score": 78,
+       "reason": "CIES is a well-known, long-running international society (members from over 125 countries), though no specific edition count or keynote list was captured from the page — partly inferred."
+      },
+      "network": {
+       "score": 80,
+       "reason": "A large flagship gathering with its own South Asia interest group (SAIS SIG) offers strong access to peers working on his exact region, even without presenting."
+      },
+      "outcomes": {
+       "score": 45,
+       "reason": "The proposal deadline (Sept 3, 2026) has already passed, so he can attend and network but not present or add a CIES paper to his CV this cycle."
+      },
+      "feasibility": {
+       "score": 75,
+       "reason": "April 2027 isn't one of his available travel months, and the high end of the cost estimate is well over his BDT 250,000 cap; a US visa is needed but his stated visa tolerance is 'any', so that alone isn't scored as a barrier."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.92,
+     "rationale": "Comparative and international education is not adjacent to his work — it is his field. CIES's own scope (comparative education policy, equity and schooling systems) covers exam reform, English-medium schooling and educational inequality almost by definition, making this one of the closest disciplinary matches on his list, even though this edition is attend-only for him.",
+     "matched_topics": [
+      "education policy",
+      "educational inequality",
+      "exam reform",
+      "English-medium schooling",
+      "South Asian education"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "This is the main international society for his exact field, so simply being in the room (even without presenting) is high-value networking.",
+     "It has its own South Asia special interest group (SAIS SIG), which is about as targeted a peer group as he could hope to find.",
+     "Registration is still open even though the paper deadline has passed."
+    ],
+    "watch_out": [
+     "The Sept 3, 2026 proposal deadline is gone, so he can't add a new CIES presentation to his CV from this edition.",
+     "April 2027 isn't one of his free months, and the realistic cost range (up to ~BDT 382,000) is well above his BDT 250,000 budget without a grant."
+    ],
+    "tagline": "The flagship society of his own field — worth attending even without a paper, if the budget and calendar allow it.",
+    "eligible": "yes",
+    "eligibility_notes": "No nationality or career-stage restriction found; presenting requires CIES membership and registration by Nov 30, 2026, but attending as a registered non-presenter appears open.",
+    "visa": {
+     "required": "yes",
+     "note": "A US B1/B2 visitor visa is required for Bangladeshi passport holders. This is general information, not immigration advice — confirm current wait times and requirements with the US Embassy in Dhaka.",
+     "official_source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+     "verify_flag": true,
+     "lead_days": 60
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "BDT",
+     "low": 185800,
+     "high": 381800,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 37000,
+       "note": "No fee amounts were published, only registration period names (early-bird/regular/general); assumed USD 0-300",
+       "grounded": false
+      },
+      "travel": {
+       "low": 111000,
+       "high": 204000,
+       "note": "Dhaka-Chicago return (nearest major hub to Madison, WI), booked 8-10 weeks ahead; heuristic, not a live fare search",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 52000,
+       "high": 118000,
+       "note": "6 nights (5 conference days + 1) around Monona Terrace, Madison, budget to mid-range hotel",
+       "grounded": false
+      },
+      "visa": {
+       "low": 22800,
+       "high": 22800,
+       "note": "US B1/B2 (MRV) visa fee, USD 185",
+       "grounded": true,
+       "source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html"
+      }
+     },
+     "assumptions": [
+      "USD->BDT 123.06 on 2026-09-18 (open.er-api.com/v6/latest/USD)",
+      "No registration fee amount was published; used an unconfirmed USD 0-300 placeholder",
+      "Travel and accommodation are heuristic Dhaka-US Midwest estimates, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": true,
+     "net_note": "The high end (~BDT 382,000) is well over his BDT 250,000 cap; the low end is within reach but a US trip without any confirmed grant is a stretch. If the SAIS SIG grant (~USD 500 ≈ BDT 61,500) came through, it would meaningfully narrow the gap."
+    }
+   },
+   {
+    "id": "devstud-bandung-2027",
+    "type": "fellowship",
+    "status": "open",
+    "title": "Towards a Global South-Driven Future for Development Studies — Writing Workshop",
+    "host": "Development Studies Association (DSA) / Global Development Institute, University of Manchester, with Universitas Padjadjaran, Bandung",
+    "host_kind": "learned_society",
+    "theme": "Towards a Global South-driven future for Development Studies",
+    "description": "A funded writing workshop in Bandung, Indonesia (Universitas Padjadjaran), for development-studies researchers based at higher-education institutions in Asia or Africa, run with support from a British Academy Writing Workshop grant. Participants submit an extended abstract, CV and writing sample; if selected, the organisers cover return flights (from within Asia) and three nights' accommodation, and accepted participants then develop a short or full paper by January 2027. Conference/workshop dates are April 2027, exact date to be confirmed.",
+    "location": {
+     "city": "Bandung",
+     "country": "Indonesia",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-04-01",
+     "end": null
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-09-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "30 September 2026"
+     },
+     {
+      "label": "full_paper",
+      "date": "2027-01-15",
+      "depends_on": "abstract",
+      "grounded": true,
+      "source_quote": "15 January 2027"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [
+      "faculty",
+      "postdoc",
+      "phd_candidate"
+     ],
+     "nationality": null,
+     "region_restriction": "Based at a higher-education institution in Asia or Africa",
+     "membership_required": false,
+     "notes": "Open to those based at a higher-education institution in Asia or Africa, with a PhD awarded after 1 October 2017 (flexibility for career breaks) or currently enrolled in a PhD programme in the Global South. Requires an extended abstract (750-1,000 words), a two-page CV and a writing sample, sent to the named organiser by the deadline."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "British Academy Writing Workshop grant (covers this workshop's travel and accommodation)",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Return flights (from within Asia) plus accommodation for three nights, for accepted participants",
+      "deadline": "2026-09-30",
+      "cycle": "One-off, tied to this workshop",
+      "requires": "Acceptance into the workshop (extended abstract, CV, writing sample)",
+      "eligible": "likely",
+      "why": "He is based at a higher-education institution in Asia, matching the workshop's eligibility, and acceptance automatically brings this funding — no separate application needed",
+      "grounded": true,
+      "source_quote": "return flights (from within Asia), as well as accommodation for three nights",
+      "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/",
+      "sequence_note": "Funding is automatic on acceptance — submit the extended abstract, CV and writing sample by Sept 30, 2026; nothing further to apply for if selected."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Funded by a British Academy Writing Workshop grant and organised jointly with the Development Studies Association and a Global South host institution",
+      "grounded": true,
+      "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/"
+     }
+    ],
+    "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [
+     {
+      "name": "British Academy Writing Workshop grant (covers this workshop's travel and accommodation)",
+      "type": "travel_scholarship",
+      "deadline": "2026-09-30",
+      "amount_note": "Return flights (from within Asia) plus accommodation for three nights, for accepted participants",
+      "eligibility_notes": "Automatic for accepted workshop participants based in Asia or Africa; no separate application.",
+      "grounded": true,
+      "source_quote": "return flights (from within Asia), as well as accommodation for three nights",
+      "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/"
+     }
+    ],
+    "priority": {
+     "score": 70,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1923,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 68,
+       "reason": "Development studies is one of his two primary fields, and the workshop's Global South framing fits his geography strongly, but the theme is broad development studies rather than education specifically, so his paper would need deliberate framing as a development-studies contribution."
+      },
+      "standing": {
+       "score": 65,
+       "reason": "Backed by a British Academy Writing Workshop grant and co-organised with the Development Studies Association and a Global South host institution — a credible funding pedigree, though it's a first-time workshop, not a long-running series."
+      },
+      "network": {
+       "score": 82,
+       "reason": "A small, funded writing workshop with sustained multi-day contact among a curated Global South cohort is exactly the format that tends to build lasting collaborations, per the workshop's own design."
+      },
+      "outcomes": {
+       "score": 60,
+       "reason": "Leads to a short or full paper by Jan 2027, a concrete writing output, but no proceedings or journal placement is confirmed on the page — limited information."
+      },
+      "feasibility": {
+       "score": 80,
+       "reason": "The near-zero net cost makes this very affordable, but April 2027 isn't one of his listed available months, and the PhD-timing eligibility rule (PhD awarded after Oct 2017, or currently enrolled) is unclear against his profile, which doesn't state his PhD status."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.68,
+     "rationale": "The workshop's call for a 'Global South-driven future for Development Studies' matches his geography and one of his two primary fields, and his work on how exam reform and English-medium schooling drive inequality in Bangladesh is a plausible development-studies contribution, though it would need framing beyond education policy specifically to land squarely in scope.",
+     "matched_topics": [
+      "educational inequality",
+      "South Asian education"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "If accepted, flights and three nights are funded, so this is one of the very few opportunities on his list that is essentially free.",
+     "It's a small, funded cohort of Global South researchers, which tends to build real, lasting collaborations rather than a one-off meeting.",
+     "The abstract deadline (Sept 30, 2026) is still open."
+    ],
+    "watch_out": [
+     "His profile doesn't state whether or when he completed a PhD, and the workshop restricts eligibility to those with a PhD awarded after Oct 2017 or a current PhD candidate — worth checking before applying.",
+     "April 2027 isn't one of the months he listed as available to travel."
+    ],
+    "tagline": "Practically free if he's accepted, but check the PhD-timing rule first.",
+    "eligible": "conditional",
+    "eligibility_notes": "Restricted to those based at a higher-education institution in Asia or Africa with a PhD awarded after 1 October 2017 (or currently enrolled in a PhD programme); his profile does not state his PhD status or completion year, so this needs checking against the actual rule.",
+    "visa": {
+     "required": "yes",
+     "note": "Indonesia generally requires an e-Visa or visa-on-arrival for Bangladeshi passport holders. This is general information, not immigration advice — confirm current requirements on Indonesia's official immigration portal.",
+     "official_source": "https://evisa.imigrasi.go.id",
+     "verify_flag": true,
+     "lead_days": 14
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "verified"
+    },
+    "cost_estimate": {
+     "currency": "BDT",
+     "low": 5500,
+     "high": 6800,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 0,
+       "note": "No registration fee is mentioned; this is a funded writing workshop, not a paid conference",
+       "grounded": true
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "Covered by the workshop's British Academy grant for accepted participants (return flights from within Asia)",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Three nights covered by the workshop grant for accepted participants",
+       "grounded": true
+      },
+      "visa": {
+       "low": 5500,
+       "high": 6800,
+       "note": "Indonesia e-Visa for a Bangladeshi passport holder, approx. USD 45-55; not independently verified against the official portal",
+       "grounded": false,
+       "source": "https://evisa.imigrasi.go.id"
+      }
+     },
+     "assumptions": [
+      "USD->BDT 123.06 on 2026-09-18 (open.er-api.com/v6/latest/USD)",
+      "Cost estimate assumes he is accepted into the workshop, since travel and lodging are only funded for accepted participants",
+      "Visa fee is a rough estimate, not confirmed against Indonesia's official e-visa fee schedule",
+      "Excludes meals beyond the funded nights and local transport"
+     ],
+     "over_budget": false,
+     "net_note": "If accepted, the only real out-of-pocket cost is the Indonesian e-visa fee plus incidental meals — well inside his budget. If not accepted, there is no cost at all since travel is not undertaken."
+    }
+   },
+   {
+    "id": "ecsas-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "29th European Conference on South Asian Studies (ECSAS 2027)",
+    "host": "European Association for South Asian Studies (EASAS)",
+    "host_kind": "learned_society",
+    "theme": null,
+    "description": "ECSAS 2027 is the 29th European Conference on South Asian Studies, held in Poznań, Poland, 28-31 July 2027, organized by EASAS. The call for panel proposals is currently open (3 July - 30 September 2026); panel conveners will be notified of outcomes in October 2026, and a call for individual paper submissions within accepted panels will follow (opening November 2026, closing 15 January 2027). No registration fees or venue funding/travel grants are listed on the page.",
+    "location": {
+     "city": "Poznań",
+     "country": "Poland",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-07-28",
+     "end": "2027-07-31"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-09-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "The call for panel proposals is open from 3 July to 30 September 2026."
+     },
+     {
+      "label": "full_paper",
+      "date": "2027-01-15",
+      "depends_on": "abstract",
+      "grounded": true,
+      "source_quote": "Call for papers will be open on November 2026 till Junuary 15, 2027."
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": "At least one convener of each panel must be affiliated with a European institution.",
+     "membership_required": true,
+     "notes": "All panel conveners must be current EASAS members in good standing, with no unpaid invoices at the time of submission. Panel results will be announced in October 2026; selected panel abstracts will be published on the conference website on 16 November 2026. No registration fees, costs, or travel/bursary funding were found on the page (fees TBA)."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "University Grants Commission of Bangladesh (UGC) — Research Grant Portal",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Amount not confirmed",
+      "deadline": null,
+      "cycle": "Rolling online portal",
+      "requires": "A submitted research project proposal, usually routed through the home institution",
+      "eligible": "check",
+      "why": "He is faculty at a Bangladeshi public university, the group UGC funding targets",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://ugc-research-management.bdren.net.bd/",
+      "sequence_note": "If a panel accepts him, apply to UGC well before travel — no registration fee or venue funding is published for ECSAS itself."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Conference is titled the '29th European Conference on South Asian Studies', indicating a long-running biennial/periodic series organized by EASAS.",
+      "grounded": true,
+      "source_url": "https://www.easas.eu/ecsas/"
+     }
+    ],
+    "source_url": "https://www.easas.eu/ecsas/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [],
+    "priority": {
+     "score": 68,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1923,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 60,
+       "reason": "ECSAS is a South Asian studies conference (his adjacent field), not education-specific; his work on exam reform and inequality in Bangladesh would need to be framed within a panel on society, policy or education in South Asia rather than matching a named track."
+      },
+      "standing": {
+       "score": 80,
+       "reason": "Now in its 29th edition and run by the European Association for South Asian Studies, a long-running learned society — a strong continuity signal."
+      },
+      "network": {
+       "score": 78,
+       "reason": "One of the largest South Asian studies gatherings in Europe, giving broad access to South Asianists across disciplines, including those working on education and social policy."
+      },
+      "outcomes": {
+       "score": 50,
+       "reason": "No proceedings or publication route is stated on the page — limited information."
+      },
+      "feasibility": {
+       "score": 80,
+       "reason": "July 2027 is one of his available months and the estimated cost fits his budget, but he'd need to join a panel whose convener is affiliated with a European institution, and the panel-proposal deadline (Sept 30, 2026) is only 11 days away."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.6,
+     "rationale": "ECSAS covers South Asian studies broadly across disciplines, and his 'South Asian education' topic gives a real, if general, point of entry; landing a paper here would mean joining or proposing a panel on education, schooling or social policy in South Asia rather than finding a track built for his specific angle.",
+     "matched_topics": [
+      "South Asian education",
+      "educational inequality"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's a major, long-running (29th edition) South Asian studies conference, useful for building ties beyond education specialists.",
+     "July 2027 is one of the months he's actually free to travel, and the estimated cost fits his budget.",
+     "The panel-proposal window is open now."
+    ],
+    "watch_out": [
+     "Every panel needs at least one convener affiliated with a European institution and current EASAS membership — he'd need to find or join such a panel, not submit solo, and the panel deadline is only 11 days away (Sept 30, 2026).",
+     "No registration fee or travel funding is published yet (marked TBA), so the cost estimate could shift."
+    ],
+    "tagline": "A strong regional venue for his work — if he can join a European-led panel within the next two weeks.",
+    "eligible": "conditional",
+    "eligibility_notes": "Panel proposals require a convener affiliated with a European institution and current EASAS membership; an individual paper submission (once the call opens in Nov 2026, closing 15 Jan 2027) may not require this himself, but he needs a panel to submit into.",
+    "visa": {
+     "required": "yes",
+     "note": "A Schengen short-stay visa is required for Bangladeshi passport holders to attend Poland in person. This is general information, not immigration advice — confirm current requirements with the Polish consulate or a Schengen visa application centre.",
+     "official_source": "https://www.gov.pl/web/diplomacy/visas",
+     "verify_flag": true,
+     "lead_days": 45
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "verified"
+    },
+    "cost_estimate": {
+     "currency": "BDT",
+     "low": 126200,
+     "high": 240200,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 24500,
+       "note": "Fees are marked TBA on the conference page; assumed USD 0-200 pending confirmation",
+       "grounded": false
+      },
+      "travel": {
+       "low": 86000,
+       "high": 141500,
+       "note": "Dhaka-Poznań return (via a European hub), booked 8-10 weeks ahead; heuristic, not a live fare search",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 27500,
+       "high": 61500,
+       "note": "5 nights (4 conference days + 1), budget to mid-range hotel in Poznań",
+       "grounded": false
+      },
+      "visa": {
+       "low": 12700,
+       "high": 12700,
+       "note": "Schengen short-stay visa, standard fee ~EUR 90",
+       "grounded": false,
+       "source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/visa-costs_en"
+      }
+     },
+     "assumptions": [
+      "USD->BDT 123.06 and implied EUR->BDT ~141.4 on 2026-09-18 (open.er-api.com/v6/latest/USD)",
+      "Registration fee is unconfirmed (page says fees TBA); used an unconfirmed USD 0-200 placeholder",
+      "Travel and accommodation are heuristic Dhaka-Europe estimates, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "The full estimated range fits under his BDT 250,000 cap even without any funding, though nothing is confirmed to reduce it further."
+    }
+   },
+   {
+    "id": "iaea-2026",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "51st Annual IAEA Conference — Trust, Transparency and Technology in Educational Assessment",
+    "host": "International Association for Educational Assessment (IAEA)",
+    "host_kind": "learned_society",
+    "theme": "Trust, Transparency and Technology in Educational Assessment",
+    "description": "The 51st annual conference of the International Association for Educational Assessment (IAEA), the specialist society for public examinations and educational measurement, held 27 September - 2 October 2026 in Toronto, Canada. Registration for the conference is open, but the event is only about eight days from today, so the paper submission window has long closed and there is no realistic time left to arrange a Canadian visa.",
+    "location": {
+     "city": "Toronto",
+     "country": "Canada",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2026-09-27",
+     "end": "2026-10-02"
+    },
+    "deadlines": [],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No fee, funding or eligibility detail was captured beyond that registration is open; the paper-submission deadline was not found and is assumed closed given the imminent conference dates."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "University Grants Commission of Bangladesh (UGC) — Research Grant Portal",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Amount not confirmed",
+      "deadline": null,
+      "cycle": "Rolling online portal",
+      "requires": "A submitted research project proposal, usually routed through the home institution",
+      "eligible": "check",
+      "why": "He is faculty at a Bangladeshi public university, the group UGC funding targets, though the conference is only days away, making this route unrealistic in time",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://ugc-research-management.bdren.net.bd/",
+      "sequence_note": "Not realistic for this edition given the timeline; would only apply to a future IAEA conference."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "51st annual conference of the specialist international association for educational assessment and examinations",
+      "grounded": true,
+      "source_url": "https://iaea.info/registration-for-the-2026-51th-annual-conference-open/"
+     }
+    ],
+    "source_url": "https://iaea2026.org/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [],
+    "priority": {
+     "score": 70,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1923,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 85,
+       "reason": "IAEA is the specialist society for educational assessment and public examinations — a near-direct match for his exam-reform work, even though it's the wider field of assessment rather than Bangladesh specifically."
+      },
+      "standing": {
+       "score": 85,
+       "reason": "The 51st annual conference of a dedicated international assessment society is a strong, well-established signal."
+      },
+      "network": {
+       "score": 80,
+       "reason": "A specialist assessment and examinations community is a strong, directly relevant peer group for exam-reform work, distinct from his usual education-policy circles."
+      },
+      "outcomes": {
+       "score": 50,
+       "reason": "No proceedings or publication route was found — limited information."
+      },
+      "feasibility": {
+       "score": 40,
+       "reason": "The conference starts in about 8 days: the paper-submission window has long closed, September isn't one of his available months, the estimated cost is roughly double his budget, and a Canadian visitor visa cannot realistically be obtained in the time remaining."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.85,
+     "rationale": "IAEA is the specialist international society for educational assessment and examinations, which is close to a direct match for his work on exam reform — of all the venues found, this is the one whose subject matter maps most literally onto that specific topic, even though it isn't focused on Bangladesh or South Asia.",
+     "matched_topics": [
+      "exam reform",
+      "education policy"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's the specialist society for exam and assessment research — about as direct a topical match as exists on his list.",
+     "The 51st annual edition suggests a well-established, credible community to meet.",
+     "Registration is technically still open."
+    ],
+    "watch_out": [
+     "The conference starts in about 8 days — there is no realistic way to get a Canadian visitor visa, book reasonable flights, or arrange leave in that time.",
+     "The estimated cost (roughly BDT 279,000-495,000) is far above his BDT 250,000 budget, and no funding was found that could close that gap in time."
+    ],
+    "tagline": "The best topical match on paper, but the timing makes this edition a non-starter.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage, nationality or membership restriction was found; registration is described as open, though the paper-submission deadline was not found and is assumed closed given how close the conference is.",
+    "visa": {
+     "required": "yes",
+     "note": "A Canadian Temporary Resident Visa is required for Bangladeshi passport holders and typically takes weeks to months to process — far longer than the ~8 days available before this conference. This is general information, not immigration advice — confirm current processing times with the Canadian visa application centre.",
+     "official_source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visa/apply.html",
+     "verify_flag": true,
+     "lead_days": 90
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "inferred",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "BDT",
+     "low": 279290,
+     "high": 495290,
+     "breakdown": {
+      "registration": {
+       "low": 24500,
+       "high": 55500,
+       "note": "No fee amount was published; registration is described as open. Assumed USD 200-450",
+       "grounded": false
+      },
+      "travel": {
+       "low": 172000,
+       "high": 271000,
+       "note": "Dhaka-Toronto return, but booked with only ~8 days' notice for a conference starting Sept 27, 2026; last-minute fares run well above the typical 8-10-week-ahead range",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 74000,
+       "high": 160000,
+       "note": "7 nights (6 conference days + 1) in Toronto during the conference",
+       "grounded": false
+      },
+      "visa": {
+       "low": 8790,
+       "high": 8790,
+       "note": "Canada Temporary Resident Visa (visitor visa) fee, CAD 100",
+       "grounded": false,
+       "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visa/apply.html"
+      }
+     },
+     "assumptions": [
+      "USD->BDT 123.06 and CAD->BDT ~87.9 on 2026-09-18 (open.er-api.com/v6/latest/USD)",
+      "Travel is priced as a last-minute booking (conference is ~8 days away), not the usual 8-10-week-ahead heuristic",
+      "Registration fee is unconfirmed; used a placeholder range",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": true,
+     "net_note": "Both ends of the range are far over his BDT 250,000 cap, and no funding was found that could realistically close the gap in the time available — this one isn't financially viable for this edition regardless."
+    }
+   },
+   {
+    "id": "madison-sa-2026",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "Annual Conference on South Asia",
+    "host": "Center for South Asia, University of Wisconsin–Madison",
+    "host_kind": "university",
+    "theme": null,
+    "description": "The 54th Annual Conference on South Asia is a large interdisciplinary conference held in Madison, Wisconsin, covering South Asian studies through symposia, panels, single papers, and round tables. The conference has run continuously since 1971. It takes place October 28-31, 2026 at the Madison Concourse Hotel & Governor's Club.",
+    "location": {
+     "city": "Madison, Wisconsin",
+     "country": "USA",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2026-10-28",
+     "end": "2026-10-31"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-03-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Symposium Proposals are due March 1st"
+     },
+     {
+      "label": "abstract",
+      "date": "2026-04-05",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Panels, Single Papers, and Round Table Proposals are due April 5th."
+     },
+     {
+      "label": "early_bird",
+      "date": "2026-10-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Early bird registration is open until October 1st."
+     },
+     {
+      "label": "registration",
+      "date": "2026-10-10",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "The last day to register online is October 10th."
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No graduate student travel grant or funding was found on the main site, registration, or lodging pages checked."
+    },
+    "fees": [
+     {
+      "tier": "Non-Student",
+      "amount": 300,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Non-Student: $300"
+     },
+     {
+      "tier": "Student",
+      "amount": 150,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student: $150"
+     },
+     {
+      "tier": "Emeritus",
+      "amount": 150,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Emeritus: $150"
+     }
+    ],
+    "funding": [
+     {
+      "name": "American Institute of Bangladesh Studies (AIBS) — Travel Grants for Bangladesh Citizens",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Lump sum of up to USD 2,500 per grantee for international travel costs",
+      "deadline": null,
+      "cycle": "Currently closed",
+      "requires": "Bangladeshi citizenship, affiliation with an AIBS partner university, and paper acceptance evidence for a US conference on Bangladesh Studies topics",
+      "eligible": "check",
+      "why": "He is a Bangladeshi citizen presenting Bangladesh-focused research at a US conference, exactly the AIBS target group, but the application window is currently closed and both the abstract deadlines for this conference have already passed",
+      "grounded": true,
+      "source_quote": "We are not accepting applications at the moment.",
+      "source_url": "https://aibs.net/fellowships/travel-grants-for-bangladesh-citizens/",
+      "sequence_note": "Not usable for this edition (submissions already closed and grant applications paused); worth re-checking for a future AIBS-eligible conference."
+     },
+     {
+      "name": "University Grants Commission of Bangladesh (UGC) — Research Grant Portal",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Amount not confirmed",
+      "deadline": null,
+      "cycle": "Rolling online portal",
+      "requires": "A submitted research project proposal, usually routed through the home institution",
+      "eligible": "check",
+      "why": "He is faculty at a Bangladeshi public university, the group UGC funding targets",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://ugc-research-management.bdren.net.bd/",
+      "sequence_note": "Apply before the Oct 10, 2026 registration deadline if pursuing this route."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "54th Annual Conference on South Asia",
+      "grounded": true,
+      "source_url": "https://southasiaconference.wisc.edu/"
+     },
+     {
+      "signal": "The conference has grown year-by-year since its inception in 1971",
+      "grounded": true,
+      "source_url": "https://southasiaconference.wisc.edu/"
+     }
+    ],
+    "source_url": "https://southasiaconference.wisc.edu/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "status_note": "Corrected on review: both abstract deadlines (Mar/Apr 2026) have passed; registration is still open.",
+    "venue_funding": [],
+    "priority": {
+     "score": 65,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1923,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 58,
+       "reason": "This is a broad interdisciplinary South Asian studies conference, not education-specific, but his 'South Asian education' topic gives a genuine point of connection — a plausible fit with framing, rather than a natural home."
+      },
+      "standing": {
+       "score": 82,
+       "reason": "The 54th consecutive edition of a conference running continuously since 1971 is a strong, well-documented continuity signal."
+      },
+      "network": {
+       "score": 65,
+       "reason": "A large, long-running South Asian studies conference offers broad interdisciplinary contacts, but no education-specific stream or programme committee link was found."
+      },
+      "outcomes": {
+       "score": 50,
+       "reason": "No travel grant, proceedings or publication route was found on the conference, registration or lodging pages — limited information."
+      },
+      "feasibility": {
+       "score": 75,
+       "reason": "Both abstract deadlines have passed (attend-only), October isn't one of his available months, and the high end of the cost estimate is well over his BDT 250,000 cap."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.58,
+     "rationale": "As an exploration pick, this large interdisciplinary South Asian studies conference has no dedicated education track, but his listed topic 'South Asian education' connects genuinely to its scope, and its size and range of disciplines (history, anthropology, political science) could put him in front of Bangladesh specialists he would not meet at an education-only venue.",
+     "matched_topics": [
+      "South Asian education",
+      "educational inequality"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's one of the largest, longest-running South Asian studies gatherings in North America (54 years running), a different crowd than education conferences.",
+     "Attending (without presenting) is still possible since registration is open until Oct 10, 2026.",
+     "It could connect him with non-education South Asianists who study Bangladesh from other angles."
+    ],
+    "watch_out": [
+     "Both abstract deadlines (March and April 2026) have already passed, so this is attend-only, not a chance to present.",
+     "October isn't one of his available travel months, and the realistic cost range (up to ~BDT 399,000) is well above his budget without a grant, and the one grant that fits best (AIBS) is currently closed."
+    ],
+    "tagline": "A big, well-established South Asianist crowd outside his usual education circles — but pricey and attend-only.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage, nationality or membership restriction was found; registration is open to all through Oct 10, 2026.",
+    "visa": {
+     "required": "yes",
+     "note": "A US B1/B2 visitor visa is required for Bangladeshi passport holders. This is general information, not immigration advice — confirm current wait times with the US Embassy in Dhaka.",
+     "official_source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+     "verify_flag": true,
+     "lead_days": 60
+    },
+    "explore": true,
+    "explore_reason": "South Asian studies is one of his adjacent fields, not a primary one, and this conference has no education-specific track — it's included to surface non-education South Asianist contacts he would not otherwise encounter.",
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "verified"
+    },
+    "cost_estimate": {
+     "currency": "BDT",
+     "low": 222738,
+     "high": 399330,
+     "breakdown": {
+      "registration": {
+       "low": 36918,
+       "high": 36918,
+       "note": "Non-Student tier, USD 300 (he is faculty, not a student)",
+       "grounded": true
+      },
+      "travel": {
+       "low": 110754,
+       "high": 204280,
+       "note": "Dhaka-Chicago return (nearest major hub to Madison, WI), booked 8-10 weeks ahead; heuristic, not a live fare search",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 52300,
+       "high": 135366,
+       "note": "5 nights (4 conference days + 1), budget motel to the Madison Concourse Hotel",
+       "grounded": false
+      },
+      "visa": {
+       "low": 22766,
+       "high": 22766,
+       "note": "US B1/B2 (MRV) visa fee, USD 185",
+       "grounded": true,
+       "source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html"
+      }
+     },
+     "assumptions": [
+      "USD->BDT 123.06 on 2026-09-18 (open.er-api.com/v6/latest/USD)",
+      "Registration uses the confirmed Non-Student tier fee ($300)",
+      "Travel and accommodation are heuristic Dhaka-US Midwest estimates, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": true,
+     "net_note": "Only the low end (~BDT 223,000) is within his BDT 250,000 cap; the high end is well over it, and the AIBS grant that would most directly help is currently closed to new applications."
+    }
+   },
+   {
+    "id": "wera-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "WERA World Congress 2027 — Many Contexts, One Global Inquiry: Rethinking Education Research Together",
+    "host": "World Education Research Association (WERA)",
+    "host_kind": "learned_society",
+    "theme": "Many Contexts, One Global Inquiry: Rethinking Education Research Together",
+    "description": "WERA is a federation of national and international education-research associations, and its World Congress is a triennial global gathering of education researchers. The 2027 edition runs 22-24 June 2027 at the University of Deusto in Bilbao, Spain (with pre-conference workshops on 21 June), under the theme 'Many Contexts, One Global Inquiry: Rethinking Education Research Together', open to researchers, policymakers and educators from across the globe submitting papers, posters and symposia in English, Spanish or Basque.",
+    "location": {
+     "city": "Bilbao",
+     "country": "Spain",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-06-22",
+     "end": "2027-06-24"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-11-15",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Final day to submit papers, symposia, posters and other contributions."
+     },
+     {
+      "label": "early_bird",
+      "date": "2027-03-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Early Bird Deadline"
+     },
+     {
+      "label": "registration",
+      "date": "2027-04-16",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Regular Registration Deadline"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "Open to 'researchers, policymakers, and educators from across the globe'; no nationality, career-stage or membership restriction found on the main page."
+    },
+    "fees": [],
+    "funding": [
+     {
+      "name": "University Grants Commission of Bangladesh (UGC) — Research Grant Portal",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Amount not confirmed; no dedicated international-conference-travel line found on the portal",
+      "deadline": null,
+      "cycle": "Rolling online portal",
+      "requires": "A submitted research project proposal through the UGC portal; usually routed through the home institution's research office",
+      "eligible": "check",
+      "why": "He is faculty at a Bangladeshi public university, the group UGC funding targets, but no page confirms international-travel coverage specifically",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://ugc-research-management.bdren.net.bd/",
+      "sequence_note": "If applying, start now — well before the Nov 15, 2026 abstract deadline — since UGC's own approval cycle and the university's own sign-off usually take longer than the conference's own timeline."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Congress organised by the World Education Research Association, a federation of national and regional education-research associations worldwide (e.g. AERA, BERA)",
+      "grounded": false,
+      "source_url": null
+     }
+    ],
+    "source_url": "https://weracongress2027.es/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "venue_funding": [],
+    "priority": {
+     "score": 72,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1923,
+      "network": 0.1923,
+      "outcomes": 0.1923,
+      "feasibility": 0.1538
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 82,
+       "reason": "WERA's 2027 theme, 'Rethinking Education Research Together,' is a broad world congress of education research, not a named exam-reform or inequality track, but his core field (education policy, educational inequality) is squarely what the congress covers."
+      },
+      "standing": {
+       "score": 60,
+       "reason": "WERA is a federation of national education-research associations (a real, established umbrella body), but no edition count, keynote or programme-committee signal was found on the page — limited information."
+      },
+      "network": {
+       "score": 75,
+       "reason": "A world congress bringing together many national education-research associations gives broad, high-value international exposure, though it isn't specific to South Asia or exam reform."
+      },
+      "outcomes": {
+       "score": 60,
+       "reason": "The abstract deadline is open and papers/posters/symposia are all welcome, but no proceedings or publication route is stated — limited information."
+      },
+      "feasibility": {
+       "score": 82,
+       "reason": "June 2027 falls inside his available months, the deadline is more than a month away, and the estimated cost (BDT ~118,700-236,200) stays under his BDT 250,000 cap, though a Schengen visa is still needed."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.82,
+     "rationale": "WERA's world congress is the umbrella gathering of national and international education-research associations, and its 2027 theme of rethinking education research across contexts is a natural home for a paper on exam reform, English-medium schooling and inequality in Bangladesh, even without a track named specifically for South Asia.",
+     "matched_topics": [
+      "education policy",
+      "educational inequality",
+      "exam reform"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's the world congress of the umbrella body for education researchers globally, so it's a legitimate flagship venue for education-policy work.",
+     "June 2027 fits one of the months he's actually free to travel, and the deadline (Nov 15, 2026) is still two months away.",
+     "The estimated total cost stays just under his budget cap, even without any funding lined up yet."
+    ],
+    "watch_out": [
+     "No registration fee, venue travel grant, or keynote/programme information was found on the page, so several numbers here are estimates.",
+     "A Schengen visa is required for a Bangladeshi passport, and no Bangladesh-specific funder was found to help cover an unfamiliar Europe trip."
+    ],
+    "tagline": "A legitimate world congress for education research, and just about affordable if nothing goes wrong.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage, nationality or membership restriction was found on the congress page; open to researchers, policymakers and educators globally.",
+    "visa": {
+     "required": "yes",
+     "note": "A Schengen short-stay visa is required for Bangladeshi passport holders to attend in person. This is general information, not immigration advice — confirm current requirements with the nearest Spanish consulate or a Schengen visa application centre.",
+     "official_source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en",
+     "verify_flag": true,
+     "lead_days": 45
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "inferred",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "BDT",
+     "low": 118700,
+     "high": 236200,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 31000,
+       "note": "No fee page was found for WERA 2027; treated as unconfirmed, assumed USD 0-250",
+       "grounded": false
+      },
+      "travel": {
+       "low": 86000,
+       "high": 141500,
+       "note": "Dhaka-Bilbao return (via a European hub), booked 8-10 weeks ahead; heuristic based on typical Dhaka-Spain/Bilbao fares, not a live fare search",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 20000,
+       "high": 51000,
+       "note": "4 nights (3 congress days + 1), hostel to mid-range hotel in Bilbao",
+       "grounded": false
+      },
+      "visa": {
+       "low": 12700,
+       "high": 12700,
+       "note": "Schengen short-stay visa, standard fee ~EUR 90",
+       "grounded": false,
+       "source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/visa-costs_en"
+      }
+     },
+     "assumptions": [
+      "USD->BDT 123.06 and implied EUR->BDT ~141.4 on 2026-09-18 (open.er-api.com/v6/latest/USD)",
+      "No registration fee was published; used an unconfirmed USD 0-250 placeholder",
+      "Travel and accommodation are heuristic Dhaka-Europe estimates, not a live fare/hotel search",
+      "Assumes an economy return flight booked roughly 8-10 weeks ahead",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "No venue or matched external funding was found for this specific congress, so the full range above is likely out of pocket unless a UGC or institutional travel grant comes through."
+    }
+   }
+  ]
+ },
+ {
+  "id": "p_wanjiru",
+  "gathered_at": "2026-09-19",
+  "profile": {
+   "id": "p_wanjiru",
+   "name": "Wanjiru Kamau",
+   "fictional": true,
+   "input_text": "First-year PhD in Nairobi studying how young women use community health workers and mobile money for maternal health in informal settlements. I am early and want feedback and people to learn from.",
+   "orcid": null,
+   "affiliation": "PhD student in Sociology, a public university in Nairobi",
+   "career_stage": "phd",
+   "year": 1,
+   "research_summary": "Young women, community health workers and mobile money in maternal health in Nairobi’s informal settlements.",
+   "topics": [
+    {
+     "term": "maternal health in informal settlements",
+     "weight": 0.95
+    },
+    {
+     "term": "community health workers",
+     "weight": 0.85
+    },
+    {
+     "term": "gender and health",
+     "weight": 0.8
+    },
+    {
+     "term": "mobile money and care",
+     "weight": 0.65
+    },
+    {
+     "term": "urban East Africa",
+     "weight": 0.6
+    }
+   ],
+   "fields": [
+    "sociology",
+    "public health"
+   ],
+   "adjacent_fields": [
+    "medical anthropology",
+    "African studies",
+    "global health"
+   ],
+   "citation_neighborhood": [
+    {
+     "name": "Ruth Prince",
+     "inferred": true
+    },
+    {
+     "name": "Susan Reynolds Whyte",
+     "inferred": true
+    },
+    {
+     "name": "Wangui Kimari",
+     "inferred": true
+    }
+   ],
+   "geography": {
+    "country": "Kenya",
+    "city": "Nairobi",
+    "passport": "Kenya"
+   },
+   "currency": "KES",
+   "constraints": {
+    "max_cost": 250000,
+    "months_available": [
+     "Jan",
+     "Mar",
+     "Jun",
+     "Jul",
+     "Nov",
+     "Dec"
+    ],
+    "visa_tolerance": "prefer_none",
+    "format": "any"
+   },
+   "goals": [
+    "networking",
+    "feedback",
+    "low_cost"
+   ],
+   "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+   ],
+   "profile_type": "academic"
+  },
+  "meta": {
+   "fields": 2,
+   "adjacent": 3,
+   "searches": 20,
+   "candidates": 8,
+   "extracted": 6,
+   "funding": 5,
+   "grounded_pass": 31,
+   "grounded_total": 31
+  },
+  "opportunities": [
+   {
+    "id": "carta-phd-fellowship",
+    "type": "fellowship",
+    "status": "watch",
+    "title": "CARTA PhD Fellowships",
+    "host": "Consortium for Advanced Research Training in Africa (CARTA)",
+    "host_kind": "foundation",
+    "theme": "Doctoral training in public and population health for African researchers",
+    "description": "CARTA is a consortium (established in 2008) of African universities and research institutions, including institutions in Kenya, that runs a mentored, cohort-based PhD fellowship in public and population health. Fellows get a stipend, research funds and structured residential and digital training over 28 months. The 2026-cohort call has already closed; the program runs an annual cycle, so a similar call is expected again. A key eligibility catch: applicants must already be teaching or research staff at a CARTA partner institution, not simply an enrolled PhD student elsewhere, so this needs checking against her actual university affiliation.",
+    "location": {
+     "city": "—",
+     "country": "—",
+     "format": "hybrid"
+    },
+    "dates": {
+     "start": "2026-03-01",
+     "end": null
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2025-08-20",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "August 20, 2025 at 23:59 hours EAT"
+     },
+     {
+      "label": "full_paper",
+      "date": "2025-09-21",
+      "depends_on": "abstract",
+      "grounded": true,
+      "source_quote": "September 21, 2025 (for full application by invitation only)"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [
+      "phd"
+     ],
+     "nationality": null,
+     "region_restriction": "African CARTA partner institutions",
+     "membership_required": true,
+     "notes": "Applicants must be bona fide teaching or research staff at a CARTA partner institution, hold a Master's degree, and be not yet registered for a PhD or in their first year with an undefined research topic; men under 40 and women under 45. Source quote: \"Applicants for this program MUST be bona fide teaching or research staff at one of the participating African institutions.\""
+    },
+    "fees": [],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Established in 2008 as a consortium of eight African universities, four research institutions and eight international partners; offered 22 awards in the 2026 cohort",
+      "grounded": true,
+      "source_url": "https://cartafrica.org/call-for-applications-carta-phd-fellowships-2026/"
+     }
+    ],
+    "source_url": "https://cartafrica.org/call-for-applications-carta-phd-fellowships-2026/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "The 2026-cohort call itself is closed (deadlines in 2025), but the fellowship starts March 2026 and CARTA runs this call annually, so the program is current and a next cycle is expected around mid-2027."
+    },
+    "venue_funding": [
+     {
+      "name": "CARTA PhD Fellowship stipend and research funds",
+      "type": "award",
+      "deadline": null,
+      "amount_note": "A modest stipend for 28 months, a laptop, and research funds up to USD 10,500 depending on budget",
+      "eligibility_notes": "Only for accepted CARTA PhD fellows.",
+      "grounded": true,
+      "source_quote": "A modest stipend for 28 months only.",
+      "source_url": "https://cartafrica.org/call-for-applications-carta-phd-fellowships-2026/"
+     }
+    ],
+    "priority": {
+     "score": 67,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1154,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 90,
+       "reason": "CARTA is a doctoral training programme built specifically for early-career African researchers in public and population health — almost exactly her profile on paper."
+      },
+      "standing": {
+       "score": 85,
+       "reason": "Established in 2008 as a consortium of eight African universities and four research institutions with international partners; a well-regarded, long-running programme in this field."
+      },
+      "network": {
+       "score": 88,
+       "reason": "Small cohorts (22 awards in 2026), residential seminars and structured mentorship give exactly the sustained peer and mentor contact a first-year PhD student is looking for."
+      },
+      "outcomes": {
+       "score": 80,
+       "reason": "A stipend, a laptop and up to USD 10,500 in research funds directly support finishing a strong PhD — a substantial concrete outcome if awarded."
+      },
+      "feasibility": {
+       "score": 0,
+       "reason": "The call explicitly requires applicants to already be teaching or research staff at a CARTA partner institution — being enrolled as a PhD student elsewhere does not meet this, so eligibility is 'no' and feasibility drops to zero regardless of fit."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.9,
+     "rationale": "CARTA exists to train exactly this kind of researcher — an early-stage African PhD student working on public/population health topics like maternal health and community health workers — through mentored, cohort-based doctoral training. The content fit is excellent even though the eligibility rule is a hard blocker (see eligibility_notes).",
+     "matched_topics": [
+      "maternal health in informal settlements",
+      "community health workers",
+      "gender and health"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's designed exactly for early-career African researchers in public/population health like her.",
+     "It comes with a stipend, a laptop and up to USD 10,500 in research funds, plus a small, mentored cohort."
+    ],
+    "watch_out": [
+     "The call explicitly requires being teaching or research staff at a CARTA partner institution, not just an enrolled PhD student — this needs checking against her actual position before applying.",
+     "The 2026-cohort deadlines (20 Aug and 21 Sep 2025) have already passed; a new call would need to appear."
+    ],
+    "tagline": "Built for exactly her profile — except the staff requirement may rule her out.",
+    "eligible": "no",
+    "eligibility_notes": "The 2026 call states: \"Applicants for this program MUST be bona fide teaching or research staff at one of the participating African institutions.\" A first-year PhD student who is not staff at a CARTA partner institution does not meet this requirement, regardless of fit on other criteria. If her university is a CARTA partner and she also holds a staff role there, this could change.",
+    "visa": {
+     "required": "conditional",
+     "note": "Residential seminar locations for a future cohort weren't stated on the pages found, so whether a visa would be needed can't be assessed yet. This is general information, not immigration advice.",
+     "official_source": "https://cartafrica.org/",
+     "verify_flag": true,
+     "lead_days": 30
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "verified"
+    },
+    "cost_estimate": {
+     "currency": "KES",
+     "low": 0,
+     "high": 0,
+     "breakdown": {
+      "registration": {
+       "low": 0,
+       "high": 0,
+       "note": "No fee to apply; the fellowship provides a stipend and research funds rather than charging one",
+       "grounded": true
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "Residential-seminar travel is normally covered by the programme's stipend/support for accepted fellows, though this isn't itemised on the pages found",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Same assumption as travel — covered for accepted fellows, not separately confirmed",
+       "grounded": false
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Seminar locations for a future cohort aren't stated, so a visa need can't be assessed",
+       "grounded": false
+      }
+     },
+     "assumptions": [
+      "If accepted, CARTA's stipend and research funds are assumed to cover the residential-seminar costs, based on how the programme is described, though this isn't itemised on the pages found.",
+      "The main barrier here is eligibility, not cost — see eligibility_notes."
+     ],
+     "over_budget": false,
+     "net_note": "Cost isn't really the issue with this one — eligibility is. The programme requires being institutional staff, which this profile doesn't confirm."
+    }
+   },
+   {
+    "id": "cugh-2027",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "CUGH 2027 Annual Conference — Transforming Global Health: Partnerships, Power, Leadership, and Technology in a Rapidly Changing World",
+    "host": "Consortium of Universities for Global Health (CUGH)",
+    "host_kind": "learned_society",
+    "theme": "Transforming Global Health: Partnerships, Power, Leadership, and Technology in a Rapidly Changing World",
+    "description": "CUGH's annual conference is the flagship yearly meeting of the global-health field, bringing together faculty, trainees and students working on global health, public health and community-based initiatives. The 2027 edition runs 25-28 February 2027 in Lima, Peru. Abstract submission for this edition has already closed, so it is now attend/registration-only; a maternal-health and community-health-worker researcher would fit the conference's scope even though the theme is broad rather than maternal-health-specific.",
+    "location": {
+     "city": "Lima",
+     "country": "Peru",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-02-25",
+     "end": "2027-02-28"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-08-31",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "The abstract submission deadline is August 31st, 2026"
+     },
+     {
+      "label": "registration",
+      "date": "2026-11-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "All presenters must be registered by November 30th, 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "Open to faculty, staff, trainees, residents, fellows and students engaged in global health; no nationality restriction found. Since the abstract deadline has passed, she could only attend/register, not present a new abstract at this edition."
+    },
+    "fees": [
+     {
+      "tier": "Student (CUGH member, early bird to 30 Nov 2026)",
+      "amount": 225,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "$225"
+     },
+     {
+      "tier": "Student (non-member, early bird)",
+      "amount": 275,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "$275"
+     },
+     {
+      "tier": "Delegate (member, early bird)",
+      "amount": 675,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "$675"
+     },
+     {
+      "tier": "Delegate (non-member, early bird)",
+      "amount": 775,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "$775"
+     }
+    ],
+    "funding": [
+     {
+      "name": "NRF Kenya — Support to Scientific Events",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not specified on the page found",
+      "deadline": null,
+      "cycle": "Recurring national research-fund grant line; no current call date confirmed",
+      "requires": "Likely institutional endorsement (not confirmed)",
+      "eligible": "check",
+      "why": "Kenya's own fund for scientific-conference travel, but no live call or amount could be confirmed.",
+      "grounded": true,
+      "source_quote": "This grant supports scientific seminars, forums, workshops & conferences.",
+      "source_url": "https://www.nrf.go.ke/category/grants-and-calls/",
+      "sequence_note": "Check the NRF Kenya grants portal directly before relying on this for a Feb 2027 trip."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "CUGH is the main consortium of universities working in global health; its annual conference draws faculty and students from member institutions worldwide",
+      "grounded": false,
+      "source_url": "https://cughlima2027.org/"
+     }
+    ],
+    "source_url": "https://cughlima2027.org/abstract-submission/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "Page describes the live, upcoming Feb 2027 edition; abstract stage has closed but registration is open."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 63,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1154,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 62,
+       "reason": "CUGH's 2027 theme ('Partnerships, Power, Leadership, and Technology') is broad rather than maternal-health-specific, but global health is one of her adjacent fields and her work on community health workers and mobile money fits plausibly within it."
+      },
+      "standing": {
+       "score": 80,
+       "reason": "CUGH is the leading academic consortium for global health, and its annual conference is widely recognised in the field."
+      },
+      "network": {
+       "score": 70,
+       "reason": "A large international global-health gathering with strong reach, though its breadth makes it less mentoring-focused for a first-year PhD student than a smaller meeting."
+      },
+      "outcomes": {
+       "score": 55,
+       "reason": "No indexed proceedings or award were confirmed on the page; the main outcome is exposure and networking rather than a concrete publication."
+      },
+      "feasibility": {
+       "score": 55,
+       "reason": "Abstract submission has closed so she could only attend, the trip is expensive and likely over her budget, February isn't one of her available months, and Peru's visa process for her passport looks unusually involved."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.62,
+     "rationale": "CUGH's broad global-health theme doesn't name maternal health or community health workers directly, but her research sits comfortably within the wider global-health field this conference represents. The fit is real but general rather than a close thematic match.",
+     "matched_topics": [
+      "community health workers",
+      "mobile money and care"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's the flagship annual meeting for the global-health field, useful for building an international network beyond Kenya.",
+     "The registration fee has student and low/middle-income-country pricing to help with cost."
+    ],
+    "watch_out": [
+     "Abstract submission for this edition already closed, so you'd only be attending, not presenting new work.",
+     "The trip is likely to cost more than your budget, and Peru's visa process for African passport holders who don't live in the UK reportedly needs extra authorisation and about a month's lead time — verify this directly before planning around it."
+    ],
+    "tagline": "A big global-health gathering, but pricey, visa-heavy, and submission has already closed.",
+    "eligible": "yes",
+    "eligibility_notes": "Open to faculty, staff, trainees and students in global health with no stated nationality restriction; since the abstract deadline (31 Aug 2026) has passed, she could register to attend but not submit a new abstract for this edition.",
+    "visa": {
+     "required": "yes",
+     "note": "A visa is required for a Kenyan passport holder visiting Peru, and reports suggest African nationals not resident in the UK need extra authorisation from Peru's immigration office in Lima, which can take about a month. This is general information, not immigration advice — verify directly with the Peruvian consulate serving Kenya.",
+     "official_source": "https://www.gob.pe/institucion/rree",
+     "verify_flag": true,
+     "lead_days": 60
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "KES",
+     "low": 234500,
+     "high": 353200,
+     "breakdown": {
+      "registration": {
+       "low": 29100,
+       "high": 42100,
+       "note": "Student member early-bird ($225) to student non-member late ($325) tier",
+       "grounded": true
+      },
+      "travel": {
+       "low": 181300,
+       "high": 246300,
+       "note": "Nairobi-Lima return (no direct route, one or more stops), booked ahead",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 16200,
+       "high": 45300,
+       "note": "5 nights (4 conference days + 1), hostel to mid-range hotel in Lima",
+       "grounded": false
+      },
+      "visa": {
+       "low": 7800,
+       "high": 19400,
+       "note": "Peru visa for a Kenyan passport; fee not confirmed on an official page, and African nationals not resident in the UK reportedly need extra authorisation from Peru's immigration office, which can take about a month",
+       "grounded": false
+      }
+     },
+     "assumptions": [
+      "USD→KES 129.53 on 2026-09-18 (open.er-api.com)",
+      "No direct Nairobi-Lima flights exist, so fares assume a connection and are heuristic, not a live search",
+      "Visa fee and process are not confirmed on an official government page — needs direct verification",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": true,
+     "net_note": "Even at the low end this is close to her KES 250,000 cap, and the high end is well over it. Abstract submission for this edition is already closed, so this would only be for attending, which makes the cost harder to justify without funding."
+    }
+   },
+   {
+    "id": "ecas-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "11th European Conference on African Studies (ECAS 2027) — African Prisms",
+    "host": "AEGIS (Africa-Europe Group for Interdisciplinary Studies), hosted at ISCTE — University Institute of Lisbon",
+    "host_kind": "learned_society",
+    "theme": "African Prisms: the multiplicity of disciplines, perspectives, methods, histories and images that shape the contemporary study of Africa",
+    "description": "ECAS is the largest African-studies conference in Europe, held every two years under AEGIS. The 2027 edition ('African Prisms') runs 30 June-3 July 2027 in Lisbon. It is organised as panels proposed by convenors, with individual papers then submitted into open panels; a doctoral or health-and-society-focused paper on maternal health, community health workers and mobile money in Nairobi's informal settlements would fit panels on urban Africa, health or digital economies, even though this is an adjacent field for her (sociology/public health) rather than her home discipline.",
+    "location": {
+     "city": "Lisbon",
+     "country": "Portugal",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-06-30",
+     "end": "2027-07-03"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-09-27",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Call for panels 8 June-27 Sept 2026"
+     },
+     {
+      "label": "full_paper",
+      "date": "2026-12-31",
+      "depends_on": "abstract",
+      "grounded": true,
+      "source_quote": "Call for papers 26 Oct-31 Dec 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No stated career-stage or nationality restrictions found. Papers must be submitted into an already-accepted panel, so a first-time submitter needs to find and apply to a fitting open panel once the panel list is published (after the panel call closes 27 Sept 2026) and before the paper call closes 31 Dec 2026."
+    },
+    "fees": [
+     {
+      "tier": "Full fee (early bird, until 17 Apr 2027)",
+      "amount": 290,
+      "currency": "EUR",
+      "grounded": true,
+      "source_quote": "Full fee 290€"
+     },
+     {
+      "tier": "Concession fee (gross annual income below €20,000, early bird)",
+      "amount": 190,
+      "currency": "EUR",
+      "grounded": true,
+      "source_quote": "Concession fee* 190€ *Concession fee is for the delegates who gross annual income is below 20000€ per year."
+     }
+    ],
+    "funding": [
+     {
+      "name": "NRF Kenya — Support to Scientific Events",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not specified on the page found",
+      "deadline": null,
+      "cycle": "Recurring national research-fund grant line; no current call date confirmed",
+      "requires": "Likely institutional endorsement (not confirmed)",
+      "eligible": "check",
+      "why": "It's Kenya's own national fund for attending scientific conferences, but no current open call or amount could be confirmed for this cycle.",
+      "grounded": true,
+      "source_quote": "This grant supports scientific seminars, forums, workshops & conferences.",
+      "source_url": "https://www.nrf.go.ke/category/grants-and-calls/",
+      "sequence_note": "Check the NRF Kenya grants portal directly for a live call before relying on this."
+     },
+     {
+      "name": "CODESRIA Small Grants Programme for Thesis Writing",
+      "source": "external",
+      "type": "bursary",
+      "amount_note": "Historically covers fieldwork, data-processing and dissertation costs; current amount not confirmed",
+      "deadline": null,
+      "cycle": "No current 2026/27 call date found",
+      "requires": "Doctoral registration proof, research proposal, thesis-writing stage",
+      "eligible": "check",
+      "why": "CODESRIA funds African doctoral students' thesis-related costs and she fits the programme's target group, but no live current-cycle call was found.",
+      "grounded": true,
+      "source_quote": "programme... now accept[s] only doctoral students",
+      "source_url": "https://codesria.org/grants-fellowships/",
+      "sequence_note": "Contact CODESRIA directly to check whether a current cycle is open before her Dec 2026 paper deadline."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "11th edition of ECAS, run by AEGIS, the main network of African-studies centres in Europe",
+      "grounded": true,
+      "source_url": "https://www.ecasconference.org/2027/"
+     }
+    ],
+    "source_url": "https://www.ecasconference.org/2027/call-for-panels/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "Page describes the live 2027 edition with an open panel-call window through 27 Sept 2026 and a paper-call window through 31 Dec 2026."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 66,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1154,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 60,
+       "reason": "ECAS is African studies, not her home fields of sociology/public health, but her ethnographic work on health, gender and mobile money in Nairobi's informal settlements would plausibly fit panels on urban Africa, health or digital economies once the 2027 panel list is out."
+      },
+      "standing": {
+       "score": 78,
+       "reason": "The 11th edition of the largest African-studies conference in Europe, run by AEGIS, a well-established network of African-studies centres."
+      },
+      "network": {
+       "score": 65,
+       "reason": "Strong for building cross-disciplinary contacts among Africa-focused researchers in Europe, though less directly useful than a health- or sociology-specific meeting for her core network."
+      },
+      "outcomes": {
+       "score": 50,
+       "reason": "No stated proceedings or publication route from this page — presenting gets feedback and visibility, but limited information on a concrete CV outcome."
+      },
+      "feasibility": {
+       "score": 80,
+       "reason": "Cost comes in right around her budget cap rather than over it, and the dates (30 Jun-3 Jul) mostly fall in July, which is on her available-months list; a Schengen visa is needed, which costs her some points."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.6,
+     "rationale": "This is an exploration pick outside her home fields. ECAS's African-studies scope doesn't map directly onto maternal health or public health, but her research on community health workers, gender and mobile money in Nairobi's informal settlements sits naturally within African-studies conversations about urban life, health systems and digital economies, so a well-framed panel submission is plausible.",
+     "matched_topics": [
+      "urban East Africa",
+      "mobile money and care"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's a chance to present your Nairobi fieldwork to African-studies scholars outside your usual health/sociology circles.",
+     "The cost comes in right around your budget, not wildly over it, and July (most of the conference) is one of your available months.",
+     "It's a large, well-established conference, so a good panel fit could open doors beyond public health."
+    ],
+    "watch_out": [
+     "African studies isn't your home field, so you'd need to find (or help propose) a panel where your maternal-health/community-health-worker work genuinely fits.",
+     "You'll need a Schengen visa, and the total cost is close to your budget cap even before any grant comes through."
+    ],
+    "tagline": "A stretch outside your field, but a real chance to reach African-studies scholars in Europe.",
+    "eligible": "conditional",
+    "eligibility_notes": "No formal restriction on who can submit, but papers must go into an already-accepted panel; she would need to find a fitting open panel once the 2027 panel list is published after 27 Sept 2026, before the 31 Dec 2026 paper deadline.",
+    "visa": {
+     "required": "yes",
+     "note": "A Schengen short-stay visa is required for a Kenyan passport holder travelling to Portugal. This is general information, not immigration advice — confirm current requirements with the Portuguese consulate or its visa-application partner in Kenya.",
+     "official_source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/schengen-visa_en",
+     "verify_flag": true,
+     "lead_days": 30
+    },
+    "explore": true,
+    "explore_reason": "African studies is an adjacent field, not one of her primary fields, and there's little direct keyword overlap between the conference's theme and her topics — but the fit is real once framed around urban Africa, health and digital economies.",
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "KES",
+     "low": 163500,
+     "high": 249000,
+     "breakdown": {
+      "registration": {
+       "low": 28300,
+       "high": 43200,
+       "note": "Concession fee (€190, for gross annual income under €20,000, likely her case as a PhD student) to full early-bird fee (€290)",
+       "grounded": true
+      },
+      "travel": {
+       "low": 90700,
+       "high": 116600,
+       "note": "Nairobi-Lisbon return, economy, booked 8-10 weeks ahead",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 26050,
+       "high": 67000,
+       "note": "5 nights (4 conference days + 1), hostel to mid-range hotel in Lisbon",
+       "grounded": false
+      },
+      "visa": {
+       "low": 18600,
+       "high": 22300,
+       "note": "Schengen short-stay visa fee (€90) plus a typical visa-centre service charge",
+       "grounded": true,
+       "source": "https://hellosafe.com/schengen-visa/fees"
+      }
+     },
+     "assumptions": [
+      "EUR→KES ≈ 148.85, USD→KES 129.53 on 2026-09-18 (open.er-api.com)",
+      "Assumes the concession fee tier at the low end (income under €20,000) and the standard early-bird fee at the high end",
+      "Travel and accommodation are heuristic estimates from search, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "This sits right up against her KES 250,000 cap even without any grant, so any funding (NRF, CODESRIA, or her university's own travel fund) would make a real difference rather than being a bonus."
+    }
+   },
+   {
+    "id": "frontiers-womens-empowerment-mch-si",
+    "type": "journal_call",
+    "status": "open",
+    "title": "Women's Empowerment for Maternal and Child Health in Africa and Across LMICs: Critical Perspectives and Future Directions",
+    "host": "Frontiers (Frontiers in Global Women's Health; co-hosted by Frontiers in Reproductive Health and Frontiers in Sociology)",
+    "host_kind": "publisher",
+    "theme": "Women's empowerment and maternal/child health in Africa and low- and middle-income countries",
+    "description": "A Frontiers Research Topic (special issue) inviting original research, reviews and perspectives on how women's empowerment shapes maternal and child health outcomes in Africa and other low- and middle-income countries. It is hosted primarily in Frontiers in Global Women's Health, with Frontiers in Reproductive Health and Frontiers in Sociology also participating, so a sociology-framed paper on community health workers, mobile money and maternal care would fit. It is fully online, so there is no travel involved, but an article-processing charge applies.",
+    "location": {
+     "city": "—",
+     "country": "—",
+     "format": "online"
+    },
+    "dates": {
+     "start": null,
+     "end": null
+    },
+    "deadlines": [
+     {
+      "label": "full_paper",
+      "date": "2026-12-14",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Manuscript Submission Deadline 14 December 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No stated restrictions; the topic explicitly welcomes work situated in Africa and other LMICs. The page states the topic 'is currently accepting articles'."
+    },
+    "fees": [
+     {
+      "tier": "Original Research (A-type article)",
+      "amount": 2695,
+      "currency": "CHF",
+      "grounded": true,
+      "source_quote": "A Type Articles | Frontiers in Global Women's Health | CHF 2,695"
+     }
+    ],
+    "funding": [
+     {
+      "name": "Frontiers low/lower-middle-income country fee support",
+      "source": "venue",
+      "type": "waiver",
+      "amount_note": "Discount on the CHF 2,695 article-processing charge; exact discount size not published",
+      "deadline": null,
+      "cycle": "Apply via Frontiers' fee-support form when or before submitting",
+      "requires": "Submission to this Research Topic; application through Frontiers' fee-support form",
+      "eligible": "likely",
+      "why": "Kenya is classified by the World Bank as a lower-middle-income country, which is the stated eligibility group for this discount.",
+      "grounded": true,
+      "source_quote": "Authors in countries classified by the World Bank as low or lower-middle income countries may be eligible for discounts to their APC",
+      "source_url": "https://www.frontiersin.org/journals/global-womens-health/for-authors/publishing-fees",
+      "sequence_note": "Apply for the fee-support discount at or before submission, well ahead of the 14 Dec 2026 manuscript deadline, since the discount amount needs confirming before deciding whether to submit."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "Cross-listed across three Frontiers journals (Global Women's Health, Reproductive Health, Sociology), indicating an active, multi-journal Research Topic",
+      "grounded": true,
+      "source_url": "https://www.frontiersin.org/research-topics/81584/womens-empowerment-for-maternal-and-child-health-in-africa-and-across-lmics-critical-perspectives-and-future-directions"
+     }
+    ],
+    "source_url": "https://www.frontiersin.org/research-topics/81584/womens-empowerment-for-maternal-and-child-health-in-africa-and-across-lmics-critical-perspectives-and-future-directions",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "Page shows a live 2026-12-14 manuscript deadline and is marked as currently accepting articles."
+    },
+    "venue_funding": [
+     {
+      "name": "Frontiers low- and lower-middle-income country fee support",
+      "type": "waiver",
+      "deadline": null,
+      "amount_note": "Discount on the APC; amount not specified, assessed via a fee-support application form",
+      "eligibility_notes": "For authors in countries the World Bank classifies as low or lower-middle income; Kenya is a lower-middle-income country, so she is likely eligible to apply.",
+      "grounded": true,
+      "source_quote": "Authors in countries classified by the World Bank as low or lower-middle income countries may be eligible for discounts to their APC",
+      "source_url": "https://www.frontiersin.org/journals/global-womens-health/for-authors/publishing-fees"
+     }
+    ],
+    "priority": {
+     "score": 72,
+     "weights": {
+      "fit": 0.35,
+      "standing": 0.15,
+      "outcomes": 0.2,
+      "feasibility": 0.3
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 88,
+       "reason": "The Research Topic's title, 'Women's Empowerment for Maternal and Child Health in Africa and Across LMICs,' is close to a direct restatement of her research on maternal health, gender and community health workers in Nairobi's informal settlements, and it's cross-listed in Frontiers in Sociology, her home discipline."
+      },
+      "standing": {
+       "score": 55,
+       "reason": "Frontiers is a large, indexed open-access publisher, but Frontiers in Global Women's Health is a newer, broad-scope journal rather than a flagship title in sociology or public health — limited information on citation impact for this specific journal."
+      },
+      "outcomes": {
+       "score": 75,
+       "reason": "A published, open-access journal article is a concrete, citable output for a first-year PhD student, with faster turnaround than most journals, though there's no prize or special recognition attached."
+      },
+      "feasibility": {
+       "score": 60,
+       "reason": "The CHF 2,695 (~KES 423,700) fee is well over her budget on its own, but she's in the group Frontiers names as eligible for a fee discount, and there's no travel, accommodation or visa cost since it's fully online."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.88,
+     "rationale": "This Research Topic asks for exactly the kind of work she does: how women's empowerment shapes maternal and child health in Africa and other low- and middle-income countries. Her focus on community health workers and mobile money as care pathways in Nairobi's informal settlements fits squarely within its scope, and its cross-listing in Frontiers in Sociology means it's also read by her home discipline.",
+     "matched_topics": [
+      "maternal health in informal settlements",
+      "gender and health",
+      "community health workers"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "The special issue's title is almost a direct description of your research topic.",
+     "It's fully online, so there's no travel, accommodation or visa to arrange.",
+     "You're in the group Frontiers names as eligible to apply for a fee discount on the publishing charge."
+    ],
+    "watch_out": [
+     "The full publishing fee (CHF 2,695, about KES 423,700) is far over your budget, and the size of any discount isn't stated — confirm it before committing to submit.",
+     "It's a newer, broad-scope journal rather than a top disciplinary journal, so weigh that against the fee."
+    ],
+    "tagline": "A near-perfect topic match online, but confirm the fee discount before you commit.",
+    "eligible": "yes",
+    "eligibility_notes": "No restrictions on career stage, nationality or membership were found; the Research Topic states it is currently accepting articles from anyone whose work fits Africa/LMIC maternal and child health.",
+    "visa": {
+     "required": "no",
+     "note": "Fully online — no visa needed to submit or publish.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "KES",
+     "low": 254200,
+     "high": 423700,
+     "breakdown": {
+      "registration": {
+       "low": 254200,
+       "high": 423700,
+       "note": "Full article-processing charge is CHF 2,695 (about KES 423,700). Kenya-based authors can apply for a low/lower-middle-income fee discount, but the discount amount isn't published — the low end here is an illustrative ~40% reduction, not a confirmed figure.",
+       "grounded": false
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "Fully online — no travel",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Fully online — no accommodation",
+       "grounded": true
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Fully online — no visa",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "USD→KES 129.53, USD→CHF 0.8247 on 2026-09-18 (open.er-api.com), giving CHF→KES ≈ 157.1",
+      "The low-end figure assumes an unconfirmed ~40% fee-support discount; the true discount could be smaller, larger, or a full waiver",
+      "Excludes any co-author costs if this becomes a multi-author submission"
+     ],
+     "over_budget": true,
+     "net_note": "Without a confirmed fee waiver, this is over her KES 250,000 cap even at the discounted low end. It's worth applying for Frontiers' fee-support discount before deciding, since Kenya-based authors are named as eligible for it — but until that discount is confirmed, this should be treated as expensive."
+    }
+   },
+   {
+    "id": "hsr2026-cairo",
+    "type": "conference",
+    "status": "attend-only",
+    "title": "9th Global Symposium on Health Systems Research (HSR2026)",
+    "host": "Health Systems Global",
+    "host_kind": "learned_society",
+    "theme": "Politics and Polycrises; Plurality and Partnerships; Platforms and Participation; Pathways and Planet",
+    "description": "The Global Symposium on Health Systems Research, organised by the Health Systems Global network, is the flagship meeting for health-systems and community-health-worker research worldwide. The 9th symposium (HSR2026) runs 7-9 December 2026 in Cairo. All abstract submission tracks (organised sessions, capacity-strengthening sessions, and individual sessions) are now closed, so this edition is attend/registration-only for a new presenter, though the symposium itself is still ahead and is regionally closer (Cairo) than a Europe/US equivalent.",
+    "location": {
+     "city": "Cairo",
+     "country": "Egypt",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2026-12-07",
+     "end": "2026-12-09"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-04-19",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "12am(GMT+1) on Sunday 19 April 2026"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No stated career-stage or nationality restriction. Abstract submissions closed months before this extraction, so a new presenter can only register to attend."
+    },
+    "fees": [
+     {
+      "tier": "Student/Retired, HSG member",
+      "amount": 550,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "$550.00"
+     },
+     {
+      "tier": "Low-Income Country, HSG member",
+      "amount": 560,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "$560.00"
+     },
+     {
+      "tier": "Middle-Income Country, HSG member",
+      "amount": 740,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "$740.00"
+     },
+     {
+      "tier": "High-Income Country, HSG member",
+      "amount": 1210,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "$1,210.00"
+     }
+    ],
+    "funding": [
+     {
+      "name": "NRF Kenya — Support to Scientific Events",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not specified on the page found",
+      "deadline": null,
+      "cycle": "Recurring national research-fund grant line; no current call date confirmed",
+      "requires": "Likely institutional endorsement (not confirmed)",
+      "eligible": "check",
+      "why": "Kenya's own fund for scientific-conference travel, but no live call or amount could be confirmed for a Dec 2026 trip.",
+      "grounded": true,
+      "source_quote": "This grant supports scientific seminars, forums, workshops & conferences.",
+      "source_url": "https://www.nrf.go.ke/category/grants-and-calls/",
+      "sequence_note": "Check the NRF Kenya grants portal directly given the Dec 2026 travel date."
+     }
+    ],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "9th Global Symposium on Health Systems Research, run by Health Systems Global, the main international network for this field",
+      "grounded": true,
+      "source_url": "https://hsr2026.healthsystemsresearch.org/submit-an-abstract/"
+     }
+    ],
+    "source_url": "https://hsr2026.healthsystemsresearch.org/submit-an-abstract/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2026,
+     "stale": false,
+     "note": "Page describes the live, upcoming Dec 2026 edition; all submission tracks have closed but the event and registration are current."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 79,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1154,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 75,
+       "reason": "Health Systems Global's symposium is built around health-systems delivery, and community health workers are a recurring theme at these meetings, making this one of the closer fits in this shortlist even though the 2026 tracks are already closed."
+      },
+      "standing": {
+       "score": 85,
+       "reason": "Health Systems Global runs the leading international symposium series in this exact field, now in its 9th edition."
+      },
+      "network": {
+       "score": 82,
+       "reason": "This symposium draws health-systems researchers from across Africa and the world, and Cairo is a regionally accessible location, making it a strong networking opportunity for a Kenya-based early-career researcher."
+      },
+      "outcomes": {
+       "score": 60,
+       "reason": "No indexed proceedings were confirmed, but the symposium's reputation carries real weight on a CV, even for attendance without a new presentation."
+      },
+      "feasibility": {
+       "score": 90,
+       "reason": "The trip fits comfortably within her budget, December is one of her available months, and Egypt's visa process for Kenyan travellers is comparatively straightforward and inexpensive."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.75,
+     "rationale": "Health-systems research is close to her core focus on community health workers, mobile money and maternal-health delivery in informal settlements — this symposium's four 2026 themes (governance, partnerships, digital platforms, and human-ecological concerns) all touch on aspects of her work, even though she'd be attending rather than presenting this time.",
+     "matched_topics": [
+      "community health workers",
+      "maternal health in informal settlements",
+      "mobile money and care"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's the leading global meeting for health-systems and community-health-worker research, and it fits your budget.",
+     "December is one of your available months, and Cairo is a relatively short, affordable regional trip from Nairobi.",
+     "You'd meet health-systems researchers from across Africa working on problems close to yours."
+    ],
+    "watch_out": [
+     "All abstract submission tracks for this edition are already closed, so you'd be attending, not presenting.",
+     "The visa fee figure isn't from an official Egyptian government page — confirm it directly before budgeting."
+    ],
+    "tagline": "The best fit-and-budget match on this list — but you'd be attending, not presenting.",
+    "eligible": "yes",
+    "eligibility_notes": "No career-stage or nationality restriction was found. All submission tracks (organised, capacity-strengthening, and individual sessions) closed before this extraction, so registration to attend is the only current option.",
+    "visa": {
+     "required": "yes",
+     "note": "A visa is required for a Kenyan passport holder visiting Egypt; reported cost is around KES 12,400 for a tourist visa. This is general information, not immigration advice — confirm current requirements with the Egyptian embassy or consulate serving Kenya.",
+     "official_source": "https://visa2egypt.gov.eg/",
+     "verify_flag": true,
+     "lead_days": 14
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "KES",
+     "low": 147100,
+     "high": 215800,
+     "breakdown": {
+      "registration": {
+       "low": 71200,
+       "high": 88100,
+       "note": "Student/retired HSG-member tier ($550) to low-income-country non-member tier ($680)",
+       "grounded": true
+      },
+      "travel": {
+       "low": 51800,
+       "high": 84200,
+       "note": "Nairobi-Cairo return, economy, booked ahead — a relatively short regional route",
+       "grounded": false
+      },
+      "accommodation": {
+       "low": 11700,
+       "high": 31100,
+       "note": "3 nights (2 conference days + 1), hostel to mid-range hotel in Cairo",
+       "grounded": false
+      },
+      "visa": {
+       "low": 12400,
+       "high": 12400,
+       "note": "Egypt tourist visa fee for a Kenyan passport holder",
+       "grounded": false
+      }
+     },
+     "assumptions": [
+      "USD→KES 129.53 on 2026-09-18 (open.er-api.com)",
+      "Travel and accommodation are heuristic regional estimates, not a live fare/hotel search",
+      "Visa fee is from a travel-agency source, not an official Egyptian government page — needs direct verification",
+      "Excludes meals, local transport and travel insurance"
+     ],
+     "over_budget": false,
+     "net_note": "This comes in comfortably within her KES 250,000 cap even without any funding, and December is one of her available months, which makes it one of the more realistic conferences on this list to actually attend."
+    }
+   },
+   {
+    "id": "kash-2027",
+    "type": "conference",
+    "status": "open",
+    "title": "17th KEMRI Annual Scientific and Health (KASH) Conference",
+    "host": "Kenya Medical Research Institute (KEMRI)",
+    "host_kind": "government",
+    "theme": "Translating Research Evidence to Impact: Scaling Health Innovations for Economic Growth",
+    "description": "KASH is KEMRI's annual scientific and health conference, now in its 17th year, bringing together scientists, students, policymakers and development partners in Nairobi to share health research findings. The 2027 edition (9-12 February 2027) is themed on translating research evidence into scaled health innovations. It is a general health-research conference rather than a maternal-health-specific one, but its scope (health systems, community health, innovation) covers this kind of work, and a call for abstracts and symposia is open.",
+    "location": {
+     "city": "Nairobi",
+     "country": "Kenya",
+     "format": "in_person"
+    },
+    "dates": {
+     "start": "2027-02-09",
+     "end": "2027-02-12"
+    },
+    "deadlines": [
+     {
+      "label": "abstract",
+      "date": "2026-11-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "The Call for Abstracts & Symposia for #KASH2027 is OPEN! ... 30|11|26"
+     },
+     {
+      "label": "registration",
+      "date": "2027-01-31",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "31st January 2027"
+     }
+    ],
+    "eligibility": {
+     "career_stage": [],
+     "nationality": null,
+     "region_restriction": null,
+     "membership_required": false,
+     "notes": "No restrictions on career stage, nationality or membership were found on the page; open to scientists, students, sponsors, collaborators, development partners and policymakers."
+    },
+    "fees": [
+     {
+      "tier": "Student",
+      "amount": 5000,
+      "currency": "KES",
+      "grounded": true,
+      "source_quote": "Students: 5,000"
+     },
+     {
+      "tier": "Non-KEMRI Staff",
+      "amount": 10000,
+      "currency": "KES",
+      "grounded": true,
+      "source_quote": "Non-KEMRI Staff: 10,000"
+     },
+     {
+      "tier": "KEMRI Staff",
+      "amount": 8000,
+      "currency": "KES",
+      "grounded": true,
+      "source_quote": "KEMRI Staff: 8,000"
+     }
+    ],
+    "funding": [],
+    "past_editions": [],
+    "standing_signals": [
+     {
+      "signal": "17th annual edition of KEMRI's national scientific and health conference",
+      "grounded": true,
+      "source_url": "https://www.kemri.go.ke/kash-17/"
+     }
+    ],
+    "source_url": "https://www.kemri.go.ke/kash-17/",
+    "extracted_at": "2026-09-19",
+    "predatory_flag": false,
+    "predatory_reasons": [],
+    "freshness": {
+     "posted": null,
+     "last_signal_year": 2027,
+     "stale": false,
+     "note": "Page refers to the upcoming 2027 edition with a live 2026-11-30 abstract deadline; clearly current."
+    },
+    "venue_funding": [],
+    "priority": {
+     "score": 70,
+     "weights": {
+      "fit": 0.2692,
+      "standing": 0.1154,
+      "network": 0.2308,
+      "outcomes": 0.1538,
+      "feasibility": 0.2308
+     },
+     "sub_scores": {
+      "fit": {
+       "score": 65,
+       "reason": "KASH is a general Kenyan health-research conference (this edition themed on scaling health innovations), not maternal-health-specific, but her work on community health workers and maternal health in informal settlements fits comfortably under its health-systems and innovation tracks with some framing."
+      },
+      "standing": {
+       "score": 55,
+       "reason": "It's KEMRI's national annual conference in its 17th year — a solid, government-backed venue — but no keynote list or programme-committee details were found, so standing is based on limited information (inferred)."
+      },
+      "network": {
+       "score": 70,
+       "reason": "It draws scientists, students, policymakers and development partners from across Kenya's health-research community, which is exactly the kind of local network a first-year PhD student in Nairobi wants."
+      },
+      "outcomes": {
+       "score": 60,
+       "reason": "Past editions have published an abstract book, so presenting gives a citable output and feedback from a national audience, though there's no indexed proceedings or award mentioned for this edition."
+      },
+      "feasibility": {
+       "score": 90,
+       "reason": "Costs almost nothing since it's in her own city with no travel or visa needed; the only knock is that the conference dates (9-12 Feb 2027) fall in February, which isn't in her listed available months."
+      }
+     }
+    },
+    "fit": {
+     "score": 0.65,
+     "rationale": "KASH 2027's theme is broad health-research and innovation rather than maternal health specifically, but Kenya's national health-research conference is a natural place to present work on community health workers and maternal health in informal settlements, especially framed around health-systems innovation. It's also the one venue in this shortlist that requires no travel at all.",
+     "matched_topics": [
+      "community health workers",
+      "maternal health in informal settlements",
+      "urban East Africa"
+     ],
+     "neighborhood_evidence": []
+    },
+    "why_go": [
+     "It's Kenya's own national health-research conference, in Nairobi — you don't need to travel or get a visa.",
+     "The student fee is only about KES 5,000, so cost is basically not a barrier.",
+     "It's a good place to meet other Kenyan health researchers and get local feedback on your work."
+    ],
+    "watch_out": [
+     "The conference (9-12 Feb 2027) falls in February, which isn't one of the months you said you're usually available.",
+     "The theme is general health innovation, not maternal health specifically, so you may need to frame your abstract to fit."
+    ],
+    "tagline": "Kenya's own health conference — cheap, local, but check the February dates work for you.",
+    "eligible": "yes",
+    "eligibility_notes": "No restrictions on career stage, nationality or membership were found on the conference page; it's open to students, scientists and policymakers.",
+    "visa": {
+     "required": "no",
+     "note": "The conference is in Nairobi, her home city, so no visa is needed.",
+     "official_source": null,
+     "verify_flag": true,
+     "lead_days": 0
+    },
+    "explore": false,
+    "explore_reason": null,
+    "confidence": {
+     "dates": "verified",
+     "fees": "verified",
+     "cost": "range",
+     "visa": "advisory",
+     "eligibility": "inferred"
+    },
+    "cost_estimate": {
+     "currency": "KES",
+     "low": 5000,
+     "high": 5000,
+     "breakdown": {
+      "registration": {
+       "low": 5000,
+       "high": 5000,
+       "note": "Student registration tier",
+       "grounded": true
+      },
+      "travel": {
+       "low": 0,
+       "high": 0,
+       "note": "Conference is in Nairobi, her home city — no travel needed",
+       "grounded": true
+      },
+      "accommodation": {
+       "low": 0,
+       "high": 0,
+       "note": "Home city — no nights away needed",
+       "grounded": true
+      },
+      "visa": {
+       "low": 0,
+       "high": 0,
+       "note": "Own country — no visa needed",
+       "grounded": true
+      }
+     },
+     "assumptions": [
+      "She qualifies for the student fee tier (KES 5,000).",
+      "Home city equals host city, so travel, accommodation and visa are all zero.",
+      "Excludes meals, printing and local transport within Nairobi."
+     ],
+     "over_budget": false,
+     "net_note": "This is already well within her budget without needing any funding — the only real cost is the KES 5,000 student fee."
+    }
+   }
+  ]
  }
 ];
 export const FX = {"base":"INR","as_of":"2026-09-18T00:02:31Z","source":"https://open.er-api.com/v6/latest/INR","inr_per":{"USD":95.96,"EUR":110.07,"GBP":128.17,"AUD":68.26,"BRL":18.65,"SEK":9.77,"CAD":68.53}};

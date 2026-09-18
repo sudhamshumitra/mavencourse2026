@@ -1,0 +1,33 @@
+{
+  "id": "glam-indonesia-grant",
+  "type": "fellowship",
+  "status": "watch",
+  "title": "GLAM Indonesia Grant (Wikimedia Indonesia)",
+  "host": "Wikimedia Indonesia",
+  "host_kind": "foundation",
+  "theme": null,
+  "description": "GLAM Indonesia is Wikimedia Indonesia's annual grant program for researchers, cultural-heritage practitioners, archivists and communities working on Indonesian galleries, libraries, archives and museums, funding digitization and open-access projects. Rounds ran in 2024 and 2025 (the 2025 round closed 3 October 2025 and drew over 180 proposals from 27 provinces), but no 2026 round had been announced yet as of this extraction; a new round is expected on the program's annual cycle.",
+  "location": { "city": "—", "country": "Indonesia", "format": "online" },
+  "dates": { "start": null, "end": null },
+  "deadlines": [],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": "Indonesia",
+    "membership_required": false,
+    "notes": "The 2025 round was open to researchers, arts/culture/heritage practitioners, archivists and communities working in Indonesian GLAM institutions -- a strong match for an independent digital archivist, but no 2026-specific eligibility page has been published yet."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [
+    { "year": 2025, "theme": null, "city": null, "representative_papers": [], "source_url": "https://meta.wikimedia.org/wiki/Grants:Programs/Wikimedia_Community_Fund/General_Support_Fund/Wikimedia_Indonesia_2024%E2%80%932025/Final_Report" }
+  ],
+  "standing_signals": [
+    { "signal": "2025 open call received more than 180 proposals from applicants in 27 Indonesian provinces", "grounded": false, "source_url": "https://outreach.wikimedia.org/wiki/GLAM/Indonesia", "previous_quote": null, "verify_note": "fail_missing: on re-fetch, outreach.wikimedia.org/wiki/GLAM/Indonesia did not show this figure (page content returned only ran through 2019); the '180 proposals / 27 provinces' claim came from a search-result summary rather than a directly fetched, verbatim page quote, so it is downgraded pending a source that actually shows it." }
+  ],
+  "source_url": "https://outreach.wikimedia.org/wiki/GLAM/Indonesia",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2025, "stale": false, "note": "Most recently confirmed round closed 3 Oct 2025. Status is 'watch': a 2026 round is expected annually but not yet confirmed as of 19 Sept 2026." }
+}

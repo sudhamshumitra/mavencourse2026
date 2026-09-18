@@ -1,0 +1,64 @@
+{
+  "opportunity_id": "aicis-2026",
+  "profile_id": "p_putri",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "IDR",
+    "low": 1150000,
+    "high": 2950000,
+    "breakdown": {
+      "registration": { "low": 300000, "high": 750000, "note": "No fee page was found; range assumes a typical Indonesian domestic academic conference registration fee, unconfirmed", "grounded": false },
+      "travel": { "low": 250000, "high": 600000, "note": "Yogyakarta-Cirebon return by train or budget flight, booked a few weeks ahead (no live fare search run)", "grounded": false },
+      "accommodation": { "low": 600000, "high": 1600000, "note": "4 nights (3 conference days + 1), budget guesthouse to mid-range hotel in Cirebon", "grounded": false },
+      "visa": { "low": 0, "high": 0, "note": "Domestic conference within Indonesia; no visa needed", "grounded": true }
+    },
+    "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com); not directly used since this is a domestic Indonesian trip, but kept consistent with the other briefs in this run",
+      "No fee, travel-grant or accommodation page was found on the conference site; travel and accommodation are heuristic domestic-Indonesia estimates, not a live fare/hotel search",
+      "Excludes meals, local transport and incidental costs"
+    ],
+    "over_budget": false,
+    "net_note": "Even at the high end this is well under her IDR 20,000,000 cap; it's one of the cheapest options in her feed."
+  },
+  "priority": {
+    "score": 75,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1154, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 78, "reason": "The 2026 theme, 'local heritage, technological innovation', is a natural home for her Islamic-popular-culture archiving project, even though it's broader than music or zines specifically." },
+      "standing": { "score": 60, "reason": "25th annual edition run jointly with Indonesia's Ministry of Religious Affairs shows real institutional continuity, but no proceedings-indexing or keynote information was found (limited information)." },
+      "network": { "score": 75, "reason": "As Indonesia's flagship Islamic-studies conference, it's a strong place to meet the country's Islamic-studies and religious-affairs research community, directly relevant to her fieldwork." },
+      "outcomes": { "score": 50, "reason": "No confirmed proceedings or journal route was found; the outcome is mainly feedback and a CV line from presenting at a major national conference (limited information)." },
+      "feasibility": { "score": 95, "reason": "Domestic travel within Indonesia, no visa needed, cost far under her budget cap, and November is one of her available months." }
+    }
+  },
+  "fit": {
+    "score": 0.78,
+    "rationale": "AICIS+ 2026's theme of local heritage and technological innovation gives her Islamic-popular-music-and-zine archiving project a plausible, on-topic home at Indonesia's largest annual Islamic-studies gathering, even though the call is not specifically about music, zines or digital archives.",
+    "matched_topics": ["Islamic popular culture", "digital archives"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's Indonesia's biggest annual Islamic-studies conference, and 'local heritage and technological innovation' fits her archiving project.",
+    "It's in Cirebon, a short domestic trip from Yogyakarta -- no visa, no long flight.",
+    "The paper deadline (20 October 2026) is still open."
+  ],
+  "watch_out": [
+    "No fee or funding page was found, so the registration cost here is a rough guess, not confirmed.",
+    "There's no confirmed proceedings or publication route -- worth checking with the organizers if that matters to her."
+  ],
+  "tagline": "Indonesia's flagship Islamic-studies conference, a short domestic trip with real thematic overlap.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality or membership restrictions were stated, and the paper deadline is still open.",
+  "visa": {
+    "required": "no",
+    "note": "Domestic conference within Indonesia; no visa is needed.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

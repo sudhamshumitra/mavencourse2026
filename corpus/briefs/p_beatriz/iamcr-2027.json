@@ -1,0 +1,81 @@
+{
+  "opportunity_id": "iamcr-2027",
+  "profile_id": "p_beatriz",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "IAMCR Travel Grants",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Up to 18 grants, each max USD 2,000 (2026 Galway cycle terms; not yet confirmed for the 2027 São Paulo edition)",
+      "deadline": null,
+      "cycle": "Annual, tied to each year's IAMCR conference; a São Paulo 2027-specific version has not been announced yet",
+      "requires": "IAMCR membership (≥1 year), early-career/untenured status, residence in a low/middle-income country, first author of an accepted paper",
+      "eligible": "check",
+      "why": "She is early-career and Brazil qualifies as the target country group, but the scheme's terms for the 2027 São Paulo edition specifically haven't been published, and the CFP itself isn't open yet.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://iamcr.org/travel_grants",
+      "sequence_note": "Watch for the 2027 call for papers (expected November 2026) and any accompanying travel-grant announcement; it would need to come well before the July 2027 conference."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "BRL",
+    "low": 2000,
+    "high": 4500,
+    "breakdown": {
+      "registration": { "low": 770, "high": 1542, "note": "No fee is published yet (the CFP hasn't opened); estimated using a typical USD 150-300 international-congress fee range, inferred", "grounded": false },
+      "travel": { "low": 600, "high": 1200, "note": "Recife-São Paulo return fare range found via a live fare search (Decolar/Momondo)", "grounded": true },
+      "accommodation": { "low": 600, "high": 1750, "note": "5 nights (5 conference days + 1) at São Paulo hotel rates of roughly BRL 120-350/night, inferred", "grounded": false },
+      "visa": { "low": 0, "high": 0, "note": "Domestic travel within Brazil — no visa needed", "grounded": true }
+    },
+    "assumptions": [
+      "No 2027-specific registration fee or accommodation figures are published yet since the call for papers hasn't opened",
+      "USD→BRL 5.1363 on 2026-09-18 (open.er-api.com)",
+      "Recife-São Paulo return fare of BRL 600-1,200 found via a live fare search",
+      "Domestic travel within Brazil — no visa cost",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "Well under her BRL 12,000 cap even before any funding. IAMCR's own travel-grant scheme, if it reopens for the São Paulo edition, could reduce the registration line further."
+  },
+  "priority": {
+    "score": 69,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1923, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 60, "reason": "IAMCR's 2027 theme ('Multilateralism, Democracy, Diversity') is broad and communication-focused rather than film-specific; her gender/sexuality-in-media work is plausible with framing, but the call isn't open yet to confirm relevant sections." },
+      "standing": { "score": 80, "reason": "Marks IAMCR's 70th anniversary and typically draws roughly 1,500 media and communication researchers — a large, established international congress." },
+      "network": { "score": 70, "reason": "A major international media-studies congress held in her own country gives strong networking value, though overlap with her specific queer-cinema circle is unconfirmed." },
+      "outcomes": { "score": 55, "reason": "No proceedings or publication route is stated yet since the 2027 call hasn't opened — limited information." },
+      "feasibility": { "score": 90, "reason": "Held in São Paulo, cheap and visa-free to reach from Recife, and July is one of her stated available travel months; the only drag is that the call isn't open yet, so nothing is locked in." }
+    }
+  },
+  "fit": {
+    "score": 0.6,
+    "rationale": "IAMCR 2027's theme, 'Multilateralism, Democracy, Diversity: Communication for a More Just World,' is broad enough to plausibly house work on gender, sexuality and media, and IAMCR has historically run gender/sexuality-focused working groups, but the call for papers for this edition wasn't open yet at extraction time, so the specific fit can't be confirmed beyond the general theme.",
+    "matched_topics": ["gender and sexuality in media"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's IAMCR's 70th-anniversary congress, held right in São Paulo — cheap and visa-free to reach from Recife.",
+    "July is one of the months you said you're usually free to travel, so timing lines up well.",
+    "It's a huge (~1,500-scholar) media and communication congress, with room for gender- and diversity-themed work."
+  ],
+  "watch_out": [
+    "The call for papers hasn't opened yet (expected November 2026), so there's no confirmed deadline, fee or funding information — this is a 'watch' item, not yet something you can apply to."
+  ],
+  "tagline": "A big, cheap, home-turf media congress — once the 2027 call for papers actually opens.",
+  "eligible": "yes",
+  "eligibility_notes": "No eligibility details are published yet for the 2027 edition; past IAMCR congresses have been open to all media and communication researchers.",
+  "visa": {
+    "required": "no",
+    "note": "Domestic travel within Brazil — no visa is needed.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "inferred", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

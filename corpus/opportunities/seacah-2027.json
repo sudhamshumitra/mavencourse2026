@@ -1,0 +1,44 @@
+{
+  "id": "seacah-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "The Southeast Asian Conference on Arts & Humanities (SEACAH2027)",
+  "host": "IAFOR (The International Academic Forum)",
+  "host_kind": "for_profit",
+  "theme": null,
+  "description": "SEACAH2027 is a Bangkok conference on arts and humanities research, run by IAFOR (a for-profit conference organizer) as part of its Southeast Asian Conference Series, held alongside a parallel education conference (SEACE2027). It runs 15-19 February 2027, with an early-bird abstract deadline and a final abstract deadline in 2026. IAFOR runs many similarly-named 'Asian Conference on ...' events across different cities and disciplines on a pay-to-present model, so this is flagged as a predatory-suspect pattern even though the specific conference looks genuinely relevant.",
+  "location": { "city": "Bangkok", "country": "Thailand", "format": "in_person" },
+  "dates": { "start": "2027-02-15", "end": "2027-02-19" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-08-21", "depends_on": null, "grounded": true, "source_quote": "August 21, 2026" },
+    { "label": "abstract", "date": "2026-10-30", "depends_on": null, "grounded": true, "source_quote": "October 30, 2026" },
+    { "label": "early_bird", "date": "2026-10-02", "depends_on": null, "grounded": true, "source_quote": "Until October 02, 2026" },
+    { "label": "registration", "date": "2026-12-04", "depends_on": "abstract", "grounded": true, "source_quote": "December 04, 2026" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No career-stage, nationality or membership restrictions found. Full conference registration fees must be paid by the December 2026 deadline for a presenter's work to appear in the printed program. Non-member online-presenter fee is used for this independent researcher (no institutional membership)."
+  },
+  "fees": [
+    { "tier": "early_bird_online_nonmember", "amount": 200, "currency": "USD", "grounded": true, "source_quote": "200 USD Non-members" },
+    { "tier": "early_bird_onsite_nonmember", "amount": 320, "currency": "USD", "grounded": true, "source_quote": "320 USD Non-Members" },
+    { "tier": "regular_online_nonmember", "amount": 320, "currency": "USD", "grounded": true, "source_quote": "320 USD Non-members" },
+    { "tier": "regular_onsite_nonmember", "amount": 500, "currency": "USD", "grounded": true, "source_quote": "500 USD Non-Members" }
+  ],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "For-profit organizer (IAFOR) running numerous similarly-titled 'Asian Conference on...' events in parallel across multiple cities and disciplines, a pattern flagged as predatory-suspect by Grapevine's own scouting rules", "grounded": true, "source_url": "https://seacah.iafor.org/call-for-papers/" }
+  ],
+  "source_url": "https://seacah.iafor.org/call-for-papers/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": true,
+  "predatory_reasons": [
+    "For-profit organizer running many parallel, similarly-named 'Asian Conference on...' events across different cities and disciplines",
+    "Held alongside another differently-themed conference (SEACE2027) at the same time/venue, typical of the multi-conference bundling model"
+  ],
+  "freshness": { "posted": null, "last_signal_year": 2027, "stale": false, "note": "Page is specifically for the 2027 Bangkok edition, with 2026 abstract deadlines and Feb 2027 conference dates." }
+}

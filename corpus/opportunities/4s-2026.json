@@ -1,0 +1,44 @@
+{
+  "id": "4s-2026",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "4S 2026: TechnoPower • Technoscientific Futures",
+  "host": "Society for Social Studies of Science (4S)",
+  "host_kind": "learned_society",
+  "theme": "TechnoPower • Technoscientific Futures",
+  "description": "The 2026 annual meeting of the Society for Social Studies of Science (4S), themed 'TechnoPower • Technoscientific Futures', will be held in Toronto from October 7-10, 2026, marking the society's 50th anniversary. The call for submissions (paper abstracts, closed panels, roundtables, Making & Doing sessions and meetups) ran from March 3 to April 30, 2026, with acceptance notifications on May 29, 2026, so the submission window has closed; registration for the event itself remains open. A student section (6S) exists and travel grants are referenced but no amounts or eligibility details are given on the main call page.",
+  "location": { "city": "Toronto", "country": "Canada", "format": "hybrid" },
+  "dates": { "start": "2026-10-07", "end": "2026-10-10" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-04-30", "depends_on": null, "grounded": true, "source_quote": "March 3–April 30, 2026" }
+  ],
+  "eligibility": {
+    "career_stage": ["student", "professional"],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No membership requirement stated for submitting. A 'Student Section (6S)' exists for graduate students, and each person is limited to one presenter role plus two non-presenter roles."
+  },
+  "fees": [],
+  "funding": [
+    {
+      "name": "4S travel grants (referenced, details not on this page)",
+      "type": "travel_scholarship",
+      "deadline": null,
+      "amount_note": null,
+      "eligibility_notes": "The call page mentions travel grants are available but gives no amount, eligibility or deadline; the specific travel-grants page was not fetched as part of this extraction (context-starved, single-page rule) — limited information.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://4sonline.org/call_for_submissions_toronto.php"
+    }
+  ],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "4S 2026 marks the society's 50th anniversary.", "grounded": true, "source_url": "https://4sonline.org/call_for_submissions_toronto.php" },
+    { "signal": "4S is the flagship international society for science and technology studies (STS).", "grounded": false, "source_url": null }
+  ],
+  "source_url": "https://4sonline.org/call_for_submissions_toronto.php",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

@@ -1,0 +1,96 @@
+{
+  "opportunity_id": "madison-sa-2026",
+  "profile_id": "p_tanvir",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "American Institute of Bangladesh Studies (AIBS) — Travel Grants for Bangladesh Citizens",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Lump sum of up to USD 2,500 per grantee for international travel costs",
+      "deadline": null,
+      "cycle": "Currently closed",
+      "requires": "Bangladeshi citizenship, affiliation with an AIBS partner university, and paper acceptance evidence for a US conference on Bangladesh Studies topics",
+      "eligible": "check",
+      "why": "He is a Bangladeshi citizen presenting Bangladesh-focused research at a US conference, exactly the AIBS target group, but the application window is currently closed and both the abstract deadlines for this conference have already passed",
+      "grounded": true,
+      "source_quote": "We are not accepting applications at the moment.",
+      "source_url": "https://aibs.net/fellowships/travel-grants-for-bangladesh-citizens/",
+      "sequence_note": "Not usable for this edition (submissions already closed and grant applications paused); worth re-checking for a future AIBS-eligible conference."
+    },
+    {
+      "name": "University Grants Commission of Bangladesh (UGC) — Research Grant Portal",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Amount not confirmed",
+      "deadline": null,
+      "cycle": "Rolling online portal",
+      "requires": "A submitted research project proposal, usually routed through the home institution",
+      "eligible": "check",
+      "why": "He is faculty at a Bangladeshi public university, the group UGC funding targets",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://ugc-research-management.bdren.net.bd/",
+      "sequence_note": "Apply before the Oct 10, 2026 registration deadline if pursuing this route."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "BDT",
+    "low": 222738,
+    "high": 399330,
+    "breakdown": {
+      "registration": { "low": 36918, "high": 36918, "note": "Non-Student tier, USD 300 (he is faculty, not a student)", "grounded": true },
+      "travel": { "low": 110754, "high": 204280, "note": "Dhaka-Chicago return (nearest major hub to Madison, WI), booked 8-10 weeks ahead; heuristic, not a live fare search", "grounded": false },
+      "accommodation": { "low": 52300, "high": 135366, "note": "5 nights (4 conference days + 1), budget motel to the Madison Concourse Hotel", "grounded": false },
+      "visa": { "low": 22766, "high": 22766, "note": "US B1/B2 (MRV) visa fee, USD 185", "grounded": true, "source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html" }
+    },
+    "assumptions": [
+      "USD->BDT 123.06 on 2026-09-18 (open.er-api.com/v6/latest/USD)",
+      "Registration uses the confirmed Non-Student tier fee ($300)",
+      "Travel and accommodation are heuristic Dhaka-US Midwest estimates, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": true,
+    "net_note": "Only the low end (~BDT 223,000) is within his BDT 250,000 cap; the high end is well over it, and the AIBS grant that would most directly help is currently closed to new applications."
+  },
+  "priority": {
+    "score": 65,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1923, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 58, "reason": "This is a broad interdisciplinary South Asian studies conference, not education-specific, but his 'South Asian education' topic gives a genuine point of connection — a plausible fit with framing, rather than a natural home." },
+      "standing": { "score": 82, "reason": "The 54th consecutive edition of a conference running continuously since 1971 is a strong, well-documented continuity signal." },
+      "network": { "score": 65, "reason": "A large, long-running South Asian studies conference offers broad interdisciplinary contacts, but no education-specific stream or programme committee link was found." },
+      "outcomes": { "score": 50, "reason": "No travel grant, proceedings or publication route was found on the conference, registration or lodging pages — limited information." },
+      "feasibility": { "score": 75, "reason": "Both abstract deadlines have passed (attend-only), October isn't one of his available months, and the high end of the cost estimate is well over his BDT 250,000 cap." }
+    }
+  },
+  "fit": {
+    "score": 0.58,
+    "rationale": "As an exploration pick, this large interdisciplinary South Asian studies conference has no dedicated education track, but his listed topic 'South Asian education' connects genuinely to its scope, and its size and range of disciplines (history, anthropology, political science) could put him in front of Bangladesh specialists he would not meet at an education-only venue.",
+    "matched_topics": ["South Asian education", "educational inequality"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's one of the largest, longest-running South Asian studies gatherings in North America (54 years running), a different crowd than education conferences.",
+    "Attending (without presenting) is still possible since registration is open until Oct 10, 2026.",
+    "It could connect him with non-education South Asianists who study Bangladesh from other angles."
+  ],
+  "watch_out": [
+    "Both abstract deadlines (March and April 2026) have already passed, so this is attend-only, not a chance to present.",
+    "October isn't one of his available travel months, and the realistic cost range (up to ~BDT 399,000) is well above his budget without a grant, and the one grant that fits best (AIBS) is currently closed."
+  ],
+  "tagline": "A big, well-established South Asianist crowd outside his usual education circles — but pricey and attend-only.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality or membership restriction was found; registration is open to all through Oct 10, 2026.",
+  "visa": {
+    "required": "yes",
+    "note": "A US B1/B2 visitor visa is required for Bangladeshi passport holders. This is general information, not immigration advice — confirm current wait times with the US Embassy in Dhaka.",
+    "official_source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+    "verify_flag": true,
+    "lead_days": 60
+  },
+  "explore": true,
+  "explore_reason": "South Asian studies is one of his adjacent fields, not a primary one, and this conference has no education-specific track — it's included to surface non-education South Asianist contacts he would not otherwise encounter.",
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

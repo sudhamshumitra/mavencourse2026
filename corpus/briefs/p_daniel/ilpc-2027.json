@@ -1,0 +1,96 @@
+{
+  "opportunity_id": "ilpc-2027",
+  "profile_id": "p_daniel",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "ILPC bursary/travel support",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": null,
+      "deadline": null,
+      "cycle": "Not confirmed — no bursary or travel-support page was linked from the event page",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "No venue-side funding information was visible on the event page; ILPC has historically offered some reduced or waived fees at past editions, but this isn't confirmed for 2027 — limited information.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://eventos.uca.es/event_detail/155800/detail/international-labour-process-conference-2027.html",
+      "sequence_note": "Check the ILPC's own site (ilpc.org.uk) closer to the conference for any bursary announcement."
+    },
+    {
+      "name": "Ghana Tertiary Education Commission (GTEC) research support",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "Listed in corpus/funders/ghana.json as an interim research-support channel at Ghanaian institutions.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://gtec.edu.gh/",
+      "sequence_note": "Apply once the abstract is submitted (by 31 Oct 2026), giving time before the March 2027 conference."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "GHS",
+    "low": 10500,
+    "high": 20500,
+    "breakdown": {
+      "registration": { "low": 575, "high": 2300, "note": "No fee was published on the event page; range is a general small-conference student-fee ballpark ($50–$200), not confirmed", "grounded": false },
+      "travel": { "low": 7450, "high": 13750, "note": "Accra–Jerez/Seville return via a European hub, no live fare search run, heuristic ($650–$1,200)", "grounded": false },
+      "accommodation": { "low": 1150, "high": 2750, "note": "4 nights (3 conference days + 1), budget to mid-range in Jerez de la Frontera ($25–$60/night)", "grounded": false },
+      "visa": { "low": 1200, "high": 1800, "note": "Schengen short-stay visa fee is set EU-wide (€90 for adults) plus a visa-centre service fee; not independently re-fetched from the Spanish embassy's fee page in this run", "grounded": false, "source": "https://www.exteriores.gob.es/Embajadas/accra/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx" }
+    },
+    "assumptions": [
+      "USD→GHS 11.44 and EUR→GHS 13.14 on 2026-09-18 (open.er-api.com)",
+      "No registration fee was published on the event page",
+      "Travel and accommodation are heuristic estimates, not live fare/hotel searches",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "No confirmed funding source exists yet; if a home-institution or CODESRIA-adjacent fund comes through after acceptance, the out-of-pocket total would drop, but nothing is confirmed."
+  },
+  "priority": {
+    "score": 78,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 90, "reason": "The conference theme 'Spaces of Work and Resistance' and its dedicated stream on labour organisation and collective action are a near-direct match for Daniel's 'worker organising' topic among data-labelling and content-moderation workers." },
+      "standing": { "score": 82, "reason": "The page's title identifies this as the conference's 31st edition (inferred from the title, not confirmed on a separate archive page), indicating a long-running, well-established labour-studies conference series." },
+      "network": { "score": 78, "reason": "ILPC draws labour-process and labour-organising researchers internationally, a strong overlap with the worker-organising and critical-labour side of Daniel's citation neighbourhood, even though it's a smaller conference than the flagship communication societies." },
+      "outcomes": { "score": 60, "reason": "The open general stream plus dedicated organising/resistance stream give a real chance to present and get feedback, though no confirmed publication route (proceedings or special issue) was found on this page." },
+      "feasibility": { "score": 70, "reason": "The abstract deadline (31 Oct 2026) is comfortably open and cost fits his budget cap, but a Schengen visa is required and March/April isn't one of his listed available months." }
+    }
+  },
+  "fit": {
+    "score": 0.9,
+    "rationale": "ILPC 2027's theme, 'Spaces of Work and Resistance', and its explicit stream on labour organisation and collective action speak almost directly to Daniel's dissertation on how data-labelling and content-moderation workers in Ghana and Kenya organise. This is one of the closest topical matches among his options, even though the venue is smaller and less internationally prominent than a flagship communication or STS society.",
+    "matched_topics": ["worker organising", "platform labour in Africa", "AI data labour"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "The 2027 theme and its labour-organising stream are almost a direct description of your worker-organising chapter.",
+    "The abstract deadline (31 October 2026) is still open, so you can actually submit.",
+    "It explicitly invites Global South contributions, which fits your Ghana/Kenya fieldwork."
+  ],
+  "watch_out": [
+    "March/April isn't one of your listed available travel months, so you'd need to make an exception.",
+    "You'll need a Schengen visa for Spain, and no bursary or fee waiver was found on the event page."
+  ],
+  "tagline": "The closest topical match in this batch, with a deadline you can still hit.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality or membership restriction was stated; the abstract deadline (31 Oct 2026) is open for submission now.",
+  "visa": {
+    "required": "yes",
+    "note": "Spain is in the Schengen Area, and Ghanaian passport holders need a Schengen visa. There is a Spanish embassy/visa centre in Accra. This is general information, not immigration advice — confirm current requirements with the embassy.",
+    "official_source": "https://www.exteriores.gob.es/Embajadas/accra/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

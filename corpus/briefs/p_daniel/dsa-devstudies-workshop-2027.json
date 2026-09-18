@@ -1,0 +1,81 @@
+{
+  "opportunity_id": "dsa-devstudies-workshop-2027",
+  "profile_id": "p_daniel",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "British Academy Writing Workshop grant (IWW25/100268)",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Funds return flights and 3 nights' accommodation in Indonesia for all participants; the flight-funding wording specifically says 'from within Asia', so coverage for an Africa-based flight is not explicitly confirmed",
+      "deadline": "2026-09-30",
+      "cycle": "one-off, tied to this workshop",
+      "requires": "Accepted application (extended abstract, 2-page CV, writing sample)",
+      "eligible": "likely",
+      "why": "Daniel is a PhD candidate at a Ghanaian (Global South) institution, matching the stated eligibility, though it's unclear whether his flight from Accra is covered on the same terms as an Asia-based participant's.",
+      "grounded": true,
+      "source_quote": "This project will fund return flights (from within Asia), as well as accommodation for three nights, in Indonesia for all participants.",
+      "source_url": "https://www.devstud.org.uk/2026/06/09/call-for-papers-towards-a-global-south-driven-future-for-development-studies/",
+      "sequence_note": "Apply directly by 30 September 2026 with the extended abstract, CV and writing sample; ask the organiser to confirm flight coverage for an Africa-based applicant before assuming it's included."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "GHS",
+    "low": 0,
+    "high": 19000,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "No fee mentioned; this is a funded workshop, not a paid conference", "grounded": true },
+      "travel": { "low": 0, "high": 18300, "note": "Low end assumes the grant's flight funding extends to an Africa-based participant, as 'for all participants' suggests; high end assumes it doesn't (the wording says 'from within Asia' specifically) and Daniel pays a full Accra–Jakarta/Bandung return himself, heuristic ($0 or $900–$1,600)", "grounded": false },
+      "accommodation": { "low": 0, "high": 0, "note": "Explicitly funded: \"accommodation for three nights... for all participants\"", "grounded": true },
+      "visa": { "low": 0, "high": 720, "note": "Sources conflict on whether Ghanaian passport holders need a visa for Indonesia (some say visa-free up to 60 days, others say an e-visa, ~1,000,000 IDR, is required) — range reflects that uncertainty", "grounded": false, "source": "https://www.indonesiaimmigration.com/check-requirement/ghana" }
+    },
+    "assumptions": [
+      "USD→GHS 11.44 on 2026-09-18 (open.er-api.com)",
+      "The grant's own wording only explicitly promises flights 'from within Asia'; whether an Africa-based accepted participant's flight is covered is the single biggest cost swing here and should be confirmed with the organiser before applying",
+      "Accommodation for three nights is confirmed covered regardless of region",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "If flight funding extends to Africa-based participants as 'for all participants' suggests, this could be close to free. If it doesn't, Daniel would cover a long-haul Accra–Indonesia flight himself — confirm this with the organiser (Pritish Behuria) before applying."
+  },
+  "priority": {
+    "score": 66,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 55, "reason": "Development studies isn't one of Daniel's listed fields, but a workshop on 'a Global South-driven future for development studies' is plausible with framing around how AI data labour and worker organising in Ghana/Kenya fit into Global South development debates." },
+      "standing": { "score": 45, "reason": "This is the first Asia-based edition of a new workshop series, funded by a single named British Academy grant — real but modest and unproven standing, not a long-running society meeting." },
+      "network": { "score": 80, "reason": "As a small, funded early-career writing workshop, it offers sustained contact with a cohort of Global South researchers and direct mentoring — the kind of setting that scores high by nature for network value, matching his networking and feedback goals." },
+      "outcomes": { "score": 75, "reason": "The whole point of the workshop is structured feedback on an extended abstract and writing sample — a strong match for Daniel's stated goal of feedback on his framing, even without a guaranteed publication route." },
+      "feasibility": { "score": 80, "reason": "The submission deadline (30 Sept 2026) is only about 11 days away, and April isn't one of his listed available months, but the workshop is otherwise low-cost or free if flight funding extends to him." }
+    }
+  },
+  "fit": {
+    "score": 0.55,
+    "rationale": "This workshop isn't framed around AI, data labour or content moderation directly, but its central question — what a 'Global South-driven future for development studies' looks like — is a natural adjacent conversation for research on how AI companies use cheap data-labelling and moderation work in Ghana and Kenya, and how those workers organise. It's included as an exploration pick precisely because the topical link runs through an adjacent field (development studies) rather than shared keywords.",
+    "matched_topics": ["platform labour in Africa", "worker organising"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's a structured writing workshop built for feedback on your framing — exactly one of your stated goals.",
+    "It's aimed at Global South early-career researchers, so the cohort and mentoring are tailored to people in your position.",
+    "Flights and three nights' accommodation are funded, at least in part — potentially close to free."
+  ],
+  "watch_out": [
+    "The grant's own wording only promises flights 'from within Asia'; it's not confirmed whether an Africa-based participant's flight is covered — ask before applying.",
+    "The deadline (30 September 2026) is only about 11 days away, and April 2027 isn't one of your listed available travel months."
+  ],
+  "tagline": "A feedback-focused Global South workshop, funded — if the flight coverage extends to Africa.",
+  "eligible": "yes",
+  "eligibility_notes": "Daniel is currently enrolled in a PhD at a higher-education institution in the Global South (Ghana), matching the stated eligibility: \"Participants must be based at a university or other higher education institution in Asia/Africa... or be currently enrolled in a PhD at a higher education institution in the Global South.\"",
+  "visa": {
+    "required": "conditional",
+    "note": "Sources conflict on whether Ghanaian passport holders need a visa for Indonesia: some say visa-free for up to 60 days, others say an e-visa is required. This is general information, not immigration advice — verify directly with Indonesian immigration before booking travel.",
+    "official_source": "https://www.indonesiaimmigration.com/check-requirement/ghana",
+    "verify_flag": true,
+    "lead_days": 14
+  },
+  "explore": true,
+  "explore_reason": "Development studies isn't one of Daniel's listed fields or adjacent fields (labour studies, internet studies, critical data studies), and the workshop's own framing shares little vocabulary with 'AI data labour' or 'content moderation'. It's kept as the batch's exploration pick because studying worker organising among Ghanaian and Kenyan data workers sits naturally inside wider Global South development-studies debates, and because it directly matches his 'feedback' goal with a rare, largely-funded format.",
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

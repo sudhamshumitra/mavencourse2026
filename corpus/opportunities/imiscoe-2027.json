@@ -1,0 +1,38 @@
+{
+  "id": "imiscoe-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "24th IMISCOE Annual Conference",
+  "host": "IMISCOE / Brussels Institute for Social and Population Studies (BRISPO) and Brussels Interdisciplinary Research Centre on Migration and Minorities (BIRMM), Vrije Universiteit Brussel",
+  "host_kind": "learned_society",
+  "theme": "United for Human Rights and Global Equity",
+  "description": "IMISCOE (International Migration Research Network) is the largest European network of migration researchers; its 24th annual conference runs 6-9 July 2027 in Brussels, with a parallel online track. The 2027 theme examines how migration intersects with human rights, inequality, colonial legacies and racial hierarchies. Paper, panel and workshop proposals must be linked to a specific IMISCOE Standing Committee or the Open Section, and participants choose on-site or online attendance at submission.",
+  "location": { "city": "Brussels", "country": "Belgium", "format": "hybrid" },
+  "dates": { "start": "2027-07-06", "end": "2027-07-09" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-09-28", "depends_on": null, "grounded": true, "source_quote": "Deadline for submissions: 28 September 2026 (23:59 CEST)" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Open to researchers across disciplines and geographical contexts; a lead presenter may submit one paper but can hold up to three additional roles (chair, discussant, workshop organizer/participant). IMISCOE membership is not required to participate. The fee table has four columns (EU/OECD Member, Non-EU/OECD Member, Non-IMISCOE EU/OECD, Non-IMISCOE Non-EU/OECD institutes); a Nigerian university that is not an IMISCOE member institute falls in the 'Non-IMISCOE Non-EU/OECD' column."
+  },
+  "fees": [
+    { "tier": "online_standard_non_imiscoe_non_oecd", "amount": 65, "currency": "EUR", "grounded": true, "source_quote": "Online participation: standard ... Non-IMISCOE Non-EU/OECD ... €65" },
+    { "tier": "online_phd_non_imiscoe_non_oecd", "amount": 65, "currency": "EUR", "grounded": true, "source_quote": "Online participation: PhD students ... Non-IMISCOE Non-EU/OECD ... €65" },
+    { "tier": "onsite_phd_non_imiscoe_non_oecd", "amount": 75, "currency": "EUR", "grounded": true, "source_quote": "On-site participation: PhD students ... Non-IMISCOE Non-EU/OECD ... €75" },
+    { "tier": "onsite_standard_non_imiscoe_non_oecd", "amount": 125, "currency": "EUR", "grounded": true, "source_quote": "On-site participation: standard ... Non-IMISCOE Non-EU/OECD ... €125" }
+  ],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "IMISCOE is the main international migration-research network in Europe; this is its 24th consecutive annual conference.", "grounded": false, "source_url": null }
+  ],
+  "source_url": "https://www.imiscoe.org/events/imiscoe-events/2688-24th-imiscoe-annual-conference",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2027, "stale": false, "note": "Page describes the live 2027 edition with a 2026 submission deadline; clearly current." }
+}

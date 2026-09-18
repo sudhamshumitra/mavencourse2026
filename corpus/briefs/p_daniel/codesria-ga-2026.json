@@ -1,0 +1,97 @@
+{
+  "opportunity_id": "codesria-ga-2026",
+  "profile_id": "p_daniel",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "CODESRIA Small Grants Programme for Thesis Writing",
+      "source": "external",
+      "type": "bursary",
+      "amount_note": "Supports thesis writing rather than conference travel specifically; amount not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed on the page checked",
+      "requires": "Registration at an African university, doctoral candidacy",
+      "eligible": "check",
+      "why": "Daniel is a PhD candidate at a Ghanaian (African) university in the social sciences, matching the scheme's general target group, but this fund isn't specifically for General Assembly travel.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://codesria.org/grants-fellowships/",
+      "sequence_note": "Separate from, and not sequenced against, the General Assembly's own (closed) call — worth checking independently."
+    },
+    {
+      "name": "Ghana Tertiary Education Commission (GTEC) research support",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "Listed in corpus/funders/ghana.json as an interim research-support channel at Ghanaian institutions.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://gtec.edu.gh/",
+      "sequence_note": "Check with the home institution's research office; low priority given the short in-region trip."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "GHS",
+    "low": 5000,
+    "high": 11500,
+    "breakdown": {
+      "registration": { "low": 230, "high": 1150, "note": "No fee was published on the announcement page; range is a general modest-fee ballpark for a pan-African academic assembly ($20–$100), not confirmed", "grounded": false },
+      "travel": { "low": 3450, "high": 6900, "note": "Accra–Dakar return, a regional West African route, heuristic ($300–$600), no live fare search run", "grounded": false },
+      "accommodation": { "low": 1400, "high": 3450, "note": "6 nights (5 assembly days + 1), budget to mid-range in Dakar ($20–$50/night)", "grounded": false },
+      "visa": { "low": 0, "high": 0, "note": "Ghana and Senegal are both ECOWAS member states; Ghanaian passport holders can enter Senegal visa-free for up to 90 days under the ECOWAS free-movement protocol", "grounded": true, "source": "https://migrationnetwork.un.org/policy-repository/ecowas-protocol-relating-free-movement-persons-residence-and-establishment-ecowas" }
+    },
+    "assumptions": [
+      "USD→GHS 11.44 on 2026-09-18 (open.er-api.com)",
+      "No registration fee was published on the announcement page",
+      "Travel and accommodation are heuristic estimates, not live fare/hotel searches",
+      "A Yellow Fever certificate is typically required for ECOWAS travel; not a monetary cost assumed here",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "Even without any external funding, this is the cheapest option in the feed — an in-region trip with no visa cost. A CODESRIA or home-institution grant would only reduce an already modest out-of-pocket figure."
+  },
+  "priority": {
+    "score": 67,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 65, "reason": "The theme, 'Africa in Times of Rapid Global Transformation: Reclaiming Agency', is broad pan-African social science rather than a direct AI-labour or platform-work theme; Daniel's research would need explicit framing around African agency and technology to fit a specific panel." },
+      "standing": { "score": 85, "reason": "This is the 17th CODESRIA General Assembly, the flagship gathering of Africa's leading pan-African social-science research council — a well-established, high-standing venue." },
+      "network": { "score": 65, "reason": "It brings together African social scientists across disciplines, useful for regional visibility, though it's less targeted to the specific AI-labour/platform-work network than a dedicated internet- or STS-studies venue." },
+      "outcomes": { "score": 30, "reason": "The call for papers/panels closed on 6 September 2026, so Daniel could only attend, not present, at this edition." },
+      "feasibility": { "score": 90, "reason": "This is by far the cheapest, easiest option in the feed — no visa needed under the ECOWAS free-movement protocol and a short regional flight — though December isn't one of his listed available months." }
+    }
+  },
+  "fit": {
+    "score": 0.65,
+    "rationale": "CODESRIA's General Assembly is Africa's leading pan-African social-science gathering, and its 2026 theme around agency, leadership and justice in a period of global transformation could accommodate a paper on AI data labour and worker organising in Ghana and Kenya with the right framing, though the call itself doesn't name digital labour or platform work directly. This year's call for papers/panels has already closed.",
+    "matched_topics": ["platform labour in Africa"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's the biggest pan-African social-science gathering, useful for visibility among African researchers in your own region.",
+    "It's by far the cheapest and easiest option here — no visa needed, and a short flight from Accra to Dakar.",
+    "Regional conferences like this are often where African labour researchers cross paths outside the big Western societies."
+  ],
+  "watch_out": [
+    "The call for papers/panels closed on 6 September 2026, so you'd be attending, not presenting.",
+    "December isn't one of your listed available travel months."
+  ],
+  "tagline": "Your cheapest, lowest-hassle option — but the submission window already closed.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage or nationality restriction stated for attending; the call for papers and panels closed on 6 September 2026, so participation would be as an attendee.",
+  "visa": {
+    "required": "no",
+    "note": "Ghana and Senegal are both ECOWAS member states, and Ghanaian passport holders can enter Senegal visa-free for up to 90 days under the ECOWAS free-movement protocol. This is general information, not immigration advice — confirm current entry requirements (e.g. a Yellow Fever certificate) before travel.",
+    "official_source": "https://migrationnetwork.un.org/policy-repository/ecowas-protocol-relating-free-movement-persons-residence-and-establishment-ecowas",
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

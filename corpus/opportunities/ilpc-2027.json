@@ -1,0 +1,33 @@
+{
+  "id": "ilpc-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "International Labour Process Conference 2027: Spaces of Work and Resistance",
+  "host": "International Labour Process Conference (ILPC)",
+  "host_kind": "learned_society",
+  "theme": "Spaces of Work and Resistance",
+  "description": "The 2027 International Labour Process Conference (the 31st edition) will be held 31 March–2 April 2027 at the Universidad de Cádiz campus in Jerez de la Frontera, Spain, on the theme 'Spaces of Work and Resistance', examining how geographic and historical contexts shape workplace dynamics and worker struggles. The conference accepts general-stream papers plus special themed streams on care work, migrant workers, women in male-dominated workplaces, labour organisation and collective action. No registration fee or travel/bursary funding information was visible on the event page.",
+  "location": { "city": "Jerez de la Frontera", "country": "Spain", "format": "in_person" },
+  "dates": { "start": "2027-03-31", "end": "2027-04-02" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-10-31", "depends_on": null, "grounded": true, "source_quote": "Oct 31st '26 23:00 Abstracts submission closing" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No career-stage, nationality or membership restriction stated. No registration fee or funding page was linked to check."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "Billed as the 2027 conference in a long-running annual/near-annual series ('the next International Labour Process Conference'); exact edition count not stated on this page — limited information.", "grounded": false, "source_url": null },
+    { "signal": "Explicitly invites contributions from both the Global South and North on labour organising and collective action.", "grounded": true, "source_url": "https://eventos.uca.es/event_detail/155800/detail/international-labour-process-conference-2027.html" }
+  ],
+  "source_url": "https://eventos.uca.es/event_detail/155800/detail/international-labour-process-conference-2027.html",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

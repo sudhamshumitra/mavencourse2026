@@ -1,0 +1,81 @@
+{
+  "opportunity_id": "ecsas-2027",
+  "profile_id": "p_tanvir",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "University Grants Commission of Bangladesh (UGC) — Research Grant Portal",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Amount not confirmed",
+      "deadline": null,
+      "cycle": "Rolling online portal",
+      "requires": "A submitted research project proposal, usually routed through the home institution",
+      "eligible": "check",
+      "why": "He is faculty at a Bangladeshi public university, the group UGC funding targets",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://ugc-research-management.bdren.net.bd/",
+      "sequence_note": "If a panel accepts him, apply to UGC well before travel — no registration fee or venue funding is published for ECSAS itself."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "BDT",
+    "low": 126200,
+    "high": 240200,
+    "breakdown": {
+      "registration": { "low": 0, "high": 24500, "note": "Fees are marked TBA on the conference page; assumed USD 0-200 pending confirmation", "grounded": false },
+      "travel": { "low": 86000, "high": 141500, "note": "Dhaka-Poznań return (via a European hub), booked 8-10 weeks ahead; heuristic, not a live fare search", "grounded": false },
+      "accommodation": { "low": 27500, "high": 61500, "note": "5 nights (4 conference days + 1), budget to mid-range hotel in Poznań", "grounded": false },
+      "visa": { "low": 12700, "high": 12700, "note": "Schengen short-stay visa, standard fee ~EUR 90", "grounded": false, "source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/visa-costs_en" }
+    },
+    "assumptions": [
+      "USD->BDT 123.06 and implied EUR->BDT ~141.4 on 2026-09-18 (open.er-api.com/v6/latest/USD)",
+      "Registration fee is unconfirmed (page says fees TBA); used an unconfirmed USD 0-200 placeholder",
+      "Travel and accommodation are heuristic Dhaka-Europe estimates, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "The full estimated range fits under his BDT 250,000 cap even without any funding, though nothing is confirmed to reduce it further."
+  },
+  "priority": {
+    "score": 68,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1923, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 60, "reason": "ECSAS is a South Asian studies conference (his adjacent field), not education-specific; his work on exam reform and inequality in Bangladesh would need to be framed within a panel on society, policy or education in South Asia rather than matching a named track." },
+      "standing": { "score": 80, "reason": "Now in its 29th edition and run by the European Association for South Asian Studies, a long-running learned society — a strong continuity signal." },
+      "network": { "score": 78, "reason": "One of the largest South Asian studies gatherings in Europe, giving broad access to South Asianists across disciplines, including those working on education and social policy." },
+      "outcomes": { "score": 50, "reason": "No proceedings or publication route is stated on the page — limited information." },
+      "feasibility": { "score": 80, "reason": "July 2027 is one of his available months and the estimated cost fits his budget, but he'd need to join a panel whose convener is affiliated with a European institution, and the panel-proposal deadline (Sept 30, 2026) is only 11 days away." }
+    }
+  },
+  "fit": {
+    "score": 0.6,
+    "rationale": "ECSAS covers South Asian studies broadly across disciplines, and his 'South Asian education' topic gives a real, if general, point of entry; landing a paper here would mean joining or proposing a panel on education, schooling or social policy in South Asia rather than finding a track built for his specific angle.",
+    "matched_topics": ["South Asian education", "educational inequality"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's a major, long-running (29th edition) South Asian studies conference, useful for building ties beyond education specialists.",
+    "July 2027 is one of the months he's actually free to travel, and the estimated cost fits his budget.",
+    "The panel-proposal window is open now."
+  ],
+  "watch_out": [
+    "Every panel needs at least one convener affiliated with a European institution and current EASAS membership — he'd need to find or join such a panel, not submit solo, and the panel deadline is only 11 days away (Sept 30, 2026).",
+    "No registration fee or travel funding is published yet (marked TBA), so the cost estimate could shift."
+  ],
+  "tagline": "A strong regional venue for his work — if he can join a European-led panel within the next two weeks.",
+  "eligible": "conditional",
+  "eligibility_notes": "Panel proposals require a convener affiliated with a European institution and current EASAS membership; an individual paper submission (once the call opens in Nov 2026, closing 15 Jan 2027) may not require this himself, but he needs a panel to submit into.",
+  "visa": {
+    "required": "yes",
+    "note": "A Schengen short-stay visa is required for Bangladeshi passport holders to attend Poland in person. This is general information, not immigration advice — confirm current requirements with the Polish consulate or a Schengen visa application centre.",
+    "official_source": "https://www.gov.pl/web/diplomacy/visas",
+    "verify_flag": true,
+    "lead_days": 45
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

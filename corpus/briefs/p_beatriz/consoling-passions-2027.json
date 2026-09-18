@@ -1,0 +1,98 @@
+{
+  "opportunity_id": "consoling-passions-2027",
+  "profile_id": "p_beatriz",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "CAPES — Programa de Apoio a Eventos no Exterior (AEX/PAEX)",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "A fixed contribution toward travel and accommodation, amount set by CAPES ordinance and varying by destination region; exact current value not confirmed",
+      "deadline": null,
+      "cycle": "Recurring CAPES scheme; specific 2026-27 edital dates not confirmed on the pages fetched",
+      "requires": "Doctoral diploma, proof of paper acceptance to the conference, institutional endorsement",
+      "eligible": "likely",
+      "why": "She holds a doctorate and, if her abstract is accepted, would be presenting at an internationally recognized event abroad — the scheme's stated target group.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/encontre-aqui/paises/multinacional/paex",
+      "sequence_note": "Submit the Console-ing Passions proposal by 1 Dec 2026; notifications are expected late January 2027. Apply for CAPES PAEX as soon as she has the acceptance letter — check the current edital, since exact opening/closing dates weren't confirmed in this pass."
+    },
+    {
+      "name": "Console-ing Passions 2027 mobility/childcare support (unconfirmed)",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Not yet confirmed",
+      "deadline": null,
+      "cycle": null,
+      "requires": "Likely an accepted proposal; process not yet announced",
+      "eligible": "check",
+      "why": "The CFP says the organisers are arranging mobility and childcare support, but gives no amount, criteria or application process yet.",
+      "grounded": true,
+      "source_quote": "We are working to make childcare and mobility support available during CP 2027 and will provide further information as options are confirmed.",
+      "source_url": "https://cstonline.net/cfp-console-ing-passions-28-30-june-2027/",
+      "sequence_note": "Nothing to apply for yet — watch the conference website for an announcement closer to the event."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "BRL",
+    "low": 7300,
+    "high": 12800,
+    "breakdown": {
+      "registration": { "low": 0, "high": 1475, "note": "No registration fee is published on the CFP page; estimated using a typical EUR 150-250 academic-conference fee range, inferred", "grounded": false },
+      "travel": { "low": 5591, "high": 7568, "note": "Recife-Amsterdam return fare range found via a live fare search (KLM/Expedia), booked several months ahead", "grounded": true },
+      "accommodation": { "low": 1560, "high": 3600, "note": "4 nights (3 conference days + 1) at Amsterdam hotel rates of roughly BRL 390-900/night, inferred", "grounded": false },
+      "visa": { "low": 118, "high": 118, "note": "Brazilian passport holders don't need a Schengen visa; an ETIAS travel authorisation (~EUR 20 ≈ BRL 118) is expected to be required by the June 2027 travel date once the system is enforced", "grounded": false, "source": "https://www.netherlandsworldwide.nl/visa-the-netherlands/schengen-visa/apply-brazil" }
+    },
+    "assumptions": [
+      "No registration fee was found on the CFP page; used a typical EUR 150-250 academic-conference fee range, inferred",
+      "USD→BRL 5.1363 and USD→EUR 0.870624 on 2026-09-18 (open.er-api.com), giving EUR→BRL ≈ 5.90",
+      "Recife-Amsterdam return fare of BRL 5,591-7,568 found via a live fare search (KLM/Expedia)",
+      "4 nights (3 conference days + 1) at Amsterdam hotel rates of roughly BRL 390-900/night, inferred",
+      "Brazilian passport holders don't need a Schengen visa; an ETIAS authorisation is expected to apply by mid-2027",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": true,
+    "net_note": "The high end is a bit over her BRL 12,000 cap. If the conference's promised mobility/childcare support extends to travel costs (not yet confirmed), or a CAPES PAEX award comes through after acceptance, the real out-of-pocket cost would likely land well under this range."
+  },
+  "priority": {
+    "score": 75,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1923, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 78, "reason": "Console-ing Passions is built around gender and sexuality in media, one of her named topics; her queer-cinema and festival work is a natural, if not headline, fit." },
+      "standing": { "score": 82, "reason": "Founded in 1989 and described as one of the top conferences for feminist media scholars, with a 2027 edition hosted by a major university (Amsterdam)." },
+      "network": { "score": 75, "reason": "It's the leading gathering for feminist media scholarship, giving real overlap with the queer/feminist media theory she cites, though it isn't film-festival-specific." },
+      "outcomes": { "score": 65, "reason": "No stated proceedings or publication route, but presenting at a flagship feminist-media venue is a solid visibility line — limited information beyond that." },
+      "feasibility": { "score": 75, "reason": "June falls outside her usual travel months (Jan/Feb/Jul/Dec), and the high end of the cost range slightly exceeds her BRL 12,000 cap; no visa is needed, which helps." }
+    }
+  },
+  "fit": {
+    "score": 0.78,
+    "rationale": "Console-ing Passions is the flagship international conference for feminist media studies, and her research on gender and sexuality in media — one of her five named topics — sits naturally within its scope. Her more specific focus on queer Latin American cinema and film festivals as community spaces is a plausible, if less headline, fit for a conference built around television, video and new media through an intersectional feminist lens.",
+    "matched_topics": ["gender and sexuality in media", "queer Latin American cinema"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's the flagship international conference for feminist media studies, and gender/sexuality in media is right in your wheelhouse.",
+    "Founded in 1989, it's one of the most established venues in this area, so presenting here carries real visibility.",
+    "The 1 December 2026 deadline gives you time to prepare a strong proposal."
+  ],
+  "watch_out": [
+    "June 2027 falls outside the months you said you're usually free to travel (Jan/Feb/Jul/Dec).",
+    "No registration fee is published yet, and the high end of the cost estimate is a little over your BRL 12,000 budget cap."
+  ],
+  "tagline": "A top feminist-media stage for your gender/sexuality work, but June clashes with your usual travel months.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality or membership restriction is stated in the CFP; it explicitly welcomes mixed career stages and institutional locations.",
+  "visa": {
+    "required": "conditional",
+    "note": "Brazilian passport holders currently enter the Netherlands visa-free for short stays, but the EU's ETIAS travel authorisation (targeted for Q4 2026) is expected to apply by the June 2027 travel date. This is general information, not immigration advice — confirm current requirements closer to the trip.",
+    "official_source": "https://www.netherlandsworldwide.nl/visa-the-netherlands/schengen-visa/apply-brazil",
+    "verify_flag": true,
+    "lead_days": 14
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

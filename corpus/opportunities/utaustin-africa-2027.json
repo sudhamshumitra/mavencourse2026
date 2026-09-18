@@ -1,0 +1,38 @@
+{
+  "id": "utaustin-africa-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "Africa Conference 2027: Rethinking Global Africa",
+  "host": "University of Texas at Austin",
+  "host_kind": "university",
+  "theme": "Rethinking Global Africa: Diaspora, Knowledge, Transformations, and Futures",
+  "description": "The University of Texas at Austin's annual Africa Conference is a long-running interdisciplinary humanities/social-science gathering on African and African-diaspora studies. The 2027 edition runs 7-11 April 2027 and centers diaspora, knowledge production and African futures, with abstracts (max 250 words) and a short bio emailed directly to the organizers. Both in-person and fully virtual attendance are offered, and the conference states plainly that neither it nor the university provides funding.",
+  "location": { "city": "Austin, Texas", "country": "USA", "format": "hybrid" },
+  "dates": { "start": "2027-04-07", "end": "2027-04-11" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-12-01", "depends_on": null, "grounded": true, "source_quote": "Proposal Submission Deadline: December 1st, 2026, by midnight." }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Open to researchers across humanities, social sciences and other disciplines; graduate students receive a waived registration fee with supporting documentation."
+  },
+  "fees": [
+    { "tier": "in_person_africa", "amount": 100, "currency": "USD", "grounded": true, "source_quote": "In-person participants from Africa: $100" },
+    { "tier": "in_person_us_europe_asia", "amount": 150, "currency": "USD", "grounded": true, "source_quote": "In-person participants from US/Europe/Asia: $150" },
+    { "tier": "virtual", "amount": 50, "currency": "USD", "grounded": true, "source_quote": "Virtual attendees regardless of origin/location: $50" },
+    { "tier": "graduate_student", "amount": 0, "currency": "USD", "grounded": true, "source_quote": "Graduate students regardless of location = fee waived." }
+  ],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "The page describes this as the University of Texas at Austin's long-running annual Africa Conference (prior editions numbered in the mid-20s), indicating a well-established, recurring event.", "grounded": false, "source_url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/" }
+  ],
+  "source_url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2027, "stale": false, "note": "Page describes the upcoming April 2027 edition with a December 2026 deadline; current." }
+}

@@ -1,0 +1,81 @@
+{
+  "opportunity_id": "iaea-2026",
+  "profile_id": "p_tanvir",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "University Grants Commission of Bangladesh (UGC) — Research Grant Portal",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Amount not confirmed",
+      "deadline": null,
+      "cycle": "Rolling online portal",
+      "requires": "A submitted research project proposal, usually routed through the home institution",
+      "eligible": "check",
+      "why": "He is faculty at a Bangladeshi public university, the group UGC funding targets, though the conference is only days away, making this route unrealistic in time",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://ugc-research-management.bdren.net.bd/",
+      "sequence_note": "Not realistic for this edition given the timeline; would only apply to a future IAEA conference."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "BDT",
+    "low": 279290,
+    "high": 495290,
+    "breakdown": {
+      "registration": { "low": 24500, "high": 55500, "note": "No fee amount was published; registration is described as open. Assumed USD 200-450", "grounded": false },
+      "travel": { "low": 172000, "high": 271000, "note": "Dhaka-Toronto return, but booked with only ~8 days' notice for a conference starting Sept 27, 2026; last-minute fares run well above the typical 8-10-week-ahead range", "grounded": false },
+      "accommodation": { "low": 74000, "high": 160000, "note": "7 nights (6 conference days + 1) in Toronto during the conference", "grounded": false },
+      "visa": { "low": 8790, "high": 8790, "note": "Canada Temporary Resident Visa (visitor visa) fee, CAD 100", "grounded": false, "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visa/apply.html" }
+    },
+    "assumptions": [
+      "USD->BDT 123.06 and CAD->BDT ~87.9 on 2026-09-18 (open.er-api.com/v6/latest/USD)",
+      "Travel is priced as a last-minute booking (conference is ~8 days away), not the usual 8-10-week-ahead heuristic",
+      "Registration fee is unconfirmed; used a placeholder range",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": true,
+    "net_note": "Both ends of the range are far over his BDT 250,000 cap, and no funding was found that could realistically close the gap in the time available — this one isn't financially viable for this edition regardless."
+  },
+  "priority": {
+    "score": 70,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1923, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 85, "reason": "IAEA is the specialist society for educational assessment and public examinations — a near-direct match for his exam-reform work, even though it's the wider field of assessment rather than Bangladesh specifically." },
+      "standing": { "score": 85, "reason": "The 51st annual conference of a dedicated international assessment society is a strong, well-established signal." },
+      "network": { "score": 80, "reason": "A specialist assessment and examinations community is a strong, directly relevant peer group for exam-reform work, distinct from his usual education-policy circles." },
+      "outcomes": { "score": 50, "reason": "No proceedings or publication route was found — limited information." },
+      "feasibility": { "score": 40, "reason": "The conference starts in about 8 days: the paper-submission window has long closed, September isn't one of his available months, the estimated cost is roughly double his budget, and a Canadian visitor visa cannot realistically be obtained in the time remaining." }
+    }
+  },
+  "fit": {
+    "score": 0.85,
+    "rationale": "IAEA is the specialist international society for educational assessment and examinations, which is close to a direct match for his work on exam reform — of all the venues found, this is the one whose subject matter maps most literally onto that specific topic, even though it isn't focused on Bangladesh or South Asia.",
+    "matched_topics": ["exam reform", "education policy"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's the specialist society for exam and assessment research — about as direct a topical match as exists on his list.",
+    "The 51st annual edition suggests a well-established, credible community to meet.",
+    "Registration is technically still open."
+  ],
+  "watch_out": [
+    "The conference starts in about 8 days — there is no realistic way to get a Canadian visitor visa, book reasonable flights, or arrange leave in that time.",
+    "The estimated cost (roughly BDT 279,000-495,000) is far above his BDT 250,000 budget, and no funding was found that could close that gap in time."
+  ],
+  "tagline": "The best topical match on paper, but the timing makes this edition a non-starter.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality or membership restriction was found; registration is described as open, though the paper-submission deadline was not found and is assumed closed given how close the conference is.",
+  "visa": {
+    "required": "yes",
+    "note": "A Canadian Temporary Resident Visa is required for Bangladeshi passport holders and typically takes weeks to months to process — far longer than the ~8 days available before this conference. This is general information, not immigration advice — confirm current processing times with the Canadian visa application centre.",
+    "official_source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visa/apply.html",
+    "verify_flag": true,
+    "lead_days": 90
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "inferred", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

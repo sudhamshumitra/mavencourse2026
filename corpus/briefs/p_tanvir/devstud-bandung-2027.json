@@ -1,0 +1,81 @@
+{
+  "opportunity_id": "devstud-bandung-2027",
+  "profile_id": "p_tanvir",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "British Academy Writing Workshop grant (covers this workshop's travel and accommodation)",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Return flights (from within Asia) plus accommodation for three nights, for accepted participants",
+      "deadline": "2026-09-30",
+      "cycle": "One-off, tied to this workshop",
+      "requires": "Acceptance into the workshop (extended abstract, CV, writing sample)",
+      "eligible": "likely",
+      "why": "He is based at a higher-education institution in Asia, matching the workshop's eligibility, and acceptance automatically brings this funding — no separate application needed",
+      "grounded": true,
+      "source_quote": "return flights (from within Asia), as well as accommodation for three nights",
+      "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/",
+      "sequence_note": "Funding is automatic on acceptance — submit the extended abstract, CV and writing sample by Sept 30, 2026; nothing further to apply for if selected."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "BDT",
+    "low": 5500,
+    "high": 6800,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "No registration fee is mentioned; this is a funded writing workshop, not a paid conference", "grounded": true },
+      "travel": { "low": 0, "high": 0, "note": "Covered by the workshop's British Academy grant for accepted participants (return flights from within Asia)", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Three nights covered by the workshop grant for accepted participants", "grounded": true },
+      "visa": { "low": 5500, "high": 6800, "note": "Indonesia e-Visa for a Bangladeshi passport holder, approx. USD 45-55; not independently verified against the official portal", "grounded": false, "source": "https://evisa.imigrasi.go.id" }
+    },
+    "assumptions": [
+      "USD->BDT 123.06 on 2026-09-18 (open.er-api.com/v6/latest/USD)",
+      "Cost estimate assumes he is accepted into the workshop, since travel and lodging are only funded for accepted participants",
+      "Visa fee is a rough estimate, not confirmed against Indonesia's official e-visa fee schedule",
+      "Excludes meals beyond the funded nights and local transport"
+    ],
+    "over_budget": false,
+    "net_note": "If accepted, the only real out-of-pocket cost is the Indonesian e-visa fee plus incidental meals — well inside his budget. If not accepted, there is no cost at all since travel is not undertaken."
+  },
+  "priority": {
+    "score": 70,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1923, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 68, "reason": "Development studies is one of his two primary fields, and the workshop's Global South framing fits his geography strongly, but the theme is broad development studies rather than education specifically, so his paper would need deliberate framing as a development-studies contribution." },
+      "standing": { "score": 65, "reason": "Backed by a British Academy Writing Workshop grant and co-organised with the Development Studies Association and a Global South host institution — a credible funding pedigree, though it's a first-time workshop, not a long-running series." },
+      "network": { "score": 82, "reason": "A small, funded writing workshop with sustained multi-day contact among a curated Global South cohort is exactly the format that tends to build lasting collaborations, per the workshop's own design." },
+      "outcomes": { "score": 60, "reason": "Leads to a short or full paper by Jan 2027, a concrete writing output, but no proceedings or journal placement is confirmed on the page — limited information." },
+      "feasibility": { "score": 80, "reason": "The near-zero net cost makes this very affordable, but April 2027 isn't one of his listed available months, and the PhD-timing eligibility rule (PhD awarded after Oct 2017, or currently enrolled) is unclear against his profile, which doesn't state his PhD status." }
+    }
+  },
+  "fit": {
+    "score": 0.68,
+    "rationale": "The workshop's call for a 'Global South-driven future for Development Studies' matches his geography and one of his two primary fields, and his work on how exam reform and English-medium schooling drive inequality in Bangladesh is a plausible development-studies contribution, though it would need framing beyond education policy specifically to land squarely in scope.",
+    "matched_topics": ["educational inequality", "South Asian education"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "If accepted, flights and three nights are funded, so this is one of the very few opportunities on his list that is essentially free.",
+    "It's a small, funded cohort of Global South researchers, which tends to build real, lasting collaborations rather than a one-off meeting.",
+    "The abstract deadline (Sept 30, 2026) is still open."
+  ],
+  "watch_out": [
+    "His profile doesn't state whether or when he completed a PhD, and the workshop restricts eligibility to those with a PhD awarded after Oct 2017 or a current PhD candidate — worth checking before applying.",
+    "April 2027 isn't one of the months he listed as available to travel."
+  ],
+  "tagline": "Practically free if he's accepted, but check the PhD-timing rule first.",
+  "eligible": "conditional",
+  "eligibility_notes": "Restricted to those based at a higher-education institution in Asia or Africa with a PhD awarded after 1 October 2017 (or currently enrolled in a PhD programme); his profile does not state his PhD status or completion year, so this needs checking against the actual rule.",
+  "visa": {
+    "required": "yes",
+    "note": "Indonesia generally requires an e-Visa or visa-on-arrival for Bangladeshi passport holders. This is general information, not immigration advice — confirm current requirements on Indonesia's official immigration portal.",
+    "official_source": "https://evisa.imigrasi.go.id",
+    "verify_flag": true,
+    "lead_days": 14
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

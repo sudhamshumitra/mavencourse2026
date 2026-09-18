@@ -1,0 +1,80 @@
+{
+  "opportunity_id": "cugh-2027",
+  "profile_id": "p_wanjiru",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "NRF Kenya — Support to Scientific Events",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not specified on the page found",
+      "deadline": null,
+      "cycle": "Recurring national research-fund grant line; no current call date confirmed",
+      "requires": "Likely institutional endorsement (not confirmed)",
+      "eligible": "check",
+      "why": "Kenya's own fund for scientific-conference travel, but no live call or amount could be confirmed.",
+      "grounded": true,
+      "source_quote": "This grant supports scientific seminars, forums, workshops & conferences.",
+      "source_url": "https://www.nrf.go.ke/category/grants-and-calls/",
+      "sequence_note": "Check the NRF Kenya grants portal directly before relying on this for a Feb 2027 trip."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "KES",
+    "low": 234500,
+    "high": 353200,
+    "breakdown": {
+      "registration": { "low": 29100, "high": 42100, "note": "Student member early-bird ($225) to student non-member late ($325) tier", "grounded": true },
+      "travel": { "low": 181300, "high": 246300, "note": "Nairobi-Lima return (no direct route, one or more stops), booked ahead", "grounded": false },
+      "accommodation": { "low": 16200, "high": 45300, "note": "5 nights (4 conference days + 1), hostel to mid-range hotel in Lima", "grounded": false },
+      "visa": { "low": 7800, "high": 19400, "note": "Peru visa for a Kenyan passport; fee not confirmed on an official page, and African nationals not resident in the UK reportedly need extra authorisation from Peru's immigration office, which can take about a month", "grounded": false }
+    },
+    "assumptions": [
+      "USD→KES 129.53 on 2026-09-18 (open.er-api.com)",
+      "No direct Nairobi-Lima flights exist, so fares assume a connection and are heuristic, not a live search",
+      "Visa fee and process are not confirmed on an official government page — needs direct verification",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": true,
+    "net_note": "Even at the low end this is close to her KES 250,000 cap, and the high end is well over it. Abstract submission for this edition is already closed, so this would only be for attending, which makes the cost harder to justify without funding."
+  },
+  "priority": {
+    "score": 63,
+    "weights": { "fit": 0.2692, "standing": 0.1154, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 62, "reason": "CUGH's 2027 theme ('Partnerships, Power, Leadership, and Technology') is broad rather than maternal-health-specific, but global health is one of her adjacent fields and her work on community health workers and mobile money fits plausibly within it." },
+      "standing": { "score": 80, "reason": "CUGH is the leading academic consortium for global health, and its annual conference is widely recognised in the field." },
+      "network": { "score": 70, "reason": "A large international global-health gathering with strong reach, though its breadth makes it less mentoring-focused for a first-year PhD student than a smaller meeting." },
+      "outcomes": { "score": 55, "reason": "No indexed proceedings or award were confirmed on the page; the main outcome is exposure and networking rather than a concrete publication." },
+      "feasibility": { "score": 55, "reason": "Abstract submission has closed so she could only attend, the trip is expensive and likely over her budget, February isn't one of her available months, and Peru's visa process for her passport looks unusually involved." }
+    }
+  },
+  "fit": {
+    "score": 0.62,
+    "rationale": "CUGH's broad global-health theme doesn't name maternal health or community health workers directly, but her research sits comfortably within the wider global-health field this conference represents. The fit is real but general rather than a close thematic match.",
+    "matched_topics": ["community health workers", "mobile money and care"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's the flagship annual meeting for the global-health field, useful for building an international network beyond Kenya.",
+    "The registration fee has student and low/middle-income-country pricing to help with cost."
+  ],
+  "watch_out": [
+    "Abstract submission for this edition already closed, so you'd only be attending, not presenting new work.",
+    "The trip is likely to cost more than your budget, and Peru's visa process for African passport holders who don't live in the UK reportedly needs extra authorisation and about a month's lead time — verify this directly before planning around it."
+  ],
+  "tagline": "A big global-health gathering, but pricey, visa-heavy, and submission has already closed.",
+  "eligible": "yes",
+  "eligibility_notes": "Open to faculty, staff, trainees and students in global health with no stated nationality restriction; since the abstract deadline (31 Aug 2026) has passed, she could register to attend but not submit a new abstract for this edition.",
+  "visa": {
+    "required": "yes",
+    "note": "A visa is required for a Kenyan passport holder visiting Peru, and reports suggest African nationals not resident in the UK need extra authorisation from Peru's immigration office in Lima, which can take about a month. This is general information, not immigration advice — verify directly with the Peruvian consulate serving Kenya.",
+    "official_source": "https://www.gob.pe/institucion/rree",
+    "verify_flag": true,
+    "lead_days": 60
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

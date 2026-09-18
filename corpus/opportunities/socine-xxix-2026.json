@@ -1,0 +1,44 @@
+{
+  "id": "socine-xxix-2026",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "XXIX Encontro SOCINE 2026",
+  "host": "SOCINE — Sociedade Brasileira de Estudos de Cinema e Audiovisual",
+  "host_kind": "learned_society",
+  "theme": null,
+  "description": "SOCINE is the Brazilian society for cinema and audiovisual studies. Its XXIX annual Encontro (meeting) is hosted by the Federal University of Bahia (UFBA) and takes place 3-6 November 2026 in Salvador, Bahia. The call for papers ran from 2 February to 26 April 2026, so the submission window has already closed relative to today, but the event itself is still ahead and open to attend or to see accepted work presented.",
+  "location": { "city": "Salvador, Bahia", "country": "Brazil", "format": "in_person" },
+  "dates": { "start": "2026-11-03", "end": "2026-11-06" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-04-26", "depends_on": null, "grounded": true, "source_quote": "de 02 de fevereiro a 26 de abril de 2026" },
+    { "label": "registration", "date": "2026-07-19", "depends_on": "abstract", "grounded": true, "source_quote": "R$258,00 (profissionais) / R$129,00 (estudantes/profissionais sem vínculo)" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": true,
+    "notes": "Registration requires active SOCINE membership (anuidade) as a separate payment from the Encontro registration fee, per the society's own site."
+  },
+  "fees": [
+    { "tier": "profissionais (professional/faculty)", "amount": 258, "currency": "BRL", "grounded": true, "source_quote": "R$258,00 (profissionais) / R$129,00 (estudantes/profissionais sem vínculo)" },
+    { "tier": "estudantes/profissionais sem vínculo (students / unaffiliated)", "amount": 129, "currency": "BRL", "grounded": true, "source_quote": "R$258,00 (profissionais) / R$129,00 (estudantes/profissionais sem vínculo)" }
+  ],
+  "funding": [
+    { "name": "Bolsas de isenção de inscrição (registration-fee waiver grants)", "type": "waiver", "deadline": null, "amount_note": "100 fee waivers for the XXIX Encontro", "eligibility_notes": "Announced by SOCINE for this edition; specific eligibility criteria and application process not detailed on the page fetched — limited information.", "grounded": true, "source_quote": "A Socine oferecerá 100 bolsas de isenção do pagamento da inscrição do XXIX Encontro", "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/" }
+  ],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "XXIX Encontro Socine — the 29th annual meeting of Brazil's national film and audiovisual studies society.", "grounded": true, "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/" }
+  ],
+  "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": {
+    "posted": "2026-02",
+    "last_signal_year": 2026,
+    "stale": false,
+    "note": "Call posted February 2026 for the November 2026 edition; clearly current."
+  }
+}

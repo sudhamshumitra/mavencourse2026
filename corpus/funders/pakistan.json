@@ -1,0 +1,65 @@
+{
+  "country": "Pakistan",
+  "generated_at": "2026-09-19",
+  "for": "humanities/social-science PhD, international conference or research travel",
+  "funders": [
+    {
+      "name": "HEC Research Travel Grant (Higher Education Commission, Pakistan)",
+      "url": "https://www.hec.gov.pk/english/services/faculty/HEC%20Research%20Travel%20Grant/Pages/HEC-Research-Travel-Grant.aspx",
+      "category": "a",
+      "eligible_who": "Faculty, staff and PhD scholars at Pakistani universities presenting a peer-reviewed paper (or abstract published in conference proceedings/special journal issue) at an international conference",
+      "amount_note": "Covers airfare, registration fee, accommodation charges and daily allowance at PHEC-approved rates; one travel grant per applicant per fiscal year",
+      "cycle": "Apply with supporting documents at least 6 weeks before the intended travel date",
+      "requires": "Acceptance letter from organizers, full/peer-reviewed paper or abstract",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "National-level scheme; official HEC page returned 403/connection errors on direct fetch, so details are corroborated from HEC-linked secondary sources (Scribd copies of the official application form/policy, Punjab HEC's mirrored guidance) rather than a raw HEC.gov.pk fetch"
+    },
+    {
+      "name": "PHEC International Travel Grant (Punjab Higher Education Commission)",
+      "url": "https://punjabhec.gov.pk/international-travel-grant/",
+      "category": "b",
+      "eligible_who": "Staff and \"MS/M.Phil./Ph.D. scholars registered with accredited local universities\" in Punjab (Farah's own province)",
+      "amount_note": "Award amount is shown only as a financial-provision table image on the page; exact figure not confirmed in text",
+      "cycle": "Applicants with a visa already: apply ≥30 days before travel; without a visa: ≥49 days before travel",
+      "requires": "At least one publication in the last 5 years in an HEC-recognised journal; online application at the ITG portal plus a mailed printed application",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "The page itself states: \"The programme is temporarily closed.\" Kept in the registry as the right category of scheme for her province, but currently not accepting applications — recheck before relying on it."
+    },
+    {
+      "name": "Charles Wallace Pakistan Trust — Visiting Fellowship / doctoral bursaries",
+      "url": "https://www.britishcouncil.pk/study-uk/scholarships-funding/charles-wallace-visiting-fellowship-programme",
+      "category": "d",
+      "eligible_who": "Pakistani citizens resident in Pakistan; the flagship Fellowship (e.g. at IASH Edinburgh) requires an already-completed doctorate and being under 50 — not yet a fit for Farah until she finishes her PhD. The Trust separately runs doctoral bursaries and visiting fellowships (e.g. via SOAS, Nottingham) that may fit sooner; eligibility varies by specific award.",
+      "amount_note": "IASH Fellowship: monthly UK living-expense grant currently at GBP 1,600, plus a GBP 1,250 contribution towards airfare/visa/initial costs (for the completed-doctorate award, cited for scale, not direct eligibility)",
+      "cycle": "2026-27 IASH round closed 27 February 2026; the general Visiting Fellowship Programme's 2026 window closed 5 June 2026 — both cycles for 2026 are closed; a 2027 cycle should reopen on a similar annual schedule",
+      "requires": "Varies by award; typically an academic CV, project proposal and references",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Real UK-Pakistan trust with several parallel award types; the specific doctoral-bursary terms were not independently fetched, so treat the exact eligibility and next 2027 deadline as unconfirmed until checked directly with the Trust or British Council Pakistan."
+    },
+    {
+      "name": "Association for Asian Studies (AAS) — South Asia Council Conference Award",
+      "url": "https://www.asianstudies.org/grants-awards/council-grants/south-asia-council-conference-award/",
+      "category": "e",
+      "eligible_who": "AAS members (any nationality) accepted to present South Asia-related research at an AAS-affiliated conference, including AAS-in-Asia",
+      "amount_note": "Small travel subsidies — roughly 11 awards of USD 150 and 16 awards of USD 200 in the most recent cycle found",
+      "cycle": "Rolling within the funding year; some conference-specific caps (e.g. the 2026 Vancouver cap) can be reached early, but AAS-in-Asia and AAS Regional Conferences typically remain open longer",
+      "requires": "AAS membership, conference acceptance on a South Asia topic",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Directly relevant field society for South Asian studies. Page returned 403 to direct fetch; details corroborated via multiple independent 2026-dated search-result excerpts of the AAS site, not a raw page fetch."
+    },
+    {
+      "category": "c",
+      "none_found": true,
+      "note": "Home institution: check her university's own PhD conference-travel or research fund through the department or the dean of graduate studies' office; specific to the institution and not tracked here."
+    },
+    {
+      "category": "f",
+      "none_found": true,
+      "note": "No current destination-specific scheme found for a Pakistani early-career humanities/social-science scholar travelling to Europe, India or Southeast Asia specifically for this field."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "opportunity_id": "aag-2027",
+  "profile_id": "p_chinedu",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "NGN",
+    "low": 2370500,
+    "high": 4702500,
+    "breakdown": {
+      "registration": { "low": 302000, "high": 465500, "note": "Low end is the 'Student, Developing Regions' early-bird rate (USD 227, deadline 10 Sept 2026 already passed); high end is an unconfirmed estimate for the current standard rate", "grounded": false },
+      "travel": { "low": 1264000, "high": 1995500, "note": "Lagos-New York return, economy, booked in advance (search range USD 950-1500)", "grounded": false },
+      "accommodation": { "low": 558500, "high": 1995500, "note": "6 nights in New York (5 conference days + 1), budget hostel to mid-range hotel (USD 70-250/night)", "grounded": false },
+      "visa": { "low": 246000, "high": 246000, "note": "US B1/B2 (MRV) visa fee, USD 185", "grounded": true, "source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html" }
+    },
+    "assumptions": [
+      "Registration's low end (USD 227) is the quoted early-bird 'Student, Developing Regions' rate; that early-bird window (by 10 Sept 2026) has already passed, so the real current fee is uncertain",
+      "USD->NGN 1330.27 on 2026-09-18 (open.er-api.com)",
+      "Travel and accommodation are heuristic search-based ranges for the Lagos-New York route, not a live booking; New York is one of the more expensive US destinations",
+      "A further USD 250 'Visa Integrity Fee' has been signed into US law but was not yet being collected as of the source checked, so it is not included",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": true,
+    "net_note": "There is no venue funding and no external scheme found that could realistically close this gap in time -- at roughly NGN 2.4M-4.7M this is well beyond your NGN 1.5M budget. A virtual-paper submission type exists on the AAG platform and would cut most of this cost, though its price wasn't confirmed on the page checked."
+  },
+  "priority": {
+    "score": 72,
+    "weights": { "fit": 0.2692, "standing": 0.1154, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 88, "reason": "AAG is the flagship meeting of geography, her own field, and the 2027 theme -- 'Grounded Relations and Desirable Futures' -- is framed directly around how societies and the Earth are entangled, squarely the terrain of flooding-driven migration." },
+      "standing": { "score": 85, "reason": "AAG is described as the largest geography professional society and this is its flagship annual meeting, though this scale claim is not independently sourced on the page (inferred)." },
+      "network": { "score": 80, "reason": "A very large flagship meeting of her own discipline is a strong place to meet geographers who could supervise a PhD, though its size can make individual visibility harder." },
+      "outcomes": { "score": 70, "reason": "No stated publication route, but a line on the CV from the field's flagship meeting carries real weight -- limited information beyond that." },
+      "feasibility": { "score": 40, "reason": "New York is expensive and a US visa (interview, unpredictable wait) is needed against a stated preference for no visa hassle, and February falls outside her available months; no funding was found to offset the cost." }
+    }
+  },
+  "fit": {
+    "score": 0.88,
+    "rationale": "AAG is the main professional home for geographers, and the 2027 theme -- 'Grounded Relations and Desirable Futures' -- is framed directly around how societies and the Earth are entangled, which is exactly the terrain of flooding-driven migration from the Niger Delta; this sits squarely inside her own discipline rather than an adjacent one.",
+    "matched_topics": ["climate-induced migration", "Niger Delta environment", "urban migration in Lagos"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "AAG is the largest geography society in the world and the flagship annual meeting of your own field.",
+    "The 2027 theme is directly about the relationship between societies and a changing Earth -- close to your work on flooding and migration.",
+    "It would put your work in front of leading geographers who could become PhD contacts."
+  ],
+  "watch_out": [
+    "New York is very expensive and needs a US visa with an unpredictable interview wait -- realistically several times your budget.",
+    "No travel grant was found that could plausibly cover this gap before the conference."
+  ],
+  "tagline": "The flagship of your own field -- excellent fit, but the cost and visa make it a stretch.",
+  "eligible": "yes",
+  "eligibility_notes": "No explicit career-stage or nationality restriction was found; the abstract deadline (15 Oct 2026) is open, and a virtual-paper submission type exists as an alternative to presenting in person.",
+  "visa": {
+    "required": "conditional",
+    "note": "A US B1/B2 visitor visa would be needed for in-person attendance; whether the virtual-paper option removes this need was not confirmed. This is general information, not immigration advice -- confirm current requirements with the US Mission in Nigeria.",
+    "official_source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+    "verify_flag": true,
+    "lead_days": 60
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

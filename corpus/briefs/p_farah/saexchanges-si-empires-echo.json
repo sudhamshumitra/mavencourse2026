@@ -1,0 +1,63 @@
+{
+  "opportunity_id": "saexchanges-si-empires-echo",
+  "profile_id": "p_farah",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "PKR",
+    "low": 0,
+    "high": 0,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "No article-processing charge or author fee was found on the journal's site", "grounded": false },
+      "travel": { "low": 0, "high": 0, "note": "Fully online; no travel required", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Fully online; no accommodation required", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "Fully online; no visa required", "grounded": true }
+    },
+    "assumptions": [
+      "USD to PKR 277.28 as of 2026-09-18 (open.er-api.com); not actually needed here since no cost was found",
+      "This is a journal special issue with no in-person component"
+    ],
+    "over_budget": false,
+    "net_note": "There is no real cost — it's a free online submission."
+  },
+  "priority": {
+    "score": 66,
+    "weights": { "fit": 0.3182, "standing": 0.2273, "outcomes": 0.2727, "feasibility": 0.1818 },
+    "sub_scores": {
+      "fit": { "score": 65, "reason": "The issue's theme, colonial legacies in postcolonial South Asia, is plausible territory for a Partition chapter with the right framing, though the call's own focus (bureaucratic, education and economic legacies) is broader than her specific women's-oral-history angle." },
+      "standing": { "score": 40, "reason": "A peer-reviewed, open-access journal indexed in Google Scholar and Crossref, but it's a young title (currently on Volume 3) from a smaller publisher, with no long track record found — limited information." },
+      "network": { "score": null, "reason": null },
+      "outcomes": { "score": 65, "reason": "A fast, concrete publication credit (target publication December 2026) that fits her stated goal of a publication before she finishes, though the venue isn't yet a highly established one." },
+      "feasibility": { "score": 100, "reason": "Free, fully online, and the 15 Oct 2026 deadline is a comfortable 26 days out — nothing here limits her ability to submit." }
+    }
+  },
+  "fit": {
+    "score": 0.65,
+    "rationale": "The special issue's theme of colonial legacies in postcolonial South Asia is a plausible frame for a chapter on Partition and its long afterlife in family memory, but the call's stated interests (bureaucratic structures, education systems, economic models) sit a step away from her specific focus on women's oral testimony — a fit that would need active framing rather than a direct match.",
+    "matched_topics": ["South Asian history", "Punjab 1947"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's free, fully online, and the deadline (15 Oct 2026) is still open.",
+    "A publication credit before she finishes her PhD is one of her stated goals, and this is a fast, low-risk route to one.",
+    "The theme (colonial legacies in South Asia) is broad enough to fit her Partition work with the right framing."
+  ],
+  "watch_out": [
+    "It's a young, newer journal (Volume 3) without a long track record, so it carries less weight than an established one.",
+    "The theme is broader than her specific focus, so the paper would need careful framing to fit."
+  ],
+  "tagline": "A free, open, fast-turnaround publication route — if the framing fits.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality or other restrictions were found on the call or the journal's site.",
+  "visa": {
+    "required": "no",
+    "note": "Fully online; no travel or visa is needed.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

@@ -1,0 +1,96 @@
+{
+  "opportunity_id": "aoir-2026",
+  "profile_id": "p_daniel",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "AoIR 2026 Access Grant",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Up to 5 grants of up to USD 2,000, and up to 5 grants of USD 500, for accepted presenters",
+      "deadline": "2026-07-10",
+      "cycle": "one-off, tied to AoIR2026",
+      "requires": "AoIR membership + an accepted paper/panel/roundtable for AoIR2026",
+      "eligible": "no",
+      "why": "Both the abstract deadline (1 Mar 2026) and the Access Grant deadline (10 Jul 2026) have already passed, so there is nothing left to apply for on this cycle.",
+      "grounded": true,
+      "source_quote": "up to 5 Access Grants of up to 2,000 USD each, and up to 5 Access Grants of 500 USD each.",
+      "source_url": "https://members.aoir.org/aoir-2026-access-grant",
+      "sequence_note": "Not applicable this cycle; worth watching for AoIR2027's own Access Grant once its abstract deadline opens."
+    },
+    {
+      "name": "Ghana Tertiary Education Commission (GTEC) research support",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "Listed in corpus/funders/ghana.json as an interim channel for research support at Ghanaian institutions, but not independently verified for conference-travel funding.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://gtec.edu.gh/",
+      "sequence_note": "Check with GTEC/the home institution's research office before committing to travel; unrelated to AoIR's own deadlines."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "GHS",
+    "low": 12000,
+    "high": 24000,
+    "breakdown": {
+      "registration": { "low": 915, "high": 1145, "note": "Standard 'Majority World' student tier ($80 member / $100 non-member); the earlier $40/$55 early-bird tier has already closed (deadline 1 Aug 2026)", "grounded": true },
+      "travel": { "low": 9150, "high": 16000, "note": "Accra–Mexico City return, booked with a few weeks' notice; no live fare search run, general West Africa–North/Central America heuristic ($800–$1,400)", "grounded": false },
+      "accommodation": { "low": 1400, "high": 4000, "note": "5 nights (4 conference days + 1), budget hostel to mid-range hotel in Mexico City ($25–$70/night)", "grounded": false },
+      "visa": { "low": 500, "high": 2500, "note": "Mexican visa fee not confirmed on the embassy page fetched; range assumes a standard non-immigrant visa fee plus possible extra costs; there is a Mexican Embassy in Accra so no need to travel to a third country", "grounded": false, "source": "https://embamex.sre.gob.mx/ghana/index.php/en/seccion-consular-2/visas/30-eng-consular-section/eng" }
+    },
+    "assumptions": [
+      "USD→GHS 11.44 on 2026-09-18 (open.er-api.com)",
+      "Registration tier assumes he qualifies as 'Majority World' student — stated on the fees page for this conference",
+      "Travel and accommodation are heuristic estimates, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "No venue or external funding realistically applies this cycle (the Access Grant window has closed and Ghana-side schemes are unconfirmed), so the estimated GHS 12,000–24,000 is likely close to real out-of-pocket cost if he attends."
+  },
+  "priority": {
+    "score": 71,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 75, "reason": "AoIR's core remit — platform governance, content moderation, internet labour — is a direct home for Daniel's thesis even though this year's theme ('Regenerations') doesn't name it, and the 2026 submission window has already closed." },
+      "standing": { "score": 90, "reason": "26+ annual editions, an open-access proceedings series (SPIR), and a named keynote signal a well-established, respected society conference." },
+      "network": { "score": 75, "reason": "AoIR draws the international internet-research crowd that overlaps with Daniel's own citation neighbourhood (platform-labour and internet-studies scholars), even without a dedicated content-moderation track this year." },
+      "outcomes": { "score": 35, "reason": "Because the abstract deadline already passed, Daniel could only attend, not present — so there's no new CV line or feedback-on-a-paper outcome this cycle, just networking." },
+      "feasibility": { "score": 70, "reason": "Cost fits under his GHS 40,000 cap, but October isn't in his available months, and a Mexican visa (though obtainable via the Accra embassy) adds a real logistics step for a 'prefer no visa' traveller." }
+    }
+  },
+  "fit": {
+    "score": 0.75,
+    "rationale": "AoIR is the flagship society for internet research, and its ongoing interest in platform governance, moderation labour and AI-mediated work overlaps closely with Daniel's dissertation on data-labelling and content-moderation workers in Ghana and Kenya. The fit is thematic rather than this-year's-programme-specific, since 'Regenerations' doesn't name his subfield directly and the submission window for 2026 has already closed.",
+    "matched_topics": ["content moderation work", "platform labour in Africa", "critical AI studies"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "AoIR is the main yearly gathering for people who study the internet, including content moderation and platform labour — your exact subject.",
+    "It's a chance to meet scholars in your citation list before you're on the job market, even without presenting this year.",
+    "Registration stays open right up to the conference, so there's no rush to decide."
+  ],
+  "watch_out": [
+    "The abstract deadline (1 March 2026) and the Access Grant deadline (10 July 2026) have both already passed — you'd be attending, not presenting, this time.",
+    "You'll need a Mexican visa; there is an embassy in Accra, so it's manageable, but budget 2–3 weeks for the in-person application."
+  ],
+  "tagline": "Your subject's home conference, but you'd be attending, not presenting, this round.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality or membership restriction to attend; the submission window for this edition has closed, so participation would be as an attendee only.",
+  "visa": {
+    "required": "conditional",
+    "note": "Ghanaian passport holders generally need a Mexican visa, but are visa-exempt for up to 180 days if they hold a valid US, UK, Canadian or Schengen visa. There is a Mexican Embassy in Accra, so applying doesn't require travel to another country. This is general information, not immigration advice — confirm current requirements with the embassy.",
+    "official_source": "https://embamex.sre.gob.mx/ghana/index.php/en/seccion-consular-2/visas/30-eng-consular-section/eng",
+    "verify_flag": true,
+    "lead_days": 21
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

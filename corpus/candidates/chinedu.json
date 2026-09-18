@@ -1,0 +1,153 @@
+{
+  "profile_id": "p_chinedu",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "budget_used": { "searches": 12, "fetches": 12 },
+  "candidates": [
+    {
+      "url": "https://www.imiscoe.org/events/imiscoe-events/2688-24th-imiscoe-annual-conference",
+      "title": "24th IMISCOE Annual Conference: United for Human Rights and Global Equity",
+      "host": "IMISCOE (International Migration Research Network) / Vrije Universiteit Brussel",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-09-28",
+      "predicted_cfp_window": null,
+      "relevance": "IMISCOE is the main international migration-studies research network; this year's theme on human rights, inequality and colonial legacies is a natural home for work on climate displacement from the Niger Delta, and it can be attended fully online at a lower fee.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'migration studies' -> search 'migration studies research network annual conference' -> IMISCOE (main international migration-research network) -> its annual conference page",
+        "layer c: search 'IMISCOE annual conference 2027 call for papers' -> confirmed 24th edition in Brussels, deadline 28 Sept 2026"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/",
+      "title": "Africa Conference 2027: Rethinking Global Africa: Diaspora, Knowledge, Transformations, and Futures",
+      "host": "University of Texas at Austin",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-12-01",
+      "predicted_cfp_window": null,
+      "relevance": "A long-running interdisciplinary Africa-studies conference; the 2027 theme on diaspora and mobility fits migration from the Niger Delta, graduate-student fees are waived, and there's a $50 fully virtual option that removes travel and visa cost entirely.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent field 'African studies' -> search 'Africa studies conference 2027 call for papers' -> UT Austin's annual Africa Conference (25th/26th editions found in results) -> next (2027) edition page",
+        "layer c: URL pattern '/history/events-conferences/africa-conference/' confirmed the recurring annual event and its 2027 dates/theme"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.aag.org/events/aag2027/",
+      "title": "2027 AAG Annual Meeting: Grounded Relations and Desirable Futures",
+      "host": "American Association of Geographers (AAG)",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-10-15",
+      "predicted_cfp_window": null,
+      "relevance": "The flagship annual meeting of Chinedu's own field (geography); the theme explicitly frames geographers' role amid environmental and social upheaval, a direct fit for migration driven by flooding, though New York is expensive and needs a US visa.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'geography' -> search 'geography association annual conference' -> Association of American Geographers (AAG), the largest geography society -> its 2027 annual meeting page"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://oralhistory.org/2026/04/16/oral-history-review-call-for-papers-oral-history-climate-change-the-environment-due-july-2026/",
+      "title": "Oral History Review: Call for Papers, Oral History, Climate Change & the Environment",
+      "host": "Oral History Review / Oral History Association",
+      "type": "journal_call",
+      "status": "open",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "Exploration pick: oral history is not a field Chinedu would think to search, but this special issue is looking for exactly the kind of work she does -- interviews about how displaced people narrate home and environmental loss -- and submissions are rolling.",
+      "exploration": true,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer d: reworded topic 'oral narratives of displacement' -> 'oral history climate change environment' -> found Oral History Review's special-issue call, a journal outside geography/migration studies"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://chsdunilag.org/call-for-papers-4th-international-conference-and-fair-on-land-and-development-icfld-2026/",
+      "title": "4th International Conference and Fair on Land and Development (ICFLD 2026)",
+      "host": "ARUA Centre of Excellence for Urbanization and Habitable Cities, University of Lagos",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": "2026-09-10",
+      "predicted_cfp_window": null,
+      "relevance": "Hosted at Chinedu's own university in Lagos; the theme on land governance and urban management touches directly on migration into Lagos, and it has a dedicated doctoral/early-career forum for meeting potential supervisors at almost no cost.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer e: capped open search 'Nigeria conference climate change migration 2026 2027 call for papers' -> ARUA CoE-UHC's ICFLD 2026 at University of Lagos"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://metropolisintl.org/2026-conference",
+      "title": "2026 Metropolis International Migration Network Conference: Rethinking African Mobility",
+      "host": "Metropolis International Migration Network / University of Ghana",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "A migration-research-network conference held in Accra, focused specifically on African mobility; regionally close and cheap to reach for a Lagos-based researcher even though the CFP has closed and only attendance is possible now.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'migration studies' -> search 'international migration conference Africa 2026' -> Metropolis International Migration Network's 2026 conference at University of Ghana, Accra"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://africanstudies.org/annual-meetings/asa-cfp/",
+      "title": "2026 African Studies Association (ASA) Annual Meeting",
+      "host": "African Studies Association (US)",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "The largest Africa-studies gathering in the US; strong standing and network value for someone working on Niger Delta migration, but the CFP deadline (extended to 22 March 2026) has already passed and New Orleans is costly with a US visa needed.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent field 'African studies' -> search 'African Studies Association 2027 annual meeting call for papers' -> found the US-based African Studies Association's 2026 annual meeting (New Orleans, Dec 3-6 2026)"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://codesria.org/2026-democratic-governance-institute/",
+      "title": "2026 CODESRIA Democratic Governance Institute: Migration Governance -- Rethinking Mobility and Democratic Agency in Africa",
+      "host": "CODESRIA (Council for the Development of Social Science Research in Africa)",
+      "type": "fellowship",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "~Jun-Aug 2027 (if the Institute recurs annually)",
+      "relevance": "A fully funded, two-week research institute on migration governance in Africa, held in Lagos -- an almost exact topical and geographic match -- but this cycle's application deadline (31 August 2026) has already passed.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer e: capped open search 'CODESRIA conference call for papers 2026 2027 migration climate' -> CODESRIA's 2026 Democratic Governance Institute on migration governance, held in Lagos Sept 28-Oct 9 2026"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.ecasconference.org/2027/call-for-panels/",
+      "title": "ECAS2027: African Prisms (11th European Conference on African Studies)",
+      "host": "AEGIS (African studies in Europe) / European Conference on African Studies",
+      "type": "conference",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "26 Oct-31 Dec 2026 (individual paper submissions, after panels are set)",
+      "relevance": "Europe's largest African-studies conference (Lisbon, 2027); high standing but the panel-proposal window needs a PhD co-convenor and the individual-paper call for someone without a panel doesn't open until late October 2026, so it isn't something Chinedu can apply to yet.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent field 'African studies' -> search 'ECAS European Conference African Studies 2027 call for papers' -> confirmed ECAS2027 in Lisbon and its two-stage panel/paper submission process"
+      ],
+      "found_via": null
+    }
+  ]
+}

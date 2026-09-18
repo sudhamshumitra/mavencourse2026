@@ -32,10 +32,12 @@ const SUBMISSION = ['abstract', 'full_paper', 'scholarship'];
 
 /** Status follows the dates, not the model's guess: open if a submission deadline is ahead, otherwise attend-only or next edition. */
 function withDerivedStatus(o) {
-  if (o.status === 'stale' || (!o.deadlines.length && !o.dates.start)) return o;
+  if (o.status === 'stale') return o;
   const t = today();
   const ahead = (d) => Boolean(d) && d >= t;
-  if (o.deadlines.some((d) => SUBMISSION.includes(d.label) && ahead(d.date))) o.status = 'open';
+  const subs = o.deadlines.filter((d) => SUBMISSION.includes(d.label));
+  if (subs.some((d) => ahead(d.date))) o.status = 'open';
+  else if (!subs.length) return o; // no submission date listed: keep the extracted status
   else if (o.type !== 'fellowship' && (ahead(o.dates.end ?? o.dates.start) || o.deadlines.some((d) => ahead(d.date)))) o.status = 'attend-only';
   else o.status = 'watch';
   return o;

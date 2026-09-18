@@ -21,6 +21,20 @@ const norm = (v, dflt) => {
   return dflt;
 };
 
+const TODAY = new Date().toISOString().slice(0, 10);
+const SUBMISSION = ['abstract', 'full_paper', 'scholarship'];
+
+/** Same rule as the live API: status follows the dates, not the label an agent wrote. */
+function deriveStatus(o) {
+  if (o.status === 'stale') return o.status;
+  const ahead = (d) => Boolean(d) && d >= TODAY;
+  const subs = (o.deadlines ?? []).filter((d) => SUBMISSION.includes(d.label));
+  if (subs.some((d) => ahead(d.date))) return 'open';
+  if (!subs.length) return o.status; // no submission date listed: the dates can't settle it
+  if (o.type !== 'fellowship' && (ahead(o.dates?.end ?? o.dates?.start) || (o.deadlines ?? []).some((d) => ahead(d.date)))) return 'attend-only';
+  return 'watch';
+}
+
 function groundedCounts(opps) {
   let total = 0, pass = 0;
   for (const o of opps) {
@@ -46,7 +60,8 @@ for (const f of readdirSync(join(root, 'corpus', 'profiles')).filter((f) => f.en
     if (!existsSync(oppPath)) { console.log(`  ${slug}: brief ${bf} has no opportunity file`); continue; }
     const opp = readJson(oppPath);
     const brief = readJson(join(briefDir, bf));
-    const out = { ...opp, venue_funding: opp.funding ?? [] };
+    const out = { ...opp, status: deriveStatus(opp), venue_funding: opp.funding ?? [] };
+    if (out.status !== opp.status) console.log(`  ${slug}: ${opp.id} status ${opp.status} → ${out.status}`);
     for (const k of BRIEF_FIELDS) if (brief[k] !== undefined) out[k] = brief[k];
     out.funding ??= [];
     const c = out.confidence ?? {};

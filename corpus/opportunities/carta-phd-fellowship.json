@@ -1,0 +1,36 @@
+{
+  "id": "carta-phd-fellowship",
+  "type": "fellowship",
+  "status": "watch",
+  "title": "CARTA PhD Fellowships",
+  "host": "Consortium for Advanced Research Training in Africa (CARTA)",
+  "host_kind": "foundation",
+  "theme": "Doctoral training in public and population health for African researchers",
+  "description": "CARTA is a consortium (established in 2008) of African universities and research institutions, including institutions in Kenya, that runs a mentored, cohort-based PhD fellowship in public and population health. Fellows get a stipend, research funds and structured residential and digital training over 28 months. The 2026-cohort call has already closed; the program runs an annual cycle, so a similar call is expected again. A key eligibility catch: applicants must already be teaching or research staff at a CARTA partner institution, not simply an enrolled PhD student elsewhere, so this needs checking against her actual university affiliation.",
+  "location": { "city": "—", "country": "—", "format": "hybrid" },
+  "dates": { "start": "2026-03-01", "end": null },
+  "deadlines": [
+    { "label": "abstract", "date": "2025-08-20", "depends_on": null, "grounded": true, "source_quote": "August 20, 2025 at 23:59 hours EAT" },
+    { "label": "full_paper", "date": "2025-09-21", "depends_on": "abstract", "grounded": true, "source_quote": "September 21, 2025 (for full application by invitation only)" }
+  ],
+  "eligibility": {
+    "career_stage": ["phd"],
+    "nationality": null,
+    "region_restriction": "African CARTA partner institutions",
+    "membership_required": true,
+    "notes": "Applicants must be bona fide teaching or research staff at a CARTA partner institution, hold a Master's degree, and be not yet registered for a PhD or in their first year with an undefined research topic; men under 40 and women under 45. Source quote: \"Applicants for this program MUST be bona fide teaching or research staff at one of the participating African institutions.\""
+  },
+  "fees": [],
+  "funding": [
+    { "name": "CARTA PhD Fellowship stipend and research funds", "type": "award", "deadline": null, "amount_note": "A modest stipend for 28 months, a laptop, and research funds up to USD 10,500 depending on budget", "eligibility_notes": "Only for accepted CARTA PhD fellows.", "grounded": true, "source_quote": "A modest stipend for 28 months only.", "source_url": "https://cartafrica.org/call-for-applications-carta-phd-fellowships-2026/" }
+  ],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "Established in 2008 as a consortium of eight African universities, four research institutions and eight international partners; offered 22 awards in the 2026 cohort", "grounded": true, "source_url": "https://cartafrica.org/call-for-applications-carta-phd-fellowships-2026/" }
+  ],
+  "source_url": "https://cartafrica.org/call-for-applications-carta-phd-fellowships-2026/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2026, "stale": false, "note": "The 2026-cohort call itself is closed (deadlines in 2025), but the fellowship starts March 2026 and CARTA runs this call annually, so the program is current and a next cycle is expected around mid-2027." }
+}

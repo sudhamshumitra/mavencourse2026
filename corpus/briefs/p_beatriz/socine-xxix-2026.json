@@ -1,0 +1,82 @@
+{
+  "opportunity_id": "socine-xxix-2026",
+  "profile_id": "p_beatriz",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "Bolsas de isenção de inscrição (SOCINE registration-fee waivers)",
+      "source": "venue",
+      "type": "waiver",
+      "amount_note": "100 fee waivers announced for the XXIX Encontro",
+      "deadline": null,
+      "cycle": null,
+      "requires": "Likely an application process through SOCINE; specific criteria and how to apply were not detailed on the page fetched",
+      "eligible": "check",
+      "why": "Would reduce or remove the R$258/R$129 registration fee if she qualifies, but the eligibility criteria weren't published on the page fetched.",
+      "grounded": true,
+      "source_quote": "A Socine oferecerá 100 bolsas de isenção do pagamento da inscrição do XXIX Encontro",
+      "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/",
+      "sequence_note": "Apply as soon as SOCINE announces the waiver application process; no application window was found in this pass."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "BRL",
+    "low": 1200,
+    "high": 2600,
+    "breakdown": {
+      "registration": { "low": 258, "high": 258, "note": "'Profissionais' (professional/faculty) tier, the likely tier for a postdoc; a discounted student/unaffiliated tier (R$129) may apply if she qualifies", "grounded": true },
+      "travel": { "low": 315, "high": 793, "note": "Recife-Salvador return fare range found via a live fare search (Decolar/Momondo/GOL)", "grounded": true },
+      "accommodation": { "low": 600, "high": 1500, "note": "5 nights (Nov 3-6 plus one) at Salvador hotel rates of roughly BRL 120-300/night, inferred", "grounded": false },
+      "visa": { "low": 0, "high": 0, "note": "Domestic travel within Brazil — no visa needed", "grounded": true }
+    },
+    "assumptions": [
+      "Registration uses the 'profissionais' tier (R$258); the discounted 'estudantes/profissionais sem vínculo' tier (R$129) may apply instead if she qualifies",
+      "Recife-Salvador return fare of BRL 315-793 found via a live fare search",
+      "5 nights at Salvador hotel rates of roughly BRL 120-300/night, inferred",
+      "Domestic travel — no visa cost",
+      "USD→BRL 5.1363 on 2026-09-18 (open.er-api.com), included for consistency though this estimate is entirely in BRL already",
+      "Excludes meals, local transport, SOCINE's separate annual membership fee, and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "Comfortably under her BRL 12,000 cap either way. SOCINE's own 100 registration-fee waivers could bring the registration line to zero if she's awarded one."
+  },
+  "priority": {
+    "score": 74,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1923, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 75, "reason": "SOCINE is Brazil's national film and audiovisual studies society, a natural home for a Brazilian film-studies postdoc, though the specific 2026 thematic axes weren't confirmed to name queer or festival themes directly — limited information there." },
+      "standing": { "score": 75, "reason": "The 29th annual meeting of the country's main film-studies society, hosted by a federal university (UFBA) — well-established for the Brazilian field." },
+      "network": { "score": 70, "reason": "The main yearly gathering of Brazilian film and audiovisual scholars, good for building visibility among peers in her own subfield and language." },
+      "outcomes": { "score": 65, "reason": "SOCINE's own journal REBECA (which has already run a queer/kuir/cuir cinema dossier) gives a plausible publication route, though this year's attendance is not a presentation slot." },
+      "feasibility": { "score": 90, "reason": "Cheap and visa-free to reach from Recife; the only deduction is that November isn't one of her usual travel months (Jan/Feb/Jul/Dec)." }
+    }
+  },
+  "fit": {
+    "score": 0.75,
+    "rationale": "SOCINE is the main annual meeting of Brazil's national society for cinema and audiovisual studies, making it a natural professional home for a Brazilian film-studies postdoc working on queer cinema and festivals. The specific thematic axes for the 2026 edition were not confirmed to name queer cinema or festival studies directly, but the society's own journal has already run a themed dossier on exactly this subject, suggesting a receptive community.",
+    "matched_topics": ["queer Latin American cinema", "Northeast Brazilian film", "film festivals and community"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's the main annual meeting of Brazil's own film-studies society — squarely your field, and cheap to reach from Recife.",
+    "SOCINE runs its own journal (REBECA), which has already published a queer/kuir/cuir cinema dossier, so there's a real community here for your work."
+  ],
+  "watch_out": [
+    "The 2026 call for papers already closed (the submission window was Feb-Apr 2026), so this is attend-only — you couldn't present this year.",
+    "November isn't one of the months you said you're usually free to travel."
+  ],
+  "tagline": "Brazil's own film-studies meeting — cheap to attend, but as a spectator this year, not a presenter.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage or nationality restriction is stated; registering does require an active SOCINE membership (a separate annual fee) in addition to the Encontro registration fee.",
+  "visa": {
+    "required": "no",
+    "note": "Domestic travel within Brazil — no visa is needed.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

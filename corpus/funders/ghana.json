@@ -1,0 +1,82 @@
+{
+  "country": "Ghana",
+  "generated_at": "2026-09-19",
+  "for": "humanities/social-science PhD (communication studies / STS), international conference travel",
+  "funders": [
+    {
+      "name": "Ghana National Research Fund (GNRF)",
+      "url": "https://gnrf.gov.gh/",
+      "category": "a",
+      "eligible_who": "Researchers at Ghanaian tertiary and research institutions, across health, agriculture, technology and the sciences (scope for social science/communication studies not confirmed)",
+      "amount_note": "Not confirmed — the fund's own site gives no visible detail on grant sizes or an open international-conference-travel call.",
+      "cycle": "Unclear; as of 2024 reporting the fund was described as not yet fully operational, with the Ghana Tertiary Education Commission (GTEC) disbursing research support in the interim",
+      "requires": "Not confirmed",
+      "last_checked": "2026-09-19",
+      "stale": true,
+      "source_note": "GNRF's own homepage gave only a title/tagline on fetch; no live call or amount could be verified. Treat as a category to watch, not a confirmed source — limited information."
+    },
+    {
+      "name": "Ghana Tertiary Education Commission (GTEC) research support",
+      "url": "https://gtec.edu.gh/",
+      "category": "b",
+      "eligible_who": "Staff and postgraduate researchers at Ghanaian tertiary institutions, as an interim channel while GNRF becomes fully operational",
+      "amount_note": "Not confirmed — page not fetched in this run; GTEC's role here is inferred from third-party reporting, not a source quote",
+      "cycle": "Not confirmed",
+      "requires": "Not confirmed",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Not independently verified on GTEC's own site in this run — flagged for a follow-up check rather than invented detail."
+    },
+    {
+      "category": "c",
+      "none_found": true,
+      "note": "Home institution: check the university's own graduate school or research office in Accra for an internal PhD conference-travel fund; specific to the institution and not tracked here."
+    },
+    {
+      "name": "CODESRIA Small Grants Programme for Thesis Writing",
+      "url": "https://codesria.org/grants-fellowships/",
+      "category": "e",
+      "eligible_who": "Doctoral students registered at African universities in the social sciences and humanities (Ghana qualifies as CODESRIA's home region)",
+      "amount_note": "Supports thesis writing rather than conference travel specifically; amount not confirmed on the page fetched — limited information",
+      "cycle": "Not confirmed on this page",
+      "requires": "Registration at an African university, doctoral candidacy",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "A real, long-running CODESRIA scheme (since 1988) but aimed at thesis writing, not international conference travel — relevant mainly as a fallback, not a dedicated travel grant."
+    },
+    {
+      "name": "IAMCR Travel Grants (International Association for Media and Communication Research)",
+      "url": "https://iamcr.org/travel_grants",
+      "category": "e",
+      "eligible_who": "Early-career (untenured) IAMCR members of ≥1 year, residing in low/middle-income countries (Ghana qualifies), first author of a paper accepted for full presentation at the IAMCR annual conference",
+      "amount_note": "Up to 18 grants, each max USD 2,000 (figures verified for the 2026 Galway cycle; amounts for future cycles not yet published)",
+      "cycle": "Annual, tied to each year's IAMCR conference; apply once that year's call opens",
+      "requires": "Paper acceptance confirmation from section/working-group head, IAMCR membership, full paper by the stated deadline",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Directly relevant field society for a communication-studies PhD; recurring annual scheme, but 2027 São Paulo-specific figures are not yet published."
+    },
+    {
+      "name": "AoIR 2026 Access Grant (Association of Internet Researchers)",
+      "url": "https://members.aoir.org/aoir-2026-access-grant",
+      "category": "e",
+      "eligible_who": "AoIR members (or willing to join) with a paper, panel, roundtable or similar accepted at AoIR 2026; open to any career stage, with priority for regions less involved with AoIR previously",
+      "amount_note": "Up to 5 grants of up to USD 2,000 each, and up to 5 grants of USD 500 each, reimbursing travel or accommodation",
+      "cycle": "Tied to the AoIR2026 cycle; the 2026 deadline (10 July 2026) has already passed — relevant for a future AoIR edition, not this one",
+      "requires": "AoIR membership, accepted session at that year's AoIR conference",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Same scheme already recorded against corpus/opportunities/aoir-2026.json; kept here too since it recurs yearly for AoIR and is relevant to any Ghana-based internet/communication researcher."
+    },
+    {
+      "category": "d",
+      "none_found": true,
+      "note": "No current Ghana-specific bilateral trust or foundation dedicated to international conference travel (as opposed to degree scholarships) was found. DAAD's In-Country/In-Region Scholarship Programme funds Master's/PhD study within Sub-Saharan Africa, not conference travel, so it is not listed as a fit here."
+    },
+    {
+      "category": "f",
+      "none_found": true,
+      "note": "No current destination-specific scheme (e.g. a host country's own funding for African early-career participants) was found for the destinations in this feed (Toronto, Jerez/Spain, Dakar, Bandung)."
+    }
+  ]
+}

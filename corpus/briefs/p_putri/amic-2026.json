@@ -1,0 +1,64 @@
+{
+  "opportunity_id": "amic-2026",
+  "profile_id": "p_putri",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "IDR",
+    "low": 4800000,
+    "high": 12200000,
+    "breakdown": {
+      "registration": { "low": 1800000, "high": 2700000, "note": "No fee page was found; range inferred from typical foreign non-member fees (~USD 100-150) at similar regional Asian media conferences", "grounded": false },
+      "travel": { "low": 1800000, "high": 3500000, "note": "Yogyakarta-Manila return via a regional hub, budget carrier, booked 6-8 weeks ahead (no live fare search run)", "grounded": false },
+      "accommodation": { "low": 1200000, "high": 6000000, "note": "4 nights (3 conference days + 1), budget hostel to mid-range hotel in Manila", "grounded": false },
+      "visa": { "low": 0, "high": 0, "note": "Indonesian passport holders can enter the Philippines visa-free for short stays", "grounded": true, "source": "https://dfa.gov.ph/visa/foreign-visitors-visa-requirement" }
+    },
+    "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com)",
+      "No fee, travel-grant or accommodation page was found on the AMIC site; registration, travel and accommodation are heuristic estimates, not a live fare/hotel/fee search",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "Comfortably under her IDR 20,000,000 cap even at the high end; the tight abstract deadline is the bigger constraint here, not cost."
+  },
+  "priority": {
+    "score": 74,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1154, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 68, "reason": "AMIC is the main regional media-and-communication-research conference in Asia; her digital-archiving and Southeast-Asian-media work fits its general scope, but no specific 2026 theme was published to check a tighter match (limited information)." },
+      "standing": { "score": 68, "reason": "A 32nd continuous annual edition and an intent to get proceedings Scopus-indexed are solid continuity signals, though no keynote or programme-committee details were found." },
+      "network": { "score": 72, "reason": "As the region's main media-and-communication-research conference, it's a strong place to meet Southeast Asian media scholars working on digital and community media, close to her own subfield." },
+      "outcomes": { "score": 65, "reason": "Scopus-indexed proceedings, if they go through, would be a genuine CV line, though this hasn't happened yet for the 2026 edition (limited information)." },
+      "feasibility": { "score": 90, "reason": "November is one of her available months and the Philippines needs no visa for Indonesian passport holders, but the 30 September 2026 abstract deadline is now only about 11 days away, adding timeline pressure." }
+    }
+  },
+  "fit": {
+    "score": 0.68,
+    "rationale": "AMIC's status as Asia's main media-and-communication-research conference gives her digital-archiving and Southeast-Asian-media work a plausible home, but without a specific published 2026 theme the match relies more on general disciplinary overlap than a named track.",
+    "matched_topics": ["Southeast Asian media", "digital archives"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's the main regional conference for media and communication research in Asia -- a natural fit for her Southeast-Asian-media work.",
+    "The Philippines is visa-free for Indonesian passport holders and a short regional flight.",
+    "Accepted papers could go into Scopus-indexed proceedings."
+  ],
+  "watch_out": [
+    "The abstract deadline (30 September 2026) is only about 11 days away.",
+    "No 2026 theme, fee amount or funding information was published on the pages found -- some numbers here are estimates."
+  ],
+  "tagline": "Asia's main media-research conference, visa-free and close by -- but the deadline is tight.",
+  "eligible": "yes",
+  "eligibility_notes": "No restrictions stated; open call, but the deadline is close.",
+  "visa": {
+    "required": "no",
+    "note": "Indonesian passport holders may enter the Philippines visa-free for short stays. This is general information, not immigration advice -- confirm current rules before booking.",
+    "official_source": "https://dfa.gov.ph/visa/foreign-visitors-visa-requirement",
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

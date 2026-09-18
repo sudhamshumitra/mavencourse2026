@@ -1,0 +1,64 @@
+{
+  "id": "wcws-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "World Conference on Women's Studies 2027 (WCWS 2027)",
+  "host": "TIIKM (The International Institute of Knowledge Management)",
+  "host_kind": "for_profit",
+  "theme": null,
+  "description": "WCWS 2027 is a for-profit, TIIKM-organised conference on women's and gender studies, to be held May 26-28, 2027 at the Angkor Paradise Hotel in Siem Reap, Cambodia, with physical and virtual registration options. TIIKM runs a near-identical 'World Conference on Women's Studies' annually in a different city (a 2026 edition also exists), and sibling TIIKM events (Future of Women Conference, World Conference on Gender and Women's Studies) follow the same template — a pattern consistent with a for-profit, high-volume conference organiser rather than a single learned society's meeting.",
+  "location": { "city": "Siem Reap", "country": "Cambodia", "format": "hybrid" },
+  "dates": { "start": "2027-05-26", "end": "2027-05-28" },
+  "deadlines": [
+    {
+      "label": "abstract",
+      "date": "2026-11-19",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Abstract Submission Closes, 19th November 2026"
+    },
+    {
+      "label": "early_bird",
+      "date": "2027-01-20",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Early Bird Registration Closes, 20th January 2027"
+    }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No named academic programme committee, host institution or society was found on the pages checked. Registration categories (oral presenter, poster presenter, attendee, physical/virtual) are listed, but no fee amounts were published on the pages checked."
+  },
+  "fees": [],
+  "funding": [
+    {
+      "name": "TIIKM Scholarship Program",
+      "type": "bursary",
+      "deadline": null,
+      "amount_note": null,
+      "eligibility_notes": "Mentioned under the site's 'Expanded Opportunities' section with no amount, eligibility criteria, or deadline given on the pages checked.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://womenstudies.tiikm.com/"
+    }
+  ],
+  "past_editions": [],
+  "standing_signals": [],
+  "source_url": "https://womenstudies.tiikm.com/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": true,
+  "predatory_reasons": [
+    "For-profit organiser (TIIKM) running near-identical 'World Conference on Women's Studies' events annually in different cities (a WCWS 2026 edition runs alongside this WCWS 2027 one)",
+    "Sibling TIIKM conferences on nearly the same theme (Future of Women Conference 2027, 5th World Conference on Gender and Women's Studies 2027) follow the same recurring template",
+    "No registration fee amounts published despite a live abstract deadline, and no named programme committee or institutional co-host found"
+  ],
+  "freshness": {
+    "posted": null,
+    "last_signal_year": 2027,
+    "stale": false,
+    "note": "Deadlines and dates on the page are dated 2026-2027 and consistent with a live, current call."
+  }
+}

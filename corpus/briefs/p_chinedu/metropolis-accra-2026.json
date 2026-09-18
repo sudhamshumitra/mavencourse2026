@@ -1,0 +1,66 @@
+{
+  "opportunity_id": "metropolis-accra-2026",
+  "profile_id": "p_chinedu",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "NGN",
+    "low": 399000,
+    "high": 997500,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "No registration fee was found on the conference page", "grounded": false },
+      "travel": { "low": 266000, "high": 465500, "note": "Lagos-Accra return, economy, booked in advance (search range USD 200-350)", "grounded": false },
+      "accommodation": { "low": 133000, "high": 532000, "note": "4 nights in Accra (3 conference days + 1), budget guesthouse to mid-range hotel (USD 25-100/night)", "grounded": false },
+      "visa": { "low": 0, "high": 0, "note": "Nigeria and Ghana are both ECOWAS members; Nigerian passport holders can enter Ghana visa-free for up to 90 days under the ECOWAS free movement protocol", "grounded": false, "source": "https://gis.gov.gh/visas/" }
+    },
+    "assumptions": [
+      "No registration fee was found on the conference page; assumed NGN 0 pending confirmation",
+      "USD->NGN 1330.27 on 2026-09-18 (open.er-api.com)",
+      "Travel and accommodation are heuristic search-based ranges for the Lagos-Accra route, not a live booking",
+      "Nigerian passport holders can enter Ghana visa-free under the ECOWAS free movement protocol, so no visa fee is included",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "Even at the high end this stays well under budget, making it one of the more affordable items on the shortlist -- the main limitation is that she could only attend, not present, since the call for papers has closed."
+  },
+  "priority": {
+    "score": 70,
+    "weights": { "fit": 0.2692, "standing": 0.1154, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 85, "reason": "The theme, 'Rethinking African Mobility,' is close to a direct restatement of her research on climate-driven migration within Nigeria and across the region." },
+      "standing": { "score": 55, "reason": "Metropolis is described as an international migration research and policy network, but no specific standing signals (editions, keynotes) were found on the page -- limited information." },
+      "network": { "score": 65, "reason": "Brings together migration researchers working across Africa, though attending only (not presenting) limits how much visibility she'd get." },
+      "outcomes": { "score": 35, "reason": "The call for papers has closed, so there's no way to present or get feedback on her own work this cycle -- attendance only." },
+      "feasibility": { "score": 90, "reason": "Cheap regional flight, no visa needed for a Nigerian passport in Ghana, and no registration fee found, though November falls outside her stated available months." }
+    }
+  },
+  "fit": {
+    "score": 0.85,
+    "rationale": "The 2026 Metropolis conference is themed 'Rethinking African Mobility,' which is close to a direct restatement of her research on climate-driven migration within Nigeria and across the region, even though she could only attend rather than present since the call for papers has closed.",
+    "matched_topics": ["climate-induced migration", "Niger Delta environment", "urban migration in Lagos"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "The theme, 'Rethinking African Mobility,' is almost exactly her research area.",
+    "Accra is a short, cheap regional flight from Lagos, and Nigerians can enter Ghana visa-free.",
+    "It's a chance to meet migration researchers working across Africa, even without presenting."
+  ],
+  "watch_out": [
+    "The call for papers has already closed, so she'd be attending only, not presenting or getting feedback on her own work.",
+    "No registration fee is listed, so the total cost isn't fully confirmed yet."
+  ],
+  "tagline": "Almost exactly her topic, cheap and visa-free to reach -- but attend-only, not present.",
+  "eligible": "yes",
+  "eligibility_notes": "The conference is in-person and open to attendees; no nationality or career-stage restriction was found, but the submission window for presenting has closed.",
+  "visa": {
+    "required": "no",
+    "note": "Ghana is visa-free for Nigerian passport holders under the ECOWAS free movement protocol. This is general information, not immigration advice -- confirm current requirements before travel.",
+    "official_source": "https://gis.gov.gh/visas/",
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

@@ -1,0 +1,58 @@
+{
+  "country": "Indonesia",
+  "generated_at": "2026-09-19",
+  "for": "independent humanities/social-science researcher (no institutional affiliation), media & Southeast Asian studies",
+  "funders": [
+    {
+      "name": "BRIN RIIM Collaboration international co-funding",
+      "url": "https://indonesianpost.com/2026/02/13/brin-riim-collaboration-cofunding-japan-china-malaysia/",
+      "category": "a",
+      "eligible_who": "Researchers from Indonesian universities AND independent research organizations, partnering with counterpart agencies in Japan, China or Malaysia on a joint research project",
+      "amount_note": "Co-funding for a joint research/innovation project; not a simple conference-travel grant, and exact amounts not confirmed on the page found",
+      "cycle": "Tied to periodic joint calls with partner-country agencies; no standing conference-travel deadline",
+      "requires": "A partner institution/agency in Japan, China or Malaysia and a joint project proposal, not just conference attendance",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Explicitly says BRIN's national research/innovation funding (RIIM) is 'open to researchers beyond BRIN, including universities and independent organizations' -- one of the few Indonesian schemes that names independent researchers, but it funds collaborative projects, not simply travel to present a paper"
+    },
+    {
+      "category": "b",
+      "none_found": true,
+      "note": "LPDP (Indonesia Endowment Fund for Education) is Indonesia's major national funding body, but its programs are degree-scholarships (bachelor's/master's/PhD study abroad) and related study travel, not a scheme an independent, non-enrolled researcher can apply to for conference travel."
+    },
+    {
+      "category": "c",
+      "none_found": true,
+      "note": "Not applicable: this researcher is independent with no university, library or institutional affiliation, so there is no home-institution travel fund to check."
+    },
+    {
+      "name": "The Japan Foundation -- Arts and Culture Small Grant Program",
+      "url": "https://www.jpf.go.jp/e/program/culture.html",
+      "category": "d",
+      "eligible_who": "Individuals and organizations in Southeast Asia (including Indonesia) engaged in arts and cultural exchange projects, including documentation and archiving of local culture",
+      "amount_note": "Small grant tier; exact amount not confirmed on the page found",
+      "cycle": "Annual call, 2026 fiscal year program open; exact 2026 deadline not confirmed on the page found",
+      "requires": "A cultural-exchange or arts project proposal (not simply conference attendance); typically an application through the relevant Japan Foundation office",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Real, active regional (Japan-Southeast Asia) cultural funder; a plausible fit for archiving/documentation work but not conference travel specifically"
+    },
+    {
+      "name": "Kelola Foundation (Yayasan Kelola) -- Hibah Seni (Arts Grants)",
+      "url": "https://culture360.org/resources/kelola-foundation-yayasan-kelola/",
+      "category": "e",
+      "eligible_who": "Indonesian arts practitioners and communities (music, dance, theatre, visual arts) working on production, documentation or touring projects",
+      "amount_note": "Amount not confirmed on the page found; historically funds production costs, documentation, and sometimes travel related to performances/exhibitions",
+      "cycle": "Periodic open calls; exact 2026 cycle dates not confirmed on the page found",
+      "requires": "An arts/documentation project proposal; independent practitioners are eligible",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Indonesia's own long-running (est. 1999) national arts foundation -- the closest domestic fit for an independent archivist of Indonesian popular music and zines, though it funds projects/documentation rather than travel to a specific conference"
+    },
+    {
+      "category": "f",
+      "none_found": true,
+      "note": "No destination-specific scheme was found for an Indonesian independent researcher travelling to the Philippines, Thailand or New Zealand for a conference."
+    }
+  ]
+}

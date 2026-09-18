@@ -1,0 +1,163 @@
+{
+  "profile_id": "p_beatriz",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "budget_used": { "searches": 19, "fetches": 10 },
+  "candidates": [
+    {
+      "url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/",
+      "title": "XXIX Encontro SOCINE 2026 (Salvador, Bahia)",
+      "host": "SOCINE — Sociedade Brasileira de Estudos de Cinema e Audiovisual",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "The main annual meeting of Brazil's own film-studies society, held Nov 3-6, 2026 in Salvador — cheap and visa-free for a Recife-based postdoc, and squarely in her field.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'film studies' (Brazil) → society 'SOCINE' → its annual 'Encontro' meeting",
+        "layer c: /2026/ edition confirmed as XXIX Encontro, UFBA host, Nov 3-6 2026, Salvador (socine.org calendar page)",
+        "status set from dates: submission window (Feb 2 – Apr 19 2026) already closed relative to today (2026-09-19), but the Nov 2026 event itself is still ahead → attend-only"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://cstonline.net/cfp-console-ing-passions-28-30-june-2027/",
+      "title": "Console-ing Passions 2027: Provocations (Amsterdam)",
+      "host": "Console-ing Passions / Amsterdam School for Cultural Analysis, University of Amsterdam",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-12-01",
+      "predicted_cfp_window": null,
+      "relevance": "The flagship feminist-media-studies conference (founded 1989); an intersectional-feminist lens on media is a direct home for her work on gender, sexuality and screen culture.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent field 'gender and sexuality in media' → recurring feminist media-studies conference 'Console-ing Passions' → 2027 host confirmed as University of Amsterdam",
+        "CFP fetched from cstonline.net mirror of the official call: submission deadline 1 Dec 2026 23:59 CET, dates 28-30 June 2027"
+      ],
+      "found_via": "https://cstonline.net"
+    },
+    {
+      "url": "https://necs.org/",
+      "title": "NECS 2027: Post-Global Media (Vilnius)",
+      "host": "NECS — European Network for Cinema and Media Studies",
+      "type": "conference",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "late 2026 – early 2027 (based on the 2025 cycle, which opened its CFP roughly 18 months ahead)",
+      "relevance": "Europe's main cinema-and-media-studies network; a plausible venue for queer/festival-studies work once the CFP opens, though not yet announced.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'film studies' (Europe) → society 'NECS' → annual conference",
+        "layer c: 2027 edition confirmed for Vilnius University, June 17-19 2027, theme 'Post-Global Media', but CFP text says 'Stay tuned...' — no deadline published yet"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://lasaweb.org/en/lasa2027/proposals/",
+      "title": "LASA2027 Congress: Navigating Collapse (Mexico City)",
+      "host": "Latin American Studies Association (LASA)",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "The main Latin-American-studies congress, with film/media and queer-studies tracks in past editions, and Mexico City is a cheap, visa-free trip for a Brazilian passport — but the abstract window already closed.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'Latin American studies' → society 'LASA' → annual International Congress",
+        "layer c: LASA2027 confirmed, June 16-20 2027, Mexico City",
+        "proposal deadline fetched from lasaweb.org/en/lasa2027/proposals/: 'The deadline for proposal submissions is September 9, 2026' — already past relative to today (2026-09-19) → attend-only"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://culturalstudiesassociation.org/conference/2027-cfp/",
+      "title": "Cultural Studies Association (CSA) 2027 Annual Conference (fully online)",
+      "host": "Cultural Studies Association",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-11-20",
+      "predicted_cfp_window": null,
+      "relevance": "Exploration pick: cultural studies is an adjacent field with no keyword overlap with her topics, but her work on festivals-as-community and gender/sexuality in media fits a cultural-studies frame; fully online and cheap.",
+      "exploration": true,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent field 'cultural studies' → society 'Cultural Studies Association' → annual conference",
+        "layer c: 2027 edition confirmed fully online, June 3-5 2027, submissions deadline Nov 20 2026 (search snippet from culturalstudiesassociation.org); full CFP text listed as 'coming soon' at fetch time"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.cmstudies.org/page/SCMS2027",
+      "title": "SCMS 2027 Annual Conference (Montreal)",
+      "host": "Society for Cinema and Media Studies (SCMS)",
+      "type": "conference",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "the submission portal is stated to reopen July 2027",
+      "relevance": "The largest and most prestigious film/media-studies society conference; strong for visibility even though the CFP for 2027 has not opened.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'film studies' → flagship society 'Society for Cinema and Media Studies' → annual conference",
+        "layer c: 2027 edition confirmed for Montreal; search snippet states the conference portal 'is currently closed and will open again in July 2027'"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://iamcr.org/news/sao_paulo2027",
+      "title": "IAMCR 2027: Multilateralism, Democracy, Diversity (São Paulo)",
+      "host": "International Association for Media and Communication Research (IAMCR)",
+      "type": "conference",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "call opens November 2026 (per host page)",
+      "relevance": "Already in the corpus for another persona, but relevant here too: a 1,500-scholar media/communication congress held in São Paulo, Brazil in 2027 — cheap and visa-free travel for a Recife-based postdoc, and IAMCR has gender/sexuality and media-industries working groups.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent field 'media industries' → society 'IAMCR' → annual congress",
+        "dedupe: matches existing corpus/opportunities/iamcr-2027.json (extracted for p_ananya); reused rather than re-extracted"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://rebeca.emnuvens.com.br/1/about/submissions",
+      "title": "REBECA — Revista Brasileira de Estudos de Cinema e Audiovisual (continuous submissions)",
+      "host": "SOCINE (via REBECA journal)",
+      "type": "journal_call",
+      "status": "open",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "SOCINE's own journal takes rolling submissions for free-thematic articles in Portuguese, English or Spanish — a realistic, no-cost publication route for her queer-cinema/festival work, and it previously ran a dedicated queer/kuir/cuir cinema dossier (2020), showing the journal already publishes in this area.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer b: literature neighbourhood for 'queer Latin American cinema' → REBECA journal (SOCINE) already ran a 'Cinemas e audiovisualidades queer/kuir/cuir no Brasil e na América Latina' dossier",
+        "current call: REBECA's submissions page confirms continuous/rolling submissions for the Free Thematic and 'Fora de Quadro' sections; the dossier-specific 2020 call is closed, so only the rolling general call is current",
+        "edge case (rolling call): status open, deadline_hint null, per scout-opportunities rolling-call rule"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://plas.princeton.edu/fellowships/plas-fellowships/postdoctoral-fellowships",
+      "title": "Princeton Program in Latin American Studies (PLAS) Postdoctoral Fellowship, 2027-2028",
+      "host": "Princeton University",
+      "type": "fellowship",
+      "status": "open",
+      "deadline_hint": "2026-11-15",
+      "predicted_cfp_window": null,
+      "relevance": "An open-topic Latin-American-studies postdoctoral fellowship (any discipline); a stretch for a film scholar since the stated priority areas are policy/public health/economic development, but it is a real, current international visibility opportunity in her broader field.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer e (capped open search): 'postdoctoral fellowship queer studies Latin America 2026 2027' → several area-studies postdocs found; most (Tulane Zemurray-Stone, Stanford Tinker, UT Austin LLILAS) had deadlines already past today",
+        "Princeton PLAS confirmed open via r.jina.ai mirror (site blocked direct fetch): deadline 'November 15, 2026, 11:59 p.m. EST', term 2027-2028"
+      ],
+      "found_via": "https://r.jina.ai/https://plas.princeton.edu/fellowships/plas-fellowships/postdoctoral-fellowships"
+    }
+  ]
+}

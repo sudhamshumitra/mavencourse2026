@@ -1,0 +1,38 @@
+{
+  "id": "hsr2026-cairo",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "9th Global Symposium on Health Systems Research (HSR2026)",
+  "host": "Health Systems Global",
+  "host_kind": "learned_society",
+  "theme": "Politics and Polycrises; Plurality and Partnerships; Platforms and Participation; Pathways and Planet",
+  "description": "The Global Symposium on Health Systems Research, organised by the Health Systems Global network, is the flagship meeting for health-systems and community-health-worker research worldwide. The 9th symposium (HSR2026) runs 7-9 December 2026 in Cairo. All abstract submission tracks (organised sessions, capacity-strengthening sessions, and individual sessions) are now closed, so this edition is attend/registration-only for a new presenter, though the symposium itself is still ahead and is regionally closer (Cairo) than a Europe/US equivalent.",
+  "location": { "city": "Cairo", "country": "Egypt", "format": "in_person" },
+  "dates": { "start": "2026-12-07", "end": "2026-12-09" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-04-19", "depends_on": null, "grounded": true, "source_quote": "12am(GMT+1) on Sunday 19 April 2026" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No stated career-stage or nationality restriction. Abstract submissions closed months before this extraction, so a new presenter can only register to attend."
+  },
+  "fees": [
+    { "tier": "Student/Retired, HSG member", "amount": 550, "currency": "USD", "grounded": true, "source_quote": "$550.00" },
+    { "tier": "Low-Income Country, HSG member", "amount": 560, "currency": "USD", "grounded": true, "source_quote": "$560.00" },
+    { "tier": "Middle-Income Country, HSG member", "amount": 740, "currency": "USD", "grounded": true, "source_quote": "$740.00" },
+    { "tier": "High-Income Country, HSG member", "amount": 1210, "currency": "USD", "grounded": true, "source_quote": "$1,210.00" }
+  ],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "9th Global Symposium on Health Systems Research, run by Health Systems Global, the main international network for this field", "grounded": true, "source_url": "https://hsr2026.healthsystemsresearch.org/submit-an-abstract/" }
+  ],
+  "source_url": "https://hsr2026.healthsystemsresearch.org/submit-an-abstract/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2026, "stale": false, "note": "Page describes the live, upcoming Dec 2026 edition; all submission tracks have closed but the event and registration are current." }
+}

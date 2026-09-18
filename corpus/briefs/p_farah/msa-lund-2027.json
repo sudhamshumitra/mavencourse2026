@@ -1,0 +1,96 @@
+{
+  "opportunity_id": "msa-lund-2027",
+  "profile_id": "p_farah",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "MSA Lund 2027 travel grants and fee waivers",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": null,
+      "deadline": null,
+      "cycle": "Details not yet published as of extraction; likely opens after abstract acceptance",
+      "requires": "Likely an accepted proposal, though the exact application process is not yet posted",
+      "eligible": "check",
+      "why": "The conference page confirms grants exist but gives no amount, eligibility or deadline yet.",
+      "grounded": true,
+      "source_quote": "A limited number of travel grants and fee waivers will be available for the conference.",
+      "source_url": "https://msalund2027.dryfta.com/grants",
+      "sequence_note": "Submit an abstract by 15 Oct 2026; watch the grants page for details, which usually open after acceptance."
+    },
+    {
+      "name": "Charles Wallace Pakistan Trust — Visiting Fellowship / doctoral bursaries",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "IASH-style award: ~GBP 1,600/month living costs plus GBP 1,250 towards airfare/visa (cited for scale; a conference-only trip would need a smaller, separate travel award if one exists)",
+      "deadline": null,
+      "cycle": "Both 2026 cycles found (IASH: closed 27 Feb 2026; general Visiting Fellowship: closed 5 Jun 2026) are already closed; a 2027 round should open on a similar annual schedule",
+      "requires": "Completed doctorate for the flagship Fellowship (not yet true for her); doctoral-bursary terms not independently confirmed",
+      "eligible": "check",
+      "why": "A real UK-Pakistan trust for her nationality, but the main award needs a finished PhD — worth checking whether a doctoral-bursary variant fits a final-year candidate.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://www.britishcouncil.pk/study-uk/scholarships-funding/charles-wallace-visiting-fellowship-programme",
+      "sequence_note": "Not tied to this conference's dates; would need its own, separate application timeline."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "PKR",
+    "low": 344000,
+    "high": 714000,
+    "breakdown": {
+      "registration": { "low": 25000, "high": 80000, "note": "Fees not yet published on the conference site; using a typical academic-conference student-rate range (~USD 90-300)", "grounded": false },
+      "travel": { "low": 208000, "high": 360000, "note": "Lahore-Lund return via a European hub, booked 8-10 weeks ahead; heuristic estimate, no live fare search run", "grounded": false },
+      "accommodation": { "low": 76000, "high": 229000, "note": "6 nights (5 conference days + 1), hostel/university housing to a mid-range Lund hotel", "grounded": false },
+      "visa": { "low": 35000, "high": 45000, "note": "Schengen short-stay visa fee (EUR 90) plus a typical VFS service charge", "grounded": true, "source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en" }
+    },
+    "assumptions": [
+      "USD to PKR 277.28, and USD to EUR 0.8706 (so PKR to EUR ~318.4), both as of 2026-09-18 (open.er-api.com)",
+      "Registration fee is not yet published for this 2027 edition; range is a generic academic-conference estimate, not this event's actual fee",
+      "Travel and accommodation are heuristic ranges, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": true,
+    "net_note": "The high end runs well past her PKR 600,000 cap, mainly because of European flights and hotel nights. If MSA's travel grants or fee waivers come through, or if the Charles Wallace Trust has a fitting doctoral award, the real out-of-pocket cost would drop a lot — but neither is confirmed yet."
+  },
+  "priority": {
+    "score": 68,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1538, "outcomes": 0.2308, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 88, "reason": "The 2027 theme 'memory, responsibility, hope' speaks almost directly to her question of how Partition memory is carried and passed down through generations of women in Punjab." },
+      "standing": { "score": 72, "reason": "The Memory Studies Association's own flagship conference, with confirmed keynotes (Pumla Gobodo-Madikizela, Emilie Pine, Oksana Zabuzhko), though this is a young society without decades of editions." },
+      "network": { "score": 78, "reason": "This is the main yearly gathering for memory-studies scholars worldwide, plus a postgraduate preconference (MSA Forward) that's a strong fit for a PhD candidate looking for feedback." },
+      "outcomes": { "score": 70, "reason": "No stated proceedings or special-issue route yet, but presenting to the field's flagship memory-studies audience is exactly the kind of feedback she says she needs on her last chapters." },
+      "feasibility": { "score": 45, "reason": "The realistic cost (up to roughly PKR 714,000) is over her PKR 600,000 cap on the high end, needs a Schengen visa, and no travel-grant amount is confirmed yet — though a limited grant/fee-waiver programme does exist." }
+    }
+  },
+  "fit": {
+    "score": 0.88,
+    "rationale": "MSA Lund 2027's theme, 'memory, responsibility, hope,' is close to a direct restatement of her core question: how Partition memory is held, and passed down, across generations of Punjabi women. It sits squarely in memory studies, one of her named adjacent fields, and would put her dissertation in front of the exact community that studies intergenerational and traumatic memory as its main subject.",
+    "matched_topics": ["intergenerational memory", "women and memory", "Punjab 1947"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "The theme is almost a direct description of her core research question about memory passed down between generations.",
+    "It's the main yearly gathering for memory-studies scholars, with a postgraduate preconference for feedback.",
+    "The abstract deadline (15 Oct 2026) is still open."
+  ],
+  "watch_out": [
+    "Sweden is expensive and needs a Schengen visa; the realistic high-end cost is over her PKR 600,000 budget cap.",
+    "The conference's own travel grants and fee waivers exist but have no published amount or process yet."
+  ],
+  "tagline": "The memory-studies flagship, and its theme almost describes her thesis — but Europe is expensive.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality or membership restrictions were stated on the page; the abstract deadline (15 Oct 2026) is open for submission.",
+  "visa": {
+    "required": "yes",
+    "note": "A Schengen short-stay visa would be needed to attend in Sweden. This is general information, not immigration advice — confirm current requirements with the Swedish embassy/consulate or visa centre serving Pakistan.",
+    "official_source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

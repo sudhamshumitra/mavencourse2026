@@ -1,0 +1,34 @@
+{
+  "id": "cies-2027",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "CIES 2027 Annual Conference",
+  "host": "Comparative and International Education Society (CIES)",
+  "host_kind": "learned_society",
+  "theme": null,
+  "description": "The annual conference of the Comparative and International Education Society (CIES), the flagship learned society for comparative and international education, held 3-7 April 2027 at the Monona Terrace Community and Convention Center in Madison, Wisconsin. The proposal submission window closed 3 September 2026 with no extensions, but the conference itself is still upcoming and open to registered attendance; presenters must be CIES members and registered by 30 November 2026 to appear in the program.",
+  "location": { "city": "Madison, Wisconsin", "country": "USA", "format": "in_person" },
+  "dates": { "start": "2027-04-03", "end": "2027-04-07" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-09-03", "depends_on": null, "grounded": true, "source_quote": "Sept 3 2026 · 23:59 ET" },
+    { "label": "early_bird", "date": "2026-11-04", "depends_on": null, "grounded": true, "source_quote": "Early-bird registration: Oct 15 – Nov 4, 2026" },
+    { "label": "registration", "date": "2026-11-30", "depends_on": null, "grounded": true, "source_quote": "Presenters must be CIES members and registered by November 30 to appear in the program." }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": true,
+    "notes": "Presenting requires a CIES membership and registration by Nov 30, 2026. Since the proposal deadline (Sept 3, 2026) has already passed, this edition is attend-only for a new presenter; general registration (member or 'submitter only' account, Dec 1 2026 - Jan 14 2027) is still possible to attend."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "Flagship annual conference of the Comparative and International Education Society, the main international society in the field", "grounded": false, "source_url": null }
+  ],
+  "source_url": "https://www.cies2027.org/proposals",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

@@ -1,0 +1,67 @@
+{
+  "opportunity_id": "utaustin-africa-2027",
+  "profile_id": "p_chinedu",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "NGN",
+    "low": 2134500,
+    "high": 3971000,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "Graduate students get a waived registration fee, in any attendance format", "grounded": true },
+      "travel": { "low": 1330000, "high": 2128500, "note": "Lagos-Austin return, economy, connecting flight, booked in advance (heuristic; no live fare search for this specific route)", "grounded": false },
+      "accommodation": { "low": 558500, "high": 1596500, "note": "6 nights in Austin (5 conference days + 1), budget to mid-range hotel (USD 70-200/night)", "grounded": false },
+      "visa": { "low": 246000, "high": 246000, "note": "US B1/B2 (MRV) visa fee, USD 185, needed only for in-person attendance", "grounded": true, "source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html" }
+    },
+    "assumptions": [
+      "This is the in-person estimate; going virtual (see net_note) removes almost all of this cost",
+      "Registration is waived for graduate students regardless of format",
+      "USD->NGN 1330.27 on 2026-09-18 (open.er-api.com)",
+      "Travel and accommodation are heuristic search-based ranges, not a live booking",
+      "A further USD 250 'Visa Integrity Fee' has been signed into US law but was not yet being collected as of the source checked, so it is not included",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": true,
+    "net_note": "Going virtual brings the real cost to NGN 0 -- registration is already waived for graduate students and there is no travel, accommodation or US visa to arrange. In person this would run roughly NGN 2.1M-4.0M, several times your budget, with no funding found to close that gap."
+  },
+  "priority": {
+    "score": 71,
+    "weights": { "fit": 0.2692, "standing": 0.1154, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 75, "reason": "The 2027 theme, 'Rethinking Global Africa: Diaspora, Knowledge, Transformations, and Futures,' centers movement and displacement across Africa, a plausible home for her work on Niger Delta migration with some framing toward diaspora/mobility." },
+      "standing": { "score": 60, "reason": "A long-running, university-hosted annual Africa Conference (mid-20s editions) -- a reasonable continuity signal, but not a flagship society meeting; no keynote or indexing evidence was found." },
+      "network": { "score": 65, "reason": "Draws US-based Africa-studies and diaspora scholars, a decent but not exceptional network for someone specifically working on Niger Delta displacement." },
+      "outcomes": { "score": 55, "reason": "No stated publication route or award; feedback-oriented, limited information beyond that." },
+      "feasibility": { "score": 90, "reason": "Registration is waived for graduate students and virtual attendance is USD 50 or free, removing almost all cost and any visa need; the conference month (April) falls outside her stated available months." }
+    }
+  },
+  "fit": {
+    "score": 0.75,
+    "rationale": "The 2027 theme, 'Rethinking Global Africa: Diaspora, Knowledge, Transformations, and Futures,' centers exactly the kind of movement and displacement Chinedu studies, even though the conference is pan-African rather than Niger-Delta-specific; her paper on climate-driven migration to Lagos fits naturally under a diaspora/mobility framing.",
+    "matched_topics": ["climate-induced migration", "urban migration in Lagos"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "The 2027 theme on diaspora and mobility across Africa is a real fit for a thesis about people leaving the Niger Delta.",
+    "As a graduate student your registration is free either way, and going virtual makes the whole thing free.",
+    "It's a good chance to meet US-based Africa and diaspora scholars who could supervise a PhD."
+  ],
+  "watch_out": [
+    "Attending in person would cost several times your budget once flights, a US hotel and a US visa are added -- virtual is the realistic option.",
+    "The conference is in April, outside the months you said you're free, so check that against your MA schedule."
+  ],
+  "tagline": "Free to join virtually, and the diaspora theme fits your migration work.",
+  "eligible": "yes",
+  "eligibility_notes": "Open to researchers across disciplines; graduate students get a waived registration fee with supporting documentation, and the deadline (1 Dec 2026) is well open.",
+  "visa": {
+    "required": "conditional",
+    "note": "A US B1/B2 visitor visa would be needed only if attending in person; not required for the virtual option. This is general information, not immigration advice -- confirm current requirements with the US Mission in Nigeria.",
+    "official_source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+    "verify_flag": true,
+    "lead_days": 60
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

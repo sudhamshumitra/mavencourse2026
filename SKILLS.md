@@ -23,7 +23,7 @@ Seven skills in [`.claude/skills/`](.claude/skills/). Each one is a repeated ste
 
 | | Before (week 1) | After (with skills) |
 |---|---|---|
-| Data | Made-up sample data | 13 real calls, found and checked by the skills |
+| Data | Made-up sample data | Real calls for **8 example researchers** in 8 countries (India, Nigeria, Brazil, Pakistan, Kenya, Indonesia, Bangladesh, Ghana), found, costed in their own currency and checked by the skills, plus a **live search** for your own profile |
 | Finding venues | Only what you already search for | Finds venues in neighbouring fields too, e.g. the AoIR internet-research conference. No venue list is hardcoded. (The scout skill's first worked example did describe AoIR's discovery path, which biased results towards it; it's now a neutral example plus a variety rule.) |
 | Dates and fees | Invented | Copied from the source page, and re-checked |
 | Ranking | Topic match only | "Worth it" score using fit, reputation, network, outcomes and feasibility |

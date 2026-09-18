@@ -1,0 +1,33 @@
+{
+  "id": "amic-2026",
+  "type": "conference",
+  "status": "open",
+  "title": "32nd AMIC Annual International Conference 2026",
+  "host": "Asian Media Information and Communication Centre (AMIC)",
+  "host_kind": "learned_society",
+  "theme": null,
+  "description": "The 32nd Annual International Conference of the Asian Media Information and Communication Centre (AMIC), the region's main learned society for media and communication research, will be held 5-7 November 2026 in Manila, Philippines. AMIC is inviting abstract submissions for parallel sessions, with accepted full papers published in an open-access conference proceedings that the organizers intend to get Scopus-indexed. No registration fee amount or travel-grant page was found from the call-for-abstracts page itself.",
+  "location": { "city": "Manila", "country": "Philippines", "format": "in_person" },
+  "dates": { "start": "2026-11-05", "end": "2026-11-07" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-09-30", "depends_on": null, "grounded": true, "source_quote": "30 September 2026" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No career-stage, nationality or membership restrictions stated. No fee or funding information found on the call-for-abstracts page."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "32nd Annual International Conference, indicating an established, continuously running annual series", "grounded": true, "source_url": "https://amic.asia/2026-call-for-abstracts/" }
+  ],
+  "source_url": "https://amic.asia/2026-call-for-abstracts/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2026, "stale": false, "note": "Page is specifically for the 2026 edition, dated 5-7 November 2026." }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "frontiers-womens-empowerment-mch-si",
+  "type": "journal_call",
+  "status": "open",
+  "title": "Women's Empowerment for Maternal and Child Health in Africa and Across LMICs: Critical Perspectives and Future Directions",
+  "host": "Frontiers (Frontiers in Global Women's Health; co-hosted by Frontiers in Reproductive Health and Frontiers in Sociology)",
+  "host_kind": "publisher",
+  "theme": "Women's empowerment and maternal/child health in Africa and low- and middle-income countries",
+  "description": "A Frontiers Research Topic (special issue) inviting original research, reviews and perspectives on how women's empowerment shapes maternal and child health outcomes in Africa and other low- and middle-income countries. It is hosted primarily in Frontiers in Global Women's Health, with Frontiers in Reproductive Health and Frontiers in Sociology also participating, so a sociology-framed paper on community health workers, mobile money and maternal care would fit. It is fully online, so there is no travel involved, but an article-processing charge applies.",
+  "location": { "city": "—", "country": "—", "format": "online" },
+  "dates": { "start": null, "end": null },
+  "deadlines": [
+    { "label": "full_paper", "date": "2026-12-14", "depends_on": null, "grounded": true, "source_quote": "Manuscript Submission Deadline 14 December 2026" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No stated restrictions; the topic explicitly welcomes work situated in Africa and other LMICs. The page states the topic 'is currently accepting articles'."
+  },
+  "fees": [
+    { "tier": "Original Research (A-type article)", "amount": 2695, "currency": "CHF", "grounded": true, "source_quote": "A Type Articles | Frontiers in Global Women's Health | CHF 2,695" }
+  ],
+  "funding": [
+    { "name": "Frontiers low- and lower-middle-income country fee support", "type": "waiver", "deadline": null, "amount_note": "Discount on the APC; amount not specified, assessed via a fee-support application form", "eligibility_notes": "For authors in countries the World Bank classifies as low or lower-middle income; Kenya is a lower-middle-income country, so she is likely eligible to apply.", "grounded": true, "source_quote": "Authors in countries classified by the World Bank as low or lower-middle income countries may be eligible for discounts to their APC", "source_url": "https://www.frontiersin.org/journals/global-womens-health/for-authors/publishing-fees" }
+  ],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "Cross-listed across three Frontiers journals (Global Women's Health, Reproductive Health, Sociology), indicating an active, multi-journal Research Topic", "grounded": true, "source_url": "https://www.frontiersin.org/research-topics/81584/womens-empowerment-for-maternal-and-child-health-in-africa-and-across-lmics-critical-perspectives-and-future-directions" }
+  ],
+  "source_url": "https://www.frontiersin.org/research-topics/81584/womens-empowerment-for-maternal-and-child-health-in-africa-and-across-lmics-critical-perspectives-and-future-directions",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2026, "stale": false, "note": "Page shows a live 2026-12-14 manuscript deadline and is marked as currently accepting articles." }
+}

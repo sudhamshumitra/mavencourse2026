@@ -1,0 +1,58 @@
+{
+  "country": "Kenya",
+  "generated_at": "2026-09-19",
+  "for": "sociology/public-health PhD (early stage), conference travel and research costs",
+  "funders": [
+    {
+      "name": "NRF Kenya — Support to Scientific Events",
+      "url": "https://www.nrf.go.ke/category/grants-and-calls/",
+      "category": "a",
+      "eligible_who": "Kenyan researchers and research institutions organising or attending scientific seminars, forums, workshops and conferences; exact individual-PhD-student eligibility not detailed on the page",
+      "amount_note": "Amount and current call dates not specified on the page found; this is a listed grant category, not a page with a live call.",
+      "cycle": "Recurring national research-fund grant line; current 2026/27 call dates not confirmed",
+      "requires": "Not confirmed; likely institutional endorsement, per typical NRF Kenya grant process",
+      "last_checked": "2026-09-19",
+      "stale": true,
+      "source_note": "Verbatim quote found: 'This grant supports scientific seminars, forums, workshops & conferences.' No current deadline or amount could be confirmed from the pages fetched."
+    },
+    {
+      "name": "NRF Kenya — Postgraduate Research Grants (NRF001/2026)",
+      "url": "https://www.nrf.go.ke/",
+      "category": "b",
+      "eligible_who": "Kenyan Master's and PhD (postgraduate) researchers, priority-area dependent (NRF calls against published national research priorities, not fully open/investigator-driven)",
+      "amount_note": "Research grant for postgraduate thesis/dissertation research; specific amount not confirmed on the pages fetched",
+      "cycle": "2026 cycle (NRF001/2026) deadline was 6 March 2026 — already closed; NRF typically issues a new numbered call annually",
+      "requires": "Institutional affiliation, alignment with NRF's published national research priority areas",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "This year's window has closed, but the fund is Kenya's own national research-postgraduate-grant mechanism and a similar call is expected again."
+    },
+    {
+      "category": "c",
+      "none_found": true,
+      "note": "Home institution: check her university's graduate school or research office for an internal PhD conference-travel or fieldwork fund; specific to the institution and not tracked here."
+    },
+    {
+      "name": "CODESRIA Small Grants Programme for Thesis Writing",
+      "url": "https://codesria.org/grants-fellowships/",
+      "category": "d",
+      "eligible_who": "Doctoral students registered at African universities, in the thesis-writing stage of a social-science PhD (a Pan-African, Dakar-based scholarly council covering all of Sub-Saharan Africa including Kenya)",
+      "amount_note": "Historically covers fieldwork, data processing and dissertation-printing costs; current amount not confirmed",
+      "cycle": "Running since 1988, now restricted to doctoral students; no current 2026/27 call dates could be confirmed on the pages fetched",
+      "requires": "Institutional registration proof, thesis-writing stage, research proposal",
+      "last_checked": "2026-09-19",
+      "stale": true,
+      "source_note": "Programme exists and fits her field/career stage well, but no live current-cycle deadline was found — needs checking directly with CODESRIA (codesria@codesria.org)."
+    },
+    {
+      "category": "e",
+      "none_found": true,
+      "note": "No current early-career travel fund specific to sociology-of-health or health-systems-research societies (e.g. Health Systems Global, International Sociological Association) was found for this profile; only the venues' own income-tiered registration discounts were confirmed."
+    },
+    {
+      "category": "f",
+      "none_found": true,
+      "note": "No destination-specific scheme (Portugal/Peru/Egypt) for a Kenyan early-career researcher was found."
+    }
+  ]
+}

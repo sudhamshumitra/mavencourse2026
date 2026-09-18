@@ -1,0 +1,96 @@
+{
+  "opportunity_id": "ecsas-2027",
+  "profile_id": "p_farah",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "HEC Research Travel Grant (Higher Education Commission, Pakistan)",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Covers airfare, registration fee, accommodation and daily allowance at PHEC-approved rates",
+      "deadline": null,
+      "cycle": "Apply at least 6 weeks before travel",
+      "requires": "Acceptance letter from organizers and a peer-reviewed paper or accepted abstract",
+      "eligible": "likely",
+      "why": "She is a PhD scholar at a Pakistani university, the scheme's core target group, provided she has a panel acceptance in hand.",
+      "grounded": true,
+      "source_quote": "Applicants already having foreign visa must apply at least 30 days before the event. Applicants not having foreign visa must apply at least 49 days before the event.",
+      "source_url": "https://www.hec.gov.pk/english/services/faculty/HEC%20Research%20Travel%20Grant/Pages/HEC-Research-Travel-Grant.aspx",
+      "sequence_note": "Needs a joined/accepted panel by 30 Sept 2026 or a paper accepted after Nov 2026, then apply to HEC at least 6-7 weeks before the July 2027 travel."
+    },
+    {
+      "name": "Association for Asian Studies (AAS) — South Asia Council Conference Award",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Small travel subsidies, roughly USD 150-200",
+      "deadline": null,
+      "cycle": "Rolling within the funding year",
+      "requires": "AAS membership and a conference acceptance on a South Asia topic",
+      "eligible": "check",
+      "why": "ECSAS is a EASAS (European) event, not an AAS-affiliated one, so this award likely doesn't apply here — flagged only because AAS is the most relevant South Asia-focused society for her field; confirm directly with AAS before assuming it covers a non-AAS conference.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://www.asianstudies.org/grants-awards/council-grants/south-asia-council-conference-award/",
+      "sequence_note": "Low priority for this specific conference; check first whether it applies to non-AAS events at all."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "PKR",
+    "low": 284000,
+    "high": 535000,
+    "breakdown": {
+      "registration": { "low": 22000, "high": 41500, "note": "Fees not published on the conference page; using a typical academic-conference student-rate estimate (~USD 80-150)", "grounded": false },
+      "travel": { "low": 180000, "high": 305000, "note": "Lahore-Poznań return via a European or Gulf hub, booked 8-10 weeks ahead; heuristic estimate, no live fare search run", "grounded": false },
+      "accommodation": { "low": 47000, "high": 143000, "note": "5 nights (4 conference days + 1), hostel/university housing to a mid-range Poznań hotel", "grounded": false },
+      "visa": { "low": 35000, "high": 45000, "note": "Schengen short-stay visa fee (EUR 90) plus a typical VFS service charge", "grounded": true, "source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en" }
+    },
+    "assumptions": [
+      "USD to PKR 277.28, and USD to EUR 0.8706 (so PKR to EUR ~318.4), both as of 2026-09-18 (open.er-api.com)",
+      "No registration fee is published for this 2027 edition; range is a generic academic-conference estimate",
+      "Travel and accommodation are heuristic ranges, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "Both ends of the range fit under her PKR 600,000 cap even before any funding. If the HEC travel grant comes through, most of it would be reimbursed."
+  },
+  "priority": {
+    "score": 71,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1538, "outcomes": 0.2308, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 80, "reason": "ECSAS is the main European conference for South Asian studies as a whole; her Partition-and-memory work is a clear, natural home there, though the conference has no theme naming her specific sub-topic." },
+      "standing": { "score": 78, "reason": "The 29th edition of a long-running biennial conference run by a dedicated learned society (EASAS) is a strong continuity signal, though no keynote or proceedings information was found." },
+      "network": { "score": 75, "reason": "A flagship regional (European) South Asian studies meeting is high network value for someone in her exact field, and a strong venue to meet scholars working on Punjab and Partition." },
+      "outcomes": { "score": 60, "reason": "No stated publication route (proceedings/special issue), but presenting at the field's main European gathering is a strong CV line and a feedback opportunity." },
+      "feasibility": { "score": 62, "reason": "The cost fits under her budget cap even unfunded, but the panel-proposal deadline (30 Sept 2026) is only 11 days away and needs a Schengen visa; EASAS membership is required for panel conveners, which complicates a first-time individual submission." }
+    }
+  },
+  "fit": {
+    "score": 0.8,
+    "rationale": "ECSAS is the flagship European conference for the whole field of South Asian studies, which is one of her two named primary fields. Her dissertation on Partition oral histories in Punjab is a natural paper there, even though the conference's call is thematically open rather than naming her specific sub-topic — a clear home for the work rather than a direct match to a named track.",
+    "matched_topics": ["South Asian history", "Punjab 1947"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's the main European conference for South Asian studies as a field, a natural home for her Partition research.",
+    "The cost fits under her budget even without any funding coming through.",
+    "The HEC travel grant is a realistic, direct-fit funding source if she gets in."
+  ],
+  "watch_out": [
+    "The panel-proposal window closes 30 Sept 2026 — only 11 days out — and EASAS membership is required for panel conveners, so she'd need to find or join a panel fast.",
+    "A Schengen visa is needed for Poland, and the registration fee isn't published yet."
+  ],
+  "tagline": "The main European South Asian studies conference, and it fits her budget — but the panel deadline is very close.",
+  "eligible": "conditional",
+  "eligibility_notes": "Panel conveners must be current EASAS members in good standing. The page describes only the panel-proposal route; it doesn't describe an individual, memberless submission path, so she would need to join or be invited into an accepted panel to present.",
+  "visa": {
+    "required": "yes",
+    "note": "A Schengen short-stay visa would be needed to attend in Poland. This is general information, not immigration advice — confirm current requirements with the Polish embassy/consulate or visa centre serving Pakistan.",
+    "official_source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

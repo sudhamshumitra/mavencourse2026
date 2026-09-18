@@ -1,0 +1,39 @@
+{
+  "id": "cugh-2027",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "CUGH 2027 Annual Conference — Transforming Global Health: Partnerships, Power, Leadership, and Technology in a Rapidly Changing World",
+  "host": "Consortium of Universities for Global Health (CUGH)",
+  "host_kind": "learned_society",
+  "theme": "Transforming Global Health: Partnerships, Power, Leadership, and Technology in a Rapidly Changing World",
+  "description": "CUGH's annual conference is the flagship yearly meeting of the global-health field, bringing together faculty, trainees and students working on global health, public health and community-based initiatives. The 2027 edition runs 25-28 February 2027 in Lima, Peru. Abstract submission for this edition has already closed, so it is now attend/registration-only; a maternal-health and community-health-worker researcher would fit the conference's scope even though the theme is broad rather than maternal-health-specific.",
+  "location": { "city": "Lima", "country": "Peru", "format": "in_person" },
+  "dates": { "start": "2027-02-25", "end": "2027-02-28" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-08-31", "depends_on": null, "grounded": true, "source_quote": "The abstract submission deadline is August 31st, 2026" },
+    { "label": "registration", "date": "2026-11-30", "depends_on": null, "grounded": true, "source_quote": "All presenters must be registered by November 30th, 2026" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Open to faculty, staff, trainees, residents, fellows and students engaged in global health; no nationality restriction found. Since the abstract deadline has passed, she could only attend/register, not present a new abstract at this edition."
+  },
+  "fees": [
+    { "tier": "Student (CUGH member, early bird to 30 Nov 2026)", "amount": 225, "currency": "USD", "grounded": true, "source_quote": "$225" },
+    { "tier": "Student (non-member, early bird)", "amount": 275, "currency": "USD", "grounded": true, "source_quote": "$275" },
+    { "tier": "Delegate (member, early bird)", "amount": 675, "currency": "USD", "grounded": true, "source_quote": "$675" },
+    { "tier": "Delegate (non-member, early bird)", "amount": 775, "currency": "USD", "grounded": true, "source_quote": "$775" }
+  ],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "CUGH is the main consortium of universities working in global health; its annual conference draws faculty and students from member institutions worldwide", "grounded": false, "source_url": "https://cughlima2027.org/" }
+  ],
+  "source_url": "https://cughlima2027.org/abstract-submission/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2027, "stale": false, "note": "Page describes the live, upcoming Feb 2027 edition; abstract stage has closed but registration is open." }
+}

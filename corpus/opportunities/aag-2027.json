@@ -1,0 +1,35 @@
+{
+  "id": "aag-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "2027 AAG Annual Meeting: Grounded Relations and Desirable Futures",
+  "host": "American Association of Geographers (AAG)",
+  "host_kind": "learned_society",
+  "theme": "Grounded Relations and Desirable Futures",
+  "description": "The AAG Annual Meeting is the flagship annual conference of the American Association of Geographers, the largest geography society in the world. The 2027 meeting runs 8-12 February 2027 at the Hilton Midtown in New York City. The theme grapples with the history, relationships and potential of societies and the Earth, and asks what part geographers play in healing or harming them -- a direct opening for work on flooding-driven migration. Abstracts of up to 250 words are submitted for a paper, virtual-paper or poster session; unassigned abstracts convert to posters after mid-November.",
+  "location": { "city": "New York, New York", "country": "USA", "format": "hybrid" },
+  "dates": { "start": "2027-02-08", "end": "2027-02-12" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-10-15", "depends_on": null, "grounded": true, "source_quote": "October 15" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "A virtual-paper option exists alongside in-person and poster sessions, per the submission types listed on the conference platform. No graduate-student-specific eligibility restriction was found; the discounted rate below covers students and researchers from 'Developing Regions'."
+  },
+  "fees": [
+    { "tier": "member_student_developing_regions_early_bird", "amount": 227, "currency": "USD", "grounded": true, "source_quote": "Member: Student, Developing Regions, Under/Un-employed, Retired, K-12, MSI ... $227" }
+  ],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "AAG is described as the largest geography professional society, and this is its flagship annual meeting.", "grounded": false, "source_url": null }
+  ],
+  "source_url": "https://www.aag.org/events/aag2027/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2027, "stale": false, "note": "Page describes the upcoming Feb 2027 meeting with a 2026 abstract deadline; current." }
+}

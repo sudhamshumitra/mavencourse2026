@@ -1,0 +1,79 @@
+{
+  "country": "Bangladesh",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "last_checked": "2026-09-19",
+  "funders": [
+    {
+      "name": "American Institute of Bangladesh Studies (AIBS) — Travel Grants for Bangladesh Citizens",
+      "category": "bilateral_trust",
+      "url": "https://aibs.net/fellowships/travel-grants-for-bangladesh-citizens/",
+      "eligibility": "Bangladeshi citizens who are PhD candidates or faculty members affiliated with an AIBS partner university in Bangladesh, presenting Bangladesh Studies research at a US conference.",
+      "amount_note": "Lump sum of up to USD 2,500 per grantee for international travel costs (airfare, ground transport, meals, lodging)",
+      "cycle": "Currently closed",
+      "grounded": true,
+      "source_quote": "We are not accepting applications at the moment.",
+      "stale": true,
+      "notes": "Directly on-topic (Bangladesh Studies) and covers a real US-travel gap, but the application window is closed as of this check; re-check aibs.net before relying on it."
+    },
+    {
+      "name": "University Grants Commission of Bangladesh (UGC) — Research Grant Portal",
+      "category": "national_research_council",
+      "url": "https://ugc-research-management.bdren.net.bd/",
+      "eligibility": "Faculty at Bangladeshi public and private universities submitting a research project proposal through the UGC portal.",
+      "amount_note": null,
+      "cycle": "Rolling online portal; specific international-conference-travel provisions not confirmed",
+      "grounded": false,
+      "source_quote": null,
+      "stale": false,
+      "notes": "UGC is the apex higher-education funding body in Bangladesh and runs a live research-grants portal, but no page was found confirming a dedicated international-conference-travel line; check with the home institution's UGC liaison office before assuming coverage."
+    },
+    {
+      "name": "Fulbright Visiting Scholar Program (Bangladesh)",
+      "category": "bilateral_trust",
+      "url": "https://bd.usembassy.gov/call-for-applications-for-the-2026-27-fulbright-visiting-scholar-program/",
+      "eligibility": "Senior Bangladeshi faculty/researchers with a PhD (or equivalent) and at least 10 years of professional experience, with a confirmed invitation from a US host institution.",
+      "amount_note": "6-9 month research grant or 1-2 semester lecturing grant; specific stipend not stated on the page found",
+      "cycle": "Annual; 2026-27 cycle deadline already closed",
+      "grounded": true,
+      "source_quote": "Saturday, December 20, 2025, at 11:59 p.m. BST",
+      "stale": true,
+      "notes": "Not a conference-travel grant but a longer research/lecturing stay; the 10-year-experience bar may be a stretch for a single lecturer. Watch for the 2027-28 cycle announcement, expected via bd.usembassy.gov."
+    },
+    {
+      "name": "CIES UREAG Travel Grant",
+      "category": "society_early_career_fund",
+      "url": "https://members.cies.us/page/UREAGGrant",
+      "eligibility": "CIES members, with a UREAG (Under-Represented and Emerging Areas Group) focus; typically graduate students and early-career members presenting at the CIES annual conference.",
+      "amount_note": "USD 250-400",
+      "cycle": "Opens ahead of each CIES annual conference; check members.cies.us for the current-year window",
+      "grounded": true,
+      "source_quote": "This travel grant is generously funded by CIES in support of the UREAG Committee",
+      "stale": false,
+      "notes": "Small but real, tied to CIES's own conference; requires CIES membership."
+    },
+    {
+      "name": "CIES SAIS SIG Research Grant",
+      "category": "society_early_career_fund",
+      "url": "https://www.cies-sais.org/",
+      "eligibility": "Advanced graduate students and tenure-track faculty in the South Asia-focused special interest group of CIES.",
+      "amount_note": "Up to USD 500",
+      "cycle": "Annual; check cies-sais.org for the current call",
+      "grounded": true,
+      "source_quote": "The CIES SAIS SIG offers a scholastic research grant of up to $500 for advanced graduate students and tenure track faculty.",
+      "stale": false,
+      "notes": "Directly relevant: South Asia special interest group of the flagship comparative-education society, open to faculty."
+    },
+    {
+      "name": "BAICE Conference Bursaries",
+      "category": "society_early_career_fund",
+      "url": "https://baice.ac.uk/baice-funding/conference-bursaries/",
+      "eligibility": "Colleagues at academic institutions in OECD 'least developed', 'low income' or 'lower middle income' countries (Bangladesh qualifies), or UK-based students/early-career researchers.",
+      "amount_note": "GBP 1,500 for applicants from lower-income countries; GBP 1,000 less for UK-based students/ECRs (GBP 500)",
+      "cycle": "Tied to the biennial BAICE conference (2026 round closed 25 May 2026, noon UK time); next round expected ahead of the following BAICE conference",
+      "grounded": true,
+      "source_quote": "25th May 12 noon UK time",
+      "stale": true,
+      "notes": "The 2026-conference round has closed, but this is a recurring scheme worth re-checking ahead of the next BAICE conference; reimbursement-based, needs an acceptance letter and a letter confirming no institutional funding."
+    }
+  ]
+}

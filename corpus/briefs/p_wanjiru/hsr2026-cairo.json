@@ -1,0 +1,81 @@
+{
+  "opportunity_id": "hsr2026-cairo",
+  "profile_id": "p_wanjiru",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "NRF Kenya — Support to Scientific Events",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not specified on the page found",
+      "deadline": null,
+      "cycle": "Recurring national research-fund grant line; no current call date confirmed",
+      "requires": "Likely institutional endorsement (not confirmed)",
+      "eligible": "check",
+      "why": "Kenya's own fund for scientific-conference travel, but no live call or amount could be confirmed for a Dec 2026 trip.",
+      "grounded": true,
+      "source_quote": "This grant supports scientific seminars, forums, workshops & conferences.",
+      "source_url": "https://www.nrf.go.ke/category/grants-and-calls/",
+      "sequence_note": "Check the NRF Kenya grants portal directly given the Dec 2026 travel date."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "KES",
+    "low": 147100,
+    "high": 215800,
+    "breakdown": {
+      "registration": { "low": 71200, "high": 88100, "note": "Student/retired HSG-member tier ($550) to low-income-country non-member tier ($680)", "grounded": true },
+      "travel": { "low": 51800, "high": 84200, "note": "Nairobi-Cairo return, economy, booked ahead — a relatively short regional route", "grounded": false },
+      "accommodation": { "low": 11700, "high": 31100, "note": "3 nights (2 conference days + 1), hostel to mid-range hotel in Cairo", "grounded": false },
+      "visa": { "low": 12400, "high": 12400, "note": "Egypt tourist visa fee for a Kenyan passport holder", "grounded": false }
+    },
+    "assumptions": [
+      "USD→KES 129.53 on 2026-09-18 (open.er-api.com)",
+      "Travel and accommodation are heuristic regional estimates, not a live fare/hotel search",
+      "Visa fee is from a travel-agency source, not an official Egyptian government page — needs direct verification",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "This comes in comfortably within her KES 250,000 cap even without any funding, and December is one of her available months, which makes it one of the more realistic conferences on this list to actually attend."
+  },
+  "priority": {
+    "score": 79,
+    "weights": { "fit": 0.2692, "standing": 0.1154, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 75, "reason": "Health Systems Global's symposium is built around health-systems delivery, and community health workers are a recurring theme at these meetings, making this one of the closer fits in this shortlist even though the 2026 tracks are already closed." },
+      "standing": { "score": 85, "reason": "Health Systems Global runs the leading international symposium series in this exact field, now in its 9th edition." },
+      "network": { "score": 82, "reason": "This symposium draws health-systems researchers from across Africa and the world, and Cairo is a regionally accessible location, making it a strong networking opportunity for a Kenya-based early-career researcher." },
+      "outcomes": { "score": 60, "reason": "No indexed proceedings were confirmed, but the symposium's reputation carries real weight on a CV, even for attendance without a new presentation." },
+      "feasibility": { "score": 90, "reason": "The trip fits comfortably within her budget, December is one of her available months, and Egypt's visa process for Kenyan travellers is comparatively straightforward and inexpensive." }
+    }
+  },
+  "fit": {
+    "score": 0.75,
+    "rationale": "Health-systems research is close to her core focus on community health workers, mobile money and maternal-health delivery in informal settlements — this symposium's four 2026 themes (governance, partnerships, digital platforms, and human-ecological concerns) all touch on aspects of her work, even though she'd be attending rather than presenting this time.",
+    "matched_topics": ["community health workers", "maternal health in informal settlements", "mobile money and care"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's the leading global meeting for health-systems and community-health-worker research, and it fits your budget.",
+    "December is one of your available months, and Cairo is a relatively short, affordable regional trip from Nairobi.",
+    "You'd meet health-systems researchers from across Africa working on problems close to yours."
+  ],
+  "watch_out": [
+    "All abstract submission tracks for this edition are already closed, so you'd be attending, not presenting.",
+    "The visa fee figure isn't from an official Egyptian government page — confirm it directly before budgeting."
+  ],
+  "tagline": "The best fit-and-budget match on this list — but you'd be attending, not presenting.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage or nationality restriction was found. All submission tracks (organised, capacity-strengthening, and individual sessions) closed before this extraction, so registration to attend is the only current option.",
+  "visa": {
+    "required": "yes",
+    "note": "A visa is required for a Kenyan passport holder visiting Egypt; reported cost is around KES 12,400 for a tourist visa. This is general information, not immigration advice — confirm current requirements with the Egyptian embassy or consulate serving Kenya.",
+    "official_source": "https://visa2egypt.gov.eg/",
+    "verify_flag": true,
+    "lead_days": 14
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

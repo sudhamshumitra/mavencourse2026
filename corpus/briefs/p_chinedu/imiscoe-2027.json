@@ -1,0 +1,82 @@
+{
+  "opportunity_id": "imiscoe-2027",
+  "profile_id": "p_chinedu",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "Global South Colloquium Fund (GSCF) travel grant",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Up to USD $500 / GBP £400 toward travel costs only (not registration, accommodation or subsistence)",
+      "deadline": null,
+      "cycle": "Closed for 2025/2026; reopens 1 January 2027. Apply 10-12 weeks before the event.",
+      "requires": "Event registration confirmation; one delegate per institution per event",
+      "eligible": "likely",
+      "why": "An early-career researcher from the Global South working in a migration/area-studies-adjacent field matches GSCF's stated priority group",
+      "grounded": true,
+      "source_quote": "travel grants up to a maximum of USD$500/GBP£400",
+      "source_url": "https://globalsouth.org/gscf/",
+      "sequence_note": "Submit the IMISCOE abstract by 28 Sept 2026. If planning to attend in person, apply to GSCF once it reopens on 1 Jan 2027, about 10-12 weeks before the 6 July 2027 conference (by roughly mid-April 2027)."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "NGN",
+    "low": 1527000,
+    "high": 2649000,
+    "breakdown": {
+      "registration": { "low": 191000, "high": 191000, "note": "On-site standard rate for non-EU/OECD institutions (€125); the only tier that clearly applies without PhD/IMISCOE-member status", "grounded": true },
+      "travel": { "low": 931000, "high": 1264500, "note": "Lagos-Brussels return, economy, connecting flight, booked in advance (search range USD 700-950)", "grounded": false },
+      "accommodation": { "low": 267500, "high": 994500, "note": "5 nights in Brussels (4 conference days + 1), hostel to mid-range hotel (EUR 35-130/night)", "grounded": false },
+      "visa": { "low": 137500, "high": 199000, "note": "Schengen short-stay visa: official EUR 90 fee, plus a typical EUR 40-55 VFS/service charge", "grounded": true, "source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/fees_en" }
+    },
+    "assumptions": [
+      "This is the in-person estimate; the fully online option (see net_note) is far cheaper",
+      "USD->NGN 1330.27 and EUR->NGN 1529.05 (via USD->EUR 0.87) on 2026-09-18 (open.er-api.com)",
+      "Travel and accommodation are heuristic search-based ranges, not a live fare/hotel booking",
+      "Visa applies only for in-person attendance -- the event is hybrid",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": true,
+    "net_note": "Attending online instead cuts this to just the online registration fee (EUR 65 ~= NGN 99,000), with no travel, accommodation or visa cost -- comfortably inside budget. If travelling in person and the Global South Colloquium Fund reopens in time (1 Jan 2027), its travel grant (up to USD 500 ~= NGN 665,000) could cover a real share of the flight."
+  },
+  "priority": {
+    "score": 80,
+    "weights": { "fit": 0.2692, "standing": 0.1154, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 80, "reason": "The 2027 theme on human rights, inequality and colonial legacies gives real room for a paper on flooding-driven migration and displacement narratives from the Niger Delta, even though the theme itself isn't climate-specific." },
+      "standing": { "score": 65, "reason": "IMISCOE is the main European migration-research network and this is its 24th consecutive annual conference, a strong recurrence signal, though no keynote or indexing evidence was found -- limited information." },
+      "network": { "score": 85, "reason": "This is the largest annual gathering of international migration researchers, a strong place to meet scholars and potential PhD supervisors working on displacement." },
+      "outcomes": { "score": 70, "reason": "No stated publication route, but presenting at the field's flagship network conference and getting feedback from senior migration scholars is a solid outcome for a first paper." },
+      "feasibility": { "score": 88, "reason": "Online attendance keeps this well within budget with no visa needed, but the submission deadline (28 Sept 2026) is only about a week away." }
+    }
+  },
+  "fit": {
+    "score": 0.8,
+    "rationale": "IMISCOE's 2027 theme on human rights, inequality and colonial legacies is a natural fit for a paper on how flooding and climate stress push Niger Delta residents into Lagos and how they narrate that displacement, even though the theme is not framed around climate specifically -- migration and its human-rights dimensions sit at the center of the conference.",
+    "matched_topics": ["climate-induced migration", "urban migration in Lagos"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "IMISCOE is the biggest international network of migration researchers, and this year's theme on human rights and inequality is a natural fit for work on climate displacement from the Niger Delta.",
+    "You can attend and present fully online for about NGN 99,000, with no flight, hotel or visa needed.",
+    "It's a strong place to meet potential PhD supervisors who work on displacement and mobility."
+  ],
+  "watch_out": [
+    "The submission deadline (28 September 2026) is only about a week away.",
+    "In-person attendance would cost well over your NGN 1.5M budget once flights, a Brussels hotel and a Schengen visa are added -- online is the realistic option."
+  ],
+  "tagline": "The world's biggest migration-studies meeting -- affordable online, tight on the deadline.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality or membership restriction was stated; the abstract deadline (28 Sept 2026) is still open, though close.",
+  "visa": {
+    "required": "conditional",
+    "note": "A Schengen short-stay visa would be needed only if attending in person in Brussels; not required for the online option. This is general information, not immigration advice -- confirm current requirements with the Belgian embassy/consulate.",
+    "official_source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/fees_en",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

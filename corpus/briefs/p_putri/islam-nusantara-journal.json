@@ -1,0 +1,62 @@
+{
+  "opportunity_id": "islam-nusantara-journal",
+  "profile_id": "p_putri",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "IDR",
+    "low": 0,
+    "high": 1500000,
+    "breakdown": {
+      "registration": { "low": 0, "high": 1500000, "note": "The journal's publication-fee page exists but its amount was not confirmed; many Indonesian OJS journals charge no APC, so the range runs from free to a modest fee", "grounded": false },
+      "travel": { "low": 0, "high": 0, "note": "Online journal call; no travel involved", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Online journal call; no accommodation involved", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "Online journal call; no visa involved", "grounded": true }
+    },
+    "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com), not directly needed since any fee would be quoted in IDR",
+      "This is a rolling-submission journal, not a specific conference or dated call"
+    ],
+    "over_budget": false,
+    "net_note": "If the journal turns out to have no APC (common for Indonesian OJS journals), this costs her nothing but time."
+  },
+  "priority": {
+    "score": 71,
+    "weights": { "fit": 0.3333, "standing": 0.2381, "outcomes": 0.1429, "feasibility": 0.2857 },
+    "sub_scores": {
+      "fit": { "score": 75, "reason": "A journal specifically on Islamic history and culture in the Indonesian archipelago is a natural home for a piece drawn from her archive of Islamic popular music and zines, even without a themed call to frame it." },
+      "standing": { "score": 45, "reason": "It's a real, actively publishing university journal, but no indexing, editorial-board prominence or other standing signals were found (limited information)." },
+      "outcomes": { "score": 60, "reason": "Publishing here gives a citable output on Islamic culture in the Nusantara context, though turnaround time and indexing weren't confirmed." },
+      "feasibility": { "score": 95, "reason": "A rolling online journal call with no travel, no visa and at most a small publication fee is about as feasible as opportunities get for her budget." }
+    }
+  },
+  "fit": {
+    "score": 0.75,
+    "rationale": "Islam Nusantara's scope -- Islamic history and culture in the Indonesian archipelago -- sits close to her archive of 1990s Indonesian Islamic popular music and zines, even though there is no themed call framing the fit more specifically.",
+    "matched_topics": ["Islamic popular culture", "Indonesian music and zines"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's a journal specifically about Islamic history and culture in Indonesia -- a close match for her archive work.",
+    "There's no deadline pressure; it takes submissions on a rolling basis.",
+    "No travel or visa is involved -- it's free to try."
+  ],
+  "watch_out": [
+    "No indexing or reputation signals were found for this journal, so it's a modest rather than prestige outlet (limited information).",
+    "The exact publication fee, if any, isn't published -- worth checking before submitting."
+  ],
+  "tagline": "A low-cost, no-deadline Indonesian journal that matches her topic closely.",
+  "eligible": "yes",
+  "eligibility_notes": "Rolling submissions with no stated restrictions.",
+  "visa": {
+    "required": "no",
+    "note": "Online submission; no visa is relevant.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

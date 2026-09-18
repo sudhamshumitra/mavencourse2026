@@ -1,0 +1,64 @@
+{
+  "opportunity_id": "kash-2027",
+  "profile_id": "p_wanjiru",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "KES",
+    "low": 5000,
+    "high": 5000,
+    "breakdown": {
+      "registration": { "low": 5000, "high": 5000, "note": "Student registration tier", "grounded": true },
+      "travel": { "low": 0, "high": 0, "note": "Conference is in Nairobi, her home city — no travel needed", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Home city — no nights away needed", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "Own country — no visa needed", "grounded": true }
+    },
+    "assumptions": [
+      "She qualifies for the student fee tier (KES 5,000).",
+      "Home city equals host city, so travel, accommodation and visa are all zero.",
+      "Excludes meals, printing and local transport within Nairobi."
+    ],
+    "over_budget": false,
+    "net_note": "This is already well within her budget without needing any funding — the only real cost is the KES 5,000 student fee."
+  },
+  "priority": {
+    "score": 70,
+    "weights": { "fit": 0.2692, "standing": 0.1154, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 65, "reason": "KASH is a general Kenyan health-research conference (this edition themed on scaling health innovations), not maternal-health-specific, but her work on community health workers and maternal health in informal settlements fits comfortably under its health-systems and innovation tracks with some framing." },
+      "standing": { "score": 55, "reason": "It's KEMRI's national annual conference in its 17th year — a solid, government-backed venue — but no keynote list or programme-committee details were found, so standing is based on limited information (inferred)." },
+      "network": { "score": 70, "reason": "It draws scientists, students, policymakers and development partners from across Kenya's health-research community, which is exactly the kind of local network a first-year PhD student in Nairobi wants." },
+      "outcomes": { "score": 60, "reason": "Past editions have published an abstract book, so presenting gives a citable output and feedback from a national audience, though there's no indexed proceedings or award mentioned for this edition." },
+      "feasibility": { "score": 90, "reason": "Costs almost nothing since it's in her own city with no travel or visa needed; the only knock is that the conference dates (9-12 Feb 2027) fall in February, which isn't in her listed available months." }
+    }
+  },
+  "fit": {
+    "score": 0.65,
+    "rationale": "KASH 2027's theme is broad health-research and innovation rather than maternal health specifically, but Kenya's national health-research conference is a natural place to present work on community health workers and maternal health in informal settlements, especially framed around health-systems innovation. It's also the one venue in this shortlist that requires no travel at all.",
+    "matched_topics": ["community health workers", "maternal health in informal settlements", "urban East Africa"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's Kenya's own national health-research conference, in Nairobi — you don't need to travel or get a visa.",
+    "The student fee is only about KES 5,000, so cost is basically not a barrier.",
+    "It's a good place to meet other Kenyan health researchers and get local feedback on your work."
+  ],
+  "watch_out": [
+    "The conference (9-12 Feb 2027) falls in February, which isn't one of the months you said you're usually available.",
+    "The theme is general health innovation, not maternal health specifically, so you may need to frame your abstract to fit."
+  ],
+  "tagline": "Kenya's own health conference — cheap, local, but check the February dates work for you.",
+  "eligible": "yes",
+  "eligibility_notes": "No restrictions on career stage, nationality or membership were found on the conference page; it's open to students, scientists and policymakers.",
+  "visa": {
+    "required": "no",
+    "note": "The conference is in Nairobi, her home city, so no visa is needed.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

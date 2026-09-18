@@ -1,0 +1,64 @@
+{
+  "opportunity_id": "aas-in-asia-2026",
+  "profile_id": "p_farah",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "PKR",
+    "low": 40000,
+    "high": 100000,
+    "breakdown": {
+      "registration": { "low": 40000, "high": 100000, "note": "No fee amount is published on the pages checked; using a typical mid-size international conference registration range (~USD 145-360) as a heuristic", "grounded": false },
+      "travel": { "low": 0, "high": 0, "note": "Held at LUMS in her own city, Lahore — no travel needed", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Home city — no accommodation needed", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "Held in Pakistan for a Pakistani national — no visa needed", "grounded": true }
+    },
+    "assumptions": [
+      "USD to PKR 277.28 as of 2026-09-18 (open.er-api.com)",
+      "Registration fee is not published on the pages checked; range is a generic estimate for a flagship international conference, not this event's actual fee",
+      "Excludes meals and local transport"
+    ],
+    "over_budget": false,
+    "net_note": "Being local is what makes this one cheap — the only real cost is the registration fee, once it's published."
+  },
+  "priority": {
+    "score": 67,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1538, "outcomes": 0.2308, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 58, "reason": "The 2026 theme, 'Centering Asia: Refiguring Connections, Recharting Futures,' is a pan-Asian frame rather than one naming South Asia, Partition or memory specifically — plausible with the right framing, but a step broader than her actual thesis." },
+      "standing": { "score": 88, "reason": "AAS-in-Asia is described on its own site as \"the Association for Asian Studies' flagship conference,\" run by a major learned society and drawing scholars from across Asia and beyond." },
+      "network": { "score": 68, "reason": "A flagship Asian studies gathering held in her own city is a rare, low-cost chance to meet a large cross-regional academic community, even though the conference isn't South Asia-specific." },
+      "outcomes": { "score": 45, "reason": "The session/panel-proposal window has already closed, so she could attend and network this edition but not present a paper — limiting what she'd come away with." },
+      "feasibility": { "score": 90, "reason": "No travel, accommodation or visa cost at all since it's in Lahore, though September isn't one of her listed available months." }
+    }
+  },
+  "fit": {
+    "score": 0.58,
+    "rationale": "AAS-in-Asia's 2026 theme is about Asia broadly — connections and futures across the continent — rather than South Asia or Partition memory specifically. Her dissertation could plausibly connect to sessions on history, memory or South Asia within the programme, but the fit depends on what's actually being presented rather than on a named theme match.",
+    "matched_topics": ["South Asian history"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's happening at LUMS, in her own city — no travel, hotel or visa cost at all.",
+    "It's the Association for Asian Studies' flagship conference, a major venue to meet Asia-focused scholars in person.",
+    "Hybrid/virtual options exist too, in case in-person attendance doesn't work out."
+  ],
+  "watch_out": [
+    "The proposal window already closed, so she could attend this edition but not present a paper.",
+    "The registration fee isn't published yet, and September isn't one of the months she listed as available."
+  ],
+  "tagline": "A flagship Asia-studies conference in her own city — but she'd be attending, not presenting, this time.",
+  "eligible": "yes",
+  "eligibility_notes": "No restrictions found on attending or registering; the session/panel-proposal window has already closed for this edition, so a new paper submission isn't possible now.",
+  "visa": {
+    "required": "no",
+    "note": "Held in Lahore, Pakistan, for a Pakistani passport holder — no visa is needed.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

@@ -1,0 +1,63 @@
+{
+  "opportunity_id": "oral-history-review-si-climate",
+  "profile_id": "p_chinedu",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "NGN",
+    "low": 0,
+    "high": 0,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "No APC or submission fee was found on the call page", "grounded": false },
+      "travel": { "low": 0, "high": 0, "note": "This is a journal submission, not an event -- no travel required", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Not applicable", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "Not applicable -- a written submission, not travel", "grounded": true }
+    },
+    "assumptions": [
+      "No fee was found on the call page; treated as NGN 0 pending confirmation",
+      "This is a written submission, not an event, so FX is not really relevant here (USD->NGN 1330.27, 2026-09-18, open.er-api.com, used elsewhere in this run)",
+      "Excludes any fee the journal might introduce later"
+    ],
+    "over_budget": false,
+    "net_note": "This costs nothing to submit to -- the only real investment is the time to write and revise the piece."
+  },
+  "priority": {
+    "score": 80,
+    "weights": { "fit": 0.35, "standing": 0.15, "outcomes": 0.2, "feasibility": 0.3 },
+    "sub_scores": {
+      "fit": { "score": 82, "reason": "The call's focus on oral history, climate change and the environment closely matches her method of interviewing migrants about how they narrate home and environmental loss, even though it sits outside geography and migration studies." },
+      "standing": { "score": 55, "reason": "Oral History Review is the journal of the US Oral History Association, a recognized disciplinary journal, but no specific standing signals (indexing, impact) were found on the call page -- limited information." },
+      "outcomes": { "score": 65, "reason": "A publication in a recognized field journal is a solid CV line and reaches an audience (oral historians, environmental humanists) she wouldn't otherwise meet." },
+      "feasibility": { "score": 100, "reason": "No fee, no travel and a rolling deadline make this essentially cost-free and low-risk to attempt." }
+    }
+  },
+  "fit": {
+    "score": 0.82,
+    "rationale": "Oral History Review's call for work on oral history, climate change and the environment is a near-direct match for Chinedu's interviews with Niger Delta migrants about how they narrate home and loss, even though oral history itself sits outside her named fields of geography and migration studies.",
+    "matched_topics": ["oral narratives of displacement", "environmental humanities", "climate-induced migration"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "This call is looking for exactly the kind of interview-based work you're doing on displacement and home.",
+    "It costs nothing to submit, and publication would be a first line on your CV.",
+    "It's a chance to be read by scholars outside geography, in oral history and environmental studies."
+  ],
+  "watch_out": [
+    "It's a journal outside your named fields, so you'd need to frame the piece for an oral-history audience, not a geography one.",
+    "No standing information (rankings, acceptance rate) was found for this specific special issue."
+  ],
+  "tagline": "A near-perfect topical fit in a field you wouldn't have thought to try, and free to submit.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage or nationality restriction was stated; the call is explicitly described as rolling past its July 2026 target date.",
+  "visa": {
+    "required": "no",
+    "note": "This is a written submission with no travel involved, so no visa is needed.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": true,
+  "explore_reason": "Oral history is not one of Chinedu's named fields or adjacent fields, and this call has almost no keyword overlap with 'climate migration' or 'geography' -- it surfaced only by rewording her topic 'oral narratives of displacement' into oral-history search terms.",
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

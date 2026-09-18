@@ -1,0 +1,32 @@
+{
+  "id": "codesria-ga-2026",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "17th CODESRIA General Assembly: Africa in Times of Rapid Global Transformation",
+  "host": "Council for the Development of Social Science Research in Africa (CODESRIA)",
+  "host_kind": "learned_society",
+  "theme": "Africa in Times of Rapid Global Transformation: Reclaiming Agency, Rethinking Leadership, Advancing Justice",
+  "description": "The 17th CODESRIA General Assembly, the pan-African social-science council's flagship gathering, will be held 7-11 December 2026 in Dakar, Senegal, on the theme 'Africa in Times of Rapid Global Transformation: Reclaiming Agency, Rethinking Leadership, Advancing Justice'. The call for papers and panel proposals had an extended deadline of 6 September 2026, which has already passed, so this edition is attend-only for a new submission. No registration fee or travel-funding information was visible on the announcement page.",
+  "location": { "city": "Dakar", "country": "Senegal", "format": "in_person" },
+  "dates": { "start": "2026-12-07", "end": "2026-12-11" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-09-06", "depends_on": null, "grounded": true, "source_quote": "September 6th 2026 (extended deadline)" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No career-stage or nationality restriction stated for General Assembly participation; the 17th edition's call is closed as of extraction. No registration fee or funding page was linked to check — limited information."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "This is the 17th CODESRIA General Assembly, indicating a long-running series held by Africa's leading pan-African social-science research council.", "grounded": true, "source_url": "https://codesria.org/17th-codesria-general-assembly-call-for-papers-and-panel-proposals/" }
+  ],
+  "source_url": "https://codesria.org/17th-codesria-general-assembly-call-for-papers-and-panel-proposals/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

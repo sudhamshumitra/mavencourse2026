@@ -1,0 +1,62 @@
+{
+  "opportunity_id": "plas-princeton-2027",
+  "profile_id": "p_beatriz",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "BRL",
+    "low": 0,
+    "high": 0,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "No application fee is mentioned on the fellowship page", "grounded": false },
+      "travel": { "low": 0, "high": 0, "note": "No travel is required to apply; if selected, relocation costs would be arranged separately and aren't evaluated here", "grounded": false },
+      "accommodation": { "low": 0, "high": 0, "note": "Not applicable at the application stage", "grounded": false },
+      "visa": { "low": 0, "high": 0, "note": "A US visa would only be needed if she is actually offered the fellowship, not to apply", "grounded": false }
+    },
+    "assumptions": [
+      "Applying is free and remote; the costs shown are for the application stage only, not for taking up the fellowship if awarded",
+      "USD→BRL 5.1363 on 2026-09-18 (open.er-api.com), included for consistency though not needed at the application stage"
+    ],
+    "over_budget": false,
+    "net_note": "Applying costs nothing. If awarded, the fellowship itself would be expected to fund relocation and living costs, though the stipend amount was not confirmed on the pages fetched."
+  },
+  "priority": {
+    "score": 67,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1923, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 45, "reason": "The fellowship is open to any discipline researching Latin America, but the page names policy, public health, disease history, international relations and economic development as priority areas — not film, queer or cultural studies, so this is a stretch." },
+      "standing": { "score": 80, "reason": "Hosted by Princeton University's Program in Latin American Studies, a well-known research university and area-studies program, though this specific signal wasn't independently verified beyond the fellowship page itself." },
+      "network": { "score": 80, "reason": "A year-long, in-residence fellowship gives sustained contact with a Latin-Americanist faculty and postdoc cohort — fellowships score high on network value by nature." },
+      "outcomes": { "score": 70, "reason": "A funded year at Princeton is a strong, internationally visible line for future job applications, even without a stated publication requirement." },
+      "feasibility": { "score": 70, "reason": "The application itself is free and low-effort, but if selected she would need a US visa and to relocate for a year — a much bigger commitment than a conference trip, and the topical mismatch adds real uncertainty about acceptance." }
+    }
+  },
+  "fit": {
+    "score": 0.45,
+    "rationale": "The PLAS postdoctoral fellowship is explicitly open to scholars from any discipline researching Latin America, which formally covers her work. However, the page states particular interest in policy, public health, disease history, international relations and economic development — none of which are her focus (queer cinema, film festivals, gender and sexuality in media) — so a successful application would need to make an active case for why film and cultural studies belong in this program's priorities.",
+    "matched_topics": ["Northeast Brazilian film"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's a fully funded year at Princeton to develop your research and international profile, formally open to any discipline working on Latin America.",
+    "A postdoctoral fellowship at a major US university is a strong visibility line for future job applications."
+  ],
+  "watch_out": [
+    "The page's stated priority areas are policy, public health and economic development — not film or queer studies — so you'd need to make a strong case that queer Latin American cinema fits their remit.",
+    "If selected, you'd need a US visa and to relocate for a year — a bigger commitment than a conference trip."
+  ],
+  "tagline": "A prestigious Latin-American-studies fellowship, but its stated priorities don't obviously include film studies.",
+  "eligible": "conditional",
+  "eligibility_notes": "Open to any discipline researching Latin America with a doctoral degree, but the page names policy/public health/international-relations/economic-development as priority areas rather than film or cultural studies — fit would need to be argued in the application.",
+  "visa": {
+    "required": "conditional",
+    "note": "A US visa (likely an exchange-visitor category) would be needed only if she is actually offered and accepts the fellowship, not to apply. This is general information, not immigration advice.",
+    "official_source": "https://travel.state.gov/content/travel/en/us-visas/study-exchange/exchange-visitor-visa.html",
+    "verify_flag": true,
+    "lead_days": 90
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

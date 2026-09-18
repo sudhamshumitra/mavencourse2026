@@ -1,0 +1,79 @@
+{
+  "opportunity_id": "frontiers-womens-empowerment-mch-si",
+  "profile_id": "p_wanjiru",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "Frontiers low/lower-middle-income country fee support",
+      "source": "venue",
+      "type": "waiver",
+      "amount_note": "Discount on the CHF 2,695 article-processing charge; exact discount size not published",
+      "deadline": null,
+      "cycle": "Apply via Frontiers' fee-support form when or before submitting",
+      "requires": "Submission to this Research Topic; application through Frontiers' fee-support form",
+      "eligible": "likely",
+      "why": "Kenya is classified by the World Bank as a lower-middle-income country, which is the stated eligibility group for this discount.",
+      "grounded": true,
+      "source_quote": "Authors in countries classified by the World Bank as low or lower-middle income countries may be eligible for discounts to their APC",
+      "source_url": "https://www.frontiersin.org/journals/global-womens-health/for-authors/publishing-fees",
+      "sequence_note": "Apply for the fee-support discount at or before submission, well ahead of the 14 Dec 2026 manuscript deadline, since the discount amount needs confirming before deciding whether to submit."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "KES",
+    "low": 254200,
+    "high": 423700,
+    "breakdown": {
+      "registration": { "low": 254200, "high": 423700, "note": "Full article-processing charge is CHF 2,695 (about KES 423,700). Kenya-based authors can apply for a low/lower-middle-income fee discount, but the discount amount isn't published — the low end here is an illustrative ~40% reduction, not a confirmed figure.", "grounded": false },
+      "travel": { "low": 0, "high": 0, "note": "Fully online — no travel", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Fully online — no accommodation", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "Fully online — no visa", "grounded": true }
+    },
+    "assumptions": [
+      "USD→KES 129.53, USD→CHF 0.8247 on 2026-09-18 (open.er-api.com), giving CHF→KES ≈ 157.1",
+      "The low-end figure assumes an unconfirmed ~40% fee-support discount; the true discount could be smaller, larger, or a full waiver",
+      "Excludes any co-author costs if this becomes a multi-author submission"
+    ],
+    "over_budget": true,
+    "net_note": "Without a confirmed fee waiver, this is over her KES 250,000 cap even at the discounted low end. It's worth applying for Frontiers' fee-support discount before deciding, since Kenya-based authors are named as eligible for it — but until that discount is confirmed, this should be treated as expensive."
+  },
+  "priority": {
+    "score": 72,
+    "weights": { "fit": 0.35, "standing": 0.15, "outcomes": 0.2, "feasibility": 0.3 },
+    "sub_scores": {
+      "fit": { "score": 88, "reason": "The Research Topic's title, 'Women's Empowerment for Maternal and Child Health in Africa and Across LMICs,' is close to a direct restatement of her research on maternal health, gender and community health workers in Nairobi's informal settlements, and it's cross-listed in Frontiers in Sociology, her home discipline." },
+      "standing": { "score": 55, "reason": "Frontiers is a large, indexed open-access publisher, but Frontiers in Global Women's Health is a newer, broad-scope journal rather than a flagship title in sociology or public health — limited information on citation impact for this specific journal." },
+      "outcomes": { "score": 75, "reason": "A published, open-access journal article is a concrete, citable output for a first-year PhD student, with faster turnaround than most journals, though there's no prize or special recognition attached." },
+      "feasibility": { "score": 60, "reason": "The CHF 2,695 (~KES 423,700) fee is well over her budget on its own, but she's in the group Frontiers names as eligible for a fee discount, and there's no travel, accommodation or visa cost since it's fully online." }
+    }
+  },
+  "fit": {
+    "score": 0.88,
+    "rationale": "This Research Topic asks for exactly the kind of work she does: how women's empowerment shapes maternal and child health in Africa and other low- and middle-income countries. Her focus on community health workers and mobile money as care pathways in Nairobi's informal settlements fits squarely within its scope, and its cross-listing in Frontiers in Sociology means it's also read by her home discipline.",
+    "matched_topics": ["maternal health in informal settlements", "gender and health", "community health workers"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "The special issue's title is almost a direct description of your research topic.",
+    "It's fully online, so there's no travel, accommodation or visa to arrange.",
+    "You're in the group Frontiers names as eligible to apply for a fee discount on the publishing charge."
+  ],
+  "watch_out": [
+    "The full publishing fee (CHF 2,695, about KES 423,700) is far over your budget, and the size of any discount isn't stated — confirm it before committing to submit.",
+    "It's a newer, broad-scope journal rather than a top disciplinary journal, so weigh that against the fee."
+  ],
+  "tagline": "A near-perfect topic match online, but confirm the fee discount before you commit.",
+  "eligible": "yes",
+  "eligibility_notes": "No restrictions on career stage, nationality or membership were found; the Research Topic states it is currently accepting articles from anyone whose work fits Africa/LMIC maternal and child health.",
+  "visa": {
+    "required": "no",
+    "note": "Fully online — no visa needed to submit or publish.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

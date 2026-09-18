@@ -1,0 +1,62 @@
+{
+  "opportunity_id": "rebeca-rolling",
+  "profile_id": "p_beatriz",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "BRL",
+    "low": 0,
+    "high": 0,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "No article-processing charge is stated on the journal's submissions page", "grounded": true },
+      "travel": { "low": 0, "high": 0, "note": "Online journal submission — no travel required", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Online journal submission — no accommodation required", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "Online journal submission — no visa needed", "grounded": true }
+    },
+    "assumptions": [
+      "No article-processing charge is stated on the journal's submissions page",
+      "Online journal submission — no travel, accommodation or visa costs",
+      "USD→BRL 5.1363 on 2026-09-18 (open.er-api.com), included for consistency though not needed here"
+    ],
+    "over_budget": false,
+    "net_note": "This costs essentially nothing beyond her own writing time."
+  },
+  "priority": {
+    "score": 78,
+    "weights": { "fit": 0.3333, "standing": 0.2381, "outcomes": 0.2381, "feasibility": 0.1905 },
+    "sub_scores": {
+      "fit": { "score": 85, "reason": "REBECA already ran a themed dossier on 'Cinemas e audiovisualidades queer/kuir/cuir no Brasil e na América Latina' — almost a direct match for her core topic, queer Latin American cinema." },
+      "standing": { "score": 60, "reason": "SOCINE's own peer-reviewed journal, but no indexing or impact information was found on the page fetched — limited information." },
+      "network": null,
+      "outcomes": { "score": 70, "reason": "A no-fee, peer-reviewed publication in Portuguese, Spanish, English or French is a solid, realistic publication route toward her visibility and publication goals." },
+      "feasibility": { "score": 100, "reason": "Fully online, no fee, and rolling submission with no deadline pressure — nothing stands in the way of submitting." }
+    }
+  },
+  "fit": {
+    "score": 0.85,
+    "rationale": "REBECA, SOCINE's own journal, has already run a themed dossier titled 'Cinemas e audiovisualidades queer/kuir/cuir no Brasil e na América Latina' — a near-exact restatement of her core research area, queer Latin American cinema. That dossier itself is now closed, but the journal's rolling free-thematic call is open to work in the same area.",
+    "matched_topics": ["queer Latin American cinema", "Northeast Brazilian film", "low-budget filmmaking"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "This is SOCINE's own journal, in Portuguese, Spanish or English, and it already ran a themed dossier on exactly your topic — queer/kuir/cuir cinema in Brazil and Latin America.",
+    "It's free to publish in (no processing charge) and takes rolling submissions, so there's no deadline pressure."
+  ],
+  "watch_out": [
+    "The queer-cinema dossier itself already closed back in 2020 — right now only the general rolling call is open, so you'd submit as a free-thematic article rather than into a themed issue."
+  ],
+  "tagline": "A free, on-topic Brazilian journal that's already shown real interest in exactly your subject.",
+  "eligible": "yes",
+  "eligibility_notes": "No restrictions found; open to any scholar submitting original, unpublished work in Portuguese, Spanish, English or French.",
+  "visa": {
+    "required": "no",
+    "note": "Online journal submission — no visa is needed.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

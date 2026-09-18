@@ -1,0 +1,142 @@
+{
+  "profile_id": "p_tanvir",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "budget_used": { "searches": 15, "fetches": 12 },
+  "candidates": [
+    {
+      "url": "https://weracongress2027.es/",
+      "title": "WERA World Congress 2027 — Many Contexts, One Global Inquiry: Rethinking Education Research Together",
+      "host": "World Education Research Association (WERA), hosted by University of Deusto",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-11-15",
+      "predicted_cfp_window": null,
+      "relevance": "The world congress of the umbrella body for national education-research associations; its 2027 theme on rethinking education research across contexts is a direct home for a Bangladeshi education-policy paper on exam reform and inequality.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'education' -> which body organises education research internationally -> World Education Research Association (WERA) -> its world congress",
+        "layer c: searched 'WERA 2027 World Congress Bilbao' -> confirmed edition page weracongress2027.es with dates and submission deadline"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.cies2027.org/proposals",
+      "title": "CIES 2027 Annual Conference (Comparative and International Education Society)",
+      "host": "Comparative and International Education Society (CIES)",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": "2026-09-03",
+      "predicted_cfp_window": null,
+      "relevance": "CIES is the flagship society of Tanvir's exact discipline (comparative and international education); the proposal window closed Sept 3, 2026 but registration for the April 2027 Madison conference is still ahead, so he could still attend/network.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'comparative education' -> society 'Comparative and International Education Society (CIES)' -> its annual conference",
+        "layer c: searched 'CIES 2027 annual conference call for proposals' -> found cies2027.org/proposals with dates confirming submissions closed but conference (Apr 2027) still upcoming"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/",
+      "title": "Towards a Global South-Driven Future for Development Studies — Writing Workshop, Bandung",
+      "host": "Development Studies Association (DSA), with Global Development Institute (Manchester) and Universitas Padjadjaran; British Academy Writing Workshop grant",
+      "type": "fellowship",
+      "status": "open",
+      "deadline_hint": "2026-09-30",
+      "predicted_cfp_window": null,
+      "relevance": "A Global-South-based writing workshop for development-studies researchers, open to those based at a Global South HEI; his education-inequality work fits the development-studies remit, and the British Academy grant covers flights and 3 nights' accommodation, making it unusually feasible on his budget.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'development studies' -> society 'Development Studies Association (DSA)' -> searched DSA conference/CFP pages -> found a linked Global-South writing workshop call",
+        "layer d: reworded 'Global South development studies workshop 2027' -> confirmed on GDI Manchester blog with funded-travel details"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.easas.eu/ecsas/",
+      "title": "29th European Conference on South Asian Studies (ECSAS 2027)",
+      "host": "European Association for South Asian Studies (EASAS)",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-09-30",
+      "predicted_cfp_window": null,
+      "relevance": "EASAS's flagship South Asian studies conference (adjacent field) always runs an education/social-policy panel stream; panel call is open now, giving a route to present his exam-reform and inequality work to a South Asianist audience outside education specifically.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent field 'South Asian studies' -> society 'European Association for South Asian Studies (EASAS)' -> its biennial conference",
+        "dedupe: already extracted in corpus (ecsas-2027.json) for another persona; reused rather than re-fetched"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://southasiaconference.wisc.edu/",
+      "title": "Annual Conference on South Asia (Madison)",
+      "host": "Center for South Asia, University of Wisconsin–Madison",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "Exploration pick: the largest interdisciplinary South Asian studies gathering in North America, no direct keyword overlap with education policy, but its size and cross-disciplinary reach (history, anthropology, political science) could put Tanvir in front of people working on Bangladesh who never attend an education conference.",
+      "exploration": true,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer b: literature neighbourhood on 'South Asian education' recurs alongside general South Asian-studies venues",
+        "dedupe: already extracted in corpus (madison-sa-2026.json) for another persona; reused rather than re-fetched"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://iaea2026.org/",
+      "title": "51st Annual IAEA Conference — Trust, Transparency and Technology in Educational Assessment",
+      "host": "International Association for Educational Assessment (IAEA)",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "IAEA is the specialist society for educational assessment and examinations — a near-literal match for Tanvir's exam-reform work — but the Toronto conference is only 8 days away (Sept 27-Oct 2, 2026), so submissions are long closed and a Canadian visa could not be arranged in time.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer d: reworded 'exam reform' -> 'educational assessment' -> searched 'International Association for Educational Assessment annual conference' -> found IAEA 2026 Toronto"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.journals.uchicago.edu/toc/cer/current",
+      "title": "Comparative Education Review — rolling submissions",
+      "host": "Comparative and International Education Society / University of Chicago Press",
+      "type": "journal_call",
+      "status": "open",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "The flagship journal of comparative and international education; rolling submissions (no special-issue deadline needed), and a South Asian exam-reform/inequality paper is squarely within scope. The dedicated call-for-papers page blocked fetching, but the current-issue archive confirms the journal is actively publishing in 2026.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "fetch_failed": true,
+      "discovery_trace": [
+        "layer a: field 'comparative education' -> flagship journal of CIES -> Comparative Education Review",
+        "layer e: fetch of journals.uchicago.edu/journals/cer/call-for-papers returned 403; fell back to the current-issue TOC page to confirm the journal is live and rolling"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.basas.org.uk/news-events/basas-conference/",
+      "title": "BASAS Annual Conference 2027",
+      "host": "British Association for South Asian Studies (BASAS)",
+      "type": "conference",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "CFP expected early-mid 2027 (members-only page, no public dates yet)",
+      "relevance": "South Asian studies society conference at Newcastle; kept as a watch item since BASAS meetings often include education/social-policy panels, but the public page gives no dates or CFP yet.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "dedupe: already extracted in corpus (basas-2027.json) for another persona; reused rather than re-fetched"
+      ],
+      "found_via": null
+    }
+  ]
+}

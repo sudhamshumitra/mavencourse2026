@@ -1,0 +1,38 @@
+{
+  "id": "rebeca-rolling",
+  "type": "journal_call",
+  "status": "open",
+  "title": "REBECA — Revista Brasileira de Estudos de Cinema e Audiovisual (rolling submissions)",
+  "host": "SOCINE — Sociedade Brasileira de Estudos de Cinema e Audiovisual",
+  "host_kind": "learned_society",
+  "theme": null,
+  "description": "REBECA is SOCINE's own peer-reviewed journal for cinema and audiovisual studies. It accepts continuous, rolling submissions (no fixed deadline) to its Temáticas Livres (free-thematic) section, plus a free-form 'Fora de Quadro' section, reviews, interviews and translations. Articles are accepted in Portuguese, Spanish, English and French. The journal previously ran a dedicated thematic dossier on 'Cinemas e audiovisualidades queer/kuir/cuir no Brasil e na América Latina' (published 2020, now closed), showing an existing editorial interest in this subfield, but no themed call in this area is currently open — only the general rolling call.",
+  "location": { "city": "—", "country": "Brazil", "format": "online" },
+  "dates": { "start": null, "end": null },
+  "deadlines": [],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Rolling call: no career-stage or nationality restriction stated. No SOCINE membership requirement mentioned for journal submission (unlike conference registration)."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [
+    { "year": 2020, "theme": "Cinemas e audiovisualidades queer/kuir/cuir no Brasil e na América Latina", "city": null, "representative_papers": [], "source_url": "https://rebeca.socine.org.br/1/announcement/view/20" }
+  ],
+  "standing_signals": [
+    { "signal": "REBECA is the official journal of SOCINE, Brazil's national society for cinema and audiovisual studies.", "grounded": true, "source_url": "https://rebeca.emnuvens.com.br/1/about/submissions" }
+  ],
+  "source_url": "https://rebeca.emnuvens.com.br/1/about/submissions",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": {
+    "posted": null,
+    "last_signal_year": 2026,
+    "stale": false,
+    "note": "Rolling/continuous-submission journal call: 'aceita submissões em fluxo contínuo de contribuições originais e inéditas' — no deadline, and the submissions page is the journal's live, standing policy rather than a dated announcement."
+  }
+}

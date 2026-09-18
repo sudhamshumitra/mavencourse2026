@@ -1,0 +1,34 @@
+{
+  "id": "wera-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "WERA World Congress 2027 — Many Contexts, One Global Inquiry: Rethinking Education Research Together",
+  "host": "World Education Research Association (WERA)",
+  "host_kind": "learned_society",
+  "theme": "Many Contexts, One Global Inquiry: Rethinking Education Research Together",
+  "description": "WERA is a federation of national and international education-research associations, and its World Congress is a triennial global gathering of education researchers. The 2027 edition runs 22-24 June 2027 at the University of Deusto in Bilbao, Spain (with pre-conference workshops on 21 June), under the theme 'Many Contexts, One Global Inquiry: Rethinking Education Research Together', open to researchers, policymakers and educators from across the globe submitting papers, posters and symposia in English, Spanish or Basque.",
+  "location": { "city": "Bilbao", "country": "Spain", "format": "in_person" },
+  "dates": { "start": "2027-06-22", "end": "2027-06-24" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-11-15", "depends_on": null, "grounded": true, "source_quote": "Final day to submit papers, symposia, posters and other contributions." },
+    { "label": "early_bird", "date": "2027-03-01", "depends_on": null, "grounded": true, "source_quote": "Early Bird Deadline" },
+    { "label": "registration", "date": "2027-04-16", "depends_on": null, "grounded": true, "source_quote": "Regular Registration Deadline" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Open to 'researchers, policymakers, and educators from across the globe'; no nationality, career-stage or membership restriction found on the main page."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "Congress organised by the World Education Research Association, a federation of national and regional education-research associations worldwide (e.g. AERA, BERA)", "grounded": false, "source_url": null }
+  ],
+  "source_url": "https://weracongress2027.es/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

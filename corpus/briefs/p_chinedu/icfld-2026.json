@@ -1,0 +1,64 @@
+{
+  "opportunity_id": "icfld-2026",
+  "profile_id": "p_chinedu",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "NGN",
+    "low": 10000,
+    "high": 10000,
+    "breakdown": {
+      "registration": { "low": 10000, "high": 10000, "note": "Students & Early-Career Researchers tier", "grounded": true },
+      "travel": { "low": 0, "high": 0, "note": "Held on her own campus in Lagos; no travel needed", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Home city; no accommodation needed", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "Home-country event; no visa needed", "grounded": true }
+    },
+    "assumptions": [
+      "Home-city event, so travel, accommodation and visa are all zero",
+      "Fee is already in NGN, so no FX conversion is needed",
+      "Assumes she can still join as an attendee/forum participant even though the abstract window (10 Sept 2026) has closed -- worth confirming with organisers"
+    ],
+    "over_budget": false,
+    "net_note": "At NGN 10,000 total, this is by far the cheapest item in her shortlist and well within budget with no funding needed."
+  },
+  "priority": {
+    "score": 69,
+    "weights": { "fit": 0.2692, "standing": 0.1154, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 68, "reason": "The theme on land governance and urban management in African cities connects to her work on migrants arriving in Lagos, but it's plausible with framing rather than a direct restatement of climate migration." },
+      "standing": { "score": 45, "reason": "A university-hosted, 4th-edition conference -- a young, recurring event rather than an established flagship; limited information beyond that." },
+      "network": { "score": 80, "reason": "A dedicated Doctoral and Early-Career Researchers Forum for mentorship and peer review is exactly the kind of access to potential PhD supervisors she's looking for, on her own campus." },
+      "outcomes": { "score": 55, "reason": "Feedback through the forum is likely, but no formal publication or proceedings route was found -- limited information." },
+      "feasibility": { "score": 80, "reason": "The cost is negligible (NGN 10,000, no travel or visa), but the abstract deadline has passed and the conference month (November) falls outside her stated available months." }
+    }
+  },
+  "fit": {
+    "score": 0.68,
+    "rationale": "ICFLD's 2026 theme on land governance and urban management in African cities connects naturally to her work on migrants arriving in Lagos, even though the conference's digital-technology framing means her paper would need some repositioning toward land/urban-policy language rather than climate-migration language directly.",
+    "matched_topics": ["urban migration in Lagos", "Niger Delta environment"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's held on her own campus in Lagos, so there's no travel, accommodation or visa cost at all.",
+    "There's a dedicated forum for postgraduate students to get mentorship and feedback -- exactly the kind of PhD-supervisor contact she's looking for.",
+    "At NGN 10,000 total, it's affordable no matter what."
+  ],
+  "watch_out": [
+    "The abstract deadline (10 September 2026) has already passed, so she may only be able to attend and join the forum rather than formally present a paper -- worth checking directly with the organisers.",
+    "The conference's digital-technology and land-governance framing is adjacent to her topic, not a direct match, so a paper would need reframing."
+  ],
+  "tagline": "Nearly free, on her own campus, with a forum built for meeting future supervisors.",
+  "eligible": "conditional",
+  "eligibility_notes": "Students are explicitly welcome and there's a forum for postgraduates, but the abstract submission window has closed, so participation this cycle may be attendance-only pending confirmation with organisers.",
+  "visa": {
+    "required": "no",
+    "note": "Held in Lagos, her home city; no visa is needed.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "iaspm-intl-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "IASPM International Conference 2027: \"Pop! Goes the World!!!\"",
+  "host": "International Association for the Study of Popular Music (IASPM)",
+  "host_kind": "learned_society",
+  "theme": "Pop! Goes the World!!!",
+  "description": "The 24th biennial IASPM International Conference, the flagship gathering of the field's main global learned society, will be held 29 November-3 December 2027 at Te Herenga Waka/Victoria University of Wellington, New Zealand. The theme, 'Pop! Goes the World!!!', spans 14 thematic tracks including technology, activism, migration and Indigenous imaginaries in popular music. All presenters must be IASPM members before the conference begins.",
+  "location": { "city": "Wellington", "country": "New Zealand", "format": "in_person" },
+  "dates": { "start": "2027-11-29", "end": "2027-12-03" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-12-01", "depends_on": null, "grounded": true, "source_quote": "Submission deadline: December 1st, 2026" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": true,
+    "notes": "All presenters must be members of IASPM prior to the start of the conference. No fee amount was found on this page."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "24th biennial IASPM International Conference, the field's main global gathering", "grounded": true, "source_url": "https://www.iaspm.net/iaspm-international-conference/" }
+  ],
+  "source_url": "https://www.iaspm.net/iaspm-international-conference/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2027, "stale": false, "note": "Page is specifically for the 2027 Wellington edition and its Dec 2026 submission deadline." }
+}

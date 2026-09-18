@@ -1,0 +1,37 @@
+{
+  "id": "ecas-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "11th European Conference on African Studies (ECAS 2027) — African Prisms",
+  "host": "AEGIS (Africa-Europe Group for Interdisciplinary Studies), hosted at ISCTE — University Institute of Lisbon",
+  "host_kind": "learned_society",
+  "theme": "African Prisms: the multiplicity of disciplines, perspectives, methods, histories and images that shape the contemporary study of Africa",
+  "description": "ECAS is the largest African-studies conference in Europe, held every two years under AEGIS. The 2027 edition ('African Prisms') runs 30 June-3 July 2027 in Lisbon. It is organised as panels proposed by convenors, with individual papers then submitted into open panels; a doctoral or health-and-society-focused paper on maternal health, community health workers and mobile money in Nairobi's informal settlements would fit panels on urban Africa, health or digital economies, even though this is an adjacent field for her (sociology/public health) rather than her home discipline.",
+  "location": { "city": "Lisbon", "country": "Portugal", "format": "in_person" },
+  "dates": { "start": "2027-06-30", "end": "2027-07-03" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-09-27", "depends_on": null, "grounded": true, "source_quote": "Call for panels 8 June-27 Sept 2026" },
+    { "label": "full_paper", "date": "2026-12-31", "depends_on": "abstract", "grounded": true, "source_quote": "Call for papers 26 Oct-31 Dec 2026" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No stated career-stage or nationality restrictions found. Papers must be submitted into an already-accepted panel, so a first-time submitter needs to find and apply to a fitting open panel once the panel list is published (after the panel call closes 27 Sept 2026) and before the paper call closes 31 Dec 2026."
+  },
+  "fees": [
+    { "tier": "Full fee (early bird, until 17 Apr 2027)", "amount": 290, "currency": "EUR", "grounded": true, "source_quote": "Full fee 290€" },
+    { "tier": "Concession fee (gross annual income below €20,000, early bird)", "amount": 190, "currency": "EUR", "grounded": true, "source_quote": "Concession fee* 190€ *Concession fee is for the delegates who gross annual income is below 20000€ per year." }
+  ],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "11th edition of ECAS, run by AEGIS, the main network of African-studies centres in Europe", "grounded": true, "source_url": "https://www.ecasconference.org/2027/" }
+  ],
+  "source_url": "https://www.ecasconference.org/2027/call-for-panels/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2027, "stale": false, "note": "Page describes the live 2027 edition with an open panel-call window through 27 Sept 2026 and a paper-call window through 31 Dec 2026." }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "islam-nusantara-journal",
+  "type": "journal_call",
+  "status": "open",
+  "title": "Islam Nusantara: Journal for the Study of Islamic History and Culture",
+  "host": "Universitas Nahdlatul Ulama Indonesia (UNUSIA)",
+  "host_kind": "university",
+  "theme": null,
+  "description": "Islam Nusantara is a rolling-submission journal published by UNUSIA on Open Journal Systems, focused on Islamic history, culture and society in the Nusantara (Indonesian archipelago) context. It has no fixed themed call or submission deadline; authors can submit at any time and the journal continues to publish current issues.",
+  "location": { "city": "—", "country": "—", "format": "online" },
+  "dates": { "start": null, "end": null },
+  "deadlines": [],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Rolling submissions; no fixed deadline stated on the site. A publication-fee page is linked from the site but its amount was not confirmed."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "Actively publishing OJS-hosted journal with an e-ISSN (2722-8975) and continuing current issues/archives", "grounded": true, "source_url": "https://journal.unusia.ac.id/index.php/ISLAMNUSANTARA" }
+  ],
+  "source_url": "https://journal.unusia.ac.id/index.php/ISLAMNUSANTARA",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2026, "stale": false, "note": "Verification re-fetch found the current issue listed as 'Vol. 7 No. 2 (2026)', published 1 July 2026, and the journal described as peer-reviewed and biannual (January/July) -- clear evidence the journal is active in 2026." }
+}

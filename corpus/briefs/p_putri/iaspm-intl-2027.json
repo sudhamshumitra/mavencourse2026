@@ -1,0 +1,64 @@
+{
+  "opportunity_id": "iaspm-intl-2027",
+  "profile_id": "p_putri",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "IDR",
+    "low": 20811000,
+    "high": 39822000,
+    "breakdown": {
+      "registration": { "low": 2661000, "high": 5322000, "note": "No fee page was found; range inferred from typical biennial IASPM registration fees (~USD 150-300)", "grounded": false },
+      "travel": { "low": 12000000, "high": 19000000, "note": "Yogyakarta/Jakarta-Wellington return, long-haul via Australia or Singapore, booked well ahead; regional heuristic for Indonesia-Australia/NZ routes since no live fare search was run", "grounded": false },
+      "accommodation": { "low": 2550000, "high": 11500000, "note": "6 nights (5 conference days + 1), budget hostel to mid-range hotel in Wellington, converted from an estimated NZD 40-180/night", "grounded": false },
+      "visa": { "low": 3600000, "high": 4000000, "note": "New Zealand Visitor Visa fee for an Indonesian passport holder, plus a typical service charge", "grounded": false, "source": "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/visitor-visa" }
+    },
+    "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com)",
+      "Travel, accommodation and visa figures are heuristic estimates, not a live fare/hotel/visa-fee search",
+      "Excludes meals, local transport, insurance and the exact NZ visitor-visa fee (not independently confirmed here)"
+    ],
+    "over_budget": true,
+    "net_note": "Even the low end is above her IDR 20,000,000 cap; this is only realistic with a travel grant, IASPM bursary or institutional support, and none was found for this edition."
+  },
+  "priority": {
+    "score": 53,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1154, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 45, "reason": "The conference's global 'pop as world phenomenon' theme is only loosely connected to her specific work archiving 1990s Indonesian Islamic music and zines -- a stretch, though it's the field's main gathering and could work with the right framing." },
+      "standing": { "score": 85, "reason": "The 24th biennial edition of the field's main global learned society is a strong standing signal." },
+      "network": { "score": 65, "reason": "It's the main place globally to meet popular-music-studies scholars, though none of her cited scholars are confirmed as past speakers here (limited information)." },
+      "outcomes": { "score": 45, "reason": "No publication route or proceedings information was found for this edition (limited information)." },
+      "feasibility": { "score": 30, "reason": "Cost is well over her budget even at the low end, a New Zealand visitor visa is likely required against her stated preference to avoid visas, and part of the event (early December) falls outside her available months." }
+    }
+  },
+  "fit": {
+    "score": 0.45,
+    "rationale": "IASPM's global 'Pop! Goes the World' theme shares little specific ground with her narrower project on 1990s Indonesian Islamic popular music and zines, but as the field's flagship venue it could still work for her with careful framing -- the fit here comes from field adjacency rather than a direct topic match.",
+    "matched_topics": ["Indonesian music and zines"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's the main global conference in popular music studies -- a field she'd otherwise never think to search for.",
+    "It's a real chance to put her Indonesian Islamic-music archive in front of an international popular-music-studies audience.",
+    "Submissions are still open (deadline 1 December 2026)."
+  ],
+  "watch_out": [
+    "The total cost is well beyond her budget cap even before adding a New Zealand visa fee.",
+    "A New Zealand visitor visa is likely required, and IASPM membership must be arranged before the conference."
+  ],
+  "tagline": "The world's main popular-music-studies conference -- a genuine stretch on cost, visa and fit.",
+  "eligible": "conditional",
+  "eligibility_notes": "Presenters must become IASPM members before the conference; no other restrictions were stated.",
+  "visa": {
+    "required": "yes",
+    "note": "Indonesian passport holders generally need a New Zealand visitor visa. This is general information, not immigration advice -- confirm current requirements with Immigration New Zealand.",
+    "official_source": "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/visitor-visa",
+    "verify_flag": true,
+    "lead_days": 60
+  },
+  "explore": true,
+  "explore_reason": "Popular music studies is one of her adjacent fields, not her primary discipline, and this conference's global theme has little direct overlap with her specific Islamic-archiving research -- exactly the kind of venue she wouldn't think to search for herself.",
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "icfld-2026",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "4th International Conference and Fair on Land and Development (ICFLD 2026)",
+  "host": "ARUA Centre of Excellence for Urbanization and Habitable Cities (CoE-UHC), University of Lagos",
+  "host_kind": "university",
+  "theme": "Leveraging Digital Technologies for Sustainable Land Governance, Smart Urban Management, and Inclusive Housing Delivery in Africa",
+  "description": "ICFLD is an annual conference run by the University of Lagos's ARUA Centre of Excellence for Urbanization and Habitable Cities, held on campus in Lagos. The 2026 edition (its 4th) runs 24-25 November 2026 on digital technologies for land governance, smart urban management and inclusive housing across Africa -- adjacent to Chinedu's work on migration into Lagos. It includes a dedicated Doctoral and Early-Career Researchers Forum for mentorship, networking and peer review aimed at postgraduate students. The abstract deadline (10 September 2026) has already passed, but registration and attendance remain open.",
+  "location": { "city": "Lagos", "country": "Nigeria", "format": "in_person" },
+  "dates": { "start": "2026-11-24", "end": "2026-11-25" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-09-10", "depends_on": null, "grounded": true, "source_quote": "10th September 2026" }
+  ],
+  "eligibility": {
+    "career_stage": ["student"],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Students are explicitly welcome to submit abstracts and presentations, and there is a dedicated forum for postgraduate students and early-career researchers, though the abstract window has closed for this edition; attending and joining the forum is still possible."
+  },
+  "fees": [
+    { "tier": "students_early_career_nigeria", "amount": 10000, "currency": "NGN", "grounded": true, "source_quote": "Students & Early-Career Researchers: ₦10,000" },
+    { "tier": "nigerian_participant", "amount": 20000, "currency": "NGN", "grounded": true, "source_quote": "Nigerian Participants: ₦20,000" },
+    { "tier": "international_participant", "amount": 250, "currency": "USD", "grounded": true, "source_quote": "International Participants: USD 250" },
+    { "tier": "international_virtual", "amount": 150, "currency": "USD", "grounded": true, "source_quote": "International Virtual Presentations: USD 150" }
+  ],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "This is the 4th edition of ICFLD, run by a university-hosted ARUA Centre of Excellence, indicating an established annual event.", "grounded": false, "source_url": null }
+  ],
+  "source_url": "https://chsdunilag.org/call-for-papers-4th-international-conference-and-fair-on-land-and-development-icfld-2026/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2026, "stale": false, "note": "Page describes the live 4th (2026) edition; current." }
+}

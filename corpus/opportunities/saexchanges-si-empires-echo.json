@@ -1,0 +1,48 @@
+{
+  "id": "saexchanges-si-empires-echo",
+  "type": "journal_call",
+  "status": "open",
+  "title": "\"Empires' Echo: Colonial Legacies in Postcolonial South Asia\" — Special Issue, Journal of South Asian Exchanges",
+  "host": "Journal of South Asian Exchanges",
+  "host_kind": "publisher",
+  "theme": "Empires' Echo: Colonial Legacies in Postcolonial South Asia",
+  "description": "A special-issue call (Volume 3, Number 2) from the Journal of South Asian Exchanges, a peer-reviewed, open-access journal covering the arts, history, society and politics of the South Asian region. The issue seeks work on colonial impacts on South Asian societies — bureaucratic structures, education systems, economic models and cultural representation — from interdisciplinary and marginalized-perspective approaches. It is fully online; there is no venue, travel or in-person component.",
+  "location": { "city": "—", "country": "—", "format": "online" },
+  "dates": { "start": null, "end": null },
+  "deadlines": [
+    {
+      "label": "full_paper",
+      "date": "2026-10-15",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Full Paper Submission Deadline: October 15, 2026"
+    }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No explicit eligibility restrictions found; the call welcomes original, interdisciplinary submissions, including marginalized perspectives. No article-processing charge or author fee was found on the site."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    {
+      "signal": "Peer-reviewed, open-access journal publishing four issues a year, indexed in Google Scholar and Crossref (E-ISSN 3048-8877); currently on Volume 3, suggesting a young but active title.",
+      "grounded": true,
+      "source_url": "https://saexchanges.com/"
+    }
+  ],
+  "source_url": "https://saexchanges.com/call-for-papers/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": {
+    "posted": null,
+    "last_signal_year": 2026,
+    "stale": false,
+    "note": "Call explicitly targets publication in December 2026 with a submission deadline in October 2026 — current."
+  }
+}

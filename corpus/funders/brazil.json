@@ -1,0 +1,65 @@
+{
+  "country": "Brazil",
+  "generated_at": "2026-09-19",
+  "for": "humanities postdoc (film/media/Latin American studies), international conference travel",
+  "funders": [
+    {
+      "name": "CAPES — Programa de Apoio a Eventos no Exterior (AEX/PAEX)",
+      "url": "https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/encontre-aqui/paises/multinacional/paex",
+      "category": "a",
+      "eligible_who": "Doctoral degree holders (professors/researchers) presenting a paper at an internationally recognized event abroad, who have not received AEX support in the previous year",
+      "amount_note": "A fixed contribution toward travel and accommodation from Brazil to the event's country, amount set by CAPES ordinance and varying by destination region; exact current value not confirmed on the pages fetched",
+      "cycle": "Recurring CAPES scheme with periodic editais; 2026-27 specific dates not confirmed on the pages fetched — check the current edital before applying",
+      "requires": "Doctoral diploma, proof of paper acceptance/submission to the event, institutional endorsement",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "General description corroborated across multiple .gov.br/university pages; exact 2026-27 edital and amount not located in this run — treat amount as unconfirmed"
+    },
+    {
+      "name": "FACEPE — Chamada Confap/ERC IA 2026 (mobilidade internacional de pesquisadores pernambucanos)",
+      "url": "https://www.facepe.br/chamada-confap-erc-ia-2026-abre-oportunidades-para-mobilidade-internacional-de-pesquisadores-pernambucanos/",
+      "category": "b",
+      "eligible_who": "Doctorate-holding researchers based in Pernambuco (Beatriz's home state) seeking to join ERC-funded excellence teams in Europe",
+      "amount_note": "Not confirmed on the pages fetched — this call funds longer research mobility/placements, not short conference trips, so it is a weak fit for a single-event travel grant",
+      "cycle": "2026 call; specific deadline not confirmed on the pages fetched (the direct call page returned a 404 on re-fetch)",
+      "requires": "Integration into a European ERC-funded research team; doctorate",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Included as the researcher's own state science foundation (FACEPE) for completeness, but flagged as a poor match for single-conference travel — FACEPE's own site should be checked directly (facepe.br) for any smaller-scale event/travel-grant edital, which was not found in this run"
+    },
+    {
+      "name": "SLAS Latin American Scholars Grant",
+      "url": "https://www.slasuk.org/latinamericanscholarsgrants",
+      "category": "d",
+      "eligible_who": "Scholars based in Latin America (confirmed via address/institutional affiliation) — independent researchers, PhD students and university-affiliated academics — attending and presenting at the SLAS annual conference (UK). SLAS membership is not required to apply.",
+      "amount_note": "Around ten awards of up to GBP 1,750 to cover registration, travel and accommodation",
+      "cycle": "Annual, tied to each year's SLAS conference (next confirmed edition: Newcastle University, 2027); application must be supported by an SLAS member",
+      "requires": "A paper accepted at the SLAS conference; a supporting SLAS-member sponsor making a 'strategic case' for the collaboration",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Real UK-based Latin-American-studies society scheme explicitly targeting Latin-America-based scholars; only relevant if she targets the SLAS conference itself, which is not (yet) one of her chosen 6 opportunities this cycle"
+    },
+    {
+      "name": "IAMCR Travel Grants (for the IAMCR annual conference)",
+      "url": "https://iamcr.org/travel_grants",
+      "category": "e",
+      "eligible_who": "Early-career (untenured) IAMCR members of ≥ 1 year, residing in low/middle-income countries (Brazil qualifies), first author of a paper accepted for full presentation at the IAMCR annual conference",
+      "amount_note": "Up to 18 grants, each max USD 2,000",
+      "cycle": "Annual, tied to each year's IAMCR conference; the 2026 (Galway) cycle deadline was 20 March 2026 — a 2027 São Paulo-specific cycle had not yet been announced at the time this was checked",
+      "requires": "Paper acceptance confirmation from section/working-group head, IAMCR membership, full paper by the stated deadline",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Directly relevant since IAMCR 2027 (São Paulo) is one of her opportunities; reused from corpus/funders/india.json's IAMCR entry, which documents the same recurring society-wide scheme"
+    },
+    {
+      "category": "c",
+      "none_found": true,
+      "note": "Home institution: check the federal university in Pernambuco's own pro-reitoria de pesquisa / assessoria de relações internacionais for an internal postdoc conference-travel fund; specific to the institution and not tracked here."
+    },
+    {
+      "category": "f",
+      "none_found": true,
+      "note": "No current destination-specific scheme found for a Brazilian early-career humanities scholar traveling to the Netherlands, Lithuania, the USA/Canada, or Mexico for the opportunities scouted this run."
+    }
+  ]
+}

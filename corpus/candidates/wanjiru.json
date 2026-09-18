@@ -1,0 +1,136 @@
+{
+  "profile_id": "p_wanjiru",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "budget_used": { "searches": 20, "fetches": 13 },
+  "candidates": [
+    {
+      "url": "https://www.kemri.go.ke/kash-17/",
+      "title": "17th KEMRI Annual Scientific and Health Conference (KASH 2027)",
+      "host": "Kenya Medical Research Institute (KEMRI)",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-11-30",
+      "predicted_cfp_window": null,
+      "relevance": "Kenya's own national health research conference (theme: translating research evidence to impact), held in Nairobi. Maternal health, community health workers and health-systems innovation are squarely in scope, there's no travel or visa cost, and the student fee is only about KES 5,000.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'public health' in Kenya -> national health research institute KEMRI -> its annual conference series (KASH) -> 2027 edition (KASH 17) confirmed with an open abstract call",
+        "confirmed via KEMRI's own X/Twitter announcement of #KASH2027, cross-checked on kemri.go.ke/kash-17/"
+      ],
+      "found_via": "https://x.com/KEMRI_Kenya/status/2090344482105389212"
+    },
+    {
+      "url": "https://www.frontiersin.org/research-topics/81584/womens-empowerment-for-maternal-and-child-health-in-africa-and-across-lmics-critical-perspectives-and-future-directions",
+      "title": "Women's Empowerment for Maternal and Child Health in Africa and Across LMICs: Critical Perspectives and Future Directions",
+      "host": "Frontiers (Frontiers in Global Women's Health, with Frontiers in Reproductive Health and Frontiers in Sociology)",
+      "type": "journal_call",
+      "status": "open",
+      "deadline_hint": "2026-12-14",
+      "predicted_cfp_window": null,
+      "relevance": "A direct thematic match: women's empowerment and maternal/child health in Africa and low- and middle-income countries. It's also open to Frontiers in Sociology, her home discipline, and it's fully online so there's no travel cost, though a publishing fee applies with no waiver mentioned.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer d: reworded topic search ('maternal health' + 'women's empowerment' + 'Africa' + 'special issue') -> Frontiers Research Topic found, page states 'This Research Topic is currently accepting articles' with a 14 Dec 2026 manuscript deadline"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.ecasconference.org/2027/call-for-panels/",
+      "title": "9th European Conference on African Studies (ECAS 2027)",
+      "host": "AEGIS (Africa-Europe Group for Interdisciplinary Studies)",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-12-31",
+      "predicted_cfp_window": null,
+      "relevance": "Exploration pick. ECAS is the flagship African-studies conference in Europe, not her home field, but her ethnographic work on health, gender, and mobile money in Nairobi's informal settlements fits naturally into African-studies panels on urban life, digital economies and health. Panel proposals close 27 Sept 2026; the individual paper call runs 26 Oct-31 Dec 2026.",
+      "exploration": true,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent_field 'African studies' -> largest African-studies learned-society conference held in Europe (AEGIS/ECAS) -> 2027 edition (Lisbon, 30 Jun-3 Jul 2027) confirmed, call for panels open now, paper call opens 26 Oct 2026"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://cughlima2027.org/abstract-submission/",
+      "title": "CUGH 2027 Annual Conference — Transforming Global Health: Partnerships, Power, Leadership, and Technology in a Rapidly Changing World",
+      "host": "Consortium of Universities for Global Health (CUGH)",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "The flagship annual meeting for the global-health field adjacent to her public-health work, with income-tiered registration that helps affordability. Abstract submission closed 31 Aug 2026, so this edition is attend/registration-only; the conference itself (25-28 Feb 2027, Lima) is still ahead.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent_field 'global health' -> society 'Consortium of Universities for Global Health' -> annual conference -> 2027 edition page (cughlima2027.org) confirmed, abstract deadline already passed"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://hsr2026.healthsystemsresearch.org/submit-an-abstract/",
+      "title": "9th Global Symposium on Health Systems Research (HSR2026)",
+      "host": "Health Systems Global",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "The flagship meeting for health-systems and community-health-worker research worldwide, and regionally closer (Cairo) than a Europe/US meeting. All abstract tracks have already closed, so it's attend-only for this edition, but the symposium (7-9 Dec 2026) is still upcoming.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'public health' -> learned society/network 'Health Systems Global' -> its Global Symposium on Health Systems Research -> 2026 edition (Cairo) confirmed, all submission tracks now closed"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://cartafrica.org/call-for-applications-carta-phd-fellowships-2026/",
+      "title": "CARTA PhD Fellowships",
+      "host": "Consortium for Advanced Research Training in Africa (CARTA)",
+      "type": "fellowship",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "~Aug 2027 (next annual cycle, based on the Aug 2025 call for the 2026 cohort)",
+      "relevance": "Built exactly for early-career African researchers in public/population health: a mentored, cohort-based doctoral training program with research funds and structured workshops. A very strong fit for her career stage, field and goals (networking, feedback, low cost), but the current cycle's preliminary deadline (20 Aug 2025) and full-application deadline (21 Sep 2025) have already passed; CARTA runs this call annually.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'public health' + career_stage 'phd' + country 'Kenya' -> doctoral-training consortium headquartered in Nairobi (CARTA/APHRC) -> annual PhD Fellowship call -> 2026-cohort page found, closed; next cycle predicted by the yearly recurrence pattern"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.chr.up.ac.za/latest-news/4401-call-for-papers-colloquium-on-climate-change-and-sexual-and-reproductive-health-and-rights-in-africa",
+      "title": "Colloquium on Climate Change and Sexual and Reproductive Health and Rights in Africa",
+      "host": "Centre for Human Rights, University of Pretoria",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "Regional (South Africa) and hybrid, so it can be attended online at low cost, and squarely in gender-and-health/reproductive-health territory, but the abstract call closed 30 June 2026; the colloquium itself (12-13 Nov 2026) is still ahead.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer d: reworded topic search ('reproductive health rights' + 'Africa' + 'colloquium') -> Centre for Human Rights, University of Pretoria call-for-papers page found, deadline already passed"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://africanstudies.org/annual-meetings/asa-cfp/",
+      "title": "2026 African Studies Association (ASA) Annual Meeting",
+      "host": "African Studies Association (US)",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "The largest African-studies conference in North America, useful as a contrast to ECAS, but far more costly and visa-heavy for a Kenya-based first-year PhD student, and its (extended) submission deadline of 22 Mar 2026 has already passed; the meeting itself (3-6 Dec 2026, New Orleans) is still ahead.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent_field 'African studies' -> society 'African Studies Association' (US) -> 2026 annual meeting page confirmed, call for proposals closed after an extension"
+      ],
+      "found_via": null
+    }
+  ]
+}

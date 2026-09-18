@@ -1,0 +1,38 @@
+{
+  "id": "csa-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "Cultural Studies Association (CSA) 2027 Annual Conference",
+  "host": "Cultural Studies Association",
+  "host_kind": "learned_society",
+  "theme": null,
+  "description": "The Cultural Studies Association's 2027 annual conference will be held fully online, 3-5 June 2027. The detailed thematic call for papers was listed as 'coming soon' at the time of extraction, but the submission deadline and format are already published. No fee amount was found on the page fetched.",
+  "location": { "city": "—", "country": "—", "format": "online" },
+  "dates": { "start": "2027-06-03", "end": "2027-06-05" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-11-20", "depends_on": null, "grounded": true, "source_quote": "Deadline for Submissions: Friday, November 20, 2026" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No stated restrictions found; a full CFP with theme and eligibility detail was not yet posted at extraction time — limited information."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "Annual conference of the Cultural Studies Association, a US-based learned society for the interdisciplinary field of cultural studies.", "grounded": false, "source_url": null }
+  ],
+  "source_url": "https://culturalstudiesassociation.org/conference/2027-cfp/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": {
+    "posted": null,
+    "last_signal_year": 2027,
+    "stale": false,
+    "note": "Page states dates and deadline for the 2027 online conference; clearly current, though the detailed CFP text itself was not yet posted."
+  }
+}

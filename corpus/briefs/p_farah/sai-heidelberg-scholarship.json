@@ -1,0 +1,96 @@
+{
+  "opportunity_id": "sai-heidelberg-scholarship",
+  "profile_id": "p_farah",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "Travel expense reimbursement (SAI/Max Weber Forum joint scholarship)",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Reimbursement of international travel expenses of up to EUR 1,500",
+      "deadline": "2026-12-01",
+      "cycle": "One-off, tied to the scholarship award",
+      "requires": "Selection as a scholarship recipient",
+      "eligible": "likely",
+      "why": "Built into the award itself for Pakistani applicants; she just needs to be selected.",
+      "grounded": true,
+      "source_quote": "reimbursement of international travel expenses of up to EUR 1,500",
+      "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university",
+      "sequence_note": "Apply by 1 Dec 2026; travel is booked and reimbursed only after the award and stay are confirmed."
+    },
+    {
+      "name": "Monthly scholarship stipend and accommodation",
+      "source": "venue",
+      "type": "bursary",
+      "amount_note": "Monthly instalment of EUR 1,200 plus rental/accommodation costs, for a 3-month stay",
+      "deadline": "2026-12-01",
+      "cycle": "One-off, tied to the scholarship award",
+      "requires": "Selection as a scholarship recipient",
+      "eligible": "likely",
+      "why": "Covers living costs and rent directly, so there is no separate accommodation bill to budget for if awarded.",
+      "grounded": true,
+      "source_quote": "monthly scholarship instalment of EUR 1,200",
+      "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university",
+      "sequence_note": "Same 1 Dec 2026 deadline as the travel reimbursement; both come from the same award."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "PKR",
+    "low": 222000,
+    "high": 368000,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "This is a research fellowship, not a conference — there is no registration or attendance fee", "grounded": true },
+      "travel": { "low": 194000, "high": 333000, "note": "Lahore-Frankfurt/Heidelberg return, booked 8-10 weeks ahead; heuristic estimate, no live fare search run — largely reimbursable up to EUR 1,500 if awarded", "grounded": false },
+      "accommodation": { "low": 0, "high": 0, "note": "Rental/accommodation costs for the 3-month stay are paid by the scholarship itself if awarded", "grounded": true },
+      "visa": { "low": 28000, "high": 35000, "note": "German long-stay (national/Type D) visa fee for a 3-month research stay, plus a typical VFS service charge", "grounded": false }
+    },
+    "assumptions": [
+      "USD to PKR 277.28, and USD to EUR 0.8706 (so PKR to EUR ~318.4), both as of 2026-09-18 (open.er-api.com)",
+      "Travel and visa figures are pre-reimbursement, out-of-pocket estimates; travel is heuristic (no live fare search run)",
+      "Accommodation and the monthly stipend are covered directly by the scholarship, so they aren't a cost to her",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "If awarded, the scholarship's own travel reimbursement (up to EUR 1,500 ≈ PKR 478,000) covers the flight and then some, and the monthly stipend covers rent and living costs for the 3 months — so her real risk is mainly the up-front visa fee and having to float the airfare until reimbursed."
+  },
+  "priority": {
+    "score": 79,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1538, "outcomes": 0.2308, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 82, "reason": "It's a South Asian studies research fellowship explicitly open to young researchers from Pakistan, and its listed fields (history, cultural/religious history) are a clear home for her Partition dissertation, even though no track names her specific sub-topic." },
+      "standing": { "score": 70, "reason": "A joint programme between a university South Asia Institute and a named partner (Max Weber Forum Delhi) with a specific, funded structure — a credible, established scheme, though no long track record or past-fellow list was found." },
+      "network": { "score": 80, "reason": "A 3-month, small-cohort research stay abroad is exactly the sustained, close contact with senior South Asianist scholars that a short conference visit can't offer." },
+      "outcomes": { "score": 78, "reason": "Three uninterrupted months to work on her dissertation with access to Heidelberg's South Asia scholars is a direct match for her stated goal of feedback on her last chapters before finishing." },
+      "feasibility": { "score": 88, "reason": "Travel is reimbursed and accommodation is fully covered if awarded, the deadline (1 Dec 2026) isn't tight, and the only clear out-of-pocket item is the visa fee." }
+    }
+  },
+  "fit": {
+    "score": 0.82,
+    "rationale": "This scholarship is explicitly open to young researchers from Pakistan working in South Asian studies fields including history and cultural/religious history — a direct nationality and disciplinary match. A 3-month stay to work through her last chapters with feedback from Heidelberg's and Delhi's South Asianists lines up closely with her stated goal of getting feedback before she finishes, even though the call doesn't name Partition oral history as its own track.",
+    "matched_topics": ["South Asian history", "Punjab 1947"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It names Pakistan explicitly as an eligible nationality — this isn't a maybe.",
+    "Three months of dedicated writing time with feedback from South Asianist scholars is exactly what she says she needs before finishing.",
+    "Travel and accommodation are largely paid for if she's selected, so the real cost is much lower than a normal trip abroad."
+  ],
+  "watch_out": [
+    "It's a scholarship, not a guaranteed spot — selection is competitive and not stated as automatic.",
+    "Applications must go through the online portal only; the page says emailed applications aren't considered."
+  ],
+  "tagline": "A funded 3-month South Asian studies stay in Germany, open to Pakistani researchers, built for exactly the feedback she needs.",
+  "eligible": "yes",
+  "eligibility_notes": "The call explicitly lists Pakistan among the eligible nationalities and \"young researchers\" among eligible career stages; a final-year PhD candidate fits.",
+  "visa": {
+    "required": "yes",
+    "note": "A 3-month stay in Germany needs a German national (long-stay/Type D) visa, not a short-stay Schengen visa. This is general information, not immigration advice — confirm current requirements with the German embassy/consulate serving Pakistan.",
+    "official_source": "https://www.auswaertiges-amt.de/en/visa-service",
+    "verify_flag": true,
+    "lead_days": 60
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

@@ -1,0 +1,62 @@
+{
+  "opportunity_id": "carta-phd-fellowship",
+  "profile_id": "p_wanjiru",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "KES",
+    "low": 0,
+    "high": 0,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "No fee to apply; the fellowship provides a stipend and research funds rather than charging one", "grounded": true },
+      "travel": { "low": 0, "high": 0, "note": "Residential-seminar travel is normally covered by the programme's stipend/support for accepted fellows, though this isn't itemised on the pages found", "grounded": false },
+      "accommodation": { "low": 0, "high": 0, "note": "Same assumption as travel — covered for accepted fellows, not separately confirmed", "grounded": false },
+      "visa": { "low": 0, "high": 0, "note": "Seminar locations for a future cohort aren't stated, so a visa need can't be assessed", "grounded": false }
+    },
+    "assumptions": [
+      "If accepted, CARTA's stipend and research funds are assumed to cover the residential-seminar costs, based on how the programme is described, though this isn't itemised on the pages found.",
+      "The main barrier here is eligibility, not cost — see eligibility_notes."
+    ],
+    "over_budget": false,
+    "net_note": "Cost isn't really the issue with this one — eligibility is. The programme requires being institutional staff, which this profile doesn't confirm."
+  },
+  "priority": {
+    "score": 67,
+    "weights": { "fit": 0.2692, "standing": 0.1154, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 90, "reason": "CARTA is a doctoral training programme built specifically for early-career African researchers in public and population health — almost exactly her profile on paper." },
+      "standing": { "score": 85, "reason": "Established in 2008 as a consortium of eight African universities and four research institutions with international partners; a well-regarded, long-running programme in this field." },
+      "network": { "score": 88, "reason": "Small cohorts (22 awards in 2026), residential seminars and structured mentorship give exactly the sustained peer and mentor contact a first-year PhD student is looking for." },
+      "outcomes": { "score": 80, "reason": "A stipend, a laptop and up to USD 10,500 in research funds directly support finishing a strong PhD — a substantial concrete outcome if awarded." },
+      "feasibility": { "score": 0, "reason": "The call explicitly requires applicants to already be teaching or research staff at a CARTA partner institution — being enrolled as a PhD student elsewhere does not meet this, so eligibility is 'no' and feasibility drops to zero regardless of fit." }
+    }
+  },
+  "fit": {
+    "score": 0.9,
+    "rationale": "CARTA exists to train exactly this kind of researcher — an early-stage African PhD student working on public/population health topics like maternal health and community health workers — through mentored, cohort-based doctoral training. The content fit is excellent even though the eligibility rule is a hard blocker (see eligibility_notes).",
+    "matched_topics": ["maternal health in informal settlements", "community health workers", "gender and health"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's designed exactly for early-career African researchers in public/population health like her.",
+    "It comes with a stipend, a laptop and up to USD 10,500 in research funds, plus a small, mentored cohort."
+  ],
+  "watch_out": [
+    "The call explicitly requires being teaching or research staff at a CARTA partner institution, not just an enrolled PhD student — this needs checking against her actual position before applying.",
+    "The 2026-cohort deadlines (20 Aug and 21 Sep 2025) have already passed; a new call would need to appear."
+  ],
+  "tagline": "Built for exactly her profile — except the staff requirement may rule her out.",
+  "eligible": "no",
+  "eligibility_notes": "The 2026 call states: \"Applicants for this program MUST be bona fide teaching or research staff at one of the participating African institutions.\" A first-year PhD student who is not staff at a CARTA partner institution does not meet this requirement, regardless of fit on other criteria. If her university is a CARTA partner and she also holds a staff role there, this could change.",
+  "visa": {
+    "required": "conditional",
+    "note": "Residential seminar locations for a future cohort weren't stated on the pages found, so whether a visa would be needed can't be assessed yet. This is general information, not immigration advice.",
+    "official_source": "https://cartafrica.org/",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

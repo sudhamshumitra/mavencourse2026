@@ -1,0 +1,96 @@
+{
+  "opportunity_id": "4s-2026",
+  "profile_id": "p_daniel",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "4S travel grants (referenced, details not published on the call page)",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": null,
+      "deadline": null,
+      "cycle": "Not confirmed — limited information",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "The call page mentions travel grants exist but gives no amount, eligibility or deadline; would need the dedicated travel-grants page (not fetched, single-page extraction rule) to say more.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://4sonline.org/call_for_submissions_toronto.php",
+      "sequence_note": "Check 4S's own travel-grants page directly; not tied to a known deadline here."
+    },
+    {
+      "name": "Ghana Tertiary Education Commission (GTEC) research support",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "Listed in corpus/funders/ghana.json as an interim research-support channel at Ghanaian institutions.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://gtec.edu.gh/",
+      "sequence_note": "Check with the home institution's research office."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "GHS",
+    "low": 12000,
+    "high": 26500,
+    "breakdown": {
+      "registration": { "low": 1150, "high": 4600, "note": "No fee amount found on the call page; range is a general learned-society student-fee ballpark ($100–$400), not confirmed", "grounded": false },
+      "travel": { "low": 8000, "high": 14900, "note": "Accra–Toronto return, no live fare search run, West Africa–North America heuristic ($700–$1,300)", "grounded": false },
+      "accommodation": { "low": 1700, "high": 5150, "note": "5 nights (4 conference days + 1), budget to mid-range hotel in Toronto ($30–$90/night, pricier city)", "grounded": false },
+      "visa": { "low": 1200, "high": 2000, "note": "Canadian visitor visa fee (~CAD 100) plus biometrics (~CAD 85) is the typical published range; not independently re-fetched from IRCC in this run, so treated as inferred", "grounded": false, "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/temporary-resident-visa.html" }
+    },
+    "assumptions": [
+      "USD→GHS 11.44 on 2026-09-18 (open.er-api.com)",
+      "No registration fee was published on the call page fetched",
+      "Travel and accommodation are heuristic estimates, not live fare/hotel searches",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "No confirmed funding source covers this yet; if the 4S travel grant or a home-institution fund comes through, the out-of-pocket total would drop, but neither is confirmed."
+  },
+  "priority": {
+    "score": 74,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 80, "reason": "4S is the flagship society for science and technology studies, Daniel's second primary field, and the 2026 theme 'TechnoPower • Technoscientific Futures' speaks directly to power, labour and technoscience — close to his critical-AI-studies framing." },
+      "standing": { "score": 88, "reason": "4S 2026 marks the society's 50th anniversary; it is the leading STS society internationally, though this page didn't state a proceedings or indexing detail." },
+      "network": { "score": 85, "reason": "4S draws the international STS and critical-data-studies crowd, which overlaps closely with Daniel's cited scholars (e.g. Mark Graham, critical AI/data researchers)." },
+      "outcomes": { "score": 35, "reason": "The submission window (March–April 2026) has already closed, so Daniel could only attend, not present, at this edition." },
+      "feasibility": { "score": 70, "reason": "Cost fits under his budget cap, but October isn't in his available months and Canada requires a visa with no automatic exemption for a Ghanaian passport, adding real logistics risk for someone who prefers not to deal with visas." }
+    }
+  },
+  "fit": {
+    "score": 0.8,
+    "rationale": "4S is the international home for science and technology studies, explicitly listed as one of Daniel's two primary fields, and the 2026 theme of 'TechnoPower' engages directly with questions of power, labour and technoscientific systems that overlap with his dissertation on AI data labour and worker organising. The submission window for this edition has already closed, so the fit is about the venue's general suitability for future editions rather than this specific programme.",
+    "matched_topics": ["AI data labour", "critical AI studies", "worker organising"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "4S is the main international society for your second field (STS), and this year's theme is about technoscience and power — close to your own framing.",
+    "It's a strong place to meet the critical-data-studies and STS scholars in your citation list.",
+    "It's the society's 50th anniversary edition, which usually draws a bigger-than-usual crowd."
+  ],
+  "watch_out": [
+    "The submission window (March–April 2026) has already closed — you'd be attending, not presenting.",
+    "October isn't one of your available travel months, and a Canadian visa takes real lead time with no exemption for a Ghanaian passport."
+  ],
+  "tagline": "Your second field's biggest yearly meeting — great to attend, but the deadline for presenting has passed.",
+  "eligible": "yes",
+  "eligibility_notes": "No restriction on attending; the submission window for 2026 has closed, so this would be attendance only.",
+  "visa": {
+    "required": "yes",
+    "note": "Ghanaian passport holders need a visa to enter Canada (no general exemption, aside from holders of a valid US green card). This is general information, not immigration advice — confirm with the Canadian High Commission in Accra.",
+    "official_source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/temporary-resident-visa.html",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

@@ -1,0 +1,96 @@
+{
+  "opportunity_id": "ecas-2027",
+  "profile_id": "p_wanjiru",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "NRF Kenya — Support to Scientific Events",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not specified on the page found",
+      "deadline": null,
+      "cycle": "Recurring national research-fund grant line; no current call date confirmed",
+      "requires": "Likely institutional endorsement (not confirmed)",
+      "eligible": "check",
+      "why": "It's Kenya's own national fund for attending scientific conferences, but no current open call or amount could be confirmed for this cycle.",
+      "grounded": true,
+      "source_quote": "This grant supports scientific seminars, forums, workshops & conferences.",
+      "source_url": "https://www.nrf.go.ke/category/grants-and-calls/",
+      "sequence_note": "Check the NRF Kenya grants portal directly for a live call before relying on this."
+    },
+    {
+      "name": "CODESRIA Small Grants Programme for Thesis Writing",
+      "source": "external",
+      "type": "bursary",
+      "amount_note": "Historically covers fieldwork, data-processing and dissertation costs; current amount not confirmed",
+      "deadline": null,
+      "cycle": "No current 2026/27 call date found",
+      "requires": "Doctoral registration proof, research proposal, thesis-writing stage",
+      "eligible": "check",
+      "why": "CODESRIA funds African doctoral students' thesis-related costs and she fits the programme's target group, but no live current-cycle call was found.",
+      "grounded": true,
+      "source_quote": "programme... now accept[s] only doctoral students",
+      "source_url": "https://codesria.org/grants-fellowships/",
+      "sequence_note": "Contact CODESRIA directly to check whether a current cycle is open before her Dec 2026 paper deadline."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "KES",
+    "low": 163500,
+    "high": 249000,
+    "breakdown": {
+      "registration": { "low": 28300, "high": 43200, "note": "Concession fee (€190, for gross annual income under €20,000, likely her case as a PhD student) to full early-bird fee (€290)", "grounded": true },
+      "travel": { "low": 90700, "high": 116600, "note": "Nairobi-Lisbon return, economy, booked 8-10 weeks ahead", "grounded": false },
+      "accommodation": { "low": 26050, "high": 67000, "note": "5 nights (4 conference days + 1), hostel to mid-range hotel in Lisbon", "grounded": false },
+      "visa": { "low": 18600, "high": 22300, "note": "Schengen short-stay visa fee (€90) plus a typical visa-centre service charge", "grounded": true, "source": "https://hellosafe.com/schengen-visa/fees" }
+    },
+    "assumptions": [
+      "EUR→KES ≈ 148.85, USD→KES 129.53 on 2026-09-18 (open.er-api.com)",
+      "Assumes the concession fee tier at the low end (income under €20,000) and the standard early-bird fee at the high end",
+      "Travel and accommodation are heuristic estimates from search, not a live fare/hotel search",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "This sits right up against her KES 250,000 cap even without any grant, so any funding (NRF, CODESRIA, or her university's own travel fund) would make a real difference rather than being a bonus."
+  },
+  "priority": {
+    "score": 66,
+    "weights": { "fit": 0.2692, "standing": 0.1154, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 60, "reason": "ECAS is African studies, not her home fields of sociology/public health, but her ethnographic work on health, gender and mobile money in Nairobi's informal settlements would plausibly fit panels on urban Africa, health or digital economies once the 2027 panel list is out." },
+      "standing": { "score": 78, "reason": "The 11th edition of the largest African-studies conference in Europe, run by AEGIS, a well-established network of African-studies centres." },
+      "network": { "score": 65, "reason": "Strong for building cross-disciplinary contacts among Africa-focused researchers in Europe, though less directly useful than a health- or sociology-specific meeting for her core network." },
+      "outcomes": { "score": 50, "reason": "No stated proceedings or publication route from this page — presenting gets feedback and visibility, but limited information on a concrete CV outcome." },
+      "feasibility": { "score": 80, "reason": "Cost comes in right around her budget cap rather than over it, and the dates (30 Jun-3 Jul) mostly fall in July, which is on her available-months list; a Schengen visa is needed, which costs her some points." }
+    }
+  },
+  "fit": {
+    "score": 0.6,
+    "rationale": "This is an exploration pick outside her home fields. ECAS's African-studies scope doesn't map directly onto maternal health or public health, but her research on community health workers, gender and mobile money in Nairobi's informal settlements sits naturally within African-studies conversations about urban life, health systems and digital economies, so a well-framed panel submission is plausible.",
+    "matched_topics": ["urban East Africa", "mobile money and care"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's a chance to present your Nairobi fieldwork to African-studies scholars outside your usual health/sociology circles.",
+    "The cost comes in right around your budget, not wildly over it, and July (most of the conference) is one of your available months.",
+    "It's a large, well-established conference, so a good panel fit could open doors beyond public health."
+  ],
+  "watch_out": [
+    "African studies isn't your home field, so you'd need to find (or help propose) a panel where your maternal-health/community-health-worker work genuinely fits.",
+    "You'll need a Schengen visa, and the total cost is close to your budget cap even before any grant comes through."
+  ],
+  "tagline": "A stretch outside your field, but a real chance to reach African-studies scholars in Europe.",
+  "eligible": "conditional",
+  "eligibility_notes": "No formal restriction on who can submit, but papers must go into an already-accepted panel; she would need to find a fitting open panel once the 2027 panel list is published after 27 Sept 2026, before the 31 Dec 2026 paper deadline.",
+  "visa": {
+    "required": "yes",
+    "note": "A Schengen short-stay visa is required for a Kenyan passport holder travelling to Portugal. This is general information, not immigration advice — confirm current requirements with the Portuguese consulate or its visa-application partner in Kenya.",
+    "official_source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/schengen-visa_en",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": true,
+  "explore_reason": "African studies is an adjacent field, not one of her primary fields, and there's little direct keyword overlap between the conference's theme and her topics — but the fit is real once framed around urban Africa, health and digital economies.",
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

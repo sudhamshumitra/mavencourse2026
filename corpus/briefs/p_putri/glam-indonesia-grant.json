@@ -1,0 +1,63 @@
+{
+  "opportunity_id": "glam-indonesia-grant",
+  "profile_id": "p_putri",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "IDR",
+    "low": 0,
+    "high": 0,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "Applying to the grant is free; no application fee was found on the program page", "grounded": true },
+      "travel": { "low": 0, "high": 0, "note": "No travel needed to apply; the grant funds her project, it isn't an event to attend", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Not applicable", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "Domestic Indonesian program; no visa involved", "grounded": true }
+    },
+    "assumptions": [
+      "USD->IDR 17,740.57 on 2026-09-18 (open.er-api.com), noted for consistency across this run though not needed here",
+      "This is a grant application, not conference attendance, so the usual travel/accommodation lines don't apply"
+    ],
+    "over_budget": false,
+    "net_note": "Applying costs nothing; if awarded, the grant would fund (not cost) her archiving work, though the exact amount per grant wasn't published."
+  },
+  "priority": {
+    "score": 73,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1154, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 92, "reason": "This is a grant explicitly for archivists and communities digitizing Indonesian cultural heritage -- as close a match to her actual work as anything in this list." },
+      "standing": { "score": 55, "reason": "Wikimedia Indonesia is a recognized cultural organization and the 2025 round drew over 180 proposals nationally, but this is a small national grant program, not a prestige marker in itself (limited information)." },
+      "network": { "score": 60, "reason": "Grants like this typically create some sustained contact with the funding body and fellow grantees, though no specific cohort activities were described here (limited information)." },
+      "outcomes": { "score": 80, "reason": "A successful grant would fund her actually completing and publishing part of her archive, likely on Wikimedia Commons -- a concrete, visible outcome tied directly to her goals." },
+      "feasibility": { "score": 75, "reason": "Free to apply, with no travel or visa involved, but the 2026 round hasn't been announced yet, so timing is uncertain (status: watch, next round expected around Sep-Oct 2026)." }
+    }
+  },
+  "fit": {
+    "score": 0.92,
+    "rationale": "GLAM Indonesia funds exactly the kind of work she does -- an independent archivist digitizing and opening access to Indonesian cultural heritage -- making it one of the closest matches in her feed, even though it funds a project rather than a single conference.",
+    "matched_topics": ["digital archives", "community archiving", "Indonesian music and zines"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It funds exactly her kind of work: digitizing and opening access to Indonesian cultural heritage.",
+    "It's fully domestic -- no travel, no visa, and applying is free.",
+    "A past round drew applicants from across Indonesia, so there's a real track record."
+  ],
+  "watch_out": [
+    "The 2026 round hasn't been announced yet -- this is a predicted, not confirmed, opportunity.",
+    "It funds a project, not conference attendance, so the payoff is different from the other items in her feed."
+  ],
+  "tagline": "A domestic Indonesian grant that funds her actual archiving work, if a 2026 round opens.",
+  "eligible": "conditional",
+  "eligibility_notes": "Past rounds were open to independent archivists and communities in Indonesia -- a strong match -- but 2026 eligibility criteria haven't been published yet, so this is conditional on the round actually opening.",
+  "visa": {
+    "required": "no",
+    "note": "Domestic Indonesian grant program; no visa is involved.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "inferred", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

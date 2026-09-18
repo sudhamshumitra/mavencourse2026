@@ -1,0 +1,31 @@
+{
+  "id": "oral-history-review-si-climate",
+  "type": "journal_call",
+  "status": "open",
+  "title": "Oral History Review -- Special Issue: Oral History, Climate Change & the Environment",
+  "host": "Oral History Review (Oral History Association)",
+  "host_kind": "learned_society",
+  "theme": "Oral history, climate change and the environment",
+  "description": "Oral History Review, the journal of the US Oral History Association, is running a themed collection on oral history's engagement with climate change and the environment, covering ecological knowledge, agriculture, critical animal studies, urban ecology and environmental crises. Submissions were due by July 2026 to be considered for the Spring 2027 issue, but the call is explicitly rolling, so later submissions are still being considered. Location and dates are not applicable since this is a journal call, not an event.",
+  "location": { "city": "—", "country": "—", "format": "online" },
+  "dates": { "start": null, "end": null },
+  "deadlines": [
+    { "label": "full_paper", "date": "2026-07-01", "depends_on": null, "grounded": true, "source_quote": "To be considered for the Spring 2027 issue, submissions are due by July 2026" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No career-stage or nationality restriction stated. The July 2026 date was for guaranteed consideration for the Spring 2027 issue; the call itself is rolling, so submissions after that date are still reviewed for a later issue."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [],
+  "source_url": "https://oralhistory.org/2026/04/16/oral-history-review-call-for-papers-oral-history-climate-change-the-environment-due-july-2026/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": "2026-04-16", "last_signal_year": 2027, "stale": false, "note": "Posted April 2026, targets a Spring 2027 issue, and is explicitly described as a rolling call; current." }
+}

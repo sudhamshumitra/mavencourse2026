@@ -1,0 +1,43 @@
+{
+  "id": "dsa-devstudies-workshop-2027",
+  "type": "fellowship",
+  "status": "open",
+  "title": "Towards a Global South-driven Future for Development Studies: Workshop for Early-Career Researchers",
+  "host": "Development Studies Association (DSA) writing workshop, funded by a British Academy Writing Workshop grant, hosted at Padjadjaran University",
+  "host_kind": "learned_society",
+  "theme": "Global South-driven futures for development studies",
+  "description": "A fully-funded writing workshop for early-career researchers, framed around building a Global South-driven future for development studies. The first Asia-based edition will be held in Bandung, Indonesia in April 2027 (exact date TBC). It is open to researchers based at institutions in Asia or Africa who either received a PhD after 1 October 2017 or are currently enrolled in a PhD at a Global South institution. Applicants submit an extended abstract (750-1,000 words), a 2-page CV and a writing sample directly to the organiser by email. The project funds return flights and three nights' accommodation, though the flight-funding language on the page specifically says 'from within Asia' — it is not explicit whether flights from Africa are covered on the same basis, which is flagged as a limitation rather than assumed.",
+  "location": { "city": "Bandung", "country": "Indonesia", "format": "in_person" },
+  "dates": { "start": "2027-04-01", "end": null },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-09-30", "depends_on": null, "grounded": true, "source_quote": "Please send these documents to Pritish Behuria by 30 September, 2026." }
+  ],
+  "eligibility": {
+    "career_stage": ["phd", "early_career"],
+    "nationality": null,
+    "region_restriction": "Asia or Africa",
+    "membership_required": false,
+    "notes": "Eligibility quote: \"Participants must be based at a university or other higher education institution in Asia/Africa. Participants must have been awarded a PhD after 1 October, 2017 (with flexibility for those who have had career breaks) or be currently enrolled in a PhD at a higher education institution in the Global South.\" Daniel is a PhD candidate at a Ghanaian university, so this appears to fit."
+  },
+  "fees": [],
+  "funding": [
+    {
+      "name": "British Academy Writing Workshop grant (IWW25/100268) — covers workshop travel and accommodation",
+      "type": "travel_scholarship",
+      "deadline": "2026-09-30",
+      "amount_note": "Return flights and 3 nights' accommodation in Indonesia for all participants; flight-funding wording says \"from within Asia\", so African-based participants' flight coverage is not explicitly confirmed — limited information, verify before assuming full coverage.",
+      "eligibility_notes": "Open to accepted workshop participants based in Asia or Africa (PhD post-Oct-2017 or current PhD student at a Global South institution).",
+      "grounded": true,
+      "source_quote": "This project will fund return flights (from within Asia), as well as accommodation for three nights, in Indonesia for all participants.",
+      "source_url": "https://www.devstud.org.uk/2026/06/09/call-for-papers-towards-a-global-south-driven-future-for-development-studies/"
+    }
+  ],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "Funded by a named British Academy grant (IWW25/100268) and organised through the Development Studies Association network.", "grounded": true, "source_url": "https://www.devstud.org.uk/2026/06/09/call-for-papers-towards-a-global-south-driven-future-for-development-studies/" }
+  ],
+  "source_url": "https://www.devstud.org.uk/2026/06/09/call-for-papers-towards-a-global-south-driven-future-for-development-studies/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

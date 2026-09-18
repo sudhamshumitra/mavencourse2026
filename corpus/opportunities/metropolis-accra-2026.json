@@ -1,0 +1,29 @@
+{
+  "id": "metropolis-accra-2026",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "2026 Metropolis International Migration Network Conference: Rethinking African Mobility",
+  "host": "Metropolis International Migration Network / University of Ghana",
+  "host_kind": "learned_society",
+  "theme": "Rethinking African Mobility: Past Lessons, Present Realities, Future Possibilities",
+  "description": "Metropolis is an international migration research and policy network; its 2026 conference is hosted at the University of Ghana in Accra, 18-20 November 2026, and is themed specifically around African mobility -- a strong topical and regional match for Chinedu's work on climate migration to Lagos. The call for papers is already closed, so participation now would be as an attendee rather than a presenter. It is in-person only; the page states attendees cover their own flights and travel unless told otherwise.",
+  "location": { "city": "Accra", "country": "Ghana", "format": "in_person" },
+  "dates": { "start": "2026-11-18", "end": "2026-11-20" },
+  "deadlines": [],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No registration fee is listed on the page; travel, accommodation and visa costs are explicitly the attendee's own responsibility. The call for papers is closed, so this is described as attend-only rather than open for new submissions."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [],
+  "source_url": "https://metropolisintl.org/2026-conference",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": { "posted": null, "last_signal_year": 2026, "stale": false, "note": "Page describes the live Nov 2026 conference with a closed CFP; current." }
+}

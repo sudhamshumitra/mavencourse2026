@@ -1,0 +1,96 @@
+{
+  "opportunity_id": "iamcr-2027",
+  "profile_id": "p_daniel",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "IAMCR Travel Grants (future cycle, not yet announced for São Paulo)",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Past cycles: up to 18 grants, each max USD 2,000; 2027 São Paulo-specific figures not yet published",
+      "deadline": null,
+      "cycle": "Expected to open once the call for proposals opens (stated for November 2026) and papers are accepted",
+      "requires": "IAMCR membership ≥ 1 year, early-career (untenured), first author of an accepted paper, residing in a low/middle-income country (Ghana qualifies)",
+      "eligible": "likely",
+      "why": "Daniel is an early-career (PhD, year 4) communication-studies researcher in a low-income country — the scheme's stated target group — though nothing can be applied for until the 2027 call and grant cycle open.",
+      "grounded": true,
+      "source_quote": "Up to 18 grants, each max USD 2,000",
+      "source_url": "https://iamcr.org/travel_grants",
+      "sequence_note": "Watch for the call for proposals (expected Nov 2026); submit a paper first, then apply for the travel grant once accepted."
+    },
+    {
+      "name": "Ghana Tertiary Education Commission (GTEC) research support",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Not confirmed — limited information",
+      "deadline": null,
+      "cycle": "Not confirmed",
+      "requires": "Not confirmed",
+      "eligible": "check",
+      "why": "Listed in corpus/funders/ghana.json as an interim research-support channel; not verified for conference travel specifically.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://gtec.edu.gh/",
+      "sequence_note": "Check with the home institution's research office well before travel dates."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "GHS",
+    "low": 10500,
+    "high": 25500,
+    "breakdown": {
+      "registration": { "low": 0, "high": 3500, "note": "2027 fees not yet published; range uses a typical learned-society student-tier ballpark ($0–$300), not a confirmed figure", "grounded": false },
+      "travel": { "low": 8000, "high": 14900, "note": "Accra–São Paulo return, likely via Europe or Addis Ababa; no live fare search run, heuristic ($700–$1,300)", "grounded": false },
+      "accommodation": { "low": 1400, "high": 3800, "note": "6 nights (5 conference days + 1), budget to mid-range in São Paulo ($20–$55/night)", "grounded": false },
+      "visa": { "low": 1000, "high": 3000, "note": "Brazilian visa fee not confirmed; Ghana is a visa-required country for Brazil and no Brazilian embassy in Accra was confirmed, which may mean applying via a regional post — verify", "grounded": false, "source": "https://en.wikipedia.org/wiki/Visa_requirements_for_Ghanaian_citizens" }
+    },
+    "assumptions": [
+      "USD→GHS 11.44 on 2026-09-18 (open.er-api.com)",
+      "No 2027 fee schedule exists yet; the call for proposals is stated to open November 2026",
+      "Travel, accommodation and visa figures are heuristic estimates, not live searches",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "If a paper is accepted and the IAMCR travel grant (up to USD 2,000, in past cycles) comes through, most of this could be covered; nothing is confirmed until the 2027 call opens."
+  },
+  "priority": {
+    "score": 74,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.2308, "outcomes": 0.1538, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 70, "reason": "IAMCR is the global society for Daniel's exact primary field, communication studies, and has active sections on media policy and platform governance where his content-moderation/AI-labour work would fit, though the 2027 theme itself doesn't name his topic and no programme exists yet." },
+      "standing": { "score": 92, "reason": "IAMCR's 2027 congress marks the society's 70th anniversary and is expected to draw roughly 1,500 researchers — a top-tier, well-established communication studies gathering." },
+      "network": { "score": 80, "reason": "As the largest global communication-research congress, it offers strong access to the field's international network, useful for visibility before the job market." },
+      "outcomes": { "score": 45, "reason": "The call for proposals hasn't opened yet (expected Nov 2026), so there's nothing to submit to or present yet — the outcome is currently only 'watch and prepare'." },
+      "feasibility": { "score": 80, "reason": "July is one of Daniel's available months and the cost fits his budget cap, but Brazil requires a visa with no confirmed Ghana-based Brazilian consulate, adding real logistics risk; CFP is expected to open around November 2026." }
+    }
+  },
+  "fit": {
+    "score": 0.7,
+    "rationale": "IAMCR is the flagship international society for communication research, Daniel's stated primary field, and its sections on media policy, technology and platform governance are natural homes for research on AI data labour and content moderation. The specific fit is somewhat provisional, since the 2027 call for proposals and programme aren't published yet.",
+    "matched_topics": ["content moderation work", "platform labour in Africa"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's the biggest global gathering for communication studies, your exact field, and a strong line for visibility before the job market.",
+    "July is one of the months you're free to travel.",
+    "IAMCR runs a travel grant for early-career researchers from lower-income countries in past cycles."
+  ],
+  "watch_out": [
+    "The call for proposals hasn't opened yet (expected November 2026) — there's nothing to submit to right now.",
+    "You'd need a Brazilian visa, and it's not yet confirmed whether you can apply for it inside Ghana."
+  ],
+  "tagline": "The biggest room in your field — but the door isn't open yet.",
+  "eligible": "yes",
+  "eligibility_notes": "No restrictions stated for participation; the call for proposals hasn't opened yet (expected November 2026), so there's nothing to apply to at this moment.",
+  "visa": {
+    "required": "yes",
+    "note": "Ghana is listed as visa-required for Brazil. No Brazilian embassy or consulate in Accra was confirmed in this search, which may mean applying through a regional post — general information, not immigration advice; verify directly with Brazil's Ministry of Foreign Affairs.",
+    "official_source": "https://www.gov.br/mre/en/visas",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

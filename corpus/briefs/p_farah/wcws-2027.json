@@ -1,0 +1,81 @@
+{
+  "opportunity_id": "wcws-2027",
+  "profile_id": "p_farah",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "TIIKM Scholarship Program",
+      "source": "venue",
+      "type": "bursary",
+      "amount_note": null,
+      "deadline": null,
+      "cycle": "Unknown",
+      "requires": "Unknown",
+      "eligible": "check",
+      "why": "Mentioned on the site with no amount, eligibility or deadline given — can't be relied on.",
+      "grounded": false,
+      "source_quote": null,
+      "source_url": "https://womenstudies.tiikm.com/",
+      "sequence_note": "Nothing to sequence against yet; would need direct contact with the organiser to get real terms."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "PKR",
+    "low": 248000,
+    "high": 479000,
+    "breakdown": {
+      "registration": { "low": 83000, "high": 139000, "note": "No fee amount published on the pages checked; using a typical range seen at similar TIIKM-style conferences (~USD 300-500)", "grounded": false },
+      "travel": { "low": 139000, "high": 250000, "note": "Lahore-Siem Reap return via Bangkok or Kuala Lumpur, booked 8-10 weeks ahead; heuristic estimate, no live fare search run", "grounded": false },
+      "accommodation": { "low": 17000, "high": 78000, "note": "4 nights (3 conference days + 1), budget guesthouse to the conference hotel (Angkor Paradise) in Siem Reap", "grounded": false },
+      "visa": { "low": 9000, "high": 12000, "note": "Cambodia e-visa fee for a Pakistani passport holder, typically around USD 30-36; not independently verified against the official portal in this run", "grounded": false }
+    },
+    "assumptions": [
+      "USD to PKR 277.28 as of 2026-09-18 (open.er-api.com)",
+      "No registration fee is published for this event; range is a heuristic based on similar-style conferences, not a confirmed figure",
+      "Travel, accommodation and visa figures are heuristic estimates, not a live fare/hotel/visa-fee search",
+      "Excludes meals, local transport and travel insurance"
+    ],
+    "over_budget": false,
+    "net_note": "Southeast Asia keeps this under her PKR 600,000 cap even with no funding confirmed — but nothing here is grounded in a published fee, so treat the whole range as rough."
+  },
+  "priority": {
+    "score": 30,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1538, "outcomes": 0.2308, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 55, "reason": "Her 'women and memory' topic sits in gender studies, one of her adjacent fields, but the call itself is generic ('gender equality and women's issues'), not aimed at memory, oral history or South Asia specifically." },
+      "standing": { "score": 15, "reason": "Capped: this is a for-profit organiser (TIIKM) running a near-identical 'World Conference on Women's Studies' every year in a different city, with no named programme committee or institutional co-host found." },
+      "network": { "score": 25, "reason": "A generic, high-volume, all-topics-in-one-theme conference gives little confidence of a focused community she'd actually build lasting ties with." },
+      "outcomes": { "score": 20, "reason": "No indexed proceedings, no confirmed publication route, and an unspecified 'scholarship program' with no real detail — little to point to afterward." },
+      "feasibility": { "score": 90, "reason": "The realistic cost fits under her budget even unfunded and there's no unusual visa barrier, though May isn't one of her listed available months." }
+    }
+  },
+  "fit": {
+    "score": 0.55,
+    "rationale": "Gender studies is one of her named adjacent fields, and 'women and memory' is one of her own weighted topics, so there's a real thread connecting her work to this conference's broad theme. But the call is generic and not aimed at memory, oral history or South Asia, so the fit depends heavily on how she frames a submission, and the venue itself carries real quality risk (see standing).",
+    "matched_topics": ["women and memory"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "Gender studies is one of her adjacent fields, and this venture is genuinely outside her usual circle — a real exploration pick.",
+    "The cost, even fully out of pocket, fits under her budget cap.",
+    "The abstract deadline (19 Nov 2026) is still open."
+  ],
+  "watch_out": [
+    "This is flagged as a likely conference-mill event: the organiser (TIIKM) runs a near-identical 'World Conference on Women's Studies' every year in a different city, with no named academic committee found.",
+    "No registration fee is published despite a live deadline, and the 'scholarship program' mentioned has no real details."
+  ],
+  "tagline": "A genuine exploration into gender studies — but this specific venue looks like a conference mill; go in with eyes open.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality or other eligibility restriction was found; the concern here is the venue's quality and legitimacy, not her eligibility to attend.",
+  "visa": {
+    "required": "yes",
+    "note": "Cambodia offers an e-visa for Pakistani passport holders. This is general information, not immigration advice — confirm current requirements on Cambodia's official e-visa portal.",
+    "official_source": "https://www.evisa.gov.kh/",
+    "verify_flag": true,
+    "lead_days": 14
+  },
+  "explore": true,
+  "explore_reason": "Gender studies is an adjacent field for her, not one of her two primary fields, and this specific call shares almost no wording with her actual topics (Partition, oral history, Punjab) — a genuine venture outside her usual circle, shown here mainly so she can see it and judge the risk herself.",
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

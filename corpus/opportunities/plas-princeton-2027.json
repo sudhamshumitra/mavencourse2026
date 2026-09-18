@@ -1,0 +1,38 @@
+{
+  "id": "plas-princeton-2027",
+  "type": "fellowship",
+  "status": "open",
+  "title": "Princeton Program in Latin American Studies (PLAS) Postdoctoral Fellowship, 2027-2028",
+  "host": "Princeton University",
+  "host_kind": "university",
+  "theme": null,
+  "description": "An open-discipline postdoctoral fellowship in Latin American studies (including the Caribbean and Brazil) at Princeton University's Program in Latin American Studies. The 12-month appointment runs during the 2027-2028 academic year, starting around 1 September 2027, with possible renewal. The page states particular interest in policy and public health, the history of disease, international relations, or economic development in the region — a stretch from queer cinema studies, but the fellowship is explicitly open to scholars from any discipline researching Latin America.",
+  "location": { "city": "Princeton, New Jersey", "country": "USA", "format": "in_person" },
+  "dates": { "start": "2027-09-01", "end": null },
+  "deadlines": [
+    { "label": "registration", "date": "2026-11-15", "depends_on": null, "grounded": true, "source_quote": "For full consideration, all the materials listed must be in English, and received by November 15, 2026, 11:59 p.m. EST." }
+  ],
+  "eligibility": {
+    "career_stage": ["postdoc"],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Requires a doctoral degree and, per the page, 'academic excellence, potential to bring new ideas and approaches to Princeton University and to interact successfully with a broad range of faculty and students.' No nationality restriction stated. Stipend amount not found on the page fetched — limited information."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "Hosted by Princeton University's Program in Latin American Studies, an established area-studies program at a major research university.", "grounded": false, "source_url": "https://plas.princeton.edu/fellowships/plas-fellowships/postdoctoral-fellowships" }
+  ],
+  "source_url": "https://plas.princeton.edu/fellowships/plas-fellowships/postdoctoral-fellowships",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "freshness": {
+    "posted": null,
+    "last_signal_year": 2028,
+    "stale": false,
+    "note": "Page refers to the 2027-2028 academic year and a November 2026 deadline; clearly current. Fetched via r.jina.ai mirror because the source blocked direct fetching (403)."
+  }
+}

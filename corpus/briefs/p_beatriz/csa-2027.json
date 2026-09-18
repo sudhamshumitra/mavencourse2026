@@ -1,0 +1,62 @@
+{
+  "opportunity_id": "csa-2027",
+  "profile_id": "p_beatriz",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "BRL",
+    "low": 0,
+    "high": 500,
+    "breakdown": {
+      "registration": { "low": 0, "high": 500, "note": "No fee is published; the conference is fully online — estimated using a typical USD 0-100 online-conference fee range, inferred", "grounded": false },
+      "travel": { "low": 0, "high": 0, "note": "Fully online event — no travel required", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Fully online event — no accommodation required", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "Fully online event — no visa needed", "grounded": true }
+    },
+    "assumptions": [
+      "No fee was published; used a typical USD 0-100 online academic-conference fee range, inferred",
+      "USD→BRL 5.1363 on 2026-09-18 (open.er-api.com)",
+      "The conference is fully online, so travel, accommodation and visa costs are zero"
+    ],
+    "over_budget": false,
+    "net_note": "Even at the high end, this is a small fraction of her budget; no funding is needed to attend."
+  },
+  "priority": {
+    "score": 58,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1923, "feasibility": 0.1538 },
+    "sub_scores": {
+      "fit": { "score": 55, "reason": "Cultural studies is an adjacent field, not her primary one; her work on film festivals as community and gender/sexuality in media is plausible here with framing, but there's no direct topic overlap since the full CFP hasn't been posted yet." },
+      "standing": { "score": 50, "reason": "No standing signals (editions, keynotes, indexing) were found on the page fetched — limited information, so scored at the midpoint." },
+      "network": { "score": 55, "reason": "A genuinely different scholarly community from her usual film-studies circles, useful for testing how her work lands elsewhere, though a fully online format limits the depth of networking." },
+      "outcomes": { "score": 50, "reason": "No information on publication routes or feedback formats was found — limited information." },
+      "feasibility": { "score": 90, "reason": "Fully online and essentially free, so cost and visa are non-issues; the one deduction is that June falls outside her usual travel months, though that matters less for an online event." }
+    }
+  },
+  "fit": {
+    "score": 0.55,
+    "rationale": "Cultural studies is one of her adjacent fields rather than a primary one. Her research on film festivals as spaces of community, and on gender and sexuality in media, could plausibly be reframed for a cultural-studies audience, but the 2027 CSA conference's specific call for papers had not been posted at the time of extraction, so the fit is a stretch rather than a confirmed match.",
+    "matched_topics": ["film festivals and community", "gender and sexuality in media"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's fully online and essentially free, a low-risk way to test how your work lands with a cultural-studies audience outside film studies.",
+    "Your festivals-as-community angle and gender/sexuality focus both fit a cultural-studies framing, even though this isn't a film-specific venue."
+  ],
+  "watch_out": [
+    "The full call for papers wasn't posted yet when checked, so the exact theme, eligibility and any fee are still unknown."
+  ],
+  "tagline": "A free, no-travel way to test your work with a different (cultural-studies) crowd.",
+  "eligible": "yes",
+  "eligibility_notes": "No restrictions were found on the page fetched; the detailed call for papers was listed as 'coming soon' at extraction time.",
+  "visa": {
+    "required": "no",
+    "note": "Fully online conference — no visa is needed.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": true,
+  "explore_reason": "Cultural studies is an adjacent field, not one of her primary fields, and the CSA 2027 call has no direct keyword overlap with her core queer-cinema/film-festival topics; it's included to test a genuinely different audience for her work.",
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

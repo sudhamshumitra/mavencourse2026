@@ -1,0 +1,121 @@
+{
+  "profile_id": "p_putri",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "budget_used": { "searches": 16, "fetches": 13 },
+  "candidates": [
+    {
+      "url": "https://aicis.uinssc.ac.id/",
+      "title": "AICIS+ 2026 (25th Annual International Conference on Islam, Science, and Society)",
+      "host": "UIN Siber Syekh Nurjati Cirebon / Ministry of Religious Affairs, Republic of Indonesia",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-10-20",
+      "predicted_cfp_window": null,
+      "relevance": "Indonesia's flagship annual Islamic-studies conference, held in Cirebon; her research on Islamic popular culture in Indonesia sits squarely in its scope, and it needs no visa or long travel.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'Islamic popular culture' + country Indonesia -> Ministry of Religious Affairs' flagship Islamic-studies conference series (AICIS) -> 2026 host site aicis.uinssc.ac.id confirmed",
+        "layer c: /2026/ edition page live with dated CFP, distinct from the 2025 UIII-hosted edition (uiii.ac.id) found in the same search"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://amic.asia/2026-call-for-abstracts/",
+      "title": "32nd AMIC Annual International Conference",
+      "host": "Asian Media Information and Communication Centre (AMIC)",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-09-30",
+      "predicted_cfp_window": null,
+      "relevance": "The main regional learned society for media and communication research in Asia; her media-studies field and Southeast Asian focus are a direct match, and Manila is a short, cheap, largely visa-free trip from Indonesia.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'media studies' -> regional society search 'Asian media communication centre conference 2026' -> AMIC's own abstracts page confirms the 32nd annual conference, 5-7 Nov 2026, Manila"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://journal.unusia.ac.id/index.php/ISLAMNUSANTARA",
+      "title": "Islam Nusantara: Journal for the Study of Islamic History and Culture",
+      "host": "Universitas Nahdlatul Ulama Indonesia (UNUSIA)",
+      "type": "journal_call",
+      "status": "open",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "A rolling Indonesian journal specifically on Islam in the Nusantara (archipelago) context -- a close disciplinary home for her work on Islamic popular music and zines, with no travel involved.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer d: topic 'Islamic popular culture' reworded as 'Islamic history and culture Southeast Asia journal' -> Islam Nusantara Journal found, confirmed as a rolling-submission OJS journal on its own announcements/submissions pages"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://outreach.wikimedia.org/wiki/GLAM/Indonesia",
+      "title": "GLAM Indonesia Grant (Wikimedia Indonesia)",
+      "host": "Wikimedia Indonesia",
+      "type": "fellowship",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "Sep-Oct 2026",
+      "relevance": "An annual Indonesian grant for archivists and communities digitizing cultural heritage and opening access to it -- an unusually close match for an independent digital archivist with no institution behind her, and it's entirely within Indonesia.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer e (capped open search): topics 'digital archives' + 'community archiving' + Indonesia -> Wikimedia Indonesia's GLAM Indonesia Grant",
+        "layer c (recurrence): 2024 and 2025 rounds confirmed (deadlines Oct 2024, 3 Oct 2025) on outreach.wikimedia.org and meta.wikimedia.org; no 2026 round announced yet at fetch time, so a 2026 round is predicted from the annual pattern rather than confirmed"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.iaspm.net/iaspm-international-conference/",
+      "title": "IASPM International Conference 2027 -- \"Pop! Goes the World!!!\"",
+      "host": "International Association for the Study of Popular Music (IASPM)",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-12-01",
+      "predicted_cfp_window": null,
+      "relevance": "The global flagship of popular music studies, an adjacent field to her archiving work but one she'd be unlikely to search for herself; useful for visibility even though it's in Wellington, New Zealand, far from home.",
+      "exploration": true,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent field 'popular music studies' -> global society search 'IASPM international conference 2027' -> iaspm.net confirms the 24th biennial conference, Wellington NZ, Nov-Dec 2027, submissions due 1 Dec 2026"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://seacah.iafor.org/call-for-papers/",
+      "title": "The Southeast Asian Conference on Arts & Humanities (SEACAH2027)",
+      "host": "IAFOR (International Academic Forum), as part of its Southeast Asian Conference Series",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-10-30",
+      "predicted_cfp_window": null,
+      "relevance": "A Bangkok-based regional arts-and-humanities conference reworded from her digital-humanities/archival-studies adjacent fields; cheap and visa-easy from Indonesia, though the host runs many similarly-named 'Asian Conference on X' events, a pattern worth flagging.",
+      "exploration": false,
+      "predatory_suspect": true,
+      "discovery_trace": [
+        "layer d: adjacent field 'digital humanities' reworded as 'Southeast Asian arts and humanities conference 2026 2027' -> SEACAH2027 (IAFOR) found; IAFOR runs a large family of similarly-titled 'Asian Conference on ...' events across many cities with a pay-to-present model, matching the scout skill's for-profit/all-topics warning signs, so kept but flagged"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://iamcr.org/news/sao_paulo2027",
+      "title": "IAMCR 2027 São Paulo: Multilateralism, Democracy, Diversity",
+      "host": "International Association for Media and Communication Research (IAMCR)",
+      "type": "conference",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "Nov 2026 (CFP opens)",
+      "relevance": "The main global media & communication research society's annual congress; on-topic for her media-studies field, but São Paulo is a long, expensive trip for an independent researcher with no institutional funding, and the CFP isn't open yet.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'media studies' -> global society IAMCR -> 2027 congress page found; deduped against existing corpus/opportunities/iamcr-2027.json (same venue already extracted for another persona)"
+      ],
+      "found_via": null
+    }
+  ]
+}
