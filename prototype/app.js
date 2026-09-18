@@ -25,6 +25,9 @@ const defaultState = {
   weightAdjust: {},
   showIneligible: false,
   theme: null,
+  mode: 'example',   // 'example' = Ananya's pre-built shortlist; 'mine' = live search for your profile
+  search: null,      // { key, at, candidates }
+  scored: {},        // candidate id -> fully scored opportunity (cached so it's never paid for twice)
 };
 
 let state = load();
@@ -151,7 +154,11 @@ const COST_COLORS = {
 };
 const COST_LABEL = { registration: 'Registration', travel: 'Travel', accommodation: 'Accommodation', visa: 'Visa' };
 
-const allOpportunities = () => [...opportunities, ...state.pasted];
+const profileKey = (p = state.profile) => JSON.stringify([
+  (p.topics ?? []).map((t) => t.term).sort(), p.fields ?? [], p.adjacent_fields ?? [], p.input_text ?? '', p.geography?.country ?? '', p.career_stage]);
+const mineLive = () => state.mode === 'mine' && LIVE;
+const candidates = () => (state.search?.candidates ?? []).map((c) => state.scored[c.id] ?? { ...c, unscored: true, source_url: c.url });
+const allOpportunities = () => [...(mineLive() ? candidates() : opportunities), ...state.pasted];
 const byId = (id) => allOpportunities().find((o) => o.id === id);
 
 /** Every deadline on an opportunity, including the one the agent infers for visas. */
@@ -387,7 +394,7 @@ function renderWelcome() {
 
       <div class="hero-cta">
         <a class="btn btn-primary btn-lg" href="#/onboarding">Get started</a>
-        <a class="btn btn-ghost btn-lg" href="#/thinking">See an example</a>
+        <a class="btn btn-ghost btn-lg" href="#/example">See an example</a>
       </div>
 
       <p class="hero-note">Prototype · real calls gathered ${fmtDate(GATHERED_AT)}</p>
@@ -616,14 +623,17 @@ function onboardingEvents(root) {
       case 'stage': draft.career_stage = btn.dataset.v; repaint(); break;
       case 'format': draft.constraints.format = btn.dataset.v; repaint(); break;
       case 'visatol': draft.constraints.visa_tolerance = btn.dataset.v; repaint(); break;
-      case 'finish':
+      case 'finish': {
+        const isExample = draft.id === seedProfile.id;
         state.profile = draft;
         state.onboarded = true;
         state.weightAdjust = {};
+        state.mode = isExample ? 'example' : 'mine';
         save();
         draft = null; onbStep = 0;
-        location.hash = '#/thinking';
+        location.hash = !isExample && LIVE && state.search?.key !== profileKey() ? '#/searching' : '#/thinking';
         break;
+      }
     }
   });
 }
@@ -724,6 +734,7 @@ const hiddenIneligible = () => allOpportunities().filter((o) => !state.dismissed
 
 function renderFeed() {
   $('#topbar').hidden = false;
+  if (mineLive()) return renderMineFeed();
   const list = visibleOpportunities();
   const ranked = list.filter((o) => !o.predatory_flag);
   const flagged = list.filter((o) => o.predatory_flag);
@@ -1086,6 +1097,7 @@ function renderBrief(id) {
   const o = byId(id);
   if (!o) return `<div class="wrap"><div class="empty"><span class="big">🤔</span><p>No brief for that one.</p>
     <a class="btn btn-ghost btn-sm" href="#/feed">Back to the feed</a></div></div>`;
+  if (o.unscored) return renderScoring(o);
   if (briefFor !== id) { briefTab = 'worth'; briefFor = id; }
 
   const saved = state.saved.includes(o.id);
@@ -1146,6 +1158,194 @@ function renderBrief(id) {
     <section class="panel tab-panel" role="tabpanel">${TAB_FN[briefTab](o)}</section>
 
     <p class="tiny muted" style="margin-top:1rem">Grapevine never registers, pays, submits or books for you.</p>
+  </div>`;
+}
+
+/* ============================================================
+   Live search for your own profile (scout → score on open)
+   ============================================================ */
+
+function startExample() {
+  state.profile = structuredClone(seedProfile);
+  state.mode = 'example';
+  state.onboarded = true;
+  save();
+  setTimeout(() => { location.hash = '#/thinking'; }, 0);
+  return '';
+}
+
+let searchRun = null;
+
+function renderSearching() {
+  $('#topbar').hidden = true;
+  const p = state.profile;
+  const fields = [...(p.fields ?? []), ...(p.adjacent_fields ?? [])];
+  return `<section class="pipe-screen">
+    <div class="pipe2">
+      <div class="pipe2-head"><h2>Searching for your opportunities</h2><span class="tiny muted" id="s-timer">0s</span></div>
+      <div class="pipe-bar"><i id="pipe-bar" class="indeterminate"></i></div>
+      <div class="pipe2-grid">
+        <ol class="pipe2-steps" id="s-steps">
+          <li class="done"><span class="p2-dot"></span><span>Reading your interests</span></li>
+          <li class="active" data-k="search"><span class="p2-dot"></span><span>Searching societies, journals and fellowships</span></li>
+          <li data-k="shortlist"><span class="p2-dot"></span><span>Picking the best matches</span></li>
+        </ol>
+        <div class="pipe2-live" aria-live="polite">
+          <div class="p2-title" id="p2-title">Searching the web</div>
+          <div class="p2-detail" id="p2-detail">This takes about a minute. Looking in your fields and the ones next to them:</div>
+          <div class="p2-stream" id="p2-stream">
+            ${[...(p.topics ?? []).slice(0, 4).map((t) => t.term), ...fields.slice(0, 5)].map((x) => `<span class="p2-item">${esc(x)}</span>`).join('')}
+          </div>
+          <div id="s-out"></div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+async function runSearch() {
+  const started = Date.now();
+  const tick = setInterval(() => {
+    const t = $('#s-timer');
+    if (!t) return clearInterval(tick);
+    t.textContent = `${Math.round((Date.now() - started) / 1000)}s`;
+  }, 1000);
+  try {
+    searchRun ??= api('scout', { profile: state.profile });
+    const { candidates: found } = await searchRun;
+    searchRun = null;
+    state.search = { key: profileKey(), at: new Date().toISOString(), candidates: found };
+    save();
+    clearInterval(tick);
+    const step = (k, cls) => $(`#s-steps [data-k="${k}"]`)?.classList.replace('active', cls) ?? $(`#s-steps [data-k="${k}"]`)?.classList.add(cls);
+    step('search', 'done');
+    $(`#s-steps [data-k="shortlist"]`)?.classList.add('active');
+    if ($('#p2-title')) $('#p2-title').textContent = `Found ${found.length} for you`;
+    if ($('#p2-detail')) $('#p2-detail').textContent = 'Open any of them to see if it’s worth it.';
+    const stream = $('#p2-stream');
+    if (stream) stream.innerHTML = '';
+    found.forEach((c, i) => setTimeout(() => {
+      const el = document.createElement('span');
+      el.className = 'p2-item';
+      el.textContent = c.title.split(/[—:(]/)[0].trim().slice(0, 48);
+      $('#p2-stream')?.append(el);
+    }, i * 220));
+    setTimeout(() => { if (location.hash === '#/searching') location.hash = '#/feed'; }, found.length * 220 + 900);
+  } catch (err) {
+    searchRun = null;
+    clearInterval(tick);
+    const out = $('#s-out');
+    if (out) out.innerHTML = `<div class="callout danger" style="margin-top:1rem"><h4>The search didn't finish</h4><p>${esc(err.message)}</p></div>
+      <div class="onb-actions"><a class="btn btn-primary btn-sm" href="#/searching" data-act="retry-search">Try again</a>
+      <a class="btn btn-quiet btn-sm" href="#/example">See the example instead</a></div>`;
+    $('#s-out [data-act="retry-search"]')?.addEventListener('click', (e) => { e.preventDefault(); render(); });
+  }
+}
+
+function candRow(c, rank) {
+  const nd = c.deadline_hint && daysUntil(c.deadline_hint) >= 0 ? c.deadline_hint : null;
+  return `<article class="lr lr-cand" data-opp="${esc(c.id)}" style="animation-delay:${Math.min(rank * 45, 400)}ms">
+    <div class="lr-rank">${String(rank).padStart(2, '0')}</div>
+    <div class="lr-score"><div class="lr-num t-mute">–</div><div class="lr-cap">not scored yet</div></div>
+    <div class="lr-main">
+      <div class="kicker">${esc(TYPE_CHIP[c.type]?.[1] ?? 'Call')}${nd ? `<span class="dot">·</span>deadline ${fmtDate(nd)}` : ''}
+        ${statusBadge(c)}${c.exploration ? '<span class="badge badge-sky">Outside your usual field</span>' : ''}</div>
+      <h3 class="lr-title"><a href="#/brief/${esc(c.id)}">${esc(c.title)}</a></h3>
+      <div class="lr-host">${esc(c.host)} <a class="src-link" href="${safeUrl(c.url)}" target="_blank" rel="noopener noreferrer">Call page ↗</a></div>
+      <p class="lr-why">${esc(c.relevance)}</p>
+    </div>
+    <div class="lr-act">
+      <a class="btn btn-primary btn-sm" href="#/brief/${esc(c.id)}">Score it · ~1 min</a>
+      <button class="btn btn-quiet btn-sm" data-act="dismiss" data-id="${esc(c.id)}">Not for me</button>
+    </div>
+  </article>`;
+}
+
+function renderMineFeed() {
+  const all = allOpportunities().filter((o) => !state.dismissed.includes(o.id));
+  const scored = all.filter((o) => !o.unscored && o.status !== 'stale').sort((a, b) => priorityOf(b) - priorityOf(a));
+  const unscored = all.filter((o) => o.unscored);
+  const stale = !state.search || state.search.key !== profileKey();
+  const top = scored.filter(actionable).slice(0, 3);
+  const restScored = scored.filter((o) => !top.includes(o));
+  const funded = scored.filter((o) => openFunding(o).length).length;
+
+  return `<div class="wrap wrap-feed">
+    <header class="feed-head">
+      <div class="eyebrow">Live search${state.search ? ` · ${fmtDate(state.search.at.slice(0, 10))}` : ''}</div>
+      <h1>Your shortlist</h1>
+      <div class="ledger">
+        <div><b>${all.length}</b><span>found for your topics</span></div>
+        <div><b>${scored.length}</b><span>scored so far</span></div>
+        <div class="green"><b>${funded}</b><span>with funding you could apply for</span></div>
+      </div>
+    </header>
+
+    <div class="feed-bar">
+      <p class="feed-note">Open any call to score it for you. Scores are saved, so each one is only worked out once.
+        · <a href="#/how">how scores work</a></p>
+      <a class="btn btn-ghost btn-sm" href="#/searching">${stale ? 'Search for my updated profile' : 'Search again'}</a>
+    </div>
+
+    ${!state.search ? `<div class="empty"><p><strong>No search yet.</strong></p><a class="btn btn-primary btn-sm" href="#/searching">Search for my topics</a></div>` : ''}
+
+    ${top.length ? `<h2 class="list-h">Apply now</h2><div class="ledger-list">${top.map((o, i) => oppRow(o, i + 1, true)).join('')}</div>` : ''}
+    ${restScored.length ? `<h2 class="list-h">Scored</h2><div class="ledger-list">${restScored.map((o, i) => oppRow(o, top.length + i + 1)).join('')}</div>` : ''}
+    ${unscored.length ? `<h2 class="list-h">Found for you <span>not scored yet</span></h2>
+      <div class="ledger-list">${unscored.map((c, i) => candRow(c, scored.length + i + 1)).join('')}</div>` : ''}
+
+    <form class="paste-box" id="paste-form" style="margin-top:2.4rem">
+      <span class="paste-label">Know about one that's missing? Paste its link.</span>
+      <input type="text" id="paste-url" placeholder="https://…" aria-label="Opportunity URL" />
+      <button class="btn btn-primary" type="submit">Add it</button>
+    </form>
+    <p class="tiny muted" style="margin-top:1rem">Want to see a fully worked example? <a href="#/example">Open Ananya's shortlist</a>.</p>
+  </div>`;
+}
+
+const scoring = {};
+
+function maybeScore(id) {
+  const c = byId(id);
+  if (!c?.unscored || scoring[id]?.running) return;
+  scoring[id] = { running: true, step: 'read', error: null };
+  (async () => {
+    try {
+      const { opportunity } = await api('extract', { url: c.url });
+      scoring[id].step = 'brief';
+      if (location.hash === `#/brief/${id}`) render();
+      const { brief } = await api('brief', { opportunity, profile: state.profile });
+      state.scored[id] = { ...opportunity, venue_funding: opportunity.funding, ...brief, id, explore: c.exploration || brief.explore, discovery_trace: c.discovery_trace };
+      save();
+      delete scoring[id];
+    } catch (err) {
+      scoring[id] = { running: false, step: null, error: err.message };
+    }
+    if (location.hash === `#/brief/${id}`) render();
+  })();
+}
+
+function renderScoring(c) {
+  const s = scoring[c.id] ?? { step: 'read' };
+  const st = (k) => (s.error ? '' : s.step === k ? 'active' : (k === 'read' && s.step === 'brief') ? 'done' : '');
+  return `<div class="wrap wrap-mid">
+    <a class="back-link" href="#/feed">← Back to your shortlist</a>
+    <header class="brief-head">
+      <div class="kicker">${esc(TYPE_CHIP[c.type]?.[1] ?? 'Call')} ${statusBadge(c)}</div>
+      <h1>${esc(c.title)}</h1>
+      <p class="brief-sub">${esc(c.host)}</p>
+      <a class="btn btn-ghost btn-sm src-btn" href="${safeUrl(c.url)}" target="_blank" rel="noopener noreferrer">Open the call page ↗</a>
+    </header>
+    <section class="verdict">
+      <p class="small" style="margin:0 0 1rem"><strong>Why it came up:</strong> ${esc(c.relevance)}</p>
+      ${s.error ? `<div class="callout danger"><h4>Couldn't score this one</h4><p>${esc(s.error)}</p></div>
+          <div class="onb-actions"><button class="btn btn-primary btn-sm" data-act="rescore" data-id="${esc(c.id)}">Try again</button></div>`
+        : `<ol class="pipe2-steps">
+          <li class="${st('read')}"><span class="p2-dot"></span><span>Reading the call page: dates, fees, who can apply</span></li>
+          <li class="${st('brief')}"><span class="p2-dot"></span><span>Working out cost, funding and whether it's worth it for you</span></li>
+        </ol>
+        <p class="tiny muted" style="margin:.8rem 0 0">Usually about a minute. You can go back to your shortlist; it keeps going.</p>`}
+    </section>
   </div>`;
 }
 
@@ -1517,6 +1717,8 @@ const routes = {
   '/': renderWelcome,
   '/onboarding': renderOnboarding,
   '/thinking': renderPipeline,
+  '/example': startExample,
+  '/searching': renderSearching,
   '/feed': renderFeed,
   '/tracker': renderTracker,
   '/profile': renderProfile,
@@ -1550,6 +1752,9 @@ function render() {
   // Bound to `.onb`, which is recreated on every render — binding to #app would stack listeners.
   if (hash === '/onboarding') onboardingEvents($('.onb', app));
   if (hash === '/thinking') runPipeline();
+  if (hash === '/searching') runSearch();
+  const b = hash.match(/^\/brief\/(.+)$/);
+  if (b) maybeScore(decodeURIComponent(b[1]));
   if (hash === '/feed') pasteEvents(app);
 }
 
@@ -1568,6 +1773,7 @@ document.addEventListener('click', (e) => {
     case 'ics-all': downloadIcs(state.saved.map(byId).filter(Boolean), 'grapevine-deadlines.ics'); break;
     case 'filter': feedFilter = btn.dataset.v; render(); break;
     case 'tab': briefTab = btn.dataset.v; render(); break;
+    case 'rescore': delete scoring[btn.dataset.id]; maybeScore(btn.dataset.id); render(); break;
     case 'toggle-inelig': state.showIneligible = !state.showIneligible; save(); render(); break;
     case 'profgoal': {
       const goals = state.profile.goals ??= [];
@@ -1598,7 +1804,7 @@ $('#theme-toggle').addEventListener('click', () => {
 addEventListener('hashchange', () => { render(); scrollTo(0, 0); });
 
 let LIVE = false;
-fetch('/api/status').then((r) => (r.ok ? r.json() : null)).then((d) => { LIVE = !!d?.live; }).catch(() => {});
+fetch('/api/status').then((r) => (r.ok ? r.json() : null)).then((d) => { LIVE = !!d?.live; if (LIVE && state.mode === 'mine') render(); }).catch(() => {});
 
 applyTheme();
 render();

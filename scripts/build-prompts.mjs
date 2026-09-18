@@ -12,6 +12,7 @@ const skill = (name) => readFileSync(join(root, '.claude', 'skills', name, 'SKIL
 
 const out = {
   draftProfile: skill('draft-profile'),
+  scout: skill('scout-opportunities'),
   extract: skill('extract-opportunity'),
   estimateCost: skill('estimate-cost'),
   findFunding: skill('find-funding'),

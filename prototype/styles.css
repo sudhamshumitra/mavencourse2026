@@ -1012,3 +1012,10 @@ details.more[open] > summary { margin-bottom: .6rem; }
 .how-t { border-collapse: collapse; margin: .6rem 0; min-width: 16rem; }
 .how-t th, .how-t td { text-align: left; padding: .35rem .9rem .35rem 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
 .how-t th { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+
+/* live search */
+.lr-cand .lr-num { font-size: 1.6rem; }
+.lr-why { margin: .5rem 0 0; font-size: .9rem; color: var(--ink-2); max-width: 46rem; }
+.pipe-bar i.indeterminate { width: 35% !important; animation: indet 1.4s ease-in-out infinite; }
+@keyframes indet { 0% { margin-left: -35%; } 100% { margin-left: 100%; } }
+.verdict .pipe2-steps li { background: none; box-shadow: none; }
