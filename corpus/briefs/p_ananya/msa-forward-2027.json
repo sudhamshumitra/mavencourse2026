@@ -1,0 +1,117 @@
+{
+  "opportunity_id": "msa-forward-2027",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "MSA Lund 2027 travel grants and fee waivers (general statement, not confirmed for Forward)",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": null,
+      "deadline": null,
+      "cycle": null,
+      "requires": null,
+      "eligible": "check",
+      "why": "The general MSA Lund 2027 grants/waivers statement exists on a related page, but the source page for MSA Forward does not confirm it covers this separate preconference workshop.",
+      "grounded": true,
+      "source_quote": "A limited number of travel grants and fee waivers will be available for the conference.",
+      "source_url": "https://msalund2027.dryfta.com/grants",
+      "sequence_note": "Confirm with MSA once MSA Forward's own application process is published (currently 'will be published soon')."
+    },
+    {
+      "name": "ICSSR Scheme for Participation in International Seminar/Conference Abroad",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "PhD scholars without other funding: full financial assistance; faculty capped at 50% of visit cost (registration up to US$200)",
+      "deadline": null,
+      "cycle": "Rolling, apply online at least 3 months before travel",
+      "requires": "Formal acceptance letter from organizers (paper accepted), hard-copy application to ICG Division",
+      "eligible": "check",
+      "why": "ICSSR requires a formal acceptance letter for presenting a paper at an international conference/seminar abroad; MSA Forward is described as a feedback workshop rather than a paper-presenting conference, so it's unclear whether an invitation to it would satisfy this requirement.",
+      "grounded": true,
+      "source_quote": "PhD/PDF scholars and SC/ST/PwD faculty without other funding: full financial assistance.",
+      "source_url": "https://icssr.org/participation-international-seminar-abroad",
+      "sequence_note": "Check with ICSSR whether an MSA Forward invitation qualifies before applying; if attending MSA Lund too, the paper-acceptance route there is the stronger basis."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 64000,
+    "high": 121000,
+    "breakdown": {
+      "registration": {
+        "low": 0,
+        "high": 0,
+        "note": "Fee and application process not yet published; page states this detail 'will be published soon'",
+        "grounded": true
+      },
+      "travel": {
+        "low": 45000,
+        "high": 85000,
+        "note": "HYD-Copenhagen return, regional heuristic for India-Europe; costed independently here in case attended without MSA Lund",
+        "grounded": false
+      },
+      "accommodation": {
+        "low": 8000,
+        "high": 23500,
+        "note": "2 nights (13-14 June) in Copenhagen/Lund, hostel to mid-range hotel heuristic (SEK 400-1200/night)",
+        "grounded": false
+      },
+      "visa": {
+        "low": 11000,
+        "high": 12500,
+        "note": "Schengen short-stay visa for Denmark/Sweden; Sweden's official fee (EUR 80) is used as the closest reference point since the exact host mission for this workshop isn't specified, plus an estimated VFS service charge",
+        "grounded": true,
+        "source": "https://www.swedenabroad.se/en/about-sweden-non-swedish-citizens/india/going-to-sweden/visiting-sweden/fees/"
+      }
+    },
+    "assumptions": [
+      "Application process, deadline, and fee not yet published as of extraction (2026-09-19)",
+      "Travel and accommodation costed independently; if combined with the adjoining MSA Lund conference, most of this would be a shared, not additional, cost",
+      "FX per corpus/fx.json (as of 2026-09-18)",
+      "Excludes meals, local transport, and insurance"
+    ],
+    "over_budget": false,
+    "net_note": "If combined with the MSA Lund trip (13-18 June), most of the travel and visa cost is shared rather than doubled, meaningfully lowering the real marginal cost of attending both."
+  },
+  "priority": {
+    "score": 68,
+    "weights": { "fit": 0.269, "standing": 0.192, "network": 0.154, "outcomes": 0.154, "feasibility": 0.231 },
+    "sub_scores": {
+      "fit": { "score": 65, "reason": "As a preconference workshop under the same memory-studies umbrella as MSA Lund, it shares the conceptual link to her secondary interest in Partition memory online (weight 0.55), though its own theme and framing haven't been published yet, so this is limited information, inferred from the parent conference." },
+      "standing": { "score": 50, "reason": "Limited information: no standing signals beyond the page noting 'as in previous years', implying it is a recurring MSA preconference workshop, but with no stated scale, past speakers, or selectivity." },
+      "network": { "score": 80, "reason": "Explicitly designed to let junior researchers engage with established scholars and receive feedback in a small, discussion-focused format - a strong direct match to her feedback and networking goals." },
+      "outcomes": { "score": 70, "reason": "The stated purpose is structured feedback from established academics before chapter-writing, exactly the outcome she wants, though no publication or award route is mentioned." },
+      "feasibility": { "score": 75, "reason": "Status is 'watch': the application process, deadline and fee are not yet published, so prepare materials now for the expected call. Cost stays under her Rs1.5L budget on its own, and would be even more feasible combined with the adjoining MSA Lund trip." }
+    }
+  },
+  "fit": {
+    "score": 0.65,
+    "rationale": "As a preconference workshop under the same memory-studies umbrella as MSA Lund, it carries the same conceptual link to her secondary interest in Partition memory online. Its explicit purpose - junior researchers getting feedback from established scholars - also matches her stated goal of feedback before writing her chapters, though the workshop's own theme and criteria haven't been published, so this fit is inferred from the parent conference rather than confirmed.",
+    "matched_topics": ["Partition memory online"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's built specifically to give postgraduates structured feedback from established memory-studies scholars - directly matching her goal of feedback before writing her chapters.",
+    "The small, discussion-focused format means real conversations rather than a large anonymous crowd.",
+    "It runs immediately before MSA Lund, so it can be combined into a single trip."
+  ],
+  "watch_out": [
+    "The application deadline, fee, and even the theme haven't been published yet ('will be published soon') - prepare for the next call by drafting a short abstract now so she can move quickly once it opens.",
+    "It is formally a separate opportunity from MSA Lund, so it adds its own travel/visa cost unless the two trips are combined."
+  ],
+  "tagline": "A postgraduate feedback workshop tied to MSA Lund - details still to come; prepare now.",
+  "eligible": "conditional",
+  "eligibility_notes": "Explicitly targeted at postgraduate/early-career researchers, which fits her profile (2nd-year PhD), but the exact application criteria and process are not yet published on the source page.",
+  "visa": {
+    "required": "yes",
+    "note": "In-person event in Copenhagen and Lund; needs a Schengen short-stay visa via the Danish or Swedish mission. Using Sweden's official fee (EUR 80) plus VFS charge as a reference; processing is typically around 15 working days, but start early given her preference to avoid visa queues.",
+    "official_source": "https://www.swedenabroad.se/en/about-sweden-non-swedish-citizens/india/going-to-sweden/visiting-sweden/fees/",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "inferred", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

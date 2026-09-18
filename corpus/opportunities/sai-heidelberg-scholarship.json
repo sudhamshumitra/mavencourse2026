@@ -1,0 +1,57 @@
+{
+  "id": "sai-heidelberg-scholarship",
+  "type": "fellowship",
+  "status": "open",
+  "title": "Joint Scholarship Programme of the South Asia Institute, Heidelberg University and the Max Weber Forum for South Asian Studies Delhi",
+  "host": "South Asia Institute, Heidelberg University",
+  "host_kind": "university",
+  "theme": "South Asian studies research (ethnology, history, political science, economics, geography, modern languages and literatures of South Asia, and cultural/religious history)",
+  "description": "The South Asia Institute at Heidelberg University, jointly with the Max Weber Forum for South Asian Studies Delhi, offers a scholarship for young researchers from India, Nepal, Pakistan, Sri Lanka or Bangladesh to spend a three-month research stay in Heidelberg. The programme covers international travel, a monthly stipend, and accommodation costs. The application deadline is 1 December 2026, with the scholarship period starting in April or June 2027. Applications must be submitted via an online portal only; emailed applications are not considered.",
+  "location": { "city": "Heidelberg", "country": "Germany", "format": "in_person" },
+  "dates": { "start": null, "end": null },
+  "deadlines": [
+    {
+      "label": "scholarship",
+      "date": "2026-12-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "The application deadline is 01 December 2026, 23:59 CET"
+    }
+  ],
+  "eligibility": {
+    "career_stage": ["young researcher"],
+    "nationality": "India, Nepal, Pakistan, Sri Lanka, or Bangladesh",
+    "region_restriction": "Applicants must be nationals of India, Nepal, Pakistan, Sri Lanka or Bangladesh",
+    "membership_required": false,
+    "notes": "Fields of interest include ethnology, history, political science, economics, geography, modern languages and literatures of South Asia, and cultural/religious history. Scholarship period starts in April and June 2027 (exact start dates per cohort not specified on the page). Applications must be made through the online portal; the page states 'We cannot consider applications sent by email.'"
+  },
+  "fees": [],
+  "funding": [
+    {
+      "name": "Travel expense reimbursement",
+      "type": "travel_scholarship",
+      "deadline": "2026-12-01",
+      "amount_note": "Reimbursement of international travel expenses of up to EUR 1,500",
+      "eligibility_notes": "Awarded to selected scholarship recipients as part of the joint scholarship programme.",
+      "grounded": true,
+      "source_quote": "reimbursement of international travel expenses of up to EUR 1,500",
+      "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university"
+    },
+    {
+      "name": "Monthly scholarship stipend and accommodation",
+      "type": "bursary",
+      "deadline": "2026-12-01",
+      "amount_note": "Monthly scholarship instalment of EUR 1,200, plus payment of rental/accommodation costs, for a three-month stay",
+      "eligibility_notes": "Awarded to selected scholarship recipients as part of the joint scholarship programme.",
+      "grounded": true,
+      "source_quote": "monthly scholarship instalment of EUR 1,200",
+      "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university"
+    }
+  ],
+  "past_editions": [],
+  "standing_signals": [],
+  "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

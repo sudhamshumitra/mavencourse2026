@@ -1,0 +1,96 @@
+{
+  "opportunity_id": "sai-heidelberg-scholarship",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "Travel expense reimbursement",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Reimbursement of international travel expenses of up to EUR 1,500",
+      "deadline": "2026-12-01",
+      "cycle": null,
+      "requires": "Selection as a scholarship recipient",
+      "eligible": "yes",
+      "why": "Directly part of the scholarship award for selected recipients; her Indian nationality matches the eligible-countries list (India, Nepal, Pakistan, Sri Lanka, Bangladesh).",
+      "grounded": true,
+      "source_quote": "reimbursement of international travel expenses of up to EUR 1,500",
+      "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university",
+      "sequence_note": "Reimbursed after the stay upon submitting receipts; she would need to front the airfare cost herself before departure."
+    },
+    {
+      "name": "Monthly scholarship stipend and accommodation",
+      "source": "venue",
+      "type": "bursary",
+      "amount_note": "Monthly scholarship instalment of EUR 1,200, plus payment of rental/accommodation costs, for a three-month stay",
+      "deadline": "2026-12-01",
+      "cycle": null,
+      "requires": "Selection as a scholarship recipient",
+      "eligible": "yes",
+      "why": "Directly part of the scholarship award for selected recipients; covers living and housing costs for the full stay.",
+      "grounded": true,
+      "source_quote": "monthly scholarship instalment of EUR 1,200",
+      "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university",
+      "sequence_note": "Paid monthly during the 3-month stay (starting April or June 2027) once selected; no separate application needed beyond the main scholarship application by 1 Dec 2026."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 55500,
+    "high": 96500,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "No application fee for the scholarship", "grounded": true },
+      "travel": { "low": 45000, "high": 85000, "note": "HYD-Frankfurt/Heidelberg return, regional heuristic for India-Europe; reimbursed up to EUR 1,500 by the programme after the stay, but paid out-of-pocket upfront", "grounded": false },
+      "accommodation": { "low": 0, "high": 0, "note": "Rental/accommodation costs for the 3-month stay are paid directly by the programme", "grounded": true },
+      "visa": { "low": 10500, "high": 11500, "note": "Likely a German national (Type D) research visa rather than a short-stay Schengen visa, since a 3-month stay is at or beyond the 90-day Schengen limit; official fee is INR 8,400 (EUR 75) plus an estimated VFS service charge", "grounded": true, "source": "https://india.diplo.de/in-en/service/2755482-2755482" }
+    },
+    "assumptions": [
+      "FX per corpus/fx.json (as of 2026-09-18)",
+      "Travel and accommodation are largely covered/reimbursed by the programme once awarded; the range shown is the upfront cash needed before reimbursement, not the final net cost",
+      "Visa category assumed to be the national research visa given the 3-month stay length; exact category should be confirmed with the German mission based on final entry/exit dates",
+      "Excludes meals and local transport beyond the programme's stipend"
+    ],
+    "over_budget": false,
+    "net_note": "If selected, travel is reimbursed up to EUR 1,500 (~Rs1,65,000) after the stay - more than the estimated fare - and accommodation plus a EUR 1,200/month stipend are paid directly, so the real net cost is mainly the visa fee (~Rs10,500-11,500) plus the cash needed upfront before the travel reimbursement arrives."
+  },
+  "priority": {
+    "score": 73,
+    "weights": { "fit": 0.269, "standing": 0.192, "network": 0.154, "outcomes": 0.154, "feasibility": 0.231 },
+    "sub_scores": {
+      "fit": { "score": 65, "reason": "Her research is squarely South Asian studies (India-focused), matching the institute's regional scope, but its listed disciplinary areas - ethnology, history, political science, economics, geography, literatures, and religious/cultural history - don't explicitly name media & communication studies, so her project may need reframing toward an area-studies angle." },
+      "standing": { "score": 65, "reason": "Heidelberg's South Asia Institute and the Max Weber Forum Delhi are established university-affiliated institutions, but no specific standing signals (rankings, past cohorts, alumni outcomes) are given in the extraction." },
+      "network": { "score": 80, "reason": "A 3-month in-person residency at a specialised South Asia studies institute means sustained, small-cohort contact with faculty and researchers, which the skill's guidance treats as inherently high network value for fellowships." },
+      "outcomes": { "score": 75, "reason": "A funded 3-month stay at a well-known South Asia studies center is a strong CV line and creates sustained opportunities for feedback on her chapters, though no specific publication or output requirement is stated on the page." },
+      "feasibility": { "score": 85, "reason": "Nearly all direct costs (travel, accommodation, a monthly stipend) are covered by the programme, but the likely need for a longer-processing German national research visa (rather than a routine short-stay visa) works against her preference to avoid visa queues, and the disciplinary field list creates some eligibility uncertainty." }
+    }
+  },
+  "fit": {
+    "score": 0.65,
+    "rationale": "The scholarship is regionally exact for her - India-focused South Asian studies research - and her work on caste and digital counterpublics fits within South Asian studies broadly. However, the institute's stated disciplinary areas (history, political science, economics, geography, literatures, religious/cultural history) don't explicitly include media & communication studies, so the project would likely need to be framed through one of those adjacent disciplinary lenses rather than as a pure media-studies fit.",
+    "matched_topics": ["caste & digital media", "Dalit & Bahujan counterpublics"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's a fully-funded 3-month research stay - travel, accommodation and a monthly stipend are all covered - which directly serves her low-cost goal.",
+    "A sustained stay at a specialised South Asia studies institute means real, ongoing feedback and mentoring, not a one-off presentation.",
+    "Her Indian nationality directly matches the scholarship's eligible-countries list (India, Nepal, Pakistan, Sri Lanka, Bangladesh)."
+  ],
+  "watch_out": [
+    "Media & communication studies isn't explicitly listed among the institute's stated disciplinary areas (history, political science, economics, geography, literatures, religious/cultural history) - worth checking with the institute whether her project fits before applying.",
+    "A 3-month stay is at or beyond the 90-day Schengen limit, so she likely needs a longer-processing German national research visa rather than a routine short-stay visa - start that process early."
+  ],
+  "tagline": "Fully-funded South Asia stay fits her region, but discipline fit needs checking.",
+  "eligible": "conditional",
+  "eligibility_notes": "Nationality matches the eligible list (India, Nepal, Pakistan, Sri Lanka, Bangladesh) and career stage ('young researcher') plausibly fits a 2nd-year PhD, but media & communication studies is not explicitly named among the institute's listed disciplinary areas, so field fit should be confirmed with the institute before applying.",
+  "visa": {
+    "required": "conditional",
+    "note": "A 3-month stay sits at or beyond the 90-day Schengen short-stay limit, so this is likely a German national (Type D) research visa rather than a routine Schengen visa - confirm the exact category and processing time with the German mission based on the final start/end dates.",
+    "official_source": "https://india.diplo.de/in-en/service/2755482-2755482",
+    "verify_flag": true,
+    "lead_days": 60
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

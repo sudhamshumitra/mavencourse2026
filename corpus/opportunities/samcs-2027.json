@@ -1,0 +1,32 @@
+{
+  "id": "samcs-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "13th South Asian Media and Cultural Studies Conference",
+  "host": "Florida State University",
+  "host_kind": "university",
+  "theme": "Digital Frontiers: Media, Culture, and AI in South Asia",
+  "description": "The South Asian Media and Cultural Studies Conference (SAMCS) is an annual hybrid conference hosted by Florida State University in Tallahassee, Florida, now in its 13th year, focused this edition on 'Digital Frontiers: Media, Culture, and AI in South Asia'. The 2027 edition runs January 21-22, 2027, held in both online and in-person format. No separate registration/fees page or past-editions archive page was found from the main page.",
+  "location": { "city": "Tallahassee, Florida", "country": "USA", "format": "hybrid" },
+  "dates": { "start": "2027-01-21", "end": "2027-01-22" },
+  "deadlines": [
+    { "label": "abstract", "date": "2026-10-10", "depends_on": null, "grounded": true, "source_quote": "submit your proposal abstract via the form below by October 10, 2026" }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No fee or travel funding information found on the main page; no additional same-site fees/registration or grants page was linked to check."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    { "signal": "13th Annual South Asian Media and Cultural Studies (SAMCS) Conference", "grounded": true, "source_url": "https://comm.cci.fsu.edu/faculty-research/south-asian-media-studies/south-asian-media-and-cultural-studies-conference/" }
+  ],
+  "source_url": "https://comm.cci.fsu.edu/faculty-research/south-asian-media-studies/south-asian-media-and-cultural-studies-conference/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

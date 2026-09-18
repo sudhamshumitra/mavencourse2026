@@ -1,0 +1,82 @@
+{
+  "opportunity_id": "samcs-2027",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T12:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "ICSSR Scheme for Participation in International Seminar/Conference Abroad",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "PhD scholars without other funding: full financial assistance (airfare, visa, insurance, local conveyance, stay, registration); faculty get up to 50%",
+      "deadline": null,
+      "cycle": "Rolling; apply online at least 3 months before the conference date",
+      "requires": "Formal acceptance letter from SAMCS organizers (email invite not sufficient), full paper to be presented, hard-copy application to the ICSSR ICG Division",
+      "eligible": "likely",
+      "why": "She is a PhD scholar in media & communication (a social-science discipline) at a recognized Indian university, matching the scheme's target group",
+      "grounded": true,
+      "source_quote": "PhD/PDF scholars and SC/ST/PwD faculty without other funding: full financial assistance.",
+      "source_url": "https://icssr.org/participation-international-seminar-abroad",
+      "sequence_note": "Submit the SAMCS abstract by Oct 10, 2026. If accepted, apply to ICSSR immediately with the acceptance letter — the scheme wants filing at least ~3 months before the Jan 21, 2027 conference, so the window (roughly now through late Oct) is tight but workable."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 110000,
+    "high": 191000,
+    "breakdown": {
+      "registration": { "low": 0, "high": 5000, "note": "No registration fee or fees page was found on the conference site; treated as unconfirmed (₹0–5,000 assumed pending confirmation)", "grounded": false },
+      "travel": { "low": 75000, "high": 130000, "note": "HYD–Tallahassee return (via a major US hub), booked 8–10 weeks ahead; heuristic for India↔US East (no live fare search run)", "grounded": false },
+      "accommodation": { "low": 17500, "high": 37500, "note": "3 nights (2 conference days + 1), budget motel to mid-range hotel near Tallahassee", "grounded": false },
+      "visa": { "low": 17500, "high": 18500, "note": "US B1/B2 (MRV) visa fee, USD 185, needed only for in-person attendance", "grounded": true, "source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html" }
+    },
+    "assumptions": [
+      "No fee page was found; registration cost is unconfirmed and may be $0 for a conference this size",
+      "USD→INR 95.96 on 2026-09-18 (open.er-api.com, per corpus/fx.json)",
+      "Travel and accommodation are heuristic estimates, not a live fare/hotel search",
+      "Visa and travel costs apply only for in-person attendance — the event is hybrid",
+      "Excludes meals, local transport, and travel insurance"
+    ],
+    "over_budget": true,
+    "net_note": "Presenting online instead of in person would cut this to just the (currently unconfirmed, possibly $0) registration fee. If accepted and the ICSSR scheme comes through in time, a large share of the in-person cost could be reimbursed."
+  },
+  "priority": {
+    "score": 74,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1538, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 90, "reason": "The 2027 theme, 'Digital Frontiers: Media, Culture, and AI in South Asia,' is close to a direct restatement of her dissertation on platforms, creators and caste speech in South Asia." },
+      "standing": { "score": 55, "reason": "13th annual edition hosted by a university communication program is a reasonable continuity signal, but no keynote, indexed-proceedings, or programme-committee evidence was found — limited information." },
+      "network": { "score": 70, "reason": "A South Asia-media-studies-specific conference is a strong topical match for building visibility among peers in her exact subfield, even though it's smaller than a flagship regional meeting." },
+      "outcomes": { "score": 68, "reason": "The open abstract call and hybrid format give her a real chance to present and get feedback aligned with her chapters, though no publication route (proceedings/special issue) is stated." },
+      "feasibility": { "score": 80, "reason": "In-person cost could exceed her ₹1.5L cap on the high end and needs a US visa, but the hybrid format lets her attend and present fully online at minimal cost, and the ICSSR scheme is a plausible (if process-heavy) source of reimbursement." }
+    }
+  },
+  "fit": {
+    "score": 0.9,
+    "rationale": "SAMCS 2027's theme, 'Digital Frontiers: Media, Culture, and AI in South Asia,' is a near-direct restatement of her dissertation's core concern — how platforms and creators shape South Asian public life online. Her specific focus on caste speech and content moderation sits naturally alongside the conference's stated interest in digital media and AI in the region, making this one of the closest thematic matches among her options.",
+    "matched_topics": ["caste & digital media", "content moderation & caste speech", "creator cultures & influencers", "South Asian diaspora media"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "The 2027 theme is almost a direct description of your dissertation topic.",
+    "It's hybrid, so you can present online for a fraction of the in-person cost and still get feedback from South Asia media scholars.",
+    "The abstract deadline (Oct 10, 2026) is still open."
+  ],
+  "watch_out": [
+    "It's a smaller, university-run conference (13th edition) with no confirmed fee or funding page, so some of these numbers are estimates.",
+    "The ICSSR scheme needs an acceptance letter and roughly 3 months' lead time before travel — tight if you go in person."
+  ],
+  "tagline": "A near-perfect thematic fit for your dissertation, and cheap if you present online.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality, or membership restrictions were stated; the abstract deadline (Oct 10, 2026) is still open for submission.",
+  "visa": {
+    "required": "conditional",
+    "note": "A US B1/B2 visitor visa would be needed only if she attends in person; not required for the online option. This is general information, not immigration advice — confirm current requirements with the US Mission in India.",
+    "official_source": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+    "verify_flag": true,
+    "lead_days": 60
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

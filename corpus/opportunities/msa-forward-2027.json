@@ -1,0 +1,34 @@
+{
+  "id": "msa-forward-2027",
+  "type": "fellowship",
+  "status": "watch",
+  "title": "MSA Forward — Postgraduate Preconference Workshop (MSA Lund 2027)",
+  "host": "Memory Studies Association",
+  "host_kind": "learned_society",
+  "theme": null,
+  "description": "MSA Forward is the Memory Studies Association's postgraduate/early-career preconference workshop, held alongside MSA Lund 2027 on 13-14 June 2027 in Copenhagen and Lund. The page describes it as letting junior researchers engage with scholars in their field and receive feedback from established academics, in a space for constructive discussion and networking. As of extraction, the source page had no distinct application deadline, fee, or theme information for MSA Forward specifically; it states this detail 'will be published soon.' The general conference statement about travel grants and fee waivers appears on the same page but is not confirmed to apply to MSA Forward specifically.",
+  "location": { "city": "Copenhagen and Lund", "country": "Denmark/Sweden", "format": "in_person" },
+  "dates": { "start": "2027-06-13", "end": "2027-06-14" },
+  "deadlines": [],
+  "eligibility": {
+    "career_stage": ["postgraduate", "early career"],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Targeted at junior/postgraduate researchers. Exact eligibility criteria and application process not yet published on the source page; description notes 'More information on the theme and the application process will be published soon.'"
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    {
+      "signal": "Description states 'As in previous years' regarding MSA Forward, implying it is a recurring workshop at prior MSA conferences.",
+      "grounded": true,
+      "source_url": "https://www.memorystudiesassociation.org/call-for-papers-msa-lund-2027/"
+    }
+  ],
+  "source_url": "https://www.memorystudiesassociation.org/call-for-papers-msa-lund-2027/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

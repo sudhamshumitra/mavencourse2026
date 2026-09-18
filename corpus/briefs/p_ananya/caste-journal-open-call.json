@@ -1,0 +1,60 @@
+{
+  "opportunity_id": "caste-journal-open-call",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T12:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 0,
+    "high": 0,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "Journal states no publication fees (APC = USD 0)", "grounded": true },
+      "travel": { "low": 0, "high": 0, "note": "Online submission; no travel required", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "Not applicable — online journal", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "Not applicable — no travel involved", "grounded": true }
+    },
+    "assumptions": [
+      "Fully online journal submission; no registration, travel, accommodation or visa costs apply",
+      "APC confirmed as USD 0 on the journal's general call page"
+    ],
+    "over_budget": false,
+    "net_note": "This is effectively free to submit to; the only real 'cost' is the time spent writing and revising the article."
+  },
+  "priority": {
+    "score": 88,
+    "weights": { "fit": 0.3182, "standing": 0.2273, "outcomes": 0.1818, "feasibility": 0.2727 },
+    "sub_scores": {
+      "fit": { "score": 92, "reason": "The journal is dedicated entirely to caste and caste-like exclusion worldwide, which is precisely her dissertation's subject; her specific angle on caste speech and platform moderation is a natural full-length article for this general call." },
+      "standing": { "score": 80, "reason": "A 30-member international editorial advisory board and affiliation with Brandeis University's Center for Global Development and Sustainability are solid, verifiable signals for a specialized journal, though it lacks stated indexing or impact data." },
+      "outcomes": { "score": 75, "reason": "A peer-reviewed, open-access publication directly on caste gives a real CV line at no cost, though the page doesn't state turnaround time or indexing status." },
+      "feasibility": { "score": 98, "reason": "Fully online with no APC, no travel, and no visa; the only open question is an unstated review turnaround, per the skill's rule that online/no-fee journal calls score near 100 on feasibility." }
+    }
+  },
+  "fit": {
+    "score": 0.92,
+    "rationale": "CASTE: A Global Journal on Social Exclusion is dedicated entirely to caste and caste-like exclusion, which is the exact subject of her dissertation. Her specific angle — caste speech and platform moderation on Instagram and YouTube — would be a natural full-length article for this journal's general call, more directly than any of the conference options in her set.",
+    "matched_topics": ["caste & digital media", "Dalit & Bahujan counterpublics", "content moderation & caste speech"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's a peer-reviewed, open-access journal specifically about caste and caste-like exclusion — your core topic is its whole mandate.",
+    "No publication fee, so there's no cost barrier to submitting."
+  ],
+  "watch_out": [
+    "The call is open-ended with no stated deadline or turnaround time, so plan for an unclear review timeline."
+  ],
+  "tagline": "A direct, free, no-travel home for your caste research.",
+  "eligible": "yes",
+  "eligibility_notes": "The editorial team explicitly welcomes both established and emerging scholars, as well as policy officials and practitioners; no career-stage or nationality restriction, and no fixed deadline (rolling general call).",
+  "visa": {
+    "required": "no",
+    "note": "Not applicable — this is an online journal submission with no travel involved.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "inferred", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "iamcr-2027",
+  "type": "conference",
+  "status": "watch",
+  "title": "IAMCR 2027 São Paulo: Multilateralism, Democracy, Diversity: Communication for a More Just World",
+  "host": "International Association for Media and Communication Research (IAMCR)",
+  "host_kind": "learned_society",
+  "theme": "Multilateralism, Democracy, Diversity: Communication for a More Just World",
+  "description": "IAMCR 2027 will take place 18-22 July 2027 in São Paulo, Brazil, hosted by the School of Communications and Arts at the University of São Paulo (ECA/USP) in partnership with the Associação de Apoio à Arte e Comunicação (ARCO), marking IAMCR's 70th anniversary. The conference is expected to bring together around 1,500 media and communication researchers. The call for proposals is not yet open (it is stated to open in November 2026), so no concrete submission deadline, registration fee, or 2027-specific travel grant details are published yet.",
+  "location": {
+    "city": "São Paulo",
+    "country": "Brazil",
+    "format": "in_person"
+  },
+  "dates": {
+    "start": "2027-07-18",
+    "end": "2027-07-22"
+  },
+  "deadlines": [],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No eligibility, fee, or deadline details are published yet for the 2027 São Paulo conference beyond the statement that the call for proposals will open in November 2026. IAMCR runs a recurring travel grant program (up to US$2,000 for early-stage-scholar members from low/middle-income countries with an accepted abstract), but the page found (iamcr.org/travel_grants) currently describes the Galway 2026 edition's deadline (20 March 2026), not a 2027 São Paulo-specific grant, so it is not recorded as this opportunity's funding."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [
+    {
+      "year": 2026,
+      "theme": null,
+      "city": "Galway, Ireland",
+      "representative_papers": [],
+      "source_url": "https://iamcr.org/congress/annual-conferences"
+    },
+    {
+      "year": 2025,
+      "theme": null,
+      "city": "Singapore",
+      "representative_papers": [],
+      "source_url": "https://iamcr.org/congress/annual-conferences"
+    },
+    {
+      "year": 2024,
+      "theme": null,
+      "city": "Christchurch, New Zealand",
+      "representative_papers": [],
+      "source_url": "https://iamcr.org/congress/annual-conferences"
+    }
+  ],
+  "standing_signals": [
+    {
+      "signal": "IAMCR 2027 marks the Association's 70th anniversary.",
+      "grounded": true,
+      "source_url": "https://iamcr.org/news/sao_paulo2027"
+    }
+  ],
+  "source_url": "https://iamcr.org/news/sao_paulo2027",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

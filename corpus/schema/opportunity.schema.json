@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "grapevine/opportunity",
+  "title": "Opportunity (PRD §7) — produced by the extract-opportunity skill",
+  "type": "object",
+  "required": ["id", "type", "title", "host", "description", "location", "dates", "deadlines", "eligibility", "fees", "funding", "past_editions", "source_url", "extracted_at", "predatory_flag"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "type": { "enum": ["conference", "journal_call", "fellowship"] },
+    "status": { "enum": ["open", "attend-only", "watch"] },
+    "title": { "type": "string" },
+    "host": { "type": "string" },
+    "host_kind": { "enum": ["learned_society", "university", "publisher", "foundation", "government", "for_profit", "unknown"] },
+    "theme": { "type": ["string", "null"] },
+    "description": { "type": "string" },
+    "location": {
+      "type": "object",
+      "required": ["city", "country", "format"],
+      "properties": {
+        "city": { "type": "string" },
+        "country": { "type": "string" },
+        "format": { "enum": ["in_person", "hybrid", "online"] }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "properties": {
+        "start": { "type": ["string", "null"] },
+        "end": { "type": ["string", "null"] }
+      }
+    },
+    "deadlines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "date", "grounded"],
+        "properties": {
+          "label": { "enum": ["abstract", "full_paper", "scholarship", "early_bird", "registration"] },
+          "date": { "type": "string" },
+          "depends_on": { "type": ["string", "null"] },
+          "grounded": { "type": "boolean" },
+          "source_quote": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "eligibility": {
+      "type": "object",
+      "properties": {
+        "career_stage": { "type": "array", "items": { "type": "string" } },
+        "nationality": { "type": ["string", "null"] },
+        "region_restriction": { "type": ["string", "null"] },
+        "membership_required": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    },
+    "fees": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tier", "amount", "currency", "grounded"],
+        "properties": {
+          "tier": { "type": "string" },
+          "amount": { "type": "number" },
+          "currency": { "type": "string", "minLength": 3, "maxLength": 3 },
+          "grounded": { "type": "boolean" },
+          "source_quote": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "funding": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "source_url"],
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "enum": ["travel_scholarship", "bursary", "waiver", "caregiver_grant", "award"] },
+          "deadline": { "type": ["string", "null"] },
+          "amount_note": { "type": ["string", "null"] },
+          "eligibility_notes": { "type": "string" },
+          "grounded": { "type": "boolean" },
+          "source_quote": { "type": ["string", "null"] },
+          "source_url": { "type": "string" }
+        }
+      }
+    },
+    "past_editions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "year": { "type": "integer" },
+          "theme": { "type": ["string", "null"] },
+          "city": { "type": ["string", "null"] },
+          "representative_papers": { "type": "array", "items": { "type": "string" } },
+          "source_url": { "type": "string" }
+        }
+      }
+    },
+    "standing_signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["signal", "grounded"],
+        "properties": {
+          "signal": { "type": "string" },
+          "grounded": { "type": "boolean" },
+          "source_url": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "source_url": { "type": "string" },
+    "extracted_at": { "type": "string" },
+    "predatory_flag": { "type": "boolean" },
+    "predatory_reasons": { "type": "array", "items": { "type": "string" } }
+  }
+}

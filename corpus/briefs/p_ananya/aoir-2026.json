@@ -1,0 +1,124 @@
+{
+  "opportunity_id": "aoir-2026",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "AoIR 2026 Access Grant",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Up to 5 Access Grants of up to 2,000 USD each, and up to 5 Access Grants of 500 USD each; reimburses travel or accommodation costs.",
+      "deadline": "2026-07-10",
+      "cycle": "Annual, tied to AoIR's conference cycle; opens after abstract acceptance",
+      "requires": "AoIR membership (or willingness to join) + a paper/panel/roundtable/fishbowl accepted for AoIR2026",
+      "eligible": "no",
+      "why": "2026 cycle closed (10 Jul 2026); expect it again for AoIR 2027",
+      "grounded": true,
+      "source_quote": "up to 5 Access Grants of up to 2,000 USD each, and up to 5 Access Grants of 500 USD each.",
+      "source_url": "https://members.aoir.org/aoir-2026-access-grant",
+      "sequence_note": "Deadline already passed for AoIR2026; watch for the AoIR2027 Access Grant call after next year's abstract acceptances."
+    },
+    {
+      "name": "ICSSR Scheme for Participation in International Seminar/Conference Abroad",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "PhD/PDF scholars without other funding: full financial assistance (airfare, visa, insurance, local conveyance, stay, registration).",
+      "deadline": null,
+      "cycle": "Rolling, apply online at least 3 months before the conference date",
+      "requires": "Formal acceptance letter from organizers to present a paper (email invites insufficient) + full paper",
+      "eligible": "no",
+      "why": "AoIR2026's CFP closed 1 March 2026, so she can only attend, not present; ICSSR's core requirement (a paper being presented) isn't met for this edition",
+      "grounded": true,
+      "source_quote": "PhD/PDF scholars and SC/ST/PwD faculty without other funding: full financial assistance.",
+      "source_url": "https://icssr.org/participation-international-seminar-abroad",
+      "sequence_note": "Not usable for AoIR2026; keep in mind for a future edition where she submits and is accepted to present a paper."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 125000,
+    "high": 199000,
+    "breakdown": {
+      "registration": {
+        "low": 7500,
+        "high": 9500,
+        "note": "Standard-period 'Student, Majority World' tier (India qualifies): USD 80 member / USD 100 non-member, since early-bird closed 1 Aug 2026",
+        "grounded": true
+      },
+      "travel": {
+        "low": 95000,
+        "high": 135000,
+        "note": "Return economy, India-Mexico City has no direct flights (1+ stops); web fares for this route ranged roughly USD 1,000-1,400 (~INR 1.0-1.3L) with wide swings by date; using a slightly conservative band since Mexico isn't in the standard regional heuristic table",
+        "grounded": false
+      },
+      "accommodation": {
+        "low": 12000,
+        "high": 43000,
+        "note": "5 nights (4 conference days + 1) in Mexico City, hostel/budget (~INR 2,400/night) to mid-range hotel near the Hyatt Regency venue (~INR 8,600/night)",
+        "grounded": false
+      },
+      "visa": {
+        "low": 10500,
+        "high": 11500,
+        "note": "Mexican visitor visa consular fee ~USD 56 (~INR 5,375) plus the mandatory FMM entry form ~USD 57 (~INR 5,470); waived only if she already holds a valid multiple-entry US, UK, Canadian, Japanese or Schengen visa/residence permit",
+        "grounded": true,
+        "source": "https://embamex.sre.gob.mx/india/index.php/es/consulares/visas"
+      }
+    },
+    "assumptions": [
+      "USD to INR at 95.96 (corpus/fx.json, as of 2026-09-18, open.er-api.com)",
+      "Student, Majority World registration tier at the current standard-period fee (early-bird window closed)",
+      "No direct India-Mexico City flights found; fare estimate is inferred, not a live quote",
+      "Excludes meals, local transport, and travel insurance",
+      "Visa cost assumes she does not already hold a qualifying US/UK/Schengen visa"
+    ],
+    "over_budget": true,
+    "net_note": "No funding currently applies: the Access Grant's 2026 cycle is closed and ICSSR requires a paper being presented, which doesn't apply to attend-only participation. So the ₹1.25L-1.99L range is fully out-of-pocket, and the high end already exceeds her ₹1.5L budget."
+  },
+  "priority": {
+    "score": 70,
+    "weights": { "fit": 0.269, "standing": 0.192, "network": 0.154, "outcomes": 0.154, "feasibility": 0.231 },
+    "sub_scores": {
+      "fit": { "score": 88, "reason": "AoIR is the internet-studies field's main gathering; her work on platform moderation of caste speech and creator counterpublics sits squarely in AoIR's platform/internet-studies community even though it isn't a named track this year." },
+      "standing": { "score": 92, "reason": "26+ unbroken annual editions since IR1 (2000) and host is the field's own learned society (Association of Internet Researchers) — a genuinely flagship venue." },
+      "network": { "score": 80, "reason": "Large, well-established internet-research community; keynote Yásnaya Elena Aguilar Gil works on indigenous language/digital rights, adjacent to her counterpublics interest." },
+      "outcomes": { "score": 40, "reason": "Attend-only: no paper accepted, so no proceedings entry (SPIR) or presentation credit this year — the CV line is 'attended', not 'presented'." },
+      "feasibility": { "score": 45, "reason": "CFP and the Access Grant have both closed, so she'd attend without presenting or venue funding; the conference is only about 4 weeks away, which is tight for arranging a Mexican visa and booking travel, and the cost's high end already exceeds her ₹1.5L budget." }
+    }
+  },
+  "fit": {
+    "score": 0.88,
+    "rationale": "AoIR's community studies platforms, moderation and online publics — the same objects as Ananya's research on Dalit and Bahujan creators using Instagram/YouTube and how platforms moderate caste speech. The link is semantic rather than a shared keyword: 'Regenerations' as a theme and AoIR's long-running content-moderation and platform-governance strands would readily host a paper on caste speech moderation, even though no track is explicitly titled that way this year. Her adjacent field of internet/platform studies is AoIR's home turf.",
+    "matched_topics": ["content moderation & caste speech", "creator cultures & influencers", "caste & digital media"],
+    "neighborhood_evidence": ["Tarleton Gillespie's content-moderation scholarship and Sahana Udupa's platform-studies/online hate-speech work are both central to AoIR's community, though neither is confirmed as an AoIR2026 speaker"]
+  },
+  "why_go": [
+    "It's internet researchers' main annual meeting, and your work on platform moderation and creator counterpublics is exactly what this crowd studies and cites.",
+    "26+ editions since 2000, run by the field's own learned society — a strong line for your CV even as an attendee.",
+    "You'd be in the room with scholars working on platform governance and online publics, useful for feedback before you write your chapters."
+  ],
+  "watch_out": [
+    "This year's CFP and the Access Grant have both closed — you'd attend, not present, and no venue funding is available.",
+    "It's only about 4 weeks out and you'd likely need a Mexican visa (unless you already hold a valid US/UK/Schengen visa); that's a tight window to arrange plus book travel, and the high end of the cost estimate is already over your ₹1.5L budget."
+  ],
+  "tagline": "Flagship internet-studies gathering, but this year's CFP and grant are closed, and it's only weeks away.",
+  "eligible": "yes",
+  "eligibility_notes": "Open to attend without a paper; standard registration remains open through the start of the conference (14 Oct 2026). No nationality or membership restriction to attend — membership only changes the registration rate.",
+  "visa": {
+    "required": "conditional",
+    "note": "Indian passport holders need a Mexican visitor visa unless they already hold a valid multiple-entry US, UK, Canadian, Japanese or Schengen visa/residence permit, in which case they can enter on that plus the FMM form instead. The FMM entry form (~USD 57) is required of all travelers regardless.",
+    "official_source": "https://embamex.sre.gob.mx/india/index.php/es/consulares/visas",
+    "verify_flag": true,
+    "lead_days": 21
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": {
+    "dates": "grounded (deadlines quoted verbatim from the extraction)",
+    "fees": "grounded (fee table quoted verbatim)",
+    "cost": "range",
+    "visa": "advisory",
+    "eligibility": "grounded"
+  }
+}

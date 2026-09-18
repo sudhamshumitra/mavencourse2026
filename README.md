@@ -1,65 +1,64 @@
 # Grapevine
 
-**An AI agent that finds academic opportunities a humanities researcher would otherwise never hear about — and tells them whether it's worth going.**
+**An AI agent that finds academic opportunities a humanities researcher would otherwise never hear about, and tells them whether it's worth going.**
+
+> **Module 2 submission → [SKILLS.md](SKILLS.md)**: the skills, what they produced, and before/after.
 
 ---
 
 ## The problem
 
-Ask a PhD student in media studies, gender studies or sociology how they find out about conferences, journal special issues and travel scholarships, and the answer is almost always some version of *someone told me* — a supervisor's forwarded email, a senior's passing mention, a screenshot in a WhatsApp group. That's the grapevine, and it only reaches you if you're already attached to it. There is no centralised place to look, and nothing that tells you whether the opportunity you just found is worth your time and money.
+Ask a PhD student in media studies, gender studies or sociology how they find out about conferences, journal special issues and travel scholarships. The answer is almost always some version of *someone told me*: a supervisor's forwarded email, a senior's passing mention, a screenshot in a WhatsApp group. That's the grapevine, and it only reaches you if you're already attached to it. There's no central place to look, and nothing that tells you whether the opportunity you just found is worth your time and money.
 
-Grapevine is that missing place, and the missing judgement. It gathers opportunities into one feed tuned to your research, and for each one produces a decision brief: is this a fit, are you eligible, when are the deadlines in what order, what will it cost in your currency, and is there funding to cover it.
+Grapevine is that missing place, and the missing judgement. It gathers opportunities into one feed tuned to your research. For each one it answers **"is it worth going?"**: how well it fits, how well regarded it is, who you'd meet, what you'd come away with, and whether you can actually get there. That last part covers cost in your currency, visa, and the funding you could apply for, both from the organisers and from elsewhere.
 
 ## Status
 
 | | |
 |---|---|
-| **PRD** | ✅ Complete — [PRD.md](PRD.md) |
-| **Prototype** | ✅ Week 1 — clickable UX prototype, no backend — [`prototype/`](prototype/) |
-| **Demo link** | 🔗 **[maven-course-project.vercel.app](https://maven-course-project.vercel.app)** |
+| **PRD** | ✅ [PRD.md](PRD.md) |
+| **Week 1** | ✅ Clickable prototype on hand-written fixtures. Tagged [`module-1-prototype`](../../tree/module-1-prototype) |
+| **Week 2 (Module 2)** | ✅ 7 Claude Code skills in [`.claude/skills/`](.claude/skills/). They produced the real corpus in [`corpus/`](corpus/), which now drives the prototype. See **[SKILLS.md](SKILLS.md)** |
+| **Next** | Next.js + Postgres backend. The same SKILL.md files become the app's runtime prompts |
 
-## The week 1 prototype
+## The prototype
 
-A clickable, single-page prototype of the whole user flow. Every screen is real and navigable; nothing calls an API. All content is hand-written fixture data in [`prototype/data.js`](prototype/data.js), so the flow can be demonstrated end to end without keys, a database or cost.
-
-**What it covers**
+A single-page prototype of the whole user flow, now running on **real calls gathered by the skills** for a fictional persona: **Ananya Rao**, a 2nd-year PhD in media studies in Hyderabad, working on caste and digital media. She has an Indian passport and INR costs, and she'd rather avoid long visa queues.
 
 | Surface | What you can do |
 |---|---|
-| Onboarding | Bootstrap a profile from an ORCID (canned), edit drafted topics and their weights, set geography, passport, currency and constraints |
-| Agent pipeline | Watch the six-step discovery run from §6 of the PRD — querier, explorer, extraction, eligibility, ranker, verification judge |
-| Feed | Ten ranked opportunities with fit scores and rationales, filters, a reserved exploration slot, a flagged predatory venue, and paste-a-link |
-| Brief | Fit rationale, sequenced deadlines with dependencies, cost breakdown in the user's currency, funding, visa advisory, and a verified / inferred label on every high-stakes field |
-| Tracker | Saved deadlines grouped by month, with `.ics` export carrying reminders and grounding notes |
-| Feedback | Dismiss-with-reason, and a visible diff of what it changed in the profile |
+| Welcome | See what the tool does in three steps |
+| Onboarding (2 steps) | Describe your research in plain words **or** browse topics by field, side by side. Pick what you want out of it (networking, publication, a well-known venue, low cost, feedback). Set passport, currency, budget and visa appetite. ORCID is optional |
+| Feed | Real opportunities ordered by a **"worth it" score** weighted by your goals, with cost ranges in INR, funding counts, visa flags, an exploration pick from a neighbouring field, and paste-a-link |
+| Brief | Five sub-scores with reasons, "why go / watch out", deadlines in the order to act (including funding and visa start dates), cost breakdown, funding from the venue and from elsewhere, and a source toggle on every verified fact |
+| Tracker | Saved deadlines by month, with `.ics` export |
+| Profile | Goals and the ranking weights they produce, plus dismiss-with-reason feedback that visibly changes them |
 
-**Persona:** Rafael Duarte Lima, third-year PhD at UFRJ, working on oral history and memory in Rio's housing-rights movements. **Demo spine:** IOHA 2027 in Chicago — one case that exercises semantic fit with zero keyword overlap, a Global-South fee tier, a bursary that only opens after acceptance, USD costs rendered in BRL, and a US visa whose interview wait is longer than the gap between acceptance and the conference.
-
-> ⚠️ Deliberately not real. Venues, deadlines, fees and visa notes are plausible composites. In the product these come from the Extraction Workers and Verification Judge described in [§7 of the PRD](PRD.md#7-system-architecture).
+> ⚠️ The calls are real, but always check the source page before acting. Visa notes are advisory only.
 
 ### Run it locally
 
-No build step and no dependencies — but it uses ES modules, so it must be served over HTTP rather than opened from the filesystem:
+No build step and no dependencies. It uses ES modules, so serve it over HTTP:
 
 ```bash
-npx serve prototype     # then open the printed URL
+npx serve prototype
 ```
+
+To rebuild the feed after rerunning skills: `node scripts/build-feed.mjs --profile ananya`.
 
 ### Deploy
 
-Configured for Vercel as a static site — [`vercel.json`](vercel.json) sets `prototype/` as the output directory and adds CSP and related security headers. No build command, no environment variables, no secrets.
-
-```bash
-npx vercel --prod
-```
+A static site on Vercel. [`vercel.json`](vercel.json) sets `prototype/` as the output directory and adds CSP and security headers. No secrets.
 
 ## What's here
 
-- **[PRD.md](PRD.md)** — full product and technical specification: problem definition, agent design and autonomy boundaries, system architecture, data schemas, security model, evaluation plan, and the phased build plan.
-- **[prototype/](prototype/)** — the week 1 clickable prototype. `index.html` · `styles.css` · `app.js` (routing and interaction) · `data.js` (all fixture content).
+- **[SKILLS.md](SKILLS.md)**: the Module 2 write-up covering the skills, before/after, and results.
+- **[.claude/skills/](.claude/skills/)**: 7 skills, one per agent in the PRD.
+- **[corpus/](corpus/)**: skill output: profile, candidates, extracted opportunities, briefs, funders, grounding report.
+- **[prototype/](prototype/)**: `index.html` · `styles.css` · `app.js` · `data.js` · `corpus.js` (generated).
+- **[scripts/build-feed.mjs](scripts/build-feed.mjs)**: merges `corpus/` into the prototype.
+- **[PRD.md](PRD.md)**: the product and technical specification.
 
 ## Planned stack
 
-Next.js (App Router) + TypeScript on Vercel · Postgres + Prisma · Anthropic Claude API with tool use (no agent framework) · OpenAlex, a web-search API and an FX API as external services · Vercel Cron for weekly refresh.
-
-Reasoning for each choice is in [§7 of the PRD](PRD.md#7-system-architecture).
+Next.js (App Router) + TypeScript on Vercel · Postgres + Prisma · Anthropic Claude API with tool use (no agent framework) · OpenAlex, a web-search API and an FX API · Vercel Cron for a weekly refresh.

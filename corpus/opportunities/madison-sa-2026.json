@@ -1,0 +1,98 @@
+{
+  "id": "madison-sa-2026",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "Annual Conference on South Asia",
+  "host": "Center for South Asia, University of Wisconsin–Madison",
+  "host_kind": "university",
+  "theme": null,
+  "description": "The 54th Annual Conference on South Asia is a large interdisciplinary conference held in Madison, Wisconsin, covering South Asian studies through symposia, panels, single papers, and round tables. The conference has run continuously since 1971. It takes place October 28-31, 2026 at the Madison Concourse Hotel & Governor's Club.",
+  "location": {
+    "city": "Madison, Wisconsin",
+    "country": "USA",
+    "format": "in_person"
+  },
+  "dates": {
+    "start": "2026-10-28",
+    "end": "2026-10-31"
+  },
+  "deadlines": [
+    {
+      "label": "abstract",
+      "date": "2026-03-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Symposium Proposals are due March 1st"
+    },
+    {
+      "label": "abstract",
+      "date": "2026-04-05",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Panels, Single Papers, and Round Table Proposals are due April 5th."
+    },
+    {
+      "label": "early_bird",
+      "date": "2026-10-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Early bird registration is open until October 1st."
+    },
+    {
+      "label": "registration",
+      "date": "2026-10-10",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "The last day to register online is October 10th."
+    }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No graduate student travel grant or funding was found on the main site, registration, or lodging pages checked."
+  },
+  "fees": [
+    {
+      "tier": "Non-Student",
+      "amount": 300,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Non-Student: $300"
+    },
+    {
+      "tier": "Student",
+      "amount": 150,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student: $150"
+    },
+    {
+      "tier": "Emeritus",
+      "amount": 150,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Emeritus: $150"
+    }
+  ],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    {
+      "signal": "54th Annual Conference on South Asia",
+      "grounded": true,
+      "source_url": "https://southasiaconference.wisc.edu/"
+    },
+    {
+      "signal": "The conference has grown year-by-year since its inception in 1971",
+      "grounded": true,
+      "source_url": "https://southasiaconference.wisc.edu/"
+    }
+  ],
+  "source_url": "https://southasiaconference.wisc.edu/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "status_note": "Corrected on review: both abstract deadlines (Mar/Apr 2026) have passed; registration is still open."
+}

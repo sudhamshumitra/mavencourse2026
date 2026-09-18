@@ -1,0 +1,117 @@
+{
+  "opportunity_id": "msa-lund-2027",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "MSA Lund 2027 travel grants and fee waivers",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": null,
+      "deadline": null,
+      "cycle": null,
+      "requires": null,
+      "eligible": "check",
+      "why": "A limited number of travel grants and fee waivers are mentioned for the conference, but amounts and the application process are not yet published.",
+      "grounded": true,
+      "source_quote": "A limited number of travel grants and fee waivers will be available for the conference.",
+      "source_url": "https://msalund2027.dryfta.com/grants",
+      "sequence_note": "Watch the grants page for the application process once it opens; likely tied to abstract acceptance (expected after the 15 Oct 2026 deadline)."
+    },
+    {
+      "name": "ICSSR Scheme for Participation in International Seminar/Conference Abroad",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "PhD scholars without other funding: full financial assistance; faculty capped at 50% of visit cost (registration up to US$200)",
+      "deadline": null,
+      "cycle": "Rolling, apply online at least 3 months before the conference date",
+      "requires": "Formal acceptance letter from organizers (paper accepted), hard-copy application to ICG Division",
+      "eligible": "likely",
+      "why": "She is a PhD scholar in media & communication (a social-science discipline) at a recognized Indian university, presenting at an international conference abroad — the scheme's core target group.",
+      "grounded": true,
+      "source_quote": "PhD/PDF scholars and SC/ST/PwD faculty without other funding: full financial assistance.",
+      "source_url": "https://icssr.org/participation-international-seminar-abroad",
+      "sequence_note": "Apply online at least 3 months before 14 June 2027 travel (by mid-March 2027), once the abstract is accepted; needs the formal acceptance letter first."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 82500,
+    "high": 165000,
+    "breakdown": {
+      "registration": {
+        "low": 7000,
+        "high": 9500,
+        "note": "MSA membership (compulsory to present) plus conference fee; Lund's own fee isn't published yet, so estimated from the prior Lima 2024 tiered schedule (PhD/low-income-country tier: EUR 45) plus an estimated membership fee",
+        "grounded": false
+      },
+      "travel": {
+        "low": 45000,
+        "high": 85000,
+        "note": "HYD-Copenhagen/Malmo return, regional heuristic for India-Europe, booked 8-10 weeks ahead",
+        "grounded": false
+      },
+      "accommodation": {
+        "low": 19500,
+        "high": 58500,
+        "note": "5 nights in Lund for the 14-18 June conference, hostel/university housing to mid-range hotel (heuristic SEK 400-1200/night)",
+        "grounded": false
+      },
+      "visa": {
+        "low": 11000,
+        "high": 12000,
+        "note": "Schengen short-stay visa; official Sweden fee is EUR 80 plus a VFS service charge. Research students/researchers may qualify for a Schengen fee waiver - worth checking before assuming the full fee applies.",
+        "grounded": true,
+        "source": "https://www.swedenabroad.se/en/about-sweden-non-swedish-citizens/india/going-to-sweden/visiting-sweden/fees/"
+      }
+    },
+    "assumptions": [
+      "FX per corpus/fx.json (as of 2026-09-18)",
+      "MSA Lund 2027's own registration fee not yet published; used Lima 2024's tiered schedule as a proxy, labelled last year's fee",
+      "Excludes meals, local transport, and insurance",
+      "Assumes 5 nights' accommodation for the 14-18 June conference"
+    ],
+    "over_budget": true,
+    "net_note": "If the MSA travel grant/fee waiver or the ICSSR scheme comes through, out-of-pocket cost could drop well under the Rs1.5L budget; without either, the high end (~Rs1.65L) runs over budget, mainly due to the Europe flight and hotel-tier accommodation."
+  },
+  "priority": {
+    "score": 71,
+    "weights": { "fit": 0.269, "standing": 0.192, "network": 0.154, "outcomes": 0.154, "feasibility": 0.231 },
+    "sub_scores": {
+      "fit": { "score": 68, "reason": "Her secondary topic 'Partition memory online' (weight 0.55) and her broader interest in platform-based counterpublics fit the 'memory, responsibility, hope' theme, but her top-weighted topics (caste & digital media, Dalit & Bahujan counterpublics) aren't a named track here, making this plausible-with-framing rather than a core home." },
+      "standing": { "score": 78, "reason": "Hosted by a learned society (Memory Studies Association) with confirmed, recognizable keynotes (Pumla Gobodo-Madikizela, Emilie Pine, Oksana Zabuzhko); the number of past editions and indexing status aren't stated in the extraction." },
+      "network": { "score": 70, "reason": "MSA's flagship annual conference offers broad international networking in memory studies, though none of the confirmed keynotes overlap with her specific citation neighborhood (Udupa, Arora, Gillespie, etc.)." },
+      "outcomes": { "score": 55, "reason": "No proceedings, special issue, or paper award is mentioned for the main conference; the structured feedback format for postgraduates is bundled into the separate MSA Forward preconference workshop instead." },
+      "feasibility": { "score": 78, "reason": "Only the high end of the cost estimate (~Rs1.65L) exceeds her Rs1.5L budget; a Schengen visa is a moderate (not severe) hurdle against her 'prefer_none' visa tolerance; partial credit given since MSA travel grants/waivers and the ICSSR scheme could cover a meaningful share, though amounts aren't yet confirmed." }
+    }
+  },
+  "fit": {
+    "score": 0.68,
+    "rationale": "MSA Lund's theme, 'memory, responsibility, hope', is a natural home for her secondary interest in Partition memory online, and her broader work on how platforms shape collective counterpublic narratives has a real conceptual link to memory studies. However, her thesis's core focus - caste, Dalit/Bahujan creators, and platform moderation - isn't itself a named track or theme at this conference, so it would need to be framed through a memory-studies lens rather than presented as a direct fit.",
+    "matched_topics": ["Partition memory online"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's the flagship annual conference of the Memory Studies Association, with well-known keynote speakers (Gobodo-Madikizela, Pine, Zabuzhko), giving real international visibility.",
+    "Her interest in Partition memory online has a genuine home under this year's 'memory, responsibility, hope' theme.",
+    "Held in June, which is inside her available travel months."
+  ],
+  "watch_out": [
+    "The registration fee, and any travel-grant amounts/process, haven't been published yet - budget for the higher end (~Rs1.65L) until they are.",
+    "A Schengen visa is required; even though Sweden's process is comparatively routine, it still needs a VFS appointment and should be started early given her preference to avoid visa queues."
+  ],
+  "tagline": "Flagship memory conference; fits her Partition work, but fees/grants unpublished.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality, or region restriction is stated for attending; MSA membership and fee payment are compulsory to present, which is a routine registration step rather than an eligibility barrier.",
+  "visa": {
+    "required": "yes",
+    "note": "Schengen short-stay (Type C) visa needed for Sweden; official fee is EUR 80 plus a VFS service charge. Processing is typically around 15 working days, but book the VFS appointment well ahead given her preference to avoid visa queues.",
+    "official_source": "https://www.swedenabroad.se/en/about-sweden-non-swedish-citizens/india/going-to-sweden/visiting-sweden/fees/",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

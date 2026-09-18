@@ -38,8 +38,10 @@ Because the value is in the pipeline, not a single call: query multiple sources,
 Three surfaces, in the order a user meets them:
 
 1. **Preferences** — a research profile (topics, career stage, geography, currency, constraints), bootstrapped from an ORCID/OpenAlex ID or filled in manually. Always user-confirmable.
-2. **The feed** — the landing page: a ranked list of upcoming opportunities scored against the profile, with a reserved slice for deliberate exploration so it doesn't collapse into a filter bubble. A "paste a link" box covers anything the feed missed.
-3. **The brief** — click an opportunity to get what it's about, past themes/papers, eligibility, sequenced deadlines, cost estimate in your currency, funding options, and a visa advisory — each field marked verified or inferred.
+2. **The feed** — the landing page: upcoming opportunities ordered by a **"worth it" priority score**, with a reserved slice for deliberate exploration so it doesn't collapse into a filter bubble. A "paste a link" box covers anything the feed missed.
+3. **The brief** — click an opportunity to get **"Is it worth going?"**: five sub-scores with plain-language reasons (fit · standing · network value · outcomes · feasibility), "why go / watch out", then past themes/papers, eligibility, sequenced deadlines, cost estimate in your currency, funding from the venue *and* from external funders (national councils, university, trusts), and a visa advisory — each field marked verified or inferred.
+
+**Priority score.** Each sub-score is 0–100 with a reason naming its evidence. They are combined with weights set by the user's **goals** (networking · publication · visibility · low cost · feedback — pick up to three), and nudged by dismiss-with-reason feedback. Journal calls drop network value. Predatory-flagged venues are capped at 30. This is what separates Grapevine from a list: a first-generation PhD student may not know which venues carry weight, who they'd meet, or that their national research council funds conference travel.
 
 **Out of scope for v1** (deliberate cuts): application/cover-letter drafting, broad open-web crawling (curated sources + one bounded explorer pass only), a second built-out vertical, real-time trend detection, and anything that acts on the user's behalf (see §4).
 
@@ -143,7 +145,9 @@ Two loops worth noting: the **outer** discovery loop runs weekly (cron) and feed
   "geography": { "country": "string", "passport": "string" },
   "currency": "INR",
   "constraints": { "max_cost": 0, "months_available": ["string"], "visa_tolerance": "any|prefer_none|none", "format": "any|in_person|online" },
-  "profile_type": "academic | creative"
+  "fields": ["string"], "adjacent_fields": ["string"],        // drive discovery beyond keywords
+  "goals": ["networking|publication|visibility|low_cost|feedback"],  // ≤3, set priority weights
+  "profile_type": "academic"
 }
 ```
 
@@ -167,10 +171,14 @@ Two loops worth noting: the **outer** discovery loop runs weekly (cron) and feed
 // DecisionBrief
 {
   "opportunity_id": "string", "profile_id": "string",
+  "priority": { "score": 0, "weights": { "fit": 0.0, "standing": 0.0, "network": 0.0, "outcomes": 0.0, "feasibility": 0.0 },
+    "sub_scores": { "fit|standing|network|outcomes|feasibility": { "score": 0, "reason": "string" } } },
+  "why_go": ["string"], "watch_out": ["string"], "tagline": "string",
   "fit_score": 0.0, "fit_rationale": "string", "matched_topics": ["string"], "neighborhood_evidence": ["string"],
   "eligible": "yes | no | conditional", "eligibility_notes": "string",
   "deadline_sequence": [{ "date": "ISO", "label": "string", "act_by_reasoning": "string" }],
-  "funding": [{ "name": "string", "deadline": "ISO", "eligible": true, "source_url": "string" }],
+  "funding": [{ "name": "string", "source": "venue | external", "deadline": "ISO|null", "cycle": "string|null",
+    "requires": "string|null", "eligible": "yes|likely|check|no", "sequence_note": "string", "source_url": "string" }],
   "cost_estimate": { "currency": "INR", "low": 0, "high": 0, "breakdown": { "registration": 0, "travel": 0, "accommodation": 0, "visa": 0 }, "assumptions": ["string"] },
   "visa": { "required": "yes|no|conditional", "note": "string", "official_source": "url", "verify_flag": true },
   "confidence": { "dates": "verified|inferred", "fees": "verified|inferred", "cost": "range", "visa": "advisory" },
@@ -221,7 +229,11 @@ Keep a running failure log alongside the numbers — for an agentic product it's
 
 ---
 
-## 10. Phased build plan
+## 10. Skills: how the agents are specified
+
+Each agent in §6 is written first as a **Claude Code skill** (`.claude/skills/<name>/SKILL.md`): draft-profile, scout-opportunities, extract-opportunity, estimate-cost, find-funding, compose-brief, verify-grounding. During the build they run by hand to produce the real corpus. In the app, the same files become the runtime prompts, so the judgement is written once. See [SKILLS.md](SKILLS.md).
+
+## 11. Phased build plan
 
 0. **Scaffold** — repo, schemas, Postgres, Claude client wired, one seed profile created.
 1. **Corpus + ingestion** — Extraction Worker over ~30 real humanities calls; paste-a-link path.
@@ -234,7 +246,7 @@ Phases 0–3 alone are a complete, demoable product. Phase 4 is what makes it re
 
 ---
 
-## 11. Open decisions
+## 12. Open decisions
 
 **Feedback mechanism (needed by Phase 4):**
 

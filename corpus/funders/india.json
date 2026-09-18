@@ -1,0 +1,101 @@
+{
+  "country": "India",
+  "generated_at": "2026-09-19",
+  "for": "humanities/social-science PhD, international conference travel",
+  "funders": [
+    {
+      "name": "ICSSR Scheme for Participation in International Seminar/Conference Abroad",
+      "url": "https://icssr.org/participation-international-seminar-abroad",
+      "category": "a",
+      "eligible_who": "PhD/postdoctoral scholars in social science disciplines (incl. media & communication, South Asian studies) at recognized Indian universities/institutes, in advanced stage of research; also regular faculty",
+      "amount_note": "Faculty: up to 50% of visit cost (airfare, visa, insurance, local conveyance, stay, registration up to US$200). PhD/PDF scholars and SC/ST/PwD faculty without other funding: full financial assistance.",
+      "cycle": "Rolling, apply online at least 3 months before the conference date; not considered after the conference has occurred",
+      "requires": "Formal acceptance letter from organizers (email invites insufficient), full paper to be presented, hard-copy application to ICG Division",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Governing circular dated 26 August 2026"
+    },
+    {
+      "name": "UGC Travel Grant Scheme (for conference/seminar abroad)",
+      "url": "https://www.indiascienceandtechnology.gov.in/funding-opportunities/grants-for-conference-seminars/ugc-travel-grant-scheme",
+      "category": "b",
+      "eligible_who": "Permanent college/university teachers, librarians, vice-chancellors and UGC officers presenting at foreign conferences — NOT open to PhD scholars directly",
+      "amount_note": "Covers admissible foreign travel, registration fee, per-diem, visa fee (exact cap not verified on current page)",
+      "cycle": "Apply to UGC Joint Secretary (Travel Grant) at least 2 months before the conference",
+      "requires": "Acceptance letter from organizers, copy/full text of paper being presented",
+      "last_checked": "2026-09-19",
+      "stale": true,
+      "source_note": "Underlying UGC guideline PDFs found are dated 2009; scheme is faculty-only, not a fit for a PhD scholar's own travel"
+    },
+    {
+      "name": "National Fellowship for Other Backward Classes (NFOBC) — contingency grant",
+      "url": "https://www.indiascienceandtechnology.gov.in/nurturing-minds/scholarships/phd/national-fellowship-other-backward-classes-nfobc",
+      "category": "b",
+      "eligible_who": "OBC-category, full-time M.Phil/PhD scholars in recognized Indian institutions with family income under Rs 6 lakh/year (caste/income-restricted, not universal)",
+      "amount_note": "Contingency grant: Rs 10,000/year (years 1-2), then Rs 20,500/year for Humanities & Social Sciences; separate from monthly stipend of Rs 25,000-28,000 + HRA. Contingency funds can be used toward travel/fieldwork/conference costs.",
+      "cycle": "Annual selection cycle via nfobc.ugc.ac.in; exact 2026-27 deadline not confirmed",
+      "requires": "OBC certificate, income certificate, PhD registration proof",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "General fellowship contingency, not a dedicated travel grant; only applicable if the scholar qualifies under OBC/income criteria"
+    },
+    {
+      "category": "c",
+      "none_found": true,
+      "note": "Home institution: check the university's research/dean-of-students or international-relations office for an internal PhD conference-travel fund; specific to the institution and not tracked here."
+    },
+    {
+      "name": "Charles Wallace India Trust (CWIT) grants",
+      "url": "https://www.charleswallaceindiatrust.com/scholarships",
+      "category": "d",
+      "eligible_who": "Indian citizens aged 28-45 in visual/performing arts, heritage conservation, history, literature, philosophy — NOT media studies/social-science PhD research or conference travel",
+      "amount_note": "Short Research Grants up to GBP 1,750 (for eligible arts/humanities fields only)",
+      "cycle": "Annual; 2026-27 long-term and short research grant cycles are listed as closed on the current page",
+      "requires": "Not applicable to this profile's field/purpose",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Real UK-India trust, but scope (arts/heritage professionals) does not cover a media-studies PhD's conference travel"
+    },
+    {
+      "name": "Shastri Indo-Canadian Institute — Scholar Travel Subsidy Grant (SSTSG)",
+      "url": "https://shastriinstitute.org/students-india-canada",
+      "category": "d",
+      "eligible_who": "Indian and Canadian scholars/students building India-Canada research linkages (relevant only if destination is Canada or a Canada-linked event)",
+      "amount_note": "Travel subsidy amount not confirmed on current page",
+      "cycle": "2025-26 cycle closed (deadline was 12 Oct 2025); 2026-27 cycle not yet announced",
+      "requires": "Institutional India-Canada linkage/application via SICI grants portal (sicigms.org)",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Only relevant if the conference/destination involves Canada; next cycle dates not yet posted"
+    },
+    {
+      "name": "IAMCR Travel Grants (for IAMCR annual conference)",
+      "url": "https://iamcr.org/travel_grants",
+      "category": "e",
+      "eligible_who": "Early-career (untenured) IAMCR members of ≥1 year, residing in low/middle-income countries (India qualifies), first author of a paper accepted for full presentation at the IAMCR annual conference",
+      "amount_note": "Up to 18 grants, each max USD 2,000",
+      "cycle": "Annual, tied to each year's IAMCR conference; 2026 cycle (Galway) deadline was 20 March 2026 — apply early in the year for the next conference",
+      "requires": "Paper acceptance confirmation from section/working-group head, IAMCR membership, full paper by the stated deadline",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Directly relevant field society for media & communication research; recurring annual scheme"
+    },
+    {
+      "name": "Association for Asian Studies (AAS) — South Asia Council Conference Award",
+      "url": "https://www.asianstudies.org/grants-awards/council-grants/south-asia-council-conference-award/",
+      "category": "e",
+      "eligible_who": "AAS members accepted to present South Asia-related research at any AAS-affiliated conference (Annual Conference, AAS-in-Asia, AAS Regional Conferences) in 2026",
+      "amount_note": "Roughly 11 awards of USD 150 and 16 awards of USD 200 (small travel subsidies)",
+      "cycle": "Rolling for 2026; note the AAS2026 Vancouver funding cap has already been reached, so only AAS-in-Asia 2026 and AAS Regional Conferences 2026 remain open",
+      "requires": "AAS membership, conference acceptance on South Asia topic",
+      "last_checked": "2026-09-19",
+      "stale": false,
+      "source_note": "Page returned 403 to direct fetch; details corroborated via multiple independent search-result excerpts of the AAS site dated 2026, not a raw page fetch"
+    },
+    {
+      "category": "f",
+      "none_found": true,
+      "note": "No current destination-specific scheme found for an Indian early-career humanities/social-science scholar traveling to the UK, US, Europe or Australia. The Australia-India Strategic Research Fund (AISRF) EMCR Fellowship runs in the opposite direction (Australian researchers visiting India) and is not a fit."
+    }
+  ]
+}

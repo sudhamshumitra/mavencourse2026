@@ -1,0 +1,288 @@
+{
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "budget_used": { "searches": 26, "fetches": 26 },
+  "candidates": [
+    {
+      "url": "https://aoir.org/aoir2026/",
+      "title": "AoIR 2026 — Regeneration(s) (27th Annual Conference)",
+      "host": "Association of Internet Researchers (AoIR)",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "internet studies (adjacent field) -> AoIR is the flagship society; CFP closed 1 Mar 2026 but the conference itself (14-17 Oct 2026, Mexico City) is still ahead, so attend-only. AoIR runs an Access Grant (up to $2,000/$500) and a Kelly Quinn Travel Scholarship for students/scholars facing financial barriers - this cycle's grant deadline (10 Jul 2026) already passed, but it confirms the society funds travel for exactly the kind of low-budget, Global-South applicant Ananya is; worth applying for the AoIR2027 cycle.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent_field 'internet studies' -> searched 'internet research association annual conference' -> found Association of Internet Researchers (aoir.org)",
+        "layer c: recurrence - aoir.org/aoir2026/ confirmed as the society's next annual meeting page (27th edition)",
+        "verified dates (14-17 Oct 2026, Mexico City) and CFP deadline (1 March 2026, already passed) via aoir.org/aoir2026/ and aoir.org/aoir2026/aoir2026cfp/ -> status attend-only since the event itself is still future",
+        "checked members.aoir.org/aoir-2026-access-grant for student travel funding: confirmed AoIR offers Access Grants (up to $2,000/$500) to accepted presenters facing financial hardship or underrepresentation; this cycle's deadline (10 Jul 2026) already passed"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.basas.org.uk/news-events/basas-conference/",
+      "title": "BASAS Annual Conference 2027 (British Association for South Asian Studies)",
+      "host": "British Association for South Asian Studies (BASAS)",
+      "type": "conference",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "likely Dec 2026-Mar 2027, based on the 2026 edition (11-13 Sep 2026 at SOAS) already having passed",
+      "relevance": "field 'South Asian studies' -> BASAS is the UK's dedicated society; a members-only, low-key UK conference is a plausible next step after a first international presentation, and UK visas are comparatively less onerous than a US visa queue.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'South Asian studies' -> searched 'South Asian studies association annual conference' -> found British Association for South Asian Studies (BASAS)",
+        "layer c: recurrence - basas.org.uk conference page confirms the 2027 edition will be hosted at Newcastle University; the 2026 edition (SOAS, 11-13 Sep 2026) has already passed and 2027 dates/CFP are not yet posted -> status watch"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.easas.eu/ecsas/",
+      "title": "29th European Conference on South Asian Studies (ECSAS 2027), Poznań",
+      "host": "European Association for South Asian Studies (EASAS)",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-09-30",
+      "predicted_cfp_window": null,
+      "relevance": "field 'South Asian studies' -> EASAS is the European society; a large South Asianist audience for caste/digital-media work, and European travel/visas are often easier than US routes. Panel proposal window closes 30 Sep 2026 (11 days out); individual paper submissions open Nov 2026 and run to 15 Jan 2027 for those who don't make the panel deadline.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'South Asian studies' -> searched 'South Asian studies association annual conference' -> found European Association for South Asian Studies (EASAS)",
+        "layer c: recurrence - easas.eu/ecsas/ confirms next edition ECSAS 2027, Poznań, Poland, 28-31 Jul 2027; panel CFP window 3 Jul-30 Sep 2026, individual-paper window Nov 2026-15 Jan 2027 -> status open"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.icahdq.org/mpage/ICA27",
+      "title": "77th Annual ICA Conference — Centering the Human: Communication in an Age of Uncertainty",
+      "host": "International Communication Association (ICA)",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-11-02",
+      "predicted_cfp_window": null,
+      "relevance": "field 'media & communication' -> ICA is the flagship global society, with divisions (Global Communication and Social Change, Journalism Studies, etc.) that regularly host panels on platform moderation, creator culture, and Global South digital publics. Submission deadline 2 Nov 2026 (noon ET); conference 3-7 Jun 2027, Glasgow.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'media & communication' -> searched 'International Communication Association ICA annual conference' -> found ICA, the field's flagship global society",
+        "layer c: recurrence - confirmed via search snippets from icahdq.org/mpage/ICA27 (direct fetch blocked, HTTP 403): 77th annual conference, Glasgow, 3-7 Jun 2027, submission deadline 2 Nov 2026 -> status open"
+      ],
+      "found_via": null,
+      "fetch_failed": true
+    },
+    {
+      "url": "https://iamcr.org/news/sao_paulo2027",
+      "title": "IAMCR 2027 Annual Conference, São Paulo",
+      "host": "International Association for Media and Communication Research (IAMCR)",
+      "type": "conference",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "likely Nov 2026-Feb 2027, based on IAMCR's typical CFP-to-conference lead time seen in prior cycles",
+      "relevance": "field 'media & communication' -> IAMCR is the other major global media/communication society, historically strong on Global South and political-economy framings relevant to counterpublics and platform governance. 2027 conference confirmed for São Paulo (18-22 Jul), theme 'Multilateralism, Democracy, Diversity: Communication for a More Just World' - CFP not yet published.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'media & communication' -> searched 'IAMCR International Association for Media and Communication Research conference' -> found IAMCR",
+        "layer c: recurrence - iamcr.org/news/sao_paulo2027 confirms the 2027 conference in São Paulo, 18-22 Jul 2027; CFP not yet posted -> status watch"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://southasiaconference.wisc.edu/",
+      "title": "54th Annual Conference on South Asia",
+      "host": "Center for South Asia, University of Wisconsin-Madison",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "field 'South Asian studies' -> the largest annual South Asia studies gathering in the US, with panels covering digital/media topics; single-paper/panel deadline (5 Apr 2026) has passed, but the conference (28-31 Oct 2026, Madison WI) is still ahead, so attend-only - useful to scout this year and submit for the next cycle.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'South Asian studies' -> searched 'South Asian studies association annual conference' -> found the Annual Conference on South Asia (Center for South Asia, UW-Madison)",
+        "layer c: recurrence - southasiaconference.wisc.edu confirms the 54th conference, Madison WI, 28-31 Oct 2026; paper/panel deadline was 5 Apr 2026 (passed) -> status attend-only since the event itself is still future"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://comm.cci.fsu.edu/faculty-research/south-asian-media-studies/south-asian-media-and-cultural-studies-conference/",
+      "title": "13th South Asian Media and Cultural Studies Conference — Digital Frontiers: Media, Culture, and AI in South Asia",
+      "host": "School of Communication, Florida State University",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-10-10",
+      "predicted_cfp_window": null,
+      "relevance": "near-exact fit: a South Asia-specific media studies conference whose 2027 sub-themes (algorithmic representation, creative labor/creator cultures, digital ethics, youth engagement) map directly onto caste/digital media and creator-culture work. Hybrid format (online option) keeps cost near zero and avoids visa queues entirely, matching her tight budget and visa-averse constraints.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer d: aggregator search with reworded topic ('South Asian diaspora media conference call for papers') surfaced the South Asian Media and Cultural Studies (SAMCS) Conference series",
+        "layer c: recurrence - comm.cci.fsu.edu confirms the 13th SAMCS, hybrid (online + Tallahassee FL), 21-22 Jan 2027, CFP deadline 10 Oct 2026, theme 'Digital Frontiers: Media, Culture, and AI in South Asia' -> status open"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.asianstudies.org/conference/",
+      "title": "AAS 2027 Annual Conference, Boston",
+      "host": "Association for Asian Studies (AAS)",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "field 'South Asian studies' -> AAS is the largest Asian-studies umbrella society (its South Asia Council serves this field directly); good for visibility to a broad Asianist audience. CFP closed 5 Aug 2026 (decisions due late Sep 2026) but the conference (18-21 Mar 2027) is still ahead, so attend-only; the same society also runs a dissertation workshop (see fellowship candidate).",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'South Asian studies' -> searched 'South Asian studies association annual conference' -> found the Association for Asian Studies (AAS), whose South Asia Council serves this field",
+        "layer c: recurrence - confirmed via search snippets (direct fetch of asianstudies.org/conference blocked, HTTP 403): AAS2027, Boston, 18-21 Mar 2027; CFP deadline 5 Aug 2026 already closed -> status attend-only since the event itself is still future"
+      ],
+      "found_via": null,
+      "fetch_failed": true
+    },
+    {
+      "url": "https://msalund2027.dryfta.com/",
+      "title": "MSA Lund 2027 — Memory, responsibility, hope (Memory Studies Association Annual Conference)",
+      "host": "Memory Studies Association (MSA)",
+      "type": "conference",
+      "status": "open",
+      "deadline_hint": "2026-10-15",
+      "predicted_cfp_window": null,
+      "relevance": "adjacent_field 'memory studies' -> directly relevant to the Partition-memory-online strand of her work. Panel/paper/roundtable proposals due 15 Oct 2026; conference 14-18 Jun 2027, Lund University, Sweden.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: adjacent_field 'memory studies' -> searched 'Memory Studies Association annual conference' -> found MSA",
+        "layer c: recurrence - msalund2027.dryfta.com and memorystudiesassociation.org confirm MSA Lund 2027, 14-18 Jun 2027, Sweden, submissions due 15 Oct 2026 -> status open"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://csaa.asn.au/conferences/",
+      "title": "CSAA 2026 — What the * is going on? Rethinking Cultural Studies in Times of Crisis",
+      "host": "Cultural Studies Association of Australasia (CSAA)",
+      "type": "conference",
+      "status": "attend-only",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "exploration pick: no keyword overlap with 'caste', 'Dalit', or 'platform' - but cultural studies is the disciplinary home of counterpublic theory itself, and the conference runs a dedicated postgraduate 'Prefix' day. Attending (rather than presenting, since the CFP already closed) could sharpen how she frames Dalit-Bahujan counterpublics theoretically, for a differently-positioned Global South/Australasian audience. CFP closed (Jun/Jul 2026) but conference (7-10 Dec 2026, Sydney) is still ahead, so attend-only.",
+      "exploration": true,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer e: capped open search broadening from adjacent_field 'anthropology of media' toward cultural-studies societies generally -> found Cultural Studies Association of Australasia (CSAA)",
+        "layer c: recurrence/verification - csaa.asn.au and a commlist CFP thread confirm CSAA2026, UTS Sydney, 7-10 Dec 2026 (postgrad 'Prefix' day 7 Dec), submissions already closed (deadline ~Jun-Jul 2026) -> status attend-only",
+        "selected as the mandatory exploration candidate: adjacent-field venue about power, culture and crisis with no direct keyword overlap with caste or platform studies"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10",
+      "title": "CASTE: A Global Journal on Social Exclusion — General Call for Papers",
+      "host": "Brandeis University Library (J-CASTE)",
+      "type": "journal_call",
+      "status": "open",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "topic 'caste & digital media' -> the flagship open-access journal dedicated to caste and caste-like exclusion; general call is rolling with no fixed deadline, open access, no publication fees - a low-cost, high-fit venue to place a chapter-derived article. Rolling.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: topic 'caste & digital media' + field 'South Asian studies' -> searched 'CASTE: A Global Journal on Social Exclusion call for papers' -> found the journal's general CFP",
+        "layer b: literature neighbourhood - OpenAlex search on 'caste digital media' (works since 2023-09-19) surfaced this journal repeatedly, including the article 'Indian Media and Caste: of Politics, Portrayals and Beyond'",
+        "verified via journals.library.brandeis.edu/index.php/caste/announcement/view/10: open, rolling general call, open-access, no fees -> status open (rolling)"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.psi-web.org/2026/08/05/call-for-proposals-caste-corporeality-and-performance-proposal-deadline-20-september-2026/",
+      "title": "Caste, Corporeality, and Performance — Special Issue, GPS: Global Performance Studies",
+      "host": "Performance Studies international (PSi) / GPS: Global Performance Studies",
+      "type": "journal_call",
+      "status": "open",
+      "deadline_hint": "2026-09-20",
+      "predicted_cfp_window": null,
+      "relevance": "topic 'caste & digital media' -> examines caste as embodied/performed practice and explicitly accepts video, audio and creative formats alongside text, which overlaps with her Instagram/YouTube creator-culture material; deadline is extremely close (tomorrow), so only actionable if a short proposal (max 500 words) can be turned around immediately.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer d: reworded topic search ('\"digital caste\" OR \"caste and social media\" special issue call for papers') surfaced a related caste-studies call thread",
+        "layer e: capped open search on 'caste' + 'special issue 2026' -> found the Performance Studies international (PSi) call for GPS: Global Performance Studies, 'Caste, Corporeality, and Performance'",
+        "verified via psi-web.org: proposal deadline 20 Sep 2026, open-access journal, accepts video/audio/creative-format submissions -> status open (deadline imminent)"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://saarcculture.org/call-for-papers-cultural-currents-journal-of-south-asian-culture-issue-no-2-2026/",
+      "title": "Cultural Currents: Journal of South Asian Culture, Issue No.2, 2026 — Tracing Trends: Mapping Popular Culture in South Asia",
+      "host": "SAARC Cultural Centre, Colombo",
+      "type": "journal_call",
+      "status": "open",
+      "deadline_hint": null,
+      "predicted_cfp_window": null,
+      "relevance": "a South Asia-wide popular-culture journal whose Issue 2 theme (mapping regional pop-culture trends) is a plausible home for work on creator cultures/influencers across South Asia; exact submission deadline could not be confirmed because the site blocked fetching - treat as tentative and verify with sccpublications@gmail.com before relying on it.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer d: reworded topic search on South Asian popular culture / creator cultures ('South Asian Popular Culture ... call for papers 2026 creators OR influencers India') -> found 'Cultural Currents: Journal of South Asian Culture, Issue No.2, 2026'",
+        "fetch of saarcculture.org blocked (HTTP 403); kept the candidate on search-snippet evidence per the fetch-failed rule"
+      ],
+      "found_via": null,
+      "fetch_failed": true
+    },
+    {
+      "url": "https://www.asianstudies.org/call-for-proposals-articulating-south-asian-futures-projects-practices-and-emplacement-dissertation-workshop/",
+      "title": "Articulating South Asian Futures: Projects, Practices, and Emplacement — AAS South Asia Council Dissertation Workshop",
+      "host": "AAS South Asia Council / Social Science Research Council (SSRC)",
+      "type": "fellowship",
+      "status": "watch",
+      "deadline_hint": null,
+      "predicted_cfp_window": "next cycle likely opens ~Jan-Apr 2027, extrapolating from this cycle's 30 May 2026 deadline for an Oct 2026 workshop",
+      "relevance": "a small, funded dissertation workshop for South Asianist PhD candidates - exactly the 'feedback before writing chapters' goal in her profile, and typically covers travel/lodging, which helps with her tight budget. This cycle's deadline (30 May 2026, workshop 3-5 Oct 2026 at NYU Shanghai) has already passed, so watch for the next annual cycle.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a: field 'South Asian studies' -> society graph on the Association for Asian Studies -> its South Asia Council runs dissertation/early-career workshops",
+        "layer c: recurrence - asianstudies.org confirms 'Articulating South Asian Futures' dissertation workshop, NYU Shanghai, 3-5 Oct 2026, advisor letter-of-recommendation deadline 30 May 2026 (passed) -> status watch, next cycle predicted for spring 2027"
+      ],
+      "found_via": null
+    },
+    {
+      "url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university",
+      "title": "Joint Scholarship Programme of the South Asia Institute, Heidelberg University & Max Weber Forum for South Asian Studies Delhi — Summer 2027",
+      "host": "South Asia Institute, Heidelberg University",
+      "type": "fellowship",
+      "status": "open",
+      "deadline_hint": "2026-12-01",
+      "predicted_cfp_window": null,
+      "relevance": "a 3-month, funded research stay in Germany (€1,200/month, up to €1,500 travel reimbursement, plus rental-cost support) for young South Asian scholars aiming to build research collaborations - a genuine feedback/visibility opportunity outside India at manageable net cost since travel is reimbursed. Note: the call's wording about a 'doctoral certificate' should be double-checked with SAI to confirm it accepts currently-enrolled PhD students (2nd year) and not only PhD-holders.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer e: capped open search ('summer school OR fellowship digital media South Asia PhD travel grant early career 2027') -> found the SAI Heidelberg Joint Scholarship Programme",
+        "verified via sai.uni-heidelberg.de: application deadline 1 Dec 2026 23:59 CET, open to young scholars from India/Nepal/Pakistan/Sri Lanka/Bangladesh, stay Apr-Jun 2027 -> status open"
+      ],
+      "found_via": "https://opportunitiesforyouth.org/2026/08/28/heidelberg-university-joint-scholarship-programme-2027-fully-supported-3-month-research-fellowship-for-young-scholars-from-south-asia/"
+    },
+    {
+      "url": "https://www.memorystudiesassociation.org/call-for-papers-msa-lund-2027/",
+      "title": "MSA Forward — Postgraduate Workshop (preconference to MSA Lund 2027)",
+      "host": "Memory Studies Association",
+      "type": "fellowship",
+      "status": "open",
+      "deadline_hint": "2026-10-15",
+      "predicted_cfp_window": null,
+      "relevance": "a dedicated early-career/postgraduate preconference of the Memory Studies Association - a structured, small-group way for a PhD student to get feedback from senior memory scholars on the Partition-memory-online material, alongside (and cheaper to combine with) the main MSA conference.",
+      "exploration": false,
+      "predatory_suspect": false,
+      "discovery_trace": [
+        "layer a/c: same society-graph and recurrence chain as MSA Lund 2027 (adjacent_field 'memory studies') -> memorystudiesassociation.org names 'MSA Forward' as a postgraduate preconference workshop, 13-14 Jun 2027, Copenhagen/Lund",
+        "kept as a separate candidate under the 'same society, two events' rule: the preconference is often the best entry point for PhD students",
+        "shares the main conference's 15 Oct 2026 submission deadline -> status open"
+      ],
+      "found_via": null
+    }
+  ]
+}

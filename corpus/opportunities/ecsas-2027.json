@@ -1,0 +1,56 @@
+{
+  "id": "ecsas-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "29th European Conference on South Asian Studies (ECSAS 2027)",
+  "host": "European Association for South Asian Studies (EASAS)",
+  "host_kind": "learned_society",
+  "theme": null,
+  "description": "ECSAS 2027 is the 29th European Conference on South Asian Studies, held in Poznań, Poland, 28-31 July 2027, organized by EASAS. The call for panel proposals is currently open (3 July - 30 September 2026); panel conveners will be notified of outcomes in October 2026, and a call for individual paper submissions within accepted panels will follow (opening November 2026, closing 15 January 2027). No registration fees or venue funding/travel grants are listed on the page.",
+  "location": {
+    "city": "Poznań",
+    "country": "Poland",
+    "format": "in_person"
+  },
+  "dates": {
+    "start": "2027-07-28",
+    "end": "2027-07-31"
+  },
+  "deadlines": [
+    {
+      "label": "abstract",
+      "date": "2026-09-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "The call for panel proposals is open from 3 July to 30 September 2026."
+    },
+    {
+      "label": "full_paper",
+      "date": "2027-01-15",
+      "depends_on": "abstract",
+      "grounded": true,
+      "source_quote": "Call for papers will be open on November 2026 till Junuary 15, 2027."
+    }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": "At least one convener of each panel must be affiliated with a European institution.",
+    "membership_required": true,
+    "notes": "All panel conveners must be current EASAS members in good standing, with no unpaid invoices at the time of submission. Panel results will be announced in October 2026; selected panel abstracts will be published on the conference website on 16 November 2026. No registration fees, costs, or travel/bursary funding were found on the page (fees TBA)."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    {
+      "signal": "Conference is titled the '29th European Conference on South Asian Studies', indicating a long-running biennial/periodic series organized by EASAS.",
+      "grounded": true,
+      "source_url": "https://www.easas.eu/ecsas/"
+    }
+  ],
+  "source_url": "https://www.easas.eu/ecsas/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

@@ -1,0 +1,47 @@
+{
+  "id": "caste-journal-open-call",
+  "type": "journal_call",
+  "status": "open",
+  "title": "General Call for Papers — CASTE: A Global Journal on Social Exclusion",
+  "host": "CASTE: A Global Journal on Social Exclusion (Brandeis University Library)",
+  "host_kind": "publisher",
+  "theme": "Caste and caste-like systems of marginalization and inter-generational oppression of religious, racial, and cultural minorities globally",
+  "description": "CASTE: A Global Journal on Social Exclusion (also referred to as J-CASTE), published via Brandeis University Library in collaboration with the Center for Global Development and Sustainability at Brandeis University's Heller School, issues a standing/general call for papers on caste and caste-like systems of exclusion worldwide. The announcement text refers to 'forthcoming issues in 2021 through 2024,' which is stale relative to the extraction date; no current specific submission deadline is stated on the page, so this is treated as a rolling call. The journal states it charges no publication fees.",
+  "location": { "city": "—", "country": "—", "format": "online" },
+  "dates": { "start": null, "end": null },
+  "deadlines": [],
+  "eligibility": {
+    "career_stage": ["established scholars", "emerging scholars", "policy officials", "practitioners"],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Rolling/general call; no specific deadline given on the page. The Editorial Team welcomes submissions from both established and emerging scholars, policy officials, and practitioners."
+  },
+  "fees": [
+    {
+      "tier": "Article Processing Charge",
+      "amount": 0,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "J-CASTE is a free Open Access journal with no publication fees."
+    }
+  ],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    {
+      "signal": "Editorial Advisory Board of 30 leading scholars from 10 countries",
+      "grounded": true,
+      "source_url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10"
+    },
+    {
+      "signal": "Published via Brandeis University Library in collaboration with the Center for Global Development and Sustainability, Heller School, Brandeis University",
+      "grounded": true,
+      "source_url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10"
+    }
+  ],
+  "source_url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

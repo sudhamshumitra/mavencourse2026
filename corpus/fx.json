@@ -1,0 +1,14 @@
+{
+  "base": "INR",
+  "as_of": "2026-09-18T00:02:31Z",
+  "source": "https://open.er-api.com/v6/latest/INR",
+  "inr_per": {
+    "USD": 95.96,
+    "EUR": 110.07,
+    "GBP": 128.17,
+    "AUD": 68.26,
+    "BRL": 18.65,
+    "SEK": 9.77,
+    "CAD": 68.53
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "opportunity_id": "gps-caste-corporeality-si",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "No article-processing charge for this special issue",
+      "source": "venue",
+      "type": "fee_waiver",
+      "amount_note": "No article-processing charge or submission fee is mentioned on the call page",
+      "deadline": null,
+      "cycle": null,
+      "requires": null,
+      "eligible": "yes",
+      "why": "The call page does not mention any publication or submission fee for this open-access special issue.",
+      "grounded": true,
+      "source_quote": "No article processing charge or fee is mentioned on the page.",
+      "source_url": "https://www.psi-web.org/2026/08/05/call-for-proposals-caste-corporeality-and-performance-proposal-deadline-20-september-2026/",
+      "sequence_note": "No funding action needed; there is no fee to cover."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 0,
+    "high": 0,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "No APC or submission fee stated for this special issue", "grounded": true },
+      "travel": { "low": 0, "high": 0, "note": "Fully online submission and review process; no travel required", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "No travel required", "grounded": true },
+      "visa": { "low": 0, "high": 0, "note": "No travel required", "grounded": true }
+    },
+    "assumptions": [
+      "Submission, review, and publication process are conducted entirely online per the call page",
+      "No fee tiers or waivers needed since no charge applies"
+    ],
+    "over_budget": false,
+    "net_note": "No cost identified for this opportunity; it is free to submit."
+  },
+  "priority": {
+    "score": 77,
+    "weights": { "fit": 0.318, "standing": 0.227, "outcomes": 0.182, "feasibility": 0.273 },
+    "sub_scores": {
+      "fit": { "score": 78, "reason": "Caste is her top-weighted topic (0.95) and this special issue's focus on caste and performance overlaps strongly with her interest in Dalit/Bahujan cultural expression, though her thesis centers on digital platforms and moderation rather than embodied/performance studies specifically." },
+      "standing": { "score": 65, "reason": "A peer-reviewed, double-blind open-access journal with credible guest editors (Anusha Kedhar, UC Riverside; Brahma Prakash, JNU), but no indexing, impact, or edition-history signals are stated in the extraction." },
+      "network": null,
+      "outcomes": { "score": 80, "reason": "The multi-stage drafting process (first draft Dec 2026, second draft Mar 2027, final draft Aug 2027) gives structured peer feedback across nearly a year before publication, directly matching her feedback goal." },
+      "feasibility": { "score": 85, "reason": "No cost or travel is required since it's a fully online submission, but the proposal deadline is 20 September 2026 - tomorrow - leaving almost no lead time to prepare." }
+    }
+  },
+  "fit": {
+    "score": 0.78,
+    "rationale": "The special issue's focus on caste and corporeality/performance connects directly to her top-weighted research interest in caste and Dalit/Bahujan cultural expression online. Her work on how creators build counterpublics through embodied self-presentation on Instagram/YouTube has a genuine conceptual overlap with performance studies, even though her lens is digital/platform-centred rather than live performance.",
+    "matched_topics": ["caste & digital media", "Dalit & Bahujan counterpublics"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's a rare special issue specifically on caste and performance, co-edited by respected India-based and diaspora scholars (JNU and UC Riverside).",
+    "There's no cost at all - it's a no-fee, open-access journal.",
+    "The multi-stage drafting process gives structured peer feedback well before final publication, matching her feedback goal."
+  ],
+  "watch_out": [
+    "The proposal deadline is 20 September 2026 - that's tomorrow, so there is almost no time left to prepare and submit a proposal.",
+    "It's a slow, multi-year process: final drafts aren't due until August 2027 and publication is expected around September 2027, so it won't help with near-term visibility."
+  ],
+  "tagline": "A caste-focused special issue with real feedback stages - proposal's due tomorrow.",
+  "eligible": "yes",
+  "eligibility_notes": "No career-stage, nationality, or membership restriction is stated; submissions must simply be original and not under consideration elsewhere.",
+  "visa": {
+    "required": "no",
+    "note": "Fully online submission and review process; no travel involved.",
+    "official_source": null,
+    "verify_flag": true,
+    "lead_days": 0
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

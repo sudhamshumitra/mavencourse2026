@@ -1,0 +1,107 @@
+{
+  "opportunity_id": "ecsas-2027",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "ICSSR Scheme for Participation in International Seminar/Conference Abroad",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "PhD/PDF scholars without other funding: full financial assistance (airfare, visa, insurance, local conveyance, stay, registration).",
+      "deadline": null,
+      "cycle": "Rolling, apply online at least 3 months before the conference date",
+      "requires": "Formal acceptance letter from organizers to present a paper (email invites insufficient) + full paper",
+      "eligible": "likely",
+      "why": "She's a PhD scholar in media & communication/South Asian studies at an advanced research stage; likely eligible once her paper is accepted within an approved panel",
+      "grounded": true,
+      "source_quote": "PhD/PDF scholars and SC/ST/PwD faculty without other funding: full financial assistance.",
+      "source_url": "https://icssr.org/participation-international-seminar-abroad",
+      "sequence_note": "Wait for panel/paper acceptance (individual paper CFP closes 15 Jan 2027), then apply to ICSSR at least 3 months before the 28 Jul 2027 conference — realistic window roughly Feb-Apr 2027."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 77000,
+    "high": 148000,
+    "breakdown": {
+      "registration": {
+        "low": 11000,
+        "high": 20000,
+        "note": "No 2027 fee published yet (TBA); estimated from typical EASAS/regional social-science conference student fees (~EUR 100-180), not grounded to a page",
+        "grounded": false
+      },
+      "travel": {
+        "low": 45000,
+        "high": 85000,
+        "note": "India-Europe return economy heuristic (Hyderabad/Delhi to Poznań via a European hub), booked 8-10 weeks ahead",
+        "grounded": false
+      },
+      "accommodation": {
+        "low": 10000,
+        "high": 30000,
+        "note": "5 nights in Poznań (4 conference days + 1), hostel/university housing to mid-range hotel",
+        "grounded": false
+      },
+      "visa": {
+        "low": 11000,
+        "high": 13000,
+        "note": "Schengen short-stay visa for Poland: official EU consular fee EUR 90 (~INR 9,900) plus a VFS Global service charge",
+        "grounded": true,
+        "source": "https://www.vfsglobal.com/one-pager/poland/india/english/"
+      }
+    },
+    "assumptions": [
+      "EUR to INR at 110.07 (corpus/fx.json, as of 2026-09-18, open.er-api.com)",
+      "Registration fee not yet published for ECSAS 2027; estimate is inferred from comparable conferences, not a quoted figure",
+      "Excludes meals, local transport, and travel insurance",
+      "Assumes she is not an EASAS panel convener (only conveners must be EASAS members / Europe-affiliated)"
+    ],
+    "over_budget": false,
+    "net_note": "If her paper is accepted within a panel and ICSSR comes through (potentially full financial assistance for a PhD scholar), the realistic out-of-pocket cost could drop well below the ₹77,000-1,48,000 range — but this depends on paper acceptance by mid-2027 and a timely ICSSR application at least 3 months ahead of travel."
+  },
+  "priority": {
+    "score": 73,
+    "weights": { "fit": 0.269, "standing": 0.192, "network": 0.154, "outcomes": 0.154, "feasibility": 0.231 },
+    "sub_scores": {
+      "fit": { "score": 90, "reason": "ECSAS is a European conference explicitly on South Asian studies, one of her two primary fields (not just adjacent); her caste, Partition-memory and diaspora-media topics are a natural home here." },
+      "standing": { "score": 82, "reason": "29th edition of a long-running biennial series organized by EASAS, a learned society; grounded from the conference's own numbering, though no full past-editions list was found." },
+      "network": { "score": 78, "reason": "Main European gathering of South Asianists, giving strong regional reach for an India-based scholar and access to specialists in caste, Partition and diaspora studies." },
+      "outcomes": { "score": 55, "reason": "No proceedings, publication route or award information is published yet — limited information, scored at the midpoint rather than assumed high or low." },
+      "feasibility": { "score": 55, "reason": "Cost's high end sits near her ₹1.5L budget cap, no funding is confirmed yet (ICSSR is only 'likely' and contingent on a paper acceptance still 4+ months away), and a Schengen visa (moderate wait) cuts against her 'prefer no visa' preference; the July travel month is within her available months." }
+    }
+  },
+  "fit": {
+    "score": 0.9,
+    "rationale": "ECSAS sits directly in South Asian studies, one of Ananya's two primary fields, not merely an adjacent one. Her research on Dalit and Bahujan digital counterpublics and Partition memory online are natural fits for a conference built entirely around South Asia, and EASAS panels regularly include caste, media and diaspora themes. This is a stronger, more literal fit than her adjacent internet-studies venues.",
+    "matched_topics": ["Partition memory online", "South Asian diaspora media", "caste & digital media", "Dalit & Bahujan counterpublics"],
+    "neighborhood_evidence": ["Ramnarayan S. Rawat's work on caste and South Asian history sits squarely within EASAS's South Asian studies remit"]
+  },
+  "why_go": [
+    "This is Europe's main South Asian studies conference — your core field, not an adjacent one — with a long-running 29-edition series.",
+    "A strong venue to get feedback on your chapters from South Asianists working on caste, Partition memory and diaspora before you write them up."
+  ],
+  "watch_out": [
+    "The 30 Sept 2026 deadline is for panel conveners, not individual papers — you'd need to find and join an accepted panel once the individual paper call opens (Nov 2026, closing 15 Jan 2027).",
+    "No fees or travel funding are published yet, so budget for the higher end of the estimate until they're confirmed."
+  ],
+  "tagline": "Europe's flagship South Asian studies conference — a strong field match, but fees and funding aren't published yet.",
+  "eligible": "conditional",
+  "eligibility_notes": "No individual-scholar restriction, but she must join a panel accepted through the convener process; the paper CFP opens November 2026 and closes 15 January 2027. Panel conveners (not necessarily her) must be current EASAS members and at least one convener per panel must have a European institutional affiliation.",
+  "visa": {
+    "required": "yes",
+    "note": "Indian passport holders need a Schengen short-stay visa to attend in Poland; official EU consular fee is EUR 90, plus a VFS Global service charge for the Polish visa application centre in India.",
+    "official_source": "https://www.vfsglobal.com/one-pager/poland/india/english/",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": {
+    "dates": "grounded (panel and paper-call deadlines quoted verbatim)",
+    "fees": "unconfirmed (TBA on the source page)",
+    "cost": "range",
+    "visa": "advisory",
+    "eligibility": "grounded"
+  }
+}

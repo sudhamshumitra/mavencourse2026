@@ -1,0 +1,50 @@
+{
+  "id": "gps-caste-corporeality-si",
+  "type": "journal_call",
+  "status": "open",
+  "title": "Call for Proposals: Caste, Corporeality, and Performance (GPS: Global Performance Studies Special Issue)",
+  "host": "GPS: Global Performance Studies",
+  "host_kind": "publisher",
+  "theme": "Caste, Corporeality, and Performance",
+  "description": "GPS: Global Performance Studies, a peer-reviewed Open Access journal, has issued a call for proposals for a special issue on 'Caste, Corporeality, and Performance,' edited by Anusha Kedhar (University of California Riverside) and Brahma Prakash (Jawaharlal Nehru University). Proposals are due 20 September 2026, followed by a multi-stage drafting process (first drafts 15 December 2026, second drafts 1 March 2027, final drafts 15 August 2027), with publication expected around September 2027. Submissions may take the form of a conventional 6,000-9,000 word text in English, or performance recordings, creative writing, photography, or interviews. No article processing charge or fee is mentioned on the page.",
+  "location": { "city": "—", "country": "—", "format": "online" },
+  "dates": { "start": null, "end": null },
+  "deadlines": [
+    {
+      "label": "abstract",
+      "date": "2026-09-20",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Proposals: 20 September 2026 – send by email to gps-proposals@psi-web.org"
+    },
+    {
+      "label": "full_paper",
+      "date": "2026-12-15",
+      "depends_on": "abstract",
+      "grounded": false,
+      "previous_quote": "First drafts: 15 December 2026",
+      "verify_note": "fail_missing: current page text reads 'First drafts for editorial review: 15 December 2026' — stored quote is truncated/paraphrased (drops 'for editorial review'), not a verbatim match. The date itself (2026-12-15) still matches the current page."
+    }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Submissions must be original, unpublished work not under consideration for publication elsewhere. Second drafts due 1 March 2027 and final drafts due 15 August 2027 per the page, not represented as separate deadline rows since the schema allows only one full_paper entry; publication expected September 2027 (approximate, per page)."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [],
+  "standing_signals": [
+    {
+      "signal": "Peer-reviewed, Open Access academic journal with double-blind peer review process",
+      "grounded": true,
+      "source_url": "https://www.psi-web.org/2026/08/05/call-for-proposals-caste-corporeality-and-performance-proposal-deadline-20-september-2026/"
+    }
+  ],
+  "source_url": "https://www.psi-web.org/2026/08/05/call-for-proposals-caste-corporeality-and-performance-proposal-deadline-20-september-2026/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

@@ -1,0 +1,65 @@
+{
+  "opportunity_id": "csaa-2026",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T12:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 122000,
+    "high": 228500,
+    "breakdown": {
+      "registration": { "low": 10000, "high": 24000, "note": "No fee page found; estimated from a typical academic conference student/regular registration range (AUD 150–350)", "grounded": false },
+      "travel": { "low": 85000, "high": 140000, "note": "HYD–Sydney return, booked 8–10 weeks ahead; heuristic for India↔Australia (no live fare search run)", "grounded": false },
+      "accommodation": { "low": 14000, "high": 49500, "note": "4 nights (3 conference days + 1), hostel to mid-range hotel near Ultimo, Sydney", "grounded": false },
+      "visa": { "low": 13000, "high": 15000, "note": "Australia Subclass 600 visitor visa, AUD 190 offshore application fee plus biometrics/service charge", "grounded": true, "source": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600" }
+    },
+    "assumptions": [
+      "No fees/registration or funding page was found on the CSAA conferences page; registration and accommodation figures are estimates, not grounded",
+      "AUD→INR cross rate of ≈68.26 via corpus/fx.json (as_of 2026-09-18, open.er-api.com)",
+      "Travel is a heuristic estimate (India↔Australia), not a live fare search",
+      "No call-for-papers or deadline was found, so it's unclear whether paper submission is even open",
+      "Excludes meals, local transport, and travel insurance"
+    ],
+    "over_budget": true,
+    "net_note": "No venue funding was found, and without a confirmed CFP/acceptance, external schemes like ICSSR (which require a paper and acceptance letter) don't clearly apply — so the ₹1.22L–₹2.29L range is likely fully out of pocket."
+  },
+  "priority": {
+    "score": 57,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1538, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 55, "reason": "CSAA's 2026 theme is a broad 'crisis of cultural studies' frame rather than a South Asia- or caste-specific one, so her work would need deliberate framing (e.g., platform moderation as a digital-culture 'crisis') to fit — plausible with framing, not a named track." },
+      "standing": { "score": 72, "reason": "Hosted by the Cultural Studies Association of Australasia, with editions documented back to 2006 (18+ years running) — a well-established regional learned-society conference, though no keynote or programme-committee information was found." },
+      "network": { "score": 55, "reason": "The conference draws broadly from Australasian cultural studies rather than her citation neighborhood or South Asia focus, though its panels on digital culture and crisis politics could still connect her to platform/moderation scholars." },
+      "outcomes": { "score": 50, "reason": "No information on proceedings, awards, or feedback formats was found on the page — limited information, so scored at the midpoint rather than assumed low or high." },
+      "feasibility": { "score": 55, "reason": "The estimated high end exceeds her ₹1.5L budget and requires an Australian visitor visa, cutting against her 'prefer no visa' preference; no CFP or funding information was found, adding uncertainty about how she could even present." }
+    }
+  },
+  "fit": {
+    "score": 0.55,
+    "rationale": "CSAA's 2026 theme, 'Rethinking Cultural Studies in Times of Crisis,' is a broad cultural-studies frame rather than a South Asia- or caste-specific one, so her work would need deliberate framing — for example, platform moderation of caste speech as a 'crisis' of digital culture — to fit. The connection runs through the adjacent field of cultural/platform studies and general theory, rather than a shared regional or topical focus with the call itself.",
+    "matched_topics": ["content moderation & caste speech", "creator cultures & influencers"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "It's a long-running (18+ years), learned-society-run cultural studies conference where you could test how your caste/platform-moderation work lands with a broader cultural-studies audience.",
+    "The 'crisis' theme leaves room to frame your work on platform moderation and caste speech, even outside a South Asia-specific venue."
+  ],
+  "watch_out": [
+    "No call-for-papers, deadline, fee, or funding information is currently posted, so it's unclear whether or how you could present.",
+    "Flights, an Australian visa, and Sydney accommodation could push the top end well past ₹1.5L."
+  ],
+  "tagline": "A field-scouting trip into Australasian cultural studies, not (yet) a confirmed home for your topic.",
+  "eligible": "yes",
+  "eligibility_notes": "No eligibility restrictions were stated on the page, but no current call-for-papers or deadline was found either — it's unclear whether paper submissions are still open. Treated here as attendance-only pending confirmation.",
+  "visa": {
+    "required": "yes",
+    "note": "Indian passport holders need an Australian visitor visa (Subclass 600) to attend in Sydney. This is general information, not immigration advice — confirm current requirements and processing times with the Australian High Commission in India before planning travel.",
+    "official_source": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600",
+    "verify_flag": true,
+    "lead_days": 35
+  },
+  "explore": true,
+  "explore_reason": "Cultural studies (Australasia) sits in her adjacent fields rather than her core South Asian-media/caste focus, and the call's theme has low direct keyword overlap with her topics — flagged as a field to explore rather than a confirmed fit.",
+  "confidence": { "dates": "verified", "fees": "inferred", "cost": "range", "visa": "advisory", "eligibility": "inferred" }
+}

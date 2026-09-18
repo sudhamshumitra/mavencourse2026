@@ -1,0 +1,228 @@
+{
+  "id": "aoir-2026",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "AoIR 2026: Regenerations",
+  "host": "Association of Internet Researchers (AoIR)",
+  "host_kind": "learned_society",
+  "theme": "Regenerations",
+  "description": "AoIR2026 is the annual conference of the Association of Internet Researchers, held at the Hyatt Regency hotel in Mexico City from October 14-17, 2026, under the theme 'Regenerations'. The keynote speaker is Yásnaya Elena Aguilar Gil, a Mixe linguist, writer, and activist from Oaxaca, Mexico. The abstract/proposal deadline (1 March 2026) and the Access Grant application deadline (10 July 2026) have both already passed as of extraction, but standard conference registration remains open through the start of the conference.",
+  "location": {
+    "city": "Mexico City",
+    "country": "Mexico",
+    "format": "in_person"
+  },
+  "dates": {
+    "start": "2026-10-14",
+    "end": "2026-10-17"
+  },
+  "deadlines": [
+    {
+      "label": "abstract",
+      "date": "2026-03-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Proposals Due: 1 March 2026"
+    },
+    {
+      "label": "scholarship",
+      "date": "2026-07-10",
+      "depends_on": "abstract",
+      "grounded": true,
+      "source_quote": "10 July 2026"
+    },
+    {
+      "label": "early_bird",
+      "date": "2026-08-01",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Available until August 1st, 2026 @ Midnight AOE."
+    },
+    {
+      "label": "registration",
+      "date": "2026-10-14",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Available between August 1st and October 14th, 2026."
+    }
+  ],
+  "eligibility": {
+    "career_stage": ["student", "professional"],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Registration fees differentiate AoIR members vs non-members and offer a reduced 'Majority World' tier; membership is not required to attend, only to receive the discounted member rate."
+  },
+  "fees": [
+    {
+      "tier": "early_bird_student_majority_world_member",
+      "amount": 40,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student, Majority World: $40/$55"
+    },
+    {
+      "tier": "early_bird_student_majority_world_nonmember",
+      "amount": 55,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student, Majority World: $40/$55"
+    },
+    {
+      "tier": "early_bird_professional_majority_world_member",
+      "amount": 60,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional, Majority World: $60/$80"
+    },
+    {
+      "tier": "early_bird_professional_majority_world_nonmember",
+      "amount": 80,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional, Majority World: $60/$80"
+    },
+    {
+      "tier": "early_bird_student_member",
+      "amount": 320,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student: $320/$425"
+    },
+    {
+      "tier": "early_bird_student_nonmember",
+      "amount": 425,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student: $320/$425"
+    },
+    {
+      "tier": "early_bird_professional_member",
+      "amount": 500,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional: $500/$670"
+    },
+    {
+      "tier": "early_bird_professional_nonmember",
+      "amount": 670,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional: $500/$670"
+    },
+    {
+      "tier": "standard_student_majority_world_member",
+      "amount": 80,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student, Majority World: $80/$100"
+    },
+    {
+      "tier": "standard_student_majority_world_nonmember",
+      "amount": 100,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student, Majority World: $80/$100"
+    },
+    {
+      "tier": "standard_professional_majority_world_member",
+      "amount": 120,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional, Majority World: $120/$150"
+    },
+    {
+      "tier": "standard_professional_majority_world_nonmember",
+      "amount": 150,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional, Majority World: $120/$150"
+    },
+    {
+      "tier": "standard_student_member",
+      "amount": 400,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student: $400/$500"
+    },
+    {
+      "tier": "standard_student_nonmember",
+      "amount": 500,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Student: $400/$500"
+    },
+    {
+      "tier": "standard_professional_member",
+      "amount": 640,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional: $640/$800"
+    },
+    {
+      "tier": "standard_professional_nonmember",
+      "amount": 800,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Professional: $640/$800"
+    },
+    {
+      "tier": "lifetime_member",
+      "amount": 450,
+      "currency": "USD",
+      "grounded": true,
+      "source_quote": "Registration for Lifetime Members: $450"
+    }
+  ],
+  "funding": [
+    {
+      "name": "AoIR 2026 Access Grant",
+      "type": "travel_scholarship",
+      "deadline": "2026-07-10",
+      "amount_note": "Up to 5 Access Grants of up to 2,000 USD each, and up to 5 Access Grants of 500 USD each; reimburses travel or accommodation costs.",
+      "eligibility_notes": "Applicants must be AoIR members (or ready to become members) and must have a paper, panel, roundtable, fishbowl, or experimental session accepted for AoIR 2026 in Mexico City. Open to scholars at any career stage, not limited to financial need; priority given to applicants demonstrating commitment to AoIR and to those from countries/regions less involved with AoIR previously.",
+      "grounded": true,
+      "source_quote": "up to 5 Access Grants of up to 2,000 USD each, and up to 5 Access Grants of 500 USD each.",
+      "source_url": "https://members.aoir.org/aoir-2026-access-grant"
+    }
+  ],
+  "past_editions": [
+    {
+      "year": 2025,
+      "theme": "Ruptures",
+      "city": "Niterói, Brazil",
+      "representative_papers": [],
+      "source_url": "https://aoir.org/past-conferences/"
+    },
+    {
+      "year": 2024,
+      "theme": "Industry",
+      "city": "Sheffield, England, UK",
+      "representative_papers": [],
+      "source_url": "https://aoir.org/past-conferences/"
+    },
+    {
+      "year": 2023,
+      "theme": "Revolutions",
+      "city": "Philadelphia, Pennsylvania, US",
+      "representative_papers": [],
+      "source_url": "https://aoir.org/past-conferences/"
+    }
+  ],
+  "standing_signals": [
+    {
+      "signal": "Past-conferences page lists an unbroken run of annual conferences from IR 1 (2000, Lawrence) through AoIR2025 (2025, Niterói) — 26 prior editions before AoIR2026.",
+      "grounded": true,
+      "source_url": "https://aoir.org/past-conferences/"
+    },
+    {
+      "signal": "AoIR publishes conference papers as 'Selected Papers of Internet Research' (SPIR), an open-access proceedings archive.",
+      "grounded": false,
+      "source_url": null
+    }
+  ],
+  "source_url": "https://aoir.org/aoir2026/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

@@ -1,0 +1,65 @@
+{
+  "id": "aas-sa-dissertation-workshop",
+  "type": "fellowship",
+  "status": "watch",
+  "title": "Articulating South Asian Futures: Projects, Practices, and Emplacement — Dissertation Workshop",
+  "host": "Association for Asian Studies (AAS South Asia Council), with support from the Henry Luce Foundation",
+  "host_kind": "learned_society",
+  "theme": "Articulating South Asian Futures: Projects, Practices, and Emplacement",
+  "description": "A dissertation workshop for advanced doctoral candidates writing dissertations on South Asia, sponsored by the AAS South Asia Council with funding from the Henry Luce Foundation. Held in person October 3-5, 2026 at NYU Shanghai, limited to ten participants, with a virtual pre-meeting one month prior. Applicants may be based anywhere but must attend in person; priority is given to applicants based at institutions in Asia.",
+  "location": {
+    "city": "Shanghai",
+    "country": "China",
+    "format": "in_person"
+  },
+  "dates": {
+    "start": "2026-10-03",
+    "end": "2026-10-05"
+  },
+  "deadlines": [
+    {
+      "label": "full_paper",
+      "date": "2026-05-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "All application materials must be submitted via the AAS application portal by May 30, 2026."
+    },
+    {
+      "label": "scholarship",
+      "date": "2026-05-30",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "Letters of recommendation must be emailed directly by your advisor to grants@asianstudies.org no later than May 30, 2026."
+    }
+  ],
+  "eligibility": {
+    "career_stage": [
+      "advanced doctoral candidate"
+    ],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "Participants may be based anywhere in the world but must be able to attend the workshop in Shanghai in person; priority is given to applications from participants based at institutions in Asia. The AAS encourages doctoral candidates across disciplines to apply, with a special invitation to underrepresented disciplines such as performance studies, literary studies, and anthropology/history of migration, religion and media."
+  },
+  "fees": [],
+  "funding": [
+    {
+      "name": "AAS South Asia Council Dissertation Workshop Grant",
+      "type": "travel_scholarship",
+      "deadline": "2026-05-30",
+      "amount_note": "Covers lowest economy-class airfare from home location to Shanghai, AAS-in-Asia 2027 conference registration fee, shared-room lodging during the workshop, and meals during the workshop.",
+      "eligibility_notes": "Selected workshop participants only (limited to ten participants); advanced doctoral candidates who have completed their research and are writing their dissertations.",
+      "grounded": false,
+      "previous_quote": "Students selected for the workshop will receive a grant to cover the costs of: Lowest economy-class airfare from their home location to Shanghai",
+      "verify_note": "fail_missing: page bullet reads lowercase 'lowest economy-class airfare from their home location to Shanghai' (under 'Students selected for the workshop will receive a grant to cover the costs of:'), not capitalized 'Lowest' as quoted. Not a verbatim match per skill rules (only whitespace/quote/dash normalized, not case). The underlying value (airfare + AAS-in-Asia 2027 registration + shared lodging + meals) is still supported by the page content.",
+      "source_url": "https://www.asianstudies.org/call-for-proposals-articulating-south-asian-futures-projects-practices-and-emplacement-dissertation-workshop/"
+    }
+  ],
+  "past_editions": [],
+  "standing_signals": [],
+  "source_url": "https://www.asianstudies.org/call-for-proposals-articulating-south-asian-futures-projects-practices-and-emplacement-dissertation-workshop/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": [],
+  "status_note": "Corrected on review: applications closed 30 May 2026 and participation is by selection; watch for the 2027 call."
+}

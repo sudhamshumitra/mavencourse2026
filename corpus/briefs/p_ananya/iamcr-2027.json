@@ -1,0 +1,124 @@
+{
+  "opportunity_id": "iamcr-2027",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "IAMCR Travel Grants",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "Up to 18 grants, each max USD 2,000",
+      "deadline": null,
+      "cycle": "Annual, tied to each year's IAMCR conference; the 2026 (Galway) deadline was 20 Mar 2026 — the 2027 São Paulo cycle's deadline is not yet posted",
+      "requires": "Early-career (untenured) IAMCR membership of at least 1 year, residence in a low/middle-income country, first author of a paper accepted for full presentation",
+      "eligible": "check",
+      "why": "She would likely qualify on career stage and country of residence, but the São Paulo 2027 CFP hasn't opened yet (expected Nov 2026), so there's no paper to be accepted against this cycle",
+      "grounded": true,
+      "source_quote": "Up to 18 grants, each max USD 2,000",
+      "source_url": "https://iamcr.org/travel_grants",
+      "sequence_note": "Watch for the CFP to open in Nov 2026; once a paper is submitted and accepted, apply for this grant under its 2027-specific rules and deadline."
+    },
+    {
+      "name": "ICSSR Scheme for Participation in International Seminar/Conference Abroad",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "PhD/PDF scholars without other funding: full financial assistance (airfare, visa, insurance, local conveyance, stay, registration).",
+      "deadline": null,
+      "cycle": "Rolling, apply online at least 3 months before the conference date once a paper is accepted",
+      "requires": "Formal acceptance letter from organizers to present a paper (email invites insufficient) + full paper",
+      "eligible": "check",
+      "why": "Applicable only once she has a paper accepted for IAMCR 2027, which itself requires the November 2026 CFP to open first",
+      "grounded": true,
+      "source_quote": "PhD/PDF scholars and SC/ST/PwD faculty without other funding: full financial assistance.",
+      "source_url": "https://icssr.org/participation-international-seminar-abroad",
+      "sequence_note": "Apply to ICSSR at least 3 months before the 18 Jul 2027 travel date (by roughly Apr 2027) once IAMCR paper acceptance is confirmed."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 116500,
+    "high": 220000,
+    "breakdown": {
+      "registration": {
+        "low": 14500,
+        "high": 24000,
+        "note": "2027 fees not yet published (CFP opens Nov 2026); estimated from typical IAMCR-scale annual congress student registration (~USD 150-250), not grounded to a page",
+        "grounded": false
+      },
+      "travel": {
+        "low": 85000,
+        "high": 150000,
+        "note": "India-São Paulo return economy; no direct flights exist (1+ stops via Europe/Middle East/US), web fares found ranged roughly USD 885 up to much higher depending on season/routing; Brazil isn't in the standard regional heuristic table so this is a wider, more conservative band",
+        "grounded": true,
+        "source": "https://www.skyscanner.co.in/flights-to/saoa/cheap-flights-to-sao-paulo.html"
+      },
+      "accommodation": {
+        "low": 9000,
+        "high": 36000,
+        "note": "6 nights in São Paulo (5 conference days + 1), hostel/budget to mid-range hotel",
+        "grounded": false
+      },
+      "visa": {
+        "low": 8000,
+        "high": 10000,
+        "note": "Brazil has no e-visa route for Indian passport holders; traditional visa via the Brazilian consulate/embassy in India, typical fee ~INR 8,000-10,000, 10-15 day processing plus appointment wait; yellow fever vaccination is also recommended",
+        "grounded": true,
+        "source": "https://www.gov.br/mre/en"
+      }
+    },
+    "assumptions": [
+      "USD/BRL to INR at 95.96 / 18.65 (corpus/fx.json, as of 2026-09-18, open.er-api.com)",
+      "No 2027-specific fee, travel-grant or CFP details exist yet; registration and much of the range is inferred from IAMCR's typical scale and past-edition patterns, not this year's page",
+      "Excludes meals, local transport, and travel insurance",
+      "Brazil e-visa portal (brazil.vfsevisa.com) explicitly excludes Indian citizens, so a traditional consulate application is assumed"
+    ],
+    "over_budget": true,
+    "net_note": "If the IAMCR Travel Grant (up to USD 2,000 ≈ INR 1.92L) or ICSSR comes through once a paper is accepted, out-of-pocket cost could drop sharply below the ₹1.17L-2.2L range — but both depend on the CFP opening in Nov 2026 and a paper being accepted well into 2027, and the unfunded high end is well over her ₹1.5L budget."
+  },
+  "priority": {
+    "score": 73,
+    "weights": { "fit": 0.269, "standing": 0.192, "network": 0.154, "outcomes": 0.154, "feasibility": 0.231 },
+    "sub_scores": {
+      "fit": { "score": 85, "reason": "IAMCR's 2027 theme, 'Multilateralism, Democracy, Diversity: Communication for a More Just World', is a natural home for research on caste speech moderation and platform counterpublics, and media & communication is one of her primary fields, though specific 2027 tracks aren't published yet." },
+      "standing": { "score": 88, "reason": "IAMCR is one of the two major global media & communication research associations; 2027 marks its 70th anniversary and brings together roughly 1,500 researchers — grounded, well-established standing even before CFP details exist." },
+      "network": { "score": 82, "reason": "A large (~1,500-researcher) global congress with a dedicated early-career travel grant program aimed at scholars from countries like India — strong networking value for a PhD student seeking feedback." },
+      "outcomes": { "score": 50, "reason": "Limited information: no 2027 proceedings, publication route or award details are published yet since the CFP hasn't opened; treat this as a 'prepare for the next call' venue rather than scoring it high or low." },
+      "feasibility": { "score": 55, "reason": "The CFP for São Paulo 2027 is expected to open in Nov 2026, so no deadline, fee or funding decision is possible right now; Brazil requires a traditional (non-e-visa) application for Indian passport holders, cutting against her 'prefer no visa' preference, and the unfunded cost estimate's high end is well above her ₹1.5L budget." }
+    }
+  },
+  "fit": {
+    "score": 0.85,
+    "rationale": "IAMCR is a flagship media & communication research congress, and its 2027 theme — communication for a more just world — is a semantic match for Ananya's work on how platforms moderate caste speech and how marginalized creators build counterpublics, even without a confirmed track list yet. Media & communication is a primary field for her, not merely adjacent, which lifts the fit above a purely speculative 'watch' listing.",
+    "matched_topics": ["content moderation & caste speech", "Dalit & Bahujan counterpublics", "caste & digital media"],
+    "neighborhood_evidence": ["Tarleton Gillespie's platform-moderation scholarship and Murali Shanmugavelan's work on Dalit and digital media both sit within IAMCR's media & communication remit"]
+  },
+  "why_go": [
+    "IAMCR is one of the two major global media & communication research associations, marking its 70th anniversary in São Paulo — a strong CV line if it works out.",
+    "The 2027 theme, 'Communication for a More Just World', is a natural home for research on caste speech and platform moderation.",
+    "It runs a dedicated early-career travel grant program (up to USD 2,000) aimed at scholars from countries like India."
+  ],
+  "watch_out": [
+    "The CFP hasn't opened yet (expected Nov 2026), so there's no deadline, fee, or 2027-specific funding to act on right now — this is a 'watch and prepare' opportunity, not one to plan travel around yet.",
+    "Brazil has no e-visa for Indian passport holders; she'd need a traditional consulate visa application, which takes longer to plan for than a Schengen or UK visa."
+  ],
+  "tagline": "IAMCR's 70th-anniversary congress fits her field well, but the 2027 CFP hasn't opened yet — one to watch.",
+  "eligible": "check",
+  "eligibility_notes": "No 2027-specific eligibility, fee or deadline details are published yet; the call for proposals is expected to open in November 2026, at which point eligibility for the conference itself and for the IAMCR Travel Grant should be reassessed.",
+  "visa": {
+    "required": "yes",
+    "note": "Indian passport holders have no e-visa route for Brazil (the official Brazil eVisa portal explicitly excludes Indian citizens) and must apply for a traditional visa through the Brazilian consulate/embassy in India; a yellow fever vaccination is also commonly recommended for travel to Brazil.",
+    "official_source": "https://www.gov.br/mre/en",
+    "verify_flag": true,
+    "lead_days": 30
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": {
+    "dates": "ungrounded (2027 CFP, fee and deadline details not yet published)",
+    "fees": "unconfirmed",
+    "cost": "range",
+    "visa": "advisory",
+    "eligibility": "limited (CFP not open)"
+  }
+}

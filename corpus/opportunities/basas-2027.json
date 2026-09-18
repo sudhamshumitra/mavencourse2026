@@ -1,0 +1,65 @@
+{
+  "id": "basas-2027",
+  "type": "conference",
+  "status": "watch",
+  "title": "BASAS Annual Conference 2027",
+  "host": "British Association for South Asian Studies (BASAS)",
+  "host_kind": "learned_society",
+  "theme": null,
+  "description": "The BASAS Annual Conference 2027 will be held at Newcastle University. The public page gives no specific dates, submission deadlines, registration fees, or travel grant information; the conference is described as a members-only event, and further detail appears to require login to the BASAS members' area.",
+  "location": {
+    "city": "Newcastle",
+    "country": "United Kingdom",
+    "format": "in_person"
+  },
+  "dates": {
+    "start": null,
+    "end": null
+  },
+  "deadlines": [],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": true,
+    "notes": "Please note that the BASAS Annual Conference is a members-only event. No fee, deadline, or funding information is published on the public page; these may be restricted to the BASAS members' area."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [
+    {
+      "year": 2026,
+      "theme": null,
+      "city": "SOAS, London, UK",
+      "representative_papers": [],
+      "source_url": "https://www.basas.org.uk/news-events/basas-conference/"
+    },
+    {
+      "year": 2025,
+      "theme": null,
+      "city": "Lancaster, UK",
+      "representative_papers": [],
+      "source_url": "https://www.basas.org.uk/news-events/basas-conference/"
+    },
+    {
+      "year": 2024,
+      "theme": null,
+      "city": "King's College London, UK",
+      "representative_papers": [],
+      "source_url": "https://www.basas.org.uk/news-events/basas-conference/"
+    }
+  ],
+  "standing_signals": [
+    {
+      "signal": "Programme archive shows an unbroken run of annual conferences at UK universities from at least 2011 through 2026 (Southampton, SOAS, Leeds, Royal Holloway, Portsmouth, Cambridge, Nottingham, Exeter, Durham, Edinburgh, Southampton, Leeds, King's College London, Lancaster, SOAS).",
+      "grounded": false,
+      "previous_quote": null,
+      "verify_note": "fail_mismatch: page lists no 2020 conference (jumps from 2019 Durham to 2021 Edinburgh) with no cancellation/postponement note, so the 'unbroken run' claim is not supported by the page as written.",
+      "source_url": "https://www.basas.org.uk/news-events/basas-conference/"
+    }
+  ],
+  "source_url": "https://www.basas.org.uk/news-events/basas-conference/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

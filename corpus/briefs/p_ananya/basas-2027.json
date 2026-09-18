@@ -1,0 +1,107 @@
+{
+  "opportunity_id": "basas-2027",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T00:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "ICSSR Scheme for Participation in International Seminar/Conference Abroad",
+      "source": "external",
+      "type": "travel_scholarship",
+      "amount_note": "PhD/PDF scholars without other funding: full financial assistance (airfare, visa, insurance, local conveyance, stay, registration).",
+      "deadline": null,
+      "cycle": "Rolling, apply online at least 3 months before the conference date once dates are known",
+      "requires": "Formal acceptance letter from organizers to present a paper (email invites insufficient) + full paper",
+      "eligible": "check",
+      "why": "BASAS 2027 has no published CFP, dates or fees yet; ICSSR needs a firm acceptance letter, and there's nothing to apply against currently",
+      "grounded": true,
+      "source_quote": "PhD/PDF scholars and SC/ST/PwD faculty without other funding: full financial assistance.",
+      "source_url": "https://icssr.org/participation-international-seminar-abroad",
+      "sequence_note": "Wait for BASAS 2027 CFP and dates (likely announced via the members' area); if a paper is accepted, apply to ICSSR at least 3 months before travel."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 76000,
+    "high": 137000,
+    "breakdown": {
+      "registration": {
+        "low": 4000,
+        "high": 7500,
+        "note": "No 2027 fee published (members-only page); estimated from typical UK regional-society student conference fees (~GBP 30-60), not grounded to a page",
+        "grounded": false
+      },
+      "travel": {
+        "low": 45000,
+        "high": 85000,
+        "note": "India-UK return economy heuristic (Hyderabad/Delhi to Newcastle via a UK hub), booked 8-10 weeks ahead",
+        "grounded": false
+      },
+      "accommodation": {
+        "low": 8000,
+        "high": 24000,
+        "note": "Assuming a typical 3-day conference (4 nights), hostel/university housing to mid-range hotel near Newcastle University; exact 2027 dates not published",
+        "grounded": false
+      },
+      "visa": {
+        "low": 19000,
+        "high": 20500,
+        "note": "UK Standard Visitor visa (6-month), official Home Office fee GBP 135 (effective 8 Apr 2026, ~INR 17,300) plus a VFS Global service charge",
+        "grounded": true,
+        "source": "https://www.gov.uk/standard-visitor/apply-standard-visitor-visa"
+      }
+    },
+    "assumptions": [
+      "GBP to INR at 128.17 (corpus/fx.json, as of 2026-09-18, open.er-api.com)",
+      "Dates, fees and travel-grant details for BASAS 2027 are not published on the public page (members-only); estimates are inferred, not quoted",
+      "Excludes meals, local transport, and travel insurance",
+      "Assumes membership dues (amount not published) are a separate, additional cost"
+    ],
+    "over_budget": false,
+    "net_note": "If a paper is accepted once BASAS 2027's CFP opens and ICSSR comes through, out-of-pocket cost could drop well below the ₹76,000-1,37,000 range — but nothing about dates, fees or funding for this edition is confirmed yet."
+  },
+  "priority": {
+    "score": 69,
+    "weights": { "fit": 0.269, "standing": 0.192, "network": 0.154, "outcomes": 0.154, "feasibility": 0.231 },
+    "sub_scores": {
+      "fit": { "score": 85, "reason": "BASAS is the UK's dedicated South Asian studies conference, one of her two primary fields; her caste, Partition-memory and diaspora-media topics are a direct match even without confirmed 2027 panels." },
+      "standing": { "score": 75, "reason": "An unbroken run of annual conferences at UK universities from at least 2011 to 2026, hosted by a learned society, but a members-only, more regionally-scaled event than a flagship like AoIR." },
+      "network": { "score": 72, "reason": "Good regional value for an India-based South Asianist — UK-based South Asian studies specialists — though the members-only structure limits visibility into who exactly attends." },
+      "outcomes": { "score": 50, "reason": "No proceedings, publication route, or award details are published for 2027 — limited information, scored at the midpoint; treat this as a 'prepare for the next call' venue." },
+      "feasibility": { "score": 55, "reason": "No 2027 dates, fees or CFP exist yet (BASAS is members-only), so nothing is currently actionable; a UK visa (~3-week process) cuts against her 'prefer no visa' preference, and BASAS membership itself is a cost/step not yet known." }
+    }
+  },
+  "fit": {
+    "score": 0.85,
+    "rationale": "BASAS is the British Association for South Asian Studies' own annual conference, sitting directly in South Asian studies, one of Ananya's two primary fields rather than an adjacent one. Her work on Dalit and Bahujan digital counterpublics, caste speech moderation, and Partition memory would be squarely at home once a CFP is published, mirroring the fit seen at ECSAS but at UK scale.",
+    "matched_topics": ["Partition memory online", "South Asian diaspora media", "caste & digital media", "Dalit & Bahujan counterpublics"],
+    "neighborhood_evidence": ["Ramnarayan S. Rawat's caste-and-history scholarship fits BASAS's South Asian studies focus, though no 2027 speaker list exists yet to confirm overlap"]
+  },
+  "why_go": [
+    "BASAS is the UK's main South Asian studies conference and a strong regional match for your PhD topic.",
+    "A long unbroken run since at least 2011 at UK universities — a well-established venue for feedback from South Asianists, once the 2027 details are out."
+  ],
+  "watch_out": [
+    "It's a members-only event with no public dates, fees or CFP yet for 2027 — you'd need to join BASAS and watch the members' area for updates.",
+    "UK visa processing (about 3 weeks) needs to be planned for once dates are known, and BASAS membership itself is an added, unconfirmed cost."
+  ],
+  "tagline": "UK's flagship South Asian studies conference — strong fit, but 2027 details are still members-only.",
+  "eligible": "conditional",
+  "eligibility_notes": "Described as a members-only event; no nationality or career-stage restriction is stated on the public page, but further CFP, fee and eligibility detail sits behind the BASAS members' area login. Treat as a 'watch and prepare for the next call' opportunity.",
+  "visa": {
+    "required": "yes",
+    "note": "Indian passport holders need a UK Standard Visitor visa; official Home Office fee is GBP 135 for a 6-month visa (effective 8 Apr 2026), plus a VFS Global service charge in India.",
+    "official_source": "https://www.gov.uk/standard-visitor/apply-standard-visitor-visa",
+    "verify_flag": true,
+    "lead_days": 21
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": {
+    "dates": "ungrounded (no 2027 dates published)",
+    "fees": "unconfirmed (no fees published; members-only)",
+    "cost": "range",
+    "visa": "advisory",
+    "eligibility": "limited (members-only detail not accessible)"
+  }
+}

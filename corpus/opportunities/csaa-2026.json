@@ -1,0 +1,38 @@
+{
+  "id": "csaa-2026",
+  "type": "conference",
+  "status": "attend-only",
+  "title": "What the * is Going On: Rethinking Cultural Studies in Times of Crisis",
+  "host": "Cultural Studies Association of Australasia",
+  "host_kind": "learned_society",
+  "theme": "Rethinking Cultural Studies in Times of Crisis",
+  "description": "The 2026 Cultural Studies Association of Australasia (CSAA) conference, themed 'What the * is Going On: Rethinking Cultural Studies in Times of Crisis', will be held at the University of Technology Sydney, Ultimo, New South Wales, from December 8-10, 2026. No abstract, registration, or fee deadlines were visible on the main conferences page, and no travel grant or bursary information was found there.",
+  "location": { "city": "Ultimo, New South Wales", "country": "Australia", "format": "in_person" },
+  "dates": { "start": "2026-12-08", "end": "2026-12-10" },
+  "deadlines": [],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No deadline dates, fees, or funding information appeared on the main conferences page. No linked fees/registration, grants, or past-conferences archive page URL was present to follow up on."
+  },
+  "fees": [],
+  "funding": [],
+  "past_editions": [
+    { "year": 2022, "theme": "Bodies in Flux", "city": "Perth", "representative_papers": [], "source_url": "https://csaa.asn.au/conferences/" },
+    { "year": 2021, "theme": "Bodies", "city": null, "representative_papers": [], "source_url": "https://csaa.asn.au/conferences/" },
+    { "year": 2017, "theme": "Cultures of Capitalism", "city": "Wellington", "representative_papers": [], "source_url": "https://csaa.asn.au/conferences/" },
+    { "year": 2015, "theme": "Minor Culture", "city": null, "representative_papers": [], "source_url": "https://csaa.asn.au/conferences/" },
+    { "year": 2014, "theme": "Provocations", "city": null, "representative_papers": [], "source_url": "https://csaa.asn.au/conferences/" },
+    { "year": 2010, "theme": "A Scholarly Affair", "city": "Byron Bay", "representative_papers": [], "source_url": "https://csaa.asn.au/conferences/" },
+    { "year": 2006, "theme": "UnAustralia", "city": "Canberra", "representative_papers": [], "source_url": "https://csaa.asn.au/conferences/" }
+  ],
+  "standing_signals": [
+    { "signal": "Long-running conference series with editions listed back to 2006 (UnAustralia, Canberra)", "grounded": true, "source_url": "https://csaa.asn.au/conferences/" }
+  ],
+  "source_url": "https://csaa.asn.au/conferences/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

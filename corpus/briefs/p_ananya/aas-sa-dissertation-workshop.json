@@ -1,0 +1,81 @@
+{
+  "opportunity_id": "aas-sa-dissertation-workshop",
+  "profile_id": "p_ananya",
+  "generated_at": "2026-09-19T12:00:00Z",
+  "model_version": "skill:compose-brief@1",
+  "funding": [
+    {
+      "name": "AAS South Asia Council Dissertation Workshop Grant",
+      "source": "venue",
+      "type": "travel_scholarship",
+      "amount_note": "Covers lowest economy-class airfare from home location to Shanghai, AAS-in-Asia 2027 conference registration fee, shared-room lodging during the workshop, and meals during the workshop",
+      "deadline": "2026-05-30",
+      "cycle": null,
+      "requires": "Selection as one of 10 workshop participants; full application (incl. advisor recommendation letter) by the deadline",
+      "eligible": "check",
+      "why": "Open to advanced doctoral candidates on South Asia dissertations with priority to Asia-based applicants, which favors her (Hyderabad-based); however she is a 2nd-year PhD student, and the call specifies candidates who have completed their research and are writing their dissertation, which she may not yet meet",
+      "grounded": true,
+      "source_quote": "Students selected for the workshop will receive a grant to cover the costs of: Lowest economy-class airfare from their home location to Shanghai",
+      "source_url": "https://www.asianstudies.org/call-for-proposals-articulating-south-asian-futures-projects-practices-and-emplacement-dissertation-workshop/",
+      "sequence_note": "The 2026 window (deadline 30 May 2026) has closed. Watch for a 2027 call with a similar cycle, and apply once her dissertation research is far enough along to meet the 'advanced candidate' bar."
+    }
+  ],
+  "cost_estimate": {
+    "currency": "INR",
+    "low": 5000,
+    "high": 5500,
+    "breakdown": {
+      "registration": { "low": 0, "high": 0, "note": "No separate registration fee for the workshop; would be covered by the grant if selected", "grounded": true },
+      "travel": { "low": 0, "high": 0, "note": "If selected, the grant covers lowest economy-class airfare from home location to Shanghai", "grounded": true },
+      "accommodation": { "low": 0, "high": 0, "note": "If selected, the grant covers shared-room lodging and meals during the workshop", "grounded": true },
+      "visa": { "low": 5000, "high": 5500, "note": "China single-entry visa fee (~₹2,900) plus visa application service center charge (~₹2,100); not mentioned as covered by the workshop grant", "grounded": true, "source": "Chinese Visa Application Service Center (New Delhi) fee table, checked Aug 2026" }
+    },
+    "assumptions": [
+      "Assumes selection into the workshop; if selected, the AAS grant covers airfare, registration, shared lodging, and meals per the call text",
+      "Visa cost is the only expense not explicitly covered by the grant",
+      "China visa fee for Indian citizens ≈ ₹2,900 (single entry) plus ~₹2,100 service center charge",
+      "The 2026 application window (deadline 30 May 2026) has already closed; these figures are for planning ahead of a possible future cycle",
+      "No FX conversion needed — visa fee is already quoted in INR"
+    ],
+    "over_budget": false,
+    "net_note": "If selected for a future cycle, this trip would cost close to nothing beyond the China visa fee (~₹5,000–5,500), since the grant covers airfare, registration, lodging, and meals."
+  },
+  "priority": {
+    "score": 82,
+    "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1538, "outcomes": 0.1538, "feasibility": 0.2308 },
+    "sub_scores": {
+      "fit": { "score": 90, "reason": "It's a dissertation workshop explicitly for advanced doctoral candidates writing South Asia dissertations, open across disciplines including media studies and anthropology — a direct match for her Dalit/Bahujan digital-counterpublics dissertation." },
+      "standing": { "score": 78, "reason": "No standing_signals were extracted, but the host (AAS South Asia Council) and funder (Henry Luce Foundation) are both well-recognized names in Asian studies — a credible but not independently verified signal." },
+      "network": { "score": 90, "reason": "Limited to 10 participants with a virtual pre-meeting and in-person sessions — the kind of small cohort and sustained contact that scores high by nature for a PhD seeking mentoring." },
+      "outcomes": { "score": 90, "reason": "Structured dissertation feedback before chapter-writing is exactly her stated goal ('feedback before I write my chapters'), making this the closest outcomes match in her set." },
+      "feasibility": { "score": 65, "reason": "The grant covers airfare, registration, lodging and meals if selected, and October is within her available months, but she'd still need a China visa (against her 'prefer no visa' preference), and — most importantly — the 2026 window (deadline 30 May 2026) is already closed with the 2027 cycle not yet announced." }
+    }
+  },
+  "fit": {
+    "score": 0.9,
+    "rationale": "This is a dissertation workshop explicitly for advanced doctoral candidates writing South Asia-focused dissertations, open across disciplines including media studies and anthropology — precisely the kind of structured, small-group feedback her Dalit/Bahujan digital-counterpublics dissertation would benefit from before she writes her chapters. Priority for Asia-based applicants also favors her Hyderabad affiliation.",
+    "matched_topics": ["caste & digital media", "Dalit & Bahujan counterpublics", "South Asian diaspora media"],
+    "neighborhood_evidence": []
+  },
+  "why_go": [
+    "This is built exactly for what you want: structured, small-group feedback on a South Asia dissertation before you write your chapters.",
+    "If selected, the grant covers airfare, registration, shared lodging, and meals — only the China visa would be out of pocket."
+  ],
+  "watch_out": [
+    "Applications for this cycle closed on 30 May 2026, and it's meant for 'advanced' candidates who've finished their research — as a 2nd-year PhD student, you may not yet qualify; watch for the 2027 call.",
+    "Only 10 participants are selected, so it's competitive even once a new cycle opens."
+  ],
+  "tagline": "The feedback workshop you want — but the 2026 door is shut; prepare for the next one.",
+  "eligible": "conditional",
+  "eligibility_notes": "Restricted to advanced doctoral candidates who have completed their research and are writing their dissertation, selected from a pool of applicants (10 spots) with priority to Asia-based candidates (she qualifies on this point as Hyderabad-based). As a 2nd-year PhD student she may not yet meet the 'advanced' bar, and the 2026 window has already closed — eligibility is conditional on a future cycle and her research progress by then.",
+  "visa": {
+    "required": "yes",
+    "note": "Indian passport holders need a visa to travel to China (via Shanghai). This is general information, not immigration advice — confirm current requirements with the Chinese Embassy/Consulate or the Chinese Visa Application Service Center in India before planning travel.",
+    "official_source": "http://in.china-embassy.gov.cn/eng/lsqz/",
+    "verify_flag": true,
+    "lead_days": 20
+  },
+  "explore": false,
+  "explore_reason": null,
+  "confidence": { "dates": "verified", "fees": "verified", "cost": "range", "visa": "advisory", "eligibility": "verified" }
+}

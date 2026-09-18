@@ -1,0 +1,53 @@
+{
+  "id": "msa-lund-2027",
+  "type": "conference",
+  "status": "open",
+  "title": "MSA Lund 2027 (Memory Studies Association Annual Conference)",
+  "host": "Memory Studies Association",
+  "host_kind": "learned_society",
+  "theme": "Memory, responsibility, hope",
+  "description": "The Memory Studies Association's annual conference will be held at Lund University, Sweden, from 14 to 18 June 2027 on the theme 'Memory, responsibility, hope'. Confirmed keynote speakers include Pumla Gobodo-Madikizela, Emilie Pine and Oksana Zabuzhko. A separate postgraduate preconference workshop, MSA Forward, runs 13-14 June 2027 in Copenhagen and Lund (extracted separately). Registration fees and detailed travel-grant procedures had not yet been published at the time of extraction.",
+  "location": { "city": "Lund", "country": "Sweden", "format": "in_person" },
+  "dates": { "start": "2027-06-14", "end": "2027-06-18" },
+  "deadlines": [
+    {
+      "label": "abstract",
+      "date": "2026-10-15",
+      "depends_on": null,
+      "grounded": true,
+      "source_quote": "PLEASE SUBMIT PROPOSALS NO LATER THAN 15 OCTOBER 2026"
+    }
+  ],
+  "eligibility": {
+    "career_stage": [],
+    "nationality": null,
+    "region_restriction": null,
+    "membership_required": false,
+    "notes": "No membership or career-stage restrictions stated on the page."
+  },
+  "fees": [],
+  "funding": [
+    {
+      "name": "MSA Lund 2027 travel grants and fee waivers",
+      "type": "travel_scholarship",
+      "deadline": null,
+      "amount_note": null,
+      "eligibility_notes": "Details not yet published as of extraction date.",
+      "grounded": true,
+      "source_quote": "A limited number of travel grants and fee waivers will be available for the conference.",
+      "source_url": "https://msalund2027.dryfta.com/grants"
+    }
+  ],
+  "past_editions": [],
+  "standing_signals": [
+    {
+      "signal": "Keynote speakers confirmed: Pumla Gobodo-Madikizela, Emilie Pine, Oksana Zabuzhko",
+      "grounded": true,
+      "source_url": "https://msalund2027.dryfta.com/"
+    }
+  ],
+  "source_url": "https://msalund2027.dryfta.com/",
+  "extracted_at": "2026-09-19",
+  "predatory_flag": false,
+  "predatory_reasons": []
+}

@@ -1,0 +1,39 @@
+{
+  "id": "p_ananya",
+  "name": "Ananya Rao",
+  "fictional": true,
+  "input_text": "2nd-year PhD in media studies at a public university in Hyderabad. I study how Dalit and Bahujan creators use Instagram and YouTube to build counterpublics, and how platform moderation treats caste speech. Also interested in Partition memory online and South Asian diaspora media. I want to present somewhere good this year and get feedback before I write my chapters. Budget is tight, around 1.5 lakh a trip, and I'd rather avoid long visa queues.",
+  "orcid": null,
+  "affiliation": "Department of Communication, a public university in Hyderabad",
+  "career_stage": "phd",
+  "year": 2,
+  "research_summary": "How Dalit and Bahujan creators use Instagram and YouTube to build counterpublics, and how platform moderation handles caste speech.",
+  "topics": [
+    { "term": "caste & digital media", "weight": 0.95 },
+    { "term": "Dalit & Bahujan counterpublics", "weight": 0.9 },
+    { "term": "content moderation & caste speech", "weight": 0.8 },
+    { "term": "creator cultures & influencers", "weight": 0.7 },
+    { "term": "South Asian diaspora media", "weight": 0.6 },
+    { "term": "Partition memory online", "weight": 0.55 }
+  ],
+  "fields": ["South Asian studies", "media & communication"],
+  "adjacent_fields": ["internet studies", "platform studies", "memory studies", "anthropology of media"],
+  "citation_neighborhood": [
+    { "name": "Ramnarayan S. Rawat", "inferred": true },
+    { "name": "Sahana Udupa", "inferred": true },
+    { "name": "Payal Arora", "inferred": true },
+    { "name": "Murali Shanmugavelan", "inferred": true },
+    { "name": "Tarleton Gillespie", "inferred": true }
+  ],
+  "geography": { "country": "India", "city": "Hyderabad", "passport": "India" },
+  "currency": "INR",
+  "constraints": {
+    "max_cost": 150000,
+    "months_available": ["Jan", "May", "Jun", "Jul", "Oct", "Nov", "Dec"],
+    "visa_tolerance": "prefer_none",
+    "format": "any"
+  },
+  "goals": ["visibility", "feedback", "low_cost"],
+  "drafted_fields": ["citation_neighborhood", "constraints.months_available", "goals"],
+  "profile_type": "academic"
+}
