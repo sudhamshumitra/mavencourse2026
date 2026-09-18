@@ -25,7 +25,8 @@ RUNTIME INSTRUCTIONS (web app, live brief)
  "visa":{"required":"yes|no|conditional","note","official_source","verify_flag":true,"lead_days"},
  "explore":false,"explore_reason":null,
  "confidence":{"dates":"verified|inferred","fees":"verified|inferred","cost":"range","visa":"advisory","eligibility":"verified|inferred"}}
-- Keep every reason and bullet short and plain. The reader may not be an academic.`;
+- In "funding", list only items that could realistically apply (eligible yes, likely or check). Leave out funders that clearly don't apply. At most 4 items.
+- Keep every reason and bullet short and plain. The reader may not be an academic. Don't deliberate at length: this is a quick first-pass brief.`;
 
 const PROFILE_KEYS = ['name', 'career_stage', 'year', 'research_summary', 'topics', 'fields', 'adjacent_fields', 'citation_neighborhood', 'geography', 'currency', 'constraints', 'goals'];
 const num = (v, d = 0) => (Number.isFinite(Number(v)) ? Number(v) : d);
@@ -88,7 +89,7 @@ export default async function handler(req, res) {
     const input = JSON.stringify({ today: today(), profile, opportunity: opp, fx: FX, funder_registry: registry });
     if (input.length > 120000) throw new UserFacingError(413, 'That opportunity has too much data to brief.');
 
-    const { data, usage } = await callJson({ model: MODEL, system: SYSTEM, maxTokens: 16000, effort: 'high', user: input });
+    const { data, usage } = await callJson({ model: MODEL, system: SYSTEM, maxTokens: 16000, effort: 'medium', user: input });
     res.status(200).json({ brief: sanitize(data, opp), usage: { input: usage.input_tokens, output: usage.output_tokens } });
   } catch (err) { sendError(res, err); }
 }

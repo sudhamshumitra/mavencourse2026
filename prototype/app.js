@@ -6,7 +6,7 @@
  * feedback loop is visible across a session.
  */
 
-import { TODAY, GATHERED_AT, profile as seedProfile, opportunities, heldBack, pipeline, dismissReasons, topicVocabulary, GOALS } from './data.js';
+import { TODAY, GATHERED_AT, profile as seedProfile, opportunities, heldBack, pipeline, dismissReasons, topicVocabulary, GOALS, meta, FX } from './data.js';
 
 /* ============================================================
    State
@@ -261,6 +261,7 @@ const conf = (kind) =>
   }</span>`;
 
 const safeUrl = (u) => (/^https?:\/\//i.test(String(u ?? '')) ? esc(u) : '#');
+const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www./, ''); } catch { return ''; } };
 const srcQuote = (q) => (q ? `<details class="src"><summary>source</summary><div class="quote-src">“${esc(q)}”</div></details>` : '');
 
 /* ---------- one visual language for every card: type → deadline → place → cost → funding → visa ---------- */
@@ -282,92 +283,78 @@ const openFunding = (o) => (o.funding ?? []).filter((f) => f.eligible !== 'no');
 const futureDeadline = (o) => deadlinesFor(o).find((d) => daysUntil(d.date) >= 0 && !d.synthetic);
 const actionable = (o) => (!o.status || o.status === 'open') && !!futureDeadline(o);
 
-function chips(o) {
-  const out = [];
-  const [te, tl] = TYPE_CHIP[o.type] ?? ['📌', o.type];
-  out.push(`<span class="chip chip-grape">${te} ${tl}</span>`);
+const SUB_SHORT = { fit: 'Fit', standing: 'Standing', network: 'Network', outcomes: 'Outcomes', feasibility: 'Feasible' };
+const tone = (s) => (s >= 75 ? 'hi' : s >= 55 ? 'mid' : 'lo');
 
-  const nd = futureDeadline(o);
-  if (nd) {
-    const u = urgency(nd.date);
-    const label = nd.fund_name ? 'Funding' : DEADLINE_LABEL[nd.label];
-    out.push(`<span class="chip ${u === 'soon' ? 'chip-coral' : u === 'near' ? 'chip-amber' : 'chip-outline'}">⏳ ${label} ${relative(nd.date)}</span>`);
-  } else {
-    out.push(`<span class="chip chip-outline chip-dim">⏳ ${o.status === 'watch' ? 'Next call not out yet' : 'No open deadline'}</span>`);
-  }
-
-  if (o.location.format === 'online' || o.location.city === '—') out.push('<span class="chip">💻 Online</span>');
-  else out.push(`<span class="chip">📍 ${esc(o.location.city)}</span>`);
-
-  const c = o.cost_estimate;
-  if (c) {
-    const over = c.high > state.profile.constraints.max_cost;
-    out.push(`<span class="chip ${c.high === 0 ? 'chip-vine' : over ? 'chip-amber' : 'chip-vine'}">💰 ${
-      c.high === 0 ? 'Free' : `${shortMoney(c.low, c.currency)}–${shortMoney(c.high, c.currency)}`}</span>`);
-  }
-
-  const nf = openFunding(o).length;
-  if (nf) out.push(`<span class="chip chip-vine">🎁 ${nf} funding</span>`);
-
-  const abroad = o.location.format !== 'online' && o.location.country !== '—' && o.location.country !== homeCountry();
-  if (abroad && o.visa?.required === 'yes') out.push('<span class="chip chip-coral">🛂 Visa needed</span>');
-  else if (abroad && o.visa?.required === 'conditional') out.push('<span class="chip chip-amber">🛂 Visa maybe</span>');
-  else if (abroad && o.visa?.required === 'no') out.push('<span class="chip chip-vine">🛂 No visa</span>');
-
-  return `<div class="opp-chips">${out.join('')}</div>`;
+function placeOf(o) {
+  if (o.location.format === 'online' || o.location.city === '—') return 'Online';
+  return [o.location.city, o.location.country].filter((x) => x && x !== '—').join(', ');
 }
 
-/** The two biggest contributors to the score and the biggest drag on it. */
-function scoreDrivers(o) {
+/** One line of plain context: type · place · dates, with status badges. */
+function kicker(o) {
+  const parts = [TYPE_CHIP[o.type]?.[1] ?? o.type, placeOf(o)];
+  if (o.dates?.start) parts.push(fmtDate(o.dates.start));
+  return `<div class="kicker">${parts.map(esc).join('<span class="dot">·</span>')}
+    ${statusBadge(o)}${o.explore ? '<span class="badge badge-sky">Outside your usual field</span>' : ''}${o.pasted ? '<span class="badge badge-sky">You added this</span>' : ''}</div>`;
+}
+
+/** The same four facts, in the same order, everywhere. */
+function factsRow(o) {
+  const nd = futureDeadline(o);
+  const c = o.cost_estimate;
+  const nf = openFunding(o).length;
+  const abroad = o.location.format !== 'online' && o.location.country !== '—' && o.location.country !== homeCountry();
+  const v = o.visa?.required;
+  const dl = nd
+    ? `<dd class="t-${urgency(nd.date)}">${nd.fund_name ? 'Funding' : DEADLINE_LABEL[nd.label]}<span>${relative(nd.date)}</span></dd>`
+    : `<dd class="t-mute">${o.status === 'watch' ? 'Next call not out' : 'None open'}</dd>`;
+  const cost = !c ? '<dd class="t-mute">—</dd>'
+    : `<dd class="${c.high === 0 ? 't-ok' : c.high > state.profile.constraints.max_cost ? 't-warn' : 't-ok'}">${
+      c.high === 0 ? 'Free' : `${shortMoney(c.low, c.currency)}–${shortMoney(c.high, c.currency)}`}<span>${c.high > state.profile.constraints.max_cost ? 'above your limit' : 'within your limit'}</span></dd>`;
+  const fund = `<dd class="${nf ? 't-ok' : 't-mute'}">${nf ? `${nf} option${nf === 1 ? '' : 's'}` : 'None found'}</dd>`;
+  const visa = !abroad ? '<dd class="t-ok">Not needed</dd>'
+    : `<dd class="${v === 'yes' ? 't-soon' : v === 'no' ? 't-ok' : 't-near'}">${v === 'yes' ? 'Needed' : v === 'no' ? 'Not needed' : 'Maybe'}</dd>`;
+  return `<dl class="facts-row">
+    <div><dt>Next deadline</dt>${dl}</div>
+    <div><dt>Cost</dt>${cost}</div>
+    <div><dt>Funding</dt>${fund}</div>
+    <div><dt>Visa</dt>${visa}</div>
+  </dl>`;
+}
+
+function subBars(o) {
   const subs = o.priority?.sub_scores;
   if (!subs) return '';
-  const w = weightsFor();
-  const rows = SUBS.filter(([k]) => typeof subs[k]?.score === 'number')
-    .map(([k, label]) => ({ k, label, s: subs[k].score, c: subs[k].score * w[k] }));
-  const up = [...rows].sort((a, b) => b.c - a.c).slice(0, 2);
-  const down = [...rows].sort((a, b) => a.s - b.s)[0];
-  const pill = (r, dir) => `<span class="drv drv-${dir}"><span class="drv-l">${dir === 'up' ? '▲' : '▼'} ${r.label}</span>
-    <span class="drv-bar"><i style="width:${r.s}%"></i></span><span class="drv-n">${r.s}</span></span>`;
-  return `<div class="drivers">${up.map((r) => pill(r, 'up')).join('')}${down && down.s < 60 ? pill(down, 'down') : ''}</div>`;
+  return `<div class="sb">${SUBS.map(([k, label]) => {
+    const s = subs[k]?.score;
+    if (typeof s !== 'number') return `<div class="sb-r na" title="${label}: doesn't apply"><span>${SUB_SHORT[k]}</span><i></i></div>`;
+    return `<div class="sb-r" title="${label}: ${s}/100"><span>${SUB_SHORT[k]}</span><i><b class="${tone(s)}" style="width:${s}%"></b></i></div>`;
+  }).join('')}</div>`;
 }
 
-function oppCard(opp, i = 0) {
-  const saved = state.saved.includes(opp.id);
-  return `<article class="opp top rank-${i + 1} ${opp.predatory_flag ? 'is-flagged' : ''}" data-opp="${esc(opp.id)}" style="animation-delay:${i * 70}ms">
-    <div class="ring-wrap">${ring(priorityOf(opp) / 100, 72, 'worth it')}<div class="top-rank">#${i + 1}</div></div>
-    <div>
-      <div class="opp-titleline">${statusBadge(opp)}${opp.explore ? '<span class="badge badge-sky">🧭 Outside your usual field</span>' : ''}${opp.pasted ? '<span class="badge badge-sky">🔗 You added this</span>' : ''}</div>
-      <h3 class="opp-title"><a href="#/brief/${esc(opp.id)}">${esc(opp.title)}</a></h3>
-      <div class="opp-host">${esc(opp.host)}</div>
-      <p class="opp-tag">${esc(opp.tagline ?? '')}</p>
-      ${chips(opp)}
-      ${scoreDrivers(opp)}
-      <div class="opp-actions">
-        <a class="btn btn-primary btn-sm" href="#/brief/${esc(opp.id)}">Is it worth it? →</a>
-        <button class="btn btn-ghost btn-sm" data-act="save" data-id="${esc(opp.id)}" title="Adds its deadlines to your Tracker">${saved ? '★ In your tracker' : '☆ Save to tracker'}</button>
-        <button class="btn btn-quiet btn-sm" data-act="dismiss" data-id="${esc(opp.id)}" title="Hides it and asks why, so the ranking learns">✕ Not for me</button>
-      </div>
+function oppRow(o, rank, top = false) {
+  const saved = state.saved.includes(o.id);
+  const p = priorityOf(o);
+  return `<article class="lr ${top ? 'lr-top' : ''}" data-opp="${esc(o.id)}" style="animation-delay:${Math.min(rank * 45, 400)}ms">
+    <div class="lr-rank">${String(rank).padStart(2, '0')}</div>
+    <div class="lr-score">
+      <div class="lr-num ${tone(p)}">${p}</div>
+      <div class="lr-cap">worth it</div>
+      ${subBars(o)}
     </div>
-  </article>`;
-}
-
-function oppMini(opp, i = 0) {
-  const saved = state.saved.includes(opp.id);
-  const p = priorityOf(opp);
-  return `<article class="mini ${opp.status === 'stale' ? 'is-stale' : ''}" data-opp="${esc(opp.id)}" style="animation-delay:${Math.min(i * 40, 320)}ms">
-    <div class="mini-top">
-      <span class="mini-score ${opp.status === 'stale' ? 'stale' : p >= 75 ? 'hi' : p >= 60 ? 'mid' : 'lo'}" title="Worth-it score">${opp.status === 'stale' ? '?' : p}</span>
-      <div class="mini-head">
-        <div class="opp-titleline">${statusBadge(opp)}${opp.explore ? '<span class="badge badge-sky">🧭 Outside your usual field</span>' : ''}${opp.pasted ? '<span class="badge badge-sky">🔗 You added this</span>' : ''}</div>
-        <a class="mini-title" href="#/brief/${esc(opp.id)}">${esc(opp.title)}</a>
-        <div class="opp-host">${esc(opp.host)}</div>
-      </div>
-      <div class="mini-actions">
-        <button class="icon-act" data-act="save" data-id="${esc(opp.id)}" title="${saved ? 'In your tracker' : 'Save to tracker'}" aria-label="Save">${saved ? '★' : '☆'}</button>
-        <button class="icon-act" data-act="dismiss" data-id="${esc(opp.id)}" title="Not for me" aria-label="Not for me">✕</button>
-      </div>
+    <div class="lr-main">
+      ${kicker(o)}
+      <h3 class="lr-title"><a href="#/brief/${esc(o.id)}">${esc(o.title)}</a></h3>
+      <div class="lr-host">${esc(o.host)} <a class="src-link" href="${safeUrl(o.source_url)}" target="_blank" rel="noopener noreferrer">Call page ↗</a></div>
+      ${top && o.tagline ? `<p class="lr-tag">${esc(o.tagline)}</p>` : ''}
+      ${factsRow(o)}
     </div>
-    ${chips(opp)}
+    <div class="lr-act">
+      <a class="btn btn-primary btn-sm" href="#/brief/${esc(o.id)}">Is it worth it?</a>
+      <button class="btn btn-ghost btn-sm" data-act="save" data-id="${esc(o.id)}" title="Adds its deadlines to your Tracker">${saved ? '★ Saved' : '☆ Save'}</button>
+      <button class="btn btn-quiet btn-sm" data-act="dismiss" data-id="${esc(o.id)}" title="Hides it and asks why, so the ranking learns">Not for me</button>
+    </div>
   </article>`;
 }
 
@@ -648,20 +635,40 @@ function onboardingEvents(root) {
 function renderPipeline() {
   $('#topbar').hidden = true;
   return `<section class="pipe-screen">
-    <div class="pipe">
-      <h2>Finding opportunities for you</h2>
-      <p class="pipe-sub">This takes a few seconds.</p>
-      <div class="pipe-steps" id="pipe-steps">
-        ${pipeline.map((s, i) => `<div class="pipe-step" data-i="${i}">
-          <span class="pipe-bullet" aria-hidden="true">✓</span>
-          <span><span class="pipe-label">${s.label}</span><br/><span class="pipe-detail">${s.detail}</span></span>
-          <span class="pipe-tick" hidden>done</span>
-        </div>`).join('')}
+    <div class="pipe2">
+      <div class="pipe2-head">
+        <h2>Finding opportunities for you</h2>
+        <button class="btn btn-quiet btn-sm" data-act="skip">Skip →</button>
       </div>
       <div class="pipe-bar"><i id="pipe-bar"></i></div>
-      <button class="btn btn-quiet pipe-skip" data-act="skip">Skip →</button>
+      <div class="pipe2-grid">
+        <ol class="pipe2-steps" id="pipe-steps">
+          ${pipeline.map((s, i) => `<li data-i="${i}"><span class="p2-dot" aria-hidden="true"></span><span>${s.label}</span></li>`).join('')}
+        </ol>
+        <div class="pipe2-live" aria-live="polite">
+          <div class="p2-title" id="p2-title"></div>
+          <div class="p2-detail" id="p2-detail"></div>
+          <div class="p2-stream" id="p2-stream"></div>
+        </div>
+      </div>
     </div>
   </section>`;
+}
+
+/** What each step "shows" while it runs: real items from the profile and the gathered data. */
+function pipelineStreams() {
+  const p = state.profile;
+  const opps = allOpportunities().filter((o) => o.status !== 'stale');
+  const ranked = [...opps].sort((a, b) => priorityOf(b) - priorityOf(a));
+  return [
+    (p.topics ?? []).slice(0, 6).map((t) => t.term),
+    [...(p.fields ?? []), ...(p.adjacent_fields ?? [])].slice(0, 6).map((f, i) => (i < (p.fields ?? []).length ? f : `+ ${f}`)),
+    opps.slice(0, 7).map((o) => o.host.replace(/\s*\(.*?\)\s*/g, ' ').trim().slice(0, 42)),
+    opps.slice(0, 7).map((o) => hostOf(o.source_url)).filter(Boolean),
+    opps.filter((o) => o.cost_estimate?.high).slice(0, 5).map((o) => `${shortMoney(o.cost_estimate.low, o.cost_estimate.currency)}–${shortMoney(o.cost_estimate.high, o.cost_estimate.currency)} · ${o.title.split(/[—:(]/)[0].trim().slice(0, 28)}`),
+    ranked.slice(0, 3).map((o, i) => `${i + 1}. ${o.title.split(/[—:(]/)[0].trim().slice(0, 40)} · ${priorityOf(o)}`),
+    ['Deadlines ✓', 'Fees ✓', 'Funding links ✓', `${meta.grounded_pass} of ${meta.grounded_total} matched`],
+  ];
 }
 
 let pipeTimers = [];
@@ -669,28 +676,33 @@ let pipeTimers = [];
 function runPipeline() {
   pipeTimers.forEach(clearTimeout);
   pipeTimers = [];
-  const steps = $$('#pipe-steps .pipe-step');
-  let t = 250;
+  const steps = $$('#pipe-steps li');
+  const streams = pipelineStreams();
+  const STEP_MS = 1900;
+  const at = (ms, fn) => pipeTimers.push(setTimeout(fn, ms));
 
   steps.forEach((el, i) => {
-    pipeTimers.push(setTimeout(() => {
+    const start = 300 + i * STEP_MS;
+    at(start, () => {
       steps.forEach((s) => s.classList.remove('active'));
       el.classList.add('active');
       $('#pipe-bar').style.width = `${(i / steps.length) * 100}%`;
-    }, t));
-    t += pipeline[i].ms;
-    pipeTimers.push(setTimeout(() => {
-      el.classList.remove('active');
-      el.classList.add('done');
-      $('.pipe-tick', el).hidden = false;
-    }, t - 120));
+      $('#p2-title').textContent = pipeline[i].label;
+      $('#p2-detail').textContent = pipeline[i].detail;
+      $('#p2-stream').innerHTML = '';
+    });
+    (streams[i] ?? []).forEach((item, j) => at(start + 250 + j * 210, () => {
+      const chip = document.createElement('span');
+      chip.className = 'p2-item';
+      chip.textContent = item;
+      $('#p2-stream')?.append(chip);
+    }));
+    at(start + STEP_MS - 120, () => { el.classList.remove('active'); el.classList.add('done'); });
   });
 
-  pipeTimers.push(setTimeout(() => {
-    const bar = $('#pipe-bar');
-    if (bar) bar.style.width = '100%';
-  }, t));
-  pipeTimers.push(setTimeout(() => { location.hash = '#/feed'; }, t + 420));
+  const end = 300 + steps.length * STEP_MS;
+  at(end, () => { const bar = $('#pipe-bar'); if (bar) bar.style.width = '100%'; });
+  at(end + 450, () => { location.hash = '#/feed'; });
 }
 
 /* ============================================================
@@ -700,7 +712,7 @@ function runPipeline() {
 let feedFilter = 'all';
 
 function visibleOpportunities() {
-  let list = allOpportunities().filter((o) => !state.dismissed.includes(o.id));
+  let list = allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.status !== 'stale');
   if (!state.showIneligible) list = list.filter((o) => o.eligible !== 'no');
   if (state.profile.constraints.visa_tolerance === 'none') list = list.filter((o) => o.visa?.required !== 'yes');
   if (feedFilter === 'saved') list = list.filter((o) => state.saved.includes(o.id));
@@ -708,67 +720,63 @@ function visibleOpportunities() {
   return list.sort((a, b) => priorityOf(b) - priorityOf(a));
 }
 
-const hiddenIneligible = () => allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.eligible === 'no').length;
+const hiddenIneligible = () => allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.status !== 'stale' && o.eligible === 'no').length;
 
 function renderFeed() {
   $('#topbar').hidden = false;
   const list = visibleOpportunities();
-  const ranked = list.filter((o) => !o.predatory_flag && o.status !== 'stale');
-  const stale = list.filter((o) => o.status === 'stale');
+  const ranked = list.filter((o) => !o.predatory_flag);
   const flagged = list.filter((o) => o.predatory_flag);
   const top = ranked.filter(actionable).slice(0, 3);
   const rest = ranked.filter((o) => !top.includes(o));
   const nIneligible = hiddenIneligible();
-  const live = [...ranked];
-  const soon = live.map(futureDeadline).filter((d) => d && daysUntil(d.date) <= 30).length;
-  const funded = live.filter((o) => openFunding(o).length).length;
+  const soon = ranked.map(futureDeadline).filter((d) => d && daysUntil(d.date) <= 30).length;
+  const funded = ranked.filter((o) => openFunding(o).length).length;
   const first = state.profile.name === 'You' ? null : esc(state.profile.name.split(' ')[0]);
   const goals = (state.profile.goals ?? []).map((g) => GOALS.find((x) => x.id === g)?.label.toLowerCase()).filter(Boolean);
 
-  const filters = [['all', 'Everything'], ['conference', '🎤 Conferences'], ['journal_call', '📄 Journal calls'],
-    ['fellowship', '🎓 Fellowships'], ['saved', `★ Saved (${state.saved.length})`]];
+  const filters = [['all', 'All'], ['conference', 'Conferences'], ['journal_call', 'Journal calls'],
+    ['fellowship', 'Fellowships'], ['saved', `Saved · ${state.saved.length}`]];
 
-  return `<div class="wrap">
+  return `<div class="wrap wrap-feed">
     <header class="feed-head">
       <div class="eyebrow">Real calls · gathered ${fmtDate(GATHERED_AT)}</div>
       <h1>${first ? `${first}'s shortlist` : 'Your shortlist'}</h1>
-      <div class="stats">
-        <div class="stat"><b>${live.length}</b><span>opportunities</span></div>
-        <div class="stat ${soon ? 'stat-warm' : ''}"><b>${soon}</b><span>deadlines in the next 30 days</span></div>
-        <div class="stat stat-green"><b>${funded}</b><span>with funding you could apply for</span></div>
+      <div class="ledger">
+        <div><b>${ranked.length}</b><span>opportunities</span></div>
+        <div class="${soon ? 'warm' : ''}"><b>${soon}</b><span>deadlines in the next 30 days</span></div>
+        <div class="green"><b>${funded}</b><span>with funding you could apply for</span></div>
       </div>
     </header>
 
-    <div class="filters">
-      ${filters.map(([v, l]) => `<button class="filter" data-act="filter" data-v="${v}" aria-pressed="${feedFilter === v}">${l}</button>`).join('')}
+    <div class="feed-bar">
+      <div class="filters">
+        ${filters.map(([v, l]) => `<button class="filter" data-act="filter" data-v="${v}" aria-pressed="${feedFilter === v}">${l}</button>`).join('')}
+      </div>
+      <p class="feed-note">Ranked by ${goals.length ? goals.join(', ') : 'your profile'} · <a href="#/profile">change</a> · <a href="#/how">how scores work</a></p>
     </div>
-    <p class="feed-note">Best first, based on ${goals.length ? `what you care about: ${goals.join(', ')}` : 'your profile'}. <a href="#/profile">Change</a></p>
 
     ${list.length === 0 ? `<div class="empty"><span class="big" aria-hidden="true">🍇</span>
         <p><strong>Nothing here yet.</strong></p>
-        <p class="small">${feedFilter === 'saved' ? 'Tap ☆ on anything in your feed and it shows up here and in your Tracker.' : 'You have dismissed everything in this view.'}</p>
-        ${feedFilter !== 'all' ? '<button class="btn btn-ghost btn-sm" data-act="filter" data-v="all">Show everything</button>' : ''}
+        <p class="small">${feedFilter === 'saved' ? 'Save something and it shows up here and in your Tracker.' : 'You have dismissed everything in this view.'}</p>
+        ${feedFilter !== 'all' ? '<button class="btn btn-ghost btn-sm" data-act="filter" data-v="all">Show all</button>' : ''}
       </div>` : ''}
 
-    ${top.length ? `<div class="section-rule">Top picks you can apply to now</div>
-      <div class="feed-list">${top.map((o, i) => oppCard(o, i)).join('')}</div>` : ''}
+    ${top.length ? `<h2 class="list-h">Apply now</h2>
+      <div class="ledger-list">${top.map((o, i) => oppRow(o, i + 1, true)).join('')}</div>` : ''}
 
-    ${rest.length ? `<div class="section-rule">Also worth a look</div>
-      <div class="mini-grid">${rest.map((o, i) => oppMini(o, i)).join('')}</div>` : ''}
+    ${rest.length ? `<h2 class="list-h">Also worth a look <span>closed this year, next edition, or lower fit</span></h2>
+      <div class="ledger-list">${rest.map((o, i) => oppRow(o, top.length + i + 1)).join('')}</div>` : ''}
 
-    ${stale.length ? `<div class="section-rule">Possibly out of date</div>
-      <p class="small muted" style="margin:-.4rem 0 .8rem">These pages haven't been updated recently. Check they're still open before you spend time on them.</p>
-      <div class="mini-grid">${stale.map((o, i) => oppMini(o, i)).join('')}</div>` : ''}
-
-    ${flagged.length ? `<div class="section-rule">Flagged: be careful</div>
-      <div class="mini-grid">${flagged.map((o, i) => oppMini(o, i)).join('')}</div>` : ''}
+    ${flagged.length ? `<h2 class="list-h">Be careful <span>no traceable scholarly record</span></h2>
+      <div class="ledger-list">${flagged.map((o, i) => oppRow(o, ranked.length + i + 1)).join('')}</div>` : ''}
 
     ${nIneligible ? `<p class="small muted" style="margin-top:1.4rem">
       ${state.showIneligible ? 'Showing' : 'Hiding'} ${nIneligible} you can't apply to.
       <button class="btn btn-quiet btn-sm" data-act="toggle-inelig">${state.showIneligible ? 'Hide them' : 'Show them'}</button></p>` : ''}
 
-    <form class="paste-box" id="paste-form" style="margin-top:2rem">
-      <span class="paste-label">🔗 Know about one that's missing? Paste the link.</span>
+    <form class="paste-box" id="paste-form" style="margin-top:2.4rem">
+      <span class="paste-label">Know about one that's missing? Paste its link.</span>
       <input type="text" id="paste-url" placeholder="https://…" aria-label="Opportunity URL" />
       <button class="btn btn-primary" type="submit">Add it</button>
     </form>
@@ -1093,10 +1101,11 @@ function renderBrief(id) {
     <a class="back-link" href="#/feed">← Back to your shortlist</a>
 
     <header class="brief-head">
-      <div class="opp-titleline">${statusBadge(o)}${o.explore ? '<span class="badge badge-sky">🧭 Outside your usual field</span>' : ''}</div>
+      ${kicker(o)}
       <h1>${esc(o.title)}</h1>
-      <p class="brief-sub">${esc(o.host)}${o.dates?.start ? ` · ${fmtDate(o.dates.start)}${o.dates.end && o.dates.end !== o.dates.start ? ` – ${fmtDate(o.dates.end)}` : ''}` : ''}</p>
-      ${chips(o)}
+      <p class="brief-sub">${esc(o.host)}${o.dates?.end && o.dates.end !== o.dates.start ? ` · until ${fmtDate(o.dates.end)}` : ''}</p>
+      <a class="btn btn-ghost btn-sm src-btn" href="${safeUrl(o.source_url)}" target="_blank" rel="noopener noreferrer">Open the call page ↗</a>
+      <span class="tiny muted">${esc(hostOf(o.source_url))} · checked ${fmtDate(o.extracted_at.slice(0, 10))}</span>
     </header>
 
     ${o.status === 'stale' ? `<div class="callout danger" style="margin-bottom:1rem"><h4>⚠️ This page may be out of date</h4>
@@ -1137,6 +1146,69 @@ function renderBrief(id) {
     <section class="panel tab-panel" role="tabpanel">${TAB_FN[briefTab](o)}</section>
 
     <p class="tiny muted" style="margin-top:1rem">Grapevine never registers, pays, submits or books for you.</p>
+  </div>`;
+}
+
+/* ============================================================
+   Screen — how it works (FAQ)
+   ============================================================ */
+
+function renderHow() {
+  $('#topbar').hidden = false;
+  const w = weightsFor();
+  const pct = (k) => `${Math.round(w[k] * 100)}%`;
+  const goals = (state.profile.goals ?? []).map((g) => GOALS.find((x) => x.id === g)?.label).filter(Boolean);
+  const live = allOpportunities().filter((o) => o.status !== 'stale');
+  const usd = FX?.inr_per?.USD;
+
+  const qa = (q, a, open = false) => `<details class="qa" ${open ? 'open' : ''}><summary>${q}</summary><div class="qa-a">${a}</div></details>`;
+
+  return `<div class="wrap wrap-mid how">
+    <div class="eyebrow">How it works</div>
+    <h1>What Grapevine does, and how it scores things</h1>
+    <p class="lede">Short answers. Tap a question to open it.</p>
+
+    <h2 class="list-h">The basics</h2>
+    ${qa('What does Grapevine do?', `<p>It finds conferences, journal calls and fellowships that fit your research, then tells you which ones are worth your time and money: what it costs, who pays, what the deadlines are, and whether you need a visa.</p>`, true)}
+    ${qa('Where do the opportunities come from?', `<p>Grapevine works out which fields your research belongs to, including neighbouring ones you might not think of. Then it looks for:</p>
+      <ul><li>the main scholarly societies in those fields and their yearly conferences</li>
+      <li>next year's editions of conferences that meet regularly</li>
+      <li>journal special issues and fellowships</li></ul>
+      <p>That's how it found the internet researchers' conference (AoIR) for someone working on caste and social media. It isn't on any built-in list.</p>`)}
+    ${qa('What is saved right now?', `<ul>
+      <li><strong>${live.length} real calls</strong>, gathered on ${fmtDate(GATHERED_AT)}. Each one has its dates, fees and funding copied from the call page.</li>
+      <li><strong>A list of Indian funders</strong> who pay for conference travel, such as ICSSR's scheme for presenting abroad.</li>
+      <li><strong>Exchange rates</strong>${usd ? ` (1 USD ≈ ₹${usd.toFixed(1)})` : ''} used for cost estimates.</li></ul>
+      <p>These were gathered for an example researcher, Ananya, a PhD student in media studies. If you set up your own profile, the same calls are <em>re-ranked for your goals</em>. Searching specifically for <em>your</em> topics is coming with accounts.</p>`)}
+    ${qa('Why are some calls missing?', `<p>Grapevine hides calls that look out of date (for example, a page last updated years ago) and calls you can't apply to (wrong career stage or region). You can show the second group from the bottom of your shortlist.</p>`)}
+
+    <h2 class="list-h">The "worth it" score</h2>
+    ${qa('How is the score worked out?', `<p>Every opportunity gets five scores out of 100, each with a one-line reason. The final score is a weighted average of the five, and <strong>your goals set the weights</strong>.</p>
+      <table class="how-t"><thead><tr><th>Part</th><th>Your weight now</th></tr></thead><tbody>
+      ${SUBS.map(([k, l]) => `<tr><td>${l}</td><td>${pct(k)}</td></tr>`).join('')}
+      </tbody></table>
+      <p class="small muted">Your goals: ${goals.length ? goals.join(', ') : 'none picked'}. Each goal you pick adds weight to one part. For example, "Keep it affordable" adds to Feasibility. Change them on your <a href="#/profile">profile</a>.</p>`, true)}
+    ${qa('Fit: how close is it to my research?', `<p>Does the call's theme, tracks and past papers match what you work on? It judges by meaning, not shared words, so a theme like "Regeneration(s)" can still be a strong match for platform research.</p>
+      <p><strong>Higher:</strong> your main topic is a named theme or track. <strong>Lower:</strong> only a loose link.</p>`)}
+    ${qa('Standing: is it a respected venue?', `<p>Who runs it, and how long has it been going?</p>
+      <p><strong>Higher:</strong> run by a scholarly society or university, many past editions, published proceedings, known speakers. <strong>Lower:</strong> little information. <strong>Much lower:</strong> signs of a predatory, for-profit "all topics" event.</p>`)}
+    ${qa('Network: who would I meet?', `<p>Is this where people in your area actually go?</p>
+      <p><strong>Higher:</strong> it's a field's main meeting, has sessions for PhD students, or a small group you'd get to know. Journal calls don't get this score.</p>`)}
+    ${qa('Outcomes: what would I come away with?', `<p><strong>Higher:</strong> a route to publication, awards for students, feedback sessions, or a strong line on your CV. <strong>Lower:</strong> attending without presenting.</p>`)}
+    ${qa('Feasibility: can I realistically go?', `<p>It starts at 100 and drops if:</p>
+      <ul><li>the cost is above your limit</li><li>a hard visa is needed</li><li>it falls in a month you can't travel</li><li>the deadline is very close</li><li>you might not be eligible</li></ul>
+      <p>It goes back up if funding would likely cover a good part of the cost.</p>`)}
+    ${qa('Why is a famous conference ranked lower than a small one?', `<p>Because "worth it" is about <em>you, this year</em>. A top conference whose deadline has passed, that you can't afford, and that needs a slow visa can rightly rank below a smaller one you can apply to next week. The page for each one says exactly why.</p>`)}
+    ${qa('What happens when I tap "Not for me"?', `<p>It asks why, and the ranking learns from your answer. "Too expensive" makes cost count for more, and "Off topic" lowers that topic. You can see and undo every change on your profile.</p>`)}
+
+    <h2 class="list-h">Trusting what you see</h2>
+    ${qa('What do ✓ verified and "inferred" mean?', `<p><strong>✓ verified</strong> means the exact words were found on the call page and re-checked. Tap "source" to see them. <strong>Inferred</strong> means Grapevine worked it out but couldn't find it written down, so check it yourself.</p>`)}
+    ${qa('How is the cost worked out?', `<p>Registration (the fee tier you qualify for), plus a return flight, nights of accommodation and the visa fee. It's always shown as a range with its assumptions, because a single exact number would be false precision.</p>`)}
+    ${qa('Where does the funding list come from?', `<p>Two places: the organisers' own grants (from their website), and outside funders you're likely to qualify for, based on your country, field and career stage. Grapevine also tells you what each one needs first, such as an acceptance letter.</p>`)}
+    ${qa('Is the visa information advice?', `<p>No. It's general information with a link to the official source. Always check there before you act.</p>`)}
+    ${qa('Will Grapevine apply or pay for me?', `<p>Never. It reads and advises. Registering, paying, submitting and booking are always yours to do.</p>`)}
+    ${qa('What happens when I paste a link?', `<p>Grapevine opens the page safely, reads the call, works out cost and funding for your profile, and scores it like everything else. It takes under a minute.</p>`)}
+    ${qa('Where is my data stored?', `<p>For now, only in this browser. Nothing about you is sent anywhere except the text you type into "describe your research" or a link you paste, which is sent to the AI to be read. Accounts that save your profile are coming next.</p>`)}
   </div>`;
 }
 
@@ -1448,6 +1520,7 @@ const routes = {
   '/feed': renderFeed,
   '/tracker': renderTracker,
   '/profile': renderProfile,
+  '/how': renderHow,
 };
 
 function render() {
