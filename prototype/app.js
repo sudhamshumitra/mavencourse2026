@@ -1446,13 +1446,13 @@ function renderHow() {
 
   const qa = (q, a, open = false) => `<details class="qa" ${open ? 'open' : ''}><summary>${q}</summary><div class="qa-a">${a}</div></details>`;
 
-  return `<div class="wrap wrap-mid how">
+  return `<div class="wrap wrap-mid faq">
     <div class="eyebrow">How it works</div>
     <h1>What Grapevine does, and how it scores things</h1>
     <p class="lede">Short answers. Tap a question to open it.</p>
 
     <h2 class="list-h">The basics</h2>
-    ${qa('What does Grapevine do?', `<p>It finds conferences, journal calls and fellowships that fit your research, then tells you which ones are worth your time and money: what it costs, who pays, what the deadlines are, and whether you need a visa.</p>`, true)}
+    ${qa('What does Grapevine do?', `<p>It finds conferences, journal calls and fellowships that fit your research, then tells you which ones are worth your time and money: what it costs, who pays, what the deadlines are, and whether you need a visa.</p>`)}
     ${qa('Where do the opportunities come from?', `<p>Grapevine works out which fields your research belongs to, including neighbouring ones you might not think of. Then it looks for:</p>
       <ul><li>the main scholarly societies in those fields and their yearly conferences</li>
       <li>next year's editions of conferences that meet regularly</li>
@@ -1467,10 +1467,10 @@ function renderHow() {
 
     <h2 class="list-h">The "worth it" score</h2>
     ${qa('How is the score worked out?', `<p>Every opportunity gets five scores out of 100, each with a one-line reason. The final score is a weighted average of the five, and <strong>your goals set the weights</strong>.</p>
-      <table class="how-t"><thead><tr><th>Part</th><th>Your weight now</th></tr></thead><tbody>
+      <table class="faq-t"><thead><tr><th>Part</th><th>Your weight now</th></tr></thead><tbody>
       ${SUBS.map(([k, l]) => `<tr><td>${l}</td><td>${pct(k)}</td></tr>`).join('')}
       </tbody></table>
-      <p class="small muted">Your goals: ${goals.length ? goals.join(', ') : 'none picked'}. Each goal you pick adds weight to one part. For example, "Keep it affordable" adds to Feasibility. Change them on your <a href="#/profile">profile</a>.</p>`, true)}
+      <p class="small muted">Your goals: ${goals.length ? goals.join(', ') : 'none picked'}. Each goal you pick adds weight to one part. For example, "Keep it affordable" adds to Feasibility. Change them on your <a href="#/profile">profile</a>.</p>`)}
     ${qa('Fit: how close is it to my research?', `<p>Does the call's theme, tracks and past papers match what you work on? It judges by meaning, not shared words, so a theme like "Regeneration(s)" can still be a strong match for platform research.</p>
       <p><strong>Higher:</strong> your main topic is a named theme or track. <strong>Lower:</strong> only a loose link.</p>`)}
     ${qa('Standing: is it a respected venue?', `<p>Who runs it, and how long has it been going?</p>
