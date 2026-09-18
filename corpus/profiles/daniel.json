@@ -1,0 +1,86 @@
+{
+  "id": "p_daniel",
+  "name": "Daniel Mensah",
+  "fictional": true,
+  "input_text": "Late-stage PhD in Accra on how AI companies use cheap data-labelling and content-moderation work in Ghana and Kenya, and how those workers organise. I want visibility before the job market and feedback on my framing.",
+  "orcid": null,
+  "affiliation": "PhD candidate in Communication Studies, a university in Accra",
+  "career_stage": "phd",
+  "year": 4,
+  "research_summary": "Data labelling and content-moderation labour for AI in Ghana and Kenya, and how workers organise.",
+  "topics": [
+    {
+      "term": "AI data labour",
+      "weight": 0.95
+    },
+    {
+      "term": "content moderation work",
+      "weight": 0.85
+    },
+    {
+      "term": "platform labour in Africa",
+      "weight": 0.8
+    },
+    {
+      "term": "worker organising",
+      "weight": 0.7
+    },
+    {
+      "term": "critical AI studies",
+      "weight": 0.65
+    }
+  ],
+  "fields": [
+    "communication studies",
+    "science and technology studies"
+  ],
+  "adjacent_fields": [
+    "labour studies",
+    "internet studies",
+    "critical data studies"
+  ],
+  "citation_neighborhood": [
+    {
+      "name": "Mary L. Gray",
+      "inferred": true
+    },
+    {
+      "name": "Kalindi Vora",
+      "inferred": true
+    },
+    {
+      "name": "Mark Graham",
+      "inferred": true
+    }
+  ],
+  "geography": {
+    "country": "Ghana",
+    "city": "Accra",
+    "passport": "Ghana"
+  },
+  "currency": "GHS",
+  "constraints": {
+    "max_cost": 40000,
+    "months_available": [
+      "Jan",
+      "May",
+      "Jun",
+      "Jul",
+      "Sep",
+      "Nov"
+    ],
+    "visa_tolerance": "prefer_none",
+    "format": "any"
+  },
+  "goals": [
+    "visibility",
+    "networking",
+    "feedback"
+  ],
+  "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+  ],
+  "profile_type": "academic"
+}

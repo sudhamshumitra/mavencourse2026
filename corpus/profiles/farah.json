@@ -1,0 +1,85 @@
+{
+  "id": "p_farah",
+  "name": "Farah Qureshi",
+  "fictional": true,
+  "input_text": "Final-year PhD in Lahore on oral histories of the 1947 Partition from women in Punjab, and how family memory is passed down. I need feedback on my last chapters and a publication before I finish.",
+  "orcid": null,
+  "affiliation": "PhD candidate in History, a university in Lahore",
+  "career_stage": "phd",
+  "year": 4,
+  "research_summary": "Women’s oral histories of the 1947 Partition in Punjab and intergenerational family memory.",
+  "topics": [
+    {
+      "term": "Partition oral history",
+      "weight": 0.95
+    },
+    {
+      "term": "women and memory",
+      "weight": 0.85
+    },
+    {
+      "term": "Punjab 1947",
+      "weight": 0.8
+    },
+    {
+      "term": "intergenerational memory",
+      "weight": 0.7
+    },
+    {
+      "term": "South Asian history",
+      "weight": 0.6
+    }
+  ],
+  "fields": [
+    "history",
+    "South Asian studies"
+  ],
+  "adjacent_fields": [
+    "memory studies",
+    "oral history",
+    "gender studies"
+  ],
+  "citation_neighborhood": [
+    {
+      "name": "Urvashi Butalia",
+      "inferred": true
+    },
+    {
+      "name": "Yasmin Khan",
+      "inferred": true
+    },
+    {
+      "name": "Anam Zakaria",
+      "inferred": true
+    }
+  ],
+  "geography": {
+    "country": "Pakistan",
+    "city": "Lahore",
+    "passport": "Pakistan"
+  },
+  "currency": "PKR",
+  "constraints": {
+    "max_cost": 600000,
+    "months_available": [
+      "Jan",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Dec"
+    ],
+    "visa_tolerance": "prefer_none",
+    "format": "any"
+  },
+  "goals": [
+    "publication",
+    "feedback",
+    "visibility"
+  ],
+  "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+  ],
+  "profile_type": "academic"
+}

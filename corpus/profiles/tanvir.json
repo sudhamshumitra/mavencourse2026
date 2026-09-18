@@ -1,0 +1,84 @@
+{
+  "id": "p_tanvir",
+  "name": "Tanvir Hasan",
+  "fictional": true,
+  "input_text": "Lecturer in Dhaka working on education policy, especially how exam reforms and English-medium schooling affect inequality in Bangladesh. I want to publish internationally and build collaborations.",
+  "orcid": null,
+  "affiliation": "Lecturer in Education, a public university in Dhaka",
+  "career_stage": "faculty",
+  "year": null,
+  "research_summary": "Education policy, exam reform and English-medium schooling as drivers of inequality in Bangladesh.",
+  "topics": [
+    {
+      "term": "education policy",
+      "weight": 0.95
+    },
+    {
+      "term": "educational inequality",
+      "weight": 0.85
+    },
+    {
+      "term": "exam reform",
+      "weight": 0.75
+    },
+    {
+      "term": "English-medium schooling",
+      "weight": 0.7
+    },
+    {
+      "term": "South Asian education",
+      "weight": 0.6
+    }
+  ],
+  "fields": [
+    "education",
+    "development studies"
+  ],
+  "adjacent_fields": [
+    "comparative education",
+    "sociology of education",
+    "South Asian studies"
+  ],
+  "citation_neighborhood": [
+    {
+      "name": "Manzoor Ahmed",
+      "inferred": true
+    },
+    {
+      "name": "Keith Lewin",
+      "inferred": true
+    },
+    {
+      "name": "Monazza Aslam",
+      "inferred": true
+    }
+  ],
+  "geography": {
+    "country": "Bangladesh",
+    "city": "Dhaka",
+    "passport": "Bangladesh"
+  },
+  "currency": "BDT",
+  "constraints": {
+    "max_cost": 250000,
+    "months_available": [
+      "Jan",
+      "Jun",
+      "Jul",
+      "Dec"
+    ],
+    "visa_tolerance": "any",
+    "format": "any"
+  },
+  "goals": [
+    "publication",
+    "visibility",
+    "networking"
+  ],
+  "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+  ],
+  "profile_type": "academic"
+}

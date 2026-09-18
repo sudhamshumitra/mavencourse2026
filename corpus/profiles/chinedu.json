@@ -1,0 +1,86 @@
+{
+  "id": "p_chinedu",
+  "name": "Chinedu Okafor",
+  "fictional": true,
+  "input_text": "I am finishing an MA in Lagos on how flooding and climate stress push people from the Niger Delta into Lagos, and how migrants talk about home. I want to present my first paper and meet people who could supervise a PhD. I have very little money.",
+  "orcid": null,
+  "affiliation": "MA student, Department of Geography, a public university in Lagos",
+  "career_stage": "other",
+  "year": null,
+  "research_summary": "How climate stress and flooding drive migration from the Niger Delta to Lagos, and how migrants narrate home.",
+  "topics": [
+    {
+      "term": "climate-induced migration",
+      "weight": 0.95
+    },
+    {
+      "term": "Niger Delta environment",
+      "weight": 0.85
+    },
+    {
+      "term": "urban migration in Lagos",
+      "weight": 0.8
+    },
+    {
+      "term": "environmental humanities",
+      "weight": 0.65
+    },
+    {
+      "term": "oral narratives of displacement",
+      "weight": 0.6
+    }
+  ],
+  "fields": [
+    "geography",
+    "migration studies"
+  ],
+  "adjacent_fields": [
+    "environmental humanities",
+    "African studies",
+    "disaster studies"
+  ],
+  "citation_neighborhood": [
+    {
+      "name": "Ogoni environmental justice scholars",
+      "inferred": true
+    },
+    {
+      "name": "Michael Watts",
+      "inferred": true
+    },
+    {
+      "name": "Kalpana Wilson",
+      "inferred": true
+    }
+  ],
+  "geography": {
+    "country": "Nigeria",
+    "city": "Lagos",
+    "passport": "Nigeria"
+  },
+  "currency": "NGN",
+  "constraints": {
+    "max_cost": 1500000,
+    "months_available": [
+      "Jan",
+      "Feb",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Dec"
+    ],
+    "visa_tolerance": "prefer_none",
+    "format": "any"
+  },
+  "goals": [
+    "low_cost",
+    "networking",
+    "feedback"
+  ],
+  "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+  ],
+  "profile_type": "academic"
+}

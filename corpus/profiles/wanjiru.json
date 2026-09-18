@@ -1,0 +1,86 @@
+{
+  "id": "p_wanjiru",
+  "name": "Wanjiru Kamau",
+  "fictional": true,
+  "input_text": "First-year PhD in Nairobi studying how young women use community health workers and mobile money for maternal health in informal settlements. I am early and want feedback and people to learn from.",
+  "orcid": null,
+  "affiliation": "PhD student in Sociology, a public university in Nairobi",
+  "career_stage": "phd",
+  "year": 1,
+  "research_summary": "Young women, community health workers and mobile money in maternal health in Nairobi’s informal settlements.",
+  "topics": [
+    {
+      "term": "maternal health in informal settlements",
+      "weight": 0.95
+    },
+    {
+      "term": "community health workers",
+      "weight": 0.85
+    },
+    {
+      "term": "gender and health",
+      "weight": 0.8
+    },
+    {
+      "term": "mobile money and care",
+      "weight": 0.65
+    },
+    {
+      "term": "urban East Africa",
+      "weight": 0.6
+    }
+  ],
+  "fields": [
+    "sociology",
+    "public health"
+  ],
+  "adjacent_fields": [
+    "medical anthropology",
+    "African studies",
+    "global health"
+  ],
+  "citation_neighborhood": [
+    {
+      "name": "Ruth Prince",
+      "inferred": true
+    },
+    {
+      "name": "Susan Reynolds Whyte",
+      "inferred": true
+    },
+    {
+      "name": "Wangui Kimari",
+      "inferred": true
+    }
+  ],
+  "geography": {
+    "country": "Kenya",
+    "city": "Nairobi",
+    "passport": "Kenya"
+  },
+  "currency": "KES",
+  "constraints": {
+    "max_cost": 250000,
+    "months_available": [
+      "Jan",
+      "Mar",
+      "Jun",
+      "Jul",
+      "Nov",
+      "Dec"
+    ],
+    "visa_tolerance": "prefer_none",
+    "format": "any"
+  },
+  "goals": [
+    "networking",
+    "feedback",
+    "low_cost"
+  ],
+  "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+  ],
+  "profile_type": "academic"
+}

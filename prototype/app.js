@@ -6,7 +6,7 @@
  * feedback loop is visible across a session.
  */
 
-import { TODAY, GATHERED_AT, profile as seedProfile, opportunities, heldBack, pipeline, dismissReasons, topicVocabulary, GOALS, meta, FX } from './data.js';
+import { TODAY, GATHERED_AT, EXAMPLES, profile as seedProfile, heldBack, pipelineFor, dismissReasons, topicVocabulary, GOALS, FX } from './data.js';
 
 /* ============================================================
    State
@@ -25,7 +25,8 @@ const defaultState = {
   weightAdjust: {},
   showIneligible: false,
   theme: null,
-  mode: 'example',   // 'example' = Ananya's pre-built shortlist; 'mine' = live search for your profile
+  mode: 'example',   // 'example' = a pre-built example shortlist; 'mine' = live search for your profile
+  exampleId: seedProfile.id,
   search: null,      // { key, at, candidates }
   scored: {},        // candidate id -> fully scored opportunity (cached so it's never paid for twice)
 };
@@ -156,9 +157,12 @@ const COST_LABEL = { registration: 'Registration', travel: 'Travel', accommodati
 
 const profileKey = (p = state.profile) => JSON.stringify([
   (p.topics ?? []).map((t) => t.term).sort(), p.fields ?? [], p.adjacent_fields ?? [], p.input_text ?? '', p.geography?.country ?? '', p.career_stage]);
+const exampleSet = () => EXAMPLES.find((e) => e.id === state.exampleId) ?? EXAMPLES[0];
+const pickExample = () => { const others = EXAMPLES.filter((e) => e.id !== state.exampleId); const pool = others.length ? others : EXAMPLES; return pool[Math.floor(Math.random() * pool.length)]; };
+const curPipeline = () => pipelineFor(exampleSet().meta, state.profile.currency);
 const mineLive = () => state.mode === 'mine' && LIVE;
 const candidates = () => (state.search?.candidates ?? []).map((c) => state.scored[c.id] ?? { ...c, unscored: true, source_url: c.url });
-const allOpportunities = () => [...(mineLive() ? candidates() : opportunities), ...state.pasted];
+const allOpportunities = () => [...(mineLive() ? candidates() : exampleSet().opportunities), ...state.pasted];
 const byId = (id) => allOpportunities().find((o) => o.id === id);
 
 /** Every deadline on an opportunity, including the one the agent infers for visas. */
@@ -393,11 +397,11 @@ function renderWelcome() {
       </ol>
 
       <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="#/onboarding">Get started</a>
+        <a class="btn btn-primary btn-lg" href="#/onboarding" data-act="fresh-start">Get started</a>
         <a class="btn btn-ghost btn-lg" href="#/example">See an example</a>
       </div>
 
-      <p class="hero-note">Prototype · real calls gathered ${fmtDate(GATHERED_AT)}</p>
+      <p class="hero-note">Prototype · ${EXAMPLES.length} example researchers · real calls gathered ${fmtDate(GATHERED_AT)}</p>
     </div>
   </section>`;
 }
@@ -419,7 +423,7 @@ function blankDraft() {
 
 function renderOnboarding() {
   $('#topbar').hidden = true;
-  draft ??= state.onboarded ? structuredClone(state.profile) : blankDraft();
+  draft ??= blankDraft();
 
   const dots = STEPS.map((_, i) =>
     `<span class="onb-dot ${i < onbStep ? 'done' : i === onbStep ? 'active' : ''}"></span>`).join('');
@@ -521,7 +525,7 @@ function stepPractical() {
         <input type="text" id="passport" value="${esc(draft.geography.passport)}" data-act="passport" /></div>
       <div class="field"><label for="currency">Show costs in</label>
         <select id="currency" data-act="currency">
-          ${['INR', 'USD', 'EUR', 'GBP', 'BRL'].map((cur) => `<option value="${cur}" ${draft.currency === cur ? 'selected' : ''}>${cur}</option>`).join('')}
+          ${['INR', 'USD', 'EUR', 'GBP', 'BRL', 'NGN', 'PKR', 'KES', 'IDR', 'BDT', 'GHS'].map((cur) => `<option value="${cur}" ${draft.currency === cur ? 'selected' : ''}>${cur}</option>`).join('')}
         </select></div>
     </div>
     <span class="hint" style="margin-top:-.6rem;display:block">Your passport is used only for visa requirements and regional fee tiers.</span>
@@ -550,10 +554,11 @@ const GOAL_HINTS = { publication: ['publish', 'journal', 'article'], feedback: [
 function suggestFromText(text) {
   const t = ` ${text.toLowerCase()} `;
   let added = 0;
+  draft.topics = draft.topics.filter((x) => x.src !== 'suggested');
   for (const g of topicVocabulary) for (const topic of g.topics) {
     const hits = topic.k.filter((kw) => t.includes(kw)).length;
     if (!hits || draft.topics.some((x) => x.term === topic.term)) continue;
-    draft.topics.push({ term: topic.term, weight: Math.min(0.95, 0.55 + 0.15 * hits) });
+    draft.topics.push({ term: topic.term, weight: Math.min(0.95, 0.55 + 0.15 * hits), src: 'suggested' });
     added++;
   }
   draft.topics.sort((a, b) => b.weight - a.weight);
@@ -594,9 +599,9 @@ function onboardingEvents(root) {
         toast({ emoji: '🪪', title: 'ORCID import is coming with the live backend', body: 'It will read your publications from OpenAlex and draft topics from them. It stays optional.' });
         break;
       case 'example':
-        draft = structuredClone(seedProfile);
+        { const ex = pickExample(); state.exampleId = ex.id; draft = structuredClone(ex.profile);
         repaint();
-        toast({ emoji: '👤', title: `Loaded ${seedProfile.name}`, body: 'A fictional PhD researcher drafted by the draft-profile skill from a short description.' });
+        toast({ emoji: '👤', title: `Loaded ${ex.profile.name}`, body: `A fictional researcher in ${ex.profile.geography.country}, drafted from a short description.` }); }
         break;
       case 'next': onbStep = 1; repaint(); scrollTo(0, 0); break;
       case 'back': onbStep = 0; repaint(); scrollTo(0, 0); break;
@@ -624,7 +629,8 @@ function onboardingEvents(root) {
       case 'format': draft.constraints.format = btn.dataset.v; repaint(); break;
       case 'visatol': draft.constraints.visa_tolerance = btn.dataset.v; repaint(); break;
       case 'finish': {
-        const isExample = draft.id === seedProfile.id;
+        const isExample = EXAMPLES.some((e) => e.id === draft.id);
+        if (isExample) state.exampleId = draft.id;
         state.profile = draft;
         state.onboarded = true;
         state.weightAdjust = {};
@@ -653,7 +659,7 @@ function renderPipeline() {
       <div class="pipe-bar"><i id="pipe-bar"></i></div>
       <div class="pipe2-grid">
         <ol class="pipe2-steps" id="pipe-steps">
-          ${pipeline.map((s, i) => `<li data-i="${i}"><span class="p2-dot" aria-hidden="true"></span><span>${s.label}</span></li>`).join('')}
+          ${curPipeline().map((s, i) => `<li data-i="${i}"><span class="p2-dot" aria-hidden="true"></span><span>${s.label}</span></li>`).join('')}
         </ol>
         <div class="pipe2-live" aria-live="polite">
           <div class="p2-title" id="p2-title"></div>
@@ -677,7 +683,7 @@ function pipelineStreams() {
     opps.slice(0, 7).map((o) => hostOf(o.source_url)).filter(Boolean),
     opps.filter((o) => o.cost_estimate?.high).slice(0, 5).map((o) => `${shortMoney(o.cost_estimate.low, o.cost_estimate.currency)}–${shortMoney(o.cost_estimate.high, o.cost_estimate.currency)} · ${o.title.split(/[—:(]/)[0].trim().slice(0, 28)}`),
     ranked.slice(0, 3).map((o, i) => `${i + 1}. ${o.title.split(/[—:(]/)[0].trim().slice(0, 40)} · ${priorityOf(o)}`),
-    ['Deadlines ✓', 'Fees ✓', 'Funding links ✓', `${meta.grounded_pass} of ${meta.grounded_total} matched`],
+    ['Deadlines ✓', 'Fees ✓', 'Funding links ✓', `${exampleSet().meta.grounded_pass} of ${exampleSet().meta.grounded_total} matched`],
   ];
 }
 
@@ -697,8 +703,8 @@ function runPipeline() {
       steps.forEach((s) => s.classList.remove('active'));
       el.classList.add('active');
       $('#pipe-bar').style.width = `${(i / steps.length) * 100}%`;
-      $('#p2-title').textContent = pipeline[i].label;
-      $('#p2-detail').textContent = pipeline[i].detail;
+      $('#p2-title').textContent = curPipeline()[i].label;
+      $('#p2-detail').textContent = curPipeline()[i].detail;
       $('#p2-stream').innerHTML = '';
     });
     (streams[i] ?? []).forEach((item, j) => at(start + 250 + j * 210, () => {
@@ -751,7 +757,7 @@ function renderFeed() {
 
   return `<div class="wrap wrap-feed">
     <header class="feed-head">
-      <div class="eyebrow">Real calls · gathered ${fmtDate(GATHERED_AT)}</div>
+      <div class="eyebrow">Example researcher · real calls gathered ${fmtDate(exampleSet().gathered_at)} · <a href="#/example">show another example</a></div>
       <h1>${first ? `${first}'s shortlist` : 'Your shortlist'}</h1>
       <div class="ledger">
         <div><b>${ranked.length}</b><span>opportunities</span></div>
@@ -826,7 +832,9 @@ async function liveDraft(btn, repaint) {
   try {
     const d = await api('topics', { text });
     let added = 0;
+    draft.topics = draft.topics.filter((t) => t.src !== 'suggested');
     for (const t of d.topics) {
+      t.src = 'suggested';
       if (draft.topics.some((x) => x.term.toLowerCase() === t.term.toLowerCase())) continue;
       draft.topics.push(t); added++;
     }
@@ -1166,7 +1174,11 @@ function renderBrief(id) {
    ============================================================ */
 
 function startExample() {
-  state.profile = structuredClone(seedProfile);
+  const ex = pickExample();
+  state.exampleId = ex.id;
+  state.profile = structuredClone(ex.profile);
+  state.dismissed = [];
+  state.weightAdjust = {};
   state.mode = 'example';
   state.onboarded = true;
   save();
@@ -1299,7 +1311,7 @@ function renderMineFeed() {
       <input type="text" id="paste-url" placeholder="https://…" aria-label="Opportunity URL" />
       <button class="btn btn-primary" type="submit">Add it</button>
     </form>
-    <p class="tiny muted" style="margin-top:1rem">Want to see a fully worked example? <a href="#/example">Open Ananya's shortlist</a>.</p>
+    <p class="tiny muted" style="margin-top:1rem">Want to see a fully worked example? <a href="#/example">Open an example researcher's shortlist</a>.</p>
   </div>`;
 }
 
@@ -1376,10 +1388,10 @@ function renderHow() {
       <li>journal special issues and fellowships</li></ul>
       <p>That's how it found the internet researchers' conference (AoIR) for someone working on caste and social media. It isn't on any built-in list.</p>`)}
     ${qa('What is saved right now?', `<ul>
-      <li><strong>${live.length} real calls</strong>, gathered on ${fmtDate(GATHERED_AT)}. Each one has its dates, fees and funding copied from the call page.</li>
+      <li><strong>${live.length} real calls</strong>, gathered on ${fmtDate(exampleSet().gathered_at)} for the example you are viewing. Each one has its dates, fees and funding copied from the call page.</li>
       <li><strong>A list of Indian funders</strong> who pay for conference travel, such as ICSSR's scheme for presenting abroad.</li>
       <li><strong>Exchange rates</strong>${usd ? ` (1 USD ≈ ₹${usd.toFixed(1)})` : ''} used for cost estimates.</li></ul>
-      <p>These were gathered for an example researcher, Ananya, a PhD student in media studies. If you set up your own profile, the same calls are <em>re-ranked for your goals</em>. Searching specifically for <em>your</em> topics is coming with accounts.</p>`)}
+      <p>There are ${EXAMPLES.length} example researchers, in different fields, countries and career stages, each with a shortlist built ahead of time. "See an example" opens one at random. When you set up <em>your own</em> profile, Grapevine searches the web live for your topics, and scores each call when you open it.</p>`)}
     ${qa('Why are some calls missing?', `<p>Grapevine hides calls that look out of date (for example, a page last updated years ago) and calls you can't apply to (wrong career stage or region). You can show the second group from the bottom of your shortlist.</p>`)}
 
     <h2 class="list-h">The "worth it" score</h2>
@@ -1785,6 +1797,7 @@ document.addEventListener('click', (e) => {
     }
     case 'skip': pipeTimers.forEach(clearTimeout); location.hash = '#/feed'; break;
     case 'reonboard': draft = structuredClone(state.profile); onbStep = 0; break;
+    case 'fresh-start': draft = blankDraft(); onbStep = 0; topicQuery = ''; break;
     case 'reset':
       resetAll();
       location.hash = '#/';

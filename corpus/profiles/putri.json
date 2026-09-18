@@ -1,0 +1,86 @@
+{
+  "id": "p_putri",
+  "name": "Putri Rahmawati",
+  "fictional": true,
+  "input_text": "Independent researcher in Yogyakarta building a digital archive of Islamic popular music and zines from the 1990s. I am not attached to a university and need things I can join without institutional funding, ideally online or in Asia.",
+  "orcid": null,
+  "affiliation": "Independent researcher and archivist, Yogyakarta",
+  "career_stage": "independent",
+  "year": null,
+  "research_summary": "Digital archiving of 1990s Indonesian Islamic popular music and zines.",
+  "topics": [
+    {
+      "term": "digital archives",
+      "weight": 0.95
+    },
+    {
+      "term": "Islamic popular culture",
+      "weight": 0.85
+    },
+    {
+      "term": "Indonesian music and zines",
+      "weight": 0.8
+    },
+    {
+      "term": "community archiving",
+      "weight": 0.7
+    },
+    {
+      "term": "Southeast Asian media",
+      "weight": 0.6
+    }
+  ],
+  "fields": [
+    "Southeast Asian studies",
+    "media studies"
+  ],
+  "adjacent_fields": [
+    "digital humanities",
+    "archival studies",
+    "popular music studies"
+  ],
+  "citation_neighborhood": [
+    {
+      "name": "Ariel Heryanto",
+      "inferred": true
+    },
+    {
+      "name": "Emma Baulch",
+      "inferred": true
+    },
+    {
+      "name": "Bart Barendregt",
+      "inferred": true
+    }
+  ],
+  "geography": {
+    "country": "Indonesia",
+    "city": "Yogyakarta",
+    "passport": "Indonesia"
+  },
+  "currency": "IDR",
+  "constraints": {
+    "max_cost": 20000000,
+    "months_available": [
+      "Jan",
+      "Feb",
+      "Jul",
+      "Aug",
+      "Oct",
+      "Nov"
+    ],
+    "visa_tolerance": "prefer_none",
+    "format": "any"
+  },
+  "goals": [
+    "low_cost",
+    "networking",
+    "visibility"
+  ],
+  "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+  ],
+  "profile_type": "academic"
+}

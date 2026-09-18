@@ -1,0 +1,84 @@
+{
+  "id": "p_beatriz",
+  "name": "Beatriz Santos",
+  "fictional": true,
+  "input_text": "Postdoc in Recife working on queer cinema in Northeast Brazil and Latin America, especially low-budget films and film festivals as spaces of community. I want to publish in a strong journal and get known internationally before job applications.",
+  "orcid": null,
+  "affiliation": "Postdoctoral researcher in film studies, a federal university in Pernambuco",
+  "career_stage": "postdoc",
+  "year": null,
+  "research_summary": "Queer cinema and film festivals in Northeast Brazil and Latin America.",
+  "topics": [
+    {
+      "term": "queer Latin American cinema",
+      "weight": 0.95
+    },
+    {
+      "term": "film festivals and community",
+      "weight": 0.85
+    },
+    {
+      "term": "Northeast Brazilian film",
+      "weight": 0.8
+    },
+    {
+      "term": "low-budget filmmaking",
+      "weight": 0.65
+    },
+    {
+      "term": "gender and sexuality in media",
+      "weight": 0.6
+    }
+  ],
+  "fields": [
+    "film studies",
+    "Latin American studies"
+  ],
+  "adjacent_fields": [
+    "queer studies",
+    "media industries",
+    "cultural studies"
+  ],
+  "citation_neighborhood": [
+    {
+      "name": "B. Ruby Rich",
+      "inferred": true
+    },
+    {
+      "name": "Denilson Lopes",
+      "inferred": true
+    },
+    {
+      "name": "José Esteban Muñoz",
+      "inferred": true
+    }
+  ],
+  "geography": {
+    "country": "Brazil",
+    "city": "Recife",
+    "passport": "Brazil"
+  },
+  "currency": "BRL",
+  "constraints": {
+    "max_cost": 12000,
+    "months_available": [
+      "Jan",
+      "Feb",
+      "Jul",
+      "Dec"
+    ],
+    "visa_tolerance": "any",
+    "format": "any"
+  },
+  "goals": [
+    "visibility",
+    "publication",
+    "networking"
+  ],
+  "drafted_fields": [
+    "citation_neighborhood",
+    "constraints.months_available",
+    "goals"
+  ],
+  "profile_type": "academic"
+}
