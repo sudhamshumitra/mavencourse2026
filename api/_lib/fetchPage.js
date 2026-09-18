@@ -99,6 +99,26 @@ export async function fetchPage(rawUrl) {
   throw new UserFacingError(400, 'Too many redirects.');
 }
 
+/**
+ * Second attempt for sites that block cloud servers: a public reader service returns the page as text.
+ * Only called after fetchPage's public-address check passed for the same URL.
+ */
+export async function fetchViaReader(rawUrl) {
+  const url = new URL(String(rawUrl).trim());
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 25000);
+  try {
+    const res = await fetch(`https://r.jina.ai/${url.toString()}`, { signal: ctrl.signal, headers: { accept: 'text/plain', 'x-return-format': 'text' } });
+    if (!res.ok) return null;
+    const text = (await res.text()).slice(0, MAX_TEXT_CHARS);
+    if (text.length < 200 || /Target URL returned error 40[13]/i.test(text.slice(0, 600))) return null;
+    const title = text.match(/^Title:\s*(.+)$/m)?.[1]?.trim() ?? '';
+    return { finalUrl: url.toString(), title, text, via: 'reader' };
+  } catch {
+    return null;
+  } finally { clearTimeout(timer); }
+}
+
 const ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', ndash: '–', mdash: '—', rsquo: '’', lsquo: '‘', ldquo: '“', rdquo: '”', hellip: '…' };
 
 export function htmlToText(html) {

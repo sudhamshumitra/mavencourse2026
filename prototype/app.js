@@ -1186,6 +1186,71 @@ function startExample() {
 }
 
 let searchRun = null;
+const searchLog = { searches: [], titles: [], max: 5, phase: 'searching' };
+
+/** POST that streams newline-delimited JSON events; resolves with the final "done" event. */
+async function apiStream(path, body, onEvent, timeoutMs = 200000) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    let res;
+    try {
+      res = await fetch(`/api/${path}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body), signal: ctrl.signal });
+    } catch {
+      throw new Error(ctrl.signal.aborted ? 'This took too long and was stopped. Please try again.' : 'Could not reach the server. Check your connection and try again.');
+    }
+    if (!res.ok) {
+      let data = {};
+      try { data = await res.json(); } catch { /* not JSON */ }
+      throw new Error(data.error ?? `Request failed (${res.status})`);
+    }
+    const reader = res.body.getReader();
+    const dec = new TextDecoder();
+    let buf = '';
+    for (;;) {
+      let chunk;
+      try { chunk = await reader.read(); } catch { throw new Error(ctrl.signal.aborted ? 'This took too long and was stopped. Please try again.' : 'The connection dropped. Please try again.'); }
+      if (chunk.done) break;
+      buf += dec.decode(chunk.value, { stream: true });
+      let i;
+      while ((i = buf.indexOf('\n')) >= 0) {
+        const line = buf.slice(0, i).trim();
+        buf = buf.slice(i + 1);
+        if (!line) continue;
+        const evt = JSON.parse(line);
+        if (evt.type === 'done') return evt;
+        if (evt.type === 'error') throw new Error(evt.error);
+        onEvent(evt);
+      }
+    }
+    throw new Error('The search stopped unexpectedly. Please try again.');
+  } finally { clearTimeout(timer); }
+}
+
+function searchPanelHtml() {
+  const L = searchLog;
+  const n = L.searches.length;
+  const pct = L.phase === 'done' ? 100 : L.phase === 'picking' ? 92 : Math.min(85, 8 + (n / L.max) * 77);
+  return `<div class="p2-title">${L.phase === 'done' ? `Found ${L.titles.length ? 'these' : ''} for you` : L.phase === 'picking' ? 'Picking the best matches' : n ? `Search ${n} of up to ${L.max}` : 'Starting the search'}</div>
+    <div class="p2-detail">${L.phase === 'picking' ? 'Checking dates and choosing the 6–8 that fit you best.' : L.phase === 'done' ? 'Opening your shortlist…' : 'Each search looks in a different place: societies, next year’s editions, journals, fellowships.'}</div>
+    <ol class="s-log">${L.searches.map((s, i) => `<li class="${s.count == null && i === n - 1 && L.phase === 'searching' ? 'running' : 'done'}">
+      <span class="s-q">“${esc(s.query)}”</span><span class="s-n">${s.count == null ? 'searching…' : `${s.count} results`}</span></li>`).join('')}</ol>
+    ${L.titles.length ? `<div class="s-found-h">Spotted so far</div><div class="p2-stream">${L.titles.slice(-8).map((t) => `<span class="p2-item">${esc(t)}</span>`).join('')}</div>` : ''}
+    <span hidden id="s-pct" data-pct="${pct}"></span>`;
+}
+
+function paintSearch() {
+  const panel = $('#s-panel');
+  if (!panel) return;
+  panel.innerHTML = searchPanelHtml();
+  const pct = Number($('#s-pct')?.dataset.pct ?? 0);
+  const bar = $('#pipe-bar');
+  if (bar) bar.style.width = `${pct}%`;
+  const L = searchLog;
+  const set = (k, cls) => { const el = $(`#s-steps [data-k="${k}"]`); if (el) el.className = cls; };
+  set('search', L.phase === 'searching' ? 'active' : 'done');
+  set('shortlist', L.phase === 'picking' ? 'active' : L.phase === 'done' ? 'done' : '');
+}
 
 function renderSearching() {
   $('#topbar').hidden = true;
@@ -1194,21 +1259,21 @@ function renderSearching() {
   return `<section class="pipe-screen">
     <div class="pipe2">
       <div class="pipe2-head"><h2>Searching for your opportunities</h2><span class="tiny muted" id="s-timer">0s</span></div>
-      <div class="pipe-bar"><i id="pipe-bar" class="indeterminate"></i></div>
+      <div class="pipe-bar"><i id="pipe-bar" style="width:4%"></i></div>
       <div class="pipe2-grid">
-        <ol class="pipe2-steps" id="s-steps">
-          <li class="done"><span class="p2-dot"></span><span>Reading your interests</span></li>
-          <li class="active" data-k="search"><span class="p2-dot"></span><span>Searching societies, journals and fellowships</span></li>
-          <li data-k="shortlist"><span class="p2-dot"></span><span>Picking the best matches</span></li>
-        </ol>
-        <div class="pipe2-live" aria-live="polite">
-          <div class="p2-title" id="p2-title">Searching the web</div>
-          <div class="p2-detail" id="p2-detail">This takes about a minute. Looking in your fields and the ones next to them:</div>
-          <div class="p2-stream" id="p2-stream">
-            ${[...(p.topics ?? []).slice(0, 4).map((t) => t.term), ...fields.slice(0, 5)].map((x) => `<span class="p2-item">${esc(x)}</span>`).join('')}
+        <div>
+          <ol class="pipe2-steps" id="s-steps">
+            <li class="done"><span class="p2-dot"></span><span>Reading your interests</span></li>
+            <li class="active" data-k="search"><span class="p2-dot"></span><span>Searching the web</span></li>
+            <li data-k="shortlist"><span class="p2-dot"></span><span>Picking the best matches</span></li>
+          </ol>
+          <div class="s-fields">
+            <div class="s-found-h">Looking in</div>
+            ${fields.slice(0, 7).map((f) => `<span class="s-field">${esc(f)}</span>`).join('') || `<span class="s-field">${esc((p.topics?.[0]?.term) ?? 'your topics')}</span>`}
           </div>
-          <div id="s-out"></div>
+          <p class="tiny muted" style="margin-top:1rem">Usually 1–2 minutes. It runs up to ${searchLog.max} web searches, then picks the best 6–8.</p>
         </div>
+        <div class="pipe2-live" aria-live="polite"><div id="s-panel">${searchPanelHtml()}</div><div id="s-out"></div></div>
       </div>
     </div>
   </section>`;
@@ -1216,52 +1281,44 @@ function renderSearching() {
 
 async function runSearch() {
   const started = Date.now();
-  const p = state.profile;
-  const places = [...(p.fields ?? []), ...(p.adjacent_fields ?? [])];
-  const lines = [
-    ...places.slice(0, 4).map((f) => `Checking scholarly societies in ${f}…`),
-    'Looking for next year’s editions of regular conferences…',
-    'Looking for journal special issues…',
-    'Looking for fellowships and summer schools…',
-    'Setting aside calls whose deadlines have passed…',
-  ];
   const tick = setInterval(() => {
     const t = $('#s-timer');
     if (!t) return clearInterval(tick);
-    const secs = Math.round((Date.now() - started) / 1000);
-    t.textContent = `${secs}s`;
-    const d = $('#p2-detail');
-    if (d && secs % 6 === 0) d.textContent = lines[(secs / 6) % lines.length];
-    if (d && secs >= 60 && secs % 6 === 3) d.textContent = 'Still searching. This can take up to 2 minutes.';
+    t.textContent = `${Math.round((Date.now() - started) / 1000)}s`;
   }, 1000);
+  paintSearch();
   try {
-    searchRun ??= api('scout', { profile: state.profile });
+    if (!searchRun) {
+      Object.assign(searchLog, { searches: [], titles: [], phase: 'searching' });
+      searchRun = apiStream('scout', { profile: state.profile }, (evt) => {
+        if (evt.type === 'start') searchLog.max = evt.max_searches ?? searchLog.max;
+        if (evt.type === 'search') searchLog.searches.push({ query: evt.query, count: null });
+        if (evt.type === 'results') {
+          const last = [...searchLog.searches].reverse().find((s) => s.count == null);
+          if (last) last.count = evt.count;
+          for (const t of evt.titles ?? []) if (!searchLog.titles.includes(t)) searchLog.titles.push(t);
+          if (searchLog.searches.length >= searchLog.max) searchLog.phase = 'picking';
+        }
+        if (evt.type === 'ping' && searchLog.searches.length && searchLog.searches.every((s) => s.count != null)) searchLog.phase = 'picking';
+        paintSearch();
+      });
+    }
     const { candidates: found } = await searchRun;
     searchRun = null;
     state.search = { key: profileKey(), at: new Date().toISOString(), candidates: found };
     save();
     clearInterval(tick);
-    const step = (k, cls) => $(`#s-steps [data-k="${k}"]`)?.classList.replace('active', cls) ?? $(`#s-steps [data-k="${k}"]`)?.classList.add(cls);
-    step('search', 'done');
-    $(`#s-steps [data-k="shortlist"]`)?.classList.add('active');
-    if ($('#p2-title')) $('#p2-title').textContent = `Found ${found.length} for you`;
-    if ($('#p2-detail')) $('#p2-detail').textContent = 'Open any of them to see if it’s worth it.';
-    const stream = $('#p2-stream');
-    if (stream) stream.innerHTML = '';
-    found.forEach((c, i) => setTimeout(() => {
-      const el = document.createElement('span');
-      el.className = 'p2-item';
-      el.textContent = c.title.split(/[—:(]/)[0].trim().slice(0, 48);
-      $('#p2-stream')?.append(el);
-    }, i * 220));
-    setTimeout(() => { if (location.hash === '#/searching') location.hash = '#/feed'; }, found.length * 220 + 900);
+    searchLog.phase = 'done';
+    searchLog.titles = found.map((c) => c.title.split(/[—:(]/)[0].trim().slice(0, 60));
+    paintSearch();
+    setTimeout(() => { if (location.hash === '#/searching') location.hash = '#/feed'; }, 1400);
   } catch (err) {
     searchRun = null;
     clearInterval(tick);
     const out = $('#s-out');
     if (out) out.innerHTML = `<div class="callout danger" style="margin-top:1rem"><h4>The search didn't finish</h4><p>${esc(err.message)}</p></div>
       <div class="onb-actions"><a class="btn btn-primary btn-sm" href="#/searching" data-act="retry-search">Try again</a>
-      <a class="btn btn-quiet btn-sm" href="#/example">See the example instead</a></div>`;
+      <a class="btn btn-quiet btn-sm" href="#/example">See an example instead</a></div>`;
     $('#s-out [data-act="retry-search"]')?.addEventListener('click', (e) => { e.preventDefault(); render(); });
   }
 }

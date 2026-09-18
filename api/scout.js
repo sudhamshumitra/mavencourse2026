@@ -14,6 +14,7 @@ RUNTIME INSTRUCTIONS (web app, live search for one person)
 {"candidates":[{"url":"","title":"","host":"","type":"conference|journal_call|fellowship","status":"open|attend-only|watch","deadline_hint":"YYYY-MM-DD or null","relevance":"one plain sentence: why this fits this person","exploration":false,"discovery_trace":["short step","short step"]}]}
 - 6 to 8 candidates, best first. Mark exactly one as exploration: true, a venue from a neighbouring field.`;
 
+const MAX_SEARCHES = 5;
 const TYPES = ['conference', 'journal_call', 'fellowship'];
 const STATUSES = ['open', 'attend-only', 'watch'];
 const PROFILE_KEYS = ['career_stage', 'research_summary', 'input_text', 'topics', 'fields', 'adjacent_fields', 'geography', 'goals', 'constraints'];
@@ -51,15 +52,29 @@ export default async function handler(req, res) {
     const input = JSON.stringify({ today: today(), profile });
     if (input.length > 20000) throw new UserFacingError(413, 'Profile is too large.');
 
-    const { data, usage } = await callJsonWithTools({
-      model: MODEL, system: SYSTEM, maxTokens: 12000, effort: 'low',
-      tools: [
-        { type: 'web_search_20260209', name: 'web_search', max_uses: 5 },
-      ],
-      user: `Find opportunities for this researcher.\n<profile>\n${input}\n</profile>`,
-    });
-    const candidates = sanitize(data.candidates);
-    if (!candidates.length) throw new UserFacingError(502, 'The search did not find usable results. Try again or add more detail to your topics.');
-    res.status(200).json({ candidates, usage });
+    // Stream progress as newline-delimited JSON: search / results / ping events, then one done or error line.
+    res.status(200);
+    res.setHeader('content-type', 'application/x-ndjson; charset=utf-8');
+    res.setHeader('cache-control', 'no-store');
+    const emit = (evt) => { try { res.write(`${JSON.stringify(evt)}\n`); } catch { /* client went away */ } };
+    emit({ type: 'start', max_searches: MAX_SEARCHES });
+    const ping = setInterval(() => emit({ type: 'ping' }), 8000);
+    try {
+      const { data, usage } = await callJsonWithTools({
+        model: MODEL, system: SYSTEM, maxTokens: 12000, effort: 'low',
+        tools: [{ type: 'web_search_20260209', name: 'web_search', max_uses: MAX_SEARCHES }],
+        user: `Find opportunities for this researcher.\n<profile>\n${input}\n</profile>`,
+        onEvent: emit,
+      });
+      const candidates = sanitize(data.candidates);
+      if (!candidates.length) throw new UserFacingError(502, 'The search did not find usable results. Try again or add more detail to your topics.');
+      emit({ type: 'done', candidates, usage });
+    } catch (err) {
+      if (!(err instanceof UserFacingError)) console.error(err);
+      emit({ type: 'error', error: err instanceof UserFacingError ? err.message : 'Something went wrong on the server.' });
+    } finally {
+      clearInterval(ping);
+      res.end();
+    }
   } catch (err) { sendError(res, err); }
 }

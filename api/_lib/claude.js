@@ -15,19 +15,38 @@ export class UserFacingError extends Error {
   constructor(status, message) { super(message); this.status = status; }
 }
 
+function mapError(err) {
+  if (err instanceof Anthropic.AuthenticationError) return new UserFacingError(503, 'The API key is not valid. Check ANTHROPIC_API_KEY in Vercel.');
+  if (err instanceof Anthropic.PermissionDeniedError) return new UserFacingError(503, 'The API account is out of credit or over its spend limit.');
+  if (err instanceof Anthropic.RateLimitError) return new UserFacingError(429, 'Too many requests right now. Try again in a minute.');
+  if (err instanceof Anthropic.BadRequestError) return new UserFacingError(502, `The model rejected the request: ${err.message}`);
+  if (err instanceof Anthropic.APIError) return new UserFacingError(502, `The model service had a problem (${err.status}). Try again.`);
+  return err;
+}
+
 async function send(params) {
   try {
     return supportsDefaultFallback(params.model)
       ? await getClient().beta.messages.create({ ...params, betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default' })
       : await getClient().messages.create(params);
-  } catch (err) {
-    if (err instanceof Anthropic.AuthenticationError) throw new UserFacingError(503, 'The API key is not valid. Check ANTHROPIC_API_KEY in Vercel.');
-    if (err instanceof Anthropic.PermissionDeniedError) throw new UserFacingError(503, 'The API account is out of credit or over its spend limit.');
-    if (err instanceof Anthropic.RateLimitError) throw new UserFacingError(429, 'Too many requests right now. Try again in a minute.');
-    if (err instanceof Anthropic.BadRequestError) throw new UserFacingError(502, `The model rejected the request: ${err.message}`);
-    if (err instanceof Anthropic.APIError) throw new UserFacingError(502, `The model service had a problem (${err.status}). Try again.`);
-    throw err;
-  }
+  } catch (err) { throw mapError(err); }
+}
+
+/** Streaming variant: reports each web search and its results to onEvent as they finish. */
+async function sendStream(params, onEvent) {
+  try {
+    const stream = supportsDefaultFallback(params.model)
+      ? getClient().beta.messages.stream({ ...params, betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default' })
+      : getClient().messages.stream(params);
+    stream.on('contentBlock', (b) => {
+      if (b.type === 'server_tool_use' && b.name === 'web_search') onEvent({ type: 'search', query: String(b.input?.query ?? '').slice(0, 160) });
+      if (b.type === 'web_search_tool_result') {
+        const list = Array.isArray(b.content) ? b.content : [];
+        onEvent({ type: 'results', count: list.length, titles: list.slice(0, 3).map((r) => String(r.title ?? '').slice(0, 90)).filter(Boolean) });
+      }
+    });
+    return await stream.finalMessage();
+  } catch (err) { throw mapError(err); }
 }
 
 function checkStop(res) {
@@ -59,14 +78,14 @@ export async function callJson({ model = MODEL, system, user, maxTokens = 16000,
 }
 
 /** A call with server-side tools (web search / fetch). Resumes on pause_turn, then parses the final JSON. */
-export async function callJsonWithTools({ model = MODEL, system, user, tools, maxTokens = 16000, effort = 'medium', maxContinuations = 5 }) {
+export async function callJsonWithTools({ model = MODEL, system, user, tools, maxTokens = 16000, effort = 'medium', maxContinuations = 5, onEvent = null }) {
   const messages = [{ role: 'user', content: user }];
   const params = { model, max_tokens: maxTokens, system, tools };
   if (supportsEffort(model)) params.output_config = { effort };
   const usage = { input_tokens: 0, output_tokens: 0, web_search_requests: 0, web_fetch_requests: 0 };
 
   for (let i = 0; i <= maxContinuations; i++) {
-    const res = await send({ ...params, messages });
+    const res = onEvent ? await sendStream({ ...params, messages }, onEvent) : await send({ ...params, messages });
     usage.input_tokens += res.usage?.input_tokens ?? 0;
     usage.output_tokens += res.usage?.output_tokens ?? 0;
     usage.web_search_requests += res.usage?.server_tool_use?.web_search_requests ?? 0;
