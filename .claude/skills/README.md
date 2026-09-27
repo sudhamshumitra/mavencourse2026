@@ -15,3 +15,8 @@ Seven skills, one for each step Grapevine repeats for every researcher and every
 **Flow:** 1 → 2 → 3 → 4 + 5 → 6 → 7
 
 **Used twice:** run in Claude Code to build the example shortlists in [`corpus/`](../../corpus/), and sent to Claude by the live site ([`api/`](../../api/)) as its instructions.
+
+Skills **3** and **7** also run as Claude Code subagents ([`.claude/agents/`](../agents/)), for enforced
+context isolation and safe parallel extraction. The agents hold no extraction or verification rules of
+their own — they read the same SKILL.md files above and follow them exactly, so this remains the single
+source of truth. See **[SUBAGENTS.md](../../SUBAGENTS.md)**.

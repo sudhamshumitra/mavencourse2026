@@ -1,5 +1,7 @@
 # Module 2: Grapevine skills
 
+> Module 3 submission → [SUBAGENTS.md](SUBAGENTS.md)
+
 **Grapevine** finds conferences, journal calls and fellowships for humanities researchers and tells them whether each one is worth it.
 **[Live prototype](https://mavencourse2026.vercel.app)** · **[PRD](PRD.md)**
 

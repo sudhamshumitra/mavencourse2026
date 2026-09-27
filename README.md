@@ -3,6 +3,7 @@
 **An AI agent that finds academic opportunities a humanities researcher would otherwise never hear about, and tells them whether it's worth going.**
 
 > **Module 2 submission → [SKILLS.md](SKILLS.md)**: the skills, what they produced, and before/after.
+> **Module 3 submission → [SUBAGENTS.md](SUBAGENTS.md)**: two of those skills as Claude Code subagents.
 
 ---
 
@@ -20,6 +21,7 @@ Grapevine is that missing place, and the missing judgement. It gathers opportuni
 | **PRD** | ✅ [PRD.md](PRD.md) |
 | **Week 1** | ✅ Clickable prototype on hand-written fixtures. Tagged [`module-1-prototype`](../../tree/module-1-prototype) |
 | **Week 2 (Module 2)** | ✅ 7 Claude Code skills in [`.claude/skills/`](.claude/skills/). They built ready-made shortlists for 8 example researchers ([`corpus/`](corpus/)) and power the live search. See **[SKILLS.md](SKILLS.md)** |
+| **Week 3 (Module 3)** | ✅ Two of those skills — `extract-opportunity` and `verify-grounding` — also run as Claude Code subagents ([`.claude/agents/`](.claude/agents/)), for enforced context isolation and safe parallel extraction. See **[SUBAGENTS.md](SUBAGENTS.md)** |
 | **Next** | Accounts (username and password) so profiles and saved calls persist, a database instead of files, and a weekly automatic refresh |
 
 ## The prototype
@@ -56,6 +58,7 @@ Vercel: `prototype/` is the site, `api/` holds the server functions (topics, sco
 
 - **[SKILLS.md](SKILLS.md)**: the Module 2 write-up covering the skills, before/after, and results.
 - **[.claude/skills/](.claude/skills/)**: 7 skills, one per step in the PRD's "How it works".
+- **[.claude/agents/](.claude/agents/)** and **[memory/](memory/)**: two of those skills run as Claude Code subagents for isolation and parallel extraction; `memory/` is their durable cross-run state. See **[SUBAGENTS.md](SUBAGENTS.md)**.
 - **[corpus/](corpus/)**: skill output: 8 profiles, candidates, extracted opportunities, briefs, funder lists by country, grounding report.
 - **[api/](api/)**: server functions that send the SKILL.md files to Claude.
 - **[prototype/](prototype/)**: `index.html` · `styles.css` · `app.js` · `data.js` · `corpus.js` (generated).
@@ -64,4 +67,4 @@ Vercel: `prototype/` is the site, `api/` holds the server functions (topics, sco
 
 ## Stack
 
-Static site + Vercel serverless functions · Anthropic Claude API (Sonnet 5 and Haiku 4.5, with web search and web fetch; no agent framework) · planned: Postgres for accounts and a weekly refresh via Vercel Cron.
+Static site + Vercel serverless functions · Anthropic Claude API (Sonnet 5 and Haiku 4.5, with web search and web fetch; no agent framework) · planned: Postgres for accounts and a weekly refresh via Vercel Cron. Subagents run only in Claude Code; the deployed functions are unchanged.

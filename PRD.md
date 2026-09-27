@@ -119,6 +119,15 @@ Two **reference lists** hold stable facts, so they don't have to be searched for
 
 Under the hood it's a small website on Vercel that calls Claude through Anthropic's API: Claude Sonnet 5 for searching and judging, Claude Haiku 4.5 for suggesting topics and reading call pages. Detailed data formats live in [`corpus/schema/`](corpus/schema/).
 
+**Agents.** Two of the seven skills above — `extract-opportunity` and `verify-grounding` — also run as
+dedicated Claude Code subagents ([`.claude/agents/`](.claude/agents/)), so each extraction runs in its own
+context (never seeing a profile or another opportunity) and can be fanned out in parallel, and so
+verification is a genuinely independent second look rather than a re-read in the same conversation. This
+was the original design: `git show 34a353e:PRD.md` §6 named "Extraction Workers (×N, parallel) —
+context-starved by design" and a "Verification Judge" before this document's plain-language rewrite
+dropped the word "agent." See [SUBAGENTS.md](SUBAGENTS.md). These subagents run only in Claude Code, for
+building and checking the corpus — the deployed site is unchanged.
+
 ---
 
 ## 7. Keeping it honest and safe
@@ -154,7 +163,7 @@ A running **failure log** sits alongside these numbers (see [SKILLS.md](SKILLS.m
 
 | Phase | What | Status |
 |---|---|---|
-| **1 — Real data and the core experience** | The 7 skills. Ready-made shortlists for 8 example researchers in 8 countries. Live search for your own profile, with quick scores and a full check on open. Live topic suggestions and paste-a-link. Onboarding, shortlist, "worth it" and FAQ pages. | ✅ Done |
+| **1 — Real data and the core experience** | The 7 skills. Ready-made shortlists for 8 example researchers in 8 countries. Live search for your own profile, with quick scores and a full check on open. Live topic suggestions and paste-a-link. Onboarding, shortlist, "worth it" and FAQ pages. Parallel extraction + independent verification: started (Claude Code subagents). | ✅ Done |
 | **2 — Accounts and memory** | Simple username and password so your profile and saved items follow you. A saved database of opportunities and funders instead of files. A society list for better discovery. More countries' funders. | Next |
 | **3 — Keeps itself fresh, and learns** | A weekly automatic refresh (search, read, check). Feedback that measurably improves the ranking. The remaining evaluations. Final polish and walkthrough. | After |
 
