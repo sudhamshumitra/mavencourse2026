@@ -974,6 +974,11 @@ details.more[open] > summary { margin-bottom: .6rem; }
 .pipe2-steps li.done { color: var(--ink-2); }
 .pipe2-steps li.done .p2-dot { border-color: var(--vine); background: var(--vine); }
 @keyframes pulse { 50% { transform: scale(1.35); } }
+.p2-sub { display: flex; gap: .35rem; margin-left: auto; }
+.p2-chip { padding: .2rem .55rem; border-radius: 999px; font-size: .74rem; font-weight: 600; background: var(--surface-2); color: var(--muted); border: 1px solid var(--line-2); }
+.p2-chip.active { color: var(--grape); border-color: var(--grape); }
+.p2-chip.done { color: var(--vine); border-color: var(--vine); }
+.p2-chip.warn { color: #a66a00; border-color: #e0b358; background: #fdf3e1; }
 .pipe2-live { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 1.3rem 1.4rem; min-height: 15rem; }
 .p2-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; }
 .p2-detail { color: var(--muted); font-size: .88rem; margin: .2rem 0 1rem; }

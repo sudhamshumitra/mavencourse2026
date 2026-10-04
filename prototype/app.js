@@ -1038,8 +1038,11 @@ function tabDates(o) {
   const dl = deadlinesFor(o);
   const past = dl.filter((d) => daysUntil(d.date) < 0);
   const next = dl.filter((d) => daysUntil(d.date) >= 0);
+  const g = o.workers?.grounding;
+  const note = !g ? '' : g.unreachable ? "Couldn't re-open the call page to double-check this time." : g.fail_missing || g.fail_mismatch ? `Re-checked against the call page just now: ${g.note}` : '';
   if (!dl.length) return '<p class="small muted">No dates published yet. They get picked up on the next refresh.</p>';
-  return `${next.length ? `<div class="timeline">${next.map(timelineRow).join('')}</div>`
+  return `${note ? `<p class="tiny muted" style="margin:0 0 .8rem">🔎 ${esc(note)}</p>` : ''}
+    ${next.length ? `<div class="timeline">${next.map(timelineRow).join('')}</div>`
       : '<p class="small muted">Nothing left to act on for this edition.</p>'}
     ${past.length ? `<details class="more"><summary>${past.length} date${past.length === 1 ? '' : 's'} already passed</summary>
       <div class="timeline">${past.map(timelineRow).join('')}</div></details>` : ''}`;
@@ -1067,7 +1070,10 @@ function tabMoney(o) {
   const totalHigh = segs.reduce((s, [, v]) => s + (v?.high ?? 0), 0) || 1;
   const venue = (o.funding ?? []).filter((f) => f.source !== 'external');
   const ext = (o.funding ?? []).filter((f) => f.source === 'external');
-  return `${cost ? `<div class="money-top">
+  const w = o.workers ?? {};
+  const notes = [w.cost?.fallback && "Cost didn't finish this time — the range below is partial.", w.funding?.fallback && (w.funding.note ?? "The funding search didn't finish this time — showing known funders only.")].filter(Boolean);
+  return `${notes.length ? `<div class="callout" style="margin-bottom:1rem">${notes.map((n) => `<p class="small" style="margin:0">⚠ ${esc(n)}</p>`).join('')}</div>` : ''}
+  ${cost ? `<div class="money-top">
       <div><div class="cost-total">${cost.high === 0 ? 'Free' : `${money(cost.low, cost.currency)} – ${money(cost.high, cost.currency)}`}</div>
         <p class="tiny muted" style="margin:.2rem 0 0">Estimated range, in ${esc(cost.currency)}</p></div>
       ${overBudget(cost) ? `<span class="chip chip-amber">Above your ${shortMoney(state.profile.constraints.max_cost, cost.currency)} limit</span>`
@@ -1428,17 +1434,22 @@ function renderMineFeed() {
 }
 
 const scoring = {};
+const WORKER_LABEL = { cost: 'Working out cost', funding: 'Finding funding', grounding: 'Re-checking dates and fees on the page' };
 
 function maybeScore(id) {
   const c = byId(id);
   if (!c?.unscored || scoring[id]?.running) return;
-  scoring[id] = { running: true, phase: 'extract', started: Date.now(), phaseStarted: Date.now(), error: null };
+  scoring[id] = { running: true, phase: 'extract', started: Date.now(), workers: {}, error: null };
   (async () => {
     try {
       const { opportunity } = await api('extract', { url: c.url });
-      Object.assign(scoring[id], { phase: 'brief', phaseStarted: Date.now() });
+      Object.assign(scoring[id], { phase: 'brief' });
       paintScoring(id);
-      const { brief } = await api('brief', { opportunity, profile: state.profile });
+      const { brief } = await apiStream('brief', { opportunity, profile: state.profile }, (evt) => {
+        if (evt.type === 'worker_start') scoring[id].workers[evt.worker] = 'active';
+        if (evt.type === 'worker_done') scoring[id].workers[evt.worker] = evt.ok ? 'done' : 'fallback';
+        paintScoring(id);
+      });
       state.scored[id] = { ...opportunity, venue_funding: opportunity.funding, ...brief, id, explore: c.exploration || brief.explore, discovery_trace: c.discovery_trace };
       save();
       delete scoring[id];
@@ -1449,17 +1460,19 @@ function maybeScore(id) {
   })();
 }
 
-/** Four visible steps over two real server calls; the second step of each call switches on a short timer. */
+/** Extract is one step; the brief step fans out into three parallel workers (cost, funding, grounding) then compose. */
 function scoringSteps(s) {
-  const since = (Date.now() - (s.phaseStarted ?? Date.now())) / 1000;
+  const w = s.workers ?? {};
   const steps = [
-    ['Opening the call page', s.phase === 'extract' && since < 5],
-    ['Reading dates, fees and who can apply', s.phase === 'extract' && since >= 5],
-    ['Finding funding and working out cost', s.phase === 'brief' && since < 18],
-    ['Scoring it for you', s.phase === 'brief' && since >= 18],
+    { label: 'Opening the call page', state: s.phase === 'extract' ? 'active' : 'done' },
+    ...(s.phase === 'extract' ? [] : [
+      { label: 'Cost, funding and grounding — checked at the same time', state: ['cost', 'funding', 'grounding'].every((k) => w[k]) ? 'done' : 'active', parallel: true },
+      { label: 'Scoring it for you', state: w.compose ? 'done' : ['cost', 'funding', 'grounding'].every((k) => w[k]) ? 'active' : '' },
+    ]),
   ];
-  const activeAt = steps.findIndex(([, on]) => on);
-  return steps.map(([label], i) => `<li class="${s.error ? '' : i < activeAt ? 'done' : i === activeAt ? 'active' : ''}"><span class="p2-dot"></span><span>${label}</span></li>`).join('');
+  return steps.map((s2) => `<li class="${s.error ? '' : s2.state}"><span class="p2-dot"></span><span>${s2.label}</span>
+    ${s2.parallel ? `<span class="p2-sub">${['cost', 'funding', 'grounding'].map((k) => `<span class="p2-chip ${w[k] === 'fallback' ? 'warn' : w[k] || ''}">${WORKER_LABEL[k].split(' ')[0]}${w[k] === 'fallback' ? ' ⚠' : w[k] === 'done' ? ' ✓' : ''}</span>`).join('')}</span>` : ''}
+  </li>`).join('');
 }
 
 function paintScoring(id) {

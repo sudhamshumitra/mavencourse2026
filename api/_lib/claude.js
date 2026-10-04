@@ -24,20 +24,20 @@ function mapError(err) {
   return err;
 }
 
-async function send(params) {
+async function send(params, signal) {
   try {
     return supportsDefaultFallback(params.model)
-      ? await getClient().beta.messages.create({ ...params, betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default' })
-      : await getClient().messages.create(params);
+      ? await getClient().beta.messages.create({ ...params, betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default' }, { signal })
+      : await getClient().messages.create(params, { signal });
   } catch (err) { throw mapError(err); }
 }
 
 /** Streaming variant: reports each web search and its results to onEvent as they finish. */
-async function sendStream(params, onEvent) {
+async function sendStream(params, onEvent, signal) {
   try {
     const stream = supportsDefaultFallback(params.model)
-      ? getClient().beta.messages.stream({ ...params, betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default' })
-      : getClient().messages.stream(params);
+      ? getClient().beta.messages.stream({ ...params, betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default' }, { signal })
+      : getClient().messages.stream(params, { signal });
     stream.on('contentBlock', (b) => {
       if (b.type === 'server_tool_use' && b.name === 'web_search') onEvent({ type: 'search', query: String(b.input?.query ?? '').slice(0, 160) });
       if (b.type === 'web_search_tool_result') {
@@ -63,12 +63,12 @@ function parseJsonText(res) {
 }
 
 /** One Claude call that must answer with a single JSON object. Retries once if the JSON doesn't parse. */
-export async function callJson({ model = MODEL, system, user, maxTokens = 16000, effort = 'medium' }) {
+export async function callJson({ model = MODEL, system, user, maxTokens = 16000, effort = 'medium', signal }) {
   const params = { model, max_tokens: maxTokens, system, messages: [{ role: 'user', content: user }] };
   if (supportsEffort(model)) params.output_config = { effort };
 
   for (let attempt = 0; attempt < 2; attempt++) {
-    const res = await send(params);
+    const res = await send(params, signal);
     checkStop(res);
     const data = parseJsonText(res);
     if (data) return { data, usage: res.usage, model: res.model };
@@ -78,14 +78,14 @@ export async function callJson({ model = MODEL, system, user, maxTokens = 16000,
 }
 
 /** A call with server-side tools (web search / fetch). Resumes on pause_turn, then parses the final JSON. */
-export async function callJsonWithTools({ model = MODEL, system, user, tools, maxTokens = 16000, effort = 'medium', maxContinuations = 5, onEvent = null }) {
+export async function callJsonWithTools({ model = MODEL, system, user, tools, maxTokens = 16000, effort = 'medium', maxContinuations = 5, onEvent = null, signal }) {
   const messages = [{ role: 'user', content: user }];
   const params = { model, max_tokens: maxTokens, system, tools };
   if (supportsEffort(model)) params.output_config = { effort };
   const usage = { input_tokens: 0, output_tokens: 0, web_search_requests: 0, web_fetch_requests: 0 };
 
   for (let i = 0; i <= maxContinuations; i++) {
-    const res = onEvent ? await sendStream({ ...params, messages }, onEvent) : await send({ ...params, messages });
+    const res = onEvent ? await sendStream({ ...params, messages }, onEvent, signal) : await send({ ...params, messages }, signal);
     usage.input_tokens += res.usage?.input_tokens ?? 0;
     usage.output_tokens += res.usage?.output_tokens ?? 0;
     usage.web_search_requests += res.usage?.server_tool_use?.web_search_requests ?? 0;
@@ -129,3 +129,21 @@ export function sendError(res, err) {
 }
 
 export const today = () => new Date().toISOString().slice(0, 10);
+
+/**
+ * Runs one worker with its own deadline: `fn(signal)` gets an AbortSignal tied to a timer,
+ * so a slow model call or fetch is actually cancelled, not just abandoned. Used by the
+ * brief orchestrator (api/brief.js) to bound each parallel worker independently.
+ */
+export async function withTimeout(fn, ms) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), ms);
+  try {
+    return await fn(ctrl.signal);
+  } catch (err) {
+    if (ctrl.signal.aborted) throw new Error(`Timed out after ${ms}ms`);
+    throw err;
+  } finally {
+    clearTimeout(timer);
+  }
+}

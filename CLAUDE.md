@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Grapevine finds academic conferences, journal calls and fellowships for humanities researchers and judges whether each is worth the time and money, given the researcher's fit, standing, network value, outcomes and feasibility (cost, funding, visa). Full spec: [PRD.md](PRD.md). Build write-up: [SKILLS.md](SKILLS.md).
+Grapevine finds academic conferences, journal calls and fellowships for humanities researchers and judges whether each is worth the time and money, given the researcher's fit, standing, network value, outcomes and feasibility (cost, funding, visa). Full spec: [PRD.md](PRD.md). Build write-ups: [SKILLS.md](SKILLS.md) (the skills), [SUBAGENTS.md](SUBAGENTS.md) (offline subagents), [MULTIAGENT.md](MULTIAGENT.md) (the live brief orchestrator).
 
 Static site (`prototype/`) + Vercel serverless functions (`api/`), calling the Anthropic Claude API directly — no agent framework. Sonnet 5 for judgement (search, brief composition), Haiku 4.5 for high-volume/simple steps (topic suggestions, reading pages).
 
@@ -25,9 +25,11 @@ The core idea is that each step of the product pipeline is written once, in plai
 
 The link between the two is `scripts/build-prompts.mjs`: it strips frontmatter from each `.claude/skills/*/SKILL.md`, bundles them (plus `corpus/funders/india.json` and `corpus/fx.json`) into the generated `api/_lib/prompts.js`. **Never hand-edit `api/_lib/prompts.js`** — edit the skill file and rerun `npm run build:prompts`.
 
-Pipeline (see PRD §5 for the full diagram): draft-profile → scout-opportunities → extract-opportunity → estimate-cost + find-funding → compose-brief → verify-grounding. Each skill name maps 1:1 to an `api/*.js` route (`topics.js`, `scout.js`, `extract.js`, `brief.js`) except verify-grounding, which only runs offline against the corpus.
+Pipeline (see PRD §5 for the full diagram): draft-profile → scout-opportunities → extract-opportunity → estimate-cost + find-funding → compose-brief → verify-grounding. Each skill name maps 1:1 to an `api/*.js` route (`topics.js`, `scout.js`, `extract.js`, `brief.js`), except verify-grounding, whose full offline audit only runs against the corpus — a smaller live slice of it now runs inside `brief.js` (see below).
 
 Each `api/*.js` route wraps its skill's system prompt with **runtime-only instructions** (tool budgets, e.g. "at most 5 searches", output JSON shape, sanitization rules) that don't belong in the skill file because they don't apply to the by-hand corpus-build usage. When changing a route's behavior, decide whether the change belongs in the skill (both runtimes) or in the route's own runtime instructions (live only).
+
+`api/brief.js` is a multi-agent orchestrator, not a single call: it runs three workers in parallel (`api/_lib/check/cost.js`, `funding.js`, `grounding.js`) and hands their combined result to a fourth, `compose.js`, which writes the verdict. Each worker has its own timeout and its own fallback, so one slow or failed worker degrades the brief instead of failing it. See [MULTIAGENT.md](MULTIAGENT.md) for why this shape and how each worker fails.
 
 `scripts/build-feed.mjs` is the other direction: it reads `corpus/` (profiles, opportunities, briefs) and generates `prototype/corpus.js`, the pre-built example shortlists shown when a user picks "see an example" instead of searching live.
 

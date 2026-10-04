@@ -4,6 +4,7 @@
 
 > **Module 2 submission → [SKILLS.md](SKILLS.md)**: the skills, what they produced, and before/after.
 > **Module 3 submission → [SUBAGENTS.md](SUBAGENTS.md)**: two of those skills as Claude Code subagents.
+> **Module 4 submission → [MULTIAGENT.md](MULTIAGENT.md)**: the live "Full check" as a multi-agent orchestrator.
 
 ---
 
@@ -22,6 +23,7 @@ Grapevine is that missing place, and the missing judgement. It gathers opportuni
 | **Week 1** | ✅ Clickable prototype on hand-written fixtures. Tagged [`module-1-prototype`](../../tree/module-1-prototype) |
 | **Week 2 (Module 2)** | ✅ 7 Claude Code skills in [`.claude/skills/`](.claude/skills/). They built ready-made shortlists for 8 example researchers ([`corpus/`](corpus/)) and power the live search. See **[SKILLS.md](SKILLS.md)** |
 | **Week 3 (Module 3)** | ✅ Two of those skills — `extract-opportunity` and `verify-grounding` — also run as Claude Code subagents ([`.claude/agents/`](.claude/agents/)), for enforced context isolation and safe parallel extraction. See **[SUBAGENTS.md](SUBAGENTS.md)** |
+| **Week 4 (Module 4)** | ✅ The live "Full check" (`api/brief.js`) is now an orchestrator: three workers — cost, funding, grounding — run in parallel, then hand off to a compose worker that writes the verdict. Each worker has its own timeout and fallback. See **[MULTIAGENT.md](MULTIAGENT.md)** |
 | **Next** | Accounts (username and password) so profiles and saved calls persist, a database instead of files, and a weekly automatic refresh |
 
 ## The prototype
@@ -59,6 +61,7 @@ Vercel: `prototype/` is the site, `api/` holds the server functions (topics, sco
 - **[SKILLS.md](SKILLS.md)**: the Module 2 write-up covering the skills, before/after, and results.
 - **[.claude/skills/](.claude/skills/)**: 7 skills, one per step in the PRD's "How it works".
 - **[.claude/agents/](.claude/agents/)** and **[memory/](memory/)**: two of those skills run as Claude Code subagents for isolation and parallel extraction; `memory/` is their durable cross-run state. See **[SUBAGENTS.md](SUBAGENTS.md)**.
+- **[MULTIAGENT.md](MULTIAGENT.md)**: the Module 4 write-up — `api/brief.js` as an orchestrator over `api/_lib/check/{cost,funding,grounding,compose}.js`.
 - **[corpus/](corpus/)**: skill output: 8 profiles, candidates, extracted opportunities, briefs, funder lists by country, grounding report.
 - **[api/](api/)**: server functions that send the SKILL.md files to Claude.
 - **[prototype/](prototype/)**: `index.html` · `styles.css` · `app.js` · `data.js` · `corpus.js` (generated).

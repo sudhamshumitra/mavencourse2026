@@ -17,6 +17,7 @@ const out = {
   estimateCost: skill('estimate-cost'),
   findFunding: skill('find-funding'),
   composeBrief: skill('compose-brief'),
+  verifyGrounding: skill('verify-grounding'),
 };
 const funders = JSON.parse(readFileSync(join(root, 'corpus', 'funders', 'india.json'), 'utf8'));
 const fx = JSON.parse(readFileSync(join(root, 'corpus', 'fx.json'), 'utf8'));

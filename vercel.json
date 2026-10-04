@@ -5,7 +5,7 @@
     "api/topics.js": { "maxDuration": 60 },
     "api/scout.js": { "maxDuration": 300 },
     "api/extract.js": { "maxDuration": 180 },
-    "api/brief.js": { "maxDuration": 240 }
+    "api/brief.js": { "maxDuration": 300 }
   },
   "cleanUrls": true,
   "trailingSlash": false,
