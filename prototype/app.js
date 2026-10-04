@@ -1522,7 +1522,11 @@ function renderMineFeed() {
 }
 
 const scoring = {};
-const WORKER_LABEL = { cost: 'Working out cost', funding: 'Finding funding', grounding: 'Re-checking dates and fees on the page' };
+// Short, standalone chip labels — must read clearly on their own, since the step row
+// they're attached to ("Cost, funding and grounding — checked at the same time") only
+// shows once, not per chip. Don't derive these from a sentence (e.g. its first word);
+// "Working ✓" / "Finding ✓" meant nothing without the sentence next to it.
+const WORKER_CHIP = { cost: 'Cost', funding: 'Funding', grounding: 'Source check' };
 
 function maybeScore(id) {
   const c = byId(id);
@@ -1559,7 +1563,7 @@ function scoringSteps(s) {
     ]),
   ];
   return steps.map((s2) => `<li class="${s.error ? '' : s2.state}"><span class="p2-dot"></span><span>${s2.label}</span>
-    ${s2.parallel ? `<span class="p2-sub">${['cost', 'funding', 'grounding'].map((k) => `<span class="p2-chip ${w[k] === 'fallback' ? 'warn' : w[k] || ''}">${WORKER_LABEL[k].split(' ')[0]}${w[k] === 'fallback' ? ' ⚠' : w[k] === 'done' ? ' ✓' : ''}</span>`).join('')}</span>` : ''}
+    ${s2.parallel ? `<span class="p2-sub">${['cost', 'funding', 'grounding'].map((k) => `<span class="p2-chip ${w[k] === 'fallback' ? 'warn' : w[k] || ''}">${WORKER_CHIP[k]}${w[k] === 'fallback' ? ' ⚠' : w[k] === 'done' ? ' ✓' : ''}</span>`).join('')}</span>` : ''}
   </li>`).join('');
 }
 
