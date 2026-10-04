@@ -1316,7 +1316,7 @@ function renderSearching() {
             <div class="s-found-h">Looking in</div>
             ${fields.slice(0, 7).map((f) => `<span class="s-field">${esc(f)}</span>`).join('') || `<span class="s-field">${esc((p.topics?.[0]?.term) ?? 'your topics')}</span>`}
           </div>
-          <p class="tiny muted" style="margin-top:1rem">Usually 1–2 minutes. It runs up to ${searchLog.max} web searches, then picks the best 6–8.</p>
+          <p class="tiny muted" style="margin-top:1rem">Usually 1–2 minutes. It runs up to ${searchLog.max} web searches, spot-checks the riskiest links, then picks the best 6–8.</p>
         </div>
         <div class="pipe2-live" aria-live="polite"><div id="s-panel">${searchPanelHtml()}</div><div id="s-out"></div></div>
       </div>
@@ -1383,7 +1383,7 @@ function candRow(c, rank, top = false) {
       <div class="kicker">${esc(TYPE_CHIP[c.type]?.[1] ?? 'Call')}${nd ? `<span class="dot">·</span>deadline ${fmtDate(nd)}` : ''}
         ${statusBadge(c)}${c.exploration ? '<span class="badge badge-sky">Outside your usual field</span>' : ''}</div>
       <h3 class="lr-title"><a href="#/brief/${esc(c.id)}">${esc(c.title)}</a></h3>
-      <div class="lr-host">${esc(c.host)} <a class="src-link" href="${safeUrl(c.url)}" target="_blank" rel="noopener noreferrer">Call page ↗</a></div>
+      <div class="lr-host">${esc(c.host)} <a class="src-link" href="${safeUrl(c.url)}" target="_blank" rel="noopener noreferrer">Call page ↗</a>${c.link_unverified ? ' <span class="badge badge-amber" title="Found in search results but not opened yet — the Full check confirms it.">Link not verified yet</span>' : ''}</div>
       ${c.status === 'watch' && c.next_expected ? `<div class="next-exp">Next call: ${esc(c.next_expected)}</div>` : ''}
       ${top && c.tagline ? `<p class="lr-tag">${esc(c.tagline)}</p>` : ''}
       <p class="lr-why">${esc(c.relevance)}</p>
