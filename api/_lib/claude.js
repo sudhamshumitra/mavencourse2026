@@ -106,12 +106,14 @@ const hits = new Map();
 const WINDOW_MS = 60 * 60 * 1000;
 const MAX_PER_WINDOW = Number(process.env.GV_RATE_LIMIT_PER_HOUR || 30);
 
-/** Best-effort per-visitor limit (per server instance). The hard ceiling is the monthly spend limit in the Anthropic Console. */
+/** Best-effort per-visitor limit (per server instance). The hard ceiling is the monthly spend limit in the Anthropic Console.
+ *  Set GV_SKIP_RATE_LIMIT=true in the environment to turn the limit off entirely; back to false (or unset) to turn it on again. */
 export function guard(req, res) {
   if (req.method !== 'POST') { res.status(405).json({ error: 'Use POST.' }); return false; }
   const origin = req.headers.origin;
   if (origin && new URL(origin).host !== req.headers.host) { res.status(403).json({ error: 'Cross-site requests are not allowed.' }); return false; }
   if (!isLive()) { res.status(503).json({ error: 'Live mode is off: no API key configured.' }); return false; }
+  if (process.env.GV_SKIP_RATE_LIMIT === 'true') return true;
 
   const ip = String(req.headers['x-forwarded-for'] ?? '').split(',')[0].trim() || 'unknown';
   const now = Date.now();
