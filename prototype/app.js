@@ -1406,11 +1406,19 @@ function renderSearching() {
 
 async function runSearch() {
   const started = Date.now();
+  let lastScoringNow = false;
   const tick = setInterval(() => {
     const t = $('#s-timer');
     if (!t) return clearInterval(tick);
     t.textContent = `${Math.round((Date.now() - started) / 1000)}s`;
-    if (searchLog.phase === 'picking') paintSearch();
+    // Only repaint the panel when the "scoring" step actually turns active — a full
+    // innerHTML replacement every second would replay the chips' and log rows' pop-in
+    // animations on each tick, which just looks like constant blinking for no reason.
+    if (searchLog.phase === 'picking') {
+      searchLog.pickingAt ??= Date.now();
+      const scoringNow = Date.now() - searchLog.pickingAt > 10000;
+      if (scoringNow !== lastScoringNow) { lastScoringNow = scoringNow; paintSearch(); }
+    }
   }, 1000);
   paintSearch();
   try {
