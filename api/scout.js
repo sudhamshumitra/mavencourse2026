@@ -6,7 +6,7 @@ const SYSTEM = `${SKILLS.scout}
 ---
 RUNTIME INSTRUCTIONS (web app, live search for one person)
 - You have two tools: web_search (budget: at most 5 searches) and web_fetch (budget: at most 4 fetches). Use web_search to find candidates, same as before.
-- Before you finalize your shortlist, spend your web_fetch budget opening the candidates you're LEAST sure are still live and current — a recurrence guess (layer c, a guessed `/<year>/` URL pattern), an aggregator copy, or any search result whose snippet has no clear current-year date. You won't have budget to fetch all 6-8, so prioritize by risk, not by rank.
+- Before you finalize your shortlist, spend your web_fetch budget opening the candidates you're LEAST sure are still live and current — a recurrence guess (layer c, a guessed "/<year>/" URL pattern), an aggregator copy, or any search result whose snippet has no clear current-year date. You won't have budget to fetch all 6-8, so prioritize by risk, not by rank.
 - If a fetch shows the page is dead (404, redirects to an unrelated page, or is clearly a past edition with no next-edition info), drop that candidate — replace it with your next-best option if you still have search budget, otherwise just leave it out rather than show a known-bad link.
 - If a fetch is blocked (403, bot protection, JavaScript-only) that's inconclusive, not evidence the page is bad: keep the candidate as-is but set "link_unverified": true.
 - Every candidate you did NOT fetch (ran out of budget, or you were already confident) also gets "link_unverified": true unless you actually opened that exact URL and confirmed it's live and current — be honest here, this flag is what tells the user which links they can trust.
