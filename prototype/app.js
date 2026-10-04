@@ -6,7 +6,7 @@
  * feedback loop is visible across a session.
  */
 
-import { TODAY, GATHERED_AT, EXAMPLES, profile as seedProfile, heldBack, pipelineFor, dismissReasons, topicVocabulary, GOALS, FX } from './data.js';
+import { TODAY, GATHERED_AT, EXAMPLES, profile as seedProfile, heldBack, pipelineFor, dismissReasons, topicVocabulary, GOALS, FX, COUNTRIES } from './data.js';
 
 /* ============================================================
    State
@@ -418,6 +418,15 @@ let onbStep = 0;
 let draft = null;
 let topicQuery = '';
 
+/* "Based in" / "Passport" search-as-you-type country fields. */
+const GEO_FIELDS = ['country', 'passport'];
+const comboOpen = { country: false, passport: false };
+const comboActive = { country: -1, passport: -1 };
+const countryMatches = (q) => {
+  const v = String(q ?? '').trim().toLowerCase();
+  return (v ? COUNTRIES.filter((c) => c.toLowerCase().includes(v)) : COUNTRIES).slice(0, 12);
+};
+
 const STEPS = ['Your research', 'Your practicalities'];
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -533,6 +542,24 @@ function stepPractical() {
   const pick = (act, cur, opts) => `<div class="opt-grid">${opts.map(([v, l, s]) =>
     `<button class="opt" data-act="${act}" data-v="${v}" aria-pressed="${cur === v}"><span>${l}</span><span class="opt-sub">${s}</span></button>`).join('')}</div>`;
 
+  const geoField = (field, label, placeholder, hint) => {
+    const value = draft.geography[field] ?? '';
+    const open = comboOpen[field];
+    const matches = open ? countryMatches(value) : [];
+    if (comboActive[field] >= matches.length) comboActive[field] = matches.length - 1;
+    return `<div class="field">
+      <label for="${field}">${label}</label>
+      <div class="combo">
+        <input type="text" id="${field}" class="combo-input" role="combobox" aria-expanded="${open}" aria-autocomplete="list"
+          aria-controls="${field}-list" autocomplete="off" placeholder="${placeholder}" value="${esc(value)}" data-act="${field}" />
+        <ul class="combo-list" id="${field}-list" role="listbox" ${matches.length ? '' : 'hidden'}>
+          ${matches.map((name, i) => `<li role="option" class="combo-opt ${i === comboActive[field] ? 'active' : ''}" aria-selected="${i === comboActive[field]}" data-geo-field="${field}" data-v="${esc(name)}">${esc(name)}</li>`).join('')}
+        </ul>
+      </div>
+      <span class="hint">${hint}</span>
+    </div>`;
+  };
+
   return `<h2 class="onb-q">Where are you, and what can you manage?</h2>
     <p class="onb-help">This decides fee tiers, the currency costs are shown in, and whether a trip means a visa.
       Things outside your limits are still shown, just ranked lower and labelled.</p>
@@ -540,17 +567,14 @@ function stepPractical() {
     <div class="field"><label>Career stage</label>${pick('stage', draft.career_stage, stages)}</div>
 
     <div class="grid3">
-      <div class="field"><label for="country">Based in</label>
-        <input type="text" id="country" value="${esc(draft.geography.country)}" data-act="country" /></div>
-      <div class="field"><label for="passport">Passport</label>
-        <input type="text" id="passport" value="${esc(draft.geography.passport)}" data-act="passport" /></div>
+      ${geoField('country', 'Based in', 'Country you live and work in', 'Where you are now — sets your fee tier and what counts as "local".')}
+      ${geoField('passport', 'Passport', 'Country on your passport', 'Your citizenship — checked against each event’s visa rules. Leave blank to use "Based in".')}
       <div class="field"><label for="currency">Show costs in</label>
         <select id="currency" data-act="currency">
           <option value="" ${draft.currency ? '' : 'selected'} disabled>Choose…</option>
           ${['INR', 'USD', 'EUR', 'GBP', 'BRL', 'NGN', 'PKR', 'KES', 'IDR', 'BDT', 'GHS'].map((cur) => `<option value="${cur}" ${draft.currency === cur ? 'selected' : ''}>${cur}</option>`).join('')}
         </select></div>
     </div>
-    <span class="hint" style="margin-top:-.6rem;display:block">Your passport is used only for visa requirements and regional fee tiers.</span>
 
     <div class="field" style="margin-top:1.2rem">
       <label for="budget">Most you could spend on one trip: <strong id="budget-out">${draft.currency ? budgetLabel(c.max_cost, max, draft.currency) : 'pick a currency first'}</strong></label>
@@ -591,6 +615,25 @@ function onboardingEvents(root) {
     if (stepChanged) $('.onb-progress', root).outerHTML = progressHtml();
   };
 
+  // Redraws just a geo field's dropdown (not the input, so typing never loses focus or the caret).
+  const renderGeoList = (field) => {
+    const list = $(`#${field}-list`, root);
+    const input = $(`#${field}`, root);
+    if (!list || !input) return;
+    const matches = comboOpen[field] ? countryMatches(draft.geography[field]) : [];
+    if (comboActive[field] >= matches.length) comboActive[field] = matches.length - 1;
+    list.innerHTML = matches.map((name, i) => `<li role="option" class="combo-opt ${i === comboActive[field] ? 'active' : ''}" aria-selected="${i === comboActive[field]}" data-geo-field="${field}" data-v="${esc(name)}">${esc(name)}</li>`).join('');
+    list.hidden = !matches.length;
+    input.setAttribute('aria-expanded', String(comboOpen[field]));
+  };
+  const selectGeo = (field, value) => {
+    draft.geography[field] = value;
+    comboOpen[field] = false;
+    const input = $(`#${field}`, root);
+    if (input) input.value = value;
+    renderGeoList(field);
+  };
+
   root.addEventListener('input', (e) => {
     const act = e.target.dataset.act;
     if (act === 'weight') draft.topics[+e.target.dataset.i].weight = +e.target.value / 100;
@@ -601,9 +644,46 @@ function onboardingEvents(root) {
       draft.constraints.max_cost = v >= top ? null : v;
       $('#budget-out').textContent = budgetLabel(draft.constraints.max_cost, top, draft.currency);
     }
-    if (act === 'country') draft.geography.country = e.target.value;
-    if (act === 'passport') draft.geography.passport = e.target.value;
+    if (GEO_FIELDS.includes(act)) {
+      draft.geography[act] = e.target.value;
+      comboOpen[act] = true;
+      comboActive[act] = -1;
+      renderGeoList(act);
+    }
     if (act === 'currency') { draft.currency = e.target.value; draft.constraints.max_cost = null; repaint(); }
+  });
+
+  root.addEventListener('focusin', (e) => {
+    const act = e.target.dataset.act;
+    if (!GEO_FIELDS.includes(act)) return;
+    comboOpen[act] = true;
+    comboActive[act] = -1;
+    renderGeoList(act);
+  });
+
+  root.addEventListener('focusout', (e) => {
+    const act = e.target.dataset.act;
+    if (!GEO_FIELDS.includes(act)) return;
+    comboOpen[act] = false;
+    renderGeoList(act);
+  });
+
+  root.addEventListener('keydown', (e) => {
+    const act = e.target.dataset.act;
+    if (!GEO_FIELDS.includes(act)) return;
+    const matches = countryMatches(draft.geography[act]);
+    if (e.key === 'ArrowDown' && matches.length) { e.preventDefault(); comboOpen[act] = true; comboActive[act] = Math.min(comboActive[act] + 1, matches.length - 1); renderGeoList(act); }
+    else if (e.key === 'ArrowUp' && matches.length) { e.preventDefault(); comboActive[act] = Math.max(comboActive[act] - 1, 0); renderGeoList(act); }
+    else if (e.key === 'Enter' && comboOpen[act] && matches[comboActive[act]]) { e.preventDefault(); selectGeo(act, matches[comboActive[act]]); }
+    else if (e.key === 'Escape') { comboOpen[act] = false; renderGeoList(act); }
+  });
+
+  // mousedown (not click) fires before the input's blur, so a selection registers before focusout would close the list.
+  root.addEventListener('mousedown', (e) => {
+    const li = e.target.closest('.combo-opt');
+    if (!li) return;
+    e.preventDefault();
+    selectGeo(li.dataset.geoField, li.dataset.v);
   });
 
   root.addEventListener('click', (e) => {
