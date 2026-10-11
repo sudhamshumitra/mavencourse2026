@@ -299,8 +299,10 @@ const openFunding = (o) => (o.funding ?? []).filter((f) => f.eligible !== 'no');
 const futureDeadline = (o) => deadlinesFor(o).find((d) => daysUntil(d.date) >= 0 && !d.synthetic);
 const actionable = (o) => (!o.status || o.status === 'open') && !!futureDeadline(o);
 
-const SUB_SHORT = { fit: 'Fit', standing: 'Standing', network: 'Network', outcomes: 'Outcomes', feasibility: 'Feasible' };
-const tone = (s) => (s >= 75 ? 'hi' : s >= 55 ? 'mid' : 'lo');
+/** One verdict per score, shared by shortlist rows and the brief so the two never disagree. */
+const verdictOf = (p) => (p >= 75 ? { word: 'Strong pick', tone: 'hi' }
+  : p >= 60 ? { word: 'Worth considering', tone: 'mid' } : { word: 'Long shot', tone: 'lo' });
+const tone = (s) => verdictOf(s).tone;
 
 function placeOf(o) {
   if (o.location.format === 'online' || o.location.city === '—') return 'Online';
@@ -315,62 +317,52 @@ function kicker(o) {
     ${statusBadge(o)}${o.explore ? '<span class="badge badge-sky">Outside your usual field</span>' : ''}${o.pasted ? '<span class="badge badge-sky">You added this</span>' : ''}</div>`;
 }
 
-/** The same four facts, in the same order, everywhere. */
-function factsRow(o) {
+/** Only what decides "should I look at this?": the next deadline and cost, plus funding/visa when they matter. */
+function factsLine(o) {
   const nd = futureDeadline(o);
   const c = o.cost_estimate;
-  const nf = openFunding(o).length;
   const abroad = o.location.format !== 'online' && o.location.country !== '—' && o.location.country !== homeCountry();
   const v = o.visa?.required;
-  const dl = nd
-    ? `<dd class="t-${urgency(nd.date)}">${nd.fund_name ? 'Funding' : DEADLINE_LABEL[nd.label]}<span>${relative(nd.date)}</span></dd>`
-    : `<dd class="t-mute">${o.status === 'watch' ? 'Next call not out' : 'None open'}</dd>`;
-  const cost = !c ? '<dd class="t-mute">—</dd>'
-    : `<dd class="${c.high === 0 ? 't-ok' : overBudget(c) ? 't-warn' : 't-ok'}">${
-      c.high === 0 ? 'Free' : `${shortMoney(c.low, c.currency)}–${shortMoney(c.high, c.currency)}`}<span>${overBudget(c) ? 'above your limit' : state.profile.constraints.max_cost == null ? 'no limit set' : 'within your limit'}</span></dd>`;
-  const fund = `<dd class="${nf ? 't-ok' : 't-mute'}">${nf ? `${nf} option${nf === 1 ? '' : 's'}` : 'None found'}</dd>`;
-  const visa = !abroad ? '<dd class="t-ok">Not needed</dd>'
-    : `<dd class="${v === 'yes' ? 't-soon' : v === 'no' ? 't-ok' : 't-near'}">${v === 'yes' ? 'Needed' : v === 'no' ? 'Not needed' : 'Maybe'}</dd>`;
-  return `<dl class="facts-row">
-    <div><dt>Next deadline</dt>${dl}</div>
-    <div><dt>Cost</dt>${cost}</div>
-    <div><dt>Funding</dt>${fund}</div>
-    <div><dt>Visa</dt>${visa}</div>
-  </dl>`;
+  const bits = [nd
+    ? `<span class="t-${urgency(nd.date)}">${nd.fund_name ? 'Funding application' : DEADLINE_LABEL[nd.label]} due ${relative(nd.date)}</span>`
+    : `<span class="t-mute">${o.status === 'watch' ? 'Next call not out' : 'No deadline open'}</span>`];
+  if (c) bits.push(c.high === 0 ? '<span>Free</span>'
+    : `<span class="${overBudget(c) ? 't-warn' : ''}">${shortMoney(c.low, c.currency)}–${shortMoney(c.high, c.currency)}${overBudget(c) ? ' (over your limit)' : ''}</span>`);
+  if (openFunding(o).length) bits.push('<span class="t-ok">Funding available</span>');
+  if (abroad && v === 'yes') bits.push('<span class="t-soon">Visa needed</span>');
+  else if (abroad && v !== 'no') bits.push('<span class="t-near">Visa maybe</span>');
+  return `<p class="facts-line">${bits.join('<span class="dot">·</span>')}</p>`;
 }
 
-function subBars(o) {
-  const subs = o.priority?.sub_scores;
-  if (!subs) return '';
-  return `<div class="sb">${SUBS.map(([k, label]) => {
-    const s = subs[k]?.score;
-    if (typeof s !== 'number') return `<div class="sb-r na" title="${label}: doesn't apply"><span>${SUB_SHORT[k]}</span><i></i></div>`;
-    return `<div class="sb-r" title="${label}: ${s}/100"><span>${SUB_SHORT[k]}</span><i><b class="${tone(s)}" style="width:${s}%"></b></i></div>`;
-  }).join('')}</div>`;
+/** Verdict word first; the out-of-100 score is a quiet meter underneath. */
+function scoreBlock(o, quick = false) {
+  if (quick && !o.priority) {
+    return `<div class="lr-score"><div class="verdict-w t-mute">Not checked yet</div><div class="meter"><i></i></div></div>`;
+  }
+  const p = priorityOf(o);
+  const v = o.predatory_flag ? { word: 'Be careful', tone: 'lo' } : verdictOf(p);
+  return `<div class="lr-score" title="Worth-it score: ${p} out of 100${quick ? ' (quick score from the search)' : ''}">
+    <div class="verdict-w ${v.tone}">${v.word}</div>
+    <div class="meter"><i><b class="${v.tone}" style="width:${p}%"></b></i><span>${quick ? '<em>quick</em>' : ''}${p}<small>/100</small></span></div>
+  </div>`;
 }
+
+const iconSave = (id, saved) => `<button class="icon-btn ${saved ? 'on' : ''}" data-act="save" data-id="${esc(id)}" aria-pressed="${saved}"
+  aria-label="${saved ? 'Saved' : 'Save'}" title="${saved ? 'Saved to your Tracker' : 'Save: adds its deadlines to your Tracker'}">${saved ? '★' : '☆'}</button>`;
+const iconDismiss = (id) => `<button class="icon-btn" data-act="dismiss" data-id="${esc(id)}"
+  aria-label="Not for me" title="Not for me: hides it and asks why, so the ranking learns">✕</button>`;
 
 function oppRow(o, rank, top = false) {
-  const saved = state.saved.includes(o.id);
-  const p = priorityOf(o);
-  return `<article class="lr ${top ? 'lr-top' : ''}" data-opp="${esc(o.id)}" style="animation-delay:${Math.min(rank * 45, 400)}ms">
-    <div class="lr-rank">${String(rank).padStart(2, '0')}</div>
-    <div class="lr-score">
-      <div class="lr-num ${tone(p)}">${p}</div>
-      <div class="lr-cap">worth it</div>
-      ${subBars(o)}
-    </div>
+  return `<article class="lr ${top ? 'lr-top' : ''}" data-opp="${esc(o.id)}" data-href="#/brief/${esc(o.id)}" style="animation-delay:${Math.min(rank * 45, 400)}ms">
+    ${scoreBlock(o)}
     <div class="lr-main">
-      ${kicker(o)}
       <h3 class="lr-title"><a href="#/brief/${esc(o.id)}">${esc(o.title)}</a></h3>
-      <div class="lr-host">${esc(o.host)} <a class="src-link" href="${safeUrl(o.source_url)}" target="_blank" rel="noopener noreferrer">Call page ↗</a></div>
+      <div class="lr-host">${esc(o.host)}</div>
+      ${kicker(o)}
       ${top && o.tagline ? `<p class="lr-tag">${esc(o.tagline)}</p>` : ''}
-      ${factsRow(o)}
+      ${factsLine(o)}
     </div>
-    <div class="lr-act">
-      <a class="btn btn-primary btn-sm" href="#/brief/${esc(o.id)}">Is it worth it?</a>
-      <button class="btn btn-ghost btn-sm" data-act="save" data-id="${esc(o.id)}" title="Adds its deadlines to your Tracker">${saved ? '★ Saved' : '☆ Save'}</button>
-      <button class="btn btn-quiet btn-sm" data-act="dismiss" data-id="${esc(o.id)}" title="Hides it and asks why, so the ranking learns">Not for me</button>
-    </div>
+    <div class="lr-act">${iconSave(o.id, state.saved.includes(o.id))}${iconDismiss(o.id)}</div>
   </article>`;
 }
 
@@ -866,11 +858,7 @@ function renderFeed() {
     <header class="feed-head">
       <div class="eyebrow">Example researcher · real calls gathered ${fmtDate(exampleSet().gathered_at)} · <a href="#/example">show another example</a></div>
       <h1>${first ? `${first}'s shortlist` : 'Your shortlist'}</h1>
-      <div class="ledger">
-        <div><b>${ranked.length}</b><span>opportunities</span></div>
-        <div class="${soon ? 'warm' : ''}"><b>${soon}</b><span>deadlines in the next 30 days</span></div>
-        <div class="green"><b>${funded}</b><span>with funding you could apply for</span></div>
-      </div>
+      <p class="feed-summary"><span>${ranked.length} opportunities</span><span class="dot">·</span><span><b class="${soon ? 'warm' : ''}">${soon} deadline${soon === 1 ? '' : 's'}</b> in the next 30 days</span><span class="dot">·</span><span><b class="green">${funded}</b> with funding you could apply for</span></p>
     </header>
 
     <div class="feed-bar">
@@ -1254,7 +1242,7 @@ function renderBrief(id) {
       <div class="verdict-main">
         ${ring(p / 100, 92, 'worth it')}
         <div>
-          <div class="verdict-label">${p >= 75 ? 'Strong pick' : p >= 60 ? 'Worth considering' : 'Probably not this time'}</div>
+          <div class="verdict-label">${o.predatory_flag ? 'Be careful' : verdictOf(p).word}</div>
           <p class="verdict-tag">${esc(o.tagline ?? '')}</p>
         </div>
       </div>
@@ -1458,27 +1446,18 @@ async function runSearch() {
 
 function candRow(c, rank, top = false) {
   const nd = c.deadline_hint && daysUntil(c.deadline_hint) >= 0 ? c.deadline_hint : null;
-  const p = c.priority ? priorityOf(c) : null;
-  return `<article class="lr lr-cand ${top ? 'lr-top' : ''}" data-opp="${esc(c.id)}" style="animation-delay:${Math.min(rank * 45, 400)}ms">
-    <div class="lr-rank">${String(rank).padStart(2, '0')}</div>
-    <div class="lr-score">
-      <div class="lr-num ${p == null ? 't-mute' : tone(p)}">${p ?? '–'}</div>
-      <div class="lr-cap">${p == null ? 'not scored yet' : 'quick score'}</div>
-      ${subBars(c)}
-    </div>
+  return `<article class="lr lr-cand ${top ? 'lr-top' : ''}" data-opp="${esc(c.id)}" data-href="#/brief/${esc(c.id)}" style="animation-delay:${Math.min(rank * 45, 400)}ms">
+    ${scoreBlock(c, true)}
     <div class="lr-main">
+      <h3 class="lr-title"><a href="#/brief/${esc(c.id)}">${esc(c.title)}</a></h3>
+      <div class="lr-host">${esc(c.host)}${c.link_unverified ? ' <span class="badge badge-amber" title="Found in search results but not opened yet — the Full check confirms it.">Link not verified yet</span>' : ''}</div>
       <div class="kicker">${esc(TYPE_CHIP[c.type]?.[1] ?? 'Call')}${nd ? `<span class="dot">·</span>deadline ${fmtDate(nd)}` : ''}
         ${statusBadge(c)}${c.exploration ? '<span class="badge badge-sky">Outside your usual field</span>' : ''}</div>
-      <h3 class="lr-title"><a href="#/brief/${esc(c.id)}">${esc(c.title)}</a></h3>
-      <div class="lr-host">${esc(c.host)} <a class="src-link" href="${safeUrl(c.url)}" target="_blank" rel="noopener noreferrer">Call page ↗</a>${c.link_unverified ? ' <span class="badge badge-amber" title="Found in search results but not opened yet — the Full check confirms it.">Link not verified yet</span>' : ''}</div>
       ${c.status === 'watch' && c.next_expected ? `<div class="next-exp">Next call: ${esc(c.next_expected)}</div>` : ''}
       ${top && c.tagline ? `<p class="lr-tag">${esc(c.tagline)}</p>` : ''}
       <p class="lr-why">${esc(c.relevance)}</p>
     </div>
-    <div class="lr-act">
-      <a class="btn btn-primary btn-sm" href="#/brief/${esc(c.id)}">Full check · ~1 min</a>
-      <button class="btn btn-quiet btn-sm" data-act="dismiss" data-id="${esc(c.id)}">Not for me</button>
-    </div>
+    <div class="lr-act"><a class="lr-check" href="#/brief/${esc(c.id)}">Full check · ~1 min</a>${iconDismiss(c.id)}</div>
   </article>`;
 }
 
@@ -1494,11 +1473,7 @@ function renderMineFeed() {
     <header class="feed-head">
       <div class="eyebrow">Live search${state.search ? ` · ${fmtDate(state.search.at.slice(0, 10))}` : ''}</div>
       <h1>Your shortlist</h1>
-      <div class="ledger">
-        <div><b>${all.length}</b><span>found for your topics</span></div>
-        <div class="${openNow ? 'warm' : ''}"><b>${openNow}</b><span>you can apply to now</span></div>
-        <div class="green"><b>${checked}</b><span>fully checked</span></div>
-      </div>
+      <p class="feed-summary"><span>${all.length} found for your topics</span><span class="dot">·</span><span><b class="${openNow ? 'warm' : ''}">${openNow}</b> you can apply to now</span><span class="dot">·</span><span><b class="green">${checked}</b> fully checked</span></p>
     </header>
 
     <div class="feed-bar">
@@ -2023,6 +1998,9 @@ function render() {
    ============================================================ */
 
 document.addEventListener('click', (e) => {
+  // The whole shortlist row opens the brief, except its own links/buttons or when the user is selecting text.
+  const row = e.target.closest('.lr[data-href]');
+  if (row && !e.target.closest('a, button') && !String(getSelection?.() ?? '')) { location.hash = row.dataset.href; return; }
   const btn = e.target.closest('[data-act]');
   if (!btn || btn.closest('.onb') || btn.closest('#modal-root')) return;
 
