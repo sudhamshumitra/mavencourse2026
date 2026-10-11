@@ -393,7 +393,7 @@ function renderWelcome() {
           <circle cx="9" cy="22" r="2.8" fill="currentColor" opacity=".5"/>
         </svg>
       </div>
-      <h1><span class="brand">Grapevine</span> finds the conferences, journal calls and fellowships <em>you'd never find on your own.</em></h1>
+      <h1><span class="hero-brand">Grapevine</span> finds the conferences, journal calls and fellowships <em>you'd never find on your own.</em></h1>
 
       <ol class="steps3">
         <li><span class="s3-ico" aria-hidden="true">✍️</span><span>Tell us what you research</span></li>
