@@ -44,6 +44,7 @@ function load() {
 }
 
 function save() {
+  if (state.mode === 'example') return; // browsing an example is disposable — don't overwrite a real saved profile/search
   try { localStorage.setItem(KEY, JSON.stringify(state)); } catch { /* private mode — session only */ }
 }
 
@@ -392,11 +393,11 @@ function renderWelcome() {
           <circle cx="9" cy="22" r="2.8" fill="currentColor" opacity=".5"/>
         </svg>
       </div>
-      <h1>Conferences, journal calls and fellowships <em>worth your time.</em></h1>
+      <h1><span class="brand">Grapevine</span> finds the conferences, journal calls and fellowships <em>you'd never find on your own.</em></h1>
 
       <ol class="steps3">
         <li><span class="s3-ico" aria-hidden="true">✍️</span><span>Tell us what you research</span></li>
-        <li><span class="s3-ico" aria-hidden="true">🔎</span><span>We search societies, journals and funders</span></li>
+        <li><span class="s3-ico" aria-hidden="true">🔎</span><span>We search conferences, journals and fellowships for you</span></li>
         <li><span class="s3-ico" aria-hidden="true">✅</span><span>You get a shortlist with costs and deadlines</span></li>
       </ol>
 
@@ -404,8 +405,6 @@ function renderWelcome() {
         <a class="btn btn-primary btn-lg" href="#/onboarding" data-act="fresh-start">Get started</a>
         <a class="btn btn-ghost btn-lg" href="#/example">See an example</a>
       </div>
-
-      <p class="hero-note">Prototype · ${EXAMPLES.length} example researchers · real calls gathered ${fmtDate(GATHERED_AT)}</p>
     </div>
   </section>`;
 }

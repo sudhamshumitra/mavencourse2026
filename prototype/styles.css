@@ -270,6 +270,7 @@ a  { color: inherit; }
 [data-theme="dark"] .hero-mark { color: #2A1522; }
 .hero h1 { margin-bottom: .7rem; }
 .hero h1 em { font-style: italic; color: var(--grape); }
+.hero h1 .brand { color: var(--grape); }
 .hero-sub { font-size: 1.12rem; color: var(--ink-2); max-width: 34rem; margin: 0 auto 1.8rem; }
 .hero-cta { display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap; }
 .hero-note { margin-top: 2.4rem; font-size: .84rem; color: var(--muted); }
