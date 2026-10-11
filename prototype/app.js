@@ -801,7 +801,7 @@ function runPipeline() {
   pipeTimers = [];
   const steps = $$('#pipe-steps li');
   const streams = pipelineStreams();
-  const STEP_MS = 1900;
+  const STEP_MS = 2800;
   const at = (ms, fn) => pipeTimers.push(setTimeout(fn, ms));
 
   steps.forEach((el, i) => {
@@ -814,7 +814,7 @@ function runPipeline() {
       $('#p2-detail').textContent = curPipeline()[i].detail;
       $('#p2-stream').innerHTML = '';
     });
-    (streams[i] ?? []).forEach((item, j) => at(start + 250 + j * 210, () => {
+    (streams[i] ?? []).forEach((item, j) => at(start + 300 + j * 320, () => {
       const chip = document.createElement('span');
       chip.className = 'p2-item';
       chip.textContent = item;
