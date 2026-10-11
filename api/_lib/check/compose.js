@@ -29,10 +29,21 @@ export function sanitizeCompose(b, opp) {
       ? { score: clamp(s.score), reason: str(s.reason, 400) ?? '' } : null;
   }
   const lead = num(b.visa?.lead_days, 0);
+  let score = clamp(b.priority?.score);
+  let watchOut = strs(b.watch_out, 2);
+  // The skill's caps, enforced here too: a model that forgets them must not push a bad call up the feed.
+  if (opp.predatory_flag) score = Math.min(score, 30);
+  if (opp.status === 'stale' || opp.freshness?.stale) {
+    score = Math.min(score, 40);
+    if (!watchOut.some((w) => /out of date|outdated|stale|\bold\b|no longer|\b20\d\d\b/i.test(w))) {
+      const when = opp.freshness?.last_signal_year ?? opp.freshness?.posted ?? null;
+      watchOut = [`This call looks out of date${when ? ` (its latest date is ${when})` : ''}. Check it is still open before spending time on it.`, ...watchOut].slice(0, 2);
+    }
+  }
   return {
-    priority: { score: clamp(b.priority?.score), sub_scores: subs },
+    priority: { score, sub_scores: subs },
     fit: { score: Math.max(0, Math.min(1, num(b.fit?.score, 0.5))), rationale: str(b.fit?.rationale, 900) ?? '', matched_topics: strs(b.fit?.matched_topics, 8, 80), neighborhood_evidence: strs(b.fit?.neighborhood_evidence, 4) },
-    why_go: strs(b.why_go, 3), watch_out: strs(b.watch_out, 2), tagline: str(b.tagline, 140) ?? '',
+    why_go: strs(b.why_go, 3), watch_out: watchOut, tagline: str(b.tagline, 140) ?? '',
     eligible: ['yes', 'no', 'conditional'].includes(b.eligible) ? b.eligible : 'conditional', eligibility_notes: str(b.eligibility_notes, 600) ?? '',
     visa: b.visa ? { required: ['yes', 'no', 'conditional'].includes(b.visa.required) ? b.visa.required : 'conditional', note: str(b.visa.note, 600) ?? '',
       official_source: str(b.visa.official_source, 500), verify_flag: true, lead_days: lead > 0 && lead < 400 ? lead : null } : null,

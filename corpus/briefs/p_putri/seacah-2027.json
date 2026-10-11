@@ -23,7 +23,7 @@
     "net_note": "Presenting online instead would drop registration to the USD 200-320 online-presenter tier and remove travel and accommodation entirely, landing well under budget; attending in person, only the high end slightly exceeds her IDR 20,000,000 cap."
   },
   "priority": {
-    "score": 47,
+    "score": 30,
     "weights": { "fit": 0.2692, "standing": 0.1923, "network": 0.1923, "outcomes": 0.1154, "feasibility": 0.2308 },
     "sub_scores": {
       "fit": { "score": 60, "reason": "Her digital-archiving work could be framed under IAFOR's broad arts-and-humanities and technology themes, but this is a generic multi-discipline conference rather than one focused on her subject, so fit is capped by keyword overlap alone." },

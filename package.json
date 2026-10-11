@@ -4,9 +4,20 @@
   "type": "module",
   "scripts": {
     "build:prompts": "node scripts/build-prompts.mjs",
-    "build:feed": "node scripts/build-feed.mjs --profile ananya --hold basas-2027"
+    "build:feed": "node scripts/build-feed.mjs --profile ananya --hold basas-2027",
+    "test": "node --test \"evals/unit/*.test.mjs\"",
+    "eval": "node evals/run.mjs",
+    "eval:extract": "node evals/run.mjs extract",
+    "eval:brief": "node evals/run.mjs brief --judge",
+    "eval:topics": "node evals/run.mjs topics",
+    "eval:scout": "node evals/run.mjs scout --judge",
+    "eval:all": "node evals/run.mjs all --judge --repeat 3",
+    "eval:snapshot": "node evals/snapshot.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.127.0"
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0"
   }
 }

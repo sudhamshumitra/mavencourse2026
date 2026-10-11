@@ -1,0 +1,4 @@
+{
+  "_how": "Fill in after reading evals/human/sheet.md. One entry per case id; each score 1-5. Example: \"b-ananya-msa-lund\": {\"specific\": 4, \"grounded\": 5, \"consistent\": 4, \"eligibility_visa\": 5, \"plain\": 4}",
+  "labels": {}
+}

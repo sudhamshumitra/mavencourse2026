@@ -1,0 +1,3932 @@
+{
+  "run": {
+    "at": "2026-10-11T11:46:06.538Z",
+    "commit": "13c1d9e+changes",
+    "today": "2026-10-11",
+    "suites": [
+      "extract"
+    ],
+    "judge": false,
+    "repeat": 1,
+    "models": {
+      "main": "claude-sonnet-5",
+      "fast": "claude-haiku-4-5"
+    }
+  },
+  "suites": {
+    "extract": {
+      "criteria": [
+        {
+          "id": "reject",
+          "label": "Non-opportunity pages rejected",
+          "kind": "case",
+          "target": 1,
+          "passed": 1,
+          "total": 1,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "type",
+          "label": "Type correct (conference / journal / fellowship)",
+          "kind": "case",
+          "target": 0.95,
+          "passed": 18,
+          "total": 19,
+          "rate": 0.9473684210526315,
+          "met": false
+        },
+        {
+          "id": "status",
+          "label": "Status correct (open / attend-only / watch / stale)",
+          "kind": "case",
+          "target": 1,
+          "passed": 12,
+          "total": 16,
+          "rate": 0.75,
+          "met": false
+        },
+        {
+          "id": "deadline_recall",
+          "label": "Expected deadlines found, exact date",
+          "kind": "item",
+          "target": 0.95,
+          "passed": 15,
+          "total": 18,
+          "rate": 0.8333333333333334,
+          "met": false
+        },
+        {
+          "id": "deadline_precision",
+          "label": "Extracted dates that are real dates on the page",
+          "kind": "item",
+          "target": 0.9,
+          "passed": 24,
+          "total": 32,
+          "rate": 0.75,
+          "met": false
+        },
+        {
+          "id": "fee_recall",
+          "label": "Expected fees found (amount + currency)",
+          "kind": "item",
+          "target": 0.95,
+          "passed": 22,
+          "total": 22,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "quote_fidelity",
+          "label": "\"Verified\" quotes found on the page by the live re-check",
+          "kind": "item",
+          "target": 1,
+          "passed": 76,
+          "total": 101,
+          "rate": 0.7524752475247525,
+          "met": false
+        },
+        {
+          "id": "quote_fidelity_strict",
+          "label": "…of which exact character-for-character (diagnostic)",
+          "kind": "item",
+          "target": null,
+          "passed": 74,
+          "total": 101,
+          "rate": 0.7326732673267327,
+          "met": null
+        },
+        {
+          "id": "safety",
+          "label": "No invented, injected or impossible dates/fees",
+          "kind": "case",
+          "target": 1,
+          "passed": 4,
+          "total": 4,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "predatory",
+          "label": "Predatory organiser flagged",
+          "kind": "case",
+          "target": 1,
+          "passed": 0,
+          "total": 1,
+          "rate": 0,
+          "met": false
+        },
+        {
+          "id": "venue_funding",
+          "label": "Event's own grants/waivers picked up",
+          "kind": "case",
+          "target": 1,
+          "passed": 3,
+          "total": 4,
+          "rate": 0.75,
+          "met": false
+        }
+      ],
+      "usd": 0.20951299999999995,
+      "latency_ms": {
+        "p50": 9789,
+        "p95": 19471
+      },
+      "cases": [
+        {
+          "id": "x-madison",
+          "tags": [
+            "representative"
+          ],
+          "note": "Plain US conference page; all dates and fees in prose.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": false,
+              "detail": "got open, expected attend-only"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": false,
+              "detail": "missing 2026-03-01 (got 2027-03-01, 2027-04-05, 2027-10-01, 2027-10-10)"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": false,
+              "detail": "missing 2026-04-05 (got 2027-03-01, 2027-04-05, 2027-10-01, 2027-10-10)"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": false,
+              "detail": "abstract 2027-03-01 — not a date on this page"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": false,
+              "detail": "abstract 2027-04-05 — not a date on this page"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": false,
+              "detail": "early_bird 2027-10-01 — not a date on this page"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": false,
+              "detail": "registration 2027-10-10 — not a date on this page"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "300 USD"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "150 USD"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Symposium Proposals are due March 1st\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Symposium Proposals are due March 1st\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Panels, Single Papers, and Round Table Proposals are due April 5th. Fi\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Panels, Single Papers, and Round Table Proposals are due April 5th. Fi\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Early bird registration is open until October 1st\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Early bird registration is open until October 1st\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"The last day to register online is October 10th\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"The last day to register online is October 10th\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Early bird registration is open until October 1st. Non student- $300\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Early bird registration is open until October 1st. Non student- $300\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Student- $150\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Student- $150\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Emeritus- $150\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Emeritus- $150\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"After October 1st, regular registration fees applies Non student- $310\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"After October 1st, regular registration fees applies Non student- $310\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Student- $160\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Student- $160\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Emeritus- $160\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Emeritus- $160\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"When can I request a registration fee waiver? The fee waiver request f\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"When can I request a registration fee waiver? The fee waiver request f\""
+            }
+          ],
+          "ms": 12915,
+          "usd": 0.011179,
+          "output": {
+            "opportunity": {
+              "id": "live-acsa-2027",
+              "type": "conference",
+              "status": "open",
+              "title": "Annual Conference on South Asia",
+              "host": "Center for South Asia, University of Wisconsin–Madison",
+              "host_kind": "university",
+              "theme": "Transcending Borders and Nationalism – South Asia as cultures, histories, and topography",
+              "description": "The Annual Conference on South Asia is a four-day in-person event featuring research panels and round tables, lectures, performances, film screenings, booksellers, association receptions, and other special presentations. The 55th edition will continue the conference's tradition of bringing together scholars, students, and professionals to present and discuss research on South Asia.",
+              "location": {
+                "city": "Madison",
+                "country": "United States",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": null,
+                "end": null
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2027-03-01",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Symposium Proposals are due March 1st"
+                },
+                {
+                  "label": "abstract",
+                  "date": "2027-04-05",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Panels, Single Papers, and Round Table Proposals are due April 5th. Film submissions are due April 5th"
+                },
+                {
+                  "label": "early_bird",
+                  "date": "2027-10-01",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Early bird registration is open until October 1st"
+                },
+                {
+                  "label": "registration",
+                  "date": "2027-10-10",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "The last day to register online is October 10th"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": "Open to scholars, students, and professionals. Presenters limited to maximum of two sessions Thursday through Saturday in any role."
+              },
+              "fees": [
+                {
+                  "tier": "Non-Student (early bird until Oct 1)",
+                  "amount": 300,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Early bird registration is open until October 1st. Non student- $300"
+                },
+                {
+                  "tier": "Student (early bird until Oct 1)",
+                  "amount": 150,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Student- $150"
+                },
+                {
+                  "tier": "Emeritus (early bird until Oct 1)",
+                  "amount": 150,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Emeritus- $150"
+                },
+                {
+                  "tier": "Non-Student (after Oct 1)",
+                  "amount": 310,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "After October 1st, regular registration fees applies Non student- $310"
+                },
+                {
+                  "tier": "Student (after Oct 1)",
+                  "amount": 160,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Student- $160"
+                },
+                {
+                  "tier": "Emeritus (after Oct 1)",
+                  "amount": 160,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Emeritus- $160"
+                }
+              ],
+              "funding": [
+                {
+                  "name": "Registration fee waiver",
+                  "type": "waiver",
+                  "deadline": null,
+                  "amount_note": null,
+                  "eligibility_notes": "Eligibility criteria not specified; opens in August",
+                  "grounded": true,
+                  "source_quote": "When can I request a registration fee waiver? The fee waiver request form opens in August.",
+                  "source_url": "https://southasiaconference.wisc.edu/"
+                }
+              ],
+              "past_editions": [
+                {
+                  "year": 2026,
+                  "theme": "Transcending Borders and Nationalism – South Asia as cultures, histories, and topography",
+                  "city": "Madison",
+                  "source_url": "https://southasiaconference.wisc.edu/"
+                },
+                {
+                  "year": 2025,
+                  "theme": null,
+                  "city": "Madison",
+                  "source_url": "https://southasiaconference.wisc.edu/"
+                }
+              ],
+              "standing_signals": [
+                {
+                  "signal": "Annual conference since 1971",
+                  "grounded": true,
+                  "source_url": "https://southasiaconference.wisc.edu/"
+                },
+                {
+                  "signal": "55th edition in 2027; 54th in 2026",
+                  "grounded": true,
+                  "source_url": "https://southasiaconference.wisc.edu/"
+                },
+                {
+                  "signal": "Over 1,000 registered attendees in 2025",
+                  "grounded": true,
+                  "source_url": "https://southasiaconference.wisc.edu/"
+                }
+              ],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Page references the 2027 call opening February 1; current edition (2026) in progress with conference October 28-31, 2026. Page is current."
+              },
+              "source_url": "https://southasiaconference.wisc.edu/",
+              "extracted_at": "2026-10-11T11:46:19.452Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-socine",
+          "tags": [
+            "representative",
+            "edge:non-english"
+          ],
+          "note": "Portuguese/Spanish page, long (64k chars). Fee-waiver bolsas should be picked up as venue funding.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got attend-only, expected attend-only"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2026-04-26"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2026-04-26"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": false,
+              "detail": "registration 2026-07-26 — not a date on this page"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Período de inscrições: de 02 de fevereiro a 26 de abril de 2026\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Período de inscrições: de 02 de fevereiro a 26 de abril de 2026\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Deadline: From July 20 to July 26\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Deadline: From July 20 to July 26\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"R$258,00 (profissionais)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"R$258,00 (profissionais)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"R$129,00 (estudantes/profissionais sem vínculo)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"R$129,00 (estudantes/profissionais sem vínculo)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"R$288,00 (profissionais)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"R$288,00 (profissionais)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"R$144,00 (estudantes/profissionais sem vínculo)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"R$144,00 (estudantes/profissionais sem vínculo)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"R$328,00 (profissionais)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"R$328,00 (profissionais)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"R$164,00 (estudantes/profissionais sem vínculo)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"R$164,00 (estudantes/profissionais sem vínculo)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"SOCINE ofrecerá 100 becas de inscripción para el XXIX Encuentro SOCINE\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"SOCINE ofrecerá 100 becas de inscripción para el XXIX Encuentro SOCINE\""
+            },
+            {
+              "criterion": "venue_funding",
+              "pass": false,
+              "detail": "Student Registration Scholarships"
+            }
+          ],
+          "ms": 18152,
+          "usd": 0.029742,
+          "output": {
+            "opportunity": {
+              "id": "live-socine-2026",
+              "type": "conference",
+              "status": "attend-only",
+              "title": "XXIX Encontro SOCINE – Fins do mundo, mundos sem fim",
+              "host": "SOCINE (Sociedade Brasileira de Estudos de Cinema e Audiovisual)",
+              "host_kind": "learned_society",
+              "theme": "Fins do mundo, mundos sem fim (Ends of the world, worlds without an end)",
+              "description": "The 29th annual meeting of SOCINE, Brazil's leading society for cinema and audiovisual studies, brings together scholars, researchers, artists, and professionals to discuss cinema and audiovisual media through the lens of global crises, ecological collapse, technological transformation, and the possibility of reimagining shared worlds. The conference welcomes individual papers, thematic seminars, pre-constituted sessions with artistic performances and critical discussions, and thematic axes focused on cinema body and aesthetics, intermedialities and technology, fabulation and realism, Latin American cinema history, and creation and education processes.",
+              "location": {
+                "city": "Salvador",
+                "country": "Brazil",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": "2026-11-03",
+                "end": "2026-11-06"
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2026-04-26",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Período de inscrições: de 02 de fevereiro a 26 de abril de 2026"
+                },
+                {
+                  "label": "registration",
+                  "date": "2026-07-26",
+                  "depends_on": "abstract",
+                  "grounded": true,
+                  "source_quote": "Deadline: From July 20 to July 26"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": ""
+              },
+              "fees": [
+                {
+                  "tier": "Professional (Annual membership + Conference registration, 1st deadline)",
+                  "amount": 258,
+                  "currency": "BRL",
+                  "grounded": true,
+                  "source_quote": "R$258,00 (profissionais)"
+                },
+                {
+                  "tier": "Student (Annual membership + Conference registration, 1st deadline)",
+                  "amount": 129,
+                  "currency": "BRL",
+                  "grounded": true,
+                  "source_quote": "R$129,00 (estudantes/profissionais sem vínculo)"
+                },
+                {
+                  "tier": "Professional (Conference registration, 2nd deadline)",
+                  "amount": 288,
+                  "currency": "BRL",
+                  "grounded": true,
+                  "source_quote": "R$288,00 (profissionais)"
+                },
+                {
+                  "tier": "Student (Conference registration, 2nd deadline)",
+                  "amount": 144,
+                  "currency": "BRL",
+                  "grounded": true,
+                  "source_quote": "R$144,00 (estudantes/profissionais sem vínculo)"
+                },
+                {
+                  "tier": "Professional (Conference registration, final deadline)",
+                  "amount": 328,
+                  "currency": "BRL",
+                  "grounded": true,
+                  "source_quote": "R$328,00 (profissionais)"
+                },
+                {
+                  "tier": "Student (Conference registration, final deadline)",
+                  "amount": 164,
+                  "currency": "BRL",
+                  "grounded": true,
+                  "source_quote": "R$164,00 (estudantes/profissionais sem vínculo)"
+                }
+              ],
+              "funding": [
+                {
+                  "name": "Student Registration Scholarships",
+                  "type": "registration_waiver",
+                  "deadline": "2026-06-16",
+                  "amount_note": "100 scholarships covering full conference registration fee",
+                  "eligibility_notes": "Available to student members with current annual fees, who submitted work to the conference, requested exemption at submission time, and had their work selected. Winners drawn electronically after June 16, 2026 approval announcements.",
+                  "grounded": true,
+                  "source_quote": "SOCINE ofrecerá 100 becas de inscripción para el XXIX Encuentro SOCINE, destinadas a miembros de la categoría de estudiantes",
+                  "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/"
+                }
+              ],
+              "past_editions": [
+                {
+                  "year": 2022,
+                  "theme": null,
+                  "city": "São Paulo",
+                  "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/"
+                },
+                {
+                  "year": 2021,
+                  "theme": null,
+                  "city": null,
+                  "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/"
+                }
+              ],
+              "standing_signals": [
+                {
+                  "signal": "29th annual meeting",
+                  "grounded": true,
+                  "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/"
+                },
+                {
+                  "signal": "Established learned society: SOCINE (Sociedade Brasileira de Estudos de Cinema e Audiovisual)",
+                  "grounded": true,
+                  "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/"
+                },
+                {
+                  "signal": "Peer-reviewed selection process with multiple submission formats (individual communications, thematic seminars, pre-constituted sessions, thematic axes)",
+                  "grounded": true,
+                  "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/"
+                }
+              ],
+              "freshness": {
+                "posted": "2026-02-15",
+                "last_signal_year": 2026,
+                "stale": false,
+                "note": "Page posted in February 2026 with event in November 2026; multiple dates (deadlines, event dates) in 2026 confirm currency."
+              },
+              "source_url": "https://www.socine.org/2026/02/chamada-de-trabalhos-call-for-papers-convocatoria-de-ponencias-xxix-encontro-socine/",
+              "extracted_at": "2026-10-11T11:46:24.695Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-sai-heidelberg",
+          "tags": [
+            "representative",
+            "fellowship"
+          ],
+          "note": null,
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got fellowship"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got open, expected open"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2026-12-01"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2026-12-01"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"The application deadline is 01 December 2026, 23:59 CET\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"The application deadline is 01 December 2026, 23:59 CET\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"reimbursement of international travel expenses of up to EUR 1,500, pay\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"reimbursement of international travel expenses of up to EUR 1,500, pay\""
+            }
+          ],
+          "ms": 8883,
+          "usd": 0.008165,
+          "output": {
+            "opportunity": {
+              "id": "live-sai-2027",
+              "type": "fellowship",
+              "status": "open",
+              "title": "Joint Scholarship Programme of the South Asia Institute, Heidelberg University and the Max Weber Forum for South Asian Studies Delhi for Young Scholars from South Asia",
+              "host": "South Asia Institute, Heidelberg University and Max Weber Forum for South Asian Studies Delhi",
+              "host_kind": "university",
+              "theme": "South Asian Studies",
+              "description": "A three-month fellowship for young researchers from India, Nepal, Pakistan, Sri Lanka, or Bangladesh to conduct research collaboration at the South Asia Institute in Heidelberg. Fellows develop a research project into a third-party funding application (for research funding, exchange, or event programs) and participate actively in scientific events at the institute. Priority fields include ethnology, history, political science, economics, geography, modern languages and literatures of South Asia, and cultural and religious history of South Asia.",
+              "location": {
+                "city": "Heidelberg",
+                "country": "Germany",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": "2027-04-01",
+                "end": "2027-06-30"
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2026-12-01",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "The application deadline is 01 December 2026, 23:59 CET"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": ""
+              },
+              "fees": [],
+              "funding": [
+                {
+                  "name": "Fellowship",
+                  "type": "scholarship",
+                  "deadline": "2026-12-01",
+                  "amount_note": "International travel reimbursement up to EUR 1,500, rental costs covered, monthly scholarship of EUR 1,200 for three months",
+                  "eligibility_notes": "Young researchers from India, Nepal, Pakistan, Sri Lanka, or Bangladesh. Priority fields: ethnology, history, political science, economics, geography, modern languages and literatures of South Asia, cultural and religious history of South Asia (Classical Indology).",
+                  "grounded": true,
+                  "source_quote": "reimbursement of international travel expenses of up to EUR 1,500, payment of rental costs and a monthly scholarship instalment of EUR 1,200",
+                  "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university"
+                }
+              ],
+              "past_editions": [],
+              "standing_signals": [
+                {
+                  "signal": "",
+                  "grounded": true,
+                  "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university"
+                },
+                {
+                  "signal": "",
+                  "grounded": true,
+                  "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university"
+                }
+              ],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Page contains dates in future year (2027); not stale."
+              },
+              "source_url": "https://www.sai.uni-heidelberg.de/en/newsroom/call-for-applications-joint-scholarship-programme-of-the-south-asia-institute-heidelberg-university",
+              "extracted_at": "2026-10-11T11:46:15.441Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-wera",
+          "tags": [
+            "representative",
+            "edge:split-date"
+          ],
+          "note": "Deadline is laid out over three lines: NOV / 15 / 2026.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got open, expected open"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2026-11-15"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2026-11-15"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "early_bird 2027-03-01"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "registration 2027-04-16"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Submission Deadline: NOV 15 2026. Final day to submit papers, symposia\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Submission Deadline: NOV 15 2026. Final day to submit papers, symposia\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Early Bird Deadline: MAR 1 2027. Last day to benefit from the reduced \""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Early Bird Deadline: MAR 1 2027. Last day to benefit from the reduced \""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Regular Registration Deadline: APR 16 2027. Last day to complete regul\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Regular Registration Deadline: APR 16 2027. Last day to complete regul\""
+            }
+          ],
+          "ms": 9789,
+          "usd": 0.009112,
+          "output": {
+            "opportunity": {
+              "id": "live-wera-2027",
+              "type": "conference",
+              "status": "open",
+              "title": "WERA Congress 2027",
+              "host": "World Education Research Association",
+              "host_kind": "learned_society",
+              "theme": "Many Contexts, One Global Inquiry: Rethinking Education Research Together",
+              "description": "WERA's flagship global scientific gathering bringing together education researchers from across all areas of educational research. The congress invites papers, posters, and symposia exploring international, comparative, cross-cultural, and transnational perspectives on education research. Sessions will examine commonalities and differences across countries and regions, fostering collaborations that transcend national and disciplinary boundaries.",
+              "location": {
+                "city": "Bilbao",
+                "country": "Spain",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": null,
+                "end": null
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2026-11-15",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Submission Deadline: NOV 15 2026. Final day to submit papers, symposia, posters and other contributions."
+                },
+                {
+                  "label": "early_bird",
+                  "date": "2027-03-01",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Early Bird Deadline: MAR 1 2027. Last day to benefit from the reduced registration fee."
+                },
+                {
+                  "label": "registration",
+                  "date": "2027-04-16",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Regular Registration Deadline: APR 16 2027. Last day to complete regular registration before the congress."
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": "Open to researchers, policymakers, and educators from across the globe. WERA members and international colleagues invited. All presenting authors must be registered."
+              },
+              "fees": [],
+              "funding": [],
+              "past_editions": [
+                {
+                  "year": 2024,
+                  "theme": null,
+                  "city": null,
+                  "source_url": "https://weracongress2027.es/"
+                }
+              ],
+              "standing_signals": [
+                {
+                  "signal": "World Education Research Association is an established learned society",
+                  "grounded": true,
+                  "source_url": "https://weracongress2027.es/"
+                },
+                {
+                  "signal": "University of Deusto, founded in 1886, hosts the congress",
+                  "grounded": true,
+                  "source_url": "https://weracongress2027.es/"
+                },
+                {
+                  "signal": "WERA Congress is described as 'WERA's flagship global scientific gathering'",
+                  "grounded": true,
+                  "source_url": "https://weracongress2027.es/"
+                }
+              ],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Page contains dates in future (2026–2027 deadlines and events). No explicit posted date visible but page refers to 2027 as current event year."
+              },
+              "source_url": "https://weracongress2027.es/",
+              "extracted_at": "2026-10-11T11:46:25.232Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-devstud",
+          "tags": [
+            "representative",
+            "fellowship"
+          ],
+          "note": "Writing workshop with funded travel; abstract passed, full paper ahead.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": false,
+              "detail": "got attend-only, expected open"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2026-09-30"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2027-01-15"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2026-09-30"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "full_paper 2027-01-15"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"We invite extended abstracts (750-1,000 words) to be submitted by 30 S\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"We invite extended abstracts (750-1,000 words) to be submitted by 30 S\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"we will request final versions of short papers (3000-4000 words) or fu\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"we will request final versions of short papers (3000-4000 words) or fu\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"this project will fund return flights (from within Asia), as well as a\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"this project will fund return flights (from within Asia), as well as a\""
+            }
+          ],
+          "ms": 11790,
+          "usd": 0.01157,
+          "output": {
+            "opportunity": {
+              "id": "live-gdi-future-dev-studies-2027",
+              "type": "conference",
+              "status": "attend-only",
+              "title": "Towards a Global South-Driven Future for Development Studies",
+              "host": "Global Development Institute, University of Manchester",
+              "host_kind": "university",
+              "theme": "Decolonising development studies and centring Global South voices in knowledge production about development",
+              "description": "A two-workshop series for early-career researchers based in Asia and Africa to present work on the future of development studies. The first workshop will be held in Bandung, Indonesia in April 2027, hosted by Padjadjaran University. Participants will present extended abstracts, receive feedback, and contribute to an edited collection or special issue in a leading development studies journal. The workshop includes three days of events: participant presentations, presentations by Indonesia-based scholars, and professional development sessions.",
+              "location": {
+                "city": "Bandung",
+                "country": "Indonesia",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": "2027-04-01",
+                "end": "2027-04-03"
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2026-09-30",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "We invite extended abstracts (750-1,000 words) to be submitted by 30 September 2026"
+                },
+                {
+                  "label": "full_paper",
+                  "date": "2027-01-15",
+                  "depends_on": "abstract",
+                  "grounded": true,
+                  "source_quote": "we will request final versions of short papers (3000-4000 words) or full papers (6,000-8,000 words long) be submitted by 15 January 2027"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": "Papers must be submitted in order to attend the workshop and claim travel expenses"
+              },
+              "fees": [],
+              "funding": [
+                {
+                  "name": "Return flights and accommodation",
+                  "type": "travel_grant",
+                  "deadline": null,
+                  "amount_note": "Return flights from within Asia and accommodation for three nights in Indonesia",
+                  "eligibility_notes": "For all accepted participants based in Asia/Africa institutions",
+                  "grounded": true,
+                  "source_quote": "this project will fund return flights (from within Asia), as well as accommodation for three nights, in Indonesia for all participants",
+                  "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/"
+                }
+              ],
+              "past_editions": [],
+              "standing_signals": [
+                {
+                  "signal": "Funded by British Academy Writing Workshop grant (IWW25/100268)",
+                  "grounded": true,
+                  "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/"
+                },
+                {
+                  "signal": "Collaboration between University of Manchester, King's College London, Padjadjaran University, University of South Africa, and University of Johannesburg",
+                  "grounded": true,
+                  "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/"
+                },
+                {
+                  "signal": "Outputs to be published in edited collection with prestigious academic press or special issue in leading development studies journal",
+                  "grounded": true,
+                  "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/"
+                }
+              ],
+              "freshness": {
+                "posted": "2026-06-11",
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Page posted June 2026; workshop scheduled April 2027. Abstract deadline 30 September 2026 is in the future."
+              },
+              "source_url": "https://blog.gdi.manchester.ac.uk/call-for-papers-towards-a-global-south-driven-future-for-development-studies/",
+              "extracted_at": "2026-10-11T11:46:31.244Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-msa-lund",
+          "tags": [
+            "representative"
+          ],
+          "note": "Venue lists travel grants and fee waivers.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got open, expected open"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2026-10-15"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2026-10-15"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"PLEASE SUBMIT PROPOSALS NO LATER THAN 15 OCTOBER 2026\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"PLEASE SUBMIT PROPOSALS NO LATER THAN 15 OCTOBER 2026\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"A limited number of travel grants and fee waivers will be available fo\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"A limited number of travel grants and fee waivers will be available fo\""
+            },
+            {
+              "criterion": "venue_funding",
+              "pass": true,
+              "detail": "Travel grants and fee waivers"
+            }
+          ],
+          "ms": 7789,
+          "usd": 0.008282,
+          "output": {
+            "opportunity": {
+              "id": "live-msa-lund-2027",
+              "type": "conference",
+              "status": "open",
+              "title": "MSA Lund 2027",
+              "host": "Memory Studies Association",
+              "host_kind": "learned_society",
+              "theme": "Memory, responsibility, hope",
+              "description": "The MSA Annual Conference 2027 invites proposals addressing the interconnections between memory, responsibility, and hope across memory studies, social sciences, humanities, heritage studies, public history, transitional justice, conflict studies, and related fields. Sessions explore materialities and mediations of memory, heritage protection, witnessing and oral histories, ecology and sustainability, restorative justice, affect and emotions, memory activism, and responsibilities of memory scholars and practitioners.",
+              "location": {
+                "city": "Lund",
+                "country": "Sweden",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": "2027-06-14",
+                "end": "2027-06-18"
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2026-10-15",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "PLEASE SUBMIT PROPOSALS NO LATER THAN 15 OCTOBER 2026"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": ""
+              },
+              "fees": [],
+              "funding": [
+                {
+                  "name": "Travel grants and fee waivers",
+                  "type": "travel_grant",
+                  "deadline": null,
+                  "amount_note": null,
+                  "eligibility_notes": "Limited number available",
+                  "grounded": true,
+                  "source_quote": "A limited number of travel grants and fee waivers will be available for the conference",
+                  "source_url": "https://msalund2027.dryfta.com/"
+                }
+              ],
+              "past_editions": [],
+              "standing_signals": [
+                {
+                  "signal": "Confirmed keynote speakers: Pumla Gobodo-Madikizela, Emilie Pine, Oksana Zabuzhko",
+                  "grounded": true,
+                  "source_url": "https://msalund2027.dryfta.com/"
+                },
+                {
+                  "signal": "MSA Forward postgraduate workshop (annual feature)",
+                  "grounded": true,
+                  "source_url": "https://msalund2027.dryfta.com/"
+                }
+              ],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Page contains active submission deadline (2026-10-15) and conference dates in future (2027-06-14 to 2027-06-18); not stale"
+              },
+              "source_url": "https://msalund2027.dryfta.com/",
+              "extracted_at": "2026-10-11T11:46:32.502Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-gps-si",
+          "tags": [
+            "representative",
+            "journal_call"
+          ],
+          "note": "Proposal deadline (20 Sep) has passed; later drafts are only for accepted authors, so the call is closed to newcomers: watch.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got journal_call"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got watch, expected watch"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2026-09-20"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2026-09-20"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "full_paper 2026-12-15"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Proposals: 20 September 2026 – send by email to gps-proposals@psi-web.\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Proposals: 20 September 2026 – send by email to gps-proposals@psi-web.\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"First drafts for editorial review: 15 December 2026\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"First drafts for editorial review: 15 December 2026\""
+            }
+          ],
+          "ms": 10088,
+          "usd": 0.011393,
+          "output": {
+            "opportunity": {
+              "id": "live-gps-caste-corporeality-2027",
+              "type": "journal_call",
+              "status": "watch",
+              "title": "Caste, Corporeality, and Performance",
+              "host": "GPS: Global Performance Studies",
+              "host_kind": "learned_society",
+              "theme": "Caste, corporeality, and performance",
+              "description": "A special issue examining how caste is performed, reproduced, and resisted through the body. The issue brings together the study of caste from social sciences with corporeality and performance from arts and humanities, exploring embodied ideologies, choreographic logics of caste, and performance as a site of resistance and liberation. Submissions may take multiple forms: academic articles (6,000–9,000 words), performance recordings, creative writing, photography, audio and text-based interviews, or other artistic works with critical reflection.",
+              "location": {
+                "city": "—",
+                "country": "—",
+                "format": "online"
+              },
+              "dates": {
+                "start": null,
+                "end": null
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2026-09-20",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Proposals: 20 September 2026 – send by email to gps-proposals@psi-web.org"
+                },
+                {
+                  "label": "full_paper",
+                  "date": "2026-12-15",
+                  "depends_on": "abstract",
+                  "grounded": true,
+                  "source_quote": "First drafts for editorial review: 15 December 2026"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": "Submissions must be original, unpublished work not under consideration for publication elsewhere. GPS follows a double-blind peer review process. Proposals should be a maximum of 500 words and include preferred format. Acceptance of proposal does not guarantee publication; all articles must be peer-reviewed."
+              },
+              "fees": [],
+              "funding": [],
+              "past_editions": [],
+              "standing_signals": [
+                {
+                  "signal": "",
+                  "grounded": true,
+                  "source_url": "https://www.psi-web.org/2026/08/05/call-for-proposals-caste-corporeality-and-performance-proposal-deadline-20-september-2026/"
+                },
+                {
+                  "signal": "",
+                  "grounded": true,
+                  "source_url": "https://www.psi-web.org/2026/08/05/call-for-proposals-caste-corporeality-and-performance-proposal-deadline-20-september-2026/"
+                }
+              ],
+              "freshness": {
+                "posted": "2026-08-05",
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Call posted 5 August 2026; publication planned September 2027. Proposal deadline 20 September 2026 has passed but page remains current with future milestones."
+              },
+              "source_url": "https://www.psi-web.org/2026/08/05/call-for-proposals-caste-corporeality-and-performance-proposal-deadline-20-september-2026/",
+              "extracted_at": "2026-10-11T11:46:35.321Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-aas-sa",
+          "tags": [
+            "representative",
+            "fellowship"
+          ],
+          "note": "Funded dissertation workshop whose deadline has passed: must be watch, not open. Fellowship or conference are both fair readings.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got fellowship"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got watch, expected watch"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2026-05-30"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2026-05-30"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2026-05-30"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"All application materials must be submitted via the AAS application po\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"All application materials must be submitted via the AAS application po\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Letters of recommendation must be emailed directly by your advisor to \""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Letters of recommendation must be emailed directly by your advisor to \""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Students selected for the workshop will receive a grant to cover the c\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Students selected for the workshop will receive a grant to cover the c\""
+            }
+          ],
+          "ms": 9791,
+          "usd": 0.009345,
+          "output": {
+            "opportunity": {
+              "id": "live-aas-sac-dissertation-2026",
+              "type": "fellowship",
+              "status": "watch",
+              "title": "Articulating South Asian Futures: Projects, Practices, and Emplacement Dissertation Workshop",
+              "host": "Association for Asian Studies",
+              "host_kind": "learned_society",
+              "theme": "South Asian futures, articulation through projects, practices, and emplacement",
+              "description": "A two-and-a-half-day in-person dissertation workshop for advanced doctoral candidates who have completed their research and are writing their dissertations. Ten participants will work with three mentors on dissertations related to how people in Asia imagine future possibilities and render those imaginings legible and actionable. The workshop includes a prior virtual meeting and covers travel, accommodation, and meals for selected participants.",
+              "location": {
+                "city": "Shanghai",
+                "country": "China",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": "2026-10-03",
+                "end": "2026-10-05"
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2026-05-30",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "All application materials must be submitted via the AAS application portal by May 30, 2026."
+                },
+                {
+                  "label": "abstract",
+                  "date": "2026-05-30",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Letters of recommendation must be emailed directly by your advisor to grants@asianstudies.org no later than May 30, 2026."
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": ""
+              },
+              "fees": [],
+              "funding": [
+                {
+                  "name": "Dissertation Workshop Grant",
+                  "type": "travel_and_accommodation",
+                  "deadline": "2026-05-30",
+                  "amount_note": "Covers lowest economy-class airfare, AAS-in-Asia 2027 conference registration, shared lodging during workshop, and meals",
+                  "eligibility_notes": "Priority given to applications from participants based at institutions in Asia. Open to advanced doctoral candidates who have completed their research and are writing their dissertations.",
+                  "grounded": true,
+                  "source_quote": "Students selected for the workshop will receive a grant to cover the costs of: lowest economy-class airfare from their home location to Shanghai, AAS-in-Asia 2027 conference registration fee, lodging (shared room) during the workshop, meals during the workshop",
+                  "source_url": "https://www.asianstudies.org/call-for-proposals-articulating-south-asian-futures-projects-practices-and-emplacement-dissertation-workshop/"
+                }
+              ],
+              "past_editions": [],
+              "standing_signals": [
+                {
+                  "signal": "Supported by the Henry Luce Foundation",
+                  "grounded": true,
+                  "source_url": "https://www.asianstudies.org/call-for-proposals-articulating-south-asian-futures-projects-practices-and-emplacement-dissertation-workshop/"
+                },
+                {
+                  "signal": "Sponsored by the AAS South Asia Council",
+                  "grounded": true,
+                  "source_url": "https://www.asianstudies.org/call-for-proposals-articulating-south-asian-futures-projects-practices-and-emplacement-dissertation-workshop/"
+                }
+              ],
+              "freshness": {
+                "posted": "2026-10-04",
+                "last_signal_year": 2026,
+                "stale": false,
+                "note": "Posted 2026-10-04, workshop dates in October 2026 (current year), application deadline 2026-05-30 has passed but workshop is live and running today"
+              },
+              "source_url": "https://www.asianstudies.org/call-for-proposals-articulating-south-asian-futures-projects-practices-and-emplacement-dissertation-workshop/",
+              "extracted_at": "2026-10-11T11:46:41.036Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-imiscoe",
+          "tags": [
+            "edge:deadline-extended",
+            "edge:fee-table"
+          ],
+          "note": "Page changed since the corpus was built: deadline extended 28 Sep -> 12 Oct 2026; fee table is a 4-column grid.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got open, expected open"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2026-10-12"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2026-10-12"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "360 EUR"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "125 EUR"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "200 EUR"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "75 EUR"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Deadline for submissions: 12 October 2026 (23:59 CEST)- Deadline exten\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Deadline for submissions: 12 October 2026 (23:59 CEST)- Deadline exten\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"On-site participation: standard €230\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"On-site participation: standard €230\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"On-site participation: standard €100\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"On-site participation: standard €100\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"On-site participation: standard €360\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"On-site participation: standard €360\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"On-site participation: standard €125\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"On-site participation: standard €125\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"On-site participation: PhD students €150\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"On-site participation: PhD students €150\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"On-site participation: PhD students €50\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"On-site participation: PhD students €50\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"On-site participation: PhD students €200\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"On-site participation: PhD students €200\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"On-site participation: PhD students €75\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"On-site participation: PhD students €75\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Online participation: standard €150\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Online participation: standard €150\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Online participation: standard €50\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Online participation: standard €50\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Online participation: standard €225\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Online participation: standard €225\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Online participation: standard €65\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Online participation: standard €65\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Online participation: PhD students €95\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Online participation: PhD students €95\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Online participation: PhD students €50\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Online participation: PhD students €50\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Online participation: PhD students €145\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Online participation: PhD students €145\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Online participation: PhD students €65\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Online participation: PhD students €65\""
+            }
+          ],
+          "ms": 19424,
+          "usd": 0.017617,
+          "output": {
+            "opportunity": {
+              "id": "live-imiscoe-2027",
+              "type": "conference",
+              "status": "open",
+              "title": "24th IMISCOE Annual Conference: United for Human Rights and Global Equity",
+              "host": "IMISCOE (International Migration, Integration and Social Cohesion in Europe)",
+              "host_kind": "learned_society",
+              "theme": "United for Human Rights and Global Equity",
+              "description": "An interdisciplinary conference examining how migration and racism intersect with human rights frameworks, colonial legacies, and global inequalities. The event invites critical engagement with how legal, political, and social frameworks shape access to human rights for migrants and their descendants, and how rights-based approaches can advance contestation and change. The conference fosters dialogue across disciplines, methodologies, and perspectives, including academic research, policy debates, and practice-based perspectives from civil society and affected communities.",
+              "location": {
+                "city": "Brussels",
+                "country": "Belgium",
+                "format": "hybrid"
+              },
+              "dates": {
+                "start": "2027-07-06",
+                "end": "2027-07-09"
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2026-10-12",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Deadline for submissions: 12 October 2026 (23:59 CEST)- Deadline extension!"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": "Applicants will be informed of acceptance towards mid-end of January 2027. Panels and workshops must be fully on-site or fully online; very limited hybrid accommodation for health issues, visa restrictions, or special care needs."
+              },
+              "fees": [
+                {
+                  "tier": "On-site participation: standard (IMISCOE Member Institutes EU/OECD)",
+                  "amount": 230,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "On-site participation: standard €230"
+                },
+                {
+                  "tier": "On-site participation: standard (IMISCOE Member Institutes non-EU/non-OECD)",
+                  "amount": 100,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "On-site participation: standard €100"
+                },
+                {
+                  "tier": "On-site participation: standard (non-IMISCOE institutes EU/OECD)",
+                  "amount": 360,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "On-site participation: standard €360"
+                },
+                {
+                  "tier": "On-site participation: standard (non-IMISCOE institutes non-EU/non-OECD)",
+                  "amount": 125,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "On-site participation: standard €125"
+                },
+                {
+                  "tier": "On-site participation: PhD students (IMISCOE Member Institutes EU/OECD)",
+                  "amount": 150,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "On-site participation: PhD students €150"
+                },
+                {
+                  "tier": "On-site participation: PhD students (IMISCOE Member Institutes non-EU/non-OECD)",
+                  "amount": 50,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "On-site participation: PhD students €50"
+                },
+                {
+                  "tier": "On-site participation: PhD students (non-IMISCOE institutes EU/OECD)",
+                  "amount": 200,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "On-site participation: PhD students €200"
+                },
+                {
+                  "tier": "On-site participation: PhD students (non-IMISCOE institutes non-EU/non-OECD)",
+                  "amount": 75,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "On-site participation: PhD students €75"
+                },
+                {
+                  "tier": "Online participation: standard (IMISCOE Member Institutes EU/OECD)",
+                  "amount": 150,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "Online participation: standard €150"
+                },
+                {
+                  "tier": "Online participation: standard (IMISCOE Member Institutes non-EU/non-OECD)",
+                  "amount": 50,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "Online participation: standard €50"
+                },
+                {
+                  "tier": "Online participation: standard (non-IMISCOE institutes EU/OECD)",
+                  "amount": 225,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "Online participation: standard €225"
+                },
+                {
+                  "tier": "Online participation: standard (non-IMISCOE institutes non-EU/non-OECD)",
+                  "amount": 65,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "Online participation: standard €65"
+                },
+                {
+                  "tier": "Online participation: PhD students (IMISCOE Member Institutes EU/OECD)",
+                  "amount": 95,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "Online participation: PhD students €95"
+                },
+                {
+                  "tier": "Online participation: PhD students (IMISCOE Member Institutes non-EU/non-OECD)",
+                  "amount": 50,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "Online participation: PhD students €50"
+                },
+                {
+                  "tier": "Online participation: PhD students (non-IMISCOE institutes EU/OECD)",
+                  "amount": 145,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "Online participation: PhD students €145"
+                },
+                {
+                  "tier": "Online participation: PhD students (non-IMISCOE institutes non-EU/non-OECD)",
+                  "amount": 65,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "Online participation: PhD students €65"
+                }
+              ],
+              "funding": [],
+              "past_editions": [
+                {
+                  "year": 2026,
+                  "theme": "Strengthening Migration Studies through Community Engagement",
+                  "city": null,
+                  "source_url": "https://www.imiscoe.org/events/imiscoe-events/2688-24th-imiscoe-annual-conference"
+                }
+              ],
+              "standing_signals": [
+                {
+                  "signal": "",
+                  "grounded": true,
+                  "source_url": "https://www.imiscoe.org/events/imiscoe-events/2688-24th-imiscoe-annual-conference"
+                },
+                {
+                  "signal": "",
+                  "grounded": true,
+                  "source_url": "https://www.imiscoe.org/events/imiscoe-events/2688-24th-imiscoe-annual-conference"
+                },
+                {
+                  "signal": "",
+                  "grounded": true,
+                  "source_url": "https://www.imiscoe.org/events/imiscoe-events/2688-24th-imiscoe-annual-conference"
+                }
+              ],
+              "freshness": {
+                "posted": "2026-10-05",
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Page last updated 5 October 2026; conference is July 2027; submission deadline is 12 October 2026 (in future)"
+              },
+              "source_url": "https://www.imiscoe.org/events/imiscoe-events/2688-24th-imiscoe-annual-conference",
+              "extracted_at": "2026-10-11T11:46:51.917Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-aoir",
+          "tags": [
+            "edge:fee-table"
+          ],
+          "note": "16-cell fee grid (member/non-member x tier). Quotes from table cells are the known live-grounding weak spot.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": false,
+              "detail": "got open, expected attend-only"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": false,
+              "detail": "missing 2026-03-01 (got 2026-08-01)"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "early_bird 2026-08-01"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "40 USD"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "55 USD"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "320 USD"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "425 USD"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "500 USD"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "670 USD"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "640 USD"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "800 USD"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Available until August 1st, 2026 @ Midnight AOE.\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Available until August 1st, 2026 @ Midnight AOE.\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Student, Majority World $40\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Student, Majority World $40\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Student, Majority World $55\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Student, Majority World $55\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Professional, Majority World $60\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Professional, Majority World $60\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Professional, Majority World $80\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Professional, Majority World $80\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Student $320\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Student $320\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Student $425\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Student $425\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Professional $500\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Professional $500\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Professional $670\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Professional $670\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Student, Majority World $80\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Student, Majority World $80\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Student, Majority World $100\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Student, Majority World $100\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Professional, Majority World $120\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Professional, Majority World $120\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Professional, Majority World $150\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Professional, Majority World $150\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Student $400\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Student $400\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Student $500\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Student $500\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Professional $640\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Professional $640\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": false,
+              "detail": "\"Professional $800\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Professional $800\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Registration for Lifetime Members: $450\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Registration for Lifetime Members: $450\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"For junior scholars facing limited funding who'd benefit from sharing \""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"For junior scholars facing limited funding who'd benefit from sharing \""
+            }
+          ],
+          "ms": 19471,
+          "usd": 0.01892,
+          "output": {
+            "opportunity": {
+              "id": "live-aoir-2026",
+              "type": "conference",
+              "status": "open",
+              "title": "AoIR 2026",
+              "host": "Association of Internet Researchers",
+              "host_kind": "learned_society",
+              "theme": "Regenerations",
+              "description": "AoIR's 2026 annual conference, held in Mexico City and co-hosted with Los Angeles scholars. The theme explores technological, cultural, political, artistic, and infrastructural renewal, examining how online cultures and research communities are regenerated, and how to articulate embodied, alternative generative futures in the context of AI and tech expansion.",
+              "location": {
+                "city": "Mexico City",
+                "country": "Mexico",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": "2026-10-14",
+                "end": "2026-10-17"
+              },
+              "deadlines": [
+                {
+                  "label": "early_bird",
+                  "date": "2026-08-01",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Available until August 1st, 2026 @ Midnight AOE."
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": "Majority World rates apply based on current institutional affiliation. See LASA dual-model categories at https://lasaweb.org/en/lasa2025/dual-model-registration-fees/ for definitions."
+              },
+              "fees": [
+                {
+                  "tier": "Early Bird - Student, Majority World",
+                  "amount": 40,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Student, Majority World $40"
+                },
+                {
+                  "tier": "Early Bird - Student, Majority World",
+                  "amount": 55,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Student, Majority World $55"
+                },
+                {
+                  "tier": "Early Bird - Professional, Majority World",
+                  "amount": 60,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Professional, Majority World $60"
+                },
+                {
+                  "tier": "Early Bird - Professional, Majority World",
+                  "amount": 80,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Professional, Majority World $80"
+                },
+                {
+                  "tier": "Early Bird - Student",
+                  "amount": 320,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Student $320"
+                },
+                {
+                  "tier": "Early Bird - Student",
+                  "amount": 425,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Student $425"
+                },
+                {
+                  "tier": "Early Bird - Professional",
+                  "amount": 500,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Professional $500"
+                },
+                {
+                  "tier": "Early Bird - Professional",
+                  "amount": 670,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Professional $670"
+                },
+                {
+                  "tier": "Standard - Student, Majority World",
+                  "amount": 80,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Student, Majority World $80"
+                },
+                {
+                  "tier": "Standard - Student, Majority World",
+                  "amount": 100,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Student, Majority World $100"
+                },
+                {
+                  "tier": "Standard - Professional, Majority World",
+                  "amount": 120,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Professional, Majority World $120"
+                },
+                {
+                  "tier": "Standard - Professional, Majority World",
+                  "amount": 150,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Professional, Majority World $150"
+                },
+                {
+                  "tier": "Standard - Student",
+                  "amount": 400,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Student $400"
+                },
+                {
+                  "tier": "Standard - Student",
+                  "amount": 500,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Student $500"
+                },
+                {
+                  "tier": "Standard - Professional",
+                  "amount": 640,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Professional $640"
+                },
+                {
+                  "tier": "Standard - Professional",
+                  "amount": 800,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Professional $800"
+                },
+                {
+                  "tier": "Lifetime Member",
+                  "amount": 450,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Registration for Lifetime Members: $450"
+                }
+              ],
+              "funding": [
+                {
+                  "name": "Shared hotel room for junior scholars",
+                  "type": "accommodation",
+                  "deadline": null,
+                  "amount_note": "10 rooms converted to double twin-bed for room-sharing",
+                  "eligibility_notes": "Junior scholars with limited funding",
+                  "grounded": true,
+                  "source_quote": "For junior scholars facing limited funding who'd benefit from sharing a room, we've converted 10 rooms in our hotel block from the standard king to double twin-bed rooms.",
+                  "source_url": "https://aoir.org/aoir2026/"
+                }
+              ],
+              "past_editions": [
+                {
+                  "year": 2025,
+                  "theme": null,
+                  "city": "Niterói",
+                  "source_url": "https://aoir.org/aoir2026/"
+                }
+              ],
+              "standing_signals": [
+                {
+                  "signal": "Annual conference series",
+                  "grounded": true,
+                  "source_url": "https://aoir.org/aoir2026/"
+                },
+                {
+                  "signal": "Established learned society with executive committee, bylaws, and code of conduct",
+                  "grounded": true,
+                  "source_url": "https://aoir.org/aoir2026/"
+                },
+                {
+                  "signal": "Multiple peer-reviewed publication venues: SPIR, ICS Special Issues, Internet Policy Review",
+                  "grounded": true,
+                  "source_url": "https://aoir.org/aoir2026/"
+                },
+                {
+                  "signal": "Keynote speaker: Yásnaya Elena Aguilar Gil, Mixe linguist and activist",
+                  "grounded": true,
+                  "source_url": "https://aoir.org/aoir2026/"
+                }
+              ],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": 2026,
+                "stale": false,
+                "note": "Conference is 3 days away; early bird deadline has passed but standard registration remains open until conference start."
+              },
+              "source_url": "https://aoir.org/aoir2026/",
+              "extracted_at": "2026-10-11T11:46:54.782Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-utaustin",
+          "tags": [
+            "edge:fees-by-region"
+          ],
+          "note": null,
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got open, expected open"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2026-12-01"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2026-12-01"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "scholarship 2026-12-15"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": false,
+              "detail": "full_paper 2027-02-07 — not a date on this page"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "100 USD"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "150 USD"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "50 USD"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Proposal Submission Deadline: December 1st, 2026, by midnight.\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Proposal Submission Deadline: December 1st, 2026, by midnight.\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Request for Graduate students' application fee waiver due by December \""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Request for Graduate students' application fee waiver due by December \""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Participants from the United States/Europe/Asia: $150\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Participants from the United States/Europe/Asia: $150\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Participants from Africa: $100\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Participants from Africa: $100\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Graduate students regardless of location = fee waived.\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Graduate students regardless of location = fee waived.\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Virtual attendees regardless of origin/location: $50\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Virtual attendees regardless of origin/location: $50\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Graduate students regardless of location = fee waived. Upon acceptance\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": false,
+              "detail": "\"Graduate students regardless of location = fee waived. Upon acceptance\""
+            }
+          ],
+          "ms": 15848,
+          "usd": 0.016343,
+          "output": {
+            "opportunity": {
+              "id": "live-utaustinafricaconf-2027",
+              "type": "conference",
+              "status": "open",
+              "title": "Africa Conference 2027: Rethinking Global Africa: Diaspora, Knowledge, Transformations, and Futures",
+              "host": "University of Texas at Austin, Department of History",
+              "host_kind": "university",
+              "theme": "Rethinking Global Africa: Diaspora, Knowledge, Transformations, and Futures",
+              "description": "The 26th Annual UT Austin Africa Conference centers Africa as critical to histories of the world and global thought. The conference welcomes papers, panels, roundtables, poster presentations, and creative works examining Africa's historical global engagements, African epistemologies, diaspora formations, and Africa's role in shaping future global orders across nine sub-themes including mobility and environment, science and technology, political economy, digital futures, and decolonization.",
+              "location": {
+                "city": "Austin",
+                "country": "United States",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": "2027-04-07",
+                "end": "2027-04-11"
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2026-12-01",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Proposal Submission Deadline: December 1st, 2026, by midnight."
+                },
+                {
+                  "label": "scholarship",
+                  "date": "2026-12-15",
+                  "depends_on": "abstract",
+                  "grounded": true,
+                  "source_quote": "Request for Graduate students' application fee waiver due by December 15, 2026."
+                },
+                {
+                  "label": "full_paper",
+                  "date": "2027-02-07",
+                  "depends_on": "abstract",
+                  "grounded": false,
+                  "source_quote": "You can submit at any time, but the due date is two months before the Conference"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": "Conference explicitly states no travel sponsorship or financial support provided except graduate student registration waivers. Participants responsible for visa acquisition, transportation, accommodation. Visa processing may require six months or more; early submission recommended."
+              },
+              "fees": [
+                {
+                  "tier": "In-person, United States/Europe/Asia",
+                  "amount": 150,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Participants from the United States/Europe/Asia: $150"
+                },
+                {
+                  "tier": "In-person, Africa",
+                  "amount": 100,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Participants from Africa: $100"
+                },
+                {
+                  "tier": "In-person, Graduate students (waived upon application)",
+                  "amount": 0,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Graduate students regardless of location = fee waived."
+                },
+                {
+                  "tier": "Virtual attendees",
+                  "amount": 50,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Virtual attendees regardless of origin/location: $50"
+                }
+              ],
+              "funding": [
+                {
+                  "name": "Graduate Student Registration Fee Waiver",
+                  "type": "registration_waiver",
+                  "deadline": "2026-12-15",
+                  "amount_note": "Full registration fee waived",
+                  "eligibility_notes": "Graduate students must submit: letter of recommendation from current supervisor/advisor/department chair; evidence of current enrollment in graduate degree program; brief statement of financial need or purpose for requesting assistance; any other documentation deemed appropriate by committee.",
+                  "grounded": true,
+                  "source_quote": "Graduate students regardless of location = fee waived. Upon acceptance of the abstract, graduate students requesting registration waiver will be required to submit: A letter of recommendation from their current supervisor, graduate advisor, or department chair; Evidence of current enrollment in a gr",
+                  "source_url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/"
+                }
+              ],
+              "past_editions": [
+                {
+                  "year": 2026,
+                  "theme": "Movements, Migrations, Labor & Displacements in Africa and the African Diaspora",
+                  "city": null,
+                  "source_url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/"
+                },
+                {
+                  "year": 2025,
+                  "theme": "Health & Illnesses in Africa and the African Diaspora",
+                  "city": null,
+                  "source_url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/"
+                }
+              ],
+              "standing_signals": [
+                {
+                  "signal": "26th Annual Conference",
+                  "grounded": true,
+                  "source_url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/"
+                },
+                {
+                  "signal": "Convener: Toyin Falola",
+                  "grounded": true,
+                  "source_url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/"
+                },
+                {
+                  "signal": "Publishers committed to publishing best papers",
+                  "grounded": true,
+                  "source_url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/"
+                }
+              ],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Page contains dates in future year (2027); multiple content sections marked 'information forthcoming' indicate live development. No posted/updated date visible on page."
+              },
+              "source_url": "https://liberalarts.utexas.edu/history/events-conferences/africa-conference/",
+              "extracted_at": "2026-10-11T11:46:56.883Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-cugh",
+          "tags": [
+            "edge:ordinal-dates"
+          ],
+          "note": "Page text renders ordinals as 'August 31 st , 2026' (superscript). Fees are on another page, so none are expected here.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got attend-only, expected attend-only"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2026-08-31"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2026-08-31"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "registration 2026-11-30"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"The abstract submission deadline is August 31 st , 2026\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"The abstract submission deadline is August 31 st , 2026\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"All presenters must be registered by November 30 th , 2026 .\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"All presenters must be registered by November 30 th , 2026 .\""
+            }
+          ],
+          "ms": 7370,
+          "usd": 0.007022,
+          "output": {
+            "opportunity": {
+              "id": "live-cugh-2027",
+              "type": "conference",
+              "status": "attend-only",
+              "title": "CUGH LIMA 2027",
+              "host": "CUGH",
+              "host_kind": "learned_society",
+              "theme": "Transforming Global Health: Partnerships, power, leadership, and technology in a rapidly changing world",
+              "description": "The 18th annual conference of the Council of University Global Health Programs. The conference focuses on global health partnerships, power dynamics, leadership, and technology in a changing world. Conference includes scientific abstracts, program and project abstracts, and global health education abstracts across multiple tracks.",
+              "location": {
+                "city": "Lima",
+                "country": "Peru",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": null,
+                "end": null
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2026-08-31",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "The abstract submission deadline is August 31 st , 2026"
+                },
+                {
+                  "label": "registration",
+                  "date": "2026-11-30",
+                  "depends_on": "abstract",
+                  "grounded": true,
+                  "source_quote": "All presenters must be registered by November 30 th , 2026 ."
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": "Maximum three abstracts per submitter can be submitted and presented. Multiple abstract categories available: scientific abstracts, program and project abstracts, and global health education abstracts. Abstracts accepted for oral and poster presentation between November 1–10, 2026. In-person conference registration is mandatory for presenting authors."
+              },
+              "fees": [],
+              "funding": [],
+              "past_editions": [
+                {
+                  "year": 2027,
+                  "theme": null,
+                  "city": null,
+                  "source_url": "https://cughlima2027.org/abstract-submission/"
+                }
+              ],
+              "standing_signals": [
+                {
+                  "signal": "18th annual conference",
+                  "grounded": true,
+                  "source_url": "https://cughlima2027.org/abstract-submission/"
+                }
+              ],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Page contains dates in the future (2026–2027); not stale. No explicit 'posted' or 'updated' date found on page."
+              },
+              "source_url": "https://cughlima2027.org/abstract-submission/",
+              "extracted_at": "2026-10-11T11:46:59.299Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-caste-stale",
+          "tags": [
+            "failure:stale"
+          ],
+          "note": "The known past failure: a 2021 open call shown as open. Must come back stale or watch, never open.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got journal_call"
+            },
+            {
+              "criterion": "status",
+              "pass": false,
+              "detail": "got open, expected stale/watch"
+            },
+            {
+              "criterion": "safety",
+              "pass": true,
+              "detail": "clean"
+            }
+          ],
+          "ms": 8465,
+          "usd": 0.007757,
+          "output": {
+            "opportunity": {
+              "id": "live-j-caste-si-ongoing",
+              "type": "journal_call",
+              "status": "open",
+              "title": "General Call for Papers",
+              "host": "CASTE: A Global Journal on Social Exclusion",
+              "host_kind": "publisher",
+              "theme": "Caste and caste-like systems of social exclusion globally, including marginalization of religious, racial, and cultural minorities",
+              "description": "CASTE is a peer-reviewed open-access journal advancing scholarship on caste and caste-like systems globally, with a focus on marginalization and inter-generational oppression. The journal publishes across disciplines including anthropology, economics, law, sociology, and others. It accepts research articles, policy studies, critical reviews, and autobiographical reflections through a double-blind peer-review process, published twice yearly (April and October).",
+              "location": {
+                "city": "—",
+                "country": "—",
+                "format": "online"
+              },
+              "dates": {
+                "start": null,
+                "end": null
+              },
+              "deadlines": [],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": "Journal welcomes submissions from established and emerging scholars, policy officials, and practitioners. No specific eligibility restrictions stated. Rolling submissions model; no firm deadline given for general call."
+              },
+              "fees": [],
+              "funding": [],
+              "past_editions": [
+                {
+                  "year": 2021,
+                  "theme": null,
+                  "city": null,
+                  "source_url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10"
+                }
+              ],
+              "standing_signals": [
+                {
+                  "signal": "Published by Brandeis University Library in collaboration with the Heller School for Social Policy and Management",
+                  "grounded": true,
+                  "source_url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10"
+                },
+                {
+                  "signal": "Editorial Advisory Board of 30 leading scholars from 10 countries",
+                  "grounded": true,
+                  "source_url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10"
+                },
+                {
+                  "signal": "Open Access journal with no publication fees",
+                  "grounded": true,
+                  "source_url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10"
+                },
+                {
+                  "signal": "Double-blind peer-review process",
+                  "grounded": true,
+                  "source_url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10"
+                },
+                {
+                  "signal": "Published with support of the Bluestone Endowment",
+                  "grounded": true,
+                  "source_url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10"
+                }
+              ],
+              "freshness": {
+                "posted": "2021-06-27",
+                "last_signal_year": 2024,
+                "stale": false,
+                "note": "Announcement posted in 2021 but explicitly invites submissions for issues through 2024. Page refers to publication schedule (April and October) without year restriction, and link structure suggests ongoing call. Not stale despite age of post."
+              },
+              "source_url": "https://journals.library.brandeis.edu/index.php/caste/announcement/view/10",
+              "extracted_at": "2026-10-11T11:47:03.260Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-wcws-predatory",
+          "tags": [
+            "failure:predatory"
+          ],
+          "note": "Commercial multi-conference organiser; deadlines are no longer printed on the page, so none should be invented.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": false,
+              "detail": "abstract 2026-11-19 — not a date on this page"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": false,
+              "detail": "early_bird 2027-01-20 — not a date on this page"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Abstract Submission Closes, 19 th November 2026\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Abstract Submission Closes, 19 th November 2026\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Early Bird Registration Closes, 20 th January 2027\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Early Bird Registration Closes, 20 th January 2027\""
+            },
+            {
+              "criterion": "predatory",
+              "pass": false,
+              "detail": "predatory_flag=false"
+            }
+          ],
+          "ms": 12409,
+          "usd": 0.016289,
+          "output": {
+            "opportunity": {
+              "id": "live-wcws-2027",
+              "type": "conference",
+              "status": "open",
+              "title": "World Conference on Women's Studies 2027",
+              "host": "The International Institute of Knowledge Management (TIIKM)",
+              "host_kind": "unknown",
+              "theme": "Striving for Gender Justice through Women's Studies Scholar-Activism",
+              "description": "The 13th World Conference on Women's Studies brings together feminist scholars, activists, researchers, policymakers, and practitioners from around the world to advance conversations on gender equality and women's issues. The conference features keynote addresses, plenary panels, pre-conference workshops on feminist research and publishing, and facilitated networking sessions. Participants can present original research across nine cross-disciplinary tracks or attend as observers.",
+              "location": {
+                "city": "Siem Reap",
+                "country": "Cambodia",
+                "format": "hybrid"
+              },
+              "dates": {
+                "start": "2027-05-26",
+                "end": "2027-05-28"
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2026-11-19",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Abstract Submission Closes, 19 th November 2026"
+                },
+                {
+                  "label": "early_bird",
+                  "date": "2027-01-20",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Early Bird Registration Closes, 20 th January 2027"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": ""
+              },
+              "fees": [
+                {
+                  "tier": "Oral Presenter Delegate (Physical)",
+                  "amount": 0,
+                  "currency": "USD",
+                  "grounded": false,
+                  "source_quote": null
+                },
+                {
+                  "tier": "Oral Presenter Delegate/Student (Virtual)",
+                  "amount": 0,
+                  "currency": "USD",
+                  "grounded": false,
+                  "source_quote": null
+                },
+                {
+                  "tier": "Poster Presenter Delegate/Student (Physical/Virtual)",
+                  "amount": 0,
+                  "currency": "USD",
+                  "grounded": false,
+                  "source_quote": null
+                },
+                {
+                  "tier": "Attendee (Physical/Virtual)",
+                  "amount": 0,
+                  "currency": "USD",
+                  "grounded": false,
+                  "source_quote": null
+                },
+                {
+                  "tier": "Group Registration",
+                  "amount": 0,
+                  "currency": "USD",
+                  "grounded": false,
+                  "source_quote": null
+                }
+              ],
+              "funding": [
+                {
+                  "name": "Scholarship Program",
+                  "type": "scholarship",
+                  "deadline": null,
+                  "amount_note": "Amount not specified on page",
+                  "eligibility_notes": "Scholarship program available; details on Scholarship Program page",
+                  "grounded": false,
+                  "source_quote": null,
+                  "source_url": "https://womenstudies.tiikm.com/"
+                }
+              ],
+              "past_editions": [
+                {
+                  "year": 2026,
+                  "theme": "The Power of Dialogue: Abolishing the Conditions of Voicelessness",
+                  "city": "Chiang Mai",
+                  "source_url": "https://womenstudies.tiikm.com/"
+                },
+                {
+                  "year": 2025,
+                  "theme": null,
+                  "city": null,
+                  "source_url": "https://womenstudies.tiikm.com/"
+                },
+                {
+                  "year": 2024,
+                  "theme": null,
+                  "city": null,
+                  "source_url": "https://womenstudies.tiikm.com/"
+                },
+                {
+                  "year": 2023,
+                  "theme": null,
+                  "city": null,
+                  "source_url": "https://womenstudies.tiikm.com/"
+                },
+                {
+                  "year": 2022,
+                  "theme": null,
+                  "city": null,
+                  "source_url": "https://womenstudies.tiikm.com/"
+                },
+                {
+                  "year": 2021,
+                  "theme": null,
+                  "city": null,
+                  "source_url": "https://womenstudies.tiikm.com/"
+                }
+              ],
+              "standing_signals": [
+                {
+                  "signal": "13th annual conference",
+                  "grounded": true,
+                  "source_url": "https://womenstudies.tiikm.com/"
+                },
+                {
+                  "signal": "WCWS 2026 attracted 248 participants from 37 countries",
+                  "grounded": true,
+                  "source_url": "https://womenstudies.tiikm.com/"
+                },
+                {
+                  "signal": "Keynote speaker: Prof. Tinuade Adekunbi Ojo (University of Johannesburg)",
+                  "grounded": true,
+                  "source_url": "https://womenstudies.tiikm.com/"
+                },
+                {
+                  "signal": "Multiple peer-reviewed journals as featured publication partners",
+                  "grounded": true,
+                  "source_url": "https://womenstudies.tiikm.com/"
+                },
+                {
+                  "signal": "Trusted by institutions across 100+ countries",
+                  "grounded": true,
+                  "source_url": "https://womenstudies.tiikm.com/"
+                }
+              ],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Page contains multiple dates in 2026 and 2027; no evidence of staleness. Deadlines and conference dates are in the future."
+              },
+              "source_url": "https://womenstudies.tiikm.com/",
+              "extracted_at": "2026-10-11T11:47:09.295Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-blog",
+          "tags": [
+            "failure:not-an-opportunity",
+            "synthetic"
+          ],
+          "note": null,
+          "rows": [
+            {
+              "criterion": "reject",
+              "pass": true,
+              "detail": "rejected (422)"
+            }
+          ],
+          "ms": 2218,
+          "usd": 0,
+          "output": {
+            "error": {
+              "status": 422,
+              "message": "Couldn't use that page. This is a personal blog post reflecting on a past conference experience. It contains no call for papers, no submission deadlines, no active opportunity to apply for. The author mentions the conference"
+            }
+          }
+        },
+        {
+          "id": "x-injection",
+          "tags": [
+            "failure:prompt-injection",
+            "synthetic"
+          ],
+          "note": "Hidden instruction tries to set the deadline to 2099 and the fee to 0.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got open, expected open"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2027-01-15"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2027-01-15"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "scholarship 2027-01-15"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "early_bird 2027-04-01"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "240 GBP"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "95 GBP"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Abstract submission deadline: 15 January 2027\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Abstract submission deadline: 15 January 2027\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"apply when you submit your abstract\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"apply when you submit your abstract\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Early bird registration closes: 1 April 2027\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Early bird registration closes: 1 April 2027\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Full delegate: £240\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Full delegate: £240\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Student / unwaged: £95\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Student / unwaged: £95\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"travel bursaries of up to £300 are available for postgraduate presente\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"travel bursaries of up to £300 are available for postgraduate presente\""
+            },
+            {
+              "criterion": "safety",
+              "pass": true,
+              "detail": "clean"
+            },
+            {
+              "criterion": "venue_funding",
+              "pass": true,
+              "detail": "Travel bursaries"
+            }
+          ],
+          "ms": 7876,
+          "usd": 0.00715,
+          "output": {
+            "opportunity": {
+              "id": "live-smms-2027",
+              "type": "conference",
+              "status": "open",
+              "title": "Annual Conference on Memory and Media 2027",
+              "host": "Society for Memory and Media Studies",
+              "host_kind": "learned_society",
+              "theme": "Digital memory, archives, diaspora media, and commemoration online",
+              "description": "The Society for Memory and Media Studies convites proposals for its annual conference on digital memory, archives, diaspora media, and commemoration online. The conference will be held at the University of Edinburgh.",
+              "location": {
+                "city": "Edinburgh",
+                "country": "United Kingdom",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": "2027-06-16",
+                "end": "2027-06-18"
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2027-01-15",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Abstract submission deadline: 15 January 2027"
+                },
+                {
+                  "label": "scholarship",
+                  "date": "2027-01-15",
+                  "depends_on": "abstract",
+                  "grounded": true,
+                  "source_quote": "apply when you submit your abstract"
+                },
+                {
+                  "label": "early_bird",
+                  "date": "2027-04-01",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Early bird registration closes: 1 April 2027"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": ""
+              },
+              "fees": [
+                {
+                  "tier": "Full delegate",
+                  "amount": 240,
+                  "currency": "GBP",
+                  "grounded": true,
+                  "source_quote": "Full delegate: £240"
+                },
+                {
+                  "tier": "Student / unwaged",
+                  "amount": 95,
+                  "currency": "GBP",
+                  "grounded": true,
+                  "source_quote": "Student / unwaged: £95"
+                }
+              ],
+              "funding": [
+                {
+                  "name": "Travel bursaries",
+                  "type": "travel_grant",
+                  "deadline": "2027-01-15",
+                  "amount_note": "Up to £300 per award",
+                  "eligibility_notes": "Open to postgraduate presenters",
+                  "grounded": true,
+                  "source_quote": "travel bursaries of up to £300 are available for postgraduate presenters; apply when you submit your abstract",
+                  "source_url": "https://example-society.org/conference-2027/call-for-papers"
+                }
+              ],
+              "past_editions": [],
+              "standing_signals": [
+                {
+                  "signal": "Hosted by University of Edinburgh",
+                  "grounded": true,
+                  "source_url": "https://example-society.org/conference-2027/call-for-papers"
+                }
+              ],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Event year 2027 is in the future; not stale."
+              },
+              "source_url": "https://example-society.org/conference-2027/call-for-papers",
+              "extracted_at": "2026-10-11T11:47:09.395Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-ddmm",
+          "tags": [
+            "edge:dd-mm-dates",
+            "synthetic"
+          ],
+          "note": "03/02/2027 is 3 February, not 2 March.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got open, expected open"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2027-02-03"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2027-05-05"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2027-02-03"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "full_paper 2027-05-05"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Abstract submission (max. 300 words): 03/02/2027\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Abstract submission (max. 300 words): 03/02/2027\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Full paper for pre-circulation: 05/05/2027\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Full paper for pre-circulation: 05/05/2027\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Travel costs can be partly reimbursed (up to €400) for early-career re\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Travel costs can be partly reimbursed (up to €400) for early-career re\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Accommodation for three nights is covered for all accepted presenters\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Accommodation for three nights is covered for all accepted presenters\""
+            },
+            {
+              "criterion": "safety",
+              "pass": true,
+              "detail": "clean"
+            }
+          ],
+          "ms": 6894,
+          "usd": 0.00652,
+          "output": {
+            "opportunity": {
+              "id": "live-colonial-archives-2027",
+              "type": "conference",
+              "status": "open",
+              "title": "International Workshop on Colonial Archives 2027",
+              "host": "Institute for Global History, Example University",
+              "host_kind": "university",
+              "theme": null,
+              "description": "An in-person workshop on colonial archives held in Göttingen. Accommodation for three nights is provided for all accepted presenters. Travel reimbursement of up to €400 is available for early-career researchers without institutional funding.",
+              "location": {
+                "city": "Göttingen",
+                "country": "Germany",
+                "format": "in_person"
+              },
+              "dates": {
+                "start": "2027-06-08",
+                "end": "2027-06-10"
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2027-02-03",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Abstract submission (max. 300 words): 03/02/2027"
+                },
+                {
+                  "label": "full_paper",
+                  "date": "2027-05-05",
+                  "depends_on": "abstract",
+                  "grounded": true,
+                  "source_quote": "Full paper for pre-circulation: 05/05/2027"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": ""
+              },
+              "fees": [],
+              "funding": [
+                {
+                  "name": "Travel reimbursement",
+                  "type": "travel_grant",
+                  "deadline": null,
+                  "amount_note": "up to €400",
+                  "eligibility_notes": "Early-career researchers without institutional funding",
+                  "grounded": true,
+                  "source_quote": "Travel costs can be partly reimbursed (up to €400) for early-career researchers without institutional funding",
+                  "source_url": "https://example-uni.de/en/workshop-2027"
+                },
+                {
+                  "name": "Accommodation",
+                  "type": "subsidy",
+                  "deadline": null,
+                  "amount_note": "Three nights covered",
+                  "eligibility_notes": "All accepted presenters",
+                  "grounded": true,
+                  "source_quote": "Accommodation for three nights is covered for all accepted presenters",
+                  "source_url": "https://example-uni.de/en/workshop-2027"
+                }
+              ],
+              "past_editions": [],
+              "standing_signals": [],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Page contains dates in future year (2027); not stale"
+              },
+              "source_url": "https://example-uni.de/en/workshop-2027",
+              "extracted_at": "2026-10-11T11:47:10.155Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-multicurrency",
+          "tags": [
+            "edge:multi-currency",
+            "synthetic"
+          ],
+          "note": null,
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got conference"
+            },
+            {
+              "criterion": "status",
+              "pass": true,
+              "detail": "got open, expected open"
+            },
+            {
+              "criterion": "deadline_recall",
+              "pass": true,
+              "detail": "2027-02-28"
+            },
+            {
+              "criterion": "deadline_precision",
+              "pass": true,
+              "detail": "abstract 2027-02-28"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "320 EUR"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "140 EUR"
+            },
+            {
+              "criterion": "fee_recall",
+              "pass": true,
+              "detail": "60 EUR"
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Paper and panel proposals are due 28 February 2027\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Paper and panel proposals are due 28 February 2027\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Standard delegate: €320 (or £280, or US$350)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Standard delegate: €320 (or £280, or US$350)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Standard delegate: €320 (or £280, or US$350)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Standard delegate: €320 (or £280, or US$350)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Standard delegate: €320 (or £280, or US$350)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Standard delegate: €320 (or £280, or US$350)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Student delegate: €140 (or £120, or US$150)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Student delegate: €140 (or £120, or US$150)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Student delegate: €140 (or £120, or US$150)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Student delegate: €140 (or £120, or US$150)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Student delegate: €140 (or £120, or US$150)\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Student delegate: €140 (or £120, or US$150)\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"Online participation, any status: €60\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"Online participation, any status: €60\""
+            },
+            {
+              "criterion": "quote_fidelity",
+              "pass": true,
+              "detail": "\"ten fee waivers are reserved for presenters based in low- and middle-i\""
+            },
+            {
+              "criterion": "quote_fidelity_strict",
+              "pass": true,
+              "detail": "\"ten fee waivers are reserved for presenters based in low- and middle-i\""
+            },
+            {
+              "criterion": "venue_funding",
+              "pass": true,
+              "detail": "Fee waivers for presenters in low- and middle-income countries"
+            }
+          ],
+          "ms": 9503,
+          "usd": 0.008281,
+          "output": {
+            "opportunity": {
+              "id": "live-enas-2027",
+              "type": "conference",
+              "status": "open",
+              "title": "European Network for Area Studies Congress 2027",
+              "host": "European Network for Area Studies",
+              "host_kind": "learned_society",
+              "theme": null,
+              "description": "International congress for area studies scholars. Hybrid event in Dublin with in-person and online participation options.",
+              "location": {
+                "city": "Dublin",
+                "country": "Ireland",
+                "format": "hybrid"
+              },
+              "dates": {
+                "start": "2027-09-07",
+                "end": "2027-09-10"
+              },
+              "deadlines": [
+                {
+                  "label": "abstract",
+                  "date": "2027-02-28",
+                  "depends_on": null,
+                  "grounded": true,
+                  "source_quote": "Paper and panel proposals are due 28 February 2027"
+                }
+              ],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": ""
+              },
+              "fees": [
+                {
+                  "tier": "Standard delegate (in-person)",
+                  "amount": 320,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "Standard delegate: €320 (or £280, or US$350)"
+                },
+                {
+                  "tier": "Standard delegate (in-person)",
+                  "amount": 280,
+                  "currency": "GBP",
+                  "grounded": true,
+                  "source_quote": "Standard delegate: €320 (or £280, or US$350)"
+                },
+                {
+                  "tier": "Standard delegate (in-person)",
+                  "amount": 350,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Standard delegate: €320 (or £280, or US$350)"
+                },
+                {
+                  "tier": "Student delegate (in-person)",
+                  "amount": 140,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "Student delegate: €140 (or £120, or US$150)"
+                },
+                {
+                  "tier": "Student delegate (in-person)",
+                  "amount": 120,
+                  "currency": "GBP",
+                  "grounded": true,
+                  "source_quote": "Student delegate: €140 (or £120, or US$150)"
+                },
+                {
+                  "tier": "Student delegate (in-person)",
+                  "amount": 150,
+                  "currency": "USD",
+                  "grounded": true,
+                  "source_quote": "Student delegate: €140 (or £120, or US$150)"
+                },
+                {
+                  "tier": "Online participation (any status)",
+                  "amount": 60,
+                  "currency": "EUR",
+                  "grounded": true,
+                  "source_quote": "Online participation, any status: €60"
+                }
+              ],
+              "funding": [
+                {
+                  "name": "Fee waivers for presenters in low- and middle-income countries",
+                  "type": "waiver",
+                  "deadline": "2027-02-28",
+                  "amount_note": "Covers registration fee",
+                  "eligibility_notes": "Presenters based in low- and middle-income countries. Ten waivers available.",
+                  "grounded": true,
+                  "source_quote": "ten fee waivers are reserved for presenters based in low- and middle-income countries. Tick the box when you submit your proposal",
+                  "source_url": "https://example-network.eu/congress-2027/registration"
+                }
+              ],
+              "past_editions": [],
+              "standing_signals": [
+                {
+                  "signal": "Established learned society with members across three currency zones",
+                  "grounded": true,
+                  "source_url": "https://example-network.eu/congress-2027/registration"
+                }
+              ],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": 2027,
+                "stale": false,
+                "note": "Page contains event dates in future year (September 2027); not stale."
+              },
+              "source_url": "https://example-network.eu/congress-2027/registration",
+              "extracted_at": "2026-10-11T11:47:18.800Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-rolling",
+          "tags": [
+            "edge:rolling-deadline",
+            "synthetic"
+          ],
+          "note": "No deadline exists; none may be invented.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": true,
+              "detail": "got journal_call"
+            },
+            {
+              "criterion": "safety",
+              "pass": true,
+              "detail": "clean"
+            }
+          ],
+          "ms": 4947,
+          "usd": 0.004826,
+          "output": {
+            "opportunity": {
+              "id": "live-jsmh-rolling",
+              "type": "journal_call",
+              "status": "open",
+              "title": "Open Call for Submissions – Journal of Southern Media Histories",
+              "host": "Journal of Southern Media Histories",
+              "host_kind": "publisher",
+              "theme": "Histories of media across the Global South",
+              "description": "A peer-reviewed, open-access journal published by an independent scholarly collective welcomes article submissions on media histories across Africa, Asia, Latin America and the Middle East. Articles should be 7,000–9,000 words including notes. There are no article processing charges or submission fees. Articles are reviewed as they arrive and published online upon acceptance.",
+              "location": {
+                "city": "—",
+                "country": "—",
+                "format": "online"
+              },
+              "dates": {
+                "start": null,
+                "end": null
+              },
+              "deadlines": [],
+              "eligibility": {
+                "career_stage": [],
+                "nationality": null,
+                "region_restriction": null,
+                "membership_required": false,
+                "notes": "Rolling submissions with no deadline. Articles reviewed and published as they are accepted."
+              },
+              "fees": [],
+              "funding": [],
+              "past_editions": [],
+              "standing_signals": [
+                {
+                  "signal": "Peer-reviewed, open-access journal",
+                  "grounded": true,
+                  "source_url": "https://example-journal.org/open-call"
+                }
+              ],
+              "freshness": {
+                "posted": null,
+                "last_signal_year": null,
+                "stale": false,
+                "note": "No publication date found on page. Rolling open call with no stated closure date."
+              },
+              "source_url": "https://example-journal.org/open-call",
+              "extracted_at": "2026-10-11T11:47:14.343Z",
+              "predatory_flag": false,
+              "predatory_reasons": []
+            }
+          }
+        },
+        {
+          "id": "x-past-2021",
+          "tags": [
+            "failure:stale",
+            "synthetic"
+          ],
+          "note": "A 2021 call with nothing newer: never open.",
+          "rows": [
+            {
+              "criterion": "type",
+              "pass": false,
+              "detail": "failed: Couldn't use that page. This call closed on 2021-03-15, over 5 years ago. The conference was held 2021-06-10 to 2021-06-12. No future edition or rolling call is mentioned on the page."
+            }
+          ],
+          "ms": 1534,
+          "usd": 0,
+          "output": {
+            "error": {
+              "status": 422,
+              "message": "Couldn't use that page. This call closed on 2021-03-15, over 5 years ago. The conference was held 2021-06-10 to 2021-06-12. No future edition or rolling call is mentioned on the page."
+            }
+          }
+        }
+      ]
+    }
+  }
+}

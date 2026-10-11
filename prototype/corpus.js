@@ -748,7 +748,7 @@ export const EXAMPLES = [
     },
     "venue_funding": [],
     "priority": {
-     "score": 88,
+     "score": 40,
      "weights": {
       "fit": 0.3182,
       "standing": 0.2273,
@@ -789,6 +789,7 @@ export const EXAMPLES = [
      "No publication fee, so there's no cost barrier to submitting."
     ],
     "watch_out": [
+     "This call looks out of date: the page was posted in 2021 and invites papers for issues through 2024. Check it is still open before spending time on it.",
      "The call is open-ended with no stated deadline or turnaround time, so plan for an unclear review timeline."
     ],
     "tagline": "A direct, free, no-travel home for your caste research.",
@@ -1052,7 +1053,7 @@ export const EXAMPLES = [
    {
     "id": "ecsas-2027",
     "type": "conference",
-    "status": "open",
+    "status": "attend-only",
     "title": "29th European Conference on South Asian Studies (ECSAS 2027)",
     "host": "European Association for South Asian Studies (EASAS)",
     "host_kind": "learned_society",
@@ -1237,7 +1238,7 @@ export const EXAMPLES = [
    {
     "id": "gps-caste-corporeality-si",
     "type": "journal_call",
-    "status": "open",
+    "status": "watch",
     "title": "Call for Proposals: Caste, Corporeality, and Performance (GPS: Global Performance Studies Special Issue)",
     "host": "GPS: Global Performance Studies",
     "host_kind": "publisher",
@@ -2421,7 +2422,7 @@ export const EXAMPLES = [
    {
     "id": "samcs-2027",
     "type": "conference",
-    "status": "open",
+    "status": "attend-only",
     "title": "13th South Asian Media and Cultural Studies Conference",
     "host": "Florida State University",
     "host_kind": "university",
@@ -4256,7 +4257,7 @@ export const EXAMPLES = [
    {
     "id": "imiscoe-2027",
     "type": "conference",
-    "status": "open",
+    "status": "attend-only",
     "title": "24th IMISCOE Annual Conference",
     "host": "IMISCOE / Brussels Institute for Social and Population Studies (BRISPO) and Brussels Interdisciplinary Research Centre on Migration and Minorities (BIRMM), Vrije Universiteit Brussel",
     "host_kind": "learned_society",
@@ -5071,7 +5072,7 @@ export const EXAMPLES = [
    {
     "id": "4s-2026",
     "type": "conference",
-    "status": "attend-only",
+    "status": "watch",
     "title": "4S 2026: TechnoPower • Technoscientific Futures",
     "host": "Society for Social Studies of Science (4S)",
     "host_kind": "learned_society",
@@ -5844,7 +5845,7 @@ export const EXAMPLES = [
    {
     "id": "dsa-devstudies-workshop-2027",
     "type": "fellowship",
-    "status": "open",
+    "status": "watch",
     "title": "Towards a Global South-driven Future for Development Studies: Workshop for Early-Career Researchers",
     "host": "Development Studies Association (DSA) writing workshop, funded by a British Academy Writing Workshop grant, hosted at Padjadjaran University",
     "host_kind": "learned_society",
@@ -6534,7 +6535,7 @@ export const EXAMPLES = [
    {
     "id": "aas-in-asia-2026",
     "type": "conference",
-    "status": "attend-only",
+    "status": "watch",
     "title": "AAS-in-Asia 2026: Centering Asia: Refiguring Connections, Recharting Futures",
     "host": "Association for Asian Studies (AAS) and Lahore University of Management Sciences (LUMS)",
     "host_kind": "learned_society",
@@ -6703,7 +6704,7 @@ export const EXAMPLES = [
    {
     "id": "ecsas-2027",
     "type": "conference",
-    "status": "open",
+    "status": "attend-only",
     "title": "29th European Conference on South Asian Studies (ECSAS 2027)",
     "host": "European Association for South Asian Studies (EASAS)",
     "host_kind": "learned_society",
@@ -7929,7 +7930,7 @@ export const EXAMPLES = [
    {
     "id": "amic-2026",
     "type": "conference",
-    "status": "open",
+    "status": "attend-only",
     "title": "32nd AMIC Annual International Conference 2026",
     "host": "Asian Media Information and Communication Centre (AMIC)",
     "host_kind": "learned_society",
@@ -8676,7 +8677,7 @@ export const EXAMPLES = [
     },
     "venue_funding": [],
     "priority": {
-     "score": 47,
+     "score": 30,
      "weights": {
       "fit": 0.2692,
       "standing": 0.1923,
@@ -9094,7 +9095,7 @@ export const EXAMPLES = [
    {
     "id": "devstud-bandung-2027",
     "type": "fellowship",
-    "status": "open",
+    "status": "watch",
     "title": "Towards a Global South-Driven Future for Development Studies — Writing Workshop",
     "host": "Development Studies Association (DSA) / Global Development Institute, University of Manchester, with Universitas Padjadjaran, Bandung",
     "host_kind": "learned_society",
@@ -9291,7 +9292,7 @@ export const EXAMPLES = [
    {
     "id": "ecsas-2027",
     "type": "conference",
-    "status": "open",
+    "status": "attend-only",
     "title": "29th European Conference on South Asian Studies (ECSAS 2027)",
     "host": "European Association for South Asian Studies (EASAS)",
     "host_kind": "learned_society",
@@ -9473,7 +9474,7 @@ export const EXAMPLES = [
    {
     "id": "iaea-2026",
     "type": "conference",
-    "status": "attend-only",
+    "status": "watch",
     "title": "51st Annual IAEA Conference — Trust, Transparency and Technology in Educational Assessment",
     "host": "International Association for Educational Assessment (IAEA)",
     "host_kind": "learned_society",
@@ -10569,7 +10570,7 @@ export const EXAMPLES = [
    {
     "id": "ecas-2027",
     "type": "conference",
-    "status": "open",
+    "status": "attend-only",
     "title": "11th European Conference on African Studies (ECAS 2027) — African Prisms",
     "host": "AEGIS (Africa-Europe Group for Interdisciplinary Studies), hosted at ISCTE — University Institute of Lisbon",
     "host_kind": "learned_society",
@@ -11384,7 +11385,7 @@ export const EXAMPLES = [
   ]
  }
 ];
-export const FX = {"base":"INR","as_of":"2026-09-18T00:02:31Z","source":"https://open.er-api.com/v6/latest/INR","inr_per":{"USD":95.96,"EUR":110.07,"GBP":128.17,"AUD":68.26,"BRL":18.65,"SEK":9.77,"CAD":68.53}};
+export const FX = {"base":"INR","as_of":"2026-10-11T00:02:31Z","source":"https://open.er-api.com/v6/latest/INR","inr_per":{"USD":96.834,"EUR":108.38,"GBP":127.99,"AUD":67.563,"BRL":19.286,"SEK":9.684,"CAD":67.875,"KES":0.7457,"NGN":0.071297,"GHS":8.1861,"PKR":0.34948,"IDR":0.005413,"BDT":0.78507,"NZD":54.324,"PEN":28.101,"EGP":1.8471,"XOF":0.16518,"THB":2.8817,"KHR":0.023854,"MXN":5.2996,"CHF":116.39,"JPY":0.61124,"CNY":14.438,"ZAR":5.8371,"DKK":14.495,"NOK":10.109,"PHP":1.5408,"MYR":23.67,"LKR":0.29241,"NPR":0.625,"ARS":0.063877,"CLP":0.09888,"COP":0.029859}};
 export const heldBack = {"id":"basas-2027","type":"conference","status":"watch","title":"BASAS Annual Conference 2027","host":"British Association for South Asian Studies (BASAS)","host_kind":"learned_society","theme":null,"description":"The BASAS Annual Conference 2027 will be held at Newcastle University. The public page gives no specific dates, submission deadlines, registration fees, or travel grant information; the conference is described as a members-only event, and further detail appears to require login to the BASAS members' area.","location":{"city":"Newcastle","country":"United Kingdom","format":"in_person"},"dates":{"start":null,"end":null},"deadlines":[],"eligibility":{"career_stage":[],"nationality":null,"region_restriction":null,"membership_required":true,"notes":"Please note that the BASAS Annual Conference is a members-only event. No fee, deadline, or funding information is published on the public page; these may be restricted to the BASAS members' area."},"fees":[],"funding":[{"name":"ICSSR Scheme for Participation in International Seminar/Conference Abroad","source":"external","type":"travel_scholarship","amount_note":"PhD/PDF scholars without other funding: full financial assistance (airfare, visa, insurance, local conveyance, stay, registration).","deadline":null,"cycle":"Rolling, apply online at least 3 months before the conference date once dates are known","requires":"Formal acceptance letter from organizers to present a paper (email invites insufficient) + full paper","eligible":"check","why":"BASAS 2027 has no published CFP, dates or fees yet; ICSSR needs a firm acceptance letter, and there's nothing to apply against currently","grounded":true,"source_quote":"PhD/PDF scholars and SC/ST/PwD faculty without other funding: full financial assistance.","source_url":"https://icssr.org/participation-international-seminar-abroad","sequence_note":"Wait for BASAS 2027 CFP and dates (likely announced via the members' area); if a paper is accepted, apply to ICSSR at least 3 months before travel."}],"past_editions":[{"year":2026,"theme":null,"city":"SOAS, London, UK","representative_papers":[],"source_url":"https://www.basas.org.uk/news-events/basas-conference/"},{"year":2025,"theme":null,"city":"Lancaster, UK","representative_papers":[],"source_url":"https://www.basas.org.uk/news-events/basas-conference/"},{"year":2024,"theme":null,"city":"King's College London, UK","representative_papers":[],"source_url":"https://www.basas.org.uk/news-events/basas-conference/"}],"standing_signals":[{"signal":"Programme archive shows an unbroken run of annual conferences at UK universities from at least 2011 through 2026 (Southampton, SOAS, Leeds, Royal Holloway, Portsmouth, Cambridge, Nottingham, Exeter, Durham, Edinburgh, Southampton, Leeds, King's College London, Lancaster, SOAS).","grounded":false,"previous_quote":null,"verify_note":"fail_mismatch: page lists no 2020 conference (jumps from 2019 Durham to 2021 Edinburgh) with no cancellation/postponement note, so the 'unbroken run' claim is not supported by the page as written.","source_url":"https://www.basas.org.uk/news-events/basas-conference/"}],"source_url":"https://www.basas.org.uk/news-events/basas-conference/","extracted_at":"2026-09-19","predatory_flag":false,"predatory_reasons":[],"venue_funding":[],"priority":{"score":69,"weights":{"fit":0.269,"standing":0.192,"network":0.154,"outcomes":0.154,"feasibility":0.231},"sub_scores":{"fit":{"score":85,"reason":"BASAS is the UK's dedicated South Asian studies conference, one of her two primary fields; her caste, Partition-memory and diaspora-media topics are a direct match even without confirmed 2027 panels."},"standing":{"score":75,"reason":"An unbroken run of annual conferences at UK universities from at least 2011 to 2026, hosted by a learned society, but a members-only, more regionally-scaled event than a flagship like AoIR."},"network":{"score":72,"reason":"Good regional value for an India-based South Asianist — UK-based South Asian studies specialists — though the members-only structure limits visibility into who exactly attends."},"outcomes":{"score":50,"reason":"No proceedings, publication route, or award details are published for 2027 — limited information, scored at the midpoint; treat this as a 'prepare for the next call' conference."},"feasibility":{"score":55,"reason":"No 2027 dates, fees or CFP exist yet (BASAS is members-only), so nothing is currently actionable; a UK visa (~3-week process) cuts against her 'prefer no visa' preference, and BASAS membership itself is a cost/step not yet known."}}},"fit":{"score":0.85,"rationale":"BASAS is the British Association for South Asian Studies' own annual conference, sitting directly in South Asian studies, one of Ananya's two primary fields rather than an adjacent one. Her work on Dalit and Bahujan digital counterpublics, caste speech moderation, and Partition memory would be squarely at home once a CFP is published, mirroring the fit seen at ECSAS but at UK scale.","matched_topics":["Partition memory online","South Asian diaspora media","caste & digital media","Dalit & Bahujan counterpublics"],"neighborhood_evidence":["Ramnarayan S. Rawat's caste-and-history scholarship fits BASAS's South Asian studies focus, though no 2027 speaker list exists yet to confirm overlap"]},"why_go":["BASAS is the UK's main South Asian studies conference and a strong regional match for your PhD topic.","A long unbroken run since at least 2011 at UK universities — a well-established conference for feedback from South Asianists, once the 2027 details are out."],"watch_out":["It's a members-only event with no public dates, fees or CFP yet for 2027 — you'd need to join BASAS and watch the members' area for updates.","UK visa processing (about 3 weeks) needs to be planned for once dates are known, and BASAS membership itself is an added, unconfirmed cost."],"tagline":"UK's flagship South Asian studies conference — strong fit, but 2027 details are still members-only.","eligible":"conditional","eligibility_notes":"Described as a members-only event; no nationality or career-stage restriction is stated on the public page, but further CFP, fee and eligibility detail sits behind the BASAS members' area login. Treat as a 'watch and prepare for the next call' opportunity.","visa":{"required":"yes","note":"Indian passport holders need a UK Standard Visitor visa; official Home Office fee is GBP 135 for a 6-month visa (effective 8 Apr 2026), plus a VFS Global service charge in India.","official_source":"https://www.gov.uk/standard-visitor/apply-standard-visitor-visa","verify_flag":true,"lead_days":21},"explore":false,"explore_reason":null,"confidence":{"dates":"verified","fees":"inferred","cost":"range","visa":"advisory","eligibility":"inferred"},"cost_estimate":{"currency":"INR","low":76000,"high":137000,"breakdown":{"registration":{"low":4000,"high":7500,"note":"No 2027 fee published (members-only page); estimated from typical UK regional-society student conference fees (~GBP 30-60), not grounded to a page","grounded":false},"travel":{"low":45000,"high":85000,"note":"India-UK return economy heuristic (Hyderabad/Delhi to Newcastle via a UK hub), booked 8-10 weeks ahead","grounded":false},"accommodation":{"low":8000,"high":24000,"note":"Assuming a typical 3-day conference (4 nights), hostel/university housing to mid-range hotel near Newcastle University; exact 2027 dates not published","grounded":false},"visa":{"low":19000,"high":20500,"note":"UK Standard Visitor visa (6-month), official Home Office fee GBP 135 (effective 8 Apr 2026, ~INR 17,300) plus a VFS Global service charge","grounded":true,"source":"https://www.gov.uk/standard-visitor/apply-standard-visitor-visa"}},"assumptions":["GBP to INR at 128.17 (corpus/fx.json, as of 2026-09-18, open.er-api.com)","Dates, fees and travel-grant details for BASAS 2027 are not published on the public page (members-only); estimates are inferred, not quoted","Excludes meals, local transport, and travel insurance","Assumes membership dues (amount not published) are a separate, additional cost"],"over_budget":false,"net_note":"If a paper is accepted once BASAS 2027's CFP opens and ICSSR comes through, out-of-pocket cost could drop well below the ₹76,000-1,37,000 range — but nothing about dates, fees or funding for this edition is confirmed yet."}};
 export const GATHERED_AT = "2026-09-19";
 export const profile = EXAMPLES[0].profile;

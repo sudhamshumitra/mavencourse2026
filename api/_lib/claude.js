@@ -130,7 +130,8 @@ export function sendError(res, err) {
   return res.status(500).json({ error: 'Something went wrong on the server.' });
 }
 
-export const today = () => new Date().toISOString().slice(0, 10);
+/** Today's date (YYYY-MM-DD). GV_TODAY freezes it for the eval runner (evals/) so date-based checks are reproducible; never set it in production. */
+export const today = () => process.env.GV_TODAY || new Date().toISOString().slice(0, 10);
 
 /**
  * Runs one worker with its own deadline: `fn(signal)` gets an AbortSignal tied to a timer,

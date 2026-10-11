@@ -4,6 +4,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { deriveStatus } from '../api/_lib/status.js'; // same rule as the live API
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const arg = (name, dflt) => { const i = process.argv.indexOf(`--${name}`); return i === -1 ? dflt : process.argv[i + 1]; };
@@ -22,18 +23,6 @@ const norm = (v, dflt) => {
 };
 
 const TODAY = new Date().toISOString().slice(0, 10);
-const SUBMISSION = ['abstract', 'full_paper', 'scholarship'];
-
-/** Same rule as the live API: status follows the dates, not the label an agent wrote. */
-function deriveStatus(o) {
-  if (o.status === 'stale') return o.status;
-  const ahead = (d) => Boolean(d) && d >= TODAY;
-  const subs = (o.deadlines ?? []).filter((d) => SUBMISSION.includes(d.label));
-  if (subs.some((d) => ahead(d.date))) return 'open';
-  if (!subs.length) return o.status; // no submission date listed: the dates can't settle it
-  if (o.type !== 'fellowship' && (ahead(o.dates?.end ?? o.dates?.start) || (o.deadlines ?? []).some((d) => ahead(d.date)))) return 'attend-only';
-  return 'watch';
-}
 
 function groundedCounts(opps) {
   let total = 0, pass = 0;
@@ -64,7 +53,7 @@ for (const f of readdirSync(join(root, 'corpus', 'profiles')).filter((f) => f.en
     const plain = (v) => JSON.parse(JSON.stringify(v).replace(/\b([Vv])enues\b/g, (m, v0) => (v0 === 'V' ? 'Events' : 'events'))
       .replace(/\b([Vv])enue\b/g, (m, v0) => (v0 === 'V' ? noun[0].toUpperCase() + noun.slice(1) : noun)));
     for (const k of ['priority', 'fit', 'why_go', 'watch_out', 'tagline', 'eligibility_notes', 'explore_reason']) if (brief[k] !== undefined) brief[k] = plain(brief[k]);
-    const out = { ...opp, status: deriveStatus(opp), venue_funding: opp.funding ?? [] };
+    const out = { ...opp, status: deriveStatus(opp, TODAY), venue_funding: opp.funding ?? [] };
     if (out.status !== opp.status) console.log(`  ${slug}: ${opp.id} status ${opp.status} → ${out.status}`);
     for (const k of BRIEF_FIELDS) if (brief[k] !== undefined) out[k] = brief[k];
     out.funding ??= [];

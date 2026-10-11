@@ -1,0 +1,647 @@
+{
+  "run": {
+    "at": "2026-10-11T11:24:15.109Z",
+    "commit": "9878962+changes",
+    "today": "2026-10-11",
+    "suites": [
+      "scout"
+    ],
+    "judge": true,
+    "repeat": 1,
+    "models": {
+      "main": "claude-sonnet-5",
+      "fast": "claude-haiku-4-5"
+    }
+  },
+  "suites": {
+    "scout": {
+      "criteria": [
+        {
+          "id": "count",
+          "label": "Returns 1–8 candidates",
+          "kind": "case",
+          "target": 1,
+          "passed": 2,
+          "total": 2,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "exploration",
+          "label": "At least one pick from a neighbouring field",
+          "kind": "case",
+          "target": 1,
+          "passed": 2,
+          "total": 2,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "no_past_open",
+          "label": "Nothing past its deadline shown as open",
+          "kind": "item",
+          "target": 1,
+          "passed": 6,
+          "total": 6,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "links_live",
+          "label": "Links open (blocked-by-site excluded)",
+          "kind": "item",
+          "target": 0.9,
+          "passed": 10,
+          "total": 11,
+          "rate": 0.9090909090909091,
+          "met": true
+        },
+        {
+          "id": "trace",
+          "label": "Every pick says how it was found",
+          "kind": "item",
+          "target": 1,
+          "passed": 12,
+          "total": 12,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "relevance",
+          "label": "Judge: top-5 relevance ≥ 4 of 5",
+          "kind": "case",
+          "target": 1,
+          "passed": 0,
+          "total": 2,
+          "rate": 0,
+          "met": false
+        }
+      ],
+      "usd": 1.0585200000000001,
+      "latency_ms": {
+        "p50": 161914,
+        "p95": 161914
+      },
+      "cases": [
+        {
+          "id": "s-ananya",
+          "tags": [
+            "representative"
+          ],
+          "note": "Most-developed persona; corpus has 13 hand-checked opportunities to compare against.",
+          "rows": [
+            {
+              "criterion": "count",
+              "pass": true,
+              "detail": "7 candidates"
+            },
+            {
+              "criterion": "exploration",
+              "pass": true,
+              "detail": "Asian Studies on the Pacific Coast (ASPAC) 2026 — Call for Proposals"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "AoIR 2026: Regeneration(s) — Association of Internet Researchers Annual Conference"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://aoir.org/aoir2026/aoir2026cfp/"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "Diaspora and Media Working Group (DIM) — IAMCR"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://iamcr.org/s-wg/working-group/dim"
+            },
+            {
+              "criterion": "no_past_open",
+              "pass": true,
+              "detail": "12th South Asian Media and Cultural Studies Conference 2026: no date"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "12th South Asian Media and Cultural Studies Conference 2026"
+            },
+            {
+              "criterion": "links_live",
+              "pass": false,
+              "detail": "dead (404): https://comm.cci.fsu.edu/12th-south-asian-media-and-cultural-studies-conference-2026/"
+            },
+            {
+              "criterion": "no_past_open",
+              "pass": true,
+              "detail": "9th Annual South Asia Conference 2026: no date"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "9th Annual South Asia Conference 2026"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://www.dcu.ie/ireland-india-institute/annual-conference-2026"
+            },
+            {
+              "criterion": "no_past_open",
+              "pass": true,
+              "detail": "Asian Studies on the Pacific Coast (ASPAC) 2026 — Call for Proposals: no date"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "Asian Studies on the Pacific Coast (ASPAC) 2026 — Call for Proposals"
+            },
+            {
+              "criterion": "no_past_open",
+              "pass": true,
+              "detail": "International Conference on Global Digital Cultures: Texts, Technologies and Audiences: no date"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "International Conference on Global Digital Cultures: Texts, Technologies and Audiences"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://call-for-papers.sas.upenn.edu/cfp/2026/01/10/international-conference-on-global-digital-cultures-texts-technologies-and-audiences"
+            },
+            {
+              "criterion": "no_past_open",
+              "pass": true,
+              "detail": "International Conference on Media and Communication 2026: Media Industries: no date"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "International Conference on Media and Communication 2026: Media Industries"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://call-for-papers.sas.upenn.edu/cfp/2025/08/11/international-conference-on-media-and-communication-2026-media-industries-in-the"
+            },
+            {
+              "criterion": "relevance",
+              "pass": false,
+              "detail": "3.2/5 — 2 AoIR 2026: Regeneration(s) — Association of Internet Researchers Annual Conference | 3 Diaspora and Media Working Group (DIM) — IAMCR | 4 12th South Asian Media and Cultural Studies Conference 2026 | 4 9th Annual South Asia Conference 2026 | 3 Asian Studies on the Pacific Coast (ASPAC) 2026 — Call for Proposals"
+            }
+          ],
+          "ms": 161914,
+          "usd": 0.442106,
+          "output": {
+            "candidates": [
+              {
+                "id": "c-aoir-2026-regeneration-s-association-of-internet-r",
+                "url": "https://aoir.org/aoir2026/aoir2026cfp/",
+                "title": "AoIR 2026: Regeneration(s) — Association of Internet Researchers Annual Conference",
+                "host": "Association of Internet Researchers (AoIR)",
+                "type": "conference",
+                "status": "attend-only",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "The flagship internet-studies conference, a strong fit for platform-moderation and creator-culture work, though its March 2026 submission deadline has already closed so this cycle would be network/attend-only.",
+                "exploration": false,
+                "quick": {
+                  "fit": 78,
+                  "standing": 92,
+                  "network": 85,
+                  "outcomes": 70,
+                  "feasibility": 30
+                },
+                "tagline": "The internet-studies flagship, but you'd be going to watch, not present, and Mexico City is pricey.",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "layer a: adjacent field 'internet studies' → society AoIR → annual conference page",
+                  "fetched page confirms Mexico City, 14-17 Oct 2026, proposals closed 1 Mar 2026"
+                ]
+              },
+              {
+                "id": "c-diaspora-and-media-working-group-dim-iamcr",
+                "url": "https://iamcr.org/s-wg/working-group/dim",
+                "title": "Diaspora and Media Working Group (DIM) — IAMCR",
+                "host": "International Association for Media and Communication Research (IAMCR)",
+                "type": "conference",
+                "status": "watch",
+                "deadline_hint": null,
+                "next_expected": "IAMCR's call for proposals for the edition after Galway 2026 typically opens around November-December for a July conference — watch this working-group page.",
+                "relevance": "This working group runs diaspora-media sessions every year at the main IAMCR congress, a direct match for your South Asian diaspora interest.",
+                "exploration": false,
+                "quick": {
+                  "fit": 72,
+                  "standing": 80,
+                  "network": 75,
+                  "outcomes": 65,
+                  "feasibility": 40
+                },
+                "tagline": "A diaspora-media home base inside a big society — worth watching for the next call.",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "layer a: field 'media & communication' → society IAMCR → sections/working groups",
+                  "page confirms Galway 2026 and Singapore 2025 as recent congresses"
+                ]
+              },
+              {
+                "id": "c-12th-south-asian-media-and-cultural-studies-confer",
+                "url": "https://comm.cci.fsu.edu/12th-south-asian-media-and-cultural-studies-conference-2026/",
+                "title": "12th South Asian Media and Cultural Studies Conference 2026",
+                "host": "Florida State University, College of Communication and Information",
+                "type": "conference",
+                "status": "open",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "A specialist recurring conference on exactly South Asian media and culture, squarely on-topic for your diaspora and digital-caste work.",
+                "exploration": false,
+                "quick": {
+                  "fit": 80,
+                  "standing": 60,
+                  "network": 55,
+                  "outcomes": 60,
+                  "feasibility": 25
+                },
+                "tagline": "A niche South Asian media meeting that fits closely, but a US trip strains the budget.",
+                "link_unverified": true,
+                "discovery_trace": [
+                  "layer d: reworded search 'South Asian diaspora media conference 2026 call for papers' → recurring specialist (12th edition) conference found",
+                  "fetch blocked (403); could not confirm live dates"
+                ]
+              },
+              {
+                "id": "c-9th-annual-south-asia-conference-2026",
+                "url": "https://www.dcu.ie/ireland-india-institute/annual-conference-2026",
+                "title": "9th Annual South Asia Conference 2026",
+                "host": "Ireland India Institute, Dublin City University",
+                "type": "conference",
+                "status": "open",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "A South Asia studies conference in Europe that would welcome work on caste, Partition memory and diaspora media, with a visa process generally lighter than the UK or US for Indian scholars.",
+                "exploration": false,
+                "quick": {
+                  "fit": 65,
+                  "standing": 55,
+                  "network": 55,
+                  "outcomes": 55,
+                  "feasibility": 35
+                },
+                "tagline": "A smaller South Asia conference in Europe, an easier visa route than the US or UK.",
+                "link_unverified": true,
+                "discovery_trace": [
+                  "layer d: reworded search on South Asian diaspora media conferences",
+                  "found via search snippet; not fetched due to remaining budget"
+                ]
+              },
+              {
+                "id": "c-asian-studies-on-the-pacific-coast-aspac-2026-call",
+                "url": "https://www.csun.edu/asian-studies-pacific-coast-2026/call-for-proposals",
+                "title": "Asian Studies on the Pacific Coast (ASPAC) 2026 — Call for Proposals",
+                "host": "California State University, Northridge (ASPAC)",
+                "type": "conference",
+                "status": "open",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "A broader regional Asian/area-studies meeting rather than a media-specific one — a chance to test your Partition-memory and area-studies framing with a different audience outside media studies.",
+                "exploration": true,
+                "quick": {
+                  "fit": 45,
+                  "standing": 50,
+                  "network": 40,
+                  "outcomes": 45,
+                  "feasibility": 25
+                },
+                "tagline": "An area-studies crowd, not media scholars — good for testing the Partition-memory angle differently.",
+                "link_unverified": true,
+                "discovery_trace": [
+                  "layer d: reworded digital-caste/South Asia search surfaced this regional area-studies CFP",
+                  "not fetched; kept as the no-keyword-overlap exploration pick"
+                ]
+              },
+              {
+                "id": "c-international-conference-on-global-digital-culture",
+                "url": "https://call-for-papers.sas.upenn.edu/cfp/2026/01/10/international-conference-on-global-digital-cultures-texts-technologies-and-audiences",
+                "title": "International Conference on Global Digital Cultures: Texts, Technologies and Audiences",
+                "host": "Organiser listed via UPenn CFP aggregator (host institution unconfirmed)",
+                "type": "conference",
+                "status": "open",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "Directly about digital cultures and audiences, close to your platform-moderation and creator-culture angle — but verify the organiser since the host's own site wasn't reachable in this search.",
+                "exploration": false,
+                "quick": {
+                  "fit": 55,
+                  "standing": 35,
+                  "network": 30,
+                  "outcomes": 35,
+                  "feasibility": 30
+                },
+                "tagline": "Sounds like a close thematic fit, but verify the organiser before you invest time.",
+                "link_unverified": true,
+                "discovery_trace": [
+                  "layer d: reworded 'caste digital media conference 2026' search surfaced this via an academic CFP aggregator",
+                  "not fetched; host legitimacy not independently confirmed"
+                ]
+              },
+              {
+                "id": "c-international-conference-on-media-and-communicatio",
+                "url": "https://call-for-papers.sas.upenn.edu/cfp/2025/08/11/international-conference-on-media-and-communication-2026-media-industries-in-the",
+                "title": "International Conference on Media and Communication 2026: Media Industries",
+                "host": "Organiser listed via UPenn CFP aggregator (host institution unconfirmed)",
+                "type": "conference",
+                "status": "open",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "Focused on media industries, overlapping with your creator-economy and platform angle, though the organiser's own site was not independently verified.",
+                "exploration": false,
+                "quick": {
+                  "fit": 50,
+                  "standing": 35,
+                  "network": 30,
+                  "outcomes": 35,
+                  "feasibility": 35
+                },
+                "tagline": "A media-industries CFP worth a careful look, but unconfirmed beyond the listing.",
+                "link_unverified": true,
+                "discovery_trace": [
+                  "layer d: same reworded caste/digital media search",
+                  "not fetched; treat as a lower-confidence lead"
+                ]
+              }
+            ],
+            "judge": [
+              {
+                "title": "AoIR 2026: Regeneration(s) — Association of Internet Researchers Annual Conference",
+                "score": 2,
+                "why": "Great fit topically but deadline closed, attend-only, US travel cost/visa burden for PhD2 budget."
+              },
+              {
+                "title": "Diaspora and Media Working Group (DIM) — IAMCR",
+                "score": 3,
+                "why": "On-topic diaspora focus but vague timing/status, part of large IAMCR congress with travel cost concerns."
+              },
+              {
+                "title": "12th South Asian Media and Cultural Studies Conference 2026",
+                "score": 4,
+                "why": "Specialist South Asian media conference, directly matches diaspora/caste focus, though US travel/visa adds friction."
+              },
+              {
+                "title": "9th Annual South Asia Conference 2026",
+                "score": 4,
+                "why": "South Asia studies conference in Europe, lighter visa, fits caste/diaspora/memory themes, open and timely."
+              },
+              {
+                "title": "Asian Studies on the Pacific Coast (ASPAC) 2026 — Call for Proposals",
+                "score": 3,
+                "why": "Sensible exploration into broader Asian studies, tests Partition-memory framing, but US travel cost/visa is a stretch."
+              }
+            ]
+          }
+        },
+        {
+          "id": "s-wanjiru",
+          "tags": [
+            "representative"
+          ],
+          "note": "Public health / sociology from Nairobi: tests that the search leaves the persona's home field for the exploration pick.",
+          "rows": [
+            {
+              "criterion": "count",
+              "pass": true,
+              "detail": "5 candidates"
+            },
+            {
+              "criterion": "exploration",
+              "pass": true,
+              "detail": "ECAS2027 — 11th European Conference of African Studies: 'African Prisms'"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "ASAA 7th Biennial Conference (2027) — bid stage"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://as-aa.org/"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "International Community Health Workers (ICHW) Symposium — next edition"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://chwsymposium.org/"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "ECAS2027 — 11th European Conference of African Studies: 'African Prisms'"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://www.ecasconference.org/2027/"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "African Studies Association (US) 69th Annual Meeting"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://africanstudies.org/annual-meetings/future-annual-meeting-dates/"
+            },
+            {
+              "criterion": "no_past_open",
+              "pass": true,
+              "detail": "JMIR mHealth and uHealth — rolling submissions: no date"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "JMIR mHealth and uHealth — rolling submissions"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://mhealth.jmir.org"
+            },
+            {
+              "criterion": "relevance",
+              "pass": false,
+              "detail": "3.4/5 — 5 ASAA 7th Biennial Conference (2027) — bid stage | 4 International Community Health Workers (ICHW) Symposium — next edition | 3 ECAS2027 — 11th European Conference of African Studies: 'African Prisms' | 2 African Studies Association (US) 69th Annual Meeting | 3 JMIR mHealth and uHealth — rolling submissions"
+            }
+          ],
+          "ms": 138344,
+          "usd": 0.616414,
+          "output": {
+            "candidates": [
+              {
+                "id": "c-asaa-7th-biennial-conference-2027-bid-stage",
+                "url": "https://as-aa.org/",
+                "title": "ASAA 7th Biennial Conference (2027) — bid stage",
+                "host": "African Studies Association of Africa (ASAA)",
+                "type": "conference",
+                "status": "watch",
+                "deadline_hint": null,
+                "next_expected": "Host institution bid is open now; dates/CFP for the 2027 7th Biennial Conference typically follow 6-9 months after a host is confirmed",
+                "relevance": "A pan-African, Africa-hosted society meeting (past editions in Praia, Accra, etc.) covering health, gender and urban Africa panels — far cheaper and visa-free compared to US/Europe options.",
+                "exploration": false,
+                "quick": {
+                  "fit": 70,
+                  "standing": 75,
+                  "network": 80,
+                  "outcomes": 55,
+                  "feasibility": 85
+                },
+                "tagline": "The pan-African studies gathering — likely to land somewhere in Africa, cheap to reach.",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "layer a: adjacent field 'African studies' → searched for continental association → found African Studies Association of Africa (as-aa.org)",
+                  "fetched as-aa.org: confirmed 6th Biennial held 2025 (Cabo Verde), 'ASAA 2027 Conference Bid' open now, status set to watch"
+                ]
+              },
+              {
+                "id": "c-international-community-health-workers-ichw-sympos",
+                "url": "https://chwsymposium.org/",
+                "title": "International Community Health Workers (ICHW) Symposium — next edition",
+                "host": "Community Partners International / ASEAN Institute for Health and Development / Khon Kaen University",
+                "type": "conference",
+                "status": "watch",
+                "deadline_hint": null,
+                "next_expected": "The 4th symposium was held in late 2025 (Bangkok); no 5th-edition dates or CFP are posted yet, so a call would most plausibly open in 2027",
+                "relevance": "This is the one international meeting built entirely around community health worker research and practice — a direct match for the CHW half of this thesis, worth watching even though no CFP is live yet.",
+                "exploration": false,
+                "quick": {
+                  "fit": 88,
+                  "standing": 65,
+                  "network": 70,
+                  "outcomes": 55,
+                  "feasibility": 60
+                },
+                "tagline": "The only conference built entirely around CHWs — just not open yet.",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "layer a/b: searched 'community health worker symposium' → found the International CHW Symposium series",
+                  "fetched chwsymposium.org: confirmed 4th edition already concluded (Nov 2025 abstracts book posted), no 5th-edition page yet → status watch"
+                ]
+              },
+              {
+                "id": "c-ecas2027-11th-european-conference-of-african-studi",
+                "url": "https://www.ecasconference.org/2027/",
+                "title": "ECAS2027 — 11th European Conference of African Studies: 'African Prisms'",
+                "host": "AEGIS (Africa-Europe Group for Interdisciplinary Studies), hosted by CEI-Iscte, Lisbon",
+                "type": "conference",
+                "status": "watch",
+                "deadline_hint": null,
+                "next_expected": "Call for papers opens 26 Oct–31 Dec 2026, following the panel stage that closed in September 2026",
+                "relevance": "Europe's largest African studies gathering takes gender, health and urban livelihoods panels seriously; useful for broadening beyond public health audiences, though travel and a Schengen visa are real costs for this budget.",
+                "exploration": true,
+                "quick": {
+                  "fit": 45,
+                  "standing": 85,
+                  "network": 85,
+                  "outcomes": 50,
+                  "feasibility": 30
+                },
+                "tagline": "Europe's big African studies meeting — great network, tough on a student budget.",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "layer a: adjacent field 'African studies' → searched 'African studies association annual conference' → found ECAS2027 site",
+                  "fetched ecasconference.org/2027: confirmed call for panels just closed, call for papers opens 26 Oct 2026 → status watch with exact window"
+                ]
+              },
+              {
+                "id": "c-african-studies-association-us-69th-annual-meeting",
+                "url": "https://africanstudies.org/annual-meetings/future-annual-meeting-dates/",
+                "title": "African Studies Association (US) 69th Annual Meeting",
+                "host": "African Studies Association (ASA, USA)",
+                "type": "conference",
+                "status": "attend-only",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "The flagship US African studies meeting (3–6 Dec 2026, New Orleans) runs panels on gender, health and digital economies in Africa; submission deadlines have likely passed but it's worth tracking for next year or as an attend-only option if travel funding appears.",
+                "exploration": false,
+                "quick": {
+                  "fit": 55,
+                  "standing": 85,
+                  "network": 80,
+                  "outcomes": 50,
+                  "feasibility": 25
+                },
+                "tagline": "The big US African studies meeting — worth it only with a travel grant.",
+                "link_unverified": true,
+                "discovery_trace": [
+                  "layer c: recurrence check on africanstudies.org found confirmed future meeting dates page listing the 2026, 2027 and 2028 annual meetings"
+                ]
+              },
+              {
+                "id": "c-jmir-mhealth-and-uhealth-rolling-submissions",
+                "url": "https://mhealth.jmir.org",
+                "title": "JMIR mHealth and uHealth — rolling submissions",
+                "host": "JMIR Publications",
+                "type": "journal_call",
+                "status": "open",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "A rolling, open-access journal specifically on mobile and digital health interventions — a natural home for writing up the mobile-money-and-maternal-health angle once there's a draft to submit, with no travel involved.",
+                "exploration": false,
+                "quick": {
+                  "fit": 60,
+                  "standing": 75,
+                  "network": null,
+                  "outcomes": 55,
+                  "feasibility": 95
+                },
+                "tagline": "A rolling home for mobile-money-and-health writing, no travel required.",
+                "link_unverified": true,
+                "discovery_trace": [
+                  "layer d: reworded search 'mobile money digital health journal special issue' surfaced JMIR's digital-health call ecosystem",
+                  "JMIR mHealth and uHealth identified as the standing rolling venue for this topic rather than a one-off special issue"
+                ]
+              }
+            ],
+            "judge": [
+              {
+                "title": "ASAA 7th Biennial Conference (2027) — bid stage",
+                "score": 5,
+                "why": "Africa-hosted, cheap, visa-free, direct topic match for gender/health/urban Africa"
+              },
+              {
+                "title": "International Community Health Workers (ICHW) Symposium — next edition",
+                "score": 4,
+                "why": "Directly matches CHW focus but location/cost/visa unclear, still watch-stage"
+              },
+              {
+                "title": "ECAS2027 — 11th European Conference of African Studies: 'African Prisms'",
+                "score": 3,
+                "why": "Good topical fit but Schengen visa and travel cost strain budget for PhD1"
+              },
+              {
+                "title": "African Studies Association (US) 69th Annual Meeting",
+                "score": 2,
+                "why": "US conference, visa and cost heavy, deadlines passed, poor fit for budget"
+              },
+              {
+                "title": "JMIR mHealth and uHealth — rolling submissions",
+                "score": 3,
+                "why": "Relevant journal but no draft yet and no networking/feedback benefit at this stage"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

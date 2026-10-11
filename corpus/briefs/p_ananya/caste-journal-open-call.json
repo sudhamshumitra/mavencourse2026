@@ -22,7 +22,7 @@
     "net_note": "This is effectively free to submit to; the only real 'cost' is the time spent writing and revising the article."
   },
   "priority": {
-    "score": 88,
+    "score": 40,
     "weights": { "fit": 0.3182, "standing": 0.2273, "outcomes": 0.1818, "feasibility": 0.2727 },
     "sub_scores": {
       "fit": { "score": 92, "reason": "The journal is dedicated entirely to caste and caste-like exclusion worldwide, which is precisely her dissertation's subject; her specific angle on caste speech and platform moderation is a natural full-length article for this general call." },
@@ -42,6 +42,7 @@
     "No publication fee, so there's no cost barrier to submitting."
   ],
   "watch_out": [
+    "This call looks out of date: the page was posted in 2021 and invites papers for issues through 2024. Check it is still open before spending time on it.",
     "The call is open-ended with no stated deadline or turnaround time, so plan for an unclear review timeline."
   ],
   "tagline": "A direct, free, no-travel home for your caste research.",

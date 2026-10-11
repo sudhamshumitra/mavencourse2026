@@ -7,7 +7,7 @@
 import { fetchPage } from '../fetchPage.js';
 import { callJson, MODEL_FAST } from '../claude.js';
 import { SKILLS } from '../prompts.js';
-import { str, normQuote } from './shared.js';
+import { str, quoteOnPage } from './shared.js';
 
 const SYSTEM = `${SKILLS.verifyGrounding}
 
@@ -32,7 +32,8 @@ function downgrade(opp, kind, i, note) {
   row.verify_note = str(note, 200);
 }
 
-export async function runGrounding(opportunity, { signal } = {}) {
+/** `fetch` is the page loader (defaults to the live fetchPage); evals pass a saved snapshot instead. */
+export async function runGrounding(opportunity, { signal, fetch = fetchPage } = {}) {
   const items = collectItems(opportunity);
   const patched = structuredClone(opportunity);
   const summary = { checked: items.length, passed: 0, fail_missing: 0, fail_mismatch: 0, unreachable: false, note: '' };
@@ -40,17 +41,15 @@ export async function runGrounding(opportunity, { signal } = {}) {
 
   let page;
   try {
-    page = await fetchPage(opportunity.source_url);
+    page = await fetch(opportunity.source_url);
   } catch {
     summary.unreachable = true;
     summary.note = "Couldn't re-open the source page this time — grounding left as extracted, not downgraded.";
     return { opportunity: patched, grounding: summary, usage: { input_tokens: 0, output_tokens: 0 } };
   }
-  const haystack = normQuote(page.text);
-
   const present = [];
   for (const item of items) {
-    if (haystack.includes(normQuote(item.quote))) present.push(item);
+    if (quoteOnPage(item.quote, page.text)) present.push(item);
     else { downgrade(patched, item.kind, item.i, 'Quote no longer found on the page.'); summary.fail_missing++; }
   }
 

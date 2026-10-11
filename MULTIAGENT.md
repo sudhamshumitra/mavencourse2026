@@ -19,7 +19,7 @@ after another inside a single prompt. That caused four problems:
 
 ## The architecture
 
-`api/brief.js` is now an **orchestrator**. It runs three specialised workers **in parallel**,
+`api/brief.js` is now an **orchestrator** (its logic lives in `api/_lib/check/orchestrate.js` as `runBrief`, so the evals can call it directly). It runs three specialised workers **in parallel**,
 then hands their combined result to a fourth worker, **compose**, in a **sequential handoff**.
 That's an orchestrator-worker pattern with a parallel fan-out and a sequential step — chosen over
 a plain pipeline because cost, funding and grounding genuinely don't depend on each other's
@@ -51,7 +51,7 @@ grounding worker is the first live use of it.
 
 | Agent | File | Model / tools | Gets | Produces | On failure/timeout |
 |---|---|---|---|---|---|
-| **Orchestrator** | `api/brief.js` | plain code, no model call | profile + opportunity (from `/api/extract`) | the merged brief + per-worker status | — |
+| **Orchestrator** | `api/_lib/check/orchestrate.js` (route: `api/brief.js`) | plain code, no model call | profile + opportunity (from `/api/extract`) | the merged brief + per-worker status | — |
 | **Cost** | `api/_lib/check/cost.js` | Haiku, no tools | opportunity's fees/location/dates, profile's home/currency/budget, FX table | `cost_estimate` | registration priced from whatever fee is already grounded; everything else marked "couldn't estimate this time" |
 | **Funding** | `api/_lib/check/funding.js` | Sonnet + `web_search` (≤3) | opportunity's own funding, profile's country/stage/field, the funder registry | `funding[]` (≤4) | level 1: the old registry-only pass, no tools; level 2 (if that also fails): the venue's own listed funding only, nothing invented |
 | **Grounding** | `api/_lib/check/grounding.js` | code (quote matching) + Haiku (value check) | the opportunity's grounded deadlines/fees/funding and their quotes, the source URL | per-fact pass / fail_missing / fail_mismatch, and a patched copy of the opportunity with failures downgraded | "not re-checked this time" — grounding never downgrades a fact it couldn't re-check, same rule the offline skill uses for unreachable pages |
@@ -114,7 +114,7 @@ grounding worker is the first live use of it.
 
 ## Files
 
-- `api/brief.js` — the orchestrator
+- `api/brief.js` — the streaming route; `api/_lib/check/orchestrate.js` — the orchestrator (`runBrief`)
 - `api/_lib/check/{cost,funding,grounding,compose}.js` — the four workers
 - `api/_lib/check/shared.js` — sanitation helpers shared across them
 - `api/_lib/claude.js` — added `signal`/`withTimeout` so a worker's own timeout really cancels its request

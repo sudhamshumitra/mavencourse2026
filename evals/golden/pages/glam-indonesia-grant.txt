@@ -1,0 +1,1898 @@
+#url https://outreach.wikimedia.org/wiki/GLAM/Indonesia
+#title GLAM/Indonesia - Outreach Wiki
+#saved 2026-10-11 via direct
+
+GLAM/Indonesia - Outreach Wiki
+
+Jump to content
+
+Main menu
+
+Main menu
+
+move to sidebar
+hide
+
+Navigation
+
+• Main page
+
+• Recent changes
+
+• Upload file
+
+• Village pump
+
+Projects
+
+• Edit-a-thons
+
+• Education
+
+• GLAM
+
+Information
+
+• Bookshelf
+
+• All translations
+
+• Users by skillset
+
+In other projects
+
+Search
+
+Search
+
+English
+
+Appearance
+
+• Donate
+
+• Create account
+
+• Log in
+
+Personal tools
+
+Donate
+
+Create account
+
+Log in
+
+GLAM/Indonesia
+
+Add languages
+
+Add links
+
+• Page
+
+• Discussion
+
+English
+
+• Read
+
+• Edit
+
+• View history
+
+Tools
+
+Tools
+
+move to sidebar
+hide
+
+Actions
+
+Read
+
+Edit
+
+View history
+
+General
+
+• What links here
+
+• Related changes
+
+• Permanent link
+
+• Page information
+
+• Cite this page
+
+• Get shortened URL
+
+Print/export
+
+• Create a book
+
+• Download as PDF
+
+• Printable version
+
+Appearance
+
+move to sidebar
+hide
+
+From Outreach Wiki
+
+< GLAM
+
+This Month in GLAM – Indonesia report
+
+2012 •
+2016 Asia report •
+2017 December •
+2018 January •
+June •
+November •
+2019 January •
+April •
+May •
+June •
+July •
+August •
+September •
+October •
+
+2020 January •
+February •
+March •
+April •
+May •
+September •
+October •
+November •
+2021 February •
+April •
+May •
+2022 January •
+August •
+September •
+October •
+November •
+December •
+
+2023 January •
+February •
+March •
+April •
+May •
+June
+June
+January
+
+Indonesia
+An Indonesian GLAM representative in Australia
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By LauraHale
+
+Chris at RecentChangesCamp
+
+Chris Woodrich in Australia Chris talking about his wiki goals for 2012 during RCC's Closing Circle
+Chris Woodrich , a Wikipedian who does freelance work for Wikimedia Indonesia, visited Canberra to attended RecentChangesCamp with scholarship assistance from Wikimedia Indonesia and Wikimedia Australia. He has been active in Wikimedia Indonesia's GLAM efforts with libraries and education. He talked about the needs of the Indonesian Wikimedia community, issues involving creating Indonesian content on the English and Indonesian Wikipedias, and problems regarding the lack of Indonesia-related pictures on Commons. While attending, he made contact with several Australian and international attendees that will help him with future GLAM efforts in Indonesia, and learned about a conference facilitation that might be useful for him on the ground in Indonesia.
+
+The Indonesian report on RecentChangesCamp can be found on their wiki and was mentioned on their Facebook account .
+
+Indonesia
+Wikidata tour visits Jakarta
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Andy Mabbett ( User:Pigsonthewing )
+
+Welcome
+
+Welcome to our first Asia report. We hope to see more reports from colleagues in Asian countries in future editions - you can help !
+
+Wikidata Tour
+
+Andy Mabbett continued his Wikidata tour , (see last month's GLAM-Wikidata report and last month's Australia and New Zealand report ) by visiting Jakarta, hosted by the local chapter, Wikimedia Indonesia (WMID), with travel arrangements kindly facilitated by Wikimedia Australia, for a series of talks and meetings . Speaking alongside WMID's John Vandenberg, who talked about Pywikibot, he gave talks on Wikidata to members of the Humanitarian OpenStreetMap team, and separately to WMID members. He then joined WMID colleagues at meetings with the Language Research & Development Body, part of Indonesia's Ministry of Education.
+
+It is noted with appreciation that several WMID volunteers have since taken with gusto to adding data to Wikidata, not least many labels in the various Indonesian languages, and further collaboration in future is anticipated.
+
+Indonesia
+Collaboration with library in Yogyakarta
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Digitization letters from the library's collection
+
+A letter from De Administrateur, Chef van het Kabinet des Ministers van Koloniën
+Wikimedia Indonesia is in collaboration again with Dewantara Kirti Griya Museum in Yogyakarta to digitize the collection of Ki Hadjar Dewantara 's letters from the collection of Dewantara Kirti Griya Library Museum. For nearly five months, these activities have successfully digitized 981 sheets of 365 catalog numbers.
+
+Most of the digitized collection is a correspondence originating from the Dutch Government to Ki Hadjar Dewantara. Some are official documents issued by the Dutch Government in relation to Ki Hadjar Dewantara and Tamansiswa.
+
+The entire collection can be accessed freely on the internet through the Wikimedia Commons . These collections come with a short metadata so the readers know the essence of the text without having to read it in its entirety.
+
+The next step is to translate the results of digitization that are in Dutch and English into the Indonesian language. Thus, the results of this digitization can be used by readers who are not proficient in these languages. In addition, the results of this digitization can be used by the Wikipedia community to enrich Wikipedia articles related to Ki Hadjar Dewantara and efforts during his lifetime.
+
+The Content Digitization program is first initiated by Wikimedia Indonesia to digitize the Indonesian manuscript collection from local institutions. In 2017, Wikimedia Indonesia once again collaborated in digitizing document collections and correspondence from the Dewantara Kirti Griya Museum, which is in 2015 has collaborated to digitize Javanese texts from the collection of Dewantara Kirti Griya Museum.
+
+This program is designed to digitize texts collection from Tamansiswa Dewantara Kirti Griya Museum, Yogyakarta, and then disseminate the results of digitalization through internet media in hopes that the text will be sustainable and the paper is not damaged because it is held by many hands. The results of this project are also expected to help the text be read by the public, as well as researchers and enthusiasts of Java language and literature so that the value of text culture can be preserved and socialized.
+
+Indonesia
+Digitizing the letters from Dewantara Kirti Griya Museum Yogyakarta continues
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Transcribing the letters in Dutch Wikisource
+
+Wikimedia Indonesia via Wikimedia Netherlands asks for help to volunteers to transcribe the letters in Dutch Wikisource as most of the letters are in Dutch languages. The transcribing process is required before translating those documents into Bahasa Indonesia. One of the transcribing volunteers is WeeJeeVee , who is fascinated in doing transcribing text to Dutch Wikisource and has set up a page about this activity in Dutch Wikisource .
+
+Another volunteer involved in this activity is Sersan Mayor Kururu , an Indonesian Wikipedian. She is a university student in Yogyakarta and has knowledge in the Dutch language. Sersan Mayor Kururu has helped Wikimedia Indonesia for the past five months in doing letter conservation and digitization.
+
+A handwritten letter has now been transcribed on Dutch Wikisource .
+
+A handwritten letter from Ministerie van Koloniën has now been transcribed on Dutch Wikisource .
+
+Letter from Ministerie van Koloniën has now been transcribed on Dutch Wikisource .
+
+Translating the letters
+
+Started from January 2018, the letters were translated into Bahasa Indonesia from Dutch, English, and Javanese languages to provide what the letters say to people widely, especially for the people in Indonesia. This effort will continue until the end of February and done by Meursault2004 , a senior Wikipedian from Indonesia.
+
+Some of his translations can be seen at File talk:TDKGM 01.007 Koleksi dari Perpustakaan Museum Tamansiswa Dewantara Kirti Griya.pdf . Full contributions of Meursault2004 's translations can be seen here .
+
+A copy of letter from Ministerie van Koloniën . See the translation here .
+
+Letter from het Indonesisch Persbureau . See the translation here .
+
+Letter from H. Colijn to Ki Hadjar Dewantara. See the translation here .
+
+Indonesia
+From Eastern Indonesia on Commons
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Annayu Maharani & Rachmat04
+
+Introducing open license & digitization at Dr. H.C. Oemboe Hina Kapita Museum, local museum in East Sumba
+
+In Indonesia, The Law of Cultural Advancement No.5/2017 serves as a mandate to the government to improve public policy for the cultural sector. The law has become a tool to drive a healthy arts ecosystem, including the management of cultural institution like a museum. Therefore, this is a breakthrough to conduct file-sharing activity in a museum in Indonesia within the framework of GLAM-Wiki.
+
+Wikimedia Indonesia in cooperation with Indonesian Arts Coalition , a cultural policy and arts advocacy organization, organized a digitization activity at Dr. H.C. Oemboe Hina Kapita Museum, Waingapu, East Nusa Tenggara. On this occasion, Wikimedia Indonesia introduced how Wikimedia Commons and Creative Commons license could be used as the medium of knowledge dissemination in their collections.
+
+The two-day event (30–31 May 2018) was divided into presentation and digitization sessions. On the first day, Indonesia Art Coalition shared about the change of the arts ecosystem in the digital era and the importance of cultural data, as stipulated in Law on Cultural Advancement. Further, Wikimedia Indonesia explained how to use Creative Commons and various types of license. Several cultural practitioners alongside with the local government from Office of Culture and Tourism Agency and Public Library and Archive were seen to come. The proposed audience at this event was the museum staffs, therefore they could conduct a better knowledge management through the museum collections, including weft ikat, pieces of jewelry and ritual types of equipment.
+
+• Sample collections from Dr. H.C. Oemboe Hina Kapita Museum
+
+Copper bowl (top view)
+
+Copper bowl (side view)
+
+Ceramic bowl (top view)
+
+Ceramic bowl (bottom view)
+
+Ceramic plates, believed to be linked to the Chinese, are the type of collection that had been successfully digitized and stored on Wikimedia Commons on the second day. We had uploaded eight plates, and this amount had increased to 18 objects a week after the event took place.
+
+For more digital collections of the museum, see Category:Images from Museum Dr. (H.C) Oemboe Hina Kapita on Wikimedia Commons .
+
+Majalah Kajawen
+
+Meanwhile, Wikimedia Indonesia and Yayasan Sastra Lestari , a local archive institution in Surakarta, Central Java, established a project to digitize Majalah Kajawen, a local magazine published in Indonesia. This collaboration has been started since June 2017 until now. This project aimed to preserve physical printed magazines from the archive to digital formats. The institution has already started their own effort to transliterate the magazines, which was written in Javanese characters, into Latin characters since 1997.
+
+This project, in the first place, was to digitize all editions of Majalah Kajawen from the collection of Yayasan Sastra Lestari. They have been archiving the magazines, published from the year 1927 to 1941. The institution has been transcribing the magazines and published their work on their website , which can be accessed freely. However, according to the Chief of Yayasan, they still lack of infrastructure to digitize the magazines and keep them in the digital format. Wikimedia Indonesia, via Content Digitization project, granted a DIY book scanner to the institution, aiding them to scan and provide TIFF images of the Majalah Kajawen as the result of the scan.
+
+Until the end of June 2018, Wikimedia Indonesia has successfully uploaded 170 numbers of Majalah Kajawen collections to Wikimedia Commons. This result can be by people, who are fond of Javanese cultures, stories, and other information in it. Several editions have been transcribed in Javanese Wikisource; some of the work can be seen here .
+
+• Majalah Kajawen published in 1927
+
+Majalah Kajawen #06, issued February 10, 1927
+
+Majalah Kajawen #21, issued May 26, 1927
+
+Majalah Kajawen #26, issued June 30, 1927
+
+Majalah Kajawen #31, issued August 4, 1927
+
+For a complete collection of Majalah Kajawen in Wikimedia Commons, see Category:Majalah Kajawen .
+
+Indonesia
+Conserving and digitizing texts in West Sumatra
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Conserving Minangkabau texts in Maninjau and Payakumbuh
+
+Wikimedia Indonesia and a team of Andalas University in Padang City, West Sumatra, collaborating to preserve texts in Kutub Chanah, Maninjau, West Sumatra. This is a private library of Hamka 's father, where many books and texts of Minangkabau- and Islam-related are stored. Here, the team digitized more than 1,600 files for four days and later they will sort the scans and decide which of the scans can be publicized to Wikimedia Commons.
+
+Two weeks later, the team moved on to Payakumbuh, where there is a private library of A. Damhoeri is found. A. Damhoeri was a distinguished author at his time and had written many books that were used by education institution to teach young students on the Minangkabau language and its culture. For five days, the team yielded more than 7,000 images from their activities.
+
+Digitization activities in Payakumbuh
+
+Digitizing Kutub Chanah in Maninjau
+
+Announcing Pusat Dokumentasi dan Informasi Kebudayaan Minangkabau's collection
+
+Wikimedia Indonesia and Pusat Dokumentasi dan Informasi Kebudayaan Minangkabau 's collection (PDIKM) in Padang Panjang has been colaborating in of digitizing magazines from their collection. For almost three months (August–October 2018), this effort has succeeded in digitizing more than 1,500 pages from 31 catalog numbers.
+
+Most of the digitalized collections were magazines that were published around the 1920s. Some of them are Aboean Goeroe-Goeroe Magazine, An-Noer Magazine, Berita Koerai Magazine, and more. The entire collection can be freely accessed on the internet via the Wikimedia Commons. The uploaded collection has been completed with brief metadata in the form of file descriptions, date of publication, and the name of the institution where the file was digitized.
+
+Aboean Goeroe-Goeroe Magazine, April 1927 issue
+
+Aboean Goeroe-Goeroe Magazine, May 1927 issue
+
+El-Adab newspaper, No. 49
+
+Annoer Magazine, No. 9/1932 issue
+
+See the whole collection in Category:Scanned from Minangkabau Culture Documentation and Information Center .
+
+Indonesia
+Indonesian Wikisource meetup; more documents from Museum Tamansiswa
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Wikisource meetup
+
+On Januari 18, 2019, Wikimedia Indonesia organized a meetup for Indonesian Wikisource users in Jakarta. Of 15 participants (outside of Wikimedia Indonesia) registered to the event, only 20% attended. During the event, two users were new to Indonesian Wikisource, so they were introduced to Wikisource and how Wikisource is different from Wikipedia in relation to editing styles and its user interface.
+
+By the assistance of the participants, the meetup harvested more than 20 proofread pages, and at least 10 index pages created. For more details, see full report at Dokumentasi Aktivitas § 18 Januari: Kopdar Wikisource bahasa Indonesia at Wikimedia Indonesia wiki.
+
+Participants of Indonesian Wikisource meetup
+
+In the process of proofreading the text
+
+Group photo
+
+Digitization in Museum Tamansiswa
+
+As part of GLAM 2018 Project , Wikimedia Indonesia has digitized and uploaded documents from 98 catalog number which are part of letters from Tamansiswa Dewantara Kirti Griya Museum library to Wikimedia Commons. In this phase, the documents started from prefix TDKGM 01.366 to TDKGM 01.460. The documents written in the Dutch, English, or Javanese language will be translated into Indonesian to engage more people to use them, even they are not speaking in those languages. The translation started this February and will last by April 2019.
+
+Laporan Rapat Sub-Panitya IV ke-5 Panitya Negara Chusus Untuk Menindjau kembali Persetudjuan Indonesia-Nederland
+
+Ontwerp Culturele Overeenkomst tussen het Koninkrijk der Nederlanden en de Republiek der Verenigde Staten van Indonesië
+
+Notulensi berjudul "Soal Bahasa Belanda adalah Soal Perdjoangan Nasional" oleh Ki Hadjar Dewantara
+
+Indonesia
+Wikisource meetup and letter translations
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Indonesian Wikisource meetup in Jakarta
+
+On April 24, 2019, Wikimedia Indonesia conducted an informal Wikisource meetup in Jakarta. This event was held to gain some helps from Wikisource editors to transcribe some pages of Majalah Aboean Goeroe-Goeroe that was digitized by Wikimedia Indonesia in 2018 from Minangkabau Culture Documentation and Information Center in Padangpanjang City, West Sumatra.
+
+For 3 hours, the contributors successfully proofread more than 20 pages of several editions of the magazine. More than 10 pages had been validated. All contributions were recorded at wscontest/c/13 .
+
+This meetup is one of Wikimedia Indonesia's efforts to introduce Wikisource, a Wikipedia sister project, to Indonesian Wikimedian community. All events related to Wikisource, such as Wikisource trainings or meetups, are organized under GLAM 2018 subproject.
+
+Screenshot of Majalah Aboean Goeroe-Goeroe September 1927 edition proofread at Indonesian Wikisource
+
+Group photo
+
+Translation of Ki Hadjar Dewantara's letters
+
+Thanks to Meursault2004 , this year Wikimedia Indonesia can continue the translation of the remaining Ki Hadjar Dewantara's correspondences, which were digitized from Dewantara Kirti Griya Museum Library in Yogyakarta. More than 160 pages have been translated from English, Dutch, Javanese language into Indonesian language, so that the contents of the letters can be read by general Indonesian people, who do not speak English, Dutch, and/or Javanese language.
+
+All translations are available at each talk page of the each document file page on Wikimedia Commons. For instance, the translation of this file can be accessed at its talk page .
+
+Draft of Cultural Agreement between the Kingdom of the Netherlands and the Republic of the United States of Indonesia
+
+Letter from Sastrawinata to the Chairperson of the Controolraad Tamansiswa
+
+Homage to Multatuli's Memory 1820–1920
+
+GLAM presentations at WikiNusantara 2019
+
+Rachmat and Harditaher (Hardiansyah) participated at WikiNusantara 2019 conference held in Yogyakarta, Indonesia. Rachmat was a speaker in GLAM I session and delivered a presentation on the timeline of GLAM effort done by Wikimedia Indonesia since 2013, while Hardiansyah spoke in GLAM II session and talked about the position of GLAM initiatives in Indonesia, some opportunities, challenges and strategies that can be done together for an open access, and the urgency of content digitization that should be executed by GLAM institutions in Indonesia.
+
+Presentation slides by Rachmat
+
+Presentation slides by Hardiansyah
+
+A. Damhoeri's digital library on Commons
+
+Wikimedia Indonesia, in November 2018, joined forces with local digitization team led by Dr. Pramono in West Sumatra, has successfully digitized private collections of A. Damhoeri , a prominent litterateur of West Sumatra. He wrote many books and collected a huge of books, mainly about religious and Minangkabau culture-related books in his library. Unfortunately, as he passed away, it is not well-maintained, so more than half of the collections are damaged.
+
+However, these collections are now safe as the digitization team helped the family to reorganize the books and digitized most of the collections. Some of them are available on Commons , and will be uploaded by GLAM team of Wikimedia Indonesia gradually.
+
+Nakoda Tenggang , a fictional story
+
+Segudang Intan Sebukit Emas , a fictional story
+
+Wajah-wajah Baru , a fictional story
+
+Indonesia
+More Kajawen on Commons
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Last May, Wikimedia Indonesia uploaded more series of Majalah Kajawen , an old Javanese magazine, to Wikimedia Commons. This year, we managed to digitize the magazine from the issue 1932 to 1934, in the total of 110 series. The magazine were from Yayasan Sastra Lestari, an institution in Surakarta, Central Java, which is working in digitizing old manuscripts and transliterating to Latin script.
+
+The complete digitized magazines can be seen at Wikimedia Commons .
+
+Kajawen , issued on Jan. 4, 1933
+
+Kajawen , issued on Jan. 7, 1933
+
+Indonesia
+Introduction to Wikimedia Commons and Structured data
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Introduction to Wikimedia Commons and Structured data
+
+On June 25, 2019, a workshop was held in Jakarta to introduce Wikimedia Commons and how to contribute to Commons in a best way. This was an initiative of GLAM 2018 project by Wikimedia Indonesia together with Creative Commons Indonesia. The workshop was participated by nine participants who are new to this project.
+
+The workshop was divided into 3 parts: (1) introduction to Wikimedia Commons and licenses accepted in Commons, (2) introduction to Structured data on Commons, and (3) getting started to the most useful Commons gadgets to organize files.
+
+Hilman Fathoni (Creative Commons Indonesia) began the session by introducing Wikimedia Commons as one of the free-licensed media repositories on the internet, alongside archive.org, etc. He then introduced Creative Commons ("CC"), OGL, and GNU as licenses that are often used by the licensor to their files and media published to Commons. Some Creative Commons rights are also explained, including CC BY and CC BY-SA which are standard free licenses used in Commons.
+
+Rachmat Wahidi (Wikimedia Indonesia) continued the session with an explanation of Structured data on Commons, by utilizing multilingual caption and depict features. Examples of its use can be seen in File:Tora the Cat, Sakaiminato, Tottori Prefecture, November 2012.jpg which has been equipped with English and Indonesian captions, and depiction of house cat ( Q146 ) and also equipped with "color" and "use" qualifiers.
+
+This image has captions in Indonesian and English language, as well as depicts data
+
+This image's filename has been renamed to accommodate what the image displays …
+
+… and it is also applied this image's filename
+
+In the last session, Rachmat introduced the Cat-a-lot and FileRename gadgets, whose function to do batch media categorization and batch files renaming in Commons. An example of a file whose name has been changed is File:Kampung Naga, Tasikmalaya 2.jpg and File:Orang duduk di mobil mengangkut pohon jagung.jpg .
+
+Wikimedia Commons workshop group photo
+
+Indonesia
+Cultural Gardener Summer Project in Indonesia
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Wikimedia Taiwan–Wikimedia Indonesia collaboration
+
+In the early 2019, Wikimedia Indonesia was contacted by Shangkuanlc (from Wikimedia Taiwan). He said that there would be a pilot project to documenting objects in the National Museum of Indonesia and enriching the contents in the Wikimedia projects related to the museum. This will be participated by students from National Chengchi University and National Cheng Kong University. The project was intended to be a summer project, when the students are free from their university activities and are able to stay overseas for at least one month. After further discussion, the project would happen in July 2019 and three students would be flying to Indonesia.
+
+The National Museum of Indonesia was chosen because of its uniqueness of placing the objects in the courtyard. The students, guided by their professor in the university, were trying to find out the reason behind the object placement, and create a short documentation video to explain their findings to the public. In addition, the students also took photograph of the statues inside the museum, uploaded the photographs to Wikimedia Commons, and also created Wikidata items for each objects.
+
+Outcomes
+
+After visiting the museum and interviewing several sources, including the museum staff, they were able to produce a video, explaining the background of the museum, how they engage with the visitors, and how GLAM project have impact in the museum and/or other institutions in Indonesia. A 5-minute video can be watched here .
+
+The team also successfully uploaded 196 photographs of museum objects to Wikimedia Commons, and created 182 new Wikidata items , completed with the corresponding statements and object inventory numbers from the National Museum of Indonesia.
+
+Gallery
+
+Statue of Vishnu
+
+The Type of Scene Statue
+
+Status of Male Head
+
+Relief of Sudhamala Statue
+
+Statue of Bhairawa Buddha
+
+Visiting Library of the National Museum of Indonesia
+
+One of the books in the museum library
+
+Future activities
+
+This August, Wikimedia Indonesia will start its digitization activities in Museum Uang Sumatera and Pusat Penelitian Kelapa Sawit . These institutions have signed agreements and agreed to open their collections to Wikimedia Commons.
+
+Museum Uang Sumatera
+
+Museum Uang Sumatera
+
+Coins in the Museum Uang Sumatera
+
+Indonesia
+Digitization of banknotes and introduction to structured data on Commons (continued)
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Digitization of banknotes at Museum Uang Sumatera
+
+Following memorandum of understanding signing between Wikimedia Indonesia and Museum Uang Sumatera in June 2019, the digitization activities started in August 2019. In five days (from August 5 to 9, 2019), we scanned and photographed various forms of old banknotes, issued during 1910s until 1960s, from the museum's collection. There are tens of banknotes and coins digitized. We expected to upload them to Wikimedia Commons this September.
+
+Digitization is in action…
+
+Coins from Banten Sultanate and Palembang Sultanate
+
+Introduction to structured data on Commons and ISA workshop
+
+On August 30, 2019, Wikimedia Indonesia organized Wikimedia Commons, Structured data on Commons, as well as Information Structured Acceleration (ISA) workshop. This event was intended to introduce how to contribute in Wikimedia Commons and learn the licenses used in Wikimedia Commons. As part of GLAM 2019, we also expanded the event to introduce structured data on Commons, and utilized ISA tool to add depicts and captions to the images under Wiki Cinta Budaya 2018 and Wiki Loves Earth 2019 in Indonesia .
+
+More than 400 participants' contributions were recorded on that day. See Wikimedia Indonesia's Facebook post for more details.
+
+Indonesia
+Image donation by Indonesian Air Force
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Image donation from Indonesian Air Force
+
+On September 6, 2019, Wikimedia Indonesia and Indonesian Air Force signed a memorandum of understanding with regard to image donation to Wikimedia Commons. The images are the photograph of Dirgantara Mandala Museum 's collection: equipments and weapons. The first batch is already on Wikimedia Commons: Category:Museum Dirgantara Mandala .
+
+Memorandum of understanding signing
+
+Main entrance of the Monument of Struggle
+
+Hawker Hunter F4 N-112
+
+Hercules T-310
+
+Padangpanjang magazine digitization
+
+Voleunteers in Padang City continued to scan-a-thon more collection of Minangkabau Culture Documentation and Information Center. More than 7,780 images produced during five days of activities. The images then are being processed before they are uploaded to Wikimedia Commons gradually.
+
+Current collection is available on Category:Scanned from Minangkabau Culture Documentation and Information Center .
+
+Indonesia
+Numismatic items from Sumatran Numismatic Museum
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Announcing the digitization results at the Sumatran Numismatic Museum
+
+On the last week of October, a socialization event to announcing the digitization results was held at Sumatran Numismatic Museum ( Museum Uang Sumatera ) in conjunction with National Museum Festival in Medan City, North Sumatra, Indonesia. Members of numismatic association from Malaysia, Persatuan Pertemuan Numismatik Indonesia Malaysia or PPNIM, attended the event and talked about the close relationship between Indonesian and Malaysian numismatic items. In that event, GLAM Indonesia's representative presented a 10-minute slideshow, showing the urgency of museum digitization and the expected outcomes.
+
+A QR code was created to direct users to Sumatran Numismatic Museum on Wikimedia Commons.
+
+Slides used in the event: File:Presentation slides for Museum Uang Sumatera collection socialization.pdf . Watch the news coverage in this YouTube video .
+
+Master of Ceremonies
+
+Wikimedia Indonesia's presentation
+
+Attending guest from PPNIM
+
+QR code for Sumatran Numismatic Museum on Wikimedia Commons
+
+Proposal of Islamic old books digitization
+
+Hardiansyah , a GLAM Indonesia's representative, was invited for a talk at the Sumatran Thawalib Parabek Boarding School in Agam Regency, West Sumatra, Indonesia. The boarding school was interested to digitize some of Sheikh Ibrahim Musa's books, who was teaching in the boarding school. Because of copyright status, the books cannot be uploaded to Wikimedia Commons unless there is a OTRS mail stating that the books is being relicensed in CC license.
+
+Hardiansyah during the talk
+
+More news on GLAM Indonesia activities can be read on @GLAM_Indonesia Twitter account.
+
+Indonesia
+1st PD Day in Indonesia; visitation to GLAM institutions
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+PD Day 2020
+
+For the first time, GLAM Indonesia, with the help of Wikimedia Indonesia and Creative Commons Indonesia, celebrated Public Domain Day 2020 in Indonesia to bring the public attention to the works that have entered public domain this year. Medan City was selected to held the event considering Chairil Anwar , a prominent Indonesian poet, born here in 1922. This year marked his works to be in public domain and also other works of an Indonesian writer, Tan Malaka .
+
+The event participated by more than 25 people from different expertise, from musician, author, university student, and cultural practitioner. Some performance were done, including reciting poem and adapting several Chairil Anwar's poems.
+
+Along the celebration, there were Wikisource and GLAM+Wikidata workshops held before and after the celebration.
+
+See the pictures below:
+
+Group work to adapting several Chairil Anwar's poems
+
+Poem recitation
+
+Awarding prizes for best group performance
+
+Group photo after PD Day 2020 celebration
+
+Event highlight (video)
+
+Group photo of Wikisource workshop
+
+Group photo of GLAM+Wikidata workshop
+
+Museum and library visits
+
+Site visits were done to several GLAM institutions in the beginning of 2020 to talk about the ongoing activities and to follow up proposed collaboration.
+
+Ajip Rosidi Library and Library of Kirtigriya Museum are the institutions Wikimedia Indonesia is currently working with. Meanwhile, Indonesia Museum of Taman Mini Indonesia Indah , Deli Serdang Museum, and STAIS Al-Ishlahiyah are some institutions we have been proposing the collaboration. We are trying our best to make the cooperation between these institutions happen this year.
+
+Deli Serdang Museum main entrance
+
+Introduction to the museum by their staff
+
+Looking at one of Indonesia Museum of "Beautiful Indonesia" Miniature Park's museum objects
+
+Indonesia
+Proposing collaboration with museums in Bali; First Wikisource training in the region
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Meetings with new Bali museums
+
+In the first week of February, Wikimedia Indonesia went to Bali to meet GLAM institutions we were going to propose collaboration. They are Museum Blanco, Museum Puri Lukisan, Bali 1928, Museum Seni Neka, and Museum Seni Agung Rai (ARMA). The institutions were open with the proposal, thus Wikimedia Indonesia sent memorandum of understanding and memorandum of action draft for further review by the institutions.
+
+Museum Seni Neka
+
+Museum Puri Lukisan
+
+Wikisource training
+
+Wikimedia Indonesia also held a Wikisource training for Balinese Wikipedia community in Denpasar. The aim was to introduce Wikisource project for the community as they would like to propose Balinese Wikisource, so this would help them how to use Wikisource.
+
+Participants' contributions are available here .
+
+Wikisource training in Denpasar
+
+Indonesia
+Volunteers' meet-up; Wiki Cinta Budaya 2020 structured data edit-a-thon
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+GLAM Indonesia volunteers' meet-up
+
+For the first time, Wikimedia Indonesia invited all volunteers participating in GLAM activities since 2017 to a formal meet-up in Jakarta, on March 7–8, 2020. The event was held for two days to review the current digitization activities in several places such as Yogyakarta, Bandung, Medan, and Padangpanjang. Our goals were to discuss challenges and opportunities in partnership with several GLAM institutions, and increase the capacity of each participant in the digitization process.
+
+Processing raw scanned document to prepare for Commons upload
+
+“Processing raw scanned document isn't a bad idea...”
+
+Explaining how something should be done in the correct way
+
+Staring the Elephant statue in front of the National Museum of Indonesia and why it is there in the first place
+
+Group photo in National Museum of Indonesia
+
+Small edit-a-thon to add structured data on Commons
+
+For ten days, from March 20–29, 2020, we conducted a small edit-a-thon inviting Wikimedia contributors to add "depicts" data to photographs of Wiki Cinta Budaya 2020, a photography contest run by Wikimedia Indonesia focusing on cultural images of Indonesia. This contest gathered more than 1,000 images uploaded to Wikimedia Commons, and this edit-a-thon helped the images being machine-readable and more searchable.
+
+Eleven participants (including the Campaign Manager) engaged in the edit-a-thon and resulted 3,165 contributions. Top three contributors ( User:Devi pluto , User:S Kartika , User:Lnahdiya ) will receive tokens of appreciation for taking part in the event from Wikimedia Indonesia.
+
+For more overall statistics of contributions, please visit this Campaign page .
+
+Some feedbacks we gathered from the participants are that they found the edit-a-thon was fun and entertaining. Two-third of total participants have never heard about Structured data on Commons before engaging in the event; however, there was a similar number of participants who gain little understand about the SDC still. They doubted if abstract entity should be added in the SDC or not. In the end, these feedbacks is a good start for Wikimedia Indonesia to grab where we should start to introduce SDC for the community in every workshop we will conduct in the future.
+
+Indonesia
+Wikisource Competition 2020
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Wikisource Competition 2020
+
+Letters of a Javanese princess by Kartini, translated by Agnes Louise Symmers, and published in 1923
+Wikimedia Indonesia announced Wikisource Competition 2020 for any Wikimedia community member in Indonesia. This is the second Wikisource contest held by Wikimedia Indonesia; the first was in 2012 , and the winners were invited to watch Truth in Numbers? Everything, according to Wikipedia film in Jakarta. The current contest takes similar context with the previous, in this case, the Top 2 winners will be awarded to go to WikiNusantara 2020 conference in Padang, West Sumatra.
+
+As of May 6, 2020, 16 participants have proofread seven books in Indonesian and English language, which took place on Indonesian and English Wikisource. One of the books has already transcluded into one page: Letters of a Javanese princess , a book contains the collection of Kartini 's letters.
+
+Some other books that are currently proofreading are:
+
+Seri Pahlawan, Abdul Moeis (1980)
+
+Garuda Perdamaian (1957)
+
+Sorga Ka Toedjoe novelisation (1940)
+
+Kami Perkenalkan (1954)
+
+Himpunan Peraturan Tata Tertib Dewan Perwakilan Rakyat Republik Indonesia (1984)
+
+An introduction to Indonesian linguistics: Being four essays (1916)
+
+The contest will end on May 15, 2020. The winners will be announced on May 18, 2020.
+
+Indonesia
+Wikisource Competition 2020 recap; International Museum Day 2020
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Wikisource Competition 2020 recap
+
+Letters of a Javanese princess , by Kartini
+On April 27, 2020, Wikimedia Indonesia held a Wikisource contest to invite Wikimedia users in Indonesia and participate in proofreading some books that have already in public domain. Over 25 people registered to the event, yet only 17 of them were participating . The event lasted on May 15, 2020.
+
+Two top contributors are invited to attend WikiNusantara 2020 in West Sumatra later this year.
+
+The event run in 18 days, resulting estimated 1,880 pages proofread and validated. Five books were in Indonesian language and participants proofread the text in Indonesian Wikisource. Besides, there were three books provided in English, thus they should be proofread in English Wikisource. One of them was transcluded and can be read at Letters of a Javanese princess .
+
+International Museum Day 2020
+
+To commemorate International Museum Day 2020, Wikimedia Indonesia asked people on Twitter to share their stories when visiting museums in Indonesia. They required to choose one of their best memories of museum visits and tell us of why they had a memorable experience in that museum. Four best stories were chosen and awarded.
+
+See the thread here .
+
+Indonesia
+New GLAM partnerships on data donation; Commons structured data edit-a-thon
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+New GLAM partnerships on data donation
+
+In August 2020, Wikimedia Indonesia signed a memorandum of understanding with Lembaga Pendidikan Seni Nusantara dan Yayasan Tikar Media Budaya Nusantara on data donation from the institutions. This collaboration will bring new content on Wikimedia Commons in the form of audios, videos, pictures, and documents which are related to Indonesian arts and cultures. The process of importing the data to Commons will be done in October 2020, ensuring the preparations from their side is completed.
+
+Not only Lembaga Pendidikan Seni Nusantara dan Yayasan Tikar Media Budaya Nusantara, D'Topeng Kingdom Foundation also joined us in the same partnership. D'Topeng Kingdom Foundation is an organization which oversees several local GLAM institutions in several places in Indonesia, such as Indonesian Islamic Art Museum, Indonesian Heritage Museum, and History of Java Museum. These museums are with a good grace donated the photographs of museum objects to Commons to enrich Indonesian heritage in Internet. Besides, the photographs will be included in Retas Budaya Festival this month, an event conducted by Goethe-Institut Indonesian in collaboration with Directorate General of Culture, Ministry of Education and Culture of Indonesia, Wikimedia Indonesia, Asosiasi Game Indonesia (Indonesian Game Association), Elex Media Komputindo, and Indonesian Institute of Sciences.
+
+• Photographs of Indonesian Islamic Art Museum object
+
+Horsemen Mamluk Brigade from Ottoman Empire
+
+Harness from Turkey
+
+A helmet of Cavalery Forces from Ottoman Empire
+
+Commons structured data edit-a-thon
+
+In August, Wikimedia Indonesia and Wikimedia Nederland has been working together in the theme of "October History Month" . One initiative is to make more content available through Wikimedia, the content that is relevant to Indonesian history which is housed in Dutch cultural collections available through Wikimedia.
+
+Wikimedia Nederland has been helping to put hundreds of photographs and videos related to Indonesia pre- and post-independence into Wikimedia Commons. A set of photographs of Padang and Yogyakarta from the collection of Royal Netherlands Institute of Southeast Asian and Caribbean Studies currently kept by Leiden University Library is now available . Also, video materials produced by the propaganda department of the Japanese military administration during the Pacific War, when the former Dutch East Indies were occupied by Japan are now on Commons thanks to Nederlands Instituut voor Beeld en Geluid ( Netherlands Institute for Sound and Vision ). Not only those pictures and videos, Nationaal Museum van Wereldculturen (National Museum of World Cultures) put hundreds of their photograph collections depicting Indonesia pre- and post-independence.
+
+To help the collections more searchable, Wikimedia Indonesia set a campaign inviting Wikimedians in Indonesia to add structured data to each file. This data consist of caption and depicts (P180). If you are interested to contribute, you can start at this ISA campaign .
+
+• Photographs from the National Museum of World Cultures
+
+Photograph of Teuku Umar's kopiah
+
+Soekarno, the first Indonesia president, placed a wreath on the monument
+
+Indonesian women taking pictures in front of the Monument of Proclamation.
+
+Indonesia
+Bulan Sejarah Indonesia 2.0; Structured data edit-a-thon; Proofreading mini contest
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Bulan Sejarah Indonesia 2.0
+
+As part of WikiSejarah campaign, Wikimedia Indonesia held a Wikipedia writing challenge at Indonesian Wikipedia under the name of Bulan Sejarah Indonesia 2.0 . This challenge invited Wikipedians of Indonesia to write any articles, mainly focuses on the topic of Indonesian history. This challenge started on October 1 and ended on October 31, 2020, resulting 27 new articles were created by six contestants.
+
+For detailed information who participated and what articles were generated, see this tool .
+
+Bulan Sejarah Indonesia 2.0 is the second version of the same theme in 2017 , organized by Wikimedia Indonesia, in collaboration with Wikimedia Nederland.
+
+Structured data edit-a-thon
+
+Structured data on Commons edit-a-thon on NMWC images infographic
+Wikimedia Nederland and National Museum of World Cultures have been generously publicized plenty of images to Wikimedia Commons related to Indonesia pre- and post-independence. The images are uploaded to Category:NMVW files Indonesian Independence 2020-09 on Wikimedia Commons, in the total of 376 images in September 2020.
+
+To make use of the images, Wikimedia Indonesia organized structured data edit-a-thon inviting Wikimedians of Indonesia to add depicts and caption data to the images by using ISA tool. The edit-a-thon started in September and ended on October 30, 2020.
+
+There were 13 contestants participated, 12,244 contribution were made during the event, and 4,083 edits were made to add/modify caption data. For more detailed statistics, view this infographics made by GLAM Indonesia on Twitter .
+
+Proofreading mini contest
+
+A proofreading mini contest was done in Indonesian Wikisource to proofread Boekoe Peringatan dari Staatsspoor-en Tramwegen di Hindia-Belanda 1875-1925.pdf . The contest started in September to October 2020. Six Wikisource users were participated in the contest, resulting 56 pages were validated. More details is available on this tool .
+
+Indonesia
+#WikiSejarah WPWP Campaign
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+#WikiSejarah WPWP Campaign
+
+For 20 days, Wikimedia Indonesia organized #WikiSejarah WPWP Campaign, an online campaign to add pictures to Wikipedia articles. This campaign was part of WikiSejarah , a collaboration project by Wikimedia Indonesia and Wikimedia Nederland to improve local content on Indonesia topic.
+
+Six users were participating in this campaign, and editing more than 190 article pages across 12 Wikimedia projects. The top project is Indonesian Wikipedia with 227 edits in it, followed by English Wikipedia, Javanese Wikipedia, and more. Among the participants, only one user has edited more than 118 times. Meanwhile others, have significantly lower edits. For detailed information, see this statistics .
+
+On December 7, 2020, the winners were announced on the Twitter .
+
+Indonesia
+PD Day 2021 in Indonesia, #1lib1ref, Wikisource workshop
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+PD Day 2021 in Indonesia
+
+As a continuation of the 2020 Public Domain Day in Indonesia in January 2020, GLAM Indonesia held 2021 Public Domain Day in Indonesia in collaboration with the Goethe-Institut Indonesien and Creative Commons Indonesia. A number of workshops and seminars were held over four days.
+
+On January 22, we organized a public seminar to introduce the public domain and how to calculate the duration of copyright in Indonesia from a number of types of works. In this seminar, participants were given a quiz which aims to deepen their understanding of copyright and to be able to identify which works in the GLAM institution are already in the public domain. Watch recordings of these online seminars at YouTube .
+
+In addition, we invited Aleksandra from Europeana to show the extent to which public domain works can be used. She gave an example that these works can be made into new works in the form of GIF images, which are quite popular for users of messaging applications today. If you want to watch the presentation, visit this YouTube video .
+
+We also invited Chris, a contributor at Wikimedia Commons, to tell about his efforts in digitizing Indonesian film posters for his research. The posters, which now in the public domain, have been uploaded to Wikimedia Commons for use in related articles. In addition, Moki, an artist from Indonesia, got inspiration from old photographs and then reconstructs them into new, interesting works of art.
+
+#1lib1ref
+
+We started #lib1ref campaign this February and invited librarians in Indonesia to participate in adding references to Indonesian Wikipedia. To give some understanding on this campaign, we created some live videos on YouTube and talked about the campaign, Citation Hunt, tracking participants' contributions, and hearing what they say about this campaign. Find the videos on this Twitter thread .
+
+On February 10, six librarians from Library of Universitas Medan Area joined a workshop .
+
+Monthly Wikisource training session for local community
+
+To raise public awareness on Wikisource, a sister project of Wikipedia, we organized monthly Wikisource workshops to local community in Indonesia, hoping they have a chance to try text proofreading and see if it suits their interest. GLAM Indonesia had done three Wikisource workshops to different local communities in Indonesia: workshop in December 2020 to Balinese community, workshop in January 2021 to Javanese community, and workshop in February to Padang community.
+
+Indonesia
+Wikisource Competition 2021; Museum Daerah Deli Serdang is now on Commons
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+Wikisource Competition 2021
+
+Wikimedia Indonesia organized Wikisource Competition 2021, the third competition involving Wikisource project in Indonesia. The contest started on April 15 to April 30, 2021 and participated by 40 participants. There were at least 17 books provided to be proofread, which all of them are already in public domain.
+
+Two most contributed participants were awarded special prizes, and tokens were given to those who have proofread at least 12 pages during the contest. Unlike the previous Wikisource contest, this year, the winners are all women, beating more than 35 others. We are glad to see more participants who are trying to make a try to edit in Wikisource, which is one of the objectives of this contest.
+
+Sultan Thaha Syaifuddin is one of the books provided to be proofread
+
+Brochure of national anthem of Indonesia Indonesia Raya
+
+Museum Daerah Deli Serdang is now on Commons
+
+Museum Daerah Deli Serdang , a local museum in Deli Serdang , opened their collections to Wikimedia Commons. This effort has been started last year but yet realized due to COVID-19 pandemic wave in Indonesia, forcing them to temporary close the institution. This year, thanks to online training conducted by GLAM Indonesia, they were able to upload their collections to Commons gradually.
+
+Museum Daerah Deli Serdang is the 17th GLAM institution of Indonesia opened their collections to Commons by the help of Wikimedia Indonesia. A complete list of cooperation can be seen at this webpage . We will continue to approach more institutions and ensure the contents of Indonesia are available freely in the Wikimedia projects.
+
+Museum Daerah Deli Serdang, front yard
+
+Exhibition room at the second floor of the museum
+
+Photographs of figures of Deli Serdang in the museum
+
+One of the museum collections, photographed by museum staff
+
+Accordion, a musical instrument used in local dance
+
+Indonesia
+#1lib1ref in Indonesia; Online talk show with Wikimedia Nederland
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+#1lib1ref in Indonesia
+
+Wikimedia Indonesia organized #1lib1ref online campaign for the first time in 2021. This campaign invited librarians and Wikimedians in Indonesia to participate in adding one reference to Wikipedia articles. Since the campaign started, nine participants have added references to more than 100 pages in Wikimedia projects. Their contributions were tracked by using a special hashtag where the participants should put it in the edit summary: #1lib1refID . This hashtag will differentiate contributions from global participants and Indonesian participants, where participators will place #1lib1ref only in their edit summaries.
+
+For more detailed summary, click this link to view statistics from Indonesian participants.
+
+Online talk show with Wikimedia Nederland
+
+On May 22, 2021, Wikimedia Indonesia cordially invited the Wikimedia Nederland Executive Director Sandra Rientjes and Board Member for Cultural Cooperation Lizzy Jongma to an online talk show. This event talked about how they engaged with GLAMs in the Netherlands and how we can take their examples to approach local GLAMs for a successful collaboration.
+
+Started at 19:00 Indonesia local time (or 14:00 CEST), the event opened by Rachmat and Biyanto as event moderators. Lasted in one hour, there were audiences engaged with the speakers by asking questions, mainly asking how they can contribute or get contents of Indonesia from GLAMs in the Netherlands to assist them in writing Wikipedia articles. The closure of this talk show invited Indonesian and Dutch Wikipedians to an upcoming online meetup that will be held by Wikimedia Indonesia and Wikimedia Nederland.
+
+To watch the talk show again, click this YouTube link .
+
+Indonesia
+GLAM Indonesia wrap-up; Public Domain Day 2022 in Indonesia; #1Lib1Ref
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rachmat04
+
+GLAM Indonesia wrap-up
+
+Panduan berkontribusi konten di Wikimedia Commons booklet
+In the first semester of APG 2021 (July–December 2021), our activities were still affected by Covid-19 pandemic. All activities, including workshops, seminars, and meetups, were to be held online. However, we were able to engage with new kinds of activities. We highlighted four significant moments during the period:
+
+• Publication of Wikimedia Commons booklet translation entitled Panduan berkontribusi konten di Wikimedia Commons , an adaptation and translation of A quick guide how to contribute your contents in Wikimedia Commons
+
+• Improvement of GLAM institutions in Indonesia on Wikidata and creation of maps based on Wikidata
+
+• Establishment of Indonesian Wikisource community and proofreading competition run by the community to celebrate Wikisource's birthday
+
+• First GLAM internship at Wikimedia Indonesia
+
+To read more, please visit our detailed report on Meta-Wiki.
+
+Public Domain Day 2022 in Indonesia
+
+Trio Bimbo band posing for Aktuil Magazine coverage. This is one of the images produced during Kliping Gegap Gempita Edisi Hari Domain Publik 2022 workshop.
+To celebrate Public Domain Day 2022, GLAM Indonesia, together with Goethe-Institut Jakarta and Creative Commons Indonesia, organized a series of online events, including seminars and workshops. In this year, we wanted to bring the awareness to public about copyright and the status of freedom of panorama regulation in Indonesia. The first seminar inviting IP specialist to discuss about retroactive support on copyright law in Indonesia was held on January 9, 2022, on YouTube. Next seminar on the topic of freedom of panorama regulation was held in two sessions: the first session took place on January 22, 2022, on Zoom (not published), and second session happened on February 4, 2022, on YouTube, with Director of Copyright and Industrial Design, Directorate General of Intellectual Property, Ministry of Law & Human Rights, as the presenter.
+
+In addition to the seminars, Goethe-Institut Jakarta invited colleagues from Europeana to give a presentation about why they adopt FAIR principle and how it will put to good use for GLAMs in Indonesia. The seminar was held on January 29, 2022. The recording of this event is available on YouTube .
+
+Also, Creative Commons Indonesia set up an online workshop session dubbed "Kliping Gegap Gempita Edisi Hari Domain Publik 2022" to teach participants on how to extract images from a magazine scan. This meeting lasted for two hours, and participants' works can be seen at this category on Wikimedia Commons.
+
+#1Lib1Ref
+
+We also organized #1Lib1Ref , a campaign to invite librarians to put a reference to a Wikipedia article. The campaign started on January 15 to February 4, 2022. There were eleven users who took part in the campaign and edited on two projects: Indonesian and English Wikipedia. Most of their contributions were performed on Indonesian Wikipedia with 298 edits, while only one edit on English Wikipedia.
+
+Wikimedia Indonesia to award certificate to Top 3 #1Lib1Ref participants in this round. More statistics about #1Lib1Ref in Indonesia are available here .
+
+Indonesia
+4 Islands Outreach; Digital Clippings; Balinese Wikisource Competition
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Bennylin & Rachmat04
+
+GLAM outreach to several main islands in Indonesia
+
+After two years of pandemic and stopping all offline activities, GLAM Indonesia kick-off the post-pandemic activities with visitation to four cities: Medan, Yogyakarta, Makassar, and Banjarmasin, in the four main islands of Indonesia: Sumatra, Java, Sulawesi, and Kalimantan. In addition, the team got to visit old and new partners in around 18 institutions. We plan to invite most of them to the Open GLAM conference in November. We are also planning to socialize the Indonesian GLAM collections to several universities in the months to come.
+
+In those cities, GLAM Indonesia also promoted Wikistories, piloted in the Indonesian Wikipedia, and collaborated with non-Wikimedian communities in those four cities to test and use the new feature and provide feedback to the developer team. As a result, a competition (Wikistories for GLAM) will be held in September-October to produce more GLAM-themed Wikistories in Indonesian Wikipedia (and GLAM-related pictures to Commons).
+
+Digital Clippings for Commons
+
+The Rollies , a famous Indonesian band from the 60s to 80s
+Following the success of the previous Digital Clipping event held on Public Domain Day 2022 in Indonesia , GLAM Indonesia organized a workshop that was attended by 17 Wikimedians and issued a challenge to make as many clippings from old Indonesian magazines and upload them to Commons (since the magazines themselves are not license-compatible to Commons yet). During the 1-week mini challenge, 13 participants uploaded 775+ photos from 70+ magazine volumes (an average of 60 pictures and five magazine volumes per participant).
+
+The result dramatically enriches the largely unavailable pictures of Indonesian artists from the 60s to 70s. We hope to maintain this type of event again in the future with different sets of magazines.
+
+Proofreading Competition in Balinese Wikisource
+
+The community-organized competition was held for two weeks, and during that time, 14 participants proofread more than 5.000 pages of documents from 24 books, more than 2.000 of which has been validated. The competition is set to take place annually in three different Wikisource communities: Indonesian , Balinese , and Javanese .
+
+Indonesia
+GLAM Socialization; Wikistories for GLAM Competition
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Bennylin
+
+GLAM Socialization in University of Indonesia
+
+The presentation in Indonesian language is available in Commons.
+At September 29, GLAM Indonesian held a socialization event of the GLAM Indonesia collections to the students of the national University of Indonesia in Jakarta. The event was attended by around 40 people, and in this program we presented many collections from various GLAM institutions in Indonesia and other countries. We also encourage them to use these collections freely, and share it with others who haven't been able to participate in the presenation. The students are mainly from the History Department and they were enthusiast during the presentation and the subsequent Q&A session.
+
+Wikistories for GLAM Competition
+
+Wikistories example in the article for National Museum of Indonesia
+Presentation of summary for GLAM Indonesia activities the first trimonth in 2022-2023 calendar
+GLAM Indonesia working together with the Wikistories team that have the pilot project in Indonesian Wikipedia held a 3-weeks long competition for Galleries, Libraries, Archives, Museums personnel to create as many Wikistories and upload GLAM-related pictures to support their stories. In less than 3 weeks, participants have created more than 187 stories using the new feature. The winner of this competition will be awarded with cool gadgets and invited to attend the Open GLAM Conference in Jakarta next November.
+
+Indonesia
+GLAM Talk; Javanese Wikisource Workshop
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Bennylin
+
+In October, our team was mainly busy with preparation for November's Open GLAM Conference, but there's still some events going on, other than the closing of last month's Wikistories for GLAM Competition that saw participants wrote 385 stories and uploaded 937 new images to Commons .
+
+Bincang GLAM - GLAM Talk
+
+Started during the pandemic, our podcast series, called Bincang GLAM , or GLAM Talk, is rebooted again. Our first edition talked about Wikistories which were trialed in Indonesian Wikipedia. Our first guest was from History of Java Museum. She participated in the Wikistories for GLAM Competition and gave her feedback about using the tool, from a GLAM institution point of view. We also had Bona, who's the community liaison for Wikistories project.
+
+Javanese Wikisource Workshop
+
+Since it's launch last year, Javanese Wikisource has entered a steady period of growth, but we always needed new contributors to proofread the ever growing collection of Javanese books, in Javanese script and Latin. For that purpose, the Javanese community held a Workshop for editing in Javanese Wikisource (dubbed Wikisumber). For those who are interested in watching the recorded workshop, feel free to leave a message to the author of this newsletter.
+
+Indonesia
+Open GLAM Conference; Sundanese Wikisource Workshop; Minangkabau books digitization
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Bennylin
+
+Open GLAM Conference
+
+Konferensi GLAM Terbuka 2022
+In November 5th, Wikimedia Indonesia held Open GLAM Conference in Jakarta ( news item , archived ), a two-day event which attended by around 40 GLAM activists around Indonesia. In this main event of 2022, participants talks and learn in 10 sessions about Wikimedia & GLAM Indonesia, Wikidata, licenses, Retas Budaya ("Hack your culture"), Wikistories, open access, Wiki Rescues Manuscript, as well as panel session UNESCO's Memory of the World, and Wikibase session by Alan Ang .
+
+Our conference aim to connect like-minded GLAM institutions around Indonesia, to provide them with the necessary knowledge and resources to open their collections, and to emphasize the need for openness, be it license, access, as well as data. Participants came from all major islands of Indonesia, from various background and affiliations, with speakers hailing from University of Indonesia, Creative Commons Indonesia, Goethe Institute, Wikimedia Foundation (WMF), Wikimedia Deutchland (WMDE), UNESCO, Masyarakat Pernaskahan Nusantara (Manassa), DREAMSEA, Arsip Nasional Republik Indonesia (ANRI), Indonesian Visual Art Archive (IVAA), as well as host Wikimedia Indonesia (WMID).
+
+Subsequently, Hardi, representing GLAM Indonesia, presented our GLAM activities in ESEAP Conference (18-19th November) in Sydney, Australia. ( 1 )
+
+Sundanese Wikisource Workshop
+
+Following a similar workshop last month , the Sundanese community requested a WikiTraining and Wikisource Workshop for their language. Sundanese Wikisource currently still hosted in Multilingual Wikisource . But the influx of new contributors could led the project to see the light of day, and approved as an independent project , the fourth of its kind in Indonesia, after Indonesian, Javanese, and Balinese Wikisources.
+
+The workshop is held online, with around 12 participants. They proofread a Sundanese book called Dongeng-dongeng Pieunteungeun with the help of an experience Sundanese Wikisource contributor: User:Kumincir . Their contributions can be seen here .
+
+Minangkabau books digitization
+
+Digitalisasi Balai Bahasa Provinsi Sumatera Barat
+Our partner institution in West Sumatra, the Balai Bahasa Provinsi Sumatera Barat (BBPSB, West Sumatra Province Language Center), has agreed to open their Minangkabau language collections and upload them to Commons. This included two batches of books, one set are older books (around 50 of them), which required to be digitized first, and another set of 27 newer books, in bilingual Minangkabau-Indonesian. We provide (lend) them with a scanner (a Fujitsu ScanSnap), trained them how to digitize their books, and post-processed the resulting images into PDF using ScanTailor and Sumatra PDF softwares. Each of them then tried their hand using the machine, and spend the second day processing the images into PDF, and upload them to Commons. These collections can be seen/downloaded from Category:Balai Bahasa Provinsi Sumatera Barat .
+
+Among the books that they uploaded, there's one title, about Minangkabau folk story of an unfilial son called "Umbuik Mudo". The story has been proofread in Indonesian Wikisource previously in the form of Malay retelling of the story, called " Tjerita Si Umbut Muda ", and the story in the original language was not available until BBPSB uploaded their collection; one book called " Hikajat Si Umbuik Mudo " in original Minangkabau language, and another called " Si Umbuik Mudo ", a bilingual Minangkabau-Indonesian book for the new generation of readers.
+
+Indonesia
+Digitalization in Deli Serdang and Yogyakarta; #1Lib1Ref Workshop; Structured Data Marathon
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Bennylin
+
+Digitalization in Deli Serdang and Yogyakarta
+
+A music score from Sauti collection, likely related to his famous masterpiece, the Serampang 12 dance
+
+An exquisite Balinese sculpture, a gift for Ki Hajar Dewantara , now in Dewantara Kirti Griya Museum
+
+After we went to help digitize the books in West Sumatra at the end of November , at the beginning of December GLAM Indonesia team continued to North Sumatra to our other partner organization, Museum Daerah Deli Serdang (MDDS), to help with their digitization project. Their collections that are being digitized into Commons are the letters from Sauti (d. 1963), a local artist most famous for creating a dance called Serampang 12 dance , including the original music score and the description of the dance.
+
+In addition to that, GLAM Indonesia is also digitizing the Museum Dewantara Kirti Griya (MDKG) in Yogyakarta. The digitization project was done by a volunteer who previously participated in Wikistories for GLAM competition , who lives in Yogyakarta. This is the first part of the digitization project in this institution. They also agreed to digitize their photo collection and their book collections. (See also our previous partnership with MDKG here , here , here , and here ).
+
+Structured Data Marathon: Indonesian Stamps Edition
+
+A 1999 stamp of Indonesia, depicting multiple things, including Map of Indonesia , flag of Indonesia , national emblem of Indonesia , and the 1999 Indonesian legislative election
+In our ISA Campaign this year-end, we chose a brand new collection that has not been described through structured data before. Wikimedia Commons has more than 5.400 stamps of all subjects from Indonesia, starting from 1945 (independence) till 2022.
+
+The 8-day-long campaign was met with tremendous enthusiasm, with the first day alone seeing the number of contributions exceed that of the number of files. At the end of the campaign (and the year), the total number of contributions have reached 30 thousand contributions , second only to the 10-weeks long WikiLoves Africa 2022 Campaign in terms of total contributions during a single-campaign.
+
+In terms of numbers: 17 contributors on average contributed 1784 contributions, with the daily average of 3792 contributions, and each stamp image gets an additional six new descriptions on average.
+
+Feel free to browse through the thousands of fascinating pictures from this collection, and even add some descriptions yourselves here !
+
+#1Lib1Ref Workshop
+
+To increase awareness of the #1Lib1Ref campaign in January, we held an online workshop about how to add references to Indonesian Wikipedia on Zoom that 19 participants attended. GLAM Indonesia plan to organize the annual #1Lib1Ref campaign with the rest of the global Wikimedia movements in January and May 2023.
+
+Indonesia
+Public Domain Day in Indonesia; #1Lib1Ref Campaign and Workshop
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Bennylin
+
+Public Domain Day in Indonesia
+
+Every 1st of January, GLAM Indonesia celebrate the Public Domain Day, and socialize all the creative works that become public domain this year . For 2023 celebration, we tried to do something new - Commons Cycling. We partnered with Creative Commons Indonesia and Subcyclist (Suroboyo Cycling Institute) in an event called " Mancal Nang Suroboyo - Pranala Peradaban " (Cycling in Surabaya - Link of Civilization) in January 29th. We used 4 public domain image of Surabaya from Wikimedia Commons, and we cycled through the route and took pictures and uploaded the result to social media and Commons. At the start of the event there were about 80 people registered.
+
+For our previous PD Day events in Indonesia, see 2020 , 2021 , and 2022 reports
+
+#1Lib1Ref Campaign and Workshop
+
+Along with other Wikipedias, we celebrate the Wikipedia Day by running the #1Lib1Ref Campaign in Indonesian Wikipedia.
+There were several hundred articles edited during the 3 weeks event (15 January-5 February). We are hoping to organize the second campaign in May as well.
+
+To socialize the campaign and raise awareness of the need to provide good quality references, we organized an offline event in the Main Library of State Islamic University Maulana Malik Ibrahim in Malang, East Java. The workshop was attended by more than 20 librarians (from that university and 5 of them from 2 other universities, Brawijaya University and State University of Malang currently interned there).
+
+Bincang GLAM - Wikimedia Commons series
+
+We started a new weekly GLAM Talk in Wikimedia Indonesia's Youtube channel. We plan to do 8 episodes (or more) in February-March, centering around Wikimedia Commons for beginner. We began by explaining what is Wikimedia Commons and the 8 future episode topics.
+
+Indonesia
+Launching of Wikisource Loves Manuscripts; Bincang GLAM continues; 2nd Digital Clippings from Youtube
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Bennylin
+
+Launching of Wikisource Loves Manuscripts
+
+Wikisource Loves Manuscripts
+The Seminar, Discussion and Release of Wikisource Loves Manuscripts ( ID ) is a collaboration between the Wikimedia Foundation and PPIM UIN Jakarta. The theme raised is the theme "Digitalization of Manuscripts to Strengthen Research Infrastructure and Community Engagement". Also invited to this event were academics, philologists, students, BRIN, National Library of Indonesia and all parties related to manuscripts in Indonesia.
+
+Read more about the project initiatives in Meta: Wikisource Loves Manuscripts .
+
+Bincang GLAM continues
+
+During February, we hosted 4 live sessions of "GLAM Talk", with the following topics: How to upload media to Wikimedia Commons (2 February), the WikiKaleidoskop 2.0 photography competition in Commons (9 February), Licenses in Wikimedia Commons: Creative Commons and Public Domain (16 February), and lastly Structured Data in Wikimedia Commons and ISA Tool (23 February)
+
+2nd Digital Clippings from Youtube
+
+One of the antagonist in the biggest news in Indonesia in 2022, by AntaraTV, CC-BY
+Following the success of the previous event , we held a second Digital Clippings workshop and challenge. This time each participants are asked to clip important images from free videos provided by Indonesian news agency, Antara via their Youtube channel, AntaraTV . While it isn't necessary to upload those freely licensed videos to Commons, we can still take still images from them to increase the number of pictures related to Indonesia, particularly public figures that have yet to have images of them in Commons, and still pictures of recent events held in Indonesia, like F1 Powerboat World Championshiph or F1H2O in Lake Toba, North Sumatra.
+
+During the 1 week challenge, 5 Wikimedians were able to upload more than 350 images from hundreds of videos. This way, those images are now freely available to illustrate articles about Indonesian people, events, and other articles related to Indonesia. We hope that through this event, more Wikimedians understand that Wikimedia Commons are able to use Youtube as one of its sources, as long as the videos are licensed with Creative Commons and from reputable sources.
+
+Indonesia
+Javanese Wikisource Competition; 5 More Bincang GLAMs; GLAM Socialization to University of Sriwijaya
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Bennylin
+
+Javanese Wikisource Competition
+
+Kompetisi Wikisumber 2023
+From 6-20 of March, the Javanese Wikisource Competition managed to proofread 30 books and 3 manuscripts. A total of 2,768 (out of possible 3,912) pages were either proofread or validated by 32 participants in 14 days, with a total of 9,390 edits. Several of the participants have never edited Wikisource or any Wikimedia projects before and some of them managed to get to top 10 contributors.
+
+A blog was written, titled Javanese Wikisource Competition in English, Indonesian , and Javanese (the first Diff blog in that language).
+
+Full report: GLAM/Case studies/Javanese Wikisource Competition
+
+5 More Bincang GLAMs
+
+During February, we hosted 5 live sessions of "GLAM Talk", with the following topics: Featured Pictures, Quality Images, and Valued Images in Commons (2 March), GLAM Indonesia collections in Commons (9 March), How to be a good photographer in Commons (with a guest speaker, 16 March), Tools in Commons: VisualFileChange, CropTool, Cat-a-Lot (23 March), Uploading with Flickr-to-Commons and editing Structured Data with AC/DC (30 March).
+
+To Palembang: GLAM Socialization and museum visitations
+
+Klubwiki Unsri logo
+At March 13th, GLAM Indonesian held a socialization event of the GLAM Indonesia collections to the students of the University of Sriwijaya in Palembang, working together with the Unsri Wikiclub that was recently established. The event was attended by around 30 people, and in this program we presented many collections from various GLAM institutions in Indonesia and other countries.
+
+Then the next day, we took some of the Wikiclub members to visit Museum Balaputra Dewa and Museum Sultan Mahmud Badaruddin II, to introduce them to the museums so that in the future, the Wikiclub members could hold events such as Wikitrainings, or edit-a-thons in the museums. GLAM Indonesia also talked to the museums about partnership and digitization projects.
+
+Indonesia
+GLAM Mini Grants; Structured Data Marathon VIII; Wikisource Online Workshop
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Bennylin
+
+GLAM Mini Grants
+
+Museum Musik Indonesia
+
+A set of Gamelan used in Karawitan ensemble
+
+A Mandailing manuscript in an American museum
+
+During March, GLAM Indonesia opened Mini Grants for GLAM institutions and individuals to submit their proposals for up to 10 million IDR (about 610 EUR) grants. Several dozens proposals were submitted and in April, we announced three of them received funding from WMID.
+
+• Museum Musik Indonesia (Indonesian Music Museum) proposed to create a book with the stories of their 20 best collections and would be uploaded to Commons.
+
+• Sanggar Seni Karawitan Laras Siwi (Laras Siwi Karawitan Art Studio) proposed to organize a workshop of Karawitan (a type of traditional music with gamelan originating from Java) and document them for Commons.
+
+• Mandailing Manuscript Digitalization proposed to digitized rare Mandailing (of North Sumatra) manuscripts and upload them to Commons.
+
+The projects will start in May. Stay tuned for the results in the next reports!
+
+Structured Data Marathon VIII
+
+Senaru Waterfall of Tiu Kelep, with 33 elements descriptors!
+Credit: Yon illahi, CC BY-SA 4.0
+In our ISA Campaign this semester, we chose Wiki Cinta Alam (Wiki Loves Earth) pictures of 2022. Wikimedia Commons has more than 1.035 WLE pictures from Indonesia, but after the first day of the event, we were overwhelmed by the enthusiasm of the participants, so we quickly decided to add more pictures to be tagged with Structured Data, from WLE Indonesia 2021 and 2017 for a total of 4.847 images.
+
+The 7-days-long campaign resulted in a record number of contributions with more than 45 thousands new structured data added to 4.847 images (at the time of the closing, it reaches 64 thousands at the time of this report is written) by 24 participants. It was twice as much contributions as last Christmas' campaign . You can see the most used elements in this pretty infographics , with sky, cloud, tree, leaf, and forest being the most common elements in the pictures.
+
+Feel free to browse through the thousands of fascinating pictures from this collection, and even add some descriptions yourselves here ! Thank you for all the participants, and especially the top three contributors who contributed in combination 25 thousand descriptions!
+
+Wikisource Online Workshop
+
+The Indonesian Wikisource Community held an online workshop in the end of April with 13 participants, and they proofread the book s:id:Indeks:Tata Bahasa Minangkabau.pdf that was made available by the Balai Bahasa Provinsi Sumatera Barat digitization project with GLAM Indonesia.
+
+Indonesia
+Wikisource Workshop in Madura; Outreach to Bandung; Indonesian Wikisource Competition
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Bennylin
+
+Wikisource Workshop in Pamekasan, Madura Island
+
+Don't Quote From Wikipedia!
+On May 14th, the Indonesian Madurese Wikimedia community gathered to learn how to edit Wikisource for the first time, in Pamekasan Regency , Madura . The training was done via pre-recorded session. They started by editing an paper in Indonesian language about infant mortality in Madura , and then continued with a Madurese book made by Wikimedia Indonesia about Wikipedia.
+
+The workshop was attended by 13 participants. About half of them would continue to participate in the Indonesian Wikisource Competition a week later.
+
+GLAM Outreach to Bandung, West Java
+
+GLAM Indonesia continued its outreach to various institution around Indonesia. This time we visited Bandung , the capital of West Java, and 150 km from Jakarta. Our team visited several institutions: the first one was Ajip Rosidi Library, with whom we had the pleasure of working together in the past (before the pandemic). We were greeted with enthusiasm, and there was around 48 microfilms that contain important Sundanese manuscripts, that needed to be digitized with special machine. We borrowed one of them, to be processed in Jakarta's National Archive (ANRI), and hopefully we will be able to digitize those microfilms to Commons.
+
+Next we headed to Indonesian Post Museum, in the headquarter of Indonesian Post national company, and introduced our movement and digitizing activities of GLAM Indonesia. Although Commons already had quite a complete collection of Indonesian stamps thanks to a 3rd party website, we were still interested in working together to digitize their non-stamps collection, such as books, envelopes, and historical collections. Other than that, we also took the chance to visit 3 other museum in the city: Indonesian Education Museum , Sri Baduga Museum (West Java Provincial Museum), and Asian-African Conference Museum .
+
+Proofreading Competition in Indonesian Wikisource
+
+From 16th-30th of May, the Indonesian Wikisource Community organized the fourth annual Indonesian Wikisource competition. This year's highly anticipated competition saw a fierce race between the participants, and resulted in 32 books (8632 pages) being validated, with 1763 edits per day from 38 active participants. That's 616 pages being proofread and validated every day, or 227 pages per participants. The competition grew in size each year, from 5 books in 2020, 16 in 2021, 10 Indonesian books in 2022, and finally a record of 32 books this year. The participation rate was beyond what the team had anticipated.
+
+From the 76 registered users (with 61 of them contributing at least once) - many of them are new to Wikisource and/or Wikimedia movement, and many of them joined after participating in previous workshops or competition (Balinese Wikisource competition last July, Javanese Wikisource competition last March, and Sundanese Wikisource competition last April). We hope that in the future competitions, we can keep the high contribution rate and attract many more volunteers to the Indonesian Wikisource.
+
+Indonesia
+Conclusion of Mini Grants; Second #1Lib1Ref Campaign; Wikisource Workshop in Bali
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Bennylin
+
+Conclusion of GLAM Mini Grants
+
+Lir-ilir is a famous children song from Central Java
+A page from Pustaha Laklak Manambin
+Continuing the news from April , the three groups who received grants from GLAM Indonesia has finished their activities.
+
+• Museum Musik Indonesia (Indonesian Music Museum) created a book with the stories of their 20 best collections: File:20 Koleksi Unggulan Museum Musik Indonesia.pdf .
+
+• Sanggar Seni Karawitan Laras Siwi (Laras Siwi Karawitan Art Studio) organized a workshop of Karawitan and uploaded 52 pictures, 2 music audio, and 20 videos including 2 full performances and 2 practice sessions.
+
+• Mandailing Manuscript Digitalization digitized 3 rare Mandailing (of North Sumatra) manuscripts with more than 250 pictures and upload them to Commons.
+
+Did you know, the Mandailing people wrote their manuscripts on processed tree barks, and this made the manuscripts very rare and the art is almost lost in modern day.
+
+Second #1Lib1Ref Campaign of 2023
+
+Presentation
+After the first campaign in January , this may we opened our second #1Lib1Ref campaign of the year. This time we invited not just librarians, but also Wikipedians, to add references to Indonesian Wikipedia articles. They could add references using CitationHunt or other methods. They started by enrolling in Outreach Dashboard
+
+By June 15th, 19 participants have added more than 1100 references in 3 weeks, with the top 3 contributors over 770 references in 620 articles!
+
+Wikisource Workshop in Singaraja, Bali
+
+At the end of the month, the Denpasar Wikimedia Community organized Wikisource training in Singaraja, north of Bali . The 15 participants were introduced to WikiPustaka (Balinese Wikisource), and how to proofread books using two writing systems: Balinese script and Latin. Soon, there will be two competitions in Balinese Wikisource, one by Wikisource Loves Manuscripts and another one by the Balinese Wikimedia Community. Stay tuned for future reports!
+
+Indonesia
+2024 Half-a-year in Review
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rahma Azizah
+
+After a year of absence in reporting GLAM Indonesia activities, we are happy to share our 2024 half a year in review. Here they are:
+
+Celebration of Indonesian Public Domain Day 2024
+
+This January, Wikimedia Indonesia and the Goethe-Institut Jakarta collaborated to celebrate Indonesian Public Domain Day 2024 with a series of discussions on “Copyright and Artificial Intelligence.”
+
+These discussions brought various advancements and improvements offered by AI tools that will be utilized in assisting human work, including for GLAM institutions, to the fore. On the other hand, unclear legal regulations and policies pose a challenge to using AI in Indonesia. As users, we should be ethically aware and responsible, especially when creating works incorporating data or works from other sources. We would also need to reconsider who would benefit the most and who would not from the usage of AI tools, as well as how to make its usage more sustainable and equitable.
+
+Read our full report here .
+
+Wikisource Competitions in Indonesian and Javanese language
+
+We held two Wikisource competitions (edit-a-thons/proofreading contests) in the languages of Indonesia: Indonesian Wikisource , and Javanese Wikisource both in March 2024.
+
+Within two weeks, the Javanese Wikisource Competition transcribed and proofread 20 Javanese books with Latin letters and 13 books in Javanese script with a total of 3,376 pages.
+
+The Indonesian language Wikisource competition has way more gigantic statistics because it was participated not only by Javanese speakers but also by Indonesian speakers nationwide. By the end of the competition, 69 old Indonesian language books were successfully proofread with a total of 14,020 pages.
+
+GLAM-Wiki Month 2024
+
+Bulan Wiki GLAM logo
+Celebrating International Museum Day in May, we present GLAM-Wiki Month or Bulan Wiki GLAM. This is our initial activity dedicated to enriching GLAM Indonesia content on the Wikimedia projects for a month. It is going to be our annual thematic activity for the following years. Following the ICOM International Museum Day, we focused on organizing events on Museums for Education and Research.
+
+We held a series of events such as GLAM Talks, #1Lib1Ref Campaign, GLAM Challenge on Wikipedia, and Datathon during May 2024.
+
+GLAM Talks
+
+We discuss the role and contribution of museums in the realm of research and education which has become the main role for the museum itself. However, in practice, this role is still less felt, especially in museums in Indonesia. In some cases, museums are also lacking in communicating the information and knowledge stored by these institutions to the wider public. Information about museum collections seems to stop in the museum buildings themselves.
+
+#1Lib1Ref campaign
+
+The #1Lib1Ref campaign invites librarians, researchers, book lovers, contributors to Wikimedia projects, and knowledge lovers to add references to articles on Wikipedia related to GLAM institutions.
+
+GLAM Challenge on Wikipedia
+
+The GLAM Challenge on Wikipedia was an edit-a-thon that challenged participants to write articles on museums in Indonesia. Over 14 days, 19 participants have taken part in the GLAM Challenge on Wikipedia 2024. A total of 203 articles have been submitted via a tool named Fountain.
+
+Here is the list of participants and their submitted articles.
+
+Datathon
+
+Datathon is an edit-a-thon on Wikidata on a certain topic. In this GLAM Wiki Month, participants were challenged to edit the data of museum in Indonesia
+
+Indonesia
+Celebrating Public Domain Day 2025 in Indonesia
+
+Contribute   —  
+
+Share this  
+
+  E-mail
+
+  Facebook
+
+  Twitter
+
+  LinkedIn
+
+  Reddit
+
+  Digg
+
+By Rahma Azizah
+
+Each year, we celebrate Public Domain Day, which falls on January 1st, by collaborating with partners on activities that explore the idea of open culture and cultural freedom. This year, Wikimedia Indonesia and Creative Commons Indonesia held a series of events to celebrate International Public Domain Day 2025. These activities included a walking tour and a meet-up, both in collaboration with the Wikimedia Jakarta Community, and a small, fun challenge called Kurasi Digital , or Digital Curation.
+
+For about a month, we hosted Kurasi Digital, a challenge that invited the public to respond to and recreate new works from public domain materials scattered across the internet. Participants could present their work in various forms, such as digital exhibitions, photo essays, articles, annotations on public domain works, derivative works, and so on. The results were quite interesting. Here are the top three creators who participated in the challenge
+
+Abrid Madilantoro: Javart Nouveau: Javanese Decorative Asset (First winner)
+
+Abrid drew inspiration from the illuminated manuscript Chronicle of a Javanese Court in Yogyakarta (1800–1849), also known as Wedana Renggan, to create decorative assets. The manuscript's illuminations share stylistic similarities with the 19th-century European Art Nouveau movement, which Abrid termed "Javart Nouveau."
+
+Yolanda Wahidatunisa: Warisan André Derain: Melacak Jejak Fauvisme di Era Digital (Second winner)
+
+Yolanda conducted a study of the works of André Derain, a pioneer of Fauvism, a visual style that uses bright colors and expressive lines. In Derain's works, color no longer functions merely to depict objects realistically, but rather to convey feelings and moods. Yolanda presented Derain's works in the form of portraits, still lifes, and landscapes.
+
+Arya Danendra Kurnia Dipraja: (Impresi) Hindia Indah (Third winner)
+
+Arya compiled a collection of paintings from several painters, ranging from European descendants to indigenous people who visited and stayed in the Dutch East Indies and created paintings in the Mooi Indie style. He intentionally collected these curated paintings to tell a story while conveying an impression: Beautiful Indies.
+
+And here are some of the documentations from the walking tour. We explored some of historical sites in Jakarta such as National Archive Building, Chinese neighborhood in Glodok, and several museums around Old Batavia.
+
+This Month in GLAM needs you to help put together the next issue .
+
+Home
+
+About
+
+Archives
+
+Subscribe
+
+Suggestions
+
+Newsroom
+
+Retrieved from " https://outreach.wikimedia.org/w/index.php?title=GLAM/Indonesia&oldid=268730 "
+
+Categories :
+• This Month in GLAM Indonesia reports
+
+• Indonesia
+
+• This page was last edited on 12 March 2025, at 20:22.
+
+• Text is available under the Creative Commons Attribution-ShareAlike License ;
+additional terms may apply.
+See Terms of Use for details.
+
+• Privacy policy
+
+• About Outreach Wiki
+
+• Disclaimers
+
+• Legal & safety contacts
+
+• Code of Conduct
+
+• Developers
+
+• Statistics
+
+• Cookie statement
+
+• Mobile view
+
+Search
+
+Search
+
+GLAM/Indonesia
+
+Add languages
+
+Add topic
