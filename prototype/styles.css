@@ -700,7 +700,14 @@ input:focus, select:focus, textarea:focus {
   .track-item > :last-child { grid-column: 1 / -1; }
   .tabs a { padding: .4rem .65rem; font-size: .87rem; }
   .brand-word { display: none; }
+  .pill-demo { display: none; }
   .weight-row { grid-template-columns: 1fr 90px 40px; }
+}
+
+@media (max-width: 420px) {
+  .topbar { gap: .6rem; padding: .6rem .8rem; }
+  .tabs { gap: 0; }
+  .tabs a { padding: .35rem .5rem; font-size: .82rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
