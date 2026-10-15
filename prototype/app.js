@@ -1431,7 +1431,6 @@ let searchLog = freshSearchLog();
 const PICKING_LINES = ['Dropping duplicates and calls that have already closed', 'Looking for warning signs of pay-to-present conferences',
   'Scoring fit, standing, network, outcomes and feasibility for you', 'Picking one from a neighbouring field you might not search for',
   'Checking cost, visa and budget against what you told us'];
-const LINK_LABEL = { live: ['done', 'live ✓'], no_date: ['warn', 'live, no current date'], blocked: ['warn', 'site blocks checks'], dead: ['dead', 'dead link, removed'] };
 
 /** POST that streams newline-delimited JSON events; resolves with the final "done" event. */
 async function apiStream(path, body, onEvent, timeoutMs = 285000) {
@@ -1485,41 +1484,33 @@ function searchPct() {
 }
 
 function laneHtml(l) {
-  const icon = l.state === 'done' ? '✓' : l.state === 'failed' ? '!' : '';
-  return `<div class="s-lane ${l.state}">
-    <div class="s-lane-h"><span class="s-lane-dot">${icon}</span><span>${esc(l.label)}</span></div>
-    <ol class="s-log">${l.searches.slice(-3).map((s) => `<li class="${s.count == null ? 'running' : 'done'}">
-      <span class="s-q">“${esc(s.query)}”</span><span class="s-n">${s.count == null ? 'searching…' : `${s.count} results`}</span></li>`).join('')
-      || `<li class="running"><span class="s-q muted">${l.state === 'running' ? 'Working out what to search…' : 'No searches'}</span></li>`}</ol>
-    <div class="s-lane-f">${l.state === 'done' ? `${l.leads} lead${l.leads === 1 ? '' : 's'} found` : l.state === 'failed' ? 'Didn’t finish in time, carrying on without it' : ''}</div>
-  </div>`;
+  const n = l.searches.length;
+  const status = l.state === 'done' ? `${l.leads} found` : l.state === 'failed' ? 'took too long, skipped'
+    : n ? `${n} search${n === 1 ? '' : 'es'} so far` : 'starting…';
+  return `<li class="s-lane ${l.state}"><span class="s-lane-dot">${l.state === 'done' ? '✓' : l.state === 'failed' ? '!' : ''}</span>
+    <span class="s-lane-l">${esc(l.label)}</span><span class="s-lane-s">${status}</span></li>`;
 }
 
 function searchPanelHtml() {
   const L = searchLog;
   const lanes = L.order.map((k) => L.lanes[k]);
   const lanesDone = lanes.filter((l) => l.state !== 'running').length;
-  const searches = lanes.reduce((n, l) => n + l.searches.length, 0);
   let head;
   if (L.phase === 'searching') {
     head = `<div class="p2-title">Searching ${lanes.length} places at once</div>
-      <div class="p2-detail">${lanesDone} of ${lanes.length} finished · ${searches} search${searches === 1 ? '' : 'es'} so far</div>
-      <div class="s-lanes">${lanes.map(laneHtml).join('')}</div>`;
+      <div class="p2-detail">${lanesDone} of ${lanes.length} done</div>
+      <ul class="s-lanes">${lanes.map(laneHtml).join('')}</ul>`;
   } else if (L.phase === 'picking') {
     head = `<div class="p2-title">Choosing the best 6–8 for you</div>
-      <div class="p2-detail">Comparing ${L.leads} leads from ${lanes.filter((l) => l.state === 'done').length} searches against your profile.</div>
       <div class="s-rot" id="s-rot">${esc(PICKING_LINES[0])}</div>`;
+  } else if (L.phase === 'links') {
+    head = `<div class="p2-title">Checking that each link works</div>
+      <div class="p2-detail">${Object.keys(L.links).length} of ${L.picks.length} checked</div>`;
   } else {
-    const checked = Object.keys(L.links).length;
-    head = `<div class="p2-title">${L.phase === 'done' ? 'Your shortlist is ready' : 'Opening each link to check it'}</div>
-      <div class="p2-detail">${L.phase === 'done' ? 'Opening your shortlist…' : `${checked} of ${L.picks.length} checked. Dead links are removed before you see them.`}</div>
-      <ol class="s-log">${L.picks.map((p) => {
-        const [cls, label] = LINK_LABEL[L.links[p.id]] ?? ['running', 'opening…'];
-        return `<li class="${cls}"><span class="s-q">${esc(p.title)}</span><span class="s-n">${label}</span></li>`;
-      }).join('')}</ol>`;
+    head = '<div class="p2-title">Your shortlist is ready</div><div class="p2-detail">Opening it now…</div>';
   }
   return `${head}
-    ${L.phase !== 'links' && L.phase !== 'done' && L.titles.length ? `<div class="s-found-h">Spotted so far</div><div class="p2-stream">${L.titles.slice(-8).map((t) => `<span class="p2-item">${esc(t)}</span>`).join('')}</div>` : ''}`;
+    ${(L.phase === 'searching' || L.phase === 'picking') && L.titles.length ? `<div class="s-found-h">Spotted so far</div><div class="p2-stream">${L.titles.slice(-6).map((t) => `<span class="p2-item">${esc(t)}</span>`).join('')}</div>` : ''}`;
 }
 
 function paintSearch() {

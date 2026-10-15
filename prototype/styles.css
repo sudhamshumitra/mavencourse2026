@@ -1052,26 +1052,20 @@ details.more[open] > summary { margin-bottom: .6rem; }
 .s-log li.dead { opacity: .55; }
 .s-log li.dead .s-q { text-decoration: line-through; }
 .s-log li.dead .s-n { color: var(--coral); }
-/* four search lanes, side by side; their rows don't re-animate on every repaint */
-.s-lanes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
-.s-lane { border: 1px solid var(--line); border-radius: var(--r-sm); padding: .6rem .65rem; min-width: 0; }
-.s-lane.running { border-color: var(--grape-soft); box-shadow: inset 0 2px 0 var(--grape); }
-.s-lane.done { border-color: var(--vine-soft); }
-.s-lane.failed { border-color: var(--amber-soft); }
-.s-lane-h { display: flex; align-items: flex-start; gap: .45rem; font-size: .82rem; font-weight: 600; line-height: 1.3; }
-.s-lane-h .s-lane-dot { margin-top: .05rem; }
-.s-lane-dot { width: 1.05rem; height: 1.05rem; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; font-size: .65rem; border: 2px solid var(--grape); color: var(--surface); }
-.s-lane.running .s-lane-dot { animation: pulse 1.4s ease-in-out infinite; }
+/* the search panel is redrawn on every search event, so nothing inside it animates;
+   the pulsing dot in the step list beside it is the only movement */
+#s-panel, #s-panel * { animation: none !important; }
+.s-lanes { list-style: none; margin: .6rem 0 0; padding: 0; display: grid; gap: .4rem; }
+.s-lane { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .6rem; padding: .5rem .7rem;
+  border-radius: var(--r-sm); background: var(--surface-2); font-size: .88rem; }
+.s-lane-l { min-width: 0; font-weight: 600; }
+.s-lane-s { color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.s-lane.done .s-lane-s { color: var(--vine); }
+.s-lane.failed .s-lane-s { color: var(--amber); }
+.s-lane-dot { width: 1.05rem; height: 1.05rem; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; font-size: .65rem;
+  border: 2px solid var(--grape); color: var(--surface); }
 .s-lane.done .s-lane-dot { background: var(--vine); border-color: var(--vine); }
 .s-lane.failed .s-lane-dot { background: var(--amber); border-color: var(--amber); }
-.s-lane .s-log li { animation: none; font-size: .78rem; padding: .3rem .45rem; }
-/* lanes are narrow: query on up to two lines, result count underneath */
-.s-lane .s-log li { flex-direction: column; gap: .1rem; min-width: 0; }
-.s-lane .s-q { white-space: normal; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-.s-lane .s-n { font-size: .72rem; }
-.s-lane-f { font-size: .74rem; color: var(--muted); margin-top: .35rem; min-height: 1em; }
-.s-lane.done .s-lane-f { color: var(--vine); }
-.s-lane.failed .s-lane-f { color: var(--amber); }
 .s-rot { font-size: .92rem; padding: .7rem .8rem; border-radius: var(--r-sm); background: var(--surface-2); box-shadow: inset 3px 0 0 var(--grape); }
 @media (max-width: 640px) { .s-lanes { grid-template-columns: minmax(0, 1fr); } }
 .pipe-bar i { transition: width .6s var(--ease); }
