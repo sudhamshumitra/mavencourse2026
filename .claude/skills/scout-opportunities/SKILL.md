@@ -89,4 +89,4 @@ Profile adjacent field *<field X>* → search "<field X> association annual conf
 - Search from *this* profile's fields and topics. Don't reuse venues from examples or earlier runs unless they genuinely fit.
 
 ## Runtime notes (live: `/api/scout`)
-Claude Sonnet 5 with web search (at most 5 searches), streaming each search to the user as it runs, about a minute in total. It also returns a quick first-pass score per candidate so the shortlist is ranked at once; the full check (extract + brief) runs when the person opens one. Later this becomes the weekly refresh.
+Four searchers run at the same time, one per layer (a, c, d, e), each with at most 3 web searches, streaming each search to the user as it runs. A picking step then chooses the best 6–8 from their leads, and code opens every picked link to check it's live. About a minute in total. It also returns a quick first-pass score per candidate so the shortlist is ranked at once; the full check (extract + brief) runs when the person opens one. Later this becomes the weekly refresh.

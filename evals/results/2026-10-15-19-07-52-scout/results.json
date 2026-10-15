@@ -1,0 +1,399 @@
+{
+  "run": {
+    "at": "2026-10-15T19:07:52.028Z",
+    "commit": "a6c9938+changes",
+    "today": "2026-10-11",
+    "suites": [
+      "scout"
+    ],
+    "judge": false,
+    "repeat": 1,
+    "models": {
+      "main": "claude-sonnet-5",
+      "fast": "claude-haiku-4-5"
+    }
+  },
+  "suites": {
+    "scout": {
+      "criteria": [
+        {
+          "id": "count",
+          "label": "Returns 1–8 candidates",
+          "kind": "case",
+          "target": 1,
+          "passed": 1,
+          "total": 1,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "exploration",
+          "label": "At least one pick from a neighbouring field",
+          "kind": "case",
+          "target": 1,
+          "passed": 1,
+          "total": 1,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "no_past_open",
+          "label": "Nothing past its deadline shown as open",
+          "kind": "item",
+          "target": 1,
+          "passed": 2,
+          "total": 2,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "links_live",
+          "label": "Links open (blocked-by-site excluded)",
+          "kind": "item",
+          "target": 0.9,
+          "passed": 7,
+          "total": 7,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "trace",
+          "label": "Every pick says how it was found",
+          "kind": "item",
+          "target": 1,
+          "passed": 8,
+          "total": 8,
+          "rate": 1,
+          "met": true
+        },
+        {
+          "id": "relevance",
+          "label": "Judge: top-5 relevance ≥ 4 of 5",
+          "kind": "case",
+          "target": 1,
+          "passed": 0,
+          "total": 0,
+          "rate": null,
+          "met": null
+        }
+      ],
+      "usd": 0.658544,
+      "latency_ms": {
+        "p50": 41473,
+        "p95": 41473
+      },
+      "cases": [
+        {
+          "id": "s-ananya",
+          "tags": [
+            "representative"
+          ],
+          "note": "Most-developed persona; corpus has 13 hand-checked opportunities to compare against.",
+          "rows": [
+            {
+              "criterion": "count",
+              "pass": true,
+              "detail": "8 candidates"
+            },
+            {
+              "criterion": "exploration",
+              "pass": true,
+              "detail": "AAS-in-Asia 2027, Kuala Lumpur"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "13th South Asian Media and Cultural Studies Conference 2027"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://comm.cci.fsu.edu/faculty-research/south-asian-media-studies/south-asian-media-and-cultural-studies-conference/"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "Beyond the Mainstream: Dalit Narratives and Narratives of Social Exclusion from Eastern and North-Eastern India (edited volume)"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://call-for-papers.sas.upenn.edu/cfp/2026/04/13/beyond-the-mainstream-dalit-narratives-and-narratives-of-social-exclusion-from"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "Special Issue on Digital Marginalisation, AI Bias, and Cultural Representation in South Asia"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://ojed.org/jump/announcement/view/134"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "Global Media Journal – Indian Edition, Special Issue on Media and Communication Policy"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://gmj.manipal.edu/call-for-papers.html"
+            },
+            {
+              "criterion": "no_past_open",
+              "pass": true,
+              "detail": "AoIR 2027 Flashpoint Symposium (regional, outside Europe/North America): 2026-11-02"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "AoIR 2027 Flashpoint Symposium (regional, outside Europe/North America)"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://aoir.org/call-for-2027-flashpoint-symposium-proposals/"
+            },
+            {
+              "criterion": "no_past_open",
+              "pass": true,
+              "detail": "10th Annual South Asia Conference 2027 (DCU Ireland-India Institute): 2026-11-01"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "10th Annual South Asia Conference 2027 (DCU Ireland-India Institute)"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://www.dcu.ie/ireland-india-institute/news/2026/oct/10th-annual-south-asia-conference-2027"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "AoIR2027 (Rimini, Italy) and AoIR Flashpoint Symposia"
+            },
+            {
+              "criterion": "links_live",
+              "pass": true,
+              "detail": "live: https://aoir.org/eoi_aoir2027/"
+            },
+            {
+              "criterion": "trace",
+              "pass": true,
+              "detail": "AAS-in-Asia 2027, Kuala Lumpur"
+            }
+          ],
+          "ms": 41473,
+          "usd": 0.658544,
+          "output": {
+            "candidates": [
+              {
+                "id": "c-13th-south-asian-media-and-cultural-studies-confer",
+                "url": "https://comm.cci.fsu.edu/faculty-research/south-asian-media-studies/south-asian-media-and-cultural-studies-conference/",
+                "title": "13th South Asian Media and Cultural Studies Conference 2027",
+                "host": "Florida State University School of Communication",
+                "type": "conference",
+                "status": "watch",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "Themed on digital media in South Asia with a caste-speech keynote, hybrid so it fits budget and visa constraints",
+                "exploration": false,
+                "quick": {
+                  "fit": 92,
+                  "standing": 55,
+                  "network": 60,
+                  "outcomes": 65,
+                  "feasibility": 90
+                },
+                "tagline": "Digital Frontiers in South Asia, online option, your exact topic",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "Societies in your field: search 'South Asian studies association annual conference 2027' → FSU SAMCS conference page"
+                ],
+                "link_check": "live"
+              },
+              {
+                "id": "c-beyond-the-mainstream-dalit-narratives-and-narrati",
+                "url": "https://call-for-papers.sas.upenn.edu/cfp/2026/04/13/beyond-the-mainstream-dalit-narratives-and-narratives-of-social-exclusion-from",
+                "title": "Beyond the Mainstream: Dalit Narratives and Narratives of Social Exclusion from Eastern and North-Eastern India (edited volume)",
+                "host": "Dr. Roshni Subba (Univ. of Calcutta) & Injam Ahmed Molla",
+                "type": "journal_call",
+                "status": "watch",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "Edited volume explicitly wants chapters on Dalit digital voices and Partition memory, overlapping three of her topics at once",
+                "exploration": false,
+                "quick": {
+                  "fit": 95,
+                  "standing": 45,
+                  "network": 30,
+                  "outcomes": 70,
+                  "feasibility": 95
+                },
+                "tagline": "An edited volume asking for exactly her chapters-to-be",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "Call-for-papers lists: H-Net/aggregator search for 'digital caste India call for papers' surfaced this UPenn CFP aggregator listing"
+                ],
+                "link_check": "live"
+              },
+              {
+                "id": "c-special-issue-on-digital-marginalisation-ai-bias-a",
+                "url": "https://ojed.org/jump/announcement/view/134",
+                "title": "Special Issue on Digital Marginalisation, AI Bias, and Cultural Representation in South Asia",
+                "host": "Journal of Underrepresented & Minority Progress (JUMP)",
+                "type": "journal_call",
+                "status": "watch",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "Special issue on caste, digital marginalisation and AI bias in South Asia, no travel needed",
+                "exploration": false,
+                "quick": {
+                  "fit": 90,
+                  "standing": 50,
+                  "network": 20,
+                  "outcomes": 65,
+                  "feasibility": 95
+                },
+                "tagline": "Caste, AI bias and South Asia, a direct match with zero travel cost",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "Fellowships and journal calls: search: 'journal special issue call caste digital media content moderation 2026' → found JUMP CFP (also mirrored on UPenn CFP list)"
+                ],
+                "link_check": "live"
+              },
+              {
+                "id": "c-global-media-journal-indian-edition-special-issue-",
+                "url": "https://gmj.manipal.edu/call-for-papers.html",
+                "title": "Global Media Journal – Indian Edition, Special Issue on Media and Communication Policy",
+                "host": "Global Media Journal (Indian Edition, Manipal)",
+                "type": "journal_call",
+                "status": "watch",
+                "deadline_hint": null,
+                "next_expected": null,
+                "relevance": "Indian home-country journal on platform regulation and content moderation, no travel cost at all",
+                "exploration": false,
+                "quick": {
+                  "fit": 78,
+                  "standing": 40,
+                  "network": 15,
+                  "outcomes": 55,
+                  "feasibility": 98
+                },
+                "tagline": "A home-country outlet for platform-moderation work, zero travel",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "Fellowships and journal calls: search: journal special issue caste/content moderation → found GMJ Indian edition CFP on platform regulation and content moderation"
+                ],
+                "link_check": "live"
+              },
+              {
+                "id": "c-aoir-2027-flashpoint-symposium-regional-outside-eu",
+                "url": "https://aoir.org/call-for-2027-flashpoint-symposium-proposals/",
+                "title": "AoIR 2027 Flashpoint Symposium (regional, outside Europe/North America)",
+                "host": "Association of Internet Researchers",
+                "type": "conference",
+                "status": "open",
+                "deadline_hint": "2026-11-02",
+                "next_expected": null,
+                "relevance": "AoIR's regional satellite symposium is designed for scholars outside Europe/North America, a realistic low-cost way into internet studies' key society",
+                "exploration": false,
+                "quick": {
+                  "fit": 80,
+                  "standing": 65,
+                  "network": 75,
+                  "outcomes": 60,
+                  "feasibility": 80
+                },
+                "tagline": "AoIR's own satellite event built for exactly her region and budget",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "Next editions of regular events: search 'AoIR 2027 conference' → found via AoIR news page"
+                ],
+                "link_check": "live"
+              },
+              {
+                "id": "c-10th-annual-south-asia-conference-2027-dcu-ireland",
+                "url": "https://www.dcu.ie/ireland-india-institute/news/2026/oct/10th-annual-south-asia-conference-2027",
+                "title": "10th Annual South Asia Conference 2027 (DCU Ireland-India Institute)",
+                "host": "Dublin City University, Ireland-India Institute",
+                "type": "conference",
+                "status": "open",
+                "deadline_hint": "2026-11-01",
+                "next_expected": null,
+                "relevance": "Smaller South Asia studies meeting where diaspora and media-themed papers can get real feedback without flagship costs",
+                "exploration": false,
+                "quick": {
+                  "fit": 75,
+                  "standing": 45,
+                  "network": 50,
+                  "outcomes": 55,
+                  "feasibility": 70
+                },
+                "tagline": "A smaller South Asia gathering for real feedback, not just prestige",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "Next editions of regular events: search for South Asian studies 2027 meetings → DCU page confirms next edition and abstract call date"
+                ],
+                "link_check": "live"
+              },
+              {
+                "id": "c-aoir2027-rimini-italy-and-aoir-flashpoint-symposia",
+                "url": "https://aoir.org/eoi_aoir2027/",
+                "title": "AoIR2027 (Rimini, Italy) and AoIR Flashpoint Symposia",
+                "host": "Association of Internet Researchers (AoIR)",
+                "type": "conference",
+                "status": "watch",
+                "deadline_hint": null,
+                "next_expected": "Flashpoint Symposium proposals due Nov 2026; AoIR2027 main conference call expected to open through 2027",
+                "relevance": "AoIR is the central internet-studies society for her platform-moderation and creator-culture work, flagging the next full cycle to watch",
+                "exploration": false,
+                "quick": {
+                  "fit": 85,
+                  "standing": 80,
+                  "network": 80,
+                  "outcomes": 60,
+                  "feasibility": 55
+                },
+                "tagline": "The flagship internet-studies society to watch for next cycle",
+                "link_unverified": false,
+                "discovery_trace": [
+                  "Societies in your field: search 'Association of Internet Researchers AoIR 2027 conference' → aoir.org news/flashpoint symposium call"
+                ],
+                "link_check": "live"
+              },
+              {
+                "id": "c-aas-in-asia-2027-kuala-lumpur",
+                "url": "https://www.asianstudies.org/conferences/",
+                "title": "AAS-in-Asia 2027, Kuala Lumpur",
+                "host": "Association for Asian Studies (AAS)",
+                "type": "conference",
+                "status": "watch",
+                "deadline_hint": null,
+                "next_expected": "Abstract calls for AAS-in-Asia 2027 (Kuala Lumpur) typically open roughly a year ahead, likely late 2026",
+                "relevance": "Asian studies, outside her own fields, gives a counterpublics/memory framing a fresh adjacent audience, a genuine exploration pick with budget-friendly regional location",
+                "exploration": true,
+                "quick": {
+                  "fit": 55,
+                  "standing": 70,
+                  "network": 60,
+                  "outcomes": 50,
+                  "feasibility": 75
+                },
+                "tagline": "An Asian-studies gathering in Asia to test her ideas on new ears",
+                "link_unverified": true,
+                "discovery_trace": [
+                  "Societies in your field: search 'Indian Association for Media and Communication Research conference 2026 2027' → asianstudies.org conferences page listing AAS-in-Asia KL 2027"
+                ],
+                "link_check": "blocked"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

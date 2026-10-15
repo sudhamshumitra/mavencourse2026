@@ -1377,7 +1377,18 @@ function startExample(id) {
 }
 
 let searchRun = null;
-const searchLog = { searches: [], titles: [], max: 5, phase: 'searching' };
+// The live search runs four lanes in parallel, then picks, then checks every link. Phases: searching → picking → links → done.
+const SEARCH_LANES = [
+  { key: 'societies', label: 'Societies in your field' }, { key: 'editions', label: 'Next editions of regular events' },
+  { key: 'lists', label: 'Call-for-papers lists' }, { key: 'fellowships', label: 'Fellowships and journal calls' }];
+const freshSearchLog = () => ({ lanes: Object.fromEntries(SEARCH_LANES.map((l) => [l.key, { ...l, state: 'running', searches: [], leads: null }])),
+  order: SEARCH_LANES.map((l) => l.key), titles: [], phase: 'searching', leads: 0, picks: [], links: {}, phaseAt: Date.now() });
+let searchLog = freshSearchLog();
+// What the picking step is actually doing, shown one line at a time so the wait never sits on one sentence.
+const PICKING_LINES = ['Dropping duplicates and calls that have already closed', 'Looking for warning signs of pay-to-present conferences',
+  'Scoring fit, standing, network, outcomes and feasibility for you', 'Picking one from a neighbouring field you might not search for',
+  'Checking cost, visa and budget against what you told us'];
+const LINK_LABEL = { live: ['done', 'live ✓'], no_date: ['warn', 'live, no current date'], blocked: ['warn', 'site blocks checks'], dead: ['dead', 'dead link, removed'] };
 
 /** POST that streams newline-delimited JSON events; resolves with the final "done" event. */
 async function apiStream(path, body, onEvent, timeoutMs = 285000) {
@@ -1420,33 +1431,74 @@ async function apiStream(path, body, onEvent, timeoutMs = 285000) {
   } finally { clearTimeout(timer); }
 }
 
+function searchPct() {
+  const L = searchLog;
+  const lanes = Object.values(L.lanes);
+  if (L.phase === 'done') return 100;
+  if (L.phase === 'links') return 85 + 14 * (Object.keys(L.links).length / Math.max(1, L.picks.length));
+  if (L.phase === 'picking') return Math.min(84, 60 + (Date.now() - L.phaseAt) / 1000);
+  const searches = lanes.reduce((n, l) => n + l.searches.length, 0);
+  return Math.min(60, 5 + 40 * (lanes.filter((l) => l.state !== 'running').length / lanes.length) + 15 * Math.min(1, searches / 12));
+}
+
+function laneHtml(l) {
+  const icon = l.state === 'done' ? '✓' : l.state === 'failed' ? '!' : '';
+  return `<div class="s-lane ${l.state}">
+    <div class="s-lane-h"><span class="s-lane-dot">${icon}</span><span>${esc(l.label)}</span></div>
+    <ol class="s-log">${l.searches.slice(-3).map((s) => `<li class="${s.count == null ? 'running' : 'done'}">
+      <span class="s-q">“${esc(s.query)}”</span><span class="s-n">${s.count == null ? 'searching…' : `${s.count} results`}</span></li>`).join('')
+      || `<li class="running"><span class="s-q muted">${l.state === 'running' ? 'Working out what to search…' : 'No searches'}</span></li>`}</ol>
+    <div class="s-lane-f">${l.state === 'done' ? `${l.leads} lead${l.leads === 1 ? '' : 's'} found` : l.state === 'failed' ? 'Didn’t finish in time, carrying on without it' : ''}</div>
+  </div>`;
+}
+
 function searchPanelHtml() {
   const L = searchLog;
-  const n = L.searches.length;
-  const pct = L.phase === 'done' ? 100 : L.phase === 'picking' ? 92 : Math.min(85, 8 + (n / L.max) * 77);
-  return `<div class="p2-title">${L.phase === 'done' ? `Found ${L.titles.length ? 'these' : ''} for you` : L.phase === 'picking' ? 'Checking dates and scoring each match' : n ? `Search ${n} of up to ${L.max}` : 'Starting the search'}</div>
-    <div class="p2-detail">${L.phase === 'picking' ? 'Checking dates and choosing the 6–8 that fit you best.' : L.phase === 'done' ? 'Opening your shortlist…' : 'Each search looks in a different place: societies, next year’s editions, journals, fellowships.'}</div>
-    <ol class="s-log">${L.searches.map((s, i) => `<li class="${s.count == null && i === n - 1 && L.phase === 'searching' ? 'running' : 'done'}">
-      <span class="s-q">“${esc(s.query)}”</span><span class="s-n">${s.count == null ? 'searching…' : `${s.count} results`}</span></li>`).join('')}</ol>
-    ${L.phase === 'searching' && (!n || L.activity) ? `<div class="p2-detail">${esc(L.activity ?? 'Planning the searches. The first one can take up to a minute.')}</div>` : ''}
-    ${L.titles.length ? `<div class="s-found-h">Spotted so far</div><div class="p2-stream">${L.titles.slice(-8).map((t) => `<span class="p2-item">${esc(t)}</span>`).join('')}</div>` : ''}
-    <span hidden id="s-pct" data-pct="${pct}"></span>`;
+  const lanes = L.order.map((k) => L.lanes[k]);
+  const lanesDone = lanes.filter((l) => l.state !== 'running').length;
+  const searches = lanes.reduce((n, l) => n + l.searches.length, 0);
+  let head;
+  if (L.phase === 'searching') {
+    head = `<div class="p2-title">Searching ${lanes.length} places at once</div>
+      <div class="p2-detail">${lanesDone} of ${lanes.length} finished · ${searches} search${searches === 1 ? '' : 'es'} so far</div>
+      <div class="s-lanes">${lanes.map(laneHtml).join('')}</div>`;
+  } else if (L.phase === 'picking') {
+    head = `<div class="p2-title">Choosing the best 6–8 for you</div>
+      <div class="p2-detail">Comparing ${L.leads} leads from ${lanes.filter((l) => l.state === 'done').length} searches against your profile.</div>
+      <div class="s-rot" id="s-rot">${esc(PICKING_LINES[0])}</div>`;
+  } else {
+    const checked = Object.keys(L.links).length;
+    head = `<div class="p2-title">${L.phase === 'done' ? 'Your shortlist is ready' : 'Opening each link to check it'}</div>
+      <div class="p2-detail">${L.phase === 'done' ? 'Opening your shortlist…' : `${checked} of ${L.picks.length} checked. Dead links are removed before you see them.`}</div>
+      <ol class="s-log">${L.picks.map((p) => {
+        const [cls, label] = LINK_LABEL[L.links[p.id]] ?? ['running', 'opening…'];
+        return `<li class="${cls}"><span class="s-q">${esc(p.title)}</span><span class="s-n">${label}</span></li>`;
+      }).join('')}</ol>`;
+  }
+  return `${head}
+    ${L.phase !== 'links' && L.phase !== 'done' && L.titles.length ? `<div class="s-found-h">Spotted so far</div><div class="p2-stream">${L.titles.slice(-8).map((t) => `<span class="p2-item">${esc(t)}</span>`).join('')}</div>` : ''}`;
 }
 
 function paintSearch() {
   const panel = $('#s-panel');
   if (!panel) return;
   panel.innerHTML = searchPanelHtml();
-  const pct = Number($('#s-pct')?.dataset.pct ?? 0);
-  const bar = $('#pipe-bar');
-  if (bar) bar.style.width = `${pct}%`;
+  paintSearchChrome();
+}
+
+/** The cheap per-second update: progress bar, step list and the picking line. Never touches the panel's lists, so nothing re-animates. */
+function paintSearchChrome() {
   const L = searchLog;
-  const set = (k, cls) => { const el = $(`#s-steps [data-k="${k}"]`); if (el) el.className = cls; };
-  if (L.phase === 'picking') L.pickingAt ??= Date.now();
-  const scoringNow = L.phase === 'picking' && Date.now() - L.pickingAt > 10000;
-  set('search', L.phase === 'searching' ? 'active' : 'done');
-  set('dates', L.phase === 'picking' && !scoringNow ? 'active' : L.phase === 'done' || scoringNow ? 'done' : '');
-  set('score', scoringNow ? 'active' : L.phase === 'done' ? 'done' : '');
+  const bar = $('#pipe-bar');
+  if (bar) bar.style.width = `${searchPct()}%`;
+  const order = ['searching', 'picking', 'links', 'done'];
+  const at = order.indexOf(L.phase);
+  for (const [k, i] of [['search', 0], ['pick', 1], ['links', 2]]) {
+    const el = $(`#s-steps [data-k="${k}"]`);
+    if (el) el.className = at > i ? 'done' : at === i ? 'active' : '';
+  }
+  const rot = $('#s-rot');
+  if (rot) rot.textContent = PICKING_LINES[Math.floor((Date.now() - L.phaseAt) / 3500) % PICKING_LINES.length];
 }
 
 function renderSearching() {
@@ -1461,15 +1513,15 @@ function renderSearching() {
         <div>
           <ol class="pipe2-steps" id="s-steps">
             <li class="done"><span class="p2-dot"></span><span>Reading your interests</span></li>
-            <li class="active" data-k="search"><span class="p2-dot"></span><span>Searching the web</span></li>
-            <li data-k="dates"><span class="p2-dot"></span><span>Checking dates and dropping closed calls</span></li>
-            <li data-k="score"><span class="p2-dot"></span><span>Scoring each match for you</span></li>
+            <li class="active" data-k="search"><span class="p2-dot"></span><span>Searching four places at once</span></li>
+            <li data-k="pick"><span class="p2-dot"></span><span>Choosing the 6–8 that fit you best</span></li>
+            <li data-k="links"><span class="p2-dot"></span><span>Opening each link to check it’s live</span></li>
           </ol>
           <div class="s-fields">
             <div class="s-found-h">Looking in</div>
             ${fields.slice(0, 7).map((f) => `<span class="s-field">${esc(f)}</span>`).join('') || `<span class="s-field">${esc((p.topics?.[0]?.term) ?? 'your topics')}</span>`}
           </div>
-          <p class="tiny muted" style="margin-top:1rem">Usually 1–2 minutes. It runs up to ${searchLog.max} web searches, spot-checks the riskiest links, then picks the best 6–8.</p>
+          <p class="tiny muted" style="margin-top:1rem">Usually about a minute. Four searches run side by side, then the best 6–8 are picked and every link is opened to check it’s still live.</p>
         </div>
         <div class="pipe2-live" aria-live="polite"><div id="s-panel">${searchPanelHtml()}</div><div id="s-out"></div></div>
       </div>
@@ -1477,39 +1529,42 @@ function renderSearching() {
   </section>`;
 }
 
+/** Applies one streamed event from /api/scout to the search log. */
+function onSearchEvent(evt) {
+  const L = searchLog;
+  const lane = L.lanes[evt.lane];
+  if (evt.type === 'start' && evt.lanes) {
+    L.order = evt.lanes.map((l) => l.key);
+    L.lanes = Object.fromEntries(evt.lanes.map((l) => [l.key, L.lanes[l.key] ?? { ...l, state: 'running', searches: [], leads: null }]));
+  }
+  if (evt.type === 'search' && lane) lane.searches.push({ query: evt.query, count: null });
+  if (evt.type === 'results' && lane) {
+    const last = [...lane.searches].reverse().find((s) => s.count == null);
+    if (last) last.count = evt.count;
+    for (const t of evt.titles ?? []) if (!L.titles.includes(t)) L.titles.push(t);
+  }
+  if (evt.type === 'lane_done' && lane) Object.assign(lane, { state: evt.ok ? 'done' : 'failed', leads: evt.leads ?? 0 });
+  if (evt.type === 'phase' && evt.phase === 'picking') Object.assign(L, { phase: 'picking', leads: evt.leads ?? 0, phaseAt: Date.now() });
+  if (evt.type === 'picked') Object.assign(L, { phase: 'links', picks: evt.items ?? [], phaseAt: Date.now() });
+  if (evt.type === 'link') L.links[evt.id] = evt.result;
+  if (evt.type === 'ping') return paintSearchChrome();
+  paintSearch();
+}
+
 async function runSearch() {
   const started = Date.now();
-  let lastScoringNow = false;
   const tick = setInterval(() => {
     const t = $('#s-timer');
     if (!t) return clearInterval(tick);
     t.textContent = `${Math.round((Date.now() - started) / 1000)}s`;
-    // Only repaint the panel when the "scoring" step actually turns active — a full
-    // innerHTML replacement every second would replay the chips' and log rows' pop-in
-    // animations on each tick, which just looks like constant blinking for no reason.
-    if (searchLog.phase === 'picking') {
-      searchLog.pickingAt ??= Date.now();
-      const scoringNow = Date.now() - searchLog.pickingAt > 10000;
-      if (scoringNow !== lastScoringNow) { lastScoringNow = scoringNow; paintSearch(); }
-    }
+    paintSearchChrome();
   }, 1000);
   paintSearch();
   try {
     if (!searchRun) {
-      Object.assign(searchLog, { searches: [], titles: [], phase: 'searching', pickingAt: null, activity: null });
-      searchRun = apiStream('scout', { profile: state.profile }, (evt) => {
-        if (evt.type === 'start') searchLog.max = evt.max_searches ?? searchLog.max;
-        if (evt.type === 'activity') searchLog.activity = evt.label;
-        if (evt.type === 'search') searchLog.searches.push({ query: evt.query, count: null });
-        if (evt.type === 'results') {
-          const last = [...searchLog.searches].reverse().find((s) => s.count == null);
-          if (last) last.count = evt.count;
-          for (const t of evt.titles ?? []) if (!searchLog.titles.includes(t)) searchLog.titles.push(t);
-          if (searchLog.searches.length >= searchLog.max) searchLog.phase = 'picking';
-        }
-        if (evt.type === 'ping' && searchLog.searches.length && searchLog.searches.every((s) => s.count != null)) searchLog.phase = 'picking';
-        paintSearch();
-      });
+      searchLog = freshSearchLog();
+      paintSearch();
+      searchRun = apiStream('scout', { profile: state.profile }, onSearchEvent);
     }
     const { candidates: found } = await searchRun;
     searchRun = null;
@@ -1517,7 +1572,6 @@ async function runSearch() {
     save();
     clearInterval(tick);
     searchLog.phase = 'done';
-    searchLog.titles = found.map((c) => c.title.split(/[—:(]/)[0].trim().slice(0, 60));
     paintSearch();
     setTimeout(() => { if (location.hash === '#/searching') location.hash = '#/feed'; }, 1400);
   } catch (err) {
@@ -1537,7 +1591,7 @@ function candRow(c, rank, top = false) {
     ${scoreBlock(c, true)}
     <div class="lr-main">
       <h3 class="lr-title"><a href="#/brief/${esc(c.id)}">${esc(c.title)}</a></h3>
-      <div class="lr-host">${esc(c.host)}${c.link_unverified ? ' <span class="badge badge-amber" title="Found in search results but not opened yet — the Full check confirms it.">Link not verified yet</span>' : ''}</div>
+      <div class="lr-host">${esc(c.host)}${c.link_unverified ? ` <span class="badge badge-amber" title="${c.link_check === 'no_date' ? 'The page opened but shows no date for this year or next — it may be an old page. The Full check reads it properly.' : 'This site blocked our quick check, so we couldn’t open it — that doesn’t mean it’s wrong. The Full check tries again.'}">${c.link_check === 'no_date' ? 'No current date on page' : 'Link not checked'}</span>` : ''}</div>
       <div class="kicker">${esc(TYPE_CHIP[c.type]?.[1] ?? 'Call')}${nd ? `<span class="dot">·</span>deadline ${fmtDate(nd)}` : ''}
         ${statusBadge(c)}${c.exploration ? '<span class="badge badge-sky">Outside your usual field</span>' : ''}</div>
       ${c.status === 'watch' && c.next_expected ? `<div class="next-exp">Next call: ${esc(c.next_expected)}</div>` : ''}
@@ -1962,7 +2016,7 @@ const SLIDES = [
     'An ordinary chatbot answers from memory. An agent can use tools, such as a web search, and decide for itself what to do next, like a research assistant who goes to the library. When Ananya searches, Grapevine decides what to look for, reads the results, follows up on promising leads and stops when it has enough.'],
     notes: [
       ['While I build it', 'When I put together the example researchers, I run the same search myself in Claude Code and keep what it finds.'],
-      ['On the live site', 'When you search with your own profile, Grapevine runs the search for you there and then. It can make up to five web searches and open up to two pages before it has to report back.']] },
+      ['On the live site', 'When you search with your own profile, Grapevine runs the search for you there and then. Four searchers each get up to three web searches, so twelve in all, and each decides for itself what to look for within its share.']] },
   { ch: 'Module 2 · Skills', title: 'Written instructions it follows every time', art: 'skills', body: [
     'A skill is a set of instructions for one job, written in plain English like a recipe card. Grapevine has seven of them, one for each step: understanding your profile, finding opportunities, reading a call page, working out the cost, finding funding and scholarships, writing the verdict, and checking the facts.'],
     notes: [
@@ -1976,11 +2030,12 @@ const SLIDES = [
   { ch: 'Module 4 · Multi-agent systems', title: 'Several helpers working at once', art: 'multi', body: [
     'Some jobs go faster when several helpers each take a part at the same time and one of them brings the work together. When Ananya opens a call, one helper works out the cost, one looks for grants and one double-checks the facts, all at once. A fourth reads their reports and writes her answer.'],
     notes: [
-      ['On the live site', 'This happens every time someone opens a call. Each of the three helpers has its own time limit. If one of them runs out of time or fails, the others carry on, and the answer still arrives with a short note saying which part is missing.']] },
+      ['On the live site', 'This happens every time someone opens a call. Each of the three helpers has its own time limit. If one of them runs out of time or fails, the others carry on, and the answer still arrives with a short note saying which part is missing.'],
+      ['The search works the same way', 'When Ananya searches, four helpers look at once: one in the societies of her field, one for the next editions of regular events, one in call-for-papers lists and one for fellowships and journal calls. Another picks the best six to eight from what they found, and then plain code opens every link to drop the dead ones. In my first test, running side by side cut a search from almost three minutes to under one, and the screen shows each helper’s searches as they happen.']] },
   { ch: 'Module 4 · Evals', title: 'Marking its work against an answer key', art: 'evals', body: [
     'An eval is a test that tells you whether the AI still does its job well after you change something. Like an exam with an answer key, I mark the AI against real call pages and example researchers where I already know the right answer, and a second AI marks the written verdicts like a strict examiner.'],
     notes: [
-      ['While I build it', 'I keep 46 test cases where I already know the right answer: real call pages with their correct dates and fees, and example researchers with notes on what a good verdict should say. I run them by hand whenever I change an instruction, because each run costs a little money. There are also 61 free checks that run automatically every time I upload code to GitHub.'],
+      ['While I build it', 'I keep 46 test cases where I already know the right answer: real call pages with their correct dates and fees, and example researchers with notes on what a good verdict should say. I run them by hand whenever I change an instruction, because each run costs a little money. There are also 69 free checks that run automatically every time I upload code to GitHub.'],
       ['On the live site', 'The live site doesn’t run the tests. Instead, every search and every verdict writes a short line to a log saying how long it took, whether any step had to fall back, and what it cost. Nothing about the person is written down.'],
       ['What the tests show', 'Reading call pages is in good shape: in the last run it found all 22 fees and 17 of the 18 deadlines. The written verdicts aren’t there yet, because the examiner still finds some of them adding details that aren’t in any of the sources.', 'warn']] },
   { ch: 'Module 5 · Retrieval', title: 'Not needed yet, and when it would be', art: 'rag', body: [
@@ -1996,8 +2051,9 @@ const SLIDES = [
     'Grapevine uses two Claude models from Anthropic. Haiku 4.5 is small, quick and cheap, so it does the jobs that happen often and follow clear rules: suggesting topics while you fill in your profile, reading a call page, adding up the cost and checking quotes against the page.',
     'Sonnet 5 is slower and costs more, but it is better at judgement. It runs the web search, hunts for funding and scholarships, and writes the final verdict.'],
     notes: [
-      ['On the live site', 'Each model also covers for the other. If a website blocks our server from opening a call page, Sonnet 5 opens the page itself instead. If the search for funding and scholarships runs out of time, Haiku 4.5 steps in and works from the saved list for that country.'],
-      ['While I build it', 'In Claude Code, the helper that reads each call page runs on Haiku and the helper that checks the facts runs on Sonnet. The AI examiner in my tests is Sonnet 5.']] },
+      ['On the live site', 'Each model also covers for the other. If a website blocks our server from opening a call page, Sonnet 5 opens the page itself instead. If the search for funding and scholarships runs out of time, Haiku 4.5 steps in and works from the saved list for that country. And if Sonnet 5 can’t finish picking your shortlist in time, Haiku 4.5 picks it instead.'],
+      ['While I build it', 'In Claude Code, the helper that reads each call page runs on Haiku and the helper that checks the facts runs on Sonnet. The AI examiner in my tests is Sonnet 5.'],
+      ['What it costs', 'Sonnet 5 costs about twice as much as Haiku 4.5 for the same amount of text, and each web search adds one US cent. In my test runs, suggesting topics cost a fraction of a cent, reading a call page about one cent, the full check on one call 15 to 30 cents, and a whole search around 65 cents. So a person who searches once and opens three calls costs roughly one to one and a half dollars.']] },
   { ch: 'Try it', title: 'Try it yourself', art: 'end', go: true, sources: true, body: [
     'You can open Ananya’s shortlist and look around, or describe your own research and let Grapevine search for you. The examples are saved ahead of time, so they work even when the live search is switched off.'] },
 ];

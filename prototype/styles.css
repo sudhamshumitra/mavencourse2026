@@ -1034,6 +1034,27 @@ details.more[open] > summary { margin-bottom: .6rem; }
 .s-fields { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; }
 .s-fields .s-found-h { width: 100%; margin-top: 1.2rem; }
 .s-field { font-size: .78rem; padding: .25rem .6rem; border-radius: 999px; border: 1px solid var(--line-2); color: var(--ink-2); }
+.s-log li.warn .s-n { color: var(--amber); }
+.s-log li.dead { opacity: .55; }
+.s-log li.dead .s-q { text-decoration: line-through; }
+.s-log li.dead .s-n { color: var(--coral); }
+/* four search lanes, side by side; their rows don't re-animate on every repaint */
+.s-lanes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+.s-lane { border: 1px solid var(--line); border-radius: var(--r-sm); padding: .6rem .65rem; min-width: 0; }
+.s-lane.running { border-color: var(--grape-soft); box-shadow: inset 0 2px 0 var(--grape); }
+.s-lane.done { border-color: var(--vine-soft); }
+.s-lane.failed { border-color: var(--amber-soft); }
+.s-lane-h { display: flex; align-items: center; gap: .45rem; font-size: .82rem; font-weight: 600; }
+.s-lane-dot { width: 1.05rem; height: 1.05rem; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; font-size: .65rem; border: 2px solid var(--grape); color: var(--surface); }
+.s-lane.running .s-lane-dot { animation: pulse 1.4s ease-in-out infinite; }
+.s-lane.done .s-lane-dot { background: var(--vine); border-color: var(--vine); }
+.s-lane.failed .s-lane-dot { background: var(--amber); border-color: var(--amber); }
+.s-lane .s-log li { animation: none; font-size: .78rem; padding: .3rem .45rem; }
+.s-lane-f { font-size: .74rem; color: var(--muted); margin-top: .35rem; min-height: 1em; }
+.s-lane.done .s-lane-f { color: var(--vine); }
+.s-lane.failed .s-lane-f { color: var(--amber); }
+.s-rot { font-size: .92rem; padding: .7rem .8rem; border-radius: var(--r-sm); background: var(--surface-2); box-shadow: inset 3px 0 0 var(--grape); }
+@media (max-width: 640px) { .s-lanes { grid-template-columns: minmax(0, 1fr); } }
 .pipe-bar i { transition: width .6s var(--ease); }
 
 .next-exp { margin-top: .35rem; font-size: .82rem; font-weight: 600; color: var(--sky); }

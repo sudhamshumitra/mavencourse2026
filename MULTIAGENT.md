@@ -1,4 +1,4 @@
-# Module 4: the live "Full check" as a multi-agent system
+# Module 4: the live "Full check" and the live search as multi-agent systems
 
 ## Before
 
@@ -112,8 +112,57 @@ grounding worker is the first live use of it.
 - Confirmed the static site (`npx serve prototype`) and the baked-in example shortlists
   (`prototype/corpus.js`) are untouched — this change only touches the live `/api/brief` route.
 
+## The live search uses the same pattern
+
+### Before
+`/api/scout` was **one Sonnet call** with `web_search_20260209` (≤5) and `web_fetch` (≤4): search,
+think, search again, open pages, then write the list, all in a row. Two problems showed up on the
+deployed site:
+
+- **Slow, and slower with a bigger budget.** Every search was another round trip in one loop. The
+  11 Oct scout eval had a median of 162s; on the site, one run hit the browser's 200s limit after
+  only 2 of its 5 searches.
+- **A blank progress screen.** The `20260209` search tool runs its searches inside code execution,
+  so the stream had no `web_search` blocks to report. The user saw one unchanging box for a minute or more.
+
+### After
+`scoutOpportunities` in `api/_lib/scout.js` is an orchestrator with three steps:
+
+```
+/api/scout = ORCHESTRATOR (streams NDJSON: lane_start / search / results / lane_done / phase / picked / link)
+  ├─ parallel ─┬─ societies lane      Sonnet + web_search_20250305 (≤3) — skill layer (a)
+  │            ├─ editions lane       Sonnet + web_search (≤3)          — layer (c), recurrence
+  │            ├─ lists lane          Sonnet + web_search (≤3)          — layer (d), aggregators
+  │            └─ fellowships lane    Sonnet + web_search (≤3)          — layer (e), open search
+  ├─ dedupe leads across lanes (by URL)
+  ├─ sequential ─ merge               Sonnet, no tools — picks 6-8 by lead number, scores, statuses
+  └─ parallel ── link checks          plain code, fetchPage on every pick at once — live / no_date / blocked / dead
+```
+
+| Step | Deadline | On failure/timeout |
+|---|---|---|
+| Each lane | 45s | that lane contributes no leads, the UI marks it "didn't finish", the others carry on. Fatal only if all four fail |
+| Merge | 30s | Haiku retries the same pick in 20s; if that fails too, leads in lane order, **unscored** (no invented scores) |
+| Each link check | 10s | "blocked": kept, marked unverified. Only a 404/410 or an unknown host counts as dead, and dead links are dropped |
+
+- **Guardrail: the model can't invent a URL.** The merge step picks lead *numbers*; URL, title and host
+  are copied from the lead in code (`picksToCandidates`). A pick that names a missing lead is dropped.
+- **Why the basic search tool.** `web_search_20250305` puts each search in its own streamed block, so
+  every lane's queries and result counts reach the screen as they happen. Each lane only makes three
+  searches, so dynamic filtering would save little.
+- **Link checks moved out of the model.** The old prompt spent its web_fetch budget on the riskiest
+  2–4 links and flagged the rest unverified. Code now opens every pick at once with the same
+  private-address guards as a pasted link, so "not verified" only appears when a site blocks us or
+  the page shows no current date.
+- **Result:** one golden case on 15 Oct (`evals/results/2026-10-15-19-07-52-scout`) passed 19/19 checks
+  in 41.5s for $0.66, against a 162s median and about $0.53 per case before. That is a single run,
+  not a benchmark.
+- **Tests:** `evals/unit/scout.test.mjs` stubs the lanes, merge and page loader to cover a failed lane,
+  a hung lane, all lanes failing, merge failing twice, dead/blocked/undated links, and the URL guardrail.
+
 ## Files
 
+- `api/scout.js` — the streaming search route; `api/_lib/scout.js` — its orchestrator (`scoutOpportunities`)
 - `api/brief.js` — the streaming route; `api/_lib/check/orchestrate.js` — the orchestrator (`runBrief`)
 - `api/_lib/check/{cost,funding,grounding,compose}.js` — the four workers
 - `api/_lib/check/shared.js` — sanitation helpers shared across them
