@@ -1,7 +1,7 @@
 import './setup.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { scoutOpportunities, checkLink, picksToCandidates, LANES } from '../../api/_lib/scout.js';
+import { scoutOpportunities, checkLink, deadlinesAllPassed, picksToCandidates, LANES } from '../../api/_lib/scout.js';
 import { UserFacingError } from '../../api/_lib/claude.js';
 
 // Stub lanes, merge and page loader: no model calls, no network.
@@ -81,4 +81,30 @@ test('scout: format and visa guesses are kept only when they are a known value',
   ], usage });
   const { candidates } = await run({ merge });
   assert.deepEqual(candidates.map((c) => [c.format, c.visa_needed]), [['online', 'no'], ['in_person', 'yes'], [null, null]]);
+});
+
+test('deadlinesAllPassed: a call whose deadlines have all gone by is spotted before the full check', () => {
+  const today = '2026-10-15';
+  const bollywood = 'Global Bollywood: edited volume. Abstract deadline: 30 December 2025. Full papers due April 2, 2026. Publication expected 2027.';
+  assert.equal(deadlinesAllPassed(bollywood, today), true);
+  assert.equal(deadlinesAllPassed('Submissions close 2025-11-01.', today), true);
+  // one future deadline is enough to keep it open
+  assert.equal(deadlinesAllPassed('Abstract deadline: 30 December 2025. Extended deadline: 15 November 2026.', today), false);
+  // dates with no deadline wording nearby are ignored (an event date, a "last updated" line)
+  assert.equal(deadlinesAllPassed('The conference took place on 12 March 2025. Last updated 1 May 2025.', today), false);
+  // no readable dates, or only ambiguous ones, decides nothing
+  assert.equal(deadlinesAllPassed('Abstracts due 03/04/2026.', today), false);
+  assert.equal(deadlinesAllPassed('Rolling applications, no deadline.', today), false);
+  assert.equal(deadlinesAllPassed('', today), false);
+});
+
+test('checkLink: an opened page with only past deadlines is "closed", and scout moves it out of open', async () => {
+  const page = { title: 'CFP', text: 'Abstract submission deadline: 1 March 2026. Conference 2026.' };
+  assert.equal(await checkLink('https://x.org', { load: async () => page }), 'closed');
+  assert.equal(await checkLink('https://x.org', { load: async () => ({ title: 'CFP', text: 'Abstracts due 1 March 2027.' }) }), 'live');
+  const loadPage = async (url) => (url.includes('editions') ? page : livePage());
+  const { candidates } = await run({ loadPage });
+  const closed = candidates.filter((c) => c.url.includes('editions'));
+  assert.ok(closed.length && closed.every((c) => c.link_check === 'closed' && c.status === 'watch' && !c.link_unverified));
+  assert.ok(candidates.filter((c) => !c.url.includes('editions')).every((c) => c.status === 'open'));
 });

@@ -1622,7 +1622,7 @@ function candRow(c, rank, top = false) {
     ${scoreBlock(c, true)}
     <div class="lr-main">
       <h3 class="lr-title"><a href="#/brief/${esc(c.id)}">${esc(c.title)}</a></h3>
-      <div class="lr-host">${esc(c.host)}${c.link_unverified ? ` <span class="badge badge-amber" title="${c.link_check === 'no_date' ? 'The page opened but shows no date for this year or next — it may be an old page. The Full check reads it properly.' : 'This site blocked our quick check, so we couldn’t open it — that doesn’t mean it’s wrong. The Full check tries again.'}">${c.link_check === 'no_date' ? 'No current date on page' : 'Link not checked'}</span>` : ''}</div>
+      <div class="lr-host">${esc(c.host)}${c.link_unverified ? ` <span class="badge badge-amber" title="${c.link_check === 'no_date' ? 'The page opened but shows no date for this year or next — it may be an old page. The Full check reads it properly.' : 'This site blocked our quick check, so we couldn’t open it — that doesn’t mean it’s wrong. The Full check tries again.'}">${c.link_check === 'no_date' ? 'No current date on page' : 'Link not checked'}</span>` : ''}${c.link_check === 'closed' ? ' <span class="badge badge-amber" title="Every deadline on the call page is in the past. The full check reads the page properly and confirms it.">Deadline seems to have passed</span>' : ''}</div>
       <div class="kicker">${esc(TYPE_CHIP[c.type]?.[1] ?? 'Call')}${nd ? `<span class="dot">·</span>deadline ${fmtDate(nd)}` : ''}
         ${statusBadge(c)}${c.exploration ? '<span class="badge badge-sky">Outside your usual field</span>' : ''}</div>
       ${c.status === 'watch' && c.next_expected ? `<div class="next-exp">Next call: ${esc(c.next_expected)}</div>` : ''}
@@ -1638,8 +1638,12 @@ function renderMineFeed() {
     .sort((a, b) => (b.priority ? priorityOf(b) : -1) - (a.priority ? priorityOf(a) : -1));
   const checked = all.filter((o) => !o.unscored).length;
   const stale = !state.search || state.search.key !== profileKey();
-  const openNow = all.filter((o) => o.status === 'open').length;
-  const row = (o, i) => (o.unscored ? candRow(o, i + 1, i < 3) : oppRow(o, i + 1, i < 3));
+  // Unchecked results only have the search's guess; checked ones have dates read from the page.
+  const canApply = (o) => (o.unscored ? o.status === 'open' && !(o.deadline_hint && daysUntil(o.deadline_hint) < 0) : actionable(o));
+  const open = all.filter(canApply);
+  const notOpen = all.filter((o) => !canApply(o));
+  const openNow = open.length;
+  const row = (o, i, top = false) => (o.unscored ? candRow(o, i + 1, top) : oppRow(o, i + 1, top));
 
   return `<div class="wrap wrap-feed">
     <header class="feed-head">
@@ -1656,7 +1660,10 @@ function renderMineFeed() {
 
     ${!state.search ? `<div class="empty"><p><strong>No search yet.</strong></p><a class="btn btn-primary btn-sm" href="#/searching">Search for my topics</a></div>` : ''}
 
-    ${all.length ? `<h2 class="list-h">Best first</h2><div class="ledger-list">${all.map(row).join('')}</div>` : ''}
+    ${open.length ? `<h2 class="list-h">Open now <span>best first; the full check confirms each date from the call page</span></h2>
+      <div class="ledger-list">${open.map((o, i) => row(o, i, i < 3)).join('')}</div>` : ''}
+    ${notOpen.length ? `<h2 class="list-h">Not open right now <span>a good fit can sit here: watch for the next edition, or attend only</span></h2>
+      <div class="ledger-list">${notOpen.map((o, i) => row(o, open.length + i)).join('')}</div>` : ''}
     ${settingsHiddenNote(hiddenBySettingsCount())}
 
     <form class="paste-box" id="paste-form" style="margin-top:2.4rem">

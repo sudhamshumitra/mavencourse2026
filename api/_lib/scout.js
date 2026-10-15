@@ -177,15 +177,46 @@ function leadsAsCandidates(leads) {
     quick: null, discovery_trace: [`${LANES.find((x) => x.key === l.lane)?.label ?? l.lane}: ${l.trace || 'found by search'}`] }));
 }
 
+const MONTH = '(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\\.?';
+const MONTH_NO = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+// Only unambiguous formats: "30 December 2025", "December 30, 2025", "2025-12-30". Never "03/04/2026".
+const DATE_FORMATS = [
+  [new RegExp(`\\b(\\d{1,2})(?:st|nd|rd|th)?\\s+(?:of\\s+)?${MONTH},?\\s+(20\\d\\d)\\b`, 'gi'), (m) => [m[3], MONTH_NO[m[2].slice(0, 3).toLowerCase()], m[1]]],
+  [new RegExp(`\\b${MONTH}\\s+(\\d{1,2})(?:st|nd|rd|th)?,?\\s+(20\\d\\d)\\b`, 'gi'), (m) => [m[3], MONTH_NO[m[1].slice(0, 3).toLowerCase()], m[2]]],
+  [/\b(20\d\d)-(\d{2})-(\d{2})\b/g, (m) => [m[1], +m[2], m[3]]],
+];
+const DEADLINE_WORDS = /deadline|due\b|submi|abstracts?\b|proposals?\b|applications?\b|apply|closes|closing|no later than|extended/i;
+
+/**
+ * True when the page shows at least one deadline and every deadline it shows is before `todayIso`.
+ * A date counts as a deadline when deadline wording appears in the 100 characters before it.
+ * No deadlines found, or any deadline today or later, means false: the full check decides those.
+ */
+export function deadlinesAllPassed(text, todayIso) {
+  const found = [];
+  for (const [re, parts] of DATE_FORMATS) {
+    for (const m of String(text ?? '').matchAll(re)) {
+      const [y, mo, d] = parts(m).map(Number);
+      if (!(mo >= 1 && mo <= 12 && d >= 1 && d <= 31)) continue;
+      if (!DEADLINE_WORDS.test(text.slice(Math.max(0, m.index - 100), m.index))) continue;
+      found.push(`${y}-${String(mo).padStart(2, '0')}-${String(d).padStart(2, '0')}`);
+    }
+  }
+  return found.length > 0 && found.every((iso) => iso < todayIso);
+}
+
 /**
  * Opens one picked link and says what it found:
- * live (opened, mentions this year or next) · no_date (opened, no current date) · blocked (couldn't open; inconclusive) · dead (404/410 or no such site).
+ * live (opened, mentions this year or next) · closed (opened, every deadline on it has passed) ·
+ * no_date (opened, no current date) · blocked (couldn't open; inconclusive) · dead (404/410 or no such site).
  */
 export async function checkLink(url, { load = fetchPage, ms = TIMEOUTS.link } = {}) {
   try {
     const page = await deadline(() => load(url), ms);
+    const text = `${page.title ?? ''} ${page.text ?? ''}`;
+    if (deadlinesAllPassed(text, today())) return 'closed';
     const y = Number(today().slice(0, 4));
-    return new RegExp(`\\b(${y}|${y + 1})\\b`).test(`${page.title ?? ''} ${page.text ?? ''}`) ? 'live' : 'no_date';
+    return new RegExp(`\\b(${y}|${y + 1})\\b`).test(text) ? 'live' : 'no_date';
   } catch (err) {
     return /\((404|410)\)|could not be found/i.test(String(err?.message)) ? 'dead' : 'blocked';
   }
@@ -269,7 +300,9 @@ export async function scoutOpportunities(raw, { onEvent = () => {}, signal, deps
     return result;
   }));
   candidates = candidates
-    .map((c, i) => ({ ...c, link_check: results[i], link_unverified: results[i] !== 'live' }))
+    .map((c, i) => (results[i] === 'closed'
+      ? { ...c, status: c.status === 'open' ? 'watch' : c.status, link_check: 'closed', link_unverified: false }
+      : { ...c, link_check: results[i], link_unverified: results[i] !== 'live' }))
     .filter((c) => c.link_check !== 'dead');
   for (const r of results) metrics.links[r] = (metrics.links[r] ?? 0) + 1;
   if (!candidates.length) throw new UserFacingError(502, 'Every link the search found was dead. Try again.');
