@@ -41,6 +41,9 @@ async function sendStream(params, onEvent, signal) {
       : getClient().messages.stream(params, { signal });
     stream.on('contentBlock', (b) => {
       if (b.type === 'server_tool_use' && b.name === 'web_search') onEvent({ type: 'search', query: String(b.input?.query ?? '').slice(0, 160) });
+      // The 20260209 tools can run searches from inside code execution, so the block isn't always named web_search.
+      if (b.type === 'server_tool_use' && b.name === 'web_fetch') onEvent({ type: 'activity', label: `Opening ${String(b.input?.url ?? 'a page').replace(/^https?:\/\//, '').slice(0, 70)}` });
+      if (b.type === 'server_tool_use' && b.name !== 'web_search' && b.name !== 'web_fetch') onEvent({ type: 'activity', label: 'Running several searches at once…' });
       if (b.type === 'web_search_tool_result') {
         const list = Array.isArray(b.content) ? b.content : [];
         onEvent({ type: 'results', count: list.length, titles: list.slice(0, 3).map((r) => String(r.title ?? '').slice(0, 90)).filter(Boolean) });
