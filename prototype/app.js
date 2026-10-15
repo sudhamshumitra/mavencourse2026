@@ -476,15 +476,22 @@ function needsAccessCode() {
 
 function renderAccessGate() {
   $('#topbar').hidden = true;
-  return `<div class="onb gate">
-    <div class="onb-panel">
+  return `<div class="gate">
+    <div class="gate-card onb-panel">
+      <div class="gate-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.2" fill="currentColor"/>
+        </svg>
+      </div>
       <h2>Enter your access code</h2>
-      <p class="muted">Searching with your own research details uses the live AI, so it needs an access code. You can still <a href="#/example">see an example</a> without one.</p>
-      <form id="gate-form" class="input-row" style="margin-top:1rem">
-        <input type="password" id="gate-code" placeholder="Access code" autocomplete="off" required />
+      <p class="gate-help">Live search uses real AI, so it’s behind a code for now.</p>
+      <form id="gate-form" class="gate-form">
+        <input type="password" id="gate-code" placeholder="Access code" aria-label="Access code" autocomplete="off" required autofocus />
         <button class="btn btn-primary" type="submit">Continue</button>
       </form>
-      <p class="small" id="gate-msg" role="alert" style="margin-top:.6rem"></p>
+      <p class="small gate-msg" id="gate-msg" role="alert"></p>
+      <div class="gate-or"><span>No code?</span></div>
+      <a class="btn btn-ghost gate-alt" href="#/example">See an example researcher instead</a>
     </div>
   </div>`;
 }

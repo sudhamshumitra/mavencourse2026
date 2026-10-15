@@ -301,7 +301,7 @@ a  { color: inherit; }
 .field { display: grid; gap: .4rem; margin-bottom: 1.1rem; }
 .field label { font-size: .84rem; font-weight: 600; color: var(--ink-2); }
 .field .hint { font-size: .8rem; color: var(--muted); }
-input[type="text"], input[type="search"], input[type="number"], select, textarea {
+input[type="text"], input[type="search"], input[type="number"], input[type="password"], select, textarea {
   font-family: var(--sans); font-size: .95rem; color: var(--ink);
   padding: .68rem .9rem; border: 1px solid var(--line-2); border-radius: var(--r);
   background: var(--surface); width: 100%;
@@ -319,6 +319,20 @@ input:focus, select:focus, textarea:focus {
   outline: none; border-color: var(--grape);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--grape) 16%, transparent);
 }
+/* access-code gate: one centred card, sized like the onboarding panels */
+.gate { min-height: calc(100dvh - 2rem); display: grid; place-items: center; box-sizing: border-box; padding: 2rem 1.1rem 4rem; }
+.gate-card { box-sizing: border-box; width: 100%; max-width: 480px; text-align: center; padding: clamp(1.8rem, 5vw, 2.8rem);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--sh-3); }
+.gate-icon { width: 60px; height: 60px; margin: 0 auto 1.2rem; display: grid; place-items: center; border-radius: 18px; background: var(--grape-soft); color: var(--grape); }
+.gate-card h2 { font-size: clamp(1.6rem, 3vw, 2rem); margin: 0 0 .5rem; }
+.gate-help { color: var(--muted); margin: 0 0 1.6rem; }
+.gate-form { display: grid; gap: .7rem; }
+.gate-form input { font-size: 1.05rem; padding: .9rem 1.1rem; text-align: center; letter-spacing: .08em; }
+.gate-form .btn { width: 100%; justify-content: center; padding-block: .85rem; }
+.gate-msg { min-height: 1.3em; margin: .7rem 0 0; color: var(--ink-2); }
+.gate-or { display: flex; align-items: center; gap: .8rem; margin: 1.2rem 0 1rem; color: var(--muted); font-size: .82rem; }
+.gate-or::before, .gate-or::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+.gate-alt { width: 100%; justify-content: center; }
 .input-row { display: flex; gap: .6rem; align-items: stretch; }
 .input-row .btn { flex-shrink: 0; }
 
