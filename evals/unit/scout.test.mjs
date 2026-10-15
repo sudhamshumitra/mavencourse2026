@@ -74,3 +74,11 @@ test('checkLink: a page that never answers is "blocked", not dead', async () => 
   assert.equal(await checkLink('https://x.org', { load: () => new Promise(() => {}), ms: 30 }), 'blocked');
   assert.equal(await checkLink('https://x.org', { load: async () => { throw new UserFacingError(400, 'That website could not be found.'); } }), 'dead');
 });
+
+test('scout: format and visa guesses are kept only when they are a known value', async () => {
+  const merge = async (_input, leads) => ({ picks: [
+    { lead: 0, format: 'online', visa_needed: 'no' }, { lead: 1, format: 'in_person', visa_needed: 'yes' }, { lead: 2, format: 'unsure', visa_needed: 'maybe' },
+  ], usage });
+  const { candidates } = await run({ merge });
+  assert.deepEqual(candidates.map((c) => [c.format, c.visa_needed]), [['online', 'no'], ['in_person', 'yes'], [null, null]]);
+});

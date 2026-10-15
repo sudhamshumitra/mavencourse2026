@@ -56,8 +56,11 @@ RUNTIME INSTRUCTIONS (web app, live search: the picking step)
   "quick":{"fit":0-100,"standing":0-100,"network":0-100 or null for journal calls,"outcomes":0-100,"feasibility":0-100}
   Feasibility should reflect this person's country, budget, visa situation and whether they can still apply.
 - "tagline": one honest line, at most 90 characters. Never use the word "venue" in anything the user reads.
+- "format": how the event runs (in_person, online or hybrid), from the lead and what you know; "unsure" if you can't tell. Journal calls are "online".
+- "visa_needed": whether THIS person, on their passport, would need a visa to attend in person: "no" for online events, events in their own country, or visa-free travel; "yes" if they clearly would; "unsure" otherwise.
+- Respect the person's settings when picking: if constraints.visa_tolerance is "none", strongly prefer picks with visa_needed "no"; if constraints.format is "online", strongly prefer online or hybrid picks.
 - Reply with ONLY one JSON object, no other text:
-{"picks":[{"lead":0,"type":"conference|journal_call|fellowship","status":"open|attend-only|watch","deadline_hint":"YYYY-MM-DD (a FUTURE date) or null","next_expected":"only for watch, or null","relevance":"one plain sentence: why this fits this person","exploration":false,"quick":{"fit":0,"standing":0,"network":0,"outcomes":0,"feasibility":0},"tagline":""}]}`;
+{"picks":[{"lead":0,"type":"conference|journal_call|fellowship","status":"open|attend-only|watch","deadline_hint":"YYYY-MM-DD (a FUTURE date) or null","next_expected":"only for watch, or null","relevance":"one plain sentence: why this fits this person","exploration":false,"quick":{"fit":0,"standing":0,"network":0,"outcomes":0,"feasibility":0},"tagline":"","format":"in_person|online|hybrid|unsure","visa_needed":"yes|no|unsure"}]}`;
 
 const TYPES = ['conference', 'journal_call', 'fellowship'];
 const STATUSES = ['open', 'attend-only', 'watch'];
@@ -87,6 +90,9 @@ export function sanitize(list) {
         next_expected: status === 'watch' && c.next_expected ? String(c.next_expected).slice(0, 160) : null,
         relevance: String(c.relevance ?? '').slice(0, 300),
         exploration: c.exploration === true,
+        // Best guesses from the search, used to apply the person's format and visa settings before the full check.
+        format: ['in_person', 'online', 'hybrid'].includes(c.format) ? c.format : null,
+        visa_needed: ['yes', 'no'].includes(c.visa_needed) ? c.visa_needed : null,
         quick: Object.fromEntries(['fit', 'standing', 'network', 'outcomes', 'feasibility'].map((k) => {
           const v = Number(c.quick?.[k]);
           return [k, Number.isFinite(v) && c.quick?.[k] !== null ? Math.max(0, Math.min(100, Math.round(v))) : null];

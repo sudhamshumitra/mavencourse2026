@@ -619,9 +619,10 @@ function stepPractical() {
 
   return `<h2 class="onb-q">Where are you, and what can you manage?</h2>
     <p class="onb-help">This decides fee tiers, the currency costs are shown in, and whether a trip means a visa.
-      Things outside your limits are still shown, just ranked lower and labelled.</p>
+      Things outside your limits are ranked lower and labelled, unless you choose to hide them below.</p>
 
-    <div class="field"><label>Career stage</label>${pick('stage', draft.career_stage, stages)}</div>
+    <div class="field"><label>Career stage <span class="req">required</span></label>${pick('stage', draft.career_stage, stages)}
+      <span class="hint">Decides student fee rates, which calls you're eligible for, and which workshops are searched.</span></div>
 
     <div class="grid3">
       ${geoField('country', 'Based in', 'Country you live and work in', 'Where you are now — sets your fee tier and what counts as "local".')}
@@ -640,13 +641,14 @@ function stepPractical() {
     </div>
 
     <div class="field"><label>Format</label>${pick('format', c.format,
-      [['any', 'Either', 'In person or online'], ['in_person', 'In person', 'Travel is the point'], ['online', 'Online only', 'No travel']])}</div>
+      [['any', 'Either', 'In person or online'], ['in_person', 'In person', 'Travel is the point'], ['online', 'Online only', 'Hide in-person events']])}</div>
 
     <div class="field"><label>Visas</label>${pick('visatol', c.visa_tolerance,
-      [['any', 'Anywhere', 'Visas are fine'], ['prefer_none', 'Prefer easy', 'Rank visa-free higher'], ['none', 'Visa-free only', 'Hide the rest']])}</div>
+      [['any', 'Anywhere', 'Visas are fine'], ['prefer_none', 'Prefer easy', 'Hard visas rank lower'], ['none', 'Visa-free only', 'Hide ones needing a visa']])}</div>
 
     <div class="onb-actions">
-      <button class="btn btn-primary btn-lg" data-act="finish">Find my opportunities →</button>
+      <button class="btn btn-primary btn-lg" data-act="finish" ${draft.career_stage ? '' : 'disabled'}>Find my opportunities →</button>
+      ${draft.career_stage ? '' : '<span class="small muted">Pick your career stage first.</span>'}
       <button class="btn btn-quiet" data-act="back">Back</button>
     </div>`;
 }
@@ -790,6 +792,7 @@ function onboardingEvents(root) {
       case 'format': draft.constraints.format = btn.dataset.v; repaint(); break;
       case 'visatol': draft.constraints.visa_tolerance = btn.dataset.v; repaint(); break;
       case 'finish': {
+        if (!draft.career_stage) { toast({ emoji: '🎓', title: 'Pick your career stage', body: 'It sets fee rates and which calls you can apply to.' }); break; }
         const isExample = EXAMPLES.some((e) => e.id === draft.id);
         draft.currency ||= 'USD';
         draft.constraints.format ||= 'any';
@@ -896,15 +899,35 @@ function runPipeline() {
 
 let feedFilter = 'all';
 
+/** Why the person's own format/visa settings hide this call, or null. Uses the full check's facts once a call
+ *  has been opened, and the search's best guess before that (unknown never hides anything). */
+function hiddenBySettings(o) {
+  const c = state.profile.constraints ?? {};
+  const visa = o.visa?.required ?? (o.unscored ? o.visa_needed : null);
+  if (c.visa_tolerance === 'none' && visa === 'yes') return 'visa';
+  const format = o.unscored ? o.format : o.location?.format;
+  if (c.format === 'online' && format === 'in_person') return 'format';
+  return null;
+}
+
+/** "Hiding 2 that need a visa · change" — so a setting never silently empties the feed. */
+function settingsHiddenNote(n) {
+  if (!n) return '';
+  const c = state.profile.constraints;
+  const why = [c.visa_tolerance === 'none' && 'need a visa', c.format === 'online' && 'are in person only'].filter(Boolean).join(' or ');
+  return `<p class="small muted" style="margin-top:1.4rem">Hiding ${n} that ${why}, because of your settings. <a href="#/profile">Change</a></p>`;
+}
+
 function visibleOpportunities() {
   let list = allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.status !== 'stale');
   if (!state.showIneligible) list = list.filter((o) => o.eligible !== 'no');
-  if (state.profile.constraints.visa_tolerance === 'none') list = list.filter((o) => o.visa?.required !== 'yes');
+  list = list.filter((o) => !hiddenBySettings(o));
   if (feedFilter === 'saved') list = list.filter((o) => state.saved.includes(o.id));
   else if (feedFilter !== 'all') list = list.filter((o) => o.type === feedFilter);
   return list.sort((a, b) => priorityOf(b) - priorityOf(a));
 }
 
+const hiddenBySettingsCount = () => allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.status !== 'stale' && hiddenBySettings(o)).length;
 const hiddenIneligible = () => allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.status !== 'stale' && o.eligible === 'no').length;
 
 function renderFeed() {
@@ -961,6 +984,7 @@ function renderFeed() {
     ${nIneligible ? `<p class="small muted" style="margin-top:1.4rem">
       ${state.showIneligible ? 'Showing' : 'Hiding'} ${nIneligible} you can't apply to.
       <button class="btn btn-quiet btn-sm" data-act="toggle-inelig">${state.showIneligible ? 'Hide them' : 'Show them'}</button></p>` : ''}
+    ${settingsHiddenNote(hiddenBySettingsCount())}
 
     <form class="paste-box" id="paste-form" style="margin-top:2.4rem">
       <span class="paste-label">Know about one that's missing? Paste its link.</span>
@@ -1610,7 +1634,7 @@ function candRow(c, rank, top = false) {
 }
 
 function renderMineFeed() {
-  const all = allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.status !== 'stale')
+  const all = allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.status !== 'stale' && !hiddenBySettings(o))
     .sort((a, b) => (b.priority ? priorityOf(b) : -1) - (a.priority ? priorityOf(a) : -1));
   const checked = all.filter((o) => !o.unscored).length;
   const stale = !state.search || state.search.key !== profileKey();
@@ -1633,6 +1657,7 @@ function renderMineFeed() {
     ${!state.search ? `<div class="empty"><p><strong>No search yet.</strong></p><a class="btn btn-primary btn-sm" href="#/searching">Search for my topics</a></div>` : ''}
 
     ${all.length ? `<h2 class="list-h">Best first</h2><div class="ledger-list">${all.map(row).join('')}</div>` : ''}
+    ${settingsHiddenNote(hiddenBySettingsCount())}
 
     <form class="paste-box" id="paste-form" style="margin-top:2.4rem">
       <span class="paste-label">Know about one that's missing? Paste its link.</span>
@@ -2051,7 +2076,7 @@ const SLIDES = [
   { ch: 'Module 4 · Evals', title: 'Marking its work against an answer key', art: 'evals', body: [
     'Tests with known answers, re-run after every change. An AI examiner marks the verdicts.'],
     notes: [
-      ['While I build it', ['46 paid test cases, run by hand', '69 free checks on every upload']],
+      ['While I build it', ['46 paid test cases, run by hand', '70 free checks on every upload']],
       ['On the live site', 'Each search and verdict logs time, fallbacks and cost. Nothing about the person.'],
       ['What the tests show', ['Reading pages: 22 of 22 fees, 17 of 18 deadlines', 'Verdicts: some still add details from no source'], 'warn']] },
   { ch: 'Module 5 · Retrieval', title: 'Not needed yet, and when it would be', art: 'rag', body: [
