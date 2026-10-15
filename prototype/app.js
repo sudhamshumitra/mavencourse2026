@@ -302,7 +302,7 @@ const srcQuote = (q) => (q ? `<details class="src"><summary>source</summary><div
 const TYPE_CHIP = { conference: ['🎤', 'Conference'], journal_call: ['📄', 'Journal call'], fellowship: ['🎓', 'Fellowship'] };
 const STATUS_BADGE = {
   'attend-only': ['badge-amber', 'Can attend, not present'],
-  watch: ['badge-sky', 'Next edition'],
+  watch: ['badge-sky', 'Not open · next edition'],
   stale: ['badge-coral', 'May be out of date'],
 };
 const statusBadge = (o) => { const b = STATUS_BADGE[o.status]; return b ? `<span class="badge ${b[0]}">${b[1]}</span>` : ''; };
@@ -907,6 +907,8 @@ function renderFeed() {
   const flagged = list.filter((o) => o.predatory_flag);
   const top = ranked.filter(actionable).slice(0, 3);
   const rest = ranked.filter((o) => !top.includes(o));
+  const alsoOpen = rest.filter(actionable);
+  const notOpen = rest.filter((o) => !actionable(o));
   const nIneligible = hiddenIneligible();
   const soon = ranked.map(futureDeadline).filter((d) => d && daysUntil(d.date) <= 30).length;
   const funded = ranked.filter((o) => openFunding(o).length).length;
@@ -939,8 +941,11 @@ function renderFeed() {
     ${top.length ? `<h2 class="list-h">Apply now</h2>
       <div class="ledger-list">${top.map((o, i) => oppRow(o, i + 1, true)).join('')}</div>` : ''}
 
-    ${rest.length ? `<h2 class="list-h">Also worth a look <span>closed this year, next edition, or lower fit</span></h2>
-      <div class="ledger-list">${rest.map((o, i) => oppRow(o, top.length + i + 1)).join('')}</div>` : ''}
+    ${alsoOpen.length ? `<h2 class="list-h">Also open <span>you can apply, a lower priority than the above</span></h2>
+      <div class="ledger-list">${alsoOpen.map((o, i) => oppRow(o, top.length + i + 1)).join('')}</div>` : ''}
+
+    ${notOpen.length ? `<h2 class="list-h">Not open right now <span>a good fit can sit here: watch for the next edition, or attend only</span></h2>
+      <div class="ledger-list">${notOpen.map((o, i) => oppRow(o, top.length + alsoOpen.length + i + 1)).join('')}</div>` : ''}
 
     ${flagged.length ? `<h2 class="list-h">Be careful <span>no traceable scholarly record</span></h2>
       <div class="ledger-list">${flagged.map((o, i) => oppRow(o, ranked.length + i + 1)).join('')}</div>` : ''}
