@@ -2053,13 +2053,12 @@ const SLIDES = [
   { ch: 'Module 6 · Guardrails', title: 'Rules it can’t be talked out of', art: 'guard', body: [
     'Limits on the AI. The strongest are in code, which it can’t argue with.'],
     notes: [
-      ['On the live site', ['Access code and an hourly limit', 'Private addresses blocked', 'Code does the money sums, not the AI']],
-      ['Spotting scams', ['The AI flags warning signs, like pay-to-publish', 'Code caps scams at 30/100 and old calls at 40']],
-      ['Not fully solved', ['A planted page still got a wrong visa claim repeated', 'The last test missed the one scam page'], 'warn']] },
+      ['On the live site', ['Access code and an hourly limit', 'Private addresses blocked', 'Costs are added up by the app, not guessed by the AI']],
+      ['Spotting scams', ['The AI flags warning signs, like pay-to-publish', 'A likely scam never scores above 30 out of 100, so it can’t reach the top', 'A call not updated in years never scores above 40']]] },
   { ch: 'AI models', title: 'Which AI does which job', art: 'models', body: [
     [`<strong>Haiku 4.5</strong>, quick and cheap: topics, reading pages, cost, quote checks`, `<strong>Sonnet 5</strong>, better judgement: search, funding, verdict`]],
     notes: [
-      ['Backing each other up', ['Site blocks us: Sonnet opens the page', 'Funding search too slow: Haiku uses the saved list', 'Picking too slow: Haiku picks']],
+      ['Backing each other up', ['Haiku reads call pages, but if a website blocks our server, Sonnet opens the page instead', 'If Sonnet’s funding search runs out of time, Haiku uses the saved list of funders', 'If Sonnet takes too long to pick the shortlist, Haiku picks it']],
       ['While I build it', 'Reader on Haiku, checker on Sonnet, examiner Sonnet 5.'],
       ['What it costs', ['Sonnet ≈ 2× Haiku; 1¢ per web search', 'Topics under 1¢ · reading a page ≈ 1¢', 'Full check 15–30¢ · a search ≈ 65¢', 'One search + 3 calls ≈ $1–1.50']]] },
   { ch: 'Try it', title: 'Try it yourself', art: 'end', go: true, sources: true, body: [
