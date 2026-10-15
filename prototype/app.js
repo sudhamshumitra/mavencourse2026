@@ -1422,7 +1422,7 @@ function startExample(id) {
 let searchRun = null;
 // The live search runs four lanes in parallel, then picks, then checks every link. Phases: searching → picking → links → done.
 const SEARCH_LANES = [
-  { key: 'societies', label: 'Societies in your field' }, { key: 'editions', label: 'Next year’s editions' },
+  { key: 'societies', label: 'Main conferences' }, { key: 'editions', label: 'Next year’s editions' },
   { key: 'lists', label: 'Event listings' }, { key: 'fellowships', label: 'Fellowships and journal calls' }];
 const freshSearchLog = () => ({ lanes: Object.fromEntries(SEARCH_LANES.map((l) => [l.key, { ...l, state: 'running', searches: [], leads: null }])),
   order: SEARCH_LANES.map((l) => l.key), titles: [], phase: 'searching', leads: 0, picks: [], links: {}, phaseAt: Date.now() });

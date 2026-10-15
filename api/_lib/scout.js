@@ -10,7 +10,7 @@ import { SKILLS } from './prompts.js';
 import { fetchPage } from './fetchPage.js';
 
 export const LANES = [
-  { key: 'societies', label: 'Societies in your field',
+  { key: 'societies', label: 'Main conferences',
     brief: 'Layer (a), the society graph: the learned societies and associations that organise this person\'s fields and adjacent fields internationally, regionally and in their home country, and their annual meetings, preconferences and early-career workshops.' },
   { key: 'editions', label: 'Next year’s editions',
     brief: 'Layer (c), recurrence: the NEXT edition (this year or next) of recurring conferences, workshops and summer schools in these fields, including the edition pages of well-known regional meetings.' },
