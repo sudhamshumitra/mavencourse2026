@@ -1879,13 +1879,20 @@ const ART = {
     ${pop(5, `${fig(330, 232, { bot: true, s: 0.5, arms: 'point', flip: true })}<circle cx="308" cy="196" r="7" class="gv-line gv-w3"/><path d="M303 201l-6 6" class="gv-line gv-w3"/>`)}
     ${T(10, 230, 'Each helper starts with a clean desk', 'gv-ts gv-muted', 'start')}`),
 
-  multi: () => svg('Three helpers work out cost, grants and facts at the same time, and a fourth writes the answer.', `
-    ${T(110, 18, 'All three start at the same time', 'gv-ts gv-muted')}
-    ${['Cost: ₹82k – ₹1.65L', 'Grants: 2 she fits', 'Facts: all checked ✓'].map((l, i) => { const y0 = 34 + i * 64;
-      return `${pop(i, `${fig(24, y0 + 54, { bot: true, s: 0.42 })}<rect x="48" y="${y0 + 12}" width="120" height="34" rx="8" class="gv-box"/>${boxText(48, y0 + 12, 120, 34, l)}`)}${line(170, y0 + 29, 222, 150, 3)}`; }).join('')}
-    ${fig(250, 206, { bot: true, s: 0.66, arms: 'give' })}
-    ${line(272, 150, 290, 132, 5)}
-    ${pop(6, `<rect x="292" y="66" width="60" height="80" rx="4" class="gv-paper"/>${T(322, 84, ['Her', 'answer'], 'gv-ts gv-b')}<path d="M300 112h44M300 122h44M300 132h28" class="gv-faint"/>`)}`),
+  multi: () => svg('Top: when she searches, four helpers search at once, one picks the best six to eight, and code checks every link. Bottom: when she opens a call, three helpers work out cost, grants and facts at once, and a fourth writes her answer.', `
+    ${T(180, 14, 'When she searches: four look at once', 'gv-ts gv-b')}
+    ${['Societies', 'Next year', 'CFP lists', 'Fellowships'].map((l, i) => { const x = 6 + i * 88;
+      return `${box(x, 24, 80, 28, l, i)}${line(x + 40, 53, 160, 71, 4)}`; }).join('')}
+    ${box(96, 72, 128, 28, 'Picks the best 6–8', 5)}
+    ${line(225, 86, 243, 86, 6)}
+    ${box(244, 72, 110, 28, 'Links checked ✓', 7)}
+    <path d="M8 113H352" class="gv-faint" stroke-dasharray="4 6"/>
+    ${T(180, 132, 'When she opens a call: three at once', 'gv-ts gv-b')}
+    ${['Cost: ₹82k – ₹1.65L', 'Grants: 2 she fits', 'Facts: all checked ✓'].map((l, i) => { const y = 142 + i * 32;
+      return `${box(8, y, 126, 26, l, 8 + i)}${line(135, y + 13, 167, 182, 11)}`; }).join('')}
+    ${box(168, 162, 92, 40, ['A fourth', 'writes it up'], 12)}
+    ${line(261, 182, 283, 182, 13)}
+    ${pop(14, `<rect x="284" y="144" width="62" height="78" rx="4" class="gv-paper"/>${T(315, 162, ['Her', 'answer'], 'gv-ts gv-b')}<path d="M292 190h46M292 200h46M292 210h30" class="gv-faint"/>`)}`),
 
   evals: () => svg('Left, a test sheet I mark by hand while building. Right, the live site’s log, one line per search or verdict with its time and cost.', `
     ${T(92, 18, 'While I build it', 'gv-ts gv-b')}${T(272, 18, 'On the live site', 'gv-ts gv-b')}
@@ -2028,7 +2035,7 @@ const SLIDES = [
       ['While I build it', 'When I build the example shortlists in Claude Code, each call page goes to its own reading helper, and several of them work side by side. Afterwards a separate checking helper goes through every saved call. It opens each page again and makes sure that every date and fee we quote really is on the page and really says what we claim. Anything that fails is relabelled “inferred” so you know to check it yourself, and every failure is written up in a report. This is the full check, and I run it before every demo.'],
       ['On the live site', 'The live site doesn’t use these Claude Code helpers, but it keeps the same idea: each call page is read in a request of its own. When Ananya opens a call, a smaller version of the check runs on that one call only. The code opens the page again and looks for each quoted sentence word for word, and then a quicker AI model confirms that each sentence it found really gives the date or fee we show. Anything that doesn’t pass is shown as “inferred” instead of “✓ verified”. It doesn’t re-check the rest of the collection, and it doesn’t keep a report.']] },
   { ch: 'Module 4 · Multi-agent systems', title: 'Several helpers working at once', art: 'multi', body: [
-    'Some jobs go faster when several helpers each take a part at the same time and one of them brings the work together. When Ananya opens a call, one helper works out the cost, one looks for grants and one double-checks the facts, all at once. A fourth reads their reports and writes her answer.'],
+    'Some jobs go faster when several helpers each take a part at the same time and one of them brings the work together. When Ananya searches, four helpers each look in a different place at once, and another picks the best of what they found. When she opens a call, one helper works out the cost, one looks for grants and one double-checks the facts, all at once. A fourth reads their reports and writes her answer.'],
     notes: [
       ['On the live site', 'This happens every time someone opens a call. Each of the three helpers has its own time limit. If one of them runs out of time or fails, the others carry on, and the answer still arrives with a short note saying which part is missing.'],
       ['The search works the same way', 'When Ananya searches, four helpers look at once: one in the societies of her field, one for the next editions of regular events, one in call-for-papers lists and one for fellowships and journal calls. Another picks the best six to eight from what they found, and then plain code opens every link to drop the dead ones. In my first test, running side by side cut a search from almost three minutes to under one, and the screen shows each helper’s searches as they happen.']] },
