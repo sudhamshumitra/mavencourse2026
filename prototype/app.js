@@ -918,6 +918,29 @@ function settingsHiddenNote(n) {
   return `<p class="small muted" style="margin-top:1.4rem">Hiding ${n} that ${why}, because of your settings. <a href="#/profile">Change</a></p>`;
 }
 
+function filterBar() {
+  const filters = [['all', 'All'], ['conference', 'Conferences'], ['journal_call', 'Journal calls'],
+    ['fellowship', 'Fellowships'], ['saved', `Saved · ${state.saved.length}`]];
+  return `<div class="filters">
+        ${filters.map(([v, l]) => `<button class="filter" data-act="filter" data-v="${v}" aria-pressed="${feedFilter === v}">${l}</button>`).join('')}
+      </div>`;
+}
+
+function ineligibleNote(n) {
+  return n ? `<p class="small muted" style="margin-top:1.4rem">
+      ${state.showIneligible ? 'Showing' : 'Hiding'} ${n} you can't apply to.
+      <button class="btn btn-quiet btn-sm" data-act="toggle-inelig">${state.showIneligible ? 'Hide them' : 'Show them'}</button></p>` : '';
+}
+
+/** The empty state when a filter, not the search, leaves nothing to show. */
+function emptyFilterHtml() {
+  return `<div class="empty"><span class="big" aria-hidden="true">🍇</span>
+        <p><strong>Nothing here yet.</strong></p>
+        <p class="small">${feedFilter === 'saved' ? 'Save something and it shows up here and in your Tracker.' : 'You have dismissed everything in this view.'}</p>
+        ${feedFilter !== 'all' ? '<button class="btn btn-ghost btn-sm" data-act="filter" data-v="all">Show all</button>' : ''}
+      </div>`;
+}
+
 function visibleOpportunities() {
   let list = allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.status !== 'stale');
   if (!state.showIneligible) list = list.filter((o) => o.eligible !== 'no');
@@ -946,9 +969,6 @@ function renderFeed() {
   const first = state.profile.name === 'You' ? null : esc(state.profile.name.split(' ')[0]);
   const goals = (state.profile.goals ?? []).map((g) => GOALS.find((x) => x.id === g)?.label.toLowerCase()).filter(Boolean);
 
-  const filters = [['all', 'All'], ['conference', 'Conferences'], ['journal_call', 'Journal calls'],
-    ['fellowship', 'Fellowships'], ['saved', `Saved · ${state.saved.length}`]];
-
   return `<div class="wrap wrap-feed">
     <header class="feed-head">
       <div class="eyebrow">Example researcher · real calls gathered ${fmtDate(exampleSet().gathered_at)} · <a href="#/example">show another example</a></div>
@@ -957,17 +977,11 @@ function renderFeed() {
     </header>
 
     <div class="feed-bar">
-      <div class="filters">
-        ${filters.map(([v, l]) => `<button class="filter" data-act="filter" data-v="${v}" aria-pressed="${feedFilter === v}">${l}</button>`).join('')}
-      </div>
+      ${filterBar()}
       <p class="feed-note">Ranked by ${goals.length ? goals.join(', ') : 'your profile'} · <a href="#/profile">change</a> · <a href="#/about/questions">how scores work</a></p>
     </div>
 
-    ${list.length === 0 ? `<div class="empty"><span class="big" aria-hidden="true">🍇</span>
-        <p><strong>Nothing here yet.</strong></p>
-        <p class="small">${feedFilter === 'saved' ? 'Save something and it shows up here and in your Tracker.' : 'You have dismissed everything in this view.'}</p>
-        ${feedFilter !== 'all' ? '<button class="btn btn-ghost btn-sm" data-act="filter" data-v="all">Show all</button>' : ''}
-      </div>` : ''}
+    ${list.length === 0 ? emptyFilterHtml() : ''}
 
     ${top.length ? `<h2 class="list-h">Apply now</h2>
       <div class="ledger-list">${top.map((o, i) => oppRow(o, i + 1, true)).join('')}</div>` : ''}
@@ -981,9 +995,7 @@ function renderFeed() {
     ${flagged.length ? `<h2 class="list-h">Be careful <span>no traceable scholarly record</span></h2>
       <div class="ledger-list">${flagged.map((o, i) => oppRow(o, ranked.length + i + 1)).join('')}</div>` : ''}
 
-    ${nIneligible ? `<p class="small muted" style="margin-top:1.4rem">
-      ${state.showIneligible ? 'Showing' : 'Hiding'} ${nIneligible} you can't apply to.
-      <button class="btn btn-quiet btn-sm" data-act="toggle-inelig">${state.showIneligible ? 'Hide them' : 'Show them'}</button></p>` : ''}
+    ${ineligibleNote(nIneligible)}
     ${settingsHiddenNote(hiddenBySettingsCount())}
 
     <form class="paste-box" id="paste-form" style="margin-top:2.4rem">
@@ -1634,23 +1646,28 @@ function candRow(c, rank, top = false) {
 }
 
 function renderMineFeed() {
-  const all = allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.status !== 'stale' && !hiddenBySettings(o))
-    .sort((a, b) => (b.priority ? priorityOf(b) : -1) - (a.priority ? priorityOf(a) : -1));
-  const checked = all.filter((o) => !o.unscored).length;
+  const found = allOpportunities().filter((o) => !state.dismissed.includes(o.id) && o.status !== 'stale' && !hiddenBySettings(o));
+  // Same filtering as the examples; results with no quick score at all go last.
+  const all = visibleOpportunities().sort((a, b) => (b.priority ? priorityOf(b) : -1) - (a.priority ? priorityOf(a) : -1));
+  const flagged = all.filter((o) => o.predatory_flag);
+  const ranked = all.filter((o) => !o.predatory_flag);
+  const checked = found.filter((o) => !o.unscored).length;
   const stale = !state.search || state.search.key !== profileKey();
   // Unchecked results only have the search's guess; checked ones have dates read from the page.
   const canApply = (o) => (o.unscored ? o.status === 'open' && !(o.deadline_hint && daysUntil(o.deadline_hint) < 0) : actionable(o));
-  const open = all.filter(canApply);
-  const notOpen = all.filter((o) => !canApply(o));
-  const openNow = open.length;
+  const open = ranked.filter(canApply);
+  const notOpen = ranked.filter((o) => !canApply(o));
+  const openNow = found.filter((o) => !o.predatory_flag && o.eligible !== 'no' && canApply(o)).length;
   const row = (o, i, top = false) => (o.unscored ? candRow(o, i + 1, top) : oppRow(o, i + 1, top));
 
   return `<div class="wrap wrap-feed">
     <header class="feed-head">
       <div class="eyebrow">Live search${state.search ? ` · ${fmtDate(state.search.at.slice(0, 10))}` : ''}</div>
       <h1>Your shortlist</h1>
-      <p class="feed-summary"><span>${all.length} found for your topics</span><span class="dot">·</span><span><b class="${openNow ? 'warm' : ''}">${openNow}</b> you can apply to now</span><span class="dot">·</span><span><b class="green">${checked}</b> fully checked</span></p>
+      <p class="feed-summary"><span>${found.length} found for your topics</span><span class="dot">·</span><span><b class="${openNow ? 'warm' : ''}">${openNow}</b> you can apply to now</span><span class="dot">·</span><span><b class="green">${checked}</b> fully checked</span></p>
     </header>
+
+    ${state.search ? `<div class="feed-bar">${filterBar()}</div>` : ''}
 
     <div class="feed-bar">
       <p class="feed-note">Quick scores come from the search. Open one for the full check: dates, cost, funding and visa, read from the call page.
@@ -1664,6 +1681,10 @@ function renderMineFeed() {
       <div class="ledger-list">${open.map((o, i) => row(o, i, i < 3)).join('')}</div>` : ''}
     ${notOpen.length ? `<h2 class="list-h">Not open right now <span>a good fit can sit here: watch for the next edition, or attend only</span></h2>
       <div class="ledger-list">${notOpen.map((o, i) => row(o, open.length + i)).join('')}</div>` : ''}
+    ${flagged.length ? `<h2 class="list-h">Be careful <span>no traceable scholarly record</span></h2>
+      <div class="ledger-list">${flagged.map((o, i) => row(o, ranked.length + i)).join('')}</div>` : ''}
+    ${state.search && found.length && !all.length ? emptyFilterHtml() : ''}
+    ${ineligibleNote(hiddenIneligible())}
     ${settingsHiddenNote(hiddenBySettingsCount())}
 
     <form class="paste-box" id="paste-form" style="margin-top:2.4rem">
