@@ -55,7 +55,7 @@ let userState = null;
 
 function enterExample(ex) {
   if (state.mode !== 'example') userState = state;
-  state = { ...structuredClone(defaultState), theme: state.theme, mode: 'example', exampleId: ex.id, profile: structuredClone(ex.profile) };
+  state = { ...structuredClone(defaultState), theme: state.theme, mode: 'example', viewingExample: true, exampleId: ex.id, profile: structuredClone(ex.profile) };
 }
 
 function leaveExample() {
@@ -2039,6 +2039,12 @@ let lastRenderedHash = null;
 function render() {
   const hash = location.hash.replace(/^#/, '');
   const app = $('#app');
+
+  // Nothing to show until the user has filled in a profile or opened an example (the default seed profile is not theirs).
+  if (/^\/(feed|tracker|profile|brief\/)/.test(hash) && !state.onboarded && !state.viewingExample) {
+    location.replace('#/');
+    return;
+  }
 
   let html;
   const brief = hash.match(/^\/brief\/(.+)$/);
