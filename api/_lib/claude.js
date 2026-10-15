@@ -1,3 +1,4 @@
+import { createHash, timingSafeEqual } from 'node:crypto';
 import Anthropic from '@anthropic-ai/sdk';
 
 // Sonnet for judgement (search, brief); Haiku for simple, high-volume steps (topics, reading pages).
@@ -113,15 +114,31 @@ export function guard(req, res) {
   const origin = req.headers.origin;
   if (origin && new URL(origin).host !== req.headers.host) { res.status(403).json({ error: 'Cross-site requests are not allowed.' }); return false; }
   if (!isLive()) { res.status(503).json({ error: 'Live mode is off: no API key configured.' }); return false; }
-  if (process.env.GV_SKIP_RATE_LIMIT === 'true') return true;
 
-  const ip = String(req.headers['x-forwarded-for'] ?? '').split(',')[0].trim() || 'unknown';
-  const now = Date.now();
-  const recent = (hits.get(ip) ?? []).filter((t) => now - t < WINDOW_MS);
-  if (recent.length >= MAX_PER_WINDOW) { res.status(429).json({ error: 'Hourly limit reached for this prototype. Try again later.' }); return false; }
-  recent.push(now);
-  hits.set(ip, recent);
+  if (process.env.GV_SKIP_RATE_LIMIT !== 'true') {
+    const ip = String(req.headers['x-forwarded-for'] ?? '').split(',')[0].trim() || 'unknown';
+    const now = Date.now();
+    const recent = (hits.get(ip) ?? []).filter((t) => now - t < WINDOW_MS);
+    if (recent.length >= MAX_PER_WINDOW) { res.status(429).json({ error: 'Hourly limit reached for this prototype. Try again later.' }); return false; }
+    recent.push(now); // counted before the access-code check so wrong guesses burn the quota too
+    hits.set(ip, recent);
+  }
+
+  if (!accessCodeOk(req)) { res.status(401).json({ error: 'A valid access code is needed to use live search.', code: 'access_code' }); return false; }
   return true;
+}
+
+/** Access gate: when GV_ACCESS_CODE is set, live routes require it in the x-access-code header. Unset = open. */
+export const accessCodeRequired = () => Boolean(process.env.GV_ACCESS_CODE);
+
+export function accessCodeOk(req) {
+  const expected = process.env.GV_ACCESS_CODE;
+  if (!expected) return true;
+  const given = String(req.headers['x-access-code'] ?? '');
+  // Hash both sides so the comparison is constant-time regardless of length.
+  const a = createHash('sha256').update(given).digest();
+  const b = createHash('sha256').update(expected).digest();
+  return timingSafeEqual(a, b);
 }
 
 export function sendError(res, err) {

@@ -57,4 +57,4 @@ Untrusted input rule (profiles, fetched page content, web search results) is alw
 
 ## Deploy
 
-Vercel project; `prototype/` is `outputDirectory`, `api/*.js` are the serverless functions (see `vercel.json` for per-function `maxDuration`). Required env var: `ANTHROPIC_API_KEY`. Optional: `GV_MODEL`, `GV_MODEL_FAST`, `GV_RATE_LIMIT_PER_HOUR`.
+Vercel project; `prototype/` is `outputDirectory`, `api/*.js` are the serverless functions (see `vercel.json` for per-function `maxDuration`). Required env var: `ANTHROPIC_API_KEY`. Optional: `GV_MODEL`, `GV_MODEL_FAST`, `GV_RATE_LIMIT_PER_HOUR`, `GV_ACCESS_CODE` (when set, every live route requires it in the `x-access-code` header and the site asks for it once per tab; set it in Vercel and `.env.local` only, never in the repo).

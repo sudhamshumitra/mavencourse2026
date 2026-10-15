@@ -37,7 +37,9 @@ function load() {
   try {
     const raw = localStorage.getItem(KEY);
     if (!raw) return structuredClone(defaultState);
-    return { ...structuredClone(defaultState), ...JSON.parse(raw) };
+    const saved = JSON.parse(raw);
+    if (saved.mode === 'example') return structuredClone(defaultState); // older builds saved example browsing; discard it
+    return { ...structuredClone(defaultState), ...saved };
   } catch {
     return structuredClone(defaultState);
   }
@@ -48,7 +50,22 @@ function save() {
   try { localStorage.setItem(KEY, JSON.stringify(state)); } catch { /* private mode — session only */ }
 }
 
+/** The user's own state, parked while an example is open so the example never touches their profile, feed or saved calls. */
+let userState = null;
+
+function enterExample(ex) {
+  if (state.mode !== 'example') userState = state;
+  state = { ...structuredClone(defaultState), theme: state.theme, mode: 'example', exampleId: ex.id, profile: structuredClone(ex.profile) };
+}
+
+function leaveExample() {
+  if (state.mode !== 'example') return;
+  state = userState ?? { ...structuredClone(defaultState), theme: state.theme };
+  userState = null;
+}
+
 function resetAll() {
+  userState = null;
   state = structuredClone(defaultState);
   try { localStorage.removeItem(KEY); } catch { /* ignore */ }
 }
@@ -371,6 +388,7 @@ function oppRow(o, rank, top = false) {
    ============================================================ */
 
 function renderWelcome() {
+  leaveExample(); // Home ends an example visit: back to your own (or empty) state
   $('#topbar').hidden = true;
   return `<section class="hero">
     <div class="hero-inner">
@@ -449,7 +467,47 @@ function progressHtml() {
   return `<div class="onb-progress"><span class="onb-step">Step ${onbStep + 1} of ${STEPS.length} · ${STEPS[onbStep]}</span>${dots}</div>`;
 }
 
+/** True when the server needs an access code and this tab hasn't had one accepted yet. */
+function needsAccessCode() {
+  if (!(LIVE && GATED)) return false;
+  try { return !sessionStorage.getItem('gv_access'); } catch { return true; }
+}
+
+function renderAccessGate() {
+  $('#topbar').hidden = true;
+  return `<div class="onb gate">
+    <div class="onb-panel">
+      <h2>Enter your access code</h2>
+      <p class="muted">Searching with your own research details uses the live AI, so it needs an access code. You can still <a href="#/example">see an example</a> without one.</p>
+      <form id="gate-form" class="input-row" style="margin-top:1rem">
+        <input type="password" id="gate-code" placeholder="Access code" autocomplete="off" required />
+        <button class="btn btn-primary" type="submit">Continue</button>
+      </form>
+      <p class="small" id="gate-msg" role="alert" style="margin-top:.6rem"></p>
+    </div>
+  </div>`;
+}
+
+function gateEvents(root) {
+  const form = $('#gate-form', root);
+  const msg = $('#gate-msg', root);
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const code = $('#gate-code', root).value.trim();
+    if (!code) return;
+    msg.textContent = 'Checking…';
+    try {
+      const res = await fetch('/api/access', { method: 'POST', headers: { 'content-type': 'application/json', 'x-access-code': code }, body: '{}' });
+      if (res.status === 401) { msg.textContent = 'That access code was not accepted.'; return; }
+      if (!res.ok) { let d = {}; try { d = await res.json(); } catch { /* not JSON */ } msg.textContent = d.error ?? `Request failed (${res.status})`; return; }
+      try { sessionStorage.setItem('gv_access', code); } catch { /* the code is asked for again on the first search */ }
+      render();
+    } catch { msg.textContent = 'Could not reach the server. Check your connection and try again.'; }
+  });
+}
+
 function renderOnboarding() {
+  if (needsAccessCode()) return renderAccessGate();
   $('#topbar').hidden = true;
   draft ??= blankDraft();
   return `<div class="onb onb-wide">
@@ -694,7 +752,7 @@ function onboardingEvents(root) {
         toast({ emoji: '🪪', title: 'ORCID import is coming with the live backend', body: 'It will read your publications from OpenAlex and draft topics from them. It stays optional.' });
         break;
       case 'example':
-        { const ex = pickExample(); state.exampleId = ex.id; draft = structuredClone(ex.profile);
+        { const ex = pickExample(); draft = structuredClone(ex.profile);
         repaint();
         toast({ emoji: '👤', title: `Loaded ${ex.profile.name}`, body: `A fictional researcher in ${ex.profile.geography.country}, drafted from a short description.` }); }
         break;
@@ -729,12 +787,16 @@ function onboardingEvents(root) {
         draft.constraints.format ||= 'any';
         draft.constraints.visa_tolerance ||= 'any';
         draft.geography.passport ||= draft.geography.country;
-        if (isExample) state.exampleId = draft.id;
-        state.profile = draft;
-        state.onboarded = true;
-        state.weightAdjust = {};
-        state.mode = isExample ? 'example' : 'mine';
-        save();
+        if (isExample) {
+          enterExample(EXAMPLES.find((e) => e.id === draft.id));
+        } else {
+          leaveExample();
+          state.profile = draft;
+          state.onboarded = true;
+          state.weightAdjust = {};
+          state.mode = 'mine';
+          save();
+        }
         draft = null; onbStep = 0;
         location.hash = !isExample && LIVE && state.search?.key !== profileKey() ? '#/searching' : '#/thinking';
         break;
@@ -911,15 +973,36 @@ function pasteEvents(root) {
 
 /* ---------- live mode: calls the /api functions when an API key is configured ---------- */
 
+/** Access code (only when the server is gated): asked for once per tab, kept in sessionStorage, dropped if the server rejects it. */
+function accessHeaders() {
+  if (!GATED) return {};
+  let code = '';
+  try { code = sessionStorage.getItem('gv_access') ?? ''; } catch { /* storage blocked */ }
+  if (!code) {
+    code = (window.prompt('Enter the access code to use live search:') ?? '').trim();
+    if (!code) throw new Error('An access code is needed to use live search.');
+    try { sessionStorage.setItem('gv_access', code); } catch { /* ask again next time */ }
+  }
+  return { 'x-access-code': code };
+}
+
+async function rejectIfBadCode(res) {
+  if (res.status !== 401) return;
+  try { sessionStorage.removeItem('gv_access'); } catch { /* ignore */ }
+  throw new Error('That access code was not accepted. Try again.');
+}
+
 async function api(path, body, timeoutMs = 180000) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs);
   let res;
+  const headers = { 'content-type': 'application/json', ...accessHeaders() };
   try {
-    res = await fetch(`/api/${path}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body), signal: ctrl.signal });
+    res = await fetch(`/api/${path}`, { method: 'POST', headers, body: JSON.stringify(body), signal: ctrl.signal });
   } catch {
     throw new Error(ctrl.signal.aborted ? 'This took too long and was stopped. Please try again.' : 'Could not reach the server. Check your connection and try again.');
   } finally { clearTimeout(timer); }
+  await rejectIfBadCode(res);
   let data = {};
   try { data = await res.json(); } catch { /* non-JSON error page */ }
   if (!res.ok) throw new Error(data.error ?? `Request failed (${res.status})`);
@@ -1282,13 +1365,7 @@ function renderBrief(id) {
 
 function startExample() {
   const ex = pickExample();
-  state.exampleId = ex.id;
-  state.profile = structuredClone(ex.profile);
-  state.dismissed = [];
-  state.weightAdjust = {};
-  state.mode = 'example';
-  state.onboarded = true;
-  save();
+  enterExample(ex);
   setTimeout(() => { location.hash = '#/thinking'; }, 0);
   return '';
 }
@@ -1302,11 +1379,13 @@ async function apiStream(path, body, onEvent, timeoutMs = 200000) {
   const timer = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
     let res;
+    const headers = { 'content-type': 'application/json', ...accessHeaders() };
     try {
-      res = await fetch(`/api/${path}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body), signal: ctrl.signal });
+      res = await fetch(`/api/${path}`, { method: 'POST', headers, body: JSON.stringify(body), signal: ctrl.signal });
     } catch {
       throw new Error(ctrl.signal.aborted ? 'This took too long and was stopped. Please try again.' : 'Could not reach the server. Check your connection and try again.');
     }
+    await rejectIfBadCode(res);
     if (!res.ok) {
       let data = {};
       try { data = await res.json(); } catch { /* not JSON */ }
@@ -1985,7 +2064,10 @@ function render() {
   }
 
   // Bound to `.onb`, which is recreated on every render — binding to #app would stack listeners.
-  if (hash === '/onboarding') onboardingEvents($('.onb', app));
+  if (hash === '/onboarding') {
+    if (needsAccessCode()) gateEvents($('.gate', app));
+    else onboardingEvents($('.onb', app));
+  }
   if (hash === '/thinking') runPipeline();
   if (hash === '/searching') runSearch();
   const b = hash.match(/^\/brief\/(.+)$/);
@@ -2043,10 +2125,12 @@ $('#theme-toggle').addEventListener('click', () => {
 addEventListener('hashchange', () => { render(); scrollTo(0, 0); });
 
 let LIVE = false;
+let GATED = false;
 fetch('/api/status').then((r) => (r.ok ? r.json() : null)).then((d) => {
   LIVE = !!d?.live;
+  GATED = !!d?.gated;
   // Only screens whose content depends on live mode need a redraw; redrawing the homepage replays its animation.
-  if (LIVE && state.mode === 'mine' && /^#\/(feed|brief\/|tracker)/.test(location.hash)) render();
+  if (LIVE && ((state.mode === 'mine' && /^#\/(feed|brief\/|tracker)/.test(location.hash)) || (GATED && location.hash === '#/onboarding'))) render();
 }).catch(() => {});
 
 applyTheme();
