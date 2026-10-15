@@ -1872,6 +1872,14 @@ const ART = {
     ${pop(3, `<rect x="252" y="8" width="102" height="118" rx="6" class="gv-box"/>${T(303, 26, 'Warning signs', 'gv-ts gv-b')}${T(262, 46, ['✗ Every topic', '✗ Dozens of cities', '✗ No committee', '✗ Pay to publish'], 'gv-tx', 'start')}<rect x="268" y="98" width="70" height="20" rx="10" class="gv-stamp"/>${T(303, 112, 'Score ≤ 30', 'gv-tx gv-stampt')}`)}
     ${pop(5, `<rect x="292" y="140" width="56" height="70" rx="6" class="gv-box"/><rect x="298" y="146" width="44" height="16" rx="2" class="gv-soft"/>${T(320, 158, '₹1.2L')}${[0, 1, 2].map((r) => [0, 1, 2].map((c) => `<rect x="${300 + c * 14}" y="${168 + r * 13}" width="10" height="9" rx="2" class="gv-key"/>`).join('')).join('')}${T(320, 230, 'Sums done by code')}`)}`),
 
+  models: () => svg('Two AI helpers: a small quick one, Haiku 4.5, and a bigger careful one, Sonnet 5, each with the jobs it does.', `
+    <path d="M180 8V232" class="gv-faint" stroke-dasharray="4 6"/>
+    ${[['Haiku 4.5', 'quick and cheap', 90, 0.55, ['Suggest topics', 'Read a call page', 'Work out the cost', 'Check the facts']],
+      ['Sonnet 5', 'slower, better judgement', 270, 0.8, ['Search the web', 'Find funding', 'Write the verdict', 'Mark the tests']]]
+      .map(([name, tag, x, s, jobs], k) => `${T(x, 22, name, 'gv-t gv-b')}${T(x, 38, tag, 'gv-ts gv-muted')}
+        ${fig(x, 128, { bot: true, s, arms: k ? 'point' : 'down' })}
+        ${jobs.map((j, i) => pop(k * 4 + i, `<rect x="${x - 72}" y="${140 + i * 23}" width="144" height="19" rx="9.5" class="${k ? 'gv-soft' : 'gv-box'}"/>${T(x, 154 + i * 23, j)}`)).join('')}`).join('')}`),
+
   end: () => svg('Ananya cheering under a bunch of grapes.', `${FLOOR}
     ${pop(0, grapes(180, 60, 2.6))}
     ${[[110, 50, 'gv-c1'], [252, 40, 'gv-c2'], [96, 120, 'gv-c3'], [266, 112, 'gv-c1'], [140, 24, 'gv-c3'], [226, 128, 'gv-c2']]
@@ -1984,6 +1992,12 @@ const SLIDES = [
       ['On the live site', 'You need an access code to use the live search, and each person can only make a limited number of requests an hour. If someone pastes a link to a private or internal address, Grapevine refuses to open it. When it comes to money, the AI writes down each cost, such as the flight and the room, and the app adds them up and compares the total with your budget itself.'],
       ['Spotting scams', 'The AI reads each call page looking for the warning signs an experienced academic would notice: a for-profit organiser holding conferences on every topic at once, the same organiser listing dozens of cities, no named committee, “proceedings” you pay to appear in, or a hotel as the venue with no university involved. If it finds them, it flags the event and explains why. The code then caps that event’s score at 30 out of 100, and caps calls that haven’t been updated in years at 40, so neither can rise to the top however well it fits.'],
       ['Not fully solved', 'Two of these still depend on the AI noticing something. It is told to treat everything on a web page as information and never as instructions, and in my test with a planted page it refused to give itself full marks but still repeated a wrong visa claim. Spotting a scam also relies on the AI recognising the warning signs, and in the last test run it missed the one scam page in the test set.', 'warn']] },
+  { ch: 'AI models', title: 'Which AI does which job', art: 'models', body: [
+    'Grapevine uses two Claude models from Anthropic. Haiku 4.5 is small, quick and cheap, so it does the jobs that happen often and follow clear rules: suggesting topics while you fill in your profile, reading a call page, adding up the cost and checking quotes against the page.',
+    'Sonnet 5 is slower and costs more, but it is better at judgement. It runs the web search, hunts for funding and scholarships, and writes the final verdict.'],
+    notes: [
+      ['On the live site', 'Each model also covers for the other. If a website blocks our server from opening a call page, Sonnet 5 opens the page itself instead. If the search for funding and scholarships runs out of time, Haiku 4.5 steps in and works from the saved list for that country.'],
+      ['While I build it', 'In Claude Code, the helper that reads each call page runs on Haiku and the helper that checks the facts runs on Sonnet. The AI examiner in my tests is Sonnet 5.']] },
   { ch: 'Try it', title: 'Try it yourself', art: 'end', go: true, sources: true, body: [
     'You can open Ananya’s shortlist and look around, or describe your own research and let Grapevine search for you. The examples are saved ahead of time, so they work even when the live search is switched off.'] },
 ];
