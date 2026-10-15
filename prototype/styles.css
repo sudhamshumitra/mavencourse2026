@@ -1207,6 +1207,11 @@ details.more[open] > summary { margin-bottom: .6rem; }
 .slide-status .st-warn strong { color: var(--amber); }
 .slide-status p { margin: .2rem 0 0; font-size: .86rem; line-height: 1.5; color: var(--ink-2); }
 .deck:fullscreen .slide-status p { font-size: 1rem; }
+.slide-pts { margin: 0 0 .8rem; padding-left: 1.1rem; max-width: 34rem; color: var(--ink-2); line-height: 1.5; display: grid; gap: .25rem; }
+.slide-pts li::marker { color: var(--grape); }
+.slide-status .slide-pts { margin: .25rem 0 0; font-size: .86rem; gap: .15rem; }
+.deck:fullscreen .slide-pts { font-size: 1.15rem; }
+.deck:fullscreen .slide-status .slide-pts { font-size: 1rem; }
 .gv-tx { font-size: 11px; fill: var(--ink-2); }
 .gv-log { fill: var(--ink); }
 .gv-mono { font-family: ui-monospace, Consolas, monospace; font-size: 11px; fill: var(--bg); }

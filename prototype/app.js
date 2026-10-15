@@ -1379,8 +1379,8 @@ function startExample(id) {
 let searchRun = null;
 // The live search runs four lanes in parallel, then picks, then checks every link. Phases: searching → picking → links → done.
 const SEARCH_LANES = [
-  { key: 'societies', label: 'Societies in your field' }, { key: 'editions', label: 'Next editions of regular events' },
-  { key: 'lists', label: 'Call-for-papers lists' }, { key: 'fellowships', label: 'Fellowships and journal calls' }];
+  { key: 'societies', label: 'Societies in your field' }, { key: 'editions', label: 'Next year’s editions' },
+  { key: 'lists', label: 'Event listings' }, { key: 'fellowships', label: 'Fellowships and journal calls' }];
 const freshSearchLog = () => ({ lanes: Object.fromEntries(SEARCH_LANES.map((l) => [l.key, { ...l, state: 'running', searches: [], leads: null }])),
   order: SEARCH_LANES.map((l) => l.key), titles: [], phase: 'searching', leads: 0, picks: [], links: {}, phaseAt: Date.now() });
 let searchLog = freshSearchLog();
@@ -1881,8 +1881,8 @@ const ART = {
 
   multi: () => svg('Top: when she searches, four helpers search at once, one picks the best six to eight, and code checks every link. Bottom: when she opens a call, three helpers work out cost, grants and facts at once, and a fourth writes her answer.', `
     ${T(180, 14, 'When she searches: four look at once', 'gv-ts gv-b')}
-    ${['Societies', 'Next year', 'CFP lists', 'Fellowships'].map((l, i) => { const x = 6 + i * 88;
-      return `${box(x, 24, 80, 28, l, i)}${line(x + 40, 53, 160, 71, 4)}`; }).join('')}
+    ${['Societies', ['Next year’s', 'edition'], ['Event', 'listings'], 'Fellowships'].map((l, i) => { const x = 6 + i * 88;
+      return `${box(x, 22, 80, 34, l, i)}${line(x + 40, 57, 160, 71, 4)}`; }).join('')}
     ${box(96, 72, 128, 28, 'Picks the best 6–8', 5)}
     ${line(225, 86, 243, 86, 6)}
     ${box(244, 72, 110, 28, 'Links checked ✓', 7)}
@@ -1997,72 +1997,73 @@ const ref = (n) => `<sup class="gv-ref">${n}</sup>`;
 /* `ch` is the chapter shown above the title; `go` puts the live hand-off button on the slide. */
 const SLIDES = [
   { ch: 'The problem', title: 'Meet Ananya', art: 'meet', body: [
-    'Ananya is in the second year of a PhD in media studies at a public university in Hyderabad. She studies how Dalit and Bahujan creators use Instagram and YouTube, and how the platforms moderate what gets said about caste.',
-    'This year she wants to present her work somewhere good and get feedback before she starts writing her chapters. She has about ₹1.5 lakh for a trip, and she would rather not spend weeks waiting on a visa.'],
-    note: 'Ananya is made up, built from the kinds of researchers Grapevine is for.' },
+    '2nd-year PhD in media studies, Hyderabad.',
+    ['Studies caste and creators on Instagram and YouTube', 'Wants to present this year and get feedback', 'About ₹1.5 lakh per trip, no long visa waits']],
+    note: 'Ananya is made up.' },
   { ch: 'The problem', title: 'How she hears about calls today', art: 'whatsapp', body: [
-    'Most calls reach Ananya as forwards in WhatsApp groups, often a day or two before the deadline. Others come through a senior in her department who happens to know someone on a committee, and the rest she finds herself, late at night, by typing guesses into a search engine.',
-    'Students at better-connected universities hear about things through networks she isn’t part of, so she never really knows what she has missed.'] },
+    ['WhatsApp forwards, often days before the deadline', 'A senior who knows someone', 'Late-night guesses in a search engine'],
+    'Better-connected students hear about more.'] },
   { ch: 'The problem', title: 'The websites don’t help much either', art: 'tools', refs: [1, 2, 3], body: [
-    `When she looks for a proper website, she finds three kinds. The biggest call-for-papers sites are built for science and technology, so her field hardly appears.${ref(1)} The funding databases that universities rely on are sold by subscription, and only people at a paying university can log in.${ref(2)}`,
-    `The humanities notice boards are free and genuinely useful, but they are long lists that look the same for everyone.${ref(3)} None of them knows what she studies, where she lives or what she can spend.`] },
+    [`Big listing sites are built for science and tech${ref(1)}`, `Funding databases are behind a paywall${ref(2)}`, `Humanities boards are free, but one long list for everyone${ref(3)}`],
+    'None knows her field, city or budget.'] },
   { ch: 'The problem', title: 'Then the real work starts', art: 'tabs', refs: [4, 5], body: [
-    'Finding a call is only the beginning. For each one, Ananya has to work out what it would cost in rupees once flights and a room are added, whether she needs a visa and how early to apply, and whether any grant would pay for her to go. That is an evening of open tabs and a spreadsheet for every single call.',
-    `The stakes are real. One study found that for forty low and lower-middle income countries, attending a single international conference cost more than the country’s yearly income per person.${ref(4)} Visa refusals for visiting researchers also fall hardest on people from these countries.${ref(5)}`] },
+    'For every call, an evening of tabs:',
+    ['Cost in rupees, with flights and a room', 'Visa, and how early to apply', 'Grants that might pay'],
+    `In 40 countries, one conference costs more than a year’s income per person.${ref(4)} Visa refusals hit the same researchers hardest.${ref(5)}`] },
   { ch: 'The problem', title: 'What’s missing', art: 'gap', body: [
-    'Nothing out there starts from Ananya. She needs something that takes her research, her city and her budget, finds the calls that suit her, and works out the cost, the visa and the scholarships for each one, so that deciding takes minutes instead of evenings.'] },
+    'Nothing starts from her research, her city and her budget.',
+    'Deciding should take minutes, not evenings.'] },
   { ch: 'Grapevine', title: 'So I built Grapevine', art: 'search', body: [
-    'Ananya writes a few lines about her research and her budget. Grapevine works out which fields she belongs to, including neighbouring ones she wouldn’t think to search, and then looks across the web for conferences, journal calls and fellowships that fit her.',
-    'A minute later she has a shortlist that was made for her, rather than a list made for everyone.'] },
+    ['She writes a few lines', 'It works out her fields, and neighbouring ones', 'It searches for conferences, journal calls and fellowships'],
+    'About a minute later: a shortlist made for her.'] },
   { ch: 'Grapevine', title: 'Everything she needs to decide, in one place', art: 'card', go: true, body: [
-    'For each call she sees what it would cost her in rupees, whether she needs a visa and when to start the application, and which grants she could ask for. Every date and fee comes with the sentence it was copied from, so she can check it herself.',
-    'When she saves a call, its deadlines go into her tracker in the order she has to meet them, and she can send them straight to her calendar.'] },
+    ['Cost in rupees', 'Visa, and when to apply', 'Grants she could get', 'Every date and fee with the sentence it came from'],
+    'Saved calls go to her tracker and calendar.'] },
   { ch: 'How I built it', title: 'Ideas from the course, in plain words', art: 'modules', body: [
-    'Grapevine is put together from the ideas we covered in this course. Each of the next pages explains one idea in everyday terms, shows where it comes into play when Ananya searches, and explains how I use it while building Grapevine and how the live site uses it. Where something isn’t finished, the slide says so.'] },
+    'One course idea per page: what it is, how I use it while building, and how the live site uses it.'] },
   { ch: 'Module 1 · Agents', title: 'An AI that goes and looks', art: 'agent', body: [
-    'An ordinary chatbot answers from memory. An agent can use tools, such as a web search, and decide for itself what to do next, like a research assistant who goes to the library. When Ananya searches, Grapevine decides what to look for, reads the results, follows up on promising leads and stops when it has enough.'],
+    'A chatbot answers from memory. An agent uses tools, like web search, and decides what to do next.'],
     notes: [
-      ['While I build it', 'When I put together the example researchers, I run the same search myself in Claude Code and keep what it finds.'],
-      ['On the live site', 'When you search with your own profile, Grapevine runs the search for you there and then. Four searchers each get up to three web searches, so twelve in all, and each decides for itself what to look for within its share.']] },
+      ['While I build it', 'I run the same search in Claude Code to build the examples.'],
+      ['On the live site', ['4 searchers, up to 3 web searches each', 'Each chooses its own searches']]] },
   { ch: 'Module 2 · Skills', title: 'Written instructions it follows every time', art: 'skills', body: [
-    'A skill is a set of instructions for one job, written in plain English like a recipe card. Grapevine has seven of them, one for each step: understanding your profile, finding opportunities, reading a call page, working out the cost, finding funding and scholarships, writing the verdict, and checking the facts.'],
+    'A skill is plain-English instructions for one job. Grapevine has seven, one per step.'],
     notes: [
-      ['While I build it', 'I use the skill files in Claude Code to build the example shortlists. Whenever I change one, a small script copies the new wording into the website.'],
-      ['On the live site', 'The live site uses all seven. Each time Grapevine does one of the steps, it hands that step’s skill file to the AI as its instructions, so the website follows exactly the same rules I use myself.']] },
+      ['While I build it', 'Claude Code uses them to build the examples. A script copies them to the site.'],
+      ['On the live site', 'Each step hands its skill to the AI, so the site follows the same rules.']] },
   { ch: 'Module 3 · Subagents', title: 'One helper for each page', art: 'subagents', body: [
-    'A subagent is a helper that the main AI hands a single task to, with a clean desk and only the papers that task needs, so nothing from other tasks can confuse it.'],
+    'A helper given one task and only the papers it needs.'],
     notes: [
-      ['While I build it', 'When I build the example shortlists in Claude Code, each call page goes to its own reading helper, and several of them work side by side. Afterwards a separate checking helper goes through every saved call. It opens each page again and makes sure that every date and fee we quote really is on the page and really says what we claim. Anything that fails is relabelled “inferred” so you know to check it yourself, and every failure is written up in a report. This is the full check, and I run it before every demo.'],
-      ['On the live site', 'The live site doesn’t use these Claude Code helpers, but it keeps the same idea: each call page is read in a request of its own. When Ananya opens a call, a smaller version of the check runs on that one call only. The code opens the page again and looks for each quoted sentence word for word, and then a quicker AI model confirms that each sentence it found really gives the date or fee we show. Anything that doesn’t pass is shown as “inferred” instead of “✓ verified”. It doesn’t re-check the rest of the collection, and it doesn’t keep a report.']] },
+      ['While I build it', ['One reading helper per call page, side by side', 'A checker re-opens every page and checks each quote', 'Anything that fails is marked “inferred” and logged']],
+      ['On the live site', ['Each page is read in its own request', 'Opening a call re-checks its quotes, word for word', 'A quicker AI confirms each one']]] },
   { ch: 'Module 4 · Multi-agent systems', title: 'Several helpers working at once', art: 'multi', body: [
-    'Some jobs go faster when several helpers each take a part at the same time and one of them brings the work together. When Ananya searches, four helpers each look in a different place at once, and another picks the best of what they found. When she opens a call, one helper works out the cost, one looks for grants and one double-checks the facts, all at once. A fourth reads their reports and writes her answer.'],
+    'Several helpers each take a part at once. One brings it together.'],
     notes: [
-      ['On the live site', 'This happens every time someone opens a call. Each of the three helpers has its own time limit. If one of them runs out of time or fails, the others carry on, and the answer still arrives with a short note saying which part is missing.'],
-      ['The search works the same way', 'When Ananya searches, four helpers look at once: one in the societies of her field, one for the next editions of regular events, one in call-for-papers lists and one for fellowships and journal calls. Another picks the best six to eight from what they found, and then plain code opens every link to drop the dead ones. In my first test, running side by side cut a search from almost three minutes to under one, and the screen shows each helper’s searches as they happen.']] },
+      ['When she searches', ['4 look at once: societies, next year’s editions, event listings, fellowships', 'One picks the best 6–8, then code checks every link', 'First test: almost 3 minutes down to under 1']],
+      ['When she opens a call', ['Cost, grants and facts at once; a fourth writes the answer', 'Each has a time limit; if one fails, the rest carry on']]] },
   { ch: 'Module 4 · Evals', title: 'Marking its work against an answer key', art: 'evals', body: [
-    'An eval is a test that tells you whether the AI still does its job well after you change something. Like an exam with an answer key, I mark the AI against real call pages and example researchers where I already know the right answer, and a second AI marks the written verdicts like a strict examiner.'],
+    'Tests with known answers, re-run after every change. An AI examiner marks the verdicts.'],
     notes: [
-      ['While I build it', 'I keep 46 test cases where I already know the right answer: real call pages with their correct dates and fees, and example researchers with notes on what a good verdict should say. I run them by hand whenever I change an instruction, because each run costs a little money. There are also 69 free checks that run automatically every time I upload code to GitHub.'],
-      ['On the live site', 'The live site doesn’t run the tests. Instead, every search and every verdict writes a short line to a log saying how long it took, whether any step had to fall back, and what it cost. Nothing about the person is written down.'],
-      ['What the tests show', 'Reading call pages is in good shape: in the last run it found all 22 fees and 17 of the 18 deadlines. The written verdicts aren’t there yet, because the examiner still finds some of them adding details that aren’t in any of the sources.', 'warn']] },
+      ['While I build it', ['46 paid test cases, run by hand', '69 free checks on every upload']],
+      ['On the live site', 'Each search and verdict logs time, fallbacks and cost. Nothing about the person.'],
+      ['What the tests show', ['Reading pages: 22 of 22 fees, 17 of 18 deadlines', 'Verdicts: some still add details from no source'], 'warn']] },
   { ch: 'Module 5 · Retrieval', title: 'Not needed yet, and when it would be', art: 'rag', body: [
-    'Retrieval means the AI first searches a large collection of notes, pulls out only the few pieces that matter, and answers from those. It earns its place when the notes are too big to hand over in one go.',
-    'Grapevine’s notes are still small: a short list of funding and scholarship options for each of eight countries, and a table of exchange rates. So today it simply hands the list for Ananya’s country to the AI along with her request. If Grapevine grows into an archive of thousands of past calls and scholarships from every country, that is when retrieval would be worth adding.'] },
+    'Retrieval: search a big library, then use only the few notes that fit.',
+    ['Today the notes are small: funders for 8 countries, exchange rates', 'So they go to the AI whole', 'Worth adding once there are thousands of calls']] },
   { ch: 'Module 6 · Guardrails', title: 'Rules it can’t be talked out of', art: 'guard', body: [
-    'Guardrails are limits on what the AI is allowed to do. The strongest ones are written into the code itself, because the AI can’t argue its way past code.'],
+    'Limits on the AI. The strongest are in code, which it can’t argue with.'],
     notes: [
-      ['On the live site', 'You need an access code to use the live search, and each person can only make a limited number of requests an hour. If someone pastes a link to a private or internal address, Grapevine refuses to open it. When it comes to money, the AI writes down each cost, such as the flight and the room, and the app adds them up and compares the total with your budget itself.'],
-      ['Spotting scams', 'The AI reads each call page looking for the warning signs an experienced academic would notice: a for-profit organiser holding conferences on every topic at once, the same organiser listing dozens of cities, no named committee, “proceedings” you pay to appear in, or a hotel as the venue with no university involved. If it finds them, it flags the event and explains why. The code then caps that event’s score at 30 out of 100, and caps calls that haven’t been updated in years at 40, so neither can rise to the top however well it fits.'],
-      ['Not fully solved', 'Two of these still depend on the AI noticing something. It is told to treat everything on a web page as information and never as instructions, and in my test with a planted page it refused to give itself full marks but still repeated a wrong visa claim. Spotting a scam also relies on the AI recognising the warning signs, and in the last test run it missed the one scam page in the test set.', 'warn']] },
+      ['On the live site', ['Access code and an hourly limit', 'Private addresses blocked', 'Code does the money sums, not the AI']],
+      ['Spotting scams', ['The AI flags warning signs, like pay-to-publish', 'Code caps scams at 30/100 and old calls at 40']],
+      ['Not fully solved', ['A planted page still got a wrong visa claim repeated', 'The last test missed the one scam page'], 'warn']] },
   { ch: 'AI models', title: 'Which AI does which job', art: 'models', body: [
-    'Grapevine uses two Claude models from Anthropic. Haiku 4.5 is small, quick and cheap, so it does the jobs that happen often and follow clear rules: suggesting topics while you fill in your profile, reading a call page, adding up the cost and checking quotes against the page.',
-    'Sonnet 5 is slower and costs more, but it is better at judgement. It runs the web search, hunts for funding and scholarships, and writes the final verdict.'],
+    [`<strong>Haiku 4.5</strong>, quick and cheap: topics, reading pages, cost, quote checks`, `<strong>Sonnet 5</strong>, better judgement: search, funding, verdict`]],
     notes: [
-      ['On the live site', 'Each model also covers for the other. If a website blocks our server from opening a call page, Sonnet 5 opens the page itself instead. If the search for funding and scholarships runs out of time, Haiku 4.5 steps in and works from the saved list for that country. And if Sonnet 5 can’t finish picking your shortlist in time, Haiku 4.5 picks it instead.'],
-      ['While I build it', 'In Claude Code, the helper that reads each call page runs on Haiku and the helper that checks the facts runs on Sonnet. The AI examiner in my tests is Sonnet 5.'],
-      ['What it costs', 'Sonnet 5 costs about twice as much as Haiku 4.5 for the same amount of text, and each web search adds one US cent. In my test runs, suggesting topics cost a fraction of a cent, reading a call page about one cent, the full check on one call 15 to 30 cents, and a whole search around 65 cents. So a person who searches once and opens three calls costs roughly one to one and a half dollars.']] },
+      ['Backing each other up', ['Site blocks us: Sonnet opens the page', 'Funding search too slow: Haiku uses the saved list', 'Picking too slow: Haiku picks']],
+      ['While I build it', 'Reader on Haiku, checker on Sonnet, examiner Sonnet 5.'],
+      ['What it costs', ['Sonnet ≈ 2× Haiku; 1¢ per web search', 'Topics under 1¢ · reading a page ≈ 1¢', 'Full check 15–30¢ · a search ≈ 65¢', 'One search + 3 calls ≈ $1–1.50']]] },
   { ch: 'Try it', title: 'Try it yourself', art: 'end', go: true, sources: true, body: [
-    'You can open Ananya’s shortlist and look around, or describe your own research and let Grapevine search for you. The examples are saved ahead of time, so they work even when the live search is switched off.'] },
+    'Open Ananya’s shortlist, or search with your own research. The examples work even when live search is off.'] },
 ];
 
 let slideAt = 0;
@@ -2081,9 +2082,9 @@ function slideHtml(i) {
     <div class="slide-text">
       <div class="eyebrow">${esc(s.ch)}</div>
       <h2>${esc(s.title)}</h2>
-      ${s.body.map((p) => `<p>${p}</p>`).join('')}
+      ${s.body.map((p) => (Array.isArray(p) ? `<ul class="slide-pts">${p.map((li) => `<li>${li}</li>`).join('')}</ul>` : `<p>${p}</p>`)).join('')}
       ${s.note ? `<p class="tiny muted">${esc(s.note)}</p>` : ''}
-      ${s.notes ? `<div class="slide-status">${s.notes.map(([h, t, kind]) => `<div class="${kind === 'warn' ? 'st-warn' : 'st-note'}"><strong>${esc(h)}</strong><p>${esc(t)}</p></div>`).join('')}</div>` : ''}
+      ${s.notes ? `<div class="slide-status">${s.notes.map(([h, t, kind]) => `<div class="${kind === 'warn' ? 'st-warn' : 'st-note'}"><strong>${esc(h)}</strong>${Array.isArray(t) ? `<ul class="slide-pts">${t.map((li) => `<li>${esc(li)}</li>`).join('')}</ul>` : `<p>${esc(t)}</p>`}</div>`).join('')}</div>` : ''}
       ${s.go ? `<div class="row slide-go"><a class="btn btn-primary" href="#/example/p_ananya">Open Ananya’s shortlist →</a>${s.sources ? '<a class="btn btn-ghost" href="#/onboarding" data-act="fresh-start">Start with my own research</a>' : ''}</div>` : ''}
       ${refs ? `<ol class="slide-refs">${refs}</ol>` : ''}
       ${s.sources ? `<details class="slide-refs-all"><summary>Sources used in this story</summary><ol class="slide-refs">${Object.entries(SOURCES).map(([n, [t, u]]) => `<li><a href="${u}" target="_blank" rel="noopener">${n}. ${esc(t)}</a></li>`).join('')}</ol></details>` : ''}
@@ -2176,7 +2177,7 @@ function renderAbout(view = 'story') {
     <h1>What is Grapevine</h1>
     <nav class="tabs-inline about-tabs" aria-label="About">
       <a class="tab-i" href="#/about/story" aria-selected="${view === 'story'}">The story</a>
-      <a class="tab-i" href="#/about/questions" aria-selected="${view === 'questions'}">Questions</a>
+      <a class="tab-i" href="#/about/questions" aria-selected="${view === 'questions'}">FAQ</a>
     </nav>
     ${view === 'story' ? deckHtml() : faqHtml()}
   </div>`;

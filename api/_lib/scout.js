@@ -12,9 +12,9 @@ import { fetchPage } from './fetchPage.js';
 export const LANES = [
   { key: 'societies', label: 'Societies in your field',
     brief: 'Layer (a), the society graph: the learned societies and associations that organise this person\'s fields and adjacent fields internationally, regionally and in their home country, and their annual meetings, preconferences and early-career workshops.' },
-  { key: 'editions', label: 'Next editions of regular events',
+  { key: 'editions', label: 'Next year’s editions',
     brief: 'Layer (c), recurrence: the NEXT edition (this year or next) of recurring conferences, workshops and summer schools in these fields, including the edition pages of well-known regional meetings.' },
-  { key: 'lists', label: 'Call-for-papers lists',
+  { key: 'lists', label: 'Event listings',
     brief: 'Layer (d), aggregators: H-Net Announcements, CFP lists and society mailing-list archives, with the topics reworded the way humanities call titles are written (thematic, not keyword-literal).' },
   { key: 'fellowships', label: 'Fellowships and journal calls',
     brief: 'Layer (e), the open search: fellowships, summer schools with travel support, and journal special-issue calls that fit this person.' },
