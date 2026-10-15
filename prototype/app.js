@@ -1686,10 +1686,10 @@ const ARMS = {
 const LEGS = { stand: 'M-12 0L0 -40L12 0', sit: 'M0 -40L20 -40L20 0M-14 -38h22M-10 -38V0' };
 
 /** A stick figure standing on (x, y). `bot` draws one of Grapevine's AI helpers instead of a person. */
-function fig(x, y, { arms = 'down', legs = 'stand', mouth = 'smile', hair = false, bot = false, flip = false, s = 1 } = {}) {
+function fig(x, y, { arms = 'down', legs = 'stand', mouth = 'smile', bot = false, flip = false, s = 1 } = {}) {
   const head = bot
     ? '<path d="M0 -104v-7"/><circle cx="0" cy="-113" r="2.6" class="gv-fill"/><rect x="-12" y="-104" width="24" height="22" rx="6" class="gv-bot-head"/>'
-    : `<circle cx="0" cy="-92" r="13" class="gv-head"/>${hair ? '<path d="M-13.5 -94a13.5 13.5 0 0 1 27 0q-9-7-27 0z" class="gv-hair"/><circle cx="-13" cy="-101" r="5.5" class="gv-hair"/>' : ''}`;
+    : '<circle cx="0" cy="-92" r="13" class="gv-head"/>';
   return `<g class="gv-fig ${bot ? 'gv-bot' : 'gv-person'}" transform="translate(${x} ${y}) scale(${flip ? -s : s} ${s})">
     <path d="M0 -79V-40"/><path d="${LEGS[legs]}"/><path d="${ARMS[arms]}"/>${head}
     <circle cx="-4.5" cy="-95" r="1.7" class="gv-fill"/><circle cx="4.5" cy="-95" r="1.7" class="gv-fill"/>
@@ -1750,13 +1750,13 @@ const ART = {
   meet: () => svg('Ananya at her desk, thinking about presenting her work this year, with a budget of 1.5 lakh rupees.', `${FLOOR}
     ${desk(150, 262, 150)}${laptop(160, 150)}
     <rect x="224" y="136" width="30" height="13" rx="2" class="gv-box"/><rect x="226" y="128" width="26" height="8" rx="2" class="gv-soft"/><rect x="222" y="120" width="30" height="8" rx="2" class="gv-box"/>
-    ${fig(126, 222, { legs: 'sit', arms: 'type', hair: true })}
+    ${fig(126, 222, { legs: 'sit', arms: 'type' })}
     ${pop(1, `<g transform="rotate(-6 64 51)"><rect x="22" y="34" width="84" height="36" rx="5" class="gv-tag"/><circle cx="32" cy="52" r="3" class="gv-line"/>${T(70, 48, ['Budget', '₹1.5 lakh'])}</g>`)}
     ${bubble(196, 12, 156, 72, ['Present somewhere good', 'this year, and get', 'feedback on my chapters'], { think: [[142, 112, 3], [154, 101, 4.5], [170, 90, 6]], d: 2 })}`),
 
   whatsapp: () => svg('Ananya reading forwarded calls in a WhatsApp group, next to a door marked invite only.', `${FLOOR}
     ${pop(3, `<rect x="16" y="64" width="48" height="158" rx="3" class="gv-box"/><circle cx="56" cy="146" r="3" class="gv-line"/><rect x="8" y="36" width="64" height="20" rx="4" class="gv-tag"/>${T(40, 50, 'Invite only')}`)}
-    ${fig(104, 222, { arms: 'hold', hair: true, mouth: 'flat' })}<rect x="118" y="128" width="12" height="20" rx="2" class="gv-box"/>
+    ${fig(104, 222, { arms: 'hold', mouth: 'flat' })}<rect x="118" y="128" width="12" height="20" rx="2" class="gv-box"/>
     <rect x="160" y="10" width="186" height="208" rx="18" class="gv-box"/><path d="M160 42H346" class="gv-line"/>${T(253, 31, 'PhD group · 214 members', 'gv-ts gv-muted')}
     ${[['Fwd: Call for papers,', 'closes TOMORROW 🙏'], ['Does anyone know a journal', 'that takes caste studies?'], ["Sir says he'll ask his", 'friend on the committee']]
       .map((l, i) => box(172, 52 + i * 50, 162, 42, l, i, 'gv-chat')).join('')}`),
@@ -1770,7 +1770,7 @@ const ART = {
 
   tabs: () => svg('Ananya at her laptop late at night, surrounded by open tabs about flights, visa fees, hostels, exchange rates and travel grants.', `${FLOOR}
     ${desk(84, 160, 150)}${laptop(92, 150)}
-    ${fig(60, 222, { legs: 'sit', arms: 'type', hair: true, mouth: 'frown' })}
+    ${fig(60, 222, { legs: 'sit', arms: 'type', mouth: 'frown' })}
     <path d="M80 104q4 6 0 9q-4-3 0-9z" class="gv-drop"/>
     <circle cx="34" cy="40" r="16" class="gv-box"/><path d="M34 40V30M34 40l7 4" class="gv-line"/>${T(34, 72, '11:48 pm', 'gv-ts gv-muted')}
     ${['Flights HYD → Europe', 'Schengen visa fee?', 'Hostels in Lund', '€ to ₹ today', 'Travel grant for PhDs?', 'Deadline timezone?']
@@ -1783,11 +1783,11 @@ const ART = {
     ${pop(2, `<rect x="162" y="44" width="72" height="104" rx="8" class="gv-dashbox"/><text x="198" y="116" class="gv-q" text-anchor="middle">?</text>`)}
     ${line(238, 96, 262, 96, 3)}
     ${pop(4, `<rect x="266" y="40" width="88" height="112" rx="8" class="gv-box"/>${T(310, 62, 'What I need', 'gv-ts gv-b')}${T(276, 84, ['Calls for me', 'Cost in ₹', 'Grants I fit', 'Visa sorted'], 'gv-ts', 'start')}`)}
-    ${fig(198, 236, { s: 0.42, arms: 'head', hair: true, mouth: 'flat' })}`),
+    ${fig(198, 236, { s: 0.42, arms: 'head', mouth: 'flat' })}`),
 
   search: () => svg('Ananya types a few lines about her research; Grapevine searches the web and returns a shortlist for her.', `${FLOOR}
     ${desk(64, 140, 150)}${laptop(72, 150)}
-    ${fig(40, 222, { legs: 'sit', arms: 'type', hair: true })}
+    ${fig(40, 222, { legs: 'sit', arms: 'type' })}
     ${pop(0, `<rect x="8" y="14" width="170" height="62" rx="8" class="gv-box"/>${T(16, 33, ['PhD, media studies, Hyderabad.', 'Caste & creators on Instagram.', 'Budget about ₹1.5 lakh.'], 'gv-ts', 'start')}`)}
     ${line(160, 100, 192, 100, 1)}
     ${pop(2, `${grapes(232, 96, 2.2)}${T(232, 152, 'Searching the web…', 'gv-ts gv-muted')}`)}
@@ -1836,15 +1836,22 @@ const ART = {
       pop(i, `${T(28, 72 + i * 28, l, 'gv-ts', 'start')}<text x="182" y="${74 + i * 28}" class="${ok ? 'gv-ok' : 'gv-no'}" text-anchor="middle">${ok ? '✓' : '✗'}</text>`)).join('')}
     ${pop(5, T(106, 214, 'Score: 4 / 5', 'gv-score'))}
     ${fig(290, 226, { bot: true, s: 0.72, arms: 'give', flip: true })}<path d="M270 181l-10 10" class="gv-pen"/>
-    ${bubble(210, 14, 144, 92, ['“This verdict says', 'apply now, but the', 'deadline passed', 'last week.”'], { tail: [262, 280, 288, 134], d: 6, cls: 'gv-ts' })}`),
+    ${bubble(210, 30, 144, 60, ['“This grant isn’t in', 'any of its sources.”'], { tail: [262, 280, 288, 134], d: 6 })}`),
 
-  rag: () => svg('An AI helper pulls a card about an Indian travel grant from its own drawers of notes before answering.', `
-    <rect x="14" y="40" width="120" height="182" rx="6" class="gv-box"/>
-    ${['Indian funders', 'Exchange rates', 'Calls already read'].map((l, i) => pop(i, `<rect x="24" y="${50 + i * 58}" width="100" height="48" rx="4" class="gv-soft"/>${T(74, 72 + i * 58, l)}<path d="M64 ${86 + i * 58}h20" class="gv-line gv-w3"/>`)).join('')}
-    ${arrow('M126 74Q206 80 226 146', [226, 146], [206, 80], 3, true)}
-    ${pop(4, `<g transform="rotate(-8 242 167)"><rect x="210" y="150" width="64" height="34" rx="4" class="gv-recipe"/>${T(242, 172, 'ICSSR grant')}</g>`)}
-    ${fig(292, 222, { bot: true, s: 0.75, arms: 'give', flip: true })}
-    ${bubble(196, 10, 158, 76, ['PhD students can get ICSSR', 'support to present abroad.', 'Adding it to her list.'], { tail: [270, 288, 292, 132], d: 5 })}`),
+  rag: () => svg('Today a small folder of notes is handed to the AI whole; later, a large library would be searched for only the few notes that fit.', `
+    ${T(88, 22, 'Today', 'gv-t gv-b')}${T(270, 22, 'Later, maybe', 'gv-t gv-b')}
+    <path d="M180 10V230" class="gv-faint" stroke-dasharray="4 6"/>
+    ${pop(0, '<path d="M54 44h22l6 8h40v58H54z" class="gv-recipe"/>' + T(88, 84, ['Funders for', 'her country']))}
+    ${line(88, 116, 88, 140, 1)}
+    ${fig(88, 216, { bot: true, s: 0.6 })}
+    ${T(88, 234, 'Small enough to hand over whole', 'gv-ts gv-muted')}
+    ${[0, 1, 2, 3].map((r) => [0, 1, 2, 3, 4, 5].map((c) => {
+      const hit = (r === 1 && c === 2) || (r === 2 && c === 4) || (r === 3 && c === 1);
+      return `<rect x="${198 + c * 25}" y="${38 + r * 20}" width="20" height="15" rx="2" class="${hit ? 'gv-soft pop' : 'gv-note'}" ${hit ? `style="--d:${3 + r}"` : ''}/>`;
+    }).join('')).join('')}
+    ${line(270, 124, 270, 140, 2)}
+    ${fig(270, 216, { bot: true, s: 0.6 })}
+    ${T(270, 234, 'Look up only the few that fit', 'gv-ts gv-muted')}`),
 
   guard: () => svg('A shield stops hidden instructions on a web page; buttons to pay or apply are crossed out; sums are done by a calculator.', `
     <rect x="10" y="26" width="120" height="132" rx="6" class="gv-box"/><path d="M10 40h120M22 56h96M22 68h80M22 80h90M22 130h90M22 142h70" class="gv-faint"/>
@@ -1860,7 +1867,7 @@ const ART = {
     ${pop(0, grapes(180, 60, 2.6))}
     ${[[110, 50, 'gv-c1'], [252, 40, 'gv-c2'], [96, 120, 'gv-c3'], [266, 112, 'gv-c1'], [140, 24, 'gv-c3'], [226, 128, 'gv-c2']]
       .map(([x, y, c], i) => pop(1 + i * 0.4, `<circle cx="${x}" cy="${y}" r="4" class="${c}"/>`)).join('')}
-    ${fig(180, 222, { arms: 'up', hair: true })}`),
+    ${fig(180, 222, { arms: 'up' })}`),
 };
 
 /** Ananya's real example shortlist row, so the slide shows the product, not a mock-up. */
@@ -1896,7 +1903,7 @@ const MODULES = [
   [3, 'Subagents', 'One helper per page'],
   [4, 'Multi-agent', 'Helpers working at once'],
   [4, 'Evals', 'Marked against a key'],
-  [5, 'Retrieval', 'Checks its notes first'],
+  [5, 'Retrieval', 'Not needed yet'],
   [6, 'Guardrails', 'Rules it keeps'],
 ];
 
@@ -1933,28 +1940,34 @@ const SLIDES = [
     'For each call she sees what it would cost her in rupees, whether she needs a visa and when to start the application, and which grants she could ask for. Every date and fee comes with the sentence it was copied from, so she can check it herself.',
     'When she saves a call, its deadlines go into her tracker in the order she has to meet them, and she can send them straight to her calendar.'] },
   { ch: 'How I built it', title: 'Ideas from the course, in plain words', art: 'modules', body: [
-    'Grapevine is put together from the ideas we covered in this course. Each of the next few pages explains one idea in everyday terms, and shows the moment it comes into play when Ananya searches.'] },
+    'Grapevine is put together from the ideas we covered in this course. Each of the next pages explains one idea in everyday terms, shows where it comes into play when Ananya searches, and says plainly what is built and what isn’t yet.'] },
   { ch: 'Module 1 · Agents', title: 'An AI that goes and looks', art: 'agent', body: [
-    'An ordinary chatbot answers from what it already knows. An agent can use tools, such as a web search, and decide for itself what to do next, much like a research assistant who goes to the library instead of answering from memory.',
-    'When Ananya searches, Grapevine decides what to look for, reads what comes back, notices a society or a yearly conference worth following up, and searches again. It has a fixed number of searches, so it always stops and reports back.'] },
+    'An ordinary chatbot answers from memory. An agent can use tools, such as a web search, and decide for itself what to do next, like a research assistant who goes to the library. When Ananya searches, Grapevine decides what to look for, reads the results, follows up on promising leads and stops when it has enough.'],
+    built: ['A live web search for your own profile, limited to 5 searches and 2 page reads each time'],
+    notYet: ['It doesn’t go looking on its own schedule. I refresh the example shortlists by hand'] },
   { ch: 'Module 2 · Skills', title: 'Written instructions it follows every time', art: 'skills', body: [
-    'A skill is a set of instructions for one job, written in plain English, a bit like a recipe card. Grapevine has one for each job: understanding a profile, finding calls, reading a call page, working out the cost, finding funding and writing the final verdict.',
-    'I use the same cards on my own laptop to build the example researchers, and the website uses them when Ananya searches, so both always follow the same rules.'] },
+    'A skill is a set of instructions for one job, written in plain English like a recipe card. Grapevine has one for each step, from understanding a profile to writing the verdict. I use the same cards on my laptop to build the examples, and the website uses them when Ananya searches, so both follow the same rules.'],
+    built: ['Seven skill files, one for each step', 'A script that copies them into the website, so the two can’t drift apart'] },
   { ch: 'Module 3 · Subagents', title: 'One helper for each page', art: 'subagents', body: [
-    'A subagent is a helper that the main AI hands a single task to, with a clean desk and only the papers that task needs. Nothing from other tasks is lying around to confuse it.',
-    'When Grapevine finds a dozen call pages for Ananya, each page is read by its own helper, so a fee from one conference can’t end up on another. A separate checker then goes back to every page to confirm that each date and fee really is written there.'] },
+    'A subagent is a helper that the main AI hands a single task to, with a clean desk and only the papers that task needs. Each call page found for Ananya is read by its own helper, so a fee from one conference can’t end up on another, and a separate checker goes back to confirm that every date and fee really is on the page.'],
+    built: ['A page-reading helper and a checking helper, which I use to build the example shortlists', 'On the live site each page is read in its own separate request, and a smaller version of the check runs on every verdict'],
+    notYet: ['The full checker only runs on the example data, not on live searches'] },
   { ch: 'Module 4 · Multi-agent systems', title: 'Several helpers working at once', art: 'multi', body: [
-    'Some jobs go faster when several helpers each take a part at the same time and one of them brings the work together, like a kitchen where each cook handles one dish.',
-    'When Ananya opens a call, three helpers start together. One works out the cost, one looks for grants and one double-checks the facts. A fourth reads their reports and writes her answer. If one of them is slow, she still gets her answer, with a note about the part that is missing.'] },
+    'Some jobs go faster when several helpers each take a part at the same time and one of them brings the work together. When Ananya opens a call, one helper works out the cost, one looks for grants and one double-checks the facts, all at once. A fourth reads their reports and writes her answer.'],
+    built: ['The three helpers and the writer, each with its own time limit', 'If one helper is slow or fails, she still gets an answer, with a note about the missing part'] },
   { ch: 'Module 4 · Evals', title: 'Marking its work against an answer key', art: 'evals', body: [
-    'An eval is a test that tells you whether the AI is still doing its job well after you change something. You keep a set of questions with the right answers written down, and mark the AI against them the way a teacher marks an exam.',
-    'I keep real call pages with their correct dates and fees, and example researchers with what a good verdict looks like. Each time I change an instruction, the AI sits the test, and a second AI marks the written answers like a strict examiner. On the live site, every search also records how long it took and what it cost.'] },
-  { ch: 'Module 5 · Retrieval', title: 'Checking its notes before it answers', art: 'rag', body: [
-    'Rather than relying only on what it remembers, the AI first looks things up in a set of notes and then writes its answer from what it found. This makes its answers more accurate and much easier to check.',
-    'Grapevine keeps its own notes: a list of Indian funders who pay for conference travel, current exchange rates, and the calls it has already read. That is how it knows to suggest ICSSR’s scheme for presenting abroad to a PhD student like Ananya, and how it turns euros into rupees.'] },
+    'An eval is a test that tells you whether the AI still does its job well after you change something. Like an exam with an answer key, I mark the AI against real call pages and example researchers where I already know the right answer, and a second AI marks the written verdicts like a strict examiner.'],
+    built: ['46 test cases with known answers, plus the AI examiner', '61 free checks that run every time I upload code', 'A log of how long each live search took and what it cost', 'Reading call pages tests well: in the last run it found all 22 fees and 17 of 18 deadlines'],
+    notYet: ['The paid tests are run by hand, not automatically', 'The written verdicts don’t pass yet: the examiner still catches some adding facts that aren’t in the sources'] },
+  { ch: 'Module 5 · Retrieval', title: 'Not needed yet, and when it would be', art: 'rag', body: [
+    'Retrieval means the AI first searches a large collection of notes, pulls out only the few pieces that matter, and answers from those. It earns its place when the notes are too big to hand over in one go.',
+    'Grapevine’s notes are still small: a short list of funders for each of eight countries and a table of exchange rates. So today it simply hands the list for Ananya’s country to the AI with her request. If Grapevine grows into an archive of thousands of past calls and funders from every country, that is when retrieval would be worth adding.'],
+    built: ['Small notes handed over whole: funders for 8 countries, and exchange rates'],
+    notYet: ['Retrieval itself, for when the notes grow too big to hand over'] },
   { ch: 'Module 6 · Guardrails', title: 'Rules it can’t be talked out of', art: 'guard', body: [
-    'Guardrails are limits on what the AI is allowed to do, and they hold no matter what it reads or what anyone asks of it.',
-    'Grapevine reads pages from all over the web, and a page could hide text telling it to behave differently, so it treats everything it reads as information and never as instructions. It will never register, pay or apply on Ananya’s behalf. Her totals are added up by ordinary code rather than by the AI, and an event that looks like a money-making scam is moved down the list however well it seems to fit.'] },
+    'Guardrails are limits on what the AI can do. The strongest ones live in the code rather than in the AI’s instructions, so it can’t be talked out of them.'],
+    built: ['An access code and an hourly limit on the live site, and links to private or internal addresses are blocked', 'Totals and the over-budget flag are worked out by code, not by the AI', 'Scam-like or out-of-date events have their score capped by code', 'No way to pay or apply at all: the AI has no tool for it'],
+    notYet: ['“Treat web pages as information, not orders” is an instruction to the AI, not a hard rule. In my test with a planted instruction, it refused to give itself full marks but still repeated a wrong visa claim from the page'] },
   { ch: 'Try it', title: 'Try it yourself', art: 'end', go: true, sources: true, body: [
     'You can open Ananya’s shortlist and look around, or describe your own research and let Grapevine search for you. The examples are saved ahead of time, so they work even when the live search is switched off.'] },
 ];
@@ -1977,6 +1990,8 @@ function slideHtml(i) {
       <h2>${esc(s.title)}</h2>
       ${s.body.map((p) => `<p>${p}</p>`).join('')}
       ${s.note ? `<p class="tiny muted">${esc(s.note)}</p>` : ''}
+      ${s.built || s.notYet ? `<div class="slide-status">${[['st-built', '✓ Built', s.built], ['st-not', '○ Not yet', s.notYet]].filter(([, , l]) => l)
+        .map(([c, h, l]) => `<div class="${c}"><strong>${h}</strong><ul>${l.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div>` : ''}
       ${s.go ? `<div class="row slide-go"><a class="btn btn-primary" href="#/example/p_ananya">Open Ananya’s shortlist →</a>${s.sources ? '<a class="btn btn-ghost" href="#/onboarding" data-act="fresh-start">Start with my own research</a>' : ''}</div>` : ''}
       ${refs ? `<ol class="slide-refs">${refs}</ol>` : ''}
       ${s.sources ? `<details class="slide-refs-all"><summary>Sources used in this story</summary><ol class="slide-refs">${Object.entries(SOURCES).map(([n, [t, u]]) => `<li><a href="${u}" target="_blank" rel="noopener">${n}. ${esc(t)}</a></li>`).join('')}</ol></details>` : ''}
@@ -2146,6 +2161,12 @@ function renderProfile() {
         <p class="muted small" style="margin:.2rem 0 0">${esc(p.affiliation)} · ORCID ${esc(p.orcid ?? '—')}</p>
       </div>
     </div>
+
+    ${(p.input_text ?? '').trim() ? `<section class="panel">
+      <div class="panel-h"><h3><span class="ico" aria-hidden="true">💬</span> What you told us</h3></div>
+      <p class="small" style="margin:0;white-space:pre-wrap">${esc(p.input_text.trim())}</p>
+      <p class="tiny muted" style="margin:.8rem 0 0">Your own words, kept as you wrote them. The topics below were drawn from this.</p>
+    </section>` : ''}
 
     <section class="panel">
       <div class="panel-h"><h3><span class="ico" aria-hidden="true">⚖️</span> What Grapevine thinks you work on</h3></div>
